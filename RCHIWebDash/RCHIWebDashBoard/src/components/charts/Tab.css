@@ -1,0 +1,67 @@
+/*  Tab.css 
+    CSS Changes to Tab Bars
+    Mostly to create bottom tabs that can collapse
+*/
+
+
+/* Renders not shown tabs for the purpose of rendering graphs */
+.tab-content>.tab-pane {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.tab-content>.tab-pane.active {
+    height: auto;
+}
+
+/* Tab Color Changes */
+.nav-tabs .nav-link.active {
+    color: #C8C0CE;
+    text-shadow: 1px 1px #F0F0F0;
+}
+
+a {
+    color: #000;
+}
+
+a:hover{
+    color: #333;
+}
+
+/* Allows tabs to be moved in an out */
+.out {
+}
+
+.collapsed {
+    display: none;
+}
+
+/* Flips bootstraps tab settings */
+.bottom.nav-tabs{
+ border-top: 1px solid #dee2e6;
+ border-bottom: none;
+ width: 100%;
+}
+
+.bottom .nav-item{ 
+    margin-bottom: 0;
+    margin-top: -1px;
+}
+
+.nav-tabs .bottom .nav-link {
+    border: 1px solid transparent;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+.nav-tabs .bottom .nav-link:hover {
+    border-color: #dee2e6; 
+}
+
+.nav-tabs .bottom .nav-link.active {
+    color: #495057;
+    /* background-color: #fff; */
+    border-color: #fff #dee2e6 #dee2e6 ;
+    
+}

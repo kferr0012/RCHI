@@ -1,0 +1,34 @@
+.width100{
+    width: 100%;
+}
+.height100{
+    height: 100%;
+}
+.shaded{
+    background-color: #DDDDDDAA
+}
+
+td, th{
+    padding: 2px;
+}
+tr, th, td, table{
+    border-color: #FFFFFF00;
+    font-size: .7rem;
+}
+
+.col1{
+    width: 45%;
+}
+
+.col2, .col3{
+    width: 25%;
+}
+
+tbody{
+    border-top: 2px solid #00000060;
+    border-bottom: 2px solid #00000060;
+}
+
+.bottomTables{
+    height: 80%;
+}

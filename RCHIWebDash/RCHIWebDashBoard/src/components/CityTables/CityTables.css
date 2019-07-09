@@ -1,0 +1,34 @@
+.paperSize{
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #000;
+    /* max-width: 8.5in;
+    max-height: 11in; */
+    padding: 3px;
+    margin: 0in ;/*1in 1in 1in; */
+}
+
+div {
+    justify-content: center;
+}
+
+#TableTitle {
+    font-size: 16px;
+}
+
+.tableCol{
+    overflow: scroll;
+    height: 80vh;
+}
+
+.leftCol{
+    padding: 0vw 0vw 0vw 3vw;
+}
+
+th, td { border: 1px solid black }
+
+.graphBoundsInput{
+    right: 3vw;
+    margin: 5px;
+    width: 33%;
+}

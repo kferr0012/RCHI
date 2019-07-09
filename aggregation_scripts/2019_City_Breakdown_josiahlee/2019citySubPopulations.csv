@@ -1,0 +1,2047 @@
+District,CityName,Catergory,Subpopulation,Interview,Observation
+5,BANNING,Race,American Indian,2,0
+5,BANNING,Race,Asian,0,0
+5,BANNING,Race,Black,4,2
+5,BANNING,Race,Native Hawaiian,1,0
+5,BANNING,Race,White,22,0
+5,BANNING,Race,Multiple Races,4,0
+5,BANNING,Race,Unknown Race,4,0
+5,BANNING,Race,Total,37,2
+5,BANNING,Ethinicity,Hispanic,16,0
+5,BANNING,Ethinicity,NonHispanic,21,2
+5,BANNING,Ethinicity,Unknown Ethinicity,0,0
+5,BANNING,Ethinicity,Total,37,2
+5,BANNING,Gender,Male,25,0
+5,BANNING,Gender,Female,12,0
+5,BANNING,Gender,Transgender,0,0
+5,BANNING,Gender,Gender Non-Conforming,0,0
+5,BANNING,Gender,Unknown Gender,0,2
+5,BANNING,Gender,Total,37,2
+5,BANNING,Age,Adults (>24),35,2
+5,BANNING,Age,Youth (18-24),2,0
+5,BANNING,Age,Children (<18),0,0
+5,BANNING,Age,Unknown Age,0,0
+5,BANNING,Age,Total,37,2
+5,BANNING,Subpopulations,Veteran Yes,5,0
+5,BANNING,Subpopulations,Veteran No,32,2
+5,BANNING,Subpopulations,Chronically Homeless,23,0
+5,BANNING,Subpopulations,Not Chronically Homeless,14,2
+5,BANNING,Subpopulations,Substance Abuse,12,0
+5,BANNING,Subpopulations,No Substance Abuse,24,0
+5,BANNING,Subpopulations,Unknown Substance Abuse,1,2
+5,BANNING,Subpopulations,PTSD,12,0
+5,BANNING,Subpopulations,No PTSD,22,0
+5,BANNING,Subpopulations,Unknown PTSD,3,2
+5,BANNING,Subpopulations,Mental Health Conditions,14,0
+5,BANNING,Subpopulations,No Mental Health Conditions,23,0
+5,BANNING,Subpopulations,Unknown Mental Health Conditions,0,2
+5,BANNING,Subpopulations,Physical Disability,16,0
+5,BANNING,Subpopulations,No Physical Disability,21,0
+5,BANNING,Subpopulations,Unknown Physical Disability,0,2
+5,BANNING,Subpopulations,Developmental Disability,7,0
+5,BANNING,Subpopulations,No Developmental Disability,30,0
+5,BANNING,Subpopulations,Unknown Developmental Disability,0,2
+5,BANNING,Subpopulations,Brain Injury,7,0
+5,BANNING,Subpopulations,No Brain Injury,28,0
+5,BANNING,Subpopulations,Unknown Brain Injury,2,2
+5,BANNING,Subpopulations,Victim of Domestic Violence,2,0
+5,BANNING,Subpopulations,Not Victim of Domestic Violence,35,0
+5,BANNING,Subpopulations,Unknown Victim of Domestic Violence,0,2
+5,BANNING,Subpopulations,AIDS or HIV,0,0
+5,BANNING,Subpopulations,No AIDS or HIV,36,0
+5,BANNING,Subpopulations,Unknown AIDS or HIV,1,2
+5,BANNING,Subpopulations,Jail Release 90 Days: Probation,1,0
+5,BANNING,Subpopulations,Jail Release 90 Days: Parole,0,0
+5,BANNING,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+5,BANNING,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,BANNING,Subpopulations,Jail Release 12 Months: Probation,2,0
+5,BANNING,Subpopulations,Jail Release 12 Months: Parole,0,0
+5,BANNING,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+5,BANNING,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,BANNING,Subpopulations,No Jail,33,0
+5,BANNING,Subpopulations,Unknown Jail,0,2
+5,BANNING,Subpopulations,Total,407,22
+5,BEAUMONT,Race,American Indian,1,0
+5,BEAUMONT,Race,Asian,1,0
+5,BEAUMONT,Race,Black,0,0
+5,BEAUMONT,Race,Native Hawaiian,1,0
+5,BEAUMONT,Race,White,9,2
+5,BEAUMONT,Race,Multiple Races,1,0
+5,BEAUMONT,Race,Unknown Race,0,0
+5,BEAUMONT,Race,Total,13,2
+5,BEAUMONT,Ethinicity,Hispanic,2,0
+5,BEAUMONT,Ethinicity,NonHispanic,11,2
+5,BEAUMONT,Ethinicity,Unknown Ethinicity,0,0
+5,BEAUMONT,Ethinicity,Total,13,2
+5,BEAUMONT,Gender,Male,8,1
+5,BEAUMONT,Gender,Female,5,1
+5,BEAUMONT,Gender,Transgender,0,0
+5,BEAUMONT,Gender,Gender Non-Conforming,0,0
+5,BEAUMONT,Gender,Unknown Gender,0,0
+5,BEAUMONT,Gender,Total,13,2
+5,BEAUMONT,Age,Adults (>24),13,1
+5,BEAUMONT,Age,Youth (18-24),0,1
+5,BEAUMONT,Age,Children (<18),0,0
+5,BEAUMONT,Age,Unknown Age,0,0
+5,BEAUMONT,Age,Total,13,2
+5,BEAUMONT,Subpopulations,Veteran Yes,0,0
+5,BEAUMONT,Subpopulations,Veteran No,13,2
+5,BEAUMONT,Subpopulations,Chronically Homeless,5,0
+5,BEAUMONT,Subpopulations,Not Chronically Homeless,8,2
+5,BEAUMONT,Subpopulations,Substance Abuse,3,0
+5,BEAUMONT,Subpopulations,No Substance Abuse,10,0
+5,BEAUMONT,Subpopulations,Unknown Substance Abuse,0,2
+5,BEAUMONT,Subpopulations,PTSD,6,0
+5,BEAUMONT,Subpopulations,No PTSD,6,0
+5,BEAUMONT,Subpopulations,Unknown PTSD,1,2
+5,BEAUMONT,Subpopulations,Mental Health Conditions,6,0
+5,BEAUMONT,Subpopulations,No Mental Health Conditions,7,0
+5,BEAUMONT,Subpopulations,Unknown Mental Health Conditions,0,2
+5,BEAUMONT,Subpopulations,Physical Disability,1,0
+5,BEAUMONT,Subpopulations,No Physical Disability,12,0
+5,BEAUMONT,Subpopulations,Unknown Physical Disability,0,2
+5,BEAUMONT,Subpopulations,Developmental Disability,2,0
+5,BEAUMONT,Subpopulations,No Developmental Disability,11,0
+5,BEAUMONT,Subpopulations,Unknown Developmental Disability,0,2
+5,BEAUMONT,Subpopulations,Brain Injury,2,0
+5,BEAUMONT,Subpopulations,No Brain Injury,11,0
+5,BEAUMONT,Subpopulations,Unknown Brain Injury,0,2
+5,BEAUMONT,Subpopulations,Victim of Domestic Violence,0,0
+5,BEAUMONT,Subpopulations,Not Victim of Domestic Violence,13,0
+5,BEAUMONT,Subpopulations,Unknown Victim of Domestic Violence,0,2
+5,BEAUMONT,Subpopulations,AIDS or HIV,0,0
+5,BEAUMONT,Subpopulations,No AIDS or HIV,13,0
+5,BEAUMONT,Subpopulations,Unknown AIDS or HIV,0,2
+5,BEAUMONT,Subpopulations,Jail Release 90 Days: Probation,0,0
+5,BEAUMONT,Subpopulations,Jail Release 90 Days: Parole,0,0
+5,BEAUMONT,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+5,BEAUMONT,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,BEAUMONT,Subpopulations,Jail Release 12 Months: Probation,0,0
+5,BEAUMONT,Subpopulations,Jail Release 12 Months: Parole,0,0
+5,BEAUMONT,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+5,BEAUMONT,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,BEAUMONT,Subpopulations,No Jail,13,0
+5,BEAUMONT,Subpopulations,Unknown Jail,0,2
+5,BEAUMONT,Subpopulations,Total,143,22
+4,BLYTHE,Race,American Indian,0,0
+4,BLYTHE,Race,Asian,0,0
+4,BLYTHE,Race,Black,6,1
+4,BLYTHE,Race,Native Hawaiian,1,0
+4,BLYTHE,Race,White,14,13
+4,BLYTHE,Race,Multiple Races,0,3
+4,BLYTHE,Race,Unknown Race,2,8
+4,BLYTHE,Race,Total,23,25
+4,BLYTHE,Ethinicity,Hispanic,0,5
+4,BLYTHE,Ethinicity,NonHispanic,21,11
+4,BLYTHE,Ethinicity,Unknown Ethinicity,2,9
+4,BLYTHE,Ethinicity,Total,23,25
+4,BLYTHE,Gender,Male,18,14
+4,BLYTHE,Gender,Female,4,11
+4,BLYTHE,Gender,Transgender,1,0
+4,BLYTHE,Gender,Gender Non-Conforming,0,0
+4,BLYTHE,Gender,Unknown Gender,0,0
+4,BLYTHE,Gender,Total,23,25
+4,BLYTHE,Age,Adults (>24),23,21
+4,BLYTHE,Age,Youth (18-24),0,3
+4,BLYTHE,Age,Children (<18),0,0
+4,BLYTHE,Age,Unknown Age,0,1
+4,BLYTHE,Age,Total,23,25
+4,BLYTHE,Subpopulations,Veteran Yes,3,0
+4,BLYTHE,Subpopulations,Veteran No,20,25
+4,BLYTHE,Subpopulations,Chronically Homeless,12,0
+4,BLYTHE,Subpopulations,Not Chronically Homeless,11,25
+4,BLYTHE,Subpopulations,Substance Abuse,6,0
+4,BLYTHE,Subpopulations,No Substance Abuse,17,0
+4,BLYTHE,Subpopulations,Unknown Substance Abuse,0,25
+4,BLYTHE,Subpopulations,PTSD,8,0
+4,BLYTHE,Subpopulations,No PTSD,14,0
+4,BLYTHE,Subpopulations,Unknown PTSD,1,25
+4,BLYTHE,Subpopulations,Mental Health Conditions,8,0
+4,BLYTHE,Subpopulations,No Mental Health Conditions,13,0
+4,BLYTHE,Subpopulations,Unknown Mental Health Conditions,2,25
+4,BLYTHE,Subpopulations,Physical Disability,6,0
+4,BLYTHE,Subpopulations,No Physical Disability,16,0
+4,BLYTHE,Subpopulations,Unknown Physical Disability,1,25
+4,BLYTHE,Subpopulations,Developmental Disability,3,0
+4,BLYTHE,Subpopulations,No Developmental Disability,18,0
+4,BLYTHE,Subpopulations,Unknown Developmental Disability,2,25
+4,BLYTHE,Subpopulations,Brain Injury,0,0
+4,BLYTHE,Subpopulations,No Brain Injury,22,0
+4,BLYTHE,Subpopulations,Unknown Brain Injury,1,25
+4,BLYTHE,Subpopulations,Victim of Domestic Violence,1,0
+4,BLYTHE,Subpopulations,Not Victim of Domestic Violence,22,0
+4,BLYTHE,Subpopulations,Unknown Victim of Domestic Violence,0,25
+4,BLYTHE,Subpopulations,AIDS or HIV,2,0
+4,BLYTHE,Subpopulations,No AIDS or HIV,21,0
+4,BLYTHE,Subpopulations,Unknown AIDS or HIV,0,25
+4,BLYTHE,Subpopulations,Jail Release 90 Days: Probation,3,0
+4,BLYTHE,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,BLYTHE,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+4,BLYTHE,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,BLYTHE,Subpopulations,Jail Release 12 Months: Probation,0,0
+4,BLYTHE,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,BLYTHE,Subpopulations,Jail Release 12 Months: Completed Sentence,1,0
+4,BLYTHE,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,BLYTHE,Subpopulations,No Jail,19,0
+4,BLYTHE,Subpopulations,Unknown Jail,0,25
+4,BLYTHE,Subpopulations,Total,253,275
+5,CALIMESA,Race,American Indian,0,0
+5,CALIMESA,Race,Asian,0,0
+5,CALIMESA,Race,Black,0,0
+5,CALIMESA,Race,Native Hawaiian,2,0
+5,CALIMESA,Race,White,10,2
+5,CALIMESA,Race,Multiple Races,1,0
+5,CALIMESA,Race,Unknown Race,0,1
+5,CALIMESA,Race,Total,13,3
+5,CALIMESA,Ethinicity,Hispanic,3,0
+5,CALIMESA,Ethinicity,NonHispanic,10,0
+5,CALIMESA,Ethinicity,Unknown Ethinicity,0,3
+5,CALIMESA,Ethinicity,Total,13,3
+5,CALIMESA,Gender,Male,7,1
+5,CALIMESA,Gender,Female,6,2
+5,CALIMESA,Gender,Transgender,0,0
+5,CALIMESA,Gender,Gender Non-Conforming,0,0
+5,CALIMESA,Gender,Unknown Gender,0,0
+5,CALIMESA,Gender,Total,13,3
+5,CALIMESA,Age,Adults (>24),12,2
+5,CALIMESA,Age,Youth (18-24),1,1
+5,CALIMESA,Age,Children (<18),0,0
+5,CALIMESA,Age,Unknown Age,0,0
+5,CALIMESA,Age,Total,13,3
+5,CALIMESA,Subpopulations,Veteran Yes,1,0
+5,CALIMESA,Subpopulations,Veteran No,12,3
+5,CALIMESA,Subpopulations,Chronically Homeless,7,0
+5,CALIMESA,Subpopulations,Not Chronically Homeless,6,3
+5,CALIMESA,Subpopulations,Substance Abuse,5,0
+5,CALIMESA,Subpopulations,No Substance Abuse,7,0
+5,CALIMESA,Subpopulations,Unknown Substance Abuse,1,3
+5,CALIMESA,Subpopulations,PTSD,4,0
+5,CALIMESA,Subpopulations,No PTSD,9,0
+5,CALIMESA,Subpopulations,Unknown PTSD,0,3
+5,CALIMESA,Subpopulations,Mental Health Conditions,5,0
+5,CALIMESA,Subpopulations,No Mental Health Conditions,8,0
+5,CALIMESA,Subpopulations,Unknown Mental Health Conditions,0,3
+5,CALIMESA,Subpopulations,Physical Disability,2,0
+5,CALIMESA,Subpopulations,No Physical Disability,11,0
+5,CALIMESA,Subpopulations,Unknown Physical Disability,0,3
+5,CALIMESA,Subpopulations,Developmental Disability,1,0
+5,CALIMESA,Subpopulations,No Developmental Disability,12,0
+5,CALIMESA,Subpopulations,Unknown Developmental Disability,0,3
+5,CALIMESA,Subpopulations,Brain Injury,2,0
+5,CALIMESA,Subpopulations,No Brain Injury,11,0
+5,CALIMESA,Subpopulations,Unknown Brain Injury,0,3
+5,CALIMESA,Subpopulations,Victim of Domestic Violence,1,0
+5,CALIMESA,Subpopulations,Not Victim of Domestic Violence,12,0
+5,CALIMESA,Subpopulations,Unknown Victim of Domestic Violence,0,3
+5,CALIMESA,Subpopulations,AIDS or HIV,0,0
+5,CALIMESA,Subpopulations,No AIDS or HIV,13,0
+5,CALIMESA,Subpopulations,Unknown AIDS or HIV,0,3
+5,CALIMESA,Subpopulations,Jail Release 90 Days: Probation,0,0
+5,CALIMESA,Subpopulations,Jail Release 90 Days: Parole,0,0
+5,CALIMESA,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+5,CALIMESA,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,CALIMESA,Subpopulations,Jail Release 12 Months: Probation,0,0
+5,CALIMESA,Subpopulations,Jail Release 12 Months: Parole,0,0
+5,CALIMESA,Subpopulations,Jail Release 12 Months: Completed Sentence,1,0
+5,CALIMESA,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,CALIMESA,Subpopulations,No Jail,12,0
+5,CALIMESA,Subpopulations,Unknown Jail,0,3
+5,CALIMESA,Subpopulations,Total,143,33
+4,CATHEDRAL CITY,Race,American Indian,4,2
+4,CATHEDRAL CITY,Race,Asian,3,0
+4,CATHEDRAL CITY,Race,Black,2,0
+4,CATHEDRAL CITY,Race,Native Hawaiian,0,0
+4,CATHEDRAL CITY,Race,White,33,18
+4,CATHEDRAL CITY,Race,Multiple Races,4,0
+4,CATHEDRAL CITY,Race,Unknown Race,5,11
+4,CATHEDRAL CITY,Race,Total,51,31
+4,CATHEDRAL CITY,Ethinicity,Hispanic,20,11
+4,CATHEDRAL CITY,Ethinicity,NonHispanic,31,7
+4,CATHEDRAL CITY,Ethinicity,Unknown Ethinicity,0,13
+4,CATHEDRAL CITY,Ethinicity,Total,51,31
+4,CATHEDRAL CITY,Gender,Male,34,27
+4,CATHEDRAL CITY,Gender,Female,16,4
+4,CATHEDRAL CITY,Gender,Transgender,0,0
+4,CATHEDRAL CITY,Gender,Gender Non-Conforming,1,0
+4,CATHEDRAL CITY,Gender,Unknown Gender,0,0
+4,CATHEDRAL CITY,Gender,Total,51,31
+4,CATHEDRAL CITY,Age,Adults (>24),51,25
+4,CATHEDRAL CITY,Age,Youth (18-24),0,4
+4,CATHEDRAL CITY,Age,Children (<18),0,0
+4,CATHEDRAL CITY,Age,Unknown Age,0,2
+4,CATHEDRAL CITY,Age,Total,51,31
+4,CATHEDRAL CITY,Subpopulations,Veteran Yes,2,0
+4,CATHEDRAL CITY,Subpopulations,Veteran No,49,31
+4,CATHEDRAL CITY,Subpopulations,Chronically Homeless,28,0
+4,CATHEDRAL CITY,Subpopulations,Not Chronically Homeless,23,31
+4,CATHEDRAL CITY,Subpopulations,Substance Abuse,23,0
+4,CATHEDRAL CITY,Subpopulations,No Substance Abuse,28,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Substance Abuse,0,31
+4,CATHEDRAL CITY,Subpopulations,PTSD,16,0
+4,CATHEDRAL CITY,Subpopulations,No PTSD,34,0
+4,CATHEDRAL CITY,Subpopulations,Unknown PTSD,1,31
+4,CATHEDRAL CITY,Subpopulations,Mental Health Conditions,18,0
+4,CATHEDRAL CITY,Subpopulations,No Mental Health Conditions,32,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Mental Health Conditions,1,31
+4,CATHEDRAL CITY,Subpopulations,Physical Disability,14,0
+4,CATHEDRAL CITY,Subpopulations,No Physical Disability,35,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Physical Disability,2,31
+4,CATHEDRAL CITY,Subpopulations,Developmental Disability,3,0
+4,CATHEDRAL CITY,Subpopulations,No Developmental Disability,47,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Developmental Disability,1,31
+4,CATHEDRAL CITY,Subpopulations,Brain Injury,9,0
+4,CATHEDRAL CITY,Subpopulations,No Brain Injury,40,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Brain Injury,2,31
+4,CATHEDRAL CITY,Subpopulations,Victim of Domestic Violence,5,0
+4,CATHEDRAL CITY,Subpopulations,Not Victim of Domestic Violence,45,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Victim of Domestic Violence,1,31
+4,CATHEDRAL CITY,Subpopulations,AIDS or HIV,7,0
+4,CATHEDRAL CITY,Subpopulations,No AIDS or HIV,43,0
+4,CATHEDRAL CITY,Subpopulations,Unknown AIDS or HIV,1,31
+4,CATHEDRAL CITY,Subpopulations,Jail Release 90 Days: Probation,3,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 90 Days: Parole,1,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 90 Days: Completed Sentence,4,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 12 Months: Probation,1,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 12 Months: Parole,1,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 12 Months: Completed Sentence,3,0
+4,CATHEDRAL CITY,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,CATHEDRAL CITY,Subpopulations,No Jail,38,0
+4,CATHEDRAL CITY,Subpopulations,Unknown Jail,0,31
+4,CATHEDRAL CITY,Subpopulations,Total,561,341
+4,COACHELLA,Race,American Indian,2,0
+4,COACHELLA,Race,Asian,0,0
+4,COACHELLA,Race,Black,1,0
+4,COACHELLA,Race,Native Hawaiian,0,0
+4,COACHELLA,Race,White,30,3
+4,COACHELLA,Race,Multiple Races,11,2
+4,COACHELLA,Race,Unknown Race,2,0
+4,COACHELLA,Race,Total,46,5
+4,COACHELLA,Ethinicity,Hispanic,30,2
+4,COACHELLA,Ethinicity,NonHispanic,16,2
+4,COACHELLA,Ethinicity,Unknown Ethinicity,0,1
+4,COACHELLA,Ethinicity,Total,46,5
+4,COACHELLA,Gender,Male,33,4
+4,COACHELLA,Gender,Female,12,1
+4,COACHELLA,Gender,Transgender,0,0
+4,COACHELLA,Gender,Gender Non-Conforming,1,0
+4,COACHELLA,Gender,Unknown Gender,0,0
+4,COACHELLA,Gender,Total,46,5
+4,COACHELLA,Age,Adults (>24),41,5
+4,COACHELLA,Age,Youth (18-24),5,0
+4,COACHELLA,Age,Children (<18),0,0
+4,COACHELLA,Age,Unknown Age,0,0
+4,COACHELLA,Age,Total,46,5
+4,COACHELLA,Subpopulations,Veteran Yes,0,0
+4,COACHELLA,Subpopulations,Veteran No,46,5
+4,COACHELLA,Subpopulations,Chronically Homeless,26,0
+4,COACHELLA,Subpopulations,Not Chronically Homeless,20,5
+4,COACHELLA,Subpopulations,Substance Abuse,19,0
+4,COACHELLA,Subpopulations,No Substance Abuse,25,0
+4,COACHELLA,Subpopulations,Unknown Substance Abuse,2,5
+4,COACHELLA,Subpopulations,PTSD,12,0
+4,COACHELLA,Subpopulations,No PTSD,33,0
+4,COACHELLA,Subpopulations,Unknown PTSD,1,5
+4,COACHELLA,Subpopulations,Mental Health Conditions,9,0
+4,COACHELLA,Subpopulations,No Mental Health Conditions,36,0
+4,COACHELLA,Subpopulations,Unknown Mental Health Conditions,1,5
+4,COACHELLA,Subpopulations,Physical Disability,19,0
+4,COACHELLA,Subpopulations,No Physical Disability,26,0
+4,COACHELLA,Subpopulations,Unknown Physical Disability,1,5
+4,COACHELLA,Subpopulations,Developmental Disability,7,0
+4,COACHELLA,Subpopulations,No Developmental Disability,39,0
+4,COACHELLA,Subpopulations,Unknown Developmental Disability,0,5
+4,COACHELLA,Subpopulations,Brain Injury,11,0
+4,COACHELLA,Subpopulations,No Brain Injury,34,0
+4,COACHELLA,Subpopulations,Unknown Brain Injury,1,5
+4,COACHELLA,Subpopulations,Victim of Domestic Violence,6,0
+4,COACHELLA,Subpopulations,Not Victim of Domestic Violence,38,0
+4,COACHELLA,Subpopulations,Unknown Victim of Domestic Violence,2,5
+4,COACHELLA,Subpopulations,AIDS or HIV,1,0
+4,COACHELLA,Subpopulations,No AIDS or HIV,45,0
+4,COACHELLA,Subpopulations,Unknown AIDS or HIV,0,5
+4,COACHELLA,Subpopulations,Jail Release 90 Days: Probation,5,0
+4,COACHELLA,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,COACHELLA,Subpopulations,Jail Release 90 Days: Completed Sentence,3,0
+4,COACHELLA,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,COACHELLA,Subpopulations,Jail Release 12 Months: Probation,1,0
+4,COACHELLA,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,COACHELLA,Subpopulations,Jail Release 12 Months: Completed Sentence,2,0
+4,COACHELLA,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,COACHELLA,Subpopulations,No Jail,35,0
+4,COACHELLA,Subpopulations,Unknown Jail,0,5
+4,COACHELLA,Subpopulations,Total,506,55
+2,CORONA,Race,American Indian,0,0
+2,CORONA,Race,Asian,1,0
+2,CORONA,Race,Black,8,4
+2,CORONA,Race,Native Hawaiian,0,0
+2,CORONA,Race,White,43,32
+2,CORONA,Race,Multiple Races,4,3
+2,CORONA,Race,Unknown Race,9,60
+2,CORONA,Race,Total,65,99
+2,CORONA,Ethinicity,Hispanic,20,20
+2,CORONA,Ethinicity,NonHispanic,44,21
+2,CORONA,Ethinicity,Unknown Ethinicity,1,58
+2,CORONA,Ethinicity,Total,65,99
+2,CORONA,Gender,Male,39,68
+2,CORONA,Gender,Female,24,18
+2,CORONA,Gender,Transgender,1,0
+2,CORONA,Gender,Gender Non-Conforming,0,0
+2,CORONA,Gender,Unknown Gender,1,13
+2,CORONA,Gender,Total,65,99
+2,CORONA,Age,Adults (>24),59,64
+2,CORONA,Age,Youth (18-24),6,10
+2,CORONA,Age,Children (<18),0,0
+2,CORONA,Age,Unknown Age,0,25
+2,CORONA,Age,Total,65,99
+2,CORONA,Subpopulations,Veteran Yes,2,0
+2,CORONA,Subpopulations,Veteran No,63,99
+2,CORONA,Subpopulations,Chronically Homeless,39,0
+2,CORONA,Subpopulations,Not Chronically Homeless,26,99
+2,CORONA,Subpopulations,Substance Abuse,33,0
+2,CORONA,Subpopulations,No Substance Abuse,28,0
+2,CORONA,Subpopulations,Unknown Substance Abuse,4,99
+2,CORONA,Subpopulations,PTSD,14,0
+2,CORONA,Subpopulations,No PTSD,42,0
+2,CORONA,Subpopulations,Unknown PTSD,9,99
+2,CORONA,Subpopulations,Mental Health Conditions,17,0
+2,CORONA,Subpopulations,No Mental Health Conditions,42,0
+2,CORONA,Subpopulations,Unknown Mental Health Conditions,6,99
+2,CORONA,Subpopulations,Physical Disability,19,0
+2,CORONA,Subpopulations,No Physical Disability,40,0
+2,CORONA,Subpopulations,Unknown Physical Disability,6,99
+2,CORONA,Subpopulations,Developmental Disability,9,0
+2,CORONA,Subpopulations,No Developmental Disability,51,0
+2,CORONA,Subpopulations,Unknown Developmental Disability,5,99
+2,CORONA,Subpopulations,Brain Injury,14,0
+2,CORONA,Subpopulations,No Brain Injury,46,0
+2,CORONA,Subpopulations,Unknown Brain Injury,5,99
+2,CORONA,Subpopulations,Victim of Domestic Violence,7,0
+2,CORONA,Subpopulations,Not Victim of Domestic Violence,52,0
+2,CORONA,Subpopulations,Unknown Victim of Domestic Violence,6,99
+2,CORONA,Subpopulations,AIDS or HIV,0,0
+2,CORONA,Subpopulations,No AIDS or HIV,58,0
+2,CORONA,Subpopulations,Unknown AIDS or HIV,7,99
+2,CORONA,Subpopulations,Jail Release 90 Days: Probation,2,0
+2,CORONA,Subpopulations,Jail Release 90 Days: Parole,0,0
+2,CORONA,Subpopulations,Jail Release 90 Days: Completed Sentence,3,0
+2,CORONA,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+2,CORONA,Subpopulations,Jail Release 12 Months: Probation,2,0
+2,CORONA,Subpopulations,Jail Release 12 Months: Parole,1,0
+2,CORONA,Subpopulations,Jail Release 12 Months: Completed Sentence,3,0
+2,CORONA,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+2,CORONA,Subpopulations,No Jail,54,0
+2,CORONA,Subpopulations,Unknown Jail,0,99
+2,CORONA,Subpopulations,Total,715,1089
+4,DESERT HOT SPRINGS,Race,American Indian,2,0
+4,DESERT HOT SPRINGS,Race,Asian,0,0
+4,DESERT HOT SPRINGS,Race,Black,2,0
+4,DESERT HOT SPRINGS,Race,Native Hawaiian,0,0
+4,DESERT HOT SPRINGS,Race,White,17,1
+4,DESERT HOT SPRINGS,Race,Multiple Races,19,0
+4,DESERT HOT SPRINGS,Race,Unknown Race,3,1
+4,DESERT HOT SPRINGS,Race,Total,43,2
+4,DESERT HOT SPRINGS,Ethinicity,Hispanic,21,0
+4,DESERT HOT SPRINGS,Ethinicity,NonHispanic,22,0
+4,DESERT HOT SPRINGS,Ethinicity,Unknown Ethinicity,0,2
+4,DESERT HOT SPRINGS,Ethinicity,Total,43,2
+4,DESERT HOT SPRINGS,Gender,Male,29,0
+4,DESERT HOT SPRINGS,Gender,Female,14,1
+4,DESERT HOT SPRINGS,Gender,Transgender,0,0
+4,DESERT HOT SPRINGS,Gender,Gender Non-Conforming,0,0
+4,DESERT HOT SPRINGS,Gender,Unknown Gender,0,1
+4,DESERT HOT SPRINGS,Gender,Total,43,2
+4,DESERT HOT SPRINGS,Age,Adults (>24),40,1
+4,DESERT HOT SPRINGS,Age,Youth (18-24),3,0
+4,DESERT HOT SPRINGS,Age,Children (<18),0,0
+4,DESERT HOT SPRINGS,Age,Unknown Age,0,1
+4,DESERT HOT SPRINGS,Age,Total,43,2
+4,DESERT HOT SPRINGS,Subpopulations,Veteran Yes,2,0
+4,DESERT HOT SPRINGS,Subpopulations,Veteran No,41,2
+4,DESERT HOT SPRINGS,Subpopulations,Chronically Homeless,20,0
+4,DESERT HOT SPRINGS,Subpopulations,Not Chronically Homeless,23,2
+4,DESERT HOT SPRINGS,Subpopulations,Substance Abuse,16,0
+4,DESERT HOT SPRINGS,Subpopulations,No Substance Abuse,25,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Substance Abuse,2,2
+4,DESERT HOT SPRINGS,Subpopulations,PTSD,8,0
+4,DESERT HOT SPRINGS,Subpopulations,No PTSD,33,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown PTSD,2,2
+4,DESERT HOT SPRINGS,Subpopulations,Mental Health Conditions,10,0
+4,DESERT HOT SPRINGS,Subpopulations,No Mental Health Conditions,32,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Mental Health Conditions,1,2
+4,DESERT HOT SPRINGS,Subpopulations,Physical Disability,7,0
+4,DESERT HOT SPRINGS,Subpopulations,No Physical Disability,34,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Physical Disability,2,2
+4,DESERT HOT SPRINGS,Subpopulations,Developmental Disability,4,0
+4,DESERT HOT SPRINGS,Subpopulations,No Developmental Disability,38,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Developmental Disability,1,2
+4,DESERT HOT SPRINGS,Subpopulations,Brain Injury,6,0
+4,DESERT HOT SPRINGS,Subpopulations,No Brain Injury,36,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Brain Injury,1,2
+4,DESERT HOT SPRINGS,Subpopulations,Victim of Domestic Violence,0,0
+4,DESERT HOT SPRINGS,Subpopulations,Not Victim of Domestic Violence,42,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Victim of Domestic Violence,1,2
+4,DESERT HOT SPRINGS,Subpopulations,AIDS or HIV,0,0
+4,DESERT HOT SPRINGS,Subpopulations,No AIDS or HIV,42,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown AIDS or HIV,1,2
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 90 Days: Probation,1,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 90 Days: Parole,2,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 12 Months: Probation,3,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 12 Months: Parole,1,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+4,DESERT HOT SPRINGS,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,DESERT HOT SPRINGS,Subpopulations,No Jail,35,0
+4,DESERT HOT SPRINGS,Subpopulations,Unknown Jail,0,2
+4,DESERT HOT SPRINGS,Subpopulations,Total,473,22
+3,HEMET,Race,American Indian,2,0
+3,HEMET,Race,Asian,1,0
+3,HEMET,Race,Black,8,6
+3,HEMET,Race,Native Hawaiian,1,0
+3,HEMET,Race,White,53,20
+3,HEMET,Race,Multiple Races,2,3
+3,HEMET,Race,Unknown Race,3,13
+3,HEMET,Race,Total,70,42
+3,HEMET,Ethinicity,Hispanic,15,11
+3,HEMET,Ethinicity,NonHispanic,53,21
+3,HEMET,Ethinicity,Unknown Ethinicity,2,10
+3,HEMET,Ethinicity,Total,70,42
+3,HEMET,Gender,Male,46,29
+3,HEMET,Gender,Female,23,13
+3,HEMET,Gender,Transgender,0,0
+3,HEMET,Gender,Gender Non-Conforming,0,0
+3,HEMET,Gender,Unknown Gender,1,0
+3,HEMET,Gender,Total,70,42
+3,HEMET,Age,Adults (>24),64,38
+3,HEMET,Age,Youth (18-24),6,3
+3,HEMET,Age,Children (<18),0,0
+3,HEMET,Age,Unknown Age,0,1
+3,HEMET,Age,Total,70,42
+3,HEMET,Subpopulations,Veteran Yes,7,0
+3,HEMET,Subpopulations,Veteran No,63,42
+3,HEMET,Subpopulations,Chronically Homeless,47,0
+3,HEMET,Subpopulations,Not Chronically Homeless,23,42
+3,HEMET,Subpopulations,Substance Abuse,33,0
+3,HEMET,Subpopulations,No Substance Abuse,35,0
+3,HEMET,Subpopulations,Unknown Substance Abuse,2,42
+3,HEMET,Subpopulations,PTSD,25,0
+3,HEMET,Subpopulations,No PTSD,40,0
+3,HEMET,Subpopulations,Unknown PTSD,5,42
+3,HEMET,Subpopulations,Mental Health Conditions,23,0
+3,HEMET,Subpopulations,No Mental Health Conditions,42,0
+3,HEMET,Subpopulations,Unknown Mental Health Conditions,5,42
+3,HEMET,Subpopulations,Physical Disability,27,0
+3,HEMET,Subpopulations,No Physical Disability,41,0
+3,HEMET,Subpopulations,Unknown Physical Disability,2,42
+3,HEMET,Subpopulations,Developmental Disability,16,0
+3,HEMET,Subpopulations,No Developmental Disability,51,0
+3,HEMET,Subpopulations,Unknown Developmental Disability,3,42
+3,HEMET,Subpopulations,Brain Injury,17,0
+3,HEMET,Subpopulations,No Brain Injury,48,0
+3,HEMET,Subpopulations,Unknown Brain Injury,5,42
+3,HEMET,Subpopulations,Victim of Domestic Violence,3,0
+3,HEMET,Subpopulations,Not Victim of Domestic Violence,64,0
+3,HEMET,Subpopulations,Unknown Victim of Domestic Violence,3,42
+3,HEMET,Subpopulations,AIDS or HIV,1,0
+3,HEMET,Subpopulations,No AIDS or HIV,66,0
+3,HEMET,Subpopulations,Unknown AIDS or HIV,3,42
+3,HEMET,Subpopulations,Jail Release 90 Days: Probation,5,0
+3,HEMET,Subpopulations,Jail Release 90 Days: Parole,0,0
+3,HEMET,Subpopulations,Jail Release 90 Days: Completed Sentence,6,0
+3,HEMET,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+3,HEMET,Subpopulations,Jail Release 12 Months: Probation,2,0
+3,HEMET,Subpopulations,Jail Release 12 Months: Parole,0,0
+3,HEMET,Subpopulations,Jail Release 12 Months: Completed Sentence,6,0
+3,HEMET,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+3,HEMET,Subpopulations,No Jail,51,0
+3,HEMET,Subpopulations,Unknown Jail,0,42
+3,HEMET,Subpopulations,Total,770,462
+4,INDIAN WELLS,Race,American Indian,0,0
+4,INDIAN WELLS,Race,Asian,0,0
+4,INDIAN WELLS,Race,Black,0,0
+4,INDIAN WELLS,Race,Native Hawaiian,0,0
+4,INDIAN WELLS,Race,White,0,0
+4,INDIAN WELLS,Race,Multiple Races,0,0
+4,INDIAN WELLS,Race,Unknown Race,2,0
+4,INDIAN WELLS,Race,Total,2,0
+4,INDIAN WELLS,Ethinicity,Hispanic,2,0
+4,INDIAN WELLS,Ethinicity,NonHispanic,0,0
+4,INDIAN WELLS,Ethinicity,Unknown Ethinicity,0,0
+4,INDIAN WELLS,Ethinicity,Total,2,0
+4,INDIAN WELLS,Gender,Male,1,0
+4,INDIAN WELLS,Gender,Female,1,0
+4,INDIAN WELLS,Gender,Transgender,0,0
+4,INDIAN WELLS,Gender,Gender Non-Conforming,0,0
+4,INDIAN WELLS,Gender,Unknown Gender,0,0
+4,INDIAN WELLS,Gender,Total,2,0
+4,INDIAN WELLS,Age,Adults (>24),2,0
+4,INDIAN WELLS,Age,Youth (18-24),0,0
+4,INDIAN WELLS,Age,Children (<18),0,0
+4,INDIAN WELLS,Age,Unknown Age,0,0
+4,INDIAN WELLS,Age,Total,2,0
+4,INDIAN WELLS,Subpopulations,Veteran Yes,0,0
+4,INDIAN WELLS,Subpopulations,Veteran No,2,0
+4,INDIAN WELLS,Subpopulations,Chronically Homeless,1,0
+4,INDIAN WELLS,Subpopulations,Not Chronically Homeless,1,0
+4,INDIAN WELLS,Subpopulations,Substance Abuse,0,0
+4,INDIAN WELLS,Subpopulations,No Substance Abuse,2,0
+4,INDIAN WELLS,Subpopulations,Unknown Substance Abuse,0,0
+4,INDIAN WELLS,Subpopulations,PTSD,0,0
+4,INDIAN WELLS,Subpopulations,No PTSD,2,0
+4,INDIAN WELLS,Subpopulations,Unknown PTSD,0,0
+4,INDIAN WELLS,Subpopulations,Mental Health Conditions,0,0
+4,INDIAN WELLS,Subpopulations,No Mental Health Conditions,2,0
+4,INDIAN WELLS,Subpopulations,Unknown Mental Health Conditions,0,0
+4,INDIAN WELLS,Subpopulations,Physical Disability,1,0
+4,INDIAN WELLS,Subpopulations,No Physical Disability,1,0
+4,INDIAN WELLS,Subpopulations,Unknown Physical Disability,0,0
+4,INDIAN WELLS,Subpopulations,Developmental Disability,0,0
+4,INDIAN WELLS,Subpopulations,No Developmental Disability,2,0
+4,INDIAN WELLS,Subpopulations,Unknown Developmental Disability,0,0
+4,INDIAN WELLS,Subpopulations,Brain Injury,0,0
+4,INDIAN WELLS,Subpopulations,No Brain Injury,2,0
+4,INDIAN WELLS,Subpopulations,Unknown Brain Injury,0,0
+4,INDIAN WELLS,Subpopulations,Victim of Domestic Violence,0,0
+4,INDIAN WELLS,Subpopulations,Not Victim of Domestic Violence,2,0
+4,INDIAN WELLS,Subpopulations,Unknown Victim of Domestic Violence,0,0
+4,INDIAN WELLS,Subpopulations,AIDS or HIV,0,0
+4,INDIAN WELLS,Subpopulations,No AIDS or HIV,2,0
+4,INDIAN WELLS,Subpopulations,Unknown AIDS or HIV,0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 90 Days: Probation,0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 12 Months: Probation,0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,INDIAN WELLS,Subpopulations,Jail Release 12 Months: Completed Sentence,1,0
+4,INDIAN WELLS,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,INDIAN WELLS,Subpopulations,No Jail,1,0
+4,INDIAN WELLS,Subpopulations,Unknown Jail,0,0
+4,INDIAN WELLS,Subpopulations,Total,22,0
+4,INDIO,Race,American Indian,4,2
+4,INDIO,Race,Asian,0,1
+4,INDIO,Race,Black,1,0
+4,INDIO,Race,Native Hawaiian,0,0
+4,INDIO,Race,White,21,3
+4,INDIO,Race,Multiple Races,6,0
+4,INDIO,Race,Unknown Race,6,8
+4,INDIO,Race,Total,38,14
+4,INDIO,Ethinicity,Hispanic,25,5
+4,INDIO,Ethinicity,NonHispanic,13,2
+4,INDIO,Ethinicity,Unknown Ethinicity,0,7
+4,INDIO,Ethinicity,Total,38,14
+4,INDIO,Gender,Male,30,11
+4,INDIO,Gender,Female,8,3
+4,INDIO,Gender,Transgender,0,0
+4,INDIO,Gender,Gender Non-Conforming,0,0
+4,INDIO,Gender,Unknown Gender,0,0
+4,INDIO,Gender,Total,38,14
+4,INDIO,Age,Adults (>24),34,8
+4,INDIO,Age,Youth (18-24),4,3
+4,INDIO,Age,Children (<18),0,0
+4,INDIO,Age,Unknown Age,0,3
+4,INDIO,Age,Total,38,14
+4,INDIO,Subpopulations,Veteran Yes,2,0
+4,INDIO,Subpopulations,Veteran No,36,14
+4,INDIO,Subpopulations,Chronically Homeless,22,0
+4,INDIO,Subpopulations,Not Chronically Homeless,16,14
+4,INDIO,Subpopulations,Substance Abuse,17,0
+4,INDIO,Subpopulations,No Substance Abuse,19,0
+4,INDIO,Subpopulations,Unknown Substance Abuse,2,14
+4,INDIO,Subpopulations,PTSD,7,0
+4,INDIO,Subpopulations,No PTSD,30,0
+4,INDIO,Subpopulations,Unknown PTSD,1,14
+4,INDIO,Subpopulations,Mental Health Conditions,4,0
+4,INDIO,Subpopulations,No Mental Health Conditions,33,0
+4,INDIO,Subpopulations,Unknown Mental Health Conditions,1,14
+4,INDIO,Subpopulations,Physical Disability,8,0
+4,INDIO,Subpopulations,No Physical Disability,29,0
+4,INDIO,Subpopulations,Unknown Physical Disability,1,14
+4,INDIO,Subpopulations,Developmental Disability,5,0
+4,INDIO,Subpopulations,No Developmental Disability,32,0
+4,INDIO,Subpopulations,Unknown Developmental Disability,1,14
+4,INDIO,Subpopulations,Brain Injury,6,0
+4,INDIO,Subpopulations,No Brain Injury,32,0
+4,INDIO,Subpopulations,Unknown Brain Injury,0,14
+4,INDIO,Subpopulations,Victim of Domestic Violence,4,0
+4,INDIO,Subpopulations,Not Victim of Domestic Violence,33,0
+4,INDIO,Subpopulations,Unknown Victim of Domestic Violence,1,14
+4,INDIO,Subpopulations,AIDS or HIV,1,0
+4,INDIO,Subpopulations,No AIDS or HIV,36,0
+4,INDIO,Subpopulations,Unknown AIDS or HIV,1,14
+4,INDIO,Subpopulations,Jail Release 90 Days: Probation,2,0
+4,INDIO,Subpopulations,Jail Release 90 Days: Parole,1,0
+4,INDIO,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+4,INDIO,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,INDIO,Subpopulations,Jail Release 12 Months: Probation,0,0
+4,INDIO,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,INDIO,Subpopulations,Jail Release 12 Months: Completed Sentence,3,0
+4,INDIO,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,INDIO,Subpopulations,No Jail,32,0
+4,INDIO,Subpopulations,Unknown Jail,0,14
+4,INDIO,Subpopulations,Total,418,154
+2,JURUPA VALLEY,Race,American Indian,5,0
+2,JURUPA VALLEY,Race,Asian,0,0
+2,JURUPA VALLEY,Race,Black,8,5
+2,JURUPA VALLEY,Race,Native Hawaiian,1,0
+2,JURUPA VALLEY,Race,White,67,8
+2,JURUPA VALLEY,Race,Multiple Races,18,0
+2,JURUPA VALLEY,Race,Unknown Race,13,14
+2,JURUPA VALLEY,Race,Total,112,27
+2,JURUPA VALLEY,Ethinicity,Hispanic,45,3
+2,JURUPA VALLEY,Ethinicity,NonHispanic,66,4
+2,JURUPA VALLEY,Ethinicity,Unknown Ethinicity,1,20
+2,JURUPA VALLEY,Ethinicity,Total,112,27
+2,JURUPA VALLEY,Gender,Male,79,14
+2,JURUPA VALLEY,Gender,Female,32,10
+2,JURUPA VALLEY,Gender,Transgender,0,0
+2,JURUPA VALLEY,Gender,Gender Non-Conforming,0,0
+2,JURUPA VALLEY,Gender,Unknown Gender,1,3
+2,JURUPA VALLEY,Gender,Total,112,27
+2,JURUPA VALLEY,Age,Adults (>24),108,13
+2,JURUPA VALLEY,Age,Youth (18-24),4,3
+2,JURUPA VALLEY,Age,Children (<18),0,0
+2,JURUPA VALLEY,Age,Unknown Age,0,11
+2,JURUPA VALLEY,Age,Total,112,27
+2,JURUPA VALLEY,Subpopulations,Veteran Yes,6,0
+2,JURUPA VALLEY,Subpopulations,Veteran No,106,27
+2,JURUPA VALLEY,Subpopulations,Chronically Homeless,51,0
+2,JURUPA VALLEY,Subpopulations,Not Chronically Homeless,61,27
+2,JURUPA VALLEY,Subpopulations,Substance Abuse,39,0
+2,JURUPA VALLEY,Subpopulations,No Substance Abuse,72,0
+2,JURUPA VALLEY,Subpopulations,Unknown Substance Abuse,1,27
+2,JURUPA VALLEY,Subpopulations,PTSD,17,0
+2,JURUPA VALLEY,Subpopulations,No PTSD,92,0
+2,JURUPA VALLEY,Subpopulations,Unknown PTSD,3,27
+2,JURUPA VALLEY,Subpopulations,Mental Health Conditions,21,0
+2,JURUPA VALLEY,Subpopulations,No Mental Health Conditions,87,0
+2,JURUPA VALLEY,Subpopulations,Unknown Mental Health Conditions,4,27
+2,JURUPA VALLEY,Subpopulations,Physical Disability,23,0
+2,JURUPA VALLEY,Subpopulations,No Physical Disability,85,0
+2,JURUPA VALLEY,Subpopulations,Unknown Physical Disability,4,27
+2,JURUPA VALLEY,Subpopulations,Developmental Disability,13,0
+2,JURUPA VALLEY,Subpopulations,No Developmental Disability,94,0
+2,JURUPA VALLEY,Subpopulations,Unknown Developmental Disability,5,27
+2,JURUPA VALLEY,Subpopulations,Brain Injury,17,0
+2,JURUPA VALLEY,Subpopulations,No Brain Injury,94,0
+2,JURUPA VALLEY,Subpopulations,Unknown Brain Injury,1,27
+2,JURUPA VALLEY,Subpopulations,Victim of Domestic Violence,5,0
+2,JURUPA VALLEY,Subpopulations,Not Victim of Domestic Violence,105,0
+2,JURUPA VALLEY,Subpopulations,Unknown Victim of Domestic Violence,2,27
+2,JURUPA VALLEY,Subpopulations,AIDS or HIV,0,0
+2,JURUPA VALLEY,Subpopulations,No AIDS or HIV,111,0
+2,JURUPA VALLEY,Subpopulations,Unknown AIDS or HIV,1,27
+2,JURUPA VALLEY,Subpopulations,Jail Release 90 Days: Probation,6,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 90 Days: Parole,0,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 12 Months: Probation,3,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 12 Months: Parole,0,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 12 Months: Completed Sentence,6,0
+2,JURUPA VALLEY,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+2,JURUPA VALLEY,Subpopulations,No Jail,96,0
+2,JURUPA VALLEY,Subpopulations,Unknown Jail,0,27
+2,JURUPA VALLEY,Subpopulations,Total,1232,297
+4,LA QUINTA,Race,American Indian,1,0
+4,LA QUINTA,Race,Asian,0,0
+4,LA QUINTA,Race,Black,0,0
+4,LA QUINTA,Race,Native Hawaiian,0,0
+4,LA QUINTA,Race,White,7,0
+4,LA QUINTA,Race,Multiple Races,0,0
+4,LA QUINTA,Race,Unknown Race,1,0
+4,LA QUINTA,Race,Total,9,0
+4,LA QUINTA,Ethinicity,Hispanic,1,0
+4,LA QUINTA,Ethinicity,NonHispanic,8,0
+4,LA QUINTA,Ethinicity,Unknown Ethinicity,0,0
+4,LA QUINTA,Ethinicity,Total,9,0
+4,LA QUINTA,Gender,Male,6,0
+4,LA QUINTA,Gender,Female,2,0
+4,LA QUINTA,Gender,Transgender,0,0
+4,LA QUINTA,Gender,Gender Non-Conforming,0,0
+4,LA QUINTA,Gender,Unknown Gender,1,0
+4,LA QUINTA,Gender,Total,9,0
+4,LA QUINTA,Age,Adults (>24),9,0
+4,LA QUINTA,Age,Youth (18-24),0,0
+4,LA QUINTA,Age,Children (<18),0,0
+4,LA QUINTA,Age,Unknown Age,0,0
+4,LA QUINTA,Age,Total,9,0
+4,LA QUINTA,Subpopulations,Veteran Yes,0,0
+4,LA QUINTA,Subpopulations,Veteran No,9,0
+4,LA QUINTA,Subpopulations,Chronically Homeless,3,0
+4,LA QUINTA,Subpopulations,Not Chronically Homeless,6,0
+4,LA QUINTA,Subpopulations,Substance Abuse,3,0
+4,LA QUINTA,Subpopulations,No Substance Abuse,6,0
+4,LA QUINTA,Subpopulations,Unknown Substance Abuse,0,0
+4,LA QUINTA,Subpopulations,PTSD,0,0
+4,LA QUINTA,Subpopulations,No PTSD,9,0
+4,LA QUINTA,Subpopulations,Unknown PTSD,0,0
+4,LA QUINTA,Subpopulations,Mental Health Conditions,1,0
+4,LA QUINTA,Subpopulations,No Mental Health Conditions,8,0
+4,LA QUINTA,Subpopulations,Unknown Mental Health Conditions,0,0
+4,LA QUINTA,Subpopulations,Physical Disability,2,0
+4,LA QUINTA,Subpopulations,No Physical Disability,7,0
+4,LA QUINTA,Subpopulations,Unknown Physical Disability,0,0
+4,LA QUINTA,Subpopulations,Developmental Disability,1,0
+4,LA QUINTA,Subpopulations,No Developmental Disability,8,0
+4,LA QUINTA,Subpopulations,Unknown Developmental Disability,0,0
+4,LA QUINTA,Subpopulations,Brain Injury,2,0
+4,LA QUINTA,Subpopulations,No Brain Injury,7,0
+4,LA QUINTA,Subpopulations,Unknown Brain Injury,0,0
+4,LA QUINTA,Subpopulations,Victim of Domestic Violence,0,0
+4,LA QUINTA,Subpopulations,Not Victim of Domestic Violence,9,0
+4,LA QUINTA,Subpopulations,Unknown Victim of Domestic Violence,0,0
+4,LA QUINTA,Subpopulations,AIDS or HIV,0,0
+4,LA QUINTA,Subpopulations,No AIDS or HIV,9,0
+4,LA QUINTA,Subpopulations,Unknown AIDS or HIV,0,0
+4,LA QUINTA,Subpopulations,Jail Release 90 Days: Probation,0,0
+4,LA QUINTA,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,LA QUINTA,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+4,LA QUINTA,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,LA QUINTA,Subpopulations,Jail Release 12 Months: Probation,0,0
+4,LA QUINTA,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,LA QUINTA,Subpopulations,Jail Release 12 Months: Completed Sentence,1,0
+4,LA QUINTA,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,LA QUINTA,Subpopulations,No Jail,7,0
+4,LA QUINTA,Subpopulations,Unknown Jail,0,0
+4,LA QUINTA,Subpopulations,Total,99,0
+1,LAKE ELSINORE,Race,American Indian,4,0
+1,LAKE ELSINORE,Race,Asian,1,0
+1,LAKE ELSINORE,Race,Black,4,1
+1,LAKE ELSINORE,Race,Native Hawaiian,1,0
+1,LAKE ELSINORE,Race,White,33,9
+1,LAKE ELSINORE,Race,Multiple Races,6,0
+1,LAKE ELSINORE,Race,Unknown Race,1,6
+1,LAKE ELSINORE,Race,Total,50,16
+1,LAKE ELSINORE,Ethinicity,Hispanic,8,3
+1,LAKE ELSINORE,Ethinicity,NonHispanic,40,4
+1,LAKE ELSINORE,Ethinicity,Unknown Ethinicity,2,9
+1,LAKE ELSINORE,Ethinicity,Total,50,16
+1,LAKE ELSINORE,Gender,Male,35,11
+1,LAKE ELSINORE,Gender,Female,15,4
+1,LAKE ELSINORE,Gender,Transgender,0,0
+1,LAKE ELSINORE,Gender,Gender Non-Conforming,0,0
+1,LAKE ELSINORE,Gender,Unknown Gender,0,1
+1,LAKE ELSINORE,Gender,Total,50,16
+1,LAKE ELSINORE,Age,Adults (>24),46,4
+1,LAKE ELSINORE,Age,Youth (18-24),4,8
+1,LAKE ELSINORE,Age,Children (<18),0,0
+1,LAKE ELSINORE,Age,Unknown Age,0,4
+1,LAKE ELSINORE,Age,Total,50,16
+1,LAKE ELSINORE,Subpopulations,Veteran Yes,3,0
+1,LAKE ELSINORE,Subpopulations,Veteran No,47,16
+1,LAKE ELSINORE,Subpopulations,Chronically Homeless,27,0
+1,LAKE ELSINORE,Subpopulations,Not Chronically Homeless,23,16
+1,LAKE ELSINORE,Subpopulations,Substance Abuse,16,0
+1,LAKE ELSINORE,Subpopulations,No Substance Abuse,32,0
+1,LAKE ELSINORE,Subpopulations,Unknown Substance Abuse,2,16
+1,LAKE ELSINORE,Subpopulations,PTSD,16,0
+1,LAKE ELSINORE,Subpopulations,No PTSD,32,0
+1,LAKE ELSINORE,Subpopulations,Unknown PTSD,2,16
+1,LAKE ELSINORE,Subpopulations,Mental Health Conditions,13,0
+1,LAKE ELSINORE,Subpopulations,No Mental Health Conditions,32,0
+1,LAKE ELSINORE,Subpopulations,Unknown Mental Health Conditions,5,16
+1,LAKE ELSINORE,Subpopulations,Physical Disability,11,0
+1,LAKE ELSINORE,Subpopulations,No Physical Disability,35,0
+1,LAKE ELSINORE,Subpopulations,Unknown Physical Disability,4,16
+1,LAKE ELSINORE,Subpopulations,Developmental Disability,10,0
+1,LAKE ELSINORE,Subpopulations,No Developmental Disability,38,0
+1,LAKE ELSINORE,Subpopulations,Unknown Developmental Disability,2,16
+1,LAKE ELSINORE,Subpopulations,Brain Injury,12,0
+1,LAKE ELSINORE,Subpopulations,No Brain Injury,36,0
+1,LAKE ELSINORE,Subpopulations,Unknown Brain Injury,2,16
+1,LAKE ELSINORE,Subpopulations,Victim of Domestic Violence,3,0
+1,LAKE ELSINORE,Subpopulations,Not Victim of Domestic Violence,46,0
+1,LAKE ELSINORE,Subpopulations,Unknown Victim of Domestic Violence,1,16
+1,LAKE ELSINORE,Subpopulations,AIDS or HIV,0,0
+1,LAKE ELSINORE,Subpopulations,No AIDS or HIV,48,0
+1,LAKE ELSINORE,Subpopulations,Unknown AIDS or HIV,2,16
+1,LAKE ELSINORE,Subpopulations,Jail Release 90 Days: Probation,4,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 90 Days: Parole,1,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 90 Days: Completed Sentence,4,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 12 Months: Probation,3,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 12 Months: Parole,0,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 12 Months: Completed Sentence,3,0
+1,LAKE ELSINORE,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+1,LAKE ELSINORE,Subpopulations,No Jail,35,0
+1,LAKE ELSINORE,Subpopulations,Unknown Jail,0,16
+1,LAKE ELSINORE,Subpopulations,Total,550,176
+5,MENIFEE,Race,American Indian,0,0
+5,MENIFEE,Race,Asian,1,0
+5,MENIFEE,Race,Black,0,2
+5,MENIFEE,Race,Native Hawaiian,0,0
+5,MENIFEE,Race,White,5,6
+5,MENIFEE,Race,Multiple Races,3,0
+5,MENIFEE,Race,Unknown Race,0,0
+5,MENIFEE,Race,Total,9,8
+5,MENIFEE,Ethinicity,Hispanic,4,1
+5,MENIFEE,Ethinicity,NonHispanic,5,5
+5,MENIFEE,Ethinicity,Unknown Ethinicity,0,2
+5,MENIFEE,Ethinicity,Total,9,8
+5,MENIFEE,Gender,Male,6,5
+5,MENIFEE,Gender,Female,3,3
+5,MENIFEE,Gender,Transgender,0,0
+5,MENIFEE,Gender,Gender Non-Conforming,0,0
+5,MENIFEE,Gender,Unknown Gender,0,0
+5,MENIFEE,Gender,Total,9,8
+5,MENIFEE,Age,Adults (>24),8,5
+5,MENIFEE,Age,Youth (18-24),1,3
+5,MENIFEE,Age,Children (<18),0,0
+5,MENIFEE,Age,Unknown Age,0,0
+5,MENIFEE,Age,Total,9,8
+5,MENIFEE,Subpopulations,Veteran Yes,0,0
+5,MENIFEE,Subpopulations,Veteran No,9,8
+5,MENIFEE,Subpopulations,Chronically Homeless,4,0
+5,MENIFEE,Subpopulations,Not Chronically Homeless,5,8
+5,MENIFEE,Subpopulations,Substance Abuse,6,0
+5,MENIFEE,Subpopulations,No Substance Abuse,3,0
+5,MENIFEE,Subpopulations,Unknown Substance Abuse,0,8
+5,MENIFEE,Subpopulations,PTSD,3,0
+5,MENIFEE,Subpopulations,No PTSD,6,0
+5,MENIFEE,Subpopulations,Unknown PTSD,0,8
+5,MENIFEE,Subpopulations,Mental Health Conditions,6,0
+5,MENIFEE,Subpopulations,No Mental Health Conditions,3,0
+5,MENIFEE,Subpopulations,Unknown Mental Health Conditions,0,8
+5,MENIFEE,Subpopulations,Physical Disability,3,0
+5,MENIFEE,Subpopulations,No Physical Disability,6,0
+5,MENIFEE,Subpopulations,Unknown Physical Disability,0,8
+5,MENIFEE,Subpopulations,Developmental Disability,3,0
+5,MENIFEE,Subpopulations,No Developmental Disability,6,0
+5,MENIFEE,Subpopulations,Unknown Developmental Disability,0,8
+5,MENIFEE,Subpopulations,Brain Injury,4,0
+5,MENIFEE,Subpopulations,No Brain Injury,5,0
+5,MENIFEE,Subpopulations,Unknown Brain Injury,0,8
+5,MENIFEE,Subpopulations,Victim of Domestic Violence,2,0
+5,MENIFEE,Subpopulations,Not Victim of Domestic Violence,7,0
+5,MENIFEE,Subpopulations,Unknown Victim of Domestic Violence,0,8
+5,MENIFEE,Subpopulations,AIDS or HIV,0,0
+5,MENIFEE,Subpopulations,No AIDS or HIV,8,0
+5,MENIFEE,Subpopulations,Unknown AIDS or HIV,1,8
+5,MENIFEE,Subpopulations,Jail Release 90 Days: Probation,1,0
+5,MENIFEE,Subpopulations,Jail Release 90 Days: Parole,1,0
+5,MENIFEE,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+5,MENIFEE,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,MENIFEE,Subpopulations,Jail Release 12 Months: Probation,0,0
+5,MENIFEE,Subpopulations,Jail Release 12 Months: Parole,0,0
+5,MENIFEE,Subpopulations,Jail Release 12 Months: Completed Sentence,1,0
+5,MENIFEE,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,MENIFEE,Subpopulations,No Jail,6,0
+5,MENIFEE,Subpopulations,Unknown Jail,0,8
+5,MENIFEE,Subpopulations,Total,99,88
+5,MORENO VALLEY,Race,American Indian,0,0
+5,MORENO VALLEY,Race,Asian,2,0
+5,MORENO VALLEY,Race,Black,8,4
+5,MORENO VALLEY,Race,Native Hawaiian,1,0
+5,MORENO VALLEY,Race,White,9,3
+5,MORENO VALLEY,Race,Multiple Races,1,1
+5,MORENO VALLEY,Race,Unknown Race,6,3
+5,MORENO VALLEY,Race,Total,27,11
+5,MORENO VALLEY,Ethinicity,Hispanic,13,4
+5,MORENO VALLEY,Ethinicity,NonHispanic,14,4
+5,MORENO VALLEY,Ethinicity,Unknown Ethinicity,0,3
+5,MORENO VALLEY,Ethinicity,Total,27,11
+5,MORENO VALLEY,Gender,Male,22,9
+5,MORENO VALLEY,Gender,Female,5,2
+5,MORENO VALLEY,Gender,Transgender,0,0
+5,MORENO VALLEY,Gender,Gender Non-Conforming,0,0
+5,MORENO VALLEY,Gender,Unknown Gender,0,0
+5,MORENO VALLEY,Gender,Total,27,11
+5,MORENO VALLEY,Age,Adults (>24),25,6
+5,MORENO VALLEY,Age,Youth (18-24),2,5
+5,MORENO VALLEY,Age,Children (<18),0,0
+5,MORENO VALLEY,Age,Unknown Age,0,0
+5,MORENO VALLEY,Age,Total,27,11
+5,MORENO VALLEY,Subpopulations,Veteran Yes,1,0
+5,MORENO VALLEY,Subpopulations,Veteran No,26,11
+5,MORENO VALLEY,Subpopulations,Chronically Homeless,9,0
+5,MORENO VALLEY,Subpopulations,Not Chronically Homeless,18,11
+5,MORENO VALLEY,Subpopulations,Substance Abuse,5,0
+5,MORENO VALLEY,Subpopulations,No Substance Abuse,22,0
+5,MORENO VALLEY,Subpopulations,Unknown Substance Abuse,0,11
+5,MORENO VALLEY,Subpopulations,PTSD,8,0
+5,MORENO VALLEY,Subpopulations,No PTSD,16,0
+5,MORENO VALLEY,Subpopulations,Unknown PTSD,3,11
+5,MORENO VALLEY,Subpopulations,Mental Health Conditions,5,0
+5,MORENO VALLEY,Subpopulations,No Mental Health Conditions,19,0
+5,MORENO VALLEY,Subpopulations,Unknown Mental Health Conditions,3,11
+5,MORENO VALLEY,Subpopulations,Physical Disability,4,0
+5,MORENO VALLEY,Subpopulations,No Physical Disability,23,0
+5,MORENO VALLEY,Subpopulations,Unknown Physical Disability,0,11
+5,MORENO VALLEY,Subpopulations,Developmental Disability,2,0
+5,MORENO VALLEY,Subpopulations,No Developmental Disability,25,0
+5,MORENO VALLEY,Subpopulations,Unknown Developmental Disability,0,11
+5,MORENO VALLEY,Subpopulations,Brain Injury,9,0
+5,MORENO VALLEY,Subpopulations,No Brain Injury,16,0
+5,MORENO VALLEY,Subpopulations,Unknown Brain Injury,2,11
+5,MORENO VALLEY,Subpopulations,Victim of Domestic Violence,1,0
+5,MORENO VALLEY,Subpopulations,Not Victim of Domestic Violence,26,0
+5,MORENO VALLEY,Subpopulations,Unknown Victim of Domestic Violence,0,11
+5,MORENO VALLEY,Subpopulations,AIDS or HIV,0,0
+5,MORENO VALLEY,Subpopulations,No AIDS or HIV,26,0
+5,MORENO VALLEY,Subpopulations,Unknown AIDS or HIV,1,11
+5,MORENO VALLEY,Subpopulations,Jail Release 90 Days: Probation,2,0
+5,MORENO VALLEY,Subpopulations,Jail Release 90 Days: Parole,0,0
+5,MORENO VALLEY,Subpopulations,Jail Release 90 Days: Completed Sentence,3,0
+5,MORENO VALLEY,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,MORENO VALLEY,Subpopulations,Jail Release 12 Months: Probation,1,0
+5,MORENO VALLEY,Subpopulations,Jail Release 12 Months: Parole,0,0
+5,MORENO VALLEY,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+5,MORENO VALLEY,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,MORENO VALLEY,Subpopulations,No Jail,21,0
+5,MORENO VALLEY,Subpopulations,Unknown Jail,0,11
+5,MORENO VALLEY,Subpopulations,Total,297,121
+3,MURRIETA,Race,American Indian,1,0
+3,MURRIETA,Race,Asian,0,0
+3,MURRIETA,Race,Black,1,0
+3,MURRIETA,Race,Native Hawaiian,1,0
+3,MURRIETA,Race,White,10,2
+3,MURRIETA,Race,Multiple Races,1,0
+3,MURRIETA,Race,Unknown Race,1,0
+3,MURRIETA,Race,Total,15,2
+3,MURRIETA,Ethinicity,Hispanic,1,0
+3,MURRIETA,Ethinicity,NonHispanic,13,0
+3,MURRIETA,Ethinicity,Unknown Ethinicity,1,2
+3,MURRIETA,Ethinicity,Total,15,2
+3,MURRIETA,Gender,Male,8,2
+3,MURRIETA,Gender,Female,7,0
+3,MURRIETA,Gender,Transgender,0,0
+3,MURRIETA,Gender,Gender Non-Conforming,0,0
+3,MURRIETA,Gender,Unknown Gender,0,0
+3,MURRIETA,Gender,Total,15,2
+3,MURRIETA,Age,Adults (>24),13,2
+3,MURRIETA,Age,Youth (18-24),2,0
+3,MURRIETA,Age,Children (<18),0,0
+3,MURRIETA,Age,Unknown Age,0,0
+3,MURRIETA,Age,Total,15,2
+3,MURRIETA,Subpopulations,Veteran Yes,1,0
+3,MURRIETA,Subpopulations,Veteran No,14,2
+3,MURRIETA,Subpopulations,Chronically Homeless,6,0
+3,MURRIETA,Subpopulations,Not Chronically Homeless,9,2
+3,MURRIETA,Subpopulations,Substance Abuse,4,0
+3,MURRIETA,Subpopulations,No Substance Abuse,11,0
+3,MURRIETA,Subpopulations,Unknown Substance Abuse,0,2
+3,MURRIETA,Subpopulations,PTSD,3,0
+3,MURRIETA,Subpopulations,No PTSD,11,0
+3,MURRIETA,Subpopulations,Unknown PTSD,1,2
+3,MURRIETA,Subpopulations,Mental Health Conditions,4,0
+3,MURRIETA,Subpopulations,No Mental Health Conditions,11,0
+3,MURRIETA,Subpopulations,Unknown Mental Health Conditions,0,2
+3,MURRIETA,Subpopulations,Physical Disability,3,0
+3,MURRIETA,Subpopulations,No Physical Disability,12,0
+3,MURRIETA,Subpopulations,Unknown Physical Disability,0,2
+3,MURRIETA,Subpopulations,Developmental Disability,3,0
+3,MURRIETA,Subpopulations,No Developmental Disability,12,0
+3,MURRIETA,Subpopulations,Unknown Developmental Disability,0,2
+3,MURRIETA,Subpopulations,Brain Injury,3,0
+3,MURRIETA,Subpopulations,No Brain Injury,11,0
+3,MURRIETA,Subpopulations,Unknown Brain Injury,1,2
+3,MURRIETA,Subpopulations,Victim of Domestic Violence,1,0
+3,MURRIETA,Subpopulations,Not Victim of Domestic Violence,14,0
+3,MURRIETA,Subpopulations,Unknown Victim of Domestic Violence,0,2
+3,MURRIETA,Subpopulations,AIDS or HIV,0,0
+3,MURRIETA,Subpopulations,No AIDS or HIV,15,0
+3,MURRIETA,Subpopulations,Unknown AIDS or HIV,0,2
+3,MURRIETA,Subpopulations,Jail Release 90 Days: Probation,0,0
+3,MURRIETA,Subpopulations,Jail Release 90 Days: Parole,0,0
+3,MURRIETA,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+3,MURRIETA,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+3,MURRIETA,Subpopulations,Jail Release 12 Months: Probation,0,0
+3,MURRIETA,Subpopulations,Jail Release 12 Months: Parole,0,0
+3,MURRIETA,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+3,MURRIETA,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+3,MURRIETA,Subpopulations,No Jail,15,0
+3,MURRIETA,Subpopulations,Unknown Jail,0,2
+3,MURRIETA,Subpopulations,Total,165,22
+2,NORCO,Race,American Indian,0,0
+2,NORCO,Race,Asian,0,0
+2,NORCO,Race,Black,0,0
+2,NORCO,Race,Native Hawaiian,0,0
+2,NORCO,Race,White,7,0
+2,NORCO,Race,Multiple Races,3,0
+2,NORCO,Race,Unknown Race,0,1
+2,NORCO,Race,Total,10,1
+2,NORCO,Ethinicity,Hispanic,3,0
+2,NORCO,Ethinicity,NonHispanic,7,0
+2,NORCO,Ethinicity,Unknown Ethinicity,0,1
+2,NORCO,Ethinicity,Total,10,1
+2,NORCO,Gender,Male,7,0
+2,NORCO,Gender,Female,3,0
+2,NORCO,Gender,Transgender,0,0
+2,NORCO,Gender,Gender Non-Conforming,0,0
+2,NORCO,Gender,Unknown Gender,0,1
+2,NORCO,Gender,Total,10,1
+2,NORCO,Age,Adults (>24),10,0
+2,NORCO,Age,Youth (18-24),0,0
+2,NORCO,Age,Children (<18),0,0
+2,NORCO,Age,Unknown Age,0,1
+2,NORCO,Age,Total,10,1
+2,NORCO,Subpopulations,Veteran Yes,1,0
+2,NORCO,Subpopulations,Veteran No,9,1
+2,NORCO,Subpopulations,Chronically Homeless,5,0
+2,NORCO,Subpopulations,Not Chronically Homeless,5,1
+2,NORCO,Subpopulations,Substance Abuse,3,0
+2,NORCO,Subpopulations,No Substance Abuse,7,0
+2,NORCO,Subpopulations,Unknown Substance Abuse,0,1
+2,NORCO,Subpopulations,PTSD,3,0
+2,NORCO,Subpopulations,No PTSD,7,0
+2,NORCO,Subpopulations,Unknown PTSD,0,1
+2,NORCO,Subpopulations,Mental Health Conditions,2,0
+2,NORCO,Subpopulations,No Mental Health Conditions,7,0
+2,NORCO,Subpopulations,Unknown Mental Health Conditions,1,1
+2,NORCO,Subpopulations,Physical Disability,2,0
+2,NORCO,Subpopulations,No Physical Disability,8,0
+2,NORCO,Subpopulations,Unknown Physical Disability,0,1
+2,NORCO,Subpopulations,Developmental Disability,0,0
+2,NORCO,Subpopulations,No Developmental Disability,10,0
+2,NORCO,Subpopulations,Unknown Developmental Disability,0,1
+2,NORCO,Subpopulations,Brain Injury,2,0
+2,NORCO,Subpopulations,No Brain Injury,8,0
+2,NORCO,Subpopulations,Unknown Brain Injury,0,1
+2,NORCO,Subpopulations,Victim of Domestic Violence,0,0
+2,NORCO,Subpopulations,Not Victim of Domestic Violence,10,0
+2,NORCO,Subpopulations,Unknown Victim of Domestic Violence,0,1
+2,NORCO,Subpopulations,AIDS or HIV,0,0
+2,NORCO,Subpopulations,No AIDS or HIV,10,0
+2,NORCO,Subpopulations,Unknown AIDS or HIV,0,1
+2,NORCO,Subpopulations,Jail Release 90 Days: Probation,0,0
+2,NORCO,Subpopulations,Jail Release 90 Days: Parole,0,0
+2,NORCO,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+2,NORCO,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+2,NORCO,Subpopulations,Jail Release 12 Months: Probation,0,0
+2,NORCO,Subpopulations,Jail Release 12 Months: Parole,1,0
+2,NORCO,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+2,NORCO,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+2,NORCO,Subpopulations,No Jail,9,0
+2,NORCO,Subpopulations,Unknown Jail,0,1
+2,NORCO,Subpopulations,Total,110,11
+4,PALM DESERT,Race,American Indian,2,0
+4,PALM DESERT,Race,Asian,0,0
+4,PALM DESERT,Race,Black,1,0
+4,PALM DESERT,Race,Native Hawaiian,0,0
+4,PALM DESERT,Race,White,10,8
+4,PALM DESERT,Race,Multiple Races,1,0
+4,PALM DESERT,Race,Unknown Race,1,0
+4,PALM DESERT,Race,Total,15,8
+4,PALM DESERT,Ethinicity,Hispanic,3,0
+4,PALM DESERT,Ethinicity,NonHispanic,12,4
+4,PALM DESERT,Ethinicity,Unknown Ethinicity,0,4
+4,PALM DESERT,Ethinicity,Total,15,8
+4,PALM DESERT,Gender,Male,10,5
+4,PALM DESERT,Gender,Female,5,3
+4,PALM DESERT,Gender,Transgender,0,0
+4,PALM DESERT,Gender,Gender Non-Conforming,0,0
+4,PALM DESERT,Gender,Unknown Gender,0,0
+4,PALM DESERT,Gender,Total,15,8
+4,PALM DESERT,Age,Adults (>24),14,6
+4,PALM DESERT,Age,Youth (18-24),1,0
+4,PALM DESERT,Age,Children (<18),0,0
+4,PALM DESERT,Age,Unknown Age,0,2
+4,PALM DESERT,Age,Total,15,8
+4,PALM DESERT,Subpopulations,Veteran Yes,4,0
+4,PALM DESERT,Subpopulations,Veteran No,11,8
+4,PALM DESERT,Subpopulations,Chronically Homeless,8,0
+4,PALM DESERT,Subpopulations,Not Chronically Homeless,7,8
+4,PALM DESERT,Subpopulations,Substance Abuse,2,0
+4,PALM DESERT,Subpopulations,No Substance Abuse,13,0
+4,PALM DESERT,Subpopulations,Unknown Substance Abuse,0,8
+4,PALM DESERT,Subpopulations,PTSD,5,0
+4,PALM DESERT,Subpopulations,No PTSD,9,0
+4,PALM DESERT,Subpopulations,Unknown PTSD,1,8
+4,PALM DESERT,Subpopulations,Mental Health Conditions,3,0
+4,PALM DESERT,Subpopulations,No Mental Health Conditions,12,0
+4,PALM DESERT,Subpopulations,Unknown Mental Health Conditions,0,8
+4,PALM DESERT,Subpopulations,Physical Disability,5,0
+4,PALM DESERT,Subpopulations,No Physical Disability,10,0
+4,PALM DESERT,Subpopulations,Unknown Physical Disability,0,8
+4,PALM DESERT,Subpopulations,Developmental Disability,1,0
+4,PALM DESERT,Subpopulations,No Developmental Disability,14,0
+4,PALM DESERT,Subpopulations,Unknown Developmental Disability,0,8
+4,PALM DESERT,Subpopulations,Brain Injury,0,0
+4,PALM DESERT,Subpopulations,No Brain Injury,15,0
+4,PALM DESERT,Subpopulations,Unknown Brain Injury,0,8
+4,PALM DESERT,Subpopulations,Victim of Domestic Violence,1,0
+4,PALM DESERT,Subpopulations,Not Victim of Domestic Violence,14,0
+4,PALM DESERT,Subpopulations,Unknown Victim of Domestic Violence,0,8
+4,PALM DESERT,Subpopulations,AIDS or HIV,0,0
+4,PALM DESERT,Subpopulations,No AIDS or HIV,15,0
+4,PALM DESERT,Subpopulations,Unknown AIDS or HIV,0,8
+4,PALM DESERT,Subpopulations,Jail Release 90 Days: Probation,0,0
+4,PALM DESERT,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,PALM DESERT,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+4,PALM DESERT,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,PALM DESERT,Subpopulations,Jail Release 12 Months: Probation,1,0
+4,PALM DESERT,Subpopulations,Jail Release 12 Months: Parole,1,0
+4,PALM DESERT,Subpopulations,Jail Release 12 Months: Completed Sentence,1,0
+4,PALM DESERT,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,PALM DESERT,Subpopulations,No Jail,11,0
+4,PALM DESERT,Subpopulations,Unknown Jail,0,8
+4,PALM DESERT,Subpopulations,Total,165,88
+4,PALM SPRINGS,Race,American Indian,4,2
+4,PALM SPRINGS,Race,Asian,2,0
+4,PALM SPRINGS,Race,Black,21,7
+4,PALM SPRINGS,Race,Native Hawaiian,1,0
+4,PALM SPRINGS,Race,White,65,49
+4,PALM SPRINGS,Race,Multiple Races,24,2
+4,PALM SPRINGS,Race,Unknown Race,5,14
+4,PALM SPRINGS,Race,Total,122,74
+4,PALM SPRINGS,Ethinicity,Hispanic,26,9
+4,PALM SPRINGS,Ethinicity,NonHispanic,94,40
+4,PALM SPRINGS,Ethinicity,Unknown Ethinicity,2,25
+4,PALM SPRINGS,Ethinicity,Total,122,74
+4,PALM SPRINGS,Gender,Male,92,57
+4,PALM SPRINGS,Gender,Female,27,13
+4,PALM SPRINGS,Gender,Transgender,2,0
+4,PALM SPRINGS,Gender,Gender Non-Conforming,0,0
+4,PALM SPRINGS,Gender,Unknown Gender,1,4
+4,PALM SPRINGS,Gender,Total,122,74
+4,PALM SPRINGS,Age,Adults (>24),117,62
+4,PALM SPRINGS,Age,Youth (18-24),5,6
+4,PALM SPRINGS,Age,Children (<18),0,0
+4,PALM SPRINGS,Age,Unknown Age,0,6
+4,PALM SPRINGS,Age,Total,122,74
+4,PALM SPRINGS,Subpopulations,Veteran Yes,14,0
+4,PALM SPRINGS,Subpopulations,Veteran No,108,74
+4,PALM SPRINGS,Subpopulations,Chronically Homeless,75,0
+4,PALM SPRINGS,Subpopulations,Not Chronically Homeless,47,74
+4,PALM SPRINGS,Subpopulations,Substance Abuse,37,0
+4,PALM SPRINGS,Subpopulations,No Substance Abuse,83,0
+4,PALM SPRINGS,Subpopulations,Unknown Substance Abuse,2,74
+4,PALM SPRINGS,Subpopulations,PTSD,52,0
+4,PALM SPRINGS,Subpopulations,No PTSD,66,0
+4,PALM SPRINGS,Subpopulations,Unknown PTSD,4,74
+4,PALM SPRINGS,Subpopulations,Mental Health Conditions,38,0
+4,PALM SPRINGS,Subpopulations,No Mental Health Conditions,77,0
+4,PALM SPRINGS,Subpopulations,Unknown Mental Health Conditions,7,74
+4,PALM SPRINGS,Subpopulations,Physical Disability,50,0
+4,PALM SPRINGS,Subpopulations,No Physical Disability,68,0
+4,PALM SPRINGS,Subpopulations,Unknown Physical Disability,4,74
+4,PALM SPRINGS,Subpopulations,Developmental Disability,28,0
+4,PALM SPRINGS,Subpopulations,No Developmental Disability,89,0
+4,PALM SPRINGS,Subpopulations,Unknown Developmental Disability,5,74
+4,PALM SPRINGS,Subpopulations,Brain Injury,34,0
+4,PALM SPRINGS,Subpopulations,No Brain Injury,82,0
+4,PALM SPRINGS,Subpopulations,Unknown Brain Injury,6,74
+4,PALM SPRINGS,Subpopulations,Victim of Domestic Violence,9,0
+4,PALM SPRINGS,Subpopulations,Not Victim of Domestic Violence,112,0
+4,PALM SPRINGS,Subpopulations,Unknown Victim of Domestic Violence,1,74
+4,PALM SPRINGS,Subpopulations,AIDS or HIV,8,0
+4,PALM SPRINGS,Subpopulations,No AIDS or HIV,110,0
+4,PALM SPRINGS,Subpopulations,Unknown AIDS or HIV,4,74
+4,PALM SPRINGS,Subpopulations,Jail Release 90 Days: Probation,6,0
+4,PALM SPRINGS,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,PALM SPRINGS,Subpopulations,Jail Release 90 Days: Completed Sentence,7,0
+4,PALM SPRINGS,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,PALM SPRINGS,Subpopulations,Jail Release 12 Months: Probation,2,0
+4,PALM SPRINGS,Subpopulations,Jail Release 12 Months: Parole,1,0
+4,PALM SPRINGS,Subpopulations,Jail Release 12 Months: Completed Sentence,2,0
+4,PALM SPRINGS,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,PALM SPRINGS,Subpopulations,No Jail,104,0
+4,PALM SPRINGS,Subpopulations,Unknown Jail,0,74
+4,PALM SPRINGS,Subpopulations,Total,1342,814
+5,PERRIS,Race,American Indian,1,0
+5,PERRIS,Race,Asian,0,0
+5,PERRIS,Race,Black,9,1
+5,PERRIS,Race,Native Hawaiian,1,0
+5,PERRIS,Race,White,26,17
+5,PERRIS,Race,Multiple Races,8,3
+5,PERRIS,Race,Unknown Race,6,5
+5,PERRIS,Race,Total,51,26
+5,PERRIS,Ethinicity,Hispanic,20,9
+5,PERRIS,Ethinicity,NonHispanic,29,12
+5,PERRIS,Ethinicity,Unknown Ethinicity,2,5
+5,PERRIS,Ethinicity,Total,51,26
+5,PERRIS,Gender,Male,39,16
+5,PERRIS,Gender,Female,12,10
+5,PERRIS,Gender,Transgender,0,0
+5,PERRIS,Gender,Gender Non-Conforming,0,0
+5,PERRIS,Gender,Unknown Gender,0,0
+5,PERRIS,Gender,Total,51,26
+5,PERRIS,Age,Adults (>24),47,20
+5,PERRIS,Age,Youth (18-24),4,5
+5,PERRIS,Age,Children (<18),0,0
+5,PERRIS,Age,Unknown Age,0,1
+5,PERRIS,Age,Total,51,26
+5,PERRIS,Subpopulations,Veteran Yes,2,0
+5,PERRIS,Subpopulations,Veteran No,49,26
+5,PERRIS,Subpopulations,Chronically Homeless,27,0
+5,PERRIS,Subpopulations,Not Chronically Homeless,24,26
+5,PERRIS,Subpopulations,Substance Abuse,22,0
+5,PERRIS,Subpopulations,No Substance Abuse,23,0
+5,PERRIS,Subpopulations,Unknown Substance Abuse,6,26
+5,PERRIS,Subpopulations,PTSD,7,0
+5,PERRIS,Subpopulations,No PTSD,38,0
+5,PERRIS,Subpopulations,Unknown PTSD,6,26
+5,PERRIS,Subpopulations,Mental Health Conditions,11,0
+5,PERRIS,Subpopulations,No Mental Health Conditions,33,0
+5,PERRIS,Subpopulations,Unknown Mental Health Conditions,7,26
+5,PERRIS,Subpopulations,Physical Disability,12,0
+5,PERRIS,Subpopulations,No Physical Disability,33,0
+5,PERRIS,Subpopulations,Unknown Physical Disability,6,26
+5,PERRIS,Subpopulations,Developmental Disability,8,0
+5,PERRIS,Subpopulations,No Developmental Disability,38,0
+5,PERRIS,Subpopulations,Unknown Developmental Disability,5,26
+5,PERRIS,Subpopulations,Brain Injury,8,0
+5,PERRIS,Subpopulations,No Brain Injury,36,0
+5,PERRIS,Subpopulations,Unknown Brain Injury,7,26
+5,PERRIS,Subpopulations,Victim of Domestic Violence,3,0
+5,PERRIS,Subpopulations,Not Victim of Domestic Violence,43,0
+5,PERRIS,Subpopulations,Unknown Victim of Domestic Violence,5,26
+5,PERRIS,Subpopulations,AIDS or HIV,1,0
+5,PERRIS,Subpopulations,No AIDS or HIV,44,0
+5,PERRIS,Subpopulations,Unknown AIDS or HIV,6,26
+5,PERRIS,Subpopulations,Jail Release 90 Days: Probation,3,0
+5,PERRIS,Subpopulations,Jail Release 90 Days: Parole,1,0
+5,PERRIS,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+5,PERRIS,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,PERRIS,Subpopulations,Jail Release 12 Months: Probation,1,0
+5,PERRIS,Subpopulations,Jail Release 12 Months: Parole,1,0
+5,PERRIS,Subpopulations,Jail Release 12 Months: Completed Sentence,2,0
+5,PERRIS,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,PERRIS,Subpopulations,No Jail,42,0
+5,PERRIS,Subpopulations,Unknown Jail,0,26
+5,PERRIS,Subpopulations,Total,561,286
+4,RANCHO MIRAGE,Race,American Indian,1,1
+4,RANCHO MIRAGE,Race,Asian,0,0
+4,RANCHO MIRAGE,Race,Black,1,0
+4,RANCHO MIRAGE,Race,Native Hawaiian,0,0
+4,RANCHO MIRAGE,Race,White,1,0
+4,RANCHO MIRAGE,Race,Multiple Races,1,0
+4,RANCHO MIRAGE,Race,Unknown Race,1,0
+4,RANCHO MIRAGE,Race,Total,5,1
+4,RANCHO MIRAGE,Ethinicity,Hispanic,1,0
+4,RANCHO MIRAGE,Ethinicity,NonHispanic,3,0
+4,RANCHO MIRAGE,Ethinicity,Unknown Ethinicity,1,1
+4,RANCHO MIRAGE,Ethinicity,Total,5,1
+4,RANCHO MIRAGE,Gender,Male,4,1
+4,RANCHO MIRAGE,Gender,Female,1,0
+4,RANCHO MIRAGE,Gender,Transgender,0,0
+4,RANCHO MIRAGE,Gender,Gender Non-Conforming,0,0
+4,RANCHO MIRAGE,Gender,Unknown Gender,0,0
+4,RANCHO MIRAGE,Gender,Total,5,1
+4,RANCHO MIRAGE,Age,Adults (>24),5,1
+4,RANCHO MIRAGE,Age,Youth (18-24),0,0
+4,RANCHO MIRAGE,Age,Children (<18),0,0
+4,RANCHO MIRAGE,Age,Unknown Age,0,0
+4,RANCHO MIRAGE,Age,Total,5,1
+4,RANCHO MIRAGE,Subpopulations,Veteran Yes,1,0
+4,RANCHO MIRAGE,Subpopulations,Veteran No,4,1
+4,RANCHO MIRAGE,Subpopulations,Chronically Homeless,2,0
+4,RANCHO MIRAGE,Subpopulations,Not Chronically Homeless,3,1
+4,RANCHO MIRAGE,Subpopulations,Substance Abuse,0,0
+4,RANCHO MIRAGE,Subpopulations,No Substance Abuse,5,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Substance Abuse,0,1
+4,RANCHO MIRAGE,Subpopulations,PTSD,1,0
+4,RANCHO MIRAGE,Subpopulations,No PTSD,4,0
+4,RANCHO MIRAGE,Subpopulations,Unknown PTSD,0,1
+4,RANCHO MIRAGE,Subpopulations,Mental Health Conditions,0,0
+4,RANCHO MIRAGE,Subpopulations,No Mental Health Conditions,5,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Mental Health Conditions,0,1
+4,RANCHO MIRAGE,Subpopulations,Physical Disability,3,0
+4,RANCHO MIRAGE,Subpopulations,No Physical Disability,2,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Physical Disability,0,1
+4,RANCHO MIRAGE,Subpopulations,Developmental Disability,4,0
+4,RANCHO MIRAGE,Subpopulations,No Developmental Disability,1,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Developmental Disability,0,1
+4,RANCHO MIRAGE,Subpopulations,Brain Injury,2,0
+4,RANCHO MIRAGE,Subpopulations,No Brain Injury,3,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Brain Injury,0,1
+4,RANCHO MIRAGE,Subpopulations,Victim of Domestic Violence,1,0
+4,RANCHO MIRAGE,Subpopulations,Not Victim of Domestic Violence,4,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Victim of Domestic Violence,0,1
+4,RANCHO MIRAGE,Subpopulations,AIDS or HIV,0,0
+4,RANCHO MIRAGE,Subpopulations,No AIDS or HIV,5,0
+4,RANCHO MIRAGE,Subpopulations,Unknown AIDS or HIV,0,1
+4,RANCHO MIRAGE,Subpopulations,Jail Release 90 Days: Probation,0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 90 Days: Parole,0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 12 Months: Probation,0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+4,RANCHO MIRAGE,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,RANCHO MIRAGE,Subpopulations,No Jail,5,0
+4,RANCHO MIRAGE,Subpopulations,Unknown Jail,0,1
+4,RANCHO MIRAGE,Subpopulations,Total,55,11
+1+2,RIVERSIDE,Race,American Indian,6,0
+1+2,RIVERSIDE,Race,Asian,3,5
+1+2,RIVERSIDE,Race,Black,51,35
+1+2,RIVERSIDE,Race,Native Hawaiian,4,0
+1+2,RIVERSIDE,Race,White,115,71
+1+2,RIVERSIDE,Race,Multiple Races,33,4
+1+2,RIVERSIDE,Race,Unknown Race,26,86
+1+2,RIVERSIDE,Race,Total,238,201
+1+2,RIVERSIDE,Ethinicity,Hispanic,63,23
+1+2,RIVERSIDE,Ethinicity,NonHispanic,166,62
+1+2,RIVERSIDE,Ethinicity,Unknown Ethinicity,9,116
+1+2,RIVERSIDE,Ethinicity,Total,238,201
+1+2,RIVERSIDE,Gender,Male,162,115
+1+2,RIVERSIDE,Gender,Female,65,43
+1+2,RIVERSIDE,Gender,Transgender,5,0
+1+2,RIVERSIDE,Gender,Gender Non-Conforming,4,0
+1+2,RIVERSIDE,Gender,Unknown Gender,2,43
+1+2,RIVERSIDE,Gender,Total,238,201
+1+2,RIVERSIDE,Age,Adults (>24),206,114
+1+2,RIVERSIDE,Age,Youth (18-24),26,31
+1+2,RIVERSIDE,Age,Children (<18),6,7
+1+2,RIVERSIDE,Age,Unknown Age,0,49
+1+2,RIVERSIDE,Age,Total,238,201
+1+2,RIVERSIDE,Subpopulations,Veteran Yes,25,0
+1+2,RIVERSIDE,Subpopulations,Veteran No,213,201
+1+2,RIVERSIDE,Subpopulations,Chronically Homeless,111,0
+1+2,RIVERSIDE,Subpopulations,Not Chronically Homeless,127,201
+1+2,RIVERSIDE,Subpopulations,Substance Abuse,70,0
+1+2,RIVERSIDE,Subpopulations,No Substance Abuse,155,0
+1+2,RIVERSIDE,Subpopulations,Unknown Substance Abuse,13,201
+1+2,RIVERSIDE,Subpopulations,PTSD,70,0
+1+2,RIVERSIDE,Subpopulations,No PTSD,144,0
+1+2,RIVERSIDE,Subpopulations,Unknown PTSD,24,201
+1+2,RIVERSIDE,Subpopulations,Mental Health Conditions,68,0
+1+2,RIVERSIDE,Subpopulations,No Mental Health Conditions,155,0
+1+2,RIVERSIDE,Subpopulations,Unknown Mental Health Conditions,15,201
+1+2,RIVERSIDE,Subpopulations,Physical Disability,62,0
+1+2,RIVERSIDE,Subpopulations,No Physical Disability,163,0
+1+2,RIVERSIDE,Subpopulations,Unknown Physical Disability,13,201
+1+2,RIVERSIDE,Subpopulations,Developmental Disability,37,0
+1+2,RIVERSIDE,Subpopulations,No Developmental Disability,186,0
+1+2,RIVERSIDE,Subpopulations,Unknown Developmental Disability,15,201
+1+2,RIVERSIDE,Subpopulations,Brain Injury,43,0
+1+2,RIVERSIDE,Subpopulations,No Brain Injury,180,0
+1+2,RIVERSIDE,Subpopulations,Unknown Brain Injury,15,201
+1+2,RIVERSIDE,Subpopulations,Victim of Domestic Violence,21,0
+1+2,RIVERSIDE,Subpopulations,Not Victim of Domestic Violence,203,0
+1+2,RIVERSIDE,Subpopulations,Unknown Victim of Domestic Violence,14,201
+1+2,RIVERSIDE,Subpopulations,AIDS or HIV,2,0
+1+2,RIVERSIDE,Subpopulations,No AIDS or HIV,221,0
+1+2,RIVERSIDE,Subpopulations,Unknown AIDS or HIV,15,201
+1+2,RIVERSIDE,Subpopulations,Jail Release 90 Days: Probation,11,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 90 Days: Parole,5,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 90 Days: Completed Sentence,4,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 12 Months: Probation,7,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 12 Months: Parole,3,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 12 Months: Completed Sentence,12,0
+1+2,RIVERSIDE,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+1+2,RIVERSIDE,Subpopulations,No Jail,191,0
+1+2,RIVERSIDE,Subpopulations,Unknown Jail,5,201
+1+2,RIVERSIDE,Subpopulations,Total,2618,2211
+2,RIVERSIDE 2,Race,American Indian,4,0
+2,RIVERSIDE 2,Race,Asian,1,2
+2,RIVERSIDE 2,Race,Black,27,23
+2,RIVERSIDE 2,Race,Native Hawaiian,2,0
+2,RIVERSIDE 2,Race,White,54,29
+2,RIVERSIDE 2,Race,Multiple Races,15,2
+2,RIVERSIDE 2,Race,Unknown Race,13,29
+2,RIVERSIDE 2,Race,Total,116,85
+2,RIVERSIDE 2,Ethinicity,Hispanic,30,9
+2,RIVERSIDE 2,Ethinicity,NonHispanic,81,35
+2,RIVERSIDE 2,Ethinicity,Unknown Ethinicity,5,41
+2,RIVERSIDE 2,Ethinicity,Total,116,85
+2,RIVERSIDE 2,Gender,Male,80,48
+2,RIVERSIDE 2,Gender,Female,33,19
+2,RIVERSIDE 2,Gender,Transgender,0,0
+2,RIVERSIDE 2,Gender,Gender Non-Conforming,3,0
+2,RIVERSIDE 2,Gender,Unknown Gender,0,18
+2,RIVERSIDE 2,Gender,Total,116,85
+2,RIVERSIDE 2,Age,Adults (>24),108,44
+2,RIVERSIDE 2,Age,Youth (18-24),5,21
+2,RIVERSIDE 2,Age,Children (<18),3,4
+2,RIVERSIDE 2,Age,Unknown Age,0,16
+2,RIVERSIDE 2,Age,Total,116,85
+2,RIVERSIDE 2,Subpopulations,Veteran Yes,12,0
+2,RIVERSIDE 2,Subpopulations,Veteran No,104,85
+2,RIVERSIDE 2,Subpopulations,Chronically Homeless,59,0
+2,RIVERSIDE 2,Subpopulations,Not Chronically Homeless,57,85
+2,RIVERSIDE 2,Subpopulations,Substance Abuse,37,0
+2,RIVERSIDE 2,Subpopulations,No Substance Abuse,74,0
+2,RIVERSIDE 2,Subpopulations,Unknown Substance Abuse,5,85
+2,RIVERSIDE 2,Subpopulations,PTSD,37,0
+2,RIVERSIDE 2,Subpopulations,No PTSD,68,0
+2,RIVERSIDE 2,Subpopulations,Unknown PTSD,11,85
+2,RIVERSIDE 2,Subpopulations,Mental Health Conditions,34,0
+2,RIVERSIDE 2,Subpopulations,No Mental Health Conditions,78,0
+2,RIVERSIDE 2,Subpopulations,Unknown Mental Health Conditions,4,85
+2,RIVERSIDE 2,Subpopulations,Physical Disability,29,0
+2,RIVERSIDE 2,Subpopulations,No Physical Disability,83,0
+2,RIVERSIDE 2,Subpopulations,Unknown Physical Disability,4,85
+2,RIVERSIDE 2,Subpopulations,Developmental Disability,19,0
+2,RIVERSIDE 2,Subpopulations,No Developmental Disability,92,0
+2,RIVERSIDE 2,Subpopulations,Unknown Developmental Disability,5,85
+2,RIVERSIDE 2,Subpopulations,Brain Injury,21,0
+2,RIVERSIDE 2,Subpopulations,No Brain Injury,91,0
+2,RIVERSIDE 2,Subpopulations,Unknown Brain Injury,4,85
+2,RIVERSIDE 2,Subpopulations,Victim of Domestic Violence,10,0
+2,RIVERSIDE 2,Subpopulations,Not Victim of Domestic Violence,100,0
+2,RIVERSIDE 2,Subpopulations,Unknown Victim of Domestic Violence,6,85
+2,RIVERSIDE 2,Subpopulations,AIDS or HIV,0,0
+2,RIVERSIDE 2,Subpopulations,No AIDS or HIV,111,0
+2,RIVERSIDE 2,Subpopulations,Unknown AIDS or HIV,5,85
+2,RIVERSIDE 2,Subpopulations,Jail Release 90 Days: Probation,6,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 90 Days: Parole,3,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 90 Days: Completed Sentence,3,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 12 Months: Probation,1,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 12 Months: Parole,1,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 12 Months: Completed Sentence,3,0
+2,RIVERSIDE 2,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+2,RIVERSIDE 2,Subpopulations,No Jail,97,0
+2,RIVERSIDE 2,Subpopulations,Unknown Jail,2,85
+2,RIVERSIDE 2,Subpopulations,Total,1276,935
+1,RIVERSIDE 1,Race,American Indian,2,0
+1,RIVERSIDE 1,Race,Asian,2,3
+1,RIVERSIDE 1,Race,Black,24,12
+1,RIVERSIDE 1,Race,Native Hawaiian,2,0
+1,RIVERSIDE 1,Race,White,61,42
+1,RIVERSIDE 1,Race,Multiple Races,18,2
+1,RIVERSIDE 1,Race,Unknown Race,13,57
+1,RIVERSIDE 1,Race,Total,122,116
+1,RIVERSIDE 1,Ethinicity,Hispanic,33,14
+1,RIVERSIDE 1,Ethinicity,NonHispanic,85,27
+1,RIVERSIDE 1,Ethinicity,Unknown Ethinicity,4,75
+1,RIVERSIDE 1,Ethinicity,Total,122,116
+1,RIVERSIDE 1,Gender,Male,82,67
+1,RIVERSIDE 1,Gender,Female,32,24
+1,RIVERSIDE 1,Gender,Transgender,5,0
+1,RIVERSIDE 1,Gender,Gender Non-Conforming,1,0
+1,RIVERSIDE 1,Gender,Unknown Gender,2,25
+1,RIVERSIDE 1,Gender,Total,122,116
+1,RIVERSIDE 1,Age,Adults (>24),98,70
+1,RIVERSIDE 1,Age,Youth (18-24),21,10
+1,RIVERSIDE 1,Age,Children (<18),3,3
+1,RIVERSIDE 1,Age,Unknown Age,0,33
+1,RIVERSIDE 1,Age,Total,122,116
+1,RIVERSIDE 1,Subpopulations,Veteran Yes,13,0
+1,RIVERSIDE 1,Subpopulations,Veteran No,109,116
+1,RIVERSIDE 1,Subpopulations,Chronically Homeless,52,0
+1,RIVERSIDE 1,Subpopulations,Not Chronically Homeless,70,116
+1,RIVERSIDE 1,Subpopulations,Substance Abuse,33,0
+1,RIVERSIDE 1,Subpopulations,No Substance Abuse,81,0
+1,RIVERSIDE 1,Subpopulations,Unknown Substance Abuse,8,116
+1,RIVERSIDE 1,Subpopulations,PTSD,33,0
+1,RIVERSIDE 1,Subpopulations,No PTSD,76,0
+1,RIVERSIDE 1,Subpopulations,Unknown PTSD,13,116
+1,RIVERSIDE 1,Subpopulations,Mental Health Conditions,34,0
+1,RIVERSIDE 1,Subpopulations,No Mental Health Conditions,77,0
+1,RIVERSIDE 1,Subpopulations,Unknown Mental Health Conditions,11,116
+1,RIVERSIDE 1,Subpopulations,Physical Disability,33,0
+1,RIVERSIDE 1,Subpopulations,No Physical Disability,80,0
+1,RIVERSIDE 1,Subpopulations,Unknown Physical Disability,9,116
+1,RIVERSIDE 1,Subpopulations,Developmental Disability,18,0
+1,RIVERSIDE 1,Subpopulations,No Developmental Disability,94,0
+1,RIVERSIDE 1,Subpopulations,Unknown Developmental Disability,10,116
+1,RIVERSIDE 1,Subpopulations,Brain Injury,22,0
+1,RIVERSIDE 1,Subpopulations,No Brain Injury,89,0
+1,RIVERSIDE 1,Subpopulations,Unknown Brain Injury,11,116
+1,RIVERSIDE 1,Subpopulations,Victim of Domestic Violence,11,0
+1,RIVERSIDE 1,Subpopulations,Not Victim of Domestic Violence,103,0
+1,RIVERSIDE 1,Subpopulations,Unknown Victim of Domestic Violence,8,116
+1,RIVERSIDE 1,Subpopulations,AIDS or HIV,2,0
+1,RIVERSIDE 1,Subpopulations,No AIDS or HIV,110,0
+1,RIVERSIDE 1,Subpopulations,Unknown AIDS or HIV,10,116
+1,RIVERSIDE 1,Subpopulations,Jail Release 90 Days: Probation,5,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 90 Days: Parole,2,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 12 Months: Probation,6,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 12 Months: Parole,2,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 12 Months: Completed Sentence,9,0
+1,RIVERSIDE 1,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+1,RIVERSIDE 1,Subpopulations,No Jail,94,0
+1,RIVERSIDE 1,Subpopulations,Unknown Jail,3,116
+1,RIVERSIDE 1,Subpopulations,Total,1342,1276
+3,SAN JACINTO,Race,American Indian,4,0
+3,SAN JACINTO,Race,Asian,1,0
+3,SAN JACINTO,Race,Black,7,2
+3,SAN JACINTO,Race,Native Hawaiian,0,0
+3,SAN JACINTO,Race,White,29,1
+3,SAN JACINTO,Race,Multiple Races,3,0
+3,SAN JACINTO,Race,Unknown Race,0,1
+3,SAN JACINTO,Race,Total,44,4
+3,SAN JACINTO,Ethinicity,Hispanic,13,1
+3,SAN JACINTO,Ethinicity,NonHispanic,31,2
+3,SAN JACINTO,Ethinicity,Unknown Ethinicity,0,1
+3,SAN JACINTO,Ethinicity,Total,44,4
+3,SAN JACINTO,Gender,Male,30,2
+3,SAN JACINTO,Gender,Female,12,2
+3,SAN JACINTO,Gender,Transgender,1,0
+3,SAN JACINTO,Gender,Gender Non-Conforming,1,0
+3,SAN JACINTO,Gender,Unknown Gender,0,0
+3,SAN JACINTO,Gender,Total,44,4
+3,SAN JACINTO,Age,Adults (>24),42,3
+3,SAN JACINTO,Age,Youth (18-24),2,1
+3,SAN JACINTO,Age,Children (<18),0,0
+3,SAN JACINTO,Age,Unknown Age,0,0
+3,SAN JACINTO,Age,Total,44,4
+3,SAN JACINTO,Subpopulations,Veteran Yes,6,0
+3,SAN JACINTO,Subpopulations,Veteran No,38,4
+3,SAN JACINTO,Subpopulations,Chronically Homeless,23,0
+3,SAN JACINTO,Subpopulations,Not Chronically Homeless,21,4
+3,SAN JACINTO,Subpopulations,Substance Abuse,15,0
+3,SAN JACINTO,Subpopulations,No Substance Abuse,27,0
+3,SAN JACINTO,Subpopulations,Unknown Substance Abuse,2,4
+3,SAN JACINTO,Subpopulations,PTSD,16,0
+3,SAN JACINTO,Subpopulations,No PTSD,26,0
+3,SAN JACINTO,Subpopulations,Unknown PTSD,2,4
+3,SAN JACINTO,Subpopulations,Mental Health Conditions,7,0
+3,SAN JACINTO,Subpopulations,No Mental Health Conditions,35,0
+3,SAN JACINTO,Subpopulations,Unknown Mental Health Conditions,2,4
+3,SAN JACINTO,Subpopulations,Physical Disability,11,0
+3,SAN JACINTO,Subpopulations,No Physical Disability,32,0
+3,SAN JACINTO,Subpopulations,Unknown Physical Disability,1,4
+3,SAN JACINTO,Subpopulations,Developmental Disability,7,0
+3,SAN JACINTO,Subpopulations,No Developmental Disability,36,0
+3,SAN JACINTO,Subpopulations,Unknown Developmental Disability,1,4
+3,SAN JACINTO,Subpopulations,Brain Injury,9,0
+3,SAN JACINTO,Subpopulations,No Brain Injury,33,0
+3,SAN JACINTO,Subpopulations,Unknown Brain Injury,2,4
+3,SAN JACINTO,Subpopulations,Victim of Domestic Violence,5,0
+3,SAN JACINTO,Subpopulations,Not Victim of Domestic Violence,38,0
+3,SAN JACINTO,Subpopulations,Unknown Victim of Domestic Violence,1,4
+3,SAN JACINTO,Subpopulations,AIDS or HIV,1,0
+3,SAN JACINTO,Subpopulations,No AIDS or HIV,41,0
+3,SAN JACINTO,Subpopulations,Unknown AIDS or HIV,2,4
+3,SAN JACINTO,Subpopulations,Jail Release 90 Days: Probation,4,0
+3,SAN JACINTO,Subpopulations,Jail Release 90 Days: Parole,0,0
+3,SAN JACINTO,Subpopulations,Jail Release 90 Days: Completed Sentence,2,0
+3,SAN JACINTO,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+3,SAN JACINTO,Subpopulations,Jail Release 12 Months: Probation,0,0
+3,SAN JACINTO,Subpopulations,Jail Release 12 Months: Parole,0,0
+3,SAN JACINTO,Subpopulations,Jail Release 12 Months: Completed Sentence,2,0
+3,SAN JACINTO,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+3,SAN JACINTO,Subpopulations,No Jail,36,0
+3,SAN JACINTO,Subpopulations,Unknown Jail,0,4
+3,SAN JACINTO,Subpopulations,Total,484,44
+3,TEMECULA,Race,American Indian,2,0
+3,TEMECULA,Race,Asian,0,2
+3,TEMECULA,Race,Black,6,1
+3,TEMECULA,Race,Native Hawaiian,0,0
+3,TEMECULA,Race,White,32,4
+3,TEMECULA,Race,Multiple Races,7,0
+3,TEMECULA,Race,Unknown Race,3,2
+3,TEMECULA,Race,Total,50,9
+3,TEMECULA,Ethinicity,Hispanic,8,0
+3,TEMECULA,Ethinicity,NonHispanic,42,3
+3,TEMECULA,Ethinicity,Unknown Ethinicity,0,6
+3,TEMECULA,Ethinicity,Total,50,9
+3,TEMECULA,Gender,Male,34,8
+3,TEMECULA,Gender,Female,16,1
+3,TEMECULA,Gender,Transgender,0,0
+3,TEMECULA,Gender,Gender Non-Conforming,0,0
+3,TEMECULA,Gender,Unknown Gender,0,0
+3,TEMECULA,Gender,Total,50,9
+3,TEMECULA,Age,Adults (>24),45,9
+3,TEMECULA,Age,Youth (18-24),5,0
+3,TEMECULA,Age,Children (<18),0,0
+3,TEMECULA,Age,Unknown Age,0,0
+3,TEMECULA,Age,Total,50,9
+3,TEMECULA,Subpopulations,Veteran Yes,10,0
+3,TEMECULA,Subpopulations,Veteran No,40,9
+3,TEMECULA,Subpopulations,Chronically Homeless,29,0
+3,TEMECULA,Subpopulations,Not Chronically Homeless,21,9
+3,TEMECULA,Subpopulations,Substance Abuse,24,0
+3,TEMECULA,Subpopulations,No Substance Abuse,26,0
+3,TEMECULA,Subpopulations,Unknown Substance Abuse,0,9
+3,TEMECULA,Subpopulations,PTSD,12,0
+3,TEMECULA,Subpopulations,No PTSD,35,0
+3,TEMECULA,Subpopulations,Unknown PTSD,3,9
+3,TEMECULA,Subpopulations,Mental Health Conditions,15,0
+3,TEMECULA,Subpopulations,No Mental Health Conditions,35,0
+3,TEMECULA,Subpopulations,Unknown Mental Health Conditions,0,9
+3,TEMECULA,Subpopulations,Physical Disability,11,0
+3,TEMECULA,Subpopulations,No Physical Disability,39,0
+3,TEMECULA,Subpopulations,Unknown Physical Disability,0,9
+3,TEMECULA,Subpopulations,Developmental Disability,6,0
+3,TEMECULA,Subpopulations,No Developmental Disability,43,0
+3,TEMECULA,Subpopulations,Unknown Developmental Disability,1,9
+3,TEMECULA,Subpopulations,Brain Injury,11,0
+3,TEMECULA,Subpopulations,No Brain Injury,36,0
+3,TEMECULA,Subpopulations,Unknown Brain Injury,3,9
+3,TEMECULA,Subpopulations,Victim of Domestic Violence,5,0
+3,TEMECULA,Subpopulations,Not Victim of Domestic Violence,45,0
+3,TEMECULA,Subpopulations,Unknown Victim of Domestic Violence,0,9
+3,TEMECULA,Subpopulations,AIDS or HIV,0,0
+3,TEMECULA,Subpopulations,No AIDS or HIV,50,0
+3,TEMECULA,Subpopulations,Unknown AIDS or HIV,0,9
+3,TEMECULA,Subpopulations,Jail Release 90 Days: Probation,5,0
+3,TEMECULA,Subpopulations,Jail Release 90 Days: Parole,0,0
+3,TEMECULA,Subpopulations,Jail Release 90 Days: Completed Sentence,7,0
+3,TEMECULA,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+3,TEMECULA,Subpopulations,Jail Release 12 Months: Probation,0,0
+3,TEMECULA,Subpopulations,Jail Release 12 Months: Parole,0,0
+3,TEMECULA,Subpopulations,Jail Release 12 Months: Completed Sentence,4,0
+3,TEMECULA,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+3,TEMECULA,Subpopulations,No Jail,34,0
+3,TEMECULA,Subpopulations,Unknown Jail,0,9
+3,TEMECULA,Subpopulations,Total,550,99
+1,WILDOMAR,Race,American Indian,0,0
+1,WILDOMAR,Race,Asian,0,0
+1,WILDOMAR,Race,Black,0,2
+1,WILDOMAR,Race,Native Hawaiian,0,0
+1,WILDOMAR,Race,White,9,0
+1,WILDOMAR,Race,Multiple Races,2,0
+1,WILDOMAR,Race,Unknown Race,0,0
+1,WILDOMAR,Race,Total,11,2
+1,WILDOMAR,Ethinicity,Hispanic,2,0
+1,WILDOMAR,Ethinicity,NonHispanic,9,2
+1,WILDOMAR,Ethinicity,Unknown Ethinicity,0,0
+1,WILDOMAR,Ethinicity,Total,11,2
+1,WILDOMAR,Gender,Male,8,2
+1,WILDOMAR,Gender,Female,3,0
+1,WILDOMAR,Gender,Transgender,0,0
+1,WILDOMAR,Gender,Gender Non-Conforming,0,0
+1,WILDOMAR,Gender,Unknown Gender,0,0
+1,WILDOMAR,Gender,Total,11,2
+1,WILDOMAR,Age,Adults (>24),11,2
+1,WILDOMAR,Age,Youth (18-24),0,0
+1,WILDOMAR,Age,Children (<18),0,0
+1,WILDOMAR,Age,Unknown Age,0,0
+1,WILDOMAR,Age,Total,11,2
+1,WILDOMAR,Subpopulations,Veteran Yes,0,0
+1,WILDOMAR,Subpopulations,Veteran No,11,2
+1,WILDOMAR,Subpopulations,Chronically Homeless,10,0
+1,WILDOMAR,Subpopulations,Not Chronically Homeless,1,2
+1,WILDOMAR,Subpopulations,Substance Abuse,9,0
+1,WILDOMAR,Subpopulations,No Substance Abuse,2,0
+1,WILDOMAR,Subpopulations,Unknown Substance Abuse,0,2
+1,WILDOMAR,Subpopulations,PTSD,4,0
+1,WILDOMAR,Subpopulations,No PTSD,7,0
+1,WILDOMAR,Subpopulations,Unknown PTSD,0,2
+1,WILDOMAR,Subpopulations,Mental Health Conditions,8,0
+1,WILDOMAR,Subpopulations,No Mental Health Conditions,3,0
+1,WILDOMAR,Subpopulations,Unknown Mental Health Conditions,0,2
+1,WILDOMAR,Subpopulations,Physical Disability,5,0
+1,WILDOMAR,Subpopulations,No Physical Disability,5,0
+1,WILDOMAR,Subpopulations,Unknown Physical Disability,1,2
+1,WILDOMAR,Subpopulations,Developmental Disability,3,0
+1,WILDOMAR,Subpopulations,No Developmental Disability,7,0
+1,WILDOMAR,Subpopulations,Unknown Developmental Disability,1,2
+1,WILDOMAR,Subpopulations,Brain Injury,2,0
+1,WILDOMAR,Subpopulations,No Brain Injury,9,0
+1,WILDOMAR,Subpopulations,Unknown Brain Injury,0,2
+1,WILDOMAR,Subpopulations,Victim of Domestic Violence,0,0
+1,WILDOMAR,Subpopulations,Not Victim of Domestic Violence,11,0
+1,WILDOMAR,Subpopulations,Unknown Victim of Domestic Violence,0,2
+1,WILDOMAR,Subpopulations,AIDS or HIV,0,0
+1,WILDOMAR,Subpopulations,No AIDS or HIV,11,0
+1,WILDOMAR,Subpopulations,Unknown AIDS or HIV,0,2
+1,WILDOMAR,Subpopulations,Jail Release 90 Days: Probation,0,0
+1,WILDOMAR,Subpopulations,Jail Release 90 Days: Parole,0,0
+1,WILDOMAR,Subpopulations,Jail Release 90 Days: Completed Sentence,2,0
+1,WILDOMAR,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+1,WILDOMAR,Subpopulations,Jail Release 12 Months: Probation,0,0
+1,WILDOMAR,Subpopulations,Jail Release 12 Months: Parole,0,0
+1,WILDOMAR,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+1,WILDOMAR,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+1,WILDOMAR,Subpopulations,No Jail,9,0
+1,WILDOMAR,Subpopulations,Unknown Jail,0,2
+1,WILDOMAR,Subpopulations,Total,121,22
+1,UNINCORPORATED 1,Race,American Indian,1,0
+1,UNINCORPORATED 1,Race,Asian,0,0
+1,UNINCORPORATED 1,Race,Black,4,2
+1,UNINCORPORATED 1,Race,Native Hawaiian,0,0
+1,UNINCORPORATED 1,Race,White,28,4
+1,UNINCORPORATED 1,Race,Multiple Races,4,0
+1,UNINCORPORATED 1,Race,Unknown Race,1,1
+1,UNINCORPORATED 1,Race,Total,38,7
+1,UNINCORPORATED 1,Ethinicity,Hispanic,16,0
+1,UNINCORPORATED 1,Ethinicity,NonHispanic,22,4
+1,UNINCORPORATED 1,Ethinicity,Unknown Ethinicity,0,3
+1,UNINCORPORATED 1,Ethinicity,Total,38,7
+1,UNINCORPORATED 1,Gender,Male,29,5
+1,UNINCORPORATED 1,Gender,Female,8,2
+1,UNINCORPORATED 1,Gender,Transgender,1,0
+1,UNINCORPORATED 1,Gender,Gender Non-Conforming,0,0
+1,UNINCORPORATED 1,Gender,Unknown Gender,0,0
+1,UNINCORPORATED 1,Gender,Total,38,7
+1,UNINCORPORATED 1,Age,Adults (>24),36,6
+1,UNINCORPORATED 1,Age,Youth (18-24),2,1
+1,UNINCORPORATED 1,Age,Children (<18),0,0
+1,UNINCORPORATED 1,Age,Unknown Age,0,0
+1,UNINCORPORATED 1,Age,Total,38,7
+1,UNINCORPORATED 1,Subpopulations,Veteran Yes,0,0
+1,UNINCORPORATED 1,Subpopulations,Veteran No,38,7
+1,UNINCORPORATED 1,Subpopulations,Chronically Homeless,30,0
+1,UNINCORPORATED 1,Subpopulations,Not Chronically Homeless,8,7
+1,UNINCORPORATED 1,Subpopulations,Substance Abuse,28,0
+1,UNINCORPORATED 1,Subpopulations,No Substance Abuse,9,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Substance Abuse,1,7
+1,UNINCORPORATED 1,Subpopulations,PTSD,10,0
+1,UNINCORPORATED 1,Subpopulations,No PTSD,27,0
+1,UNINCORPORATED 1,Subpopulations,Unknown PTSD,1,7
+1,UNINCORPORATED 1,Subpopulations,Mental Health Conditions,23,0
+1,UNINCORPORATED 1,Subpopulations,No Mental Health Conditions,14,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Mental Health Conditions,1,7
+1,UNINCORPORATED 1,Subpopulations,Physical Disability,10,0
+1,UNINCORPORATED 1,Subpopulations,No Physical Disability,26,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Physical Disability,2,7
+1,UNINCORPORATED 1,Subpopulations,Developmental Disability,8,0
+1,UNINCORPORATED 1,Subpopulations,No Developmental Disability,29,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Developmental Disability,1,7
+1,UNINCORPORATED 1,Subpopulations,Brain Injury,4,0
+1,UNINCORPORATED 1,Subpopulations,No Brain Injury,33,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Brain Injury,1,7
+1,UNINCORPORATED 1,Subpopulations,Victim of Domestic Violence,1,0
+1,UNINCORPORATED 1,Subpopulations,Not Victim of Domestic Violence,36,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Victim of Domestic Violence,1,7
+1,UNINCORPORATED 1,Subpopulations,AIDS or HIV,0,0
+1,UNINCORPORATED 1,Subpopulations,No AIDS or HIV,37,0
+1,UNINCORPORATED 1,Subpopulations,Unknown AIDS or HIV,1,7
+1,UNINCORPORATED 1,Subpopulations,Jail Release 90 Days: Probation,2,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 90 Days: Parole,1,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 90 Days: Completed Sentence,2,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 12 Months: Probation,1,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 12 Months: Parole,0,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+1,UNINCORPORATED 1,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+1,UNINCORPORATED 1,Subpopulations,No Jail,32,0
+1,UNINCORPORATED 1,Subpopulations,Unknown Jail,0,7
+1,UNINCORPORATED 1,Subpopulations,Total,418,77
+2,UNINCORPORATED 2,Race,American Indian,4,0
+2,UNINCORPORATED 2,Race,Asian,0,0
+2,UNINCORPORATED 2,Race,Black,2,0
+2,UNINCORPORATED 2,Race,Native Hawaiian,0,0
+2,UNINCORPORATED 2,Race,White,27,3
+2,UNINCORPORATED 2,Race,Multiple Races,2,0
+2,UNINCORPORATED 2,Race,Unknown Race,2,4
+2,UNINCORPORATED 2,Race,Total,37,7
+2,UNINCORPORATED 2,Ethinicity,Hispanic,15,2
+2,UNINCORPORATED 2,Ethinicity,NonHispanic,22,1
+2,UNINCORPORATED 2,Ethinicity,Unknown Ethinicity,0,4
+2,UNINCORPORATED 2,Ethinicity,Total,37,7
+2,UNINCORPORATED 2,Gender,Male,21,4
+2,UNINCORPORATED 2,Gender,Female,16,0
+2,UNINCORPORATED 2,Gender,Transgender,0,0
+2,UNINCORPORATED 2,Gender,Gender Non-Conforming,0,0
+2,UNINCORPORATED 2,Gender,Unknown Gender,0,3
+2,UNINCORPORATED 2,Gender,Total,37,7
+2,UNINCORPORATED 2,Age,Adults (>24),37,2
+2,UNINCORPORATED 2,Age,Youth (18-24),0,0
+2,UNINCORPORATED 2,Age,Children (<18),0,1
+2,UNINCORPORATED 2,Age,Unknown Age,0,4
+2,UNINCORPORATED 2,Age,Total,37,7
+2,UNINCORPORATED 2,Subpopulations,Veteran Yes,0,0
+2,UNINCORPORATED 2,Subpopulations,Veteran No,37,7
+2,UNINCORPORATED 2,Subpopulations,Chronically Homeless,26,0
+2,UNINCORPORATED 2,Subpopulations,Not Chronically Homeless,11,7
+2,UNINCORPORATED 2,Subpopulations,Substance Abuse,17,0
+2,UNINCORPORATED 2,Subpopulations,No Substance Abuse,18,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Substance Abuse,2,7
+2,UNINCORPORATED 2,Subpopulations,PTSD,6,0
+2,UNINCORPORATED 2,Subpopulations,No PTSD,28,0
+2,UNINCORPORATED 2,Subpopulations,Unknown PTSD,3,7
+2,UNINCORPORATED 2,Subpopulations,Mental Health Conditions,9,0
+2,UNINCORPORATED 2,Subpopulations,No Mental Health Conditions,26,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Mental Health Conditions,2,7
+2,UNINCORPORATED 2,Subpopulations,Physical Disability,12,0
+2,UNINCORPORATED 2,Subpopulations,No Physical Disability,24,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Physical Disability,1,7
+2,UNINCORPORATED 2,Subpopulations,Developmental Disability,6,0
+2,UNINCORPORATED 2,Subpopulations,No Developmental Disability,30,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Developmental Disability,1,7
+2,UNINCORPORATED 2,Subpopulations,Brain Injury,7,0
+2,UNINCORPORATED 2,Subpopulations,No Brain Injury,27,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Brain Injury,3,7
+2,UNINCORPORATED 2,Subpopulations,Victim of Domestic Violence,2,0
+2,UNINCORPORATED 2,Subpopulations,Not Victim of Domestic Violence,32,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Victim of Domestic Violence,3,7
+2,UNINCORPORATED 2,Subpopulations,AIDS or HIV,1,0
+2,UNINCORPORATED 2,Subpopulations,No AIDS or HIV,35,0
+2,UNINCORPORATED 2,Subpopulations,Unknown AIDS or HIV,1,7
+2,UNINCORPORATED 2,Subpopulations,Jail Release 90 Days: Probation,0,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 90 Days: Parole,0,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 90 Days: Completed Sentence,2,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 12 Months: Probation,1,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 12 Months: Parole,0,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+2,UNINCORPORATED 2,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+2,UNINCORPORATED 2,Subpopulations,No Jail,34,0
+2,UNINCORPORATED 2,Subpopulations,Unknown Jail,0,7
+2,UNINCORPORATED 2,Subpopulations,Total,407,77
+3,UNINCORPORATED 3,Race,American Indian,0,0
+3,UNINCORPORATED 3,Race,Asian,0,0
+3,UNINCORPORATED 3,Race,Black,3,3
+3,UNINCORPORATED 3,Race,Native Hawaiian,4,0
+3,UNINCORPORATED 3,Race,White,22,19
+3,UNINCORPORATED 3,Race,Multiple Races,6,0
+3,UNINCORPORATED 3,Race,Unknown Race,3,5
+3,UNINCORPORATED 3,Race,Total,38,27
+3,UNINCORPORATED 3,Ethinicity,Hispanic,8,5
+3,UNINCORPORATED 3,Ethinicity,NonHispanic,28,15
+3,UNINCORPORATED 3,Ethinicity,Unknown Ethinicity,2,7
+3,UNINCORPORATED 3,Ethinicity,Total,38,27
+3,UNINCORPORATED 3,Gender,Male,25,25
+3,UNINCORPORATED 3,Gender,Female,13,1
+3,UNINCORPORATED 3,Gender,Transgender,0,0
+3,UNINCORPORATED 3,Gender,Gender Non-Conforming,0,0
+3,UNINCORPORATED 3,Gender,Unknown Gender,0,1
+3,UNINCORPORATED 3,Gender,Total,38,27
+3,UNINCORPORATED 3,Age,Adults (>24),35,21
+3,UNINCORPORATED 3,Age,Youth (18-24),3,3
+3,UNINCORPORATED 3,Age,Children (<18),0,0
+3,UNINCORPORATED 3,Age,Unknown Age,0,3
+3,UNINCORPORATED 3,Age,Total,38,27
+3,UNINCORPORATED 3,Subpopulations,Veteran Yes,1,0
+3,UNINCORPORATED 3,Subpopulations,Veteran No,37,27
+3,UNINCORPORATED 3,Subpopulations,Chronically Homeless,20,0
+3,UNINCORPORATED 3,Subpopulations,Not Chronically Homeless,18,27
+3,UNINCORPORATED 3,Subpopulations,Substance Abuse,11,0
+3,UNINCORPORATED 3,Subpopulations,No Substance Abuse,27,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Substance Abuse,0,27
+3,UNINCORPORATED 3,Subpopulations,PTSD,9,0
+3,UNINCORPORATED 3,Subpopulations,No PTSD,29,0
+3,UNINCORPORATED 3,Subpopulations,Unknown PTSD,0,27
+3,UNINCORPORATED 3,Subpopulations,Mental Health Conditions,6,0
+3,UNINCORPORATED 3,Subpopulations,No Mental Health Conditions,32,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Mental Health Conditions,0,27
+3,UNINCORPORATED 3,Subpopulations,Physical Disability,7,0
+3,UNINCORPORATED 3,Subpopulations,No Physical Disability,30,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Physical Disability,1,27
+3,UNINCORPORATED 3,Subpopulations,Developmental Disability,4,0
+3,UNINCORPORATED 3,Subpopulations,No Developmental Disability,34,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Developmental Disability,0,27
+3,UNINCORPORATED 3,Subpopulations,Brain Injury,7,0
+3,UNINCORPORATED 3,Subpopulations,No Brain Injury,30,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Brain Injury,1,27
+3,UNINCORPORATED 3,Subpopulations,Victim of Domestic Violence,4,0
+3,UNINCORPORATED 3,Subpopulations,Not Victim of Domestic Violence,33,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Victim of Domestic Violence,1,27
+3,UNINCORPORATED 3,Subpopulations,AIDS or HIV,0,0
+3,UNINCORPORATED 3,Subpopulations,No AIDS or HIV,37,0
+3,UNINCORPORATED 3,Subpopulations,Unknown AIDS or HIV,1,27
+3,UNINCORPORATED 3,Subpopulations,Jail Release 90 Days: Probation,0,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 90 Days: Parole,0,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 90 Days: Completed Sentence,1,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 12 Months: Probation,0,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 12 Months: Parole,0,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+3,UNINCORPORATED 3,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+3,UNINCORPORATED 3,Subpopulations,No Jail,37,0
+3,UNINCORPORATED 3,Subpopulations,Unknown Jail,0,27
+3,UNINCORPORATED 3,Subpopulations,Total,418,297
+4,UNINCORPORATED 4,Race,American Indian,3,2
+4,UNINCORPORATED 4,Race,Asian,1,1
+4,UNINCORPORATED 4,Race,Black,3,0
+4,UNINCORPORATED 4,Race,Native Hawaiian,1,0
+4,UNINCORPORATED 4,Race,White,39,17
+4,UNINCORPORATED 4,Race,Multiple Races,2,1
+4,UNINCORPORATED 4,Race,Unknown Race,7,21
+4,UNINCORPORATED 4,Race,Total,56,42
+4,UNINCORPORATED 4,Ethinicity,Hispanic,23,9
+4,UNINCORPORATED 4,Ethinicity,NonHispanic,33,12
+4,UNINCORPORATED 4,Ethinicity,Unknown Ethinicity,0,21
+4,UNINCORPORATED 4,Ethinicity,Total,56,42
+4,UNINCORPORATED 4,Gender,Male,37,20
+4,UNINCORPORATED 4,Gender,Female,19,9
+4,UNINCORPORATED 4,Gender,Transgender,0,0
+4,UNINCORPORATED 4,Gender,Gender Non-Conforming,0,0
+4,UNINCORPORATED 4,Gender,Unknown Gender,0,13
+4,UNINCORPORATED 4,Gender,Total,56,42
+4,UNINCORPORATED 4,Age,Adults (>24),55,23
+4,UNINCORPORATED 4,Age,Youth (18-24),0,2
+4,UNINCORPORATED 4,Age,Children (<18),1,0
+4,UNINCORPORATED 4,Age,Unknown Age,0,17
+4,UNINCORPORATED 4,Age,Total,56,42
+4,UNINCORPORATED 4,Subpopulations,Veteran Yes,6,0
+4,UNINCORPORATED 4,Subpopulations,Veteran No,50,42
+4,UNINCORPORATED 4,Subpopulations,Chronically Homeless,24,0
+4,UNINCORPORATED 4,Subpopulations,Not Chronically Homeless,32,42
+4,UNINCORPORATED 4,Subpopulations,Substance Abuse,16,0
+4,UNINCORPORATED 4,Subpopulations,No Substance Abuse,37,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Substance Abuse,3,42
+4,UNINCORPORATED 4,Subpopulations,PTSD,10,0
+4,UNINCORPORATED 4,Subpopulations,No PTSD,43,0
+4,UNINCORPORATED 4,Subpopulations,Unknown PTSD,3,42
+4,UNINCORPORATED 4,Subpopulations,Mental Health Conditions,10,0
+4,UNINCORPORATED 4,Subpopulations,No Mental Health Conditions,41,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Mental Health Conditions,5,42
+4,UNINCORPORATED 4,Subpopulations,Physical Disability,14,0
+4,UNINCORPORATED 4,Subpopulations,No Physical Disability,39,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Physical Disability,3,42
+4,UNINCORPORATED 4,Subpopulations,Developmental Disability,6,0
+4,UNINCORPORATED 4,Subpopulations,No Developmental Disability,47,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Developmental Disability,3,42
+4,UNINCORPORATED 4,Subpopulations,Brain Injury,11,0
+4,UNINCORPORATED 4,Subpopulations,No Brain Injury,41,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Brain Injury,4,42
+4,UNINCORPORATED 4,Subpopulations,Victim of Domestic Violence,3,0
+4,UNINCORPORATED 4,Subpopulations,Not Victim of Domestic Violence,51,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Victim of Domestic Violence,2,42
+4,UNINCORPORATED 4,Subpopulations,AIDS or HIV,2,0
+4,UNINCORPORATED 4,Subpopulations,No AIDS or HIV,48,0
+4,UNINCORPORATED 4,Subpopulations,Unknown AIDS or HIV,6,42
+4,UNINCORPORATED 4,Subpopulations,Jail Release 90 Days: Probation,2,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 90 Days: Parole,1,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 90 Days: Completed Sentence,2,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 12 Months: Probation,0,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 12 Months: Parole,0,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 12 Months: Completed Sentence,3,0
+4,UNINCORPORATED 4,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+4,UNINCORPORATED 4,Subpopulations,No Jail,47,0
+4,UNINCORPORATED 4,Subpopulations,Unknown Jail,1,42
+4,UNINCORPORATED 4,Subpopulations,Total,616,462
+5,UNINCORPORATED 5,Race,American Indian,1,0
+5,UNINCORPORATED 5,Race,Asian,0,0
+5,UNINCORPORATED 5,Race,Black,2,0
+5,UNINCORPORATED 5,Race,Native Hawaiian,0,0
+5,UNINCORPORATED 5,Race,White,3,0
+5,UNINCORPORATED 5,Race,Multiple Races,0,0
+5,UNINCORPORATED 5,Race,Unknown Race,3,0
+5,UNINCORPORATED 5,Race,Total,9,0
+5,UNINCORPORATED 5,Ethinicity,Hispanic,1,0
+5,UNINCORPORATED 5,Ethinicity,NonHispanic,5,0
+5,UNINCORPORATED 5,Ethinicity,Unknown Ethinicity,3,0
+5,UNINCORPORATED 5,Ethinicity,Total,9,0
+5,UNINCORPORATED 5,Gender,Male,4,0
+5,UNINCORPORATED 5,Gender,Female,2,0
+5,UNINCORPORATED 5,Gender,Transgender,0,0
+5,UNINCORPORATED 5,Gender,Gender Non-Conforming,0,0
+5,UNINCORPORATED 5,Gender,Unknown Gender,3,0
+5,UNINCORPORATED 5,Gender,Total,9,0
+5,UNINCORPORATED 5,Age,Adults (>24),9,0
+5,UNINCORPORATED 5,Age,Youth (18-24),0,0
+5,UNINCORPORATED 5,Age,Children (<18),0,0
+5,UNINCORPORATED 5,Age,Unknown Age,0,0
+5,UNINCORPORATED 5,Age,Total,9,0
+5,UNINCORPORATED 5,Subpopulations,Veteran Yes,2,0
+5,UNINCORPORATED 5,Subpopulations,Veteran No,7,0
+5,UNINCORPORATED 5,Subpopulations,Chronically Homeless,7,0
+5,UNINCORPORATED 5,Subpopulations,Not Chronically Homeless,2,0
+5,UNINCORPORATED 5,Subpopulations,Substance Abuse,4,0
+5,UNINCORPORATED 5,Subpopulations,No Substance Abuse,5,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Substance Abuse,0,0
+5,UNINCORPORATED 5,Subpopulations,PTSD,4,0
+5,UNINCORPORATED 5,Subpopulations,No PTSD,5,0
+5,UNINCORPORATED 5,Subpopulations,Unknown PTSD,0,0
+5,UNINCORPORATED 5,Subpopulations,Mental Health Conditions,3,0
+5,UNINCORPORATED 5,Subpopulations,No Mental Health Conditions,6,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Mental Health Conditions,0,0
+5,UNINCORPORATED 5,Subpopulations,Physical Disability,4,0
+5,UNINCORPORATED 5,Subpopulations,No Physical Disability,5,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Physical Disability,0,0
+5,UNINCORPORATED 5,Subpopulations,Developmental Disability,3,0
+5,UNINCORPORATED 5,Subpopulations,No Developmental Disability,6,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Developmental Disability,0,0
+5,UNINCORPORATED 5,Subpopulations,Brain Injury,0,0
+5,UNINCORPORATED 5,Subpopulations,No Brain Injury,9,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Brain Injury,0,0
+5,UNINCORPORATED 5,Subpopulations,Victim of Domestic Violence,1,0
+5,UNINCORPORATED 5,Subpopulations,Not Victim of Domestic Violence,8,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Victim of Domestic Violence,0,0
+5,UNINCORPORATED 5,Subpopulations,AIDS or HIV,0,0
+5,UNINCORPORATED 5,Subpopulations,No AIDS or HIV,9,0
+5,UNINCORPORATED 5,Subpopulations,Unknown AIDS or HIV,0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 90 Days: Probation,0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 90 Days: Parole,0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 90 Days: Completed Sentence,0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 90 Days: (Unspecified),0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 12 Months: Probation,1,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 12 Months: Parole,0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 12 Months: Completed Sentence,0,0
+5,UNINCORPORATED 5,Subpopulations,Jail Release 12 Months: (Unspecified),0,0
+5,UNINCORPORATED 5,Subpopulations,No Jail,8,0
+5,UNINCORPORATED 5,Subpopulations,Unknown Jail,0,0
+5,UNINCORPORATED 5,Subpopulations,Total,99,0

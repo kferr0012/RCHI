@@ -1,0 +1,13 @@
+#myleafletmap{
+    /* height: 600px;
+    width: 600px; */
+    position: relative; left: 50%;
+    transform: translateX(-50%);
+    /* margin: 10vh 0vh 0vh 10vh; */
+}
+
+.leaflet-container {
+    height: 400px;
+    width: 700px;
+    background: #FFF;
+}

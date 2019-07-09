@@ -1,0 +1,95 @@
+/*!
+ * Web Fonts from Fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2019 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Horizon Type
+ * License URL: https://www.fontspring.com/licenses/horizon-type/webfont
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'acherusgrotesque-regular';
+    src: url('./components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff2') format('woff2'),
+         url('/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.App{
+  font: 'acherusgrotesque-regular';
+  text-align: center;
+  justify-content: center;
+  --main-theme-color: #C8B0CE;
+}
+
+.App-header {
+  background-color: #FFF;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#title{
+  font: 'acherusgrotesque-regular';
+  font-size: calc(10px + 3vw);
+  color: #DDD;
+  text-shadow: 2px 2px #F0F0F0;
+  margin-bottom: 0;
+}
+
+.title-highlight{
+  font-size: calc(10px + 4.3vw);
+  color: var(--main-theme-color);
+}
+
+#router-links{
+  text-align: center;
+}
+
+#router-links a{
+  color: #BBB;
+}
+
+#router-links a:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* .nav-tabs{
+  border-bottom: 0;
+}
+
+.nav{
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-pills .nav-link.active{
+  background-color: #FFF;
+  border-color: #FFF #dee2e6 #FFF #dee2e6;
+}
+
+.nav-tabs .nav-link{
+  border-color: #FFF #dee2e6 #FFF #dee2e6;
+  margin: 0 0 0 0;
+  border-radius: 0;
+} */

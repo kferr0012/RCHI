@@ -1,0 +1,12 @@
+.editreportinstructions{
+    text-align: left;
+  }
+
+  .widget{
+    /* width: calc(50%-20px);
+    margin: 10px;
+    border: 5px solid black; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+  }

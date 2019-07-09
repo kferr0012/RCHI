@@ -1,0 +1,66 @@
+/* .form{
+  overflow: hidden;
+} */
+
+input{
+  width:95%;
+}
+
+#flyoutMenu {
+  /* width: 30vw; */
+  height: 82%;
+  width: 100%;
+  position: fixed;
+  background-color: #FFF;
+  /* 
+  top: 20vh;*/
+  left: 0;
+  transition: transform .3s cubic-bezier(0, .52, 0, 1);
+  overflow: hidden;
+  z-index: 100;
+  padding-top: 1vh;
+  padding-left: 1vw;
+  border: 5px solid #EEE;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: 1vh;
+}
+  
+#flyoutMenu.hide {
+  transform: translate3d(-30vw, 0, 0);
+}
+  
+#flyoutMenu.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: scroll;
+}
+  
+/* menubutton */
+
+.menubutton{
+  position: fixed;
+  top: 16vh;
+  left: 0vw;
+  z-index: 101;
+}
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #CCC;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -3px);
+  transform: rotate(45deg) translate(-6px, -3px);
+}
