@@ -1,12 +1,18 @@
 from rest_framework import serializers
-from backend.models import PracticeApp, HouseholdsbyCity2019
+from backend.models import HouseholdsByCity2019, SubpopulationsByCity2019
 
-class PracticeAppSerializer(serializers.ModelSerializer):
+# from backend.models import PracticeApp,
+# class PracticeAppSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = PracticeApp
+#         fields = '__all__'
+
+class HouseholdsByCity2019Serializer(serializers.ModelSerializer):
     class Meta:
-        model = PracticeApp
+        model = HouseholdsByCity2019
         fields = '__all__'
 
-class HouseholdsbyCity2019Serializer(serializers.ModelSerializer):
+class SubpopulationsByCity2019Serializer(serializers.ModelSerializer):
     class Meta:
-        model = HouseholdsbyCity2019
+        model = SubpopulationsByCity2019
         fields = '__all__'
