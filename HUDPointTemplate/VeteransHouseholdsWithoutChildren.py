@@ -1,5 +1,4 @@
 '''
-Function might not be completely correct. 
 My Assumptions:
 
 1)The Gender & Ethnicity & Race counts are based on the veterans in the households without children.
@@ -10,6 +9,9 @@ My Assumptions:
 
 3) The number calculated are based on the assumptions above and have been doubled checked with the csv file 
 
+TODO
+Chronically Homeless Function
+Wrote them based on the csv column 'Chronically Homeless Status'
 '''
 
 
@@ -19,15 +21,15 @@ in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.cs
 
 ##* This Scripts contains the template for veterans without children 
 
-##* Helper Function that returns total number of households
+##* Helper Function that returns total number of veterans with no child
 def helperFunction_Total_num_Veterans():
-    total_veteran_households = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
+    total_veterans = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
             & (df['Veteran'] == 1) \
                 & (df['P_Child Yes No'] == 'No')\
                     & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
                         ,['ParentGlobalID']]
     
-    return total_veteran_households
+    return total_veterans
 
 ##* Total number of households 
 def total_number_of_households(): 
@@ -72,7 +74,7 @@ def total_number_of_female():
 
     total_number_veteran_female = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
         & (df['Veteran'] == 1)\
-            &  (df['Gender'] == 'Female')\
+            & (df['Gender'] == 'Female')\
                 & (df['P_Child Yes No'] == 'No')\
                     & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
                         , ['ParentGlobalID']]['ParentGlobalID']\
@@ -277,8 +279,7 @@ def total_number_of_race_known():
     return total_number_veteran_Known
 
 def total_number_of_ChronicallyHomeless():
-    total_number_household = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Veteran'] == 1) & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1)), ['ParentGlobalID']]
+    total_num_of_households = helperFunction_Total_num_Veterans().drop_duplicates(subset='ParentGlobalID')
 
     # total_number_of_ChronicallyHomeless = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
     #     &  (df['Chronically Homeless Status'] == 1) & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
@@ -286,9 +287,12 @@ def total_number_of_ChronicallyHomeless():
     #             .isin(total_number_household['ParentGlobalID']).sum()
 
 
-    total_number_of_ChronicallyHomeless =  pd.merge(in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        &  (df['Chronically Homeless Status'] == 1) & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
-            , ['ObjectID','ParentGlobalID','Veteran','Chronically Homeless Status']],total_number_household, how='inner',on='ParentGlobalID').drop_duplicates()
+    total_number_of_ChronicallyHomeless =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
+        & (df['P_Child Yes No'] == 'No')\
+            & (df['Chronically Homeless Status'] == 1)\
+                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+                    , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
+                        .sum()
 
     
 
@@ -387,7 +391,7 @@ print("---------Chronically Homeless (Veteran Only)---------")
 print('\n')
 
 
-# ##* Ask About the correct value 
-# print('--------Total Number Of Chronically Homsless Persons-----------')
-# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless().to_string())
-# print('\n')
+##* Ask About the correct value 
+print('--------Total Number Of Chronically Homsless Persons-----------')
+print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
+print('\n')
