@@ -49,17 +49,15 @@ def total_number_of_households():
 
     return total_num_of_households
 
+
 ##* Total number of persons
 def total_number_of_persons():
 
     total_num_veterans = helperFunction_Total_num_Veterans_households()
 
-    total_non_veterans = in_df.loc[lambda df:(df['United States Armed Forces'] == 'No')\
-        & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
-            , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_veterans['ParentGlobalID'])\
-                .sum()
+    total_persons = in_df['ParentGlobalID'].isin(total_num_veterans['ParentGlobalID']).sum()
 
-    return total_non_veterans + total_num_veterans.shape[0]
+    return total_persons
 
 ##* Total number of veterans
 def total_number_of_veterans():

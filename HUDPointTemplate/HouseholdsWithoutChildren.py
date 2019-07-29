@@ -22,62 +22,64 @@ in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.cs
 
 ##* Helper Function that returns total number of households
 def helperFunction_Total_num_Adults():
-    total_Adults = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
-                    ,['ParentGlobalID']]
-    return total_Adults
+    total_Adults = in_df.loc[lambda df:((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
+        , ['ParentGlobalID']]\
+            .drop_duplicates(subset='ParentGlobalID')
+
+
+    total_children = in_df.loc[lambda df: ((df['Age As Of Today'] <= 17) | (df['Age Observed'] == 'Under18')) ,['ParentGlobalID']]\
+        .drop_duplicates(subset='ParentGlobalID')
+
+
+    set_diff_df = pd.concat([total_Adults, total_children, total_children]).drop_duplicates(keep=False)
+    #set_diff_df = total_Adults.merge(total_children, indicator=True, how="left")[lambda x: x._merge=='left_only'].drop('_merge',1).drop_duplicates()
+
+    return set_diff_df
 
 
 ##* Total number of households
 def total_number_of_households(): 
 
-    total_num_of_households = helperFunction_Total_num_Adults()\
-        .drop_duplicates(subset='ParentGlobalID')\
-            .shape[0]
+    total_num_of_households = helperFunction_Total_num_Adults().shape[0]
     return total_num_of_households
 
 ##* Total number of persons  
 def total_number_of_persons():
 
-    total_num_of_adults = helperFunction_Total_num_Adults().shape[0]
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    return total_num_of_adults
+    total_persons = in_df.loc[lambda df:((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
+            , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
+                .sum()
+
+    return total_persons
 
 ##* Total number of young Adults
 def total_number_of_youngAdults():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_youngAdults = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        &(df['P_Child Yes No'] == 'No')\
-            & (df['Children (under 18)'] == 0)\
-                & (df['Adult (over 24)'] == 0)\
-                    & (df['Youth (18-24)'] == 1)\
-                        ,['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
-                            .sum()
+    total_youngAdults = in_df.loc[lambda df:((df['Age As Of Today'] >= 18) & (df['Age As Of Today'] <= 24))\
+            , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
+                .sum()
+
     return total_youngAdults
 
+#? Ask josh if you should include Observe people also because it only over 25 category
 ##* Total number of Adults Over 24
 def total_number_of_Adults_Over24():
     total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
 
-    total_Adults = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        &(df['P_Child Yes No'] == 'No')\
-            & (df['Children (under 18)'] == 0)\
-                & (df['Adult (over 24)'] == 1)\
-                    & (df['Youth (18-24)'] == 0)\
-                        ,['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
-                            .sum()
-    return total_Adults
+    total_Adults_over24 = in_df.loc[lambda df:((df['Age As Of Today'] >= 25) | (df['Age Observed'] == 'Over25'))\
+            , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
+                .sum()
+    return total_Adults_over24
 
 ##* Total number of female
 def total_number_of_female():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_female = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Gender'] == 'Female')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_female = in_df.loc[lambda df:((df['Gender'] == 'Female') | (df['Gender Observed'] == 'Female'))\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -85,12 +87,10 @@ def total_number_of_female():
 
 ##* Total number of male
 def total_number_of_male():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_male = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Gender'] == 'Male')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_male = in_df.loc[lambda df:((df['Gender'] == 'Male') | (df['Gender Observed'] == 'Male'))\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
                 
@@ -98,12 +98,10 @@ def total_number_of_male():
 
 ##* Total number of transgender
 def total_number_of_transgender():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_transgender = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & ((df['Gender'] == 'MTF') | (df['Gender'] == 'FTM'))\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_transgender = in_df.loc[lambda df:((df['Gender'] == 'MTF') | (df['Gender'] == 'FTM'))\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
                 
@@ -111,12 +109,10 @@ def total_number_of_transgender():
 
 ##* Total number of GenderConforming 
 def total_number_of_gender_non_conforming():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_GenderNonConforming = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Gender'] == 'GenderNonConforming')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_GenderNonConforming = in_df.loc[lambda df: (df['Gender'] == 'GenderNonConforming')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -125,12 +121,10 @@ def total_number_of_gender_non_conforming():
 ##* Total number of Known Gender
 def total_number_of_gender_known():
 
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_GenderKnown = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Gender'] != 'DoesntKnow')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_GenderKnown = in_df.loc[lambda df: ((df['Gender'] != 'DoesntKnow') | (df['Gender Observed'] != 'NotSure'))\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -138,12 +132,10 @@ def total_number_of_gender_known():
 
 ##* Total number of non latinos/hispanics
 def total_number_of_ethnicity_nonlatino():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_nonLatHisp = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Ethnicity'] == 'No')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_nonLatHisp = in_df.loc[lambda df:(df['Ethnicity'] == 'No')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -151,12 +143,10 @@ def total_number_of_ethnicity_nonlatino():
 
 ##* Total number of latinos/hispanics
 def total_number_of_ethnicity_latino():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_LatHisp = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Ethnicity'] == 'Yes')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_LatHisp = in_df.loc[lambda df:(df['Ethnicity'] == 'Yes')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -164,12 +154,10 @@ def total_number_of_ethnicity_latino():
 
 ##* Total number Ethnicity Known
 def total_number_of_ethnicity_Known():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_Ethnicity_Known= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        &  (df['Ethnicity'] != 'DoesntKnow')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_Ethnicity_Known= in_df.loc[lambda df:(df['Ethnicity'] != 'DoesntKnow')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -177,12 +165,10 @@ def total_number_of_ethnicity_Known():
 
 ##* Total number of white
 def total_number_of_race_white():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_White= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] == 'White')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_White= in_df.loc[lambda df:(df['Race'] == 'White')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -190,12 +176,9 @@ def total_number_of_race_white():
 
 ##* Total number of Black or African American
 def total_number_of_race_African():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
-
-    total_num_of_Black= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] == 'Black')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_households = helperFunction_Total_num_Adults()
+    total_num_of_Black= in_df.loc[lambda df:(df['Race'] == 'Black')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -203,12 +186,10 @@ def total_number_of_race_African():
 
 ##* Total number of Asian
 def total_number_of_race_Asian():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_Asian= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] == 'Asian')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_Asian= in_df.loc[lambda df:(df['Race'] == 'Asian')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -216,12 +197,10 @@ def total_number_of_race_Asian():
 
 ##* Total number of American Indian
 def total_number_of_race_AmericanIndian():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_AmericanIndian= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] == 'AmericanIndian')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_AmericanIndian= in_df.loc[lambda df: (df['Race'] == 'AmericanIndian')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -229,12 +208,10 @@ def total_number_of_race_AmericanIndian():
 
 ##* Total number of Native Hawaiian or Other Pacific Islander
 def total_number_of_race_NativeHawiian():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_NativeHawiian= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] == 'NativeHawaiian')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_NativeHawiian= in_df.loc[lambda df: (df['Race'] == 'NativeHawaiian')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -242,12 +219,10 @@ def total_number_of_race_NativeHawiian():
 
 ##* Total number of Multiple Race
 def total_number_of_race_Multiple():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_of_MultipleRace= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] == 'Multiple')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_of_MultipleRace= in_df.loc[lambda df: (df['Race'] == 'Multiple')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
@@ -255,19 +230,17 @@ def total_number_of_race_Multiple():
 
 ##* Total number of Race Known
 def total_number_of_race_known():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
-    total_num_knownRace= in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Race'] != 'DoesntKnow')\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_num_knownRace= in_df.loc[lambda df: (df['Race'] != 'DoesntKnow')\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
 
     return total_num_knownRace
 
 def total_number_of_ChronicallyHomeless():
-    total_num_of_households = helperFunction_Total_num_Adults().drop_duplicates(subset='ParentGlobalID')
+    total_num_of_households = helperFunction_Total_num_Adults()
 
     # total_number_of_ChronicallyHomeless = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
     #     &  (df['Chronically Homeless Status'] == 1) & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1)\
@@ -275,13 +248,10 @@ def total_number_of_ChronicallyHomeless():
     #             .isin(total_number_household['ParentGlobalID']).sum()
 
 
-    total_number_of_ChronicallyHomeless =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['Chronically Homeless Status'] == 1)\
-            & (df['P_Child Yes No'] == 'No')\
-                & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
+    total_number_of_ChronicallyHomeless =  in_df.loc[lambda df:(df['Chronically Homeless Status'] == 1)\
+                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
                     , ['ParentGlobalID']]['ParentGlobalID']\
                         .isin(total_num_of_households['ParentGlobalID']).sum()
-
     
 
     return total_number_of_ChronicallyHomeless
