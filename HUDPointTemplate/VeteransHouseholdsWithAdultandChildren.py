@@ -48,24 +48,21 @@ def total_number_of_households():
 def total_number_of_persons():
     total_num_veterans = helperFunction_Total_num_Veterans_households()
 
-    total_non_veterans = in_df.loc[lambda df:((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
-        | ((df['Age As Of Today'] <= 17) | (df['Age Observed'] == 'Under18'))\
-            , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_veterans['ParentGlobalID'])\
-            .sum()
+    total_persons = in_df['ParentGlobalID'].isin(total_num_veterans['ParentGlobalID']).sum()
 
-    return total_non_veterans + total_num_veterans.shape[0]
+    return total_persons
 
 ##* Total number of veterans
 def total_number_of_veterans():
-    total_num_veterans = helperFunction_Total_num_Veterans_households()
+    total_num_of_households = helperFunction_Total_num_Veterans_households()
 
     total_veterans_in_HouseHold = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-        & (df['United States Armed Forces'] == 'Yes') & (df['Age As Of Today'] >= 18)\
-            , ['ParentGlobalID']]['ParentGlobalID']\
-                .isin(total_num_veterans['ParentGlobalID'])\
-                    .sum()
+        & (df['United States Armed Forces'] == 'Yes')\
+            & (df['Age As Of Today'] >= 18)\
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(total_num_of_households['ParentGlobalID']).sum()
 
-    return total_num_veterans
+    return total_veterans_in_HouseHold
 
 ##* Total number of female veteran
 def total_number_of_female():
@@ -106,7 +103,7 @@ def total_number_of_transgender():
 
     return total_number_veteran_transgender
 
-##* Total number of GenderConforming veteran
+##* Total number of Gender Non-Conforming veteran
 def total_number_of_gender_non_conforming():
     total_num_of_households = helperFunction_Total_num_Veterans_households()
 
@@ -374,8 +371,8 @@ print("---------Chronically Homeless (Veteran Only)---------")
 print('\n')
 
 
-##* Ask About the correct value 
-print('--------Total Number Of Chronically Homsless Persons-----------')
-print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
-print('\n')
+# ##* Ask About the correct value 
+# print('--------Total Number Of Chronically Homsless Persons-----------')
+# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
+# print('\n')
 
