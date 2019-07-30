@@ -53,9 +53,15 @@ def total_number_of_households():
 ##* Total number of persons
 def total_number_of_persons():
 
-    total_num_veterans = helperFunction_Total_num_Veterans_households()
+    households_list = helperFunction_Total_num_Veterans_households()
 
-    total_persons = in_df['ParentGlobalID'].isin(total_num_veterans['ParentGlobalID']).sum()
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18))\
+            | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25')))\
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(households_list['ParentGlobalID']).sum()
+
+    # total_persons = in_df['ParentGlobalID'].isin(total_num_veterans['ParentGlobalID']).sum()
 
     return total_persons
 
