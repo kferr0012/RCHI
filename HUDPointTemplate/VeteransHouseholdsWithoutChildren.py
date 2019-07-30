@@ -12,7 +12,7 @@ and checks if the new set (Set 2) depending of the function is in Set 1 and retu
 3) Found a total of 107 households, 107 Veterans but 110 Persons in total. Check Francisco Gallego Log for more details. 
 
 
-TODO
+##!! TODO
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
 '''
