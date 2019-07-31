@@ -1,15 +1,19 @@
 '''
 My Assumptions:
 
-1)The Gender & Ethnicity & Race counts are based on the households without children.
-    It does not include people that do not belong in this households
+1) How my code works is that the helperfunction gets every ParentGlobalID (removing any duplicates) from all 
+ household with only Adults. The way it gets it is by creating two sets one with only adults and there ParentGlobalID
+and the second set is the ParentGlobalID of children . Then it gets the set difference between the two sets to get the ParentGlobalID that belong in only
+the the parentGlobal ID of households with only Adults (set 1)/
 
-2)I am assuming that the data set "csv" file is correct and the "P_Child Yes No" column is correct.
-    With this columns I can correctly see which Adults belong in a household without children.
+2) The rest of the functions use the helperfunction to get the Households of only Adults(set 1) ParentGlobalID
+and checks if the new set (Set 2) depending of the function is in Set 1 and returns the sum of all true.
 
-3) The number calculated are based on the assumptions above
+##? For the Helper Function I am Assuming that we are only allowed to use ParentGlobalID column 
+##? I am also assuming that the Under24 counts as a Young Adults
 
-TODO
+
+##! TODO
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
 '''
