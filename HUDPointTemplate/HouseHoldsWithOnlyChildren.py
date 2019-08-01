@@ -2,11 +2,11 @@
 My Assumptions:
 
 1) How my code works is that the helperfunction gets every ParentGlobalID (removing any duplicates) from all 
- household with only a child. The way it gets it is by creating two sets one with only children and there ParentGlobalID
+ household with only a child. The way it gets it is by creating two sets one with children and there ParentGlobalID
 and the second set is the ParentGlobalID of non children . Then it gets the set difference between the two sets to get the ParentGlobalID that belong in only
 the children set(set 1)/
 
-2) The rest of the functions use the helperfunction to get all the  Only Children  Household(set 1) ParentGlobalID
+2) The rest of the functions use the helperfunction to get all the  Only Children Household(set 1) ParentGlobalID
 and checks if the new set (Set 2) depending of the function is in Set 1 and returns the sum of all true.
 
 ##? For the Helper Function I am Assuming that we are only allowed to use ParentGlobalID column 
