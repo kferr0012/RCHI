@@ -16,7 +16,6 @@ In other word any youth that does not contain a child will be consider as a Unac
 
 
 
-
 ##! TODO
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
@@ -40,7 +39,7 @@ def helperFunction_Total_num_Households():
                 .drop_duplicates(subset='ParentGlobalID')
     
     total_children_relationship = in_df.loc[lambda df:\
-         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] <= 24) & (df['Relationship To HoH'] == 'Child'))\
+         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18) & (df['Relationship To HoH'] == 'Child'))\
             ,['ParentGlobalID']]\
                 .drop_duplicates(subset='ParentGlobalID')
 
