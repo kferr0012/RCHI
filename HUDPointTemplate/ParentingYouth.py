@@ -1,3 +1,24 @@
+'''
+My Assumptions:
+
+1) How my code works is that the helperfunction gets every ParentGlobalID (removing any duplicates) from a parenting Youth. How I do this is from creating a set with every youth
+and filter out any youth that is classified as a child status (Set 1). Create a new set (Set 2 ) of adults in order to do a set difference between set1 and set2 ( set3 ).Create a new set ( set 4)
+that contains children and have a child status in order to do a intersection between set3 and set 4 ( set 5 ). Set 5 contains the households that fits the defintion of Parenting Youth household and then remove
+any duplicate household. 
+
+Def of Parenting Youth :  A youth who identifies as the parent or legal guardian of one or more children who are present with or sleeping in the same place as that youth parent, where there is no person over age 24 in the household.
+
+In other words a household where the parent or gaurdian is a youth and he or she must contain a child. The household can not contain any adults else it gets discarded. 
+
+
+2) The rest of the functions use the helperfunction to get the household list( the new set ) and based on the function criteria filter it using the new set. 
+
+
+
+## TODO Create some test cases 
+Chronically Homeless Function
+Wrote them based on the csv column 'Chronically Homeless Status'
+'''
 
 import pandas as pd
 in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
@@ -294,17 +315,36 @@ def total_number_of_race_known():
     
     return total_number_of_race_known
 
-##! TODO
+## TODO Create some test cases 
+#* Total number of households (Chronically Homeless)
 def total_number_of_ChronicallyHomeless():
 
     households_list =  helperFunction_Total_num_Households()
 
     total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
        ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
-            , ['ParentGlobalID']]['ParentGlobalID']
-    
-    return total_number_of_ChronicallyHomeless
+            , ['ParentGlobalID']]
 
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+    return total_chronic_households.shape[0]
+
+#* Total number of persons(Chronically Homeless)
+def total_number_person_chronically_homeless():
+    households_list =  helperFunction_Total_num_Households()
+
+    total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
+       ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
+            , ['ParentGlobalID']]
+
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & ((df['Age As Of Today'] < 18) | (df['Age As Of Today'] >= 18)))\
+            | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under18') | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25')))
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(total_chronic_households['ParentGlobalID']).sum()
+    
+    return total_persons
 
 
 print("---------Unit Testing ---------")
@@ -418,6 +458,13 @@ print('\n')
 
 
 # ##* Ask About the correct value 
-# print('--------Total Number Of Chronically Homeless Persons-----------')
-# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
-# print('\n')
+print('--------Total number of households (Chronically Homeless)-----------')
+print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
+print('\n')
+
+print('--------Total number of persons(Chronically Homeless)-----------')
+print('Total number of persons (Chronically Homeless): ', total_number_person_chronically_homeless())
+print('\n')
+
+
+

@@ -13,7 +13,7 @@ and checks if the new set (Set 2) depending of the function is in Set 1 and retu
 ##? I am also assuming that the Under24 counts as a Young Adults
 
 
-##! TODO
+## TODO Create some test cases 
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
 '''
@@ -42,6 +42,34 @@ def helperFunction_Total_num_Households():
     set_diff_df = total_children.merge(total_Adults, indicator=True, how="left")[lambda x: x._merge=='left_only'].drop('_merge',1).drop_duplicates()
 
     return set_diff_df
+
+##* Helper Function to do extrapolation where needed
+def extrapolation():
+    households_list = helperFunction_Total_num_Households()
+
+
+
+
+
+    total_unknown = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Observation') & (df['Age Observed'] == 'NotSure'))\
+            ,['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(households_list['ParentGlobalID']).sum()
+    
+    total_known = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview'))\
+           | ((df['Household Survey Type'] == 'Observation') & (df['Age Observed'] != 'NotSure'))\
+               , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(households_list['ParentGlobalID']).sum()
+
+    print("Total Known:  ", total_known)
+    total_num_children = total_number_of_children()
+    print("Total Children:, ", total_num_children)
+
+    print("Extrapulation value: ", (total_num_children/total_known) * total_unknown)
+    
+    return total_unknown
+
 
 ##* Total number of households
 def total_number_of_households(): 
@@ -242,17 +270,24 @@ def total_number_of_race_known():
     
     return total_number_of_race_known
 
-##! TODO
+## TODO Create some test cases 
 def total_number_of_ChronicallyHomeless():
 
     households_list =  helperFunction_Total_num_Households()
 
     total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
-        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18) & (df['Chronically Homeless Status'] == 1))\
-            , ['ParentGlobalID']]['ParentGlobalID']\
-                .isin(households_list['ParentGlobalID']).sum()
-    
-    return total_number_of_ChronicallyHomeless
+       ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
+            , ['ParentGlobalID']]
+
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+    return total_chronic_households.shape[0]
+
+
+
+# print('------Testing-------')
+# print('\n')
+# print("Extrapolation: ", extrapolation())
+
 
 
 print("---------Unit Testing ---------")
@@ -340,7 +375,7 @@ print("---------Chronically Homeless---------")
 print('\n')
 
 
-# ##* Ask About the correct value 
-# print('--------Total Number Of Chronically Homeless Persons-----------')
-# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
-# print('\n')
+##* Ask About the correct value 
+print('--------Total number of households (Chronically Homeless)-----------')
+print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
+print('\n')

@@ -14,7 +14,7 @@ and checks if the new set (Set 2) depending of the function is in Set 1 and retu
 ##? I am also assuming that the Under24 counts as a Young Adults
 
 
-##! TODO
+## TODO Create some test cases 
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
 '''
@@ -279,16 +279,17 @@ def total_number_of_race_known():
     
     return total_number_of_race_known
 
-##! TODO
+## TODO Create some test cases 
 def total_number_of_ChronicallyHomeless():
 
     households_list =  helperFunction_Total_num_Households()
 
     total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
        ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
-            , ['ParentGlobalID']]['ParentGlobalID']
-    
-    return total_number_of_ChronicallyHomeless
+            , ['ParentGlobalID']]
+
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+    return total_chronic_households.shape[0]
 
 print("---------Unit Testing ---------")
 
@@ -386,12 +387,12 @@ print('--------Total Number Of Race Known-----------')
 print('Total number of Race Known ', total_number_of_race_known())
 print('\n')
 
-# print("---------Chronically Homeless ---------")
-# print('\n')
+print("---------Chronically Homeless ---------")
+print('\n')
 
 
-# # ##* Ask About the correct value 
-# print('--------Total Number Of Chronically Homsless Persons-----------')
-# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
-# print('\n')
+# ##* Ask About the correct value 
+print('--------Total number of households (Chronically Homeless)-----------')
+print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
+print('\n')
 

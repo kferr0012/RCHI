@@ -16,7 +16,7 @@ In other word any youth that does not contain a child will be consider as a Unac
 
 
 
-##! TODO
+## TODO Create some test cases 
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
 '''
@@ -262,16 +262,24 @@ def total_number_of_race_known():
     
     return total_number_of_race_known
 
-##! TODO
-def total_number_of_ChronicallyHomeless():
-
+## TODO Create some test cases 
+#* Total number of persons(Chronically Homeless)
+def total_number_person_chronically_homeless():
     households_list =  helperFunction_Total_num_Households()
 
     total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
        ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
-            , ['ParentGlobalID']]['ParentGlobalID']
+            , ['ParentGlobalID']]
+
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & ((df['Age As Of Today'] < 18) | (df['Age As Of Today'] >= 18)))\
+            | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under18') | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25')))
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(total_chronic_households['ParentGlobalID']).sum()
     
-    return total_number_of_ChronicallyHomeless
+    return total_persons
 
 print("---------Unit Testing ---------")
 print('\n')
@@ -367,7 +375,6 @@ print("---------Chronically Homeless---------")
 print('\n')
 
 
-# ##* Ask About the correct value 
-# print('--------Total Number Of Chronically Homeless Persons-----------')
-# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
-# print('\n')
+print('--------Total number of persons(Chronically Homeless)-----------')
+print('Total number of persons (Chronically Homeless): ', total_number_person_chronically_homeless())
+print('\n')

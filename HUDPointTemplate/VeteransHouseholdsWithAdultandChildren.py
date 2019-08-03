@@ -11,7 +11,7 @@ both of the sets
 and checks if the new set (Set 2) depending of the function is in Set 1 and returns the sum of all true.
 
 
-TODO
+## TODO Create some test cases 
 Chronically Homeless Function
 Wrote them based on the csv column 'Chronically Homeless Status'
 '''
@@ -265,24 +265,36 @@ def total_number_of_race_known():
 
     return total_number_veteran_Known
 
-#! TODO
+## TODO Create some test cases 
+#* Total number of households (Chronically Homeless)
 def total_number_of_ChronicallyHomeless():
-    total_num_of_households = helperFunction_Total_num_Veterans_households()
 
-    # total_number_of_ChronicallyHomeless = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')\
-    #     &  (df['Chronically Homeless Status'] == 1) & (df['Children (under 18)'] == 0) & ((df['Adult (over 24)'] == 1) | (df['Youth (18-24)'] == 1))\
-    #         , ['ParentGlobalID']]['ParentGlobalID']\
-    #             .isin(total_number_household['ParentGlobalID']).sum()
+    households_list =  helperFunction_Total_num_Veterans_households()
 
+    total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
+       ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
+            , ['ParentGlobalID']]
 
-    total_number_of_ChronicallyHomeless =  in_df.loc[lambda df: (df['Chronically Homeless Status'] == 1)\
-                & ((df['Age As Of Today'] >= 18) | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25'))\
-                    , ['ParentGlobalID']]['ParentGlobalID'].isin(total_num_of_households['ParentGlobalID'])\
-                        .sum()
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+    return total_chronic_households.shape[0]
 
+#* Total number of persons(Chronically Homeless)
+def total_number_person_chronically_homeless():
+    households_list =  helperFunction_Total_num_Veterans_households()
+
+    total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
+       ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
+            , ['ParentGlobalID']]
+
+    total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
+
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & ((df['Age As Of Today'] < 18) | (df['Age As Of Today'] >= 18)))\
+            | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under18') | (df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25')))
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(total_chronic_households['ParentGlobalID']).sum()
     
-
-    return total_number_of_ChronicallyHomeless
+    return total_persons
 
 
 print("---------Unit Testing ---------")
@@ -378,7 +390,13 @@ print('\n')
 
 
 # ##* Ask About the correct value 
-# print('--------Total Number Of Chronically Homsless Persons-----------')
-# print('Total number Chronically Homeless\n ', total_number_of_ChronicallyHomeless())
-# print('\n')
+print('--------Total number of households (Chronically Homeless)-----------')
+print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
+print('\n')
+
+print('--------Total number of persons(Chronically Homeless)-----------')
+print('Total number of persons (Chronically Homeless): ', total_number_person_chronically_homeless())
+print('\n')
+
+
 
