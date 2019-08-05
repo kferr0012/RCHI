@@ -271,8 +271,8 @@ def total_number_of_race_known():
     return total_number_of_race_known
 
 ## TODO Create some test cases 
-def total_number_of_ChronicallyHomeless():
-
+#* Total number of persons(Chronically Homeless)
+def total_number_person_chronically_homeless():
     households_list =  helperFunction_Total_num_Households()
 
     total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
@@ -280,7 +280,14 @@ def total_number_of_ChronicallyHomeless():
             , ['ParentGlobalID']]
 
     total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
-    return total_chronic_households.shape[0]
+
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18) )\
+            | ((df['Household Survey Type'] == 'Observation') & (df['Age Observed'] == 'Under18'))
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(total_chronic_households['ParentGlobalID']).sum()
+    
+    return total_persons
 
 
 
@@ -376,6 +383,6 @@ print('\n')
 
 
 ##* Ask About the correct value 
-print('--------Total number of households (Chronically Homeless)-----------')
-print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
+print('--------Total number of Persons (Chronically Homeless)-----------')
+print('Total number of Persons (Chronically Homeless): ', total_number_person_chronically_homeless())
 print('\n')
