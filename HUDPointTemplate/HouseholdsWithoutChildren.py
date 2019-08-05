@@ -21,6 +21,15 @@ Wrote them based on the csv column 'Chronically Homeless Status'
 import pandas as pd
 in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
 
+kevin_df = pd.read_csv('../../../households_without_children_txt.csv').T.reset_index()
+
+
+# print(kevin_df.T.reset_index())
+
+kevin_df=kevin_df.apply(lambda x: x.str.replace('\'','')).apply(lambda x: x.str.replace(' ','')).rename(columns={"index": "ParentGlobalID"})
+
+# print(kevin_df)
+
 
 # "Adult (over24)" > 0 *or* "Youth(18-24)" > 0) and   ("Children (under 18)" =0 *and* "P_Child Yes No" = No)==> Only Adults
 
@@ -35,7 +44,7 @@ def helperFunction_Total_num_Households():
 
     total_children = in_df.loc[lambda df:\
         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18))\
-           | ((df['Household Survey Type'] == 'Observation') & (df['Age Observed'] == 'Under18'))\
+           | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under18') | ((df['Age Observed'] == 'NotSure'))))\
                ,['ParentGlobalID']]\
                    .drop_duplicates(subset='ParentGlobalID')
 
@@ -49,6 +58,14 @@ def helperFunction_Total_num_Households():
 def total_number_of_households(): 
 
     total_num_of_households = helperFunction_Total_num_Households().shape[0]
+
+
+    # same = total_num_of_households[~total_num_of_households['ParentGlobalID'].isin(kevin_df['ParentGlobalID'])]
+
+    # print(same)
+    # # print("KIKIN: ", total_num_of_households['ParentGlobalID'].to_string())
+    # # print('-------------------')
+    # # print('KEvin: ', kevin_df['ParentGlobalID'].to_string())
 
     return total_num_of_households
 
@@ -270,8 +287,8 @@ def total_number_of_race_known():
     return total_number_of_race_known
 
 ## TODO Create some test cases 
-def total_number_of_ChronicallyHomeless():
-
+#* Total number of persons(Chronically Homeless)
+def total_number_person_chronically_homeless():
     households_list =  helperFunction_Total_num_Households()
 
     total_number_of_ChronicallyHomeless = in_df.loc[lambda df:\
@@ -279,8 +296,14 @@ def total_number_of_ChronicallyHomeless():
             , ['ParentGlobalID']]
 
     total_chronic_households = pd.merge(households_list, total_number_of_ChronicallyHomeless, how='inner').drop_duplicates(subset='ParentGlobalID')
-    return total_chronic_households.shape[0]
 
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >=18) )\
+            | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under24') | (df['Age Observed'] == 'Over25')))
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(total_chronic_households['ParentGlobalID']).sum()
+    
+    return total_persons
 print("---------Unit Testing ---------")
 print('\n')
 print("HouseHold Without Children")
@@ -375,6 +398,6 @@ print('\n')
 
 
 ##* Ask About the correct value 
-print('--------Total number of households (Chronically Homeless)-----------')
-print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
+print('--------Total number of Persons (Chronically Homeless)-----------')
+print('Total number of Persons (Chronically Homeless): ', total_number_person_chronically_homeless())
 print('\n')
