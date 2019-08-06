@@ -21,16 +21,6 @@ Wrote them based on the csv column 'Chronically Homeless Status'
 import pandas as pd
 in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
 
-kevin_df = pd.read_csv('../../../households_without_children_txt.csv').T.reset_index()
-
-
-# print(kevin_df.T.reset_index())
-
-kevin_df=kevin_df.apply(lambda x: x.str.replace('\'','')).apply(lambda x: x.str.replace(' ','')).rename(columns={"index": "ParentGlobalID"})
-
-# print(kevin_df)
-
-
 # "Adult (over24)" > 0 *or* "Youth(18-24)" > 0) and   ("Children (under 18)" =0 *and* "P_Child Yes No" = No)==> Only Adults
 
 ##* Helper Function that returns total number of households
@@ -58,15 +48,7 @@ def helperFunction_Total_num_Households():
 def total_number_of_households(): 
 
     total_num_of_households = helperFunction_Total_num_Households().shape[0]
-
-
-    # same = total_num_of_households[~total_num_of_households['ParentGlobalID'].isin(kevin_df['ParentGlobalID'])]
-
-    # print(same)
-    # # print("KIKIN: ", total_num_of_households['ParentGlobalID'].to_string())
-    # # print('-------------------')
-    # # print('KEvin: ', kevin_df['ParentGlobalID'].to_string())
-
+    
     return total_num_of_households
 
 ##* Total number of persons  
