@@ -21,7 +21,112 @@ Wrote them based on the csv column 'Chronically Homeless Status'
 '''
 
 import pandas as pd
-in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
+# in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
+#*  Save to CSV FILE
+import tkinter as tk
+from tkinter import filedialog
+import os
+def exportCSV():
+    
+    export_file_path = filedialog.asksaveasfilename(defaultextension='.csv')
+    if not export_file_path: # asksaveasfile return `None` if dialog closed with "cancel".
+        return
+    data_Table().to_csv (export_file_path, index = None, header=True)
+
+def importCSV():
+    global in_df
+    import_file_path = filedialog.askopenfilename(initialdir = os.getcwd(),filetypes=[("CSV Files",".csv")])
+    if import_file_path:
+        in_df = pd.read_csv(import_file_path)
+        print("Created")
+
+#* Helper Function to create tables for csv file
+def helperFunction_HouseHolds_Info():
+    total_num_of_households = total_number_of_households()
+    total_num_persons = total_number_of_persons()
+    total_num_parents = total_number_of_parents()
+    total_num_children = total_children_in_Youth_Households()
+    total_num_parents_under18 = total_parenting_youth_under18()
+    total_num_children_household_under18 = total_children_in_Under18_Households()
+    total_num_parents_18to24 = total_parenting_youth_18to24()
+    total_num_children_household_18to24 = total_children_in_18to24_Households()
+
+    data = {'Parenting Youth Households':['Total number of parenting youth households','Total number of persons in parenting youth households','Total Parenting Youth (youth parents only)','Total Children in Parenting Youth Households','Number of parenting youth under age 18','Children in households with parenting youth under age 18','Number of parenting youth age 18 to 24','Children in households with parenting youth age 18 to 24']\
+            , 'Unsheltered': [total_num_of_households,total_num_persons,total_num_parents,total_num_children,total_num_parents_under18,total_num_children_household_under18,total_num_parents_18to24,total_num_children_household_18to24]}
+
+    df = pd.DataFrame(data)
+    df['Unsheltered'] = df['Unsheltered'].astype(int)
+    
+    return df
+
+def helperFunction_Gender():
+
+    female = total_number_of_female()
+    male =  total_number_of_male() 
+    transgender = total_number_of_transgender()
+    genderNonConforming = total_number_of_gender_non_conforming()
+
+    data = {'Gender (youth parents only)':['Female (youth parents only)', 'Male (youth parents only)', 'Transgender (youth parents only)', 'Gender Non-Conforming (youth parents only)']\
+            , 'Unsheltered': [female,male,transgender,genderNonConforming]}
+
+    df = pd.DataFrame(data)
+    df['Unsheltered'] = df['Unsheltered'].astype(int)
+ 
+
+    return df
+
+def helperFunction_Ethnicity():
+
+    non_Latino = total_number_of_ethnicity_nonlatino()
+    Latino = total_number_of_ethnicity_latino() 
+
+    data = {'Ethnicity (youth parents only)':['Non-Hispanic/Non-Latino (youth parents only)', 'Hispanic/Latino (youth parents only)']\
+        , 'Unsheltered': [non_Latino, Latino]}
+    
+    df = pd.DataFrame(data) 
+    df['Unsheltered'] = df['Unsheltered'].astype(int)
+
+    return df
+
+def helperFunction_Race():
+
+    white = total_number_of_race_white()
+    black = total_number_of_race_African() 
+    asian = total_number_of_race_Asian()
+    americanIndian = total_number_of_race_AmericanIndian()
+    nativeHawaiian = total_number_of_race_NativeHawiian()
+    multiple = total_number_of_race_Multiple()
+
+    data = {'Race (youth parents only)':['White (youth parents only)', 'Black or African-American (youth parents only)', 'Asian (youth parents only)', 'American Indian or Alaska Native (youth parents only)','Native Hawaiian or Other Pacific Islander (youth parents only)','Multiple Races (youth parents only)']\
+        , 'Unsheltered': [white, black, asian, americanIndian, nativeHawaiian, multiple]}
+    
+    df = pd.DataFrame(data) 
+    df['Unsheltered'] = df['Unsheltered'].astype(int)
+
+    return df
+
+def helperFunction_ChronicallyHomeless():
+    total_num_chronicallyHomeless = total_number_person_chronically_homeless()
+
+    data = {'Chronically Homeless':['Total number of households (Chronically Homeless)']\
+        , 'Unsheltered': [total_num_chronicallyHomeless]}
+
+    df = pd.DataFrame(data) 
+    df['Unsheltered'] = df['Unsheltered'].astype(int)
+
+    return df
+
+##* HelperFunction Combine Tables for CSV File
+def data_Table():
+    df0 = helperFunction_HouseHolds_Info()
+    df1 = helperFunction_Gender().rename(columns={"Gender (youth parents only)": "Parenting Youth Households"})
+    df2 = helperFunction_Ethnicity().rename(columns={"Ethnicity (youth parents only)": "Parenting Youth Households"})
+    df3 = helperFunction_Race().rename(columns={"Race (youth parents only)": "Parenting Youth Households"})
+    df4 = helperFunction_ChronicallyHomeless().rename(columns={"Chronically Homeless": "Parenting Youth Households"})
+
+    result = df0.append([df1,df2, df3,df4]).reset_index(drop=True)
+    
+    return result
 
 ##* Helper Function that returns total number of households
 def helperFunction_Total_num_Households():
@@ -346,125 +451,14 @@ def total_number_person_chronically_homeless():
     
     return total_persons
 
-
-print("---------Unit Testing ---------")
-print('\n')
-print("Parenting Youth Households" )
-
-print('\n')
-print('--------Total number of parenting youth households------------')
-print("Total number of parenting youth households: ", total_number_of_households())
-print('\n')
-
-print('--------Total number of persons in parenting youth households------------')
-print("Total number of persons in parenting youth households: ", total_number_of_persons())
-print('\n')
-
-print('--------Total Parenting Youth (youth parents only)------------')
-print("Total Parenting Youth (youth parents only): ", total_number_of_parents())
-print('\n')
-
-print('--------Total Children in Parenting Youth Households------------')
-print("Total Children in Parenting Youth Households: ", total_children_in_Youth_Households())
-print('\n')
-
-print('--------Number of parenting youth under age 18------------')
-print("Number of parenting youth under age 18: ", total_parenting_youth_under18())
-print('\n')
-
-print('--------Children in households with parenting youth under age 18------------')
-print("Children in households with parenting youth under age 18: ", total_children_in_Under18_Households())
-print('\n')
-
-print('--------Number of parenting youth age 18 to 24------------')
-print("Number of parenting youth age 18 to 24 ", total_parenting_youth_18to24())
-print('\n')
-
-print('-------Children in households with parenting youth age 18 to 24------------')
-print("Children in households with parenting youth age 18 to 24: ", total_children_in_18to24_Households())
-print('\n')
-
-print("Gender (youth parents only)")
-print('\n')
-print('--------Total Number Of Female------------')
-print('Total number of Female: ', total_number_of_female())
-print('\n')
-
-print('--------Total Number Of Male------------')
-print('Total number of Male: ', total_number_of_male())
-print('\n')
-
-print('--------Total Number Of Transgender------------')
-print('Total number of Transgender: ', total_number_of_transgender())
-print('\n')
-
-print('--------Total Number Of Gender Non-conforming------------')
-print('Total number of gender non-conforming: ', total_number_of_gender_non_conforming())
-print('\n')
-
-print('--------Total Number Of Gender Known------------')
-print('Total number of known : ', total_number_of_gender_known())
-print('\n')
-
-print("---------Ethnicity (youth parents only)---------")
-print('\n')
-
-print('--------Total Number Of Non-Hispanic/Non-Latino------------')
-print('Total number of non-hispanic/non-latino: ', total_number_of_ethnicity_nonlatino())
-print('\n')
-
-print('--------Total Number Of  Hispanic/Latino------------')
-print('Total number of latino/hispanic ', total_number_of_ethnicity_latino())
-print('\n')
-
-print('--------Total Number Of Veterans Ethnicity Known------------')
-print('Total number of Ethnicity Known ', total_number_of_ethnicity_Known())
-print('\n')  
-
-
-print("---------Race (youth parents only)---------")
-print('\n')
-
-print('--------Total Number Of White-----------')
-print('Total number White ', total_number_of_race_white())
-print('\n')
-
-print('--------Total Number Of Black or African American-----------')
-print('Total number Black or African American ', total_number_of_race_African())
-print('\n')
-
-print('--------Total Number Of Asian-----------')
-print('Total number Asian ', total_number_of_race_Asian())
-print('\n')
-
-print('--------Total Number Of American Indian or Alaska Native-----------')
-print('Total number American Indian or Alaska Native ', total_number_of_race_AmericanIndian())
-print('\n')
-
-print('--------Total Number Of Native Hawaiian or Other Pacific Islander-----------')
-print('Total number Native Hawaiian or Other Pacific Islander ', total_number_of_race_NativeHawiian())
-print('\n')
-
-print('--------Total Number Of Multiple Race-----------')
-print('Total number Multiple Race ', total_number_of_race_Multiple())
-print('\n')
-
-print('--------Total Number Of Race Known-----------')
-print('Total number of Race Known ', total_number_of_race_known())
-print('\n')
-
-print("---------Chronically Homeless---------")
-print('\n')
-
-
-# ##* Ask About the correct value 
-print('--------Total number of households (Chronically Homeless)-----------')
-print('Total number of households (Chronically Homeless): ', total_number_of_ChronicallyHomeless())
-print('\n')
-
-print('--------Total number of persons(Chronically Homeless)-----------')
-print('Total number of persons (Chronically Homeless): ', total_number_person_chronically_homeless())
-print('\n')
-
-
-
+root= tk.Tk()
+root.title('Menu')
+canvas1 = tk.Canvas(root, width = 300, height = 300, bg = 'seashell3', relief = 'raised')
+canvas1.pack()
+saveAsButton_CSV = tk.Button(text='Export CSV', command=exportCSV, bg='red', fg='black', font=('helvetica', 15, 'bold'))
+loadAsButton_CSV = tk.Button(text='Import CSV', command=importCSV, bg='red', fg='black', font=('helvetica', 15, 'bold'))
+cancelButton = tk.Button(text='Cancel',command=root.destroy ,bg='red', fg='black', font=('helvetica', 15, 'bold'))
+canvas1.create_window(75, 150, window=loadAsButton_CSV)
+canvas1.create_window(225, 150, window=saveAsButton_CSV)
+canvas1.create_window(150, 225, window=cancelButton)
+root.mainloop()
