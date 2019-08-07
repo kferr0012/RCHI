@@ -1,4 +1,5 @@
 '''
+
 My Assumptions:
 
 1)All this calculations are only for interview individuals. You can not observe if a individual has one of this attributes
@@ -6,7 +7,40 @@ My Assumptions:
 '''
 import pandas as pd
 
-in_df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
+# in_df = 'pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')'
+
+#*  Save to CSV FILE
+import tkinter as tk
+from tkinter import filedialog
+import os
+def exportCSV():
+    
+    export_file_path = filedialog.asksaveasfilename(defaultextension='.csv')
+    if not export_file_path: # asksaveasfile return `None` if dialog closed with "cancel".
+        return
+    data_Table().to_csv (export_file_path, index = None, header=True)
+
+def importCSV():
+    global in_df
+    import_file_path = filedialog.askopenfilename(initialdir = os.getcwd(),filetypes=[("CSV Files",".csv")])
+    if import_file_path:
+        in_df = pd.read_csv(import_file_path)
+        print("Created")
+
+#* Helper Function to create tables for csv file
+def data_Table():
+    total_num_adults_Mental_Illness = total_number_adult_Mental_Illness()
+    total_num_adults_Substance_Disorder = total_number_adults_Substance_Disorder()
+    total_num_adults_HIV_AIDS = total_number_adults_HIV_AIDS()
+    total_num_adults_Domestic_Violence = total_number_adults_Domestic_Violence()
+
+    data = {'Additional Homeless Populations':['Adults with a Serious Mental Illness','Adults with a Substance Use Disorder','Adults with HIV/AIDS','Adult Survivors of Domestic Violence (optional)']\
+            , 'Unsheltered': [total_num_adults_Mental_Illness,total_num_adults_Substance_Disorder,total_num_adults_HIV_AIDS,total_num_adults_Domestic_Violence]}
+
+    df = pd.DataFrame(data)
+    df['Unsheltered'] = df['Unsheltered'].astype(int)
+    
+    return df
 
 #* Adults with a Serious Mental Illness
 def total_number_adult_Mental_Illness():
@@ -32,25 +66,14 @@ def total_number_adults_Domestic_Violence():
 
     return total_num_adults_Domestic_Violence
 
-
-print("------------Unit Testing----------")
-
-print('\n')
-print('---------Additional Homeless Populations---------')
-print('\n')
-
-print('Adults with a Serious Mental Illness')
-print('Total Adults with a Serious Mental Illness: ', total_number_adult_Mental_Illness())
-print('\n')
-
-print('Adults with a Substance Use Disorder')
-print('Total Adults with a Substance Use Disorder: ', total_number_adults_Substance_Disorder())
-print('\n')
-
-print('Adults with HIV/AIDS')
-print('Total Adults with HIV/AIDS: ', total_number_adults_HIV_AIDS())
-print('\n')
-
-print('Adult Survivors of Domestic Violence')
-print('Total Adult Survivors of Domestic Violence: ', total_number_adults_Domestic_Violence())
-print('\n')
+root= tk.Tk()
+root.title('Menu')
+canvas1 = tk.Canvas(root, width = 300, height = 300, bg = 'seashell3', relief = 'raised')
+canvas1.pack()
+saveAsButton_CSV = tk.Button(text='Export CSV', command=exportCSV, bg='red', fg='black', font=('helvetica', 15, 'bold'))
+loadAsButton_CSV = tk.Button(text='Import CSV', command=importCSV, bg='red', fg='black', font=('helvetica', 15, 'bold'))
+cancelButton = tk.Button(text='Cancel',command=root.destroy ,bg='red', fg='black', font=('helvetica', 15, 'bold'))
+canvas1.create_window(75, 150, window=loadAsButton_CSV)
+canvas1.create_window(225, 150, window=saveAsButton_CSV)
+canvas1.create_window(150, 225, window=cancelButton)
+root.mainloop()
