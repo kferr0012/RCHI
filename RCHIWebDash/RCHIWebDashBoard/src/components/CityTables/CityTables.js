@@ -3,7 +3,9 @@ import './CityTables.css'
 import ReactToPrint from 'react-to-print';
 import Select from 'react-select'
 import axios from 'axios';
-import { citynames, base } from './constants';
+import { citynames, base, SubPopHeaders, Catergories, Titles } from './constants';
+
+import { Grid } from 'semantic-ui-react';
 
 export default class CityTables extends Component {
     constructor(props){
@@ -92,128 +94,6 @@ export default class CityTables extends Component {
     }
 
     createTable = (incity) => {
-        var Catergories = [
-            'Race',
-            'Ethinicity',
-            'Gender',
-            'Age',
-            'Subpopulations'
-        ]
-        
-        var Titles = {
-            'Race': [ //7
-                'American Indian',
-                'Asian',
-                'Black',
-                'Native Hawaiian',
-                'White',
-                'Multiple Races',
-                'Unknown Race',
-                'Total', 
-            ],
-            'Ethinicity': [ //4
-                'Hispanic',
-                'NonHispanic',
-                'Unknown Ethinicity',
-                'Total',
-            ],
-            'Gender': [ //6
-                'Male',
-                'Female',
-                'Transgender',
-                'Gender Non-Conforming',
-                'Unknown Gender',
-                'Total',
-            ],
-            'Age': [ //5
-                'Adults (>24)',
-                'Youth (18-24)',
-                'Children (<18)',
-                //'Elderly (62+)',
-                'Unknown Age',
-                'Total',
-            ],
-            
-            'Veterans': [
-                'Veteran Yes',
-                'Veteran No',
-            ],
-            'Chronically Homeless': [
-                'Chronically Homeless',
-                'Not Chronically Homeless',
-            ],
-            'Substance Abuse': [
-                'Substance Abuse',
-                'No Substance Abuse',
-                'Unknown Substance Abuse',
-            ],
-            'PTSD': [
-                'PTSD',
-                'No PTSD',
-                'Unknown PTSD',
-            ],
-            'Mental Health Conditions': [
-                'Mental Health Conditions',
-                'No Mental Health Conditions',
-                'Unknown Mental Health Conditions',
-            ],
-            'Physical Disability': [
-                'Physical Disability',
-                'No Physical Disability',
-                'Unknown Physical Disability',
-            ],
-            'Developmental Disability': [
-                'Developmental Disability',
-                'No Developmental Disability',
-                'Unknown Developmental Disability',
-            ],
-            'Brain Injury': [
-                'Brain Injury',
-                'No Brain Injury',
-                'Unknown Brain Injury',
-            ],
-            'Victim of Domestic Violence': [
-                'Victim of Domestic Violence',
-                'Not Victim of Domestic Violence',
-                'Unknown Victim of Domestic Violence',
-            ],
-            'AIDS or HIV': [
-                'AIDS or HIV',
-                'No AIDS or HIV',
-                'Unknown AIDS or HIV',
-            ],
-            'Jail': [
-                'Jail Release 90 Days: Probation',
-                'Jail Release 90 Days: Parole',
-                'Jail Release 90 Days: Completed Sentence',
-                'Jail Release 90 Days: (Unspecified)',
-                'Jail Release 12 Months: Probation',
-                'Jail Release 12 Months: Parole',
-                'Jail Release 12 Months: Completed Sentence',
-                'Jail Release 12 Months: (Unspecified)',
-                'No Jail',
-                'Unknown Jail',
-            ],
-            // 'Families with Children' : [
-            //     'Families with Children',
-            // ]
-        }
-
-        var SubPopHeaders = [
-            'Veterans',
-            'Chronically Homeless',
-            'Substance Abuse',
-            'PTSD',
-            'Mental Health Conditions',
-            'Physical Disability',
-            'Developmental Disability',
-            'Brain Injury',
-            'Victim of Domestic Violence',
-            'AIDS or HIV',
-            'Jail',
-            //'Families with Children'
-        ]
-        
         var curCity;
         var table = [];
         var tableRow = [];
@@ -346,38 +226,40 @@ export default class CityTables extends Component {
         // console.log(this.state.households);
         // console.log(this.state.data);
         return(
-            <div className="row">
-                <div className="col-sm-3 leftCol">
-                    <Select options={this.state.selectOptions} onChange={ (value) => {if (value.value.length > 2) { 
-                        this.setState({curCities: [value.value]}); console.log(value); } } } />
-                    <br/>
-                    <ReactToPrint
-                        trigger={() => <button href="#">Print Table</button>}
-                        content={() => this.componentRef}
-                    />
-                </div>
-                <div className="col-sm-9 tableCol">
-                    <table ref={el => (this.componentRef = el)} className="paperSize" key={Math.random()}>
-                        {/* <caption>*percents for subpopulations are taken from totals within each catergory (i.e. Veterans/ Total Veterans in City)</caption> */}
-                        <thead>
-                            <tr>
-                            <th id="TableTitle" colspan="7">The Subpopulations of {this.state.curCities}</th>
-                            </tr>
-                            <tr>
-                                <th colspan="2">Catergory</th>
-                                <th>Response Options</th>
-                                <th>Interview</th>  
-                                <th>Observation</th>
-                                <th>Total Count</th>  
-                                <th>Percent</th>                 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.createTable(this.state.curCities[0])}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <Grid container>
+                <Grid.Row>
+                    <Grid.Column width={4}>
+                        <Select options={this.state.selectOptions} onChange={ (value) => {if (value.value.length > 2) { 
+                            this.setState({curCities: [value.value]}); console.log(value); } } } />
+                        <br/>
+                        <ReactToPrint
+                            trigger={() => <button href="#">Print Table</button>}
+                            content={() => this.componentRef}
+                        />
+                    </Grid.Column>
+                    <Grid.Column width={12}>
+                        <table ref={el => (this.componentRef = el)} className="paperSize" key={Math.random()}>
+                            {/* <caption>*percents for subpopulations are taken from totals within each catergory (i.e. Veterans/ Total Veterans in City)</caption> */}
+                            <thead>
+                                <tr>
+                                <th id="TableTitle" colspan="7">The Subpopulations of {this.state.curCities}</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Catergory</th>
+                                    <th>Response Options</th>
+                                    <th>Interview</th>  
+                                    <th>Observation</th>
+                                    <th>Total Count</th>  
+                                    <th>Percent</th>                 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.createTable(this.state.curCities[0])}
+                            </tbody>
+                        </table>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         );
     }
 }

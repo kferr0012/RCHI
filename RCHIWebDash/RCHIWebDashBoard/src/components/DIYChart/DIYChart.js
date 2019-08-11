@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import '../CityTables/CityTables.css'
-import Papa from 'papaparse'
 import ReactToPrint from 'react-to-print';
 import Select from 'react-select'
 import BarChart from '../charts/BarChart';
-import { ChromePicker } from 'react-color';
 import ColorPicker from './ColorPicker';
+import { Grid } from 'semantic-ui-react';
 
 export default class DIYChart extends Component {
     constructor(props){
@@ -131,64 +129,66 @@ export default class DIYChart extends Component {
         console.log(this.state.minYaxis);
 
         return(
-            <div className="row">
-                <div className="col-sm-3 leftCol">
-                    <Select options={this.state.selectOptions} onChange={ (value) => {if (value.value.length > 2) { 
-                        this.setState({curCities: [value.value]}); console.log(value); } } } 
-                    />
-                    <span>Graph Title</span>
-                    <input className="graphBoundsInput" onChange={ (event) => {this.setState({title: event.target.value} ) }}/>
-                    
-                    <br/>
-                    { this.state && this.state.chartData[0].datasets[0].data ?
-                    <form> 
-                        Graph Max 
-                        <input 
-                            className="graphBoundsInput" 
-                            type={'number'} 
-                            defaultValue={(Math.ceil(Math.max(...this.state.chartData[0].datasets[0].data))+1)} 
-                            onChange={(event) => {this.setState({maxYaxis: parseInt(event.target.value)})}}
+            <Grid padded="vertically" container>
+                <Grid.Row>
+                    <Grid.Column width={4}>
+                        <Select options={this.state.selectOptions} onChange={ (value) => {if (value.value.length > 2) { 
+                            this.setState({curCities: [value.value]}); console.log(value); } } } 
                         />
+                        <span>Graph Title</span>
+                        <input className="graphBoundsInput" onChange={ (event) => {this.setState({title: event.target.value} ) }}/>
+                        
                         <br/>
-                        Graph Min 
-                        <input 
-                            className="graphBoundsInput" 
-                            type={'number'} 
-                            defaultValue={(Math.floor(Math.min(...this.state.chartData[0].datasets[0].data))-1)} 
-                            onChange={(event) => {this.setState({minYaxis: parseInt(event.target.value)})}}
+                        { this.state && this.state.chartData[0].datasets[0].data ?
+                        <form> 
+                            Graph Max 
+                            <input 
+                                className="graphBoundsInput" 
+                                type={'number'} 
+                                defaultValue={(Math.ceil(Math.max(...this.state.chartData[0].datasets[0].data))+1)} 
+                                onChange={(event) => {this.setState({maxYaxis: parseInt(event.target.value)})}}
+                            />
+                            <br/>
+                            Graph Min 
+                            <input 
+                                className="graphBoundsInput" 
+                                type={'number'} 
+                                defaultValue={(Math.floor(Math.min(...this.state.chartData[0].datasets[0].data))-1)} 
+                                onChange={(event) => {this.setState({minYaxis: parseInt(event.target.value)})}}
+                            />
+                        </form>: null}
+                        <br/>
+                        <span>Graph Colors</span> 
+                        <br/>
+                        {
+                            this.state.chartData[0].datasets[0].backgroundColor.map( (color, idx) => {
+                                return (
+                                <ColorPicker
+                                color={color}
+                                onChange={(color) => this.handleColorChange(color, idx) }
+                                />)
+                            })
+                        }
+                        <br/>
+                        <br/>
+                        <ReactToPrint
+                            trigger={() => <button href="#">Print Chart</button>}
+                            content={() => this.componentRef}
                         />
-                    </form>: null}
-                    <br/>
-                    <span>Graph Colors</span> 
-                    <br/>
-                    {
-                        this.state.chartData[0].datasets[0].backgroundColor.map( (color, idx) => {
-                            return (
-                            <ColorPicker
-                            color={color}
-                            onChange={(color) => this.handleColorChange(color, idx) }
-                            />)
-                        })
-                    }
-                    <br/>
-                    <br/>
-                    <ReactToPrint
-                        trigger={() => <button href="#">Print Chart</button>}
-                        content={() => this.componentRef}
-                    />
-                </div>
-                <div className="col-sm-9 tableCol" ref={el => (this.componentRef = el)}>
-                    <p>{this.state.title}</p>
-                    <BarChart 
-                        key={Math.random()} 
-                        height={window.innerHeight*.35} 
-                        datasets={this.state.chartData} 
-                        data={0}
-                        maxYaxis={this.state.maxYaxis}
-                        minYaxis={this.state.minYaxis}
-                    />
-                </div>
-            </div>
+                    </Grid.Column>
+                    <Grid.Column width={12} ref={el => (this.componentRef = el)}>
+                        <p>{this.state.title}</p>
+                        <BarChart 
+                            key={Math.random()} 
+                            height={window.innerHeight*.35} 
+                            datasets={this.state.chartData} 
+                            data={0}
+                            maxYaxis={this.state.maxYaxis}
+                            minYaxis={this.state.minYaxis}
+                        />
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
         );
     }
 }
