@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Select from 'react-select'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Grid, Dropdown } from 'semantic-ui-react';
 
 import './CityTables.css'
 import { citynames, base, SubPopHeaders, Catergories, Titles } from './constants';
@@ -13,7 +13,6 @@ export default class CityDashboard extends Component {
             data: {},
             curCity: 'RIVERSIDE',
             households: {},
-            citynames: citynames,
             selectOptions: []
           };
     }
@@ -22,11 +21,11 @@ export default class CityDashboard extends Component {
         this.fetchSubpopulationData();
         this.fetchHouseholdData();
         var options = [];
-        for (var i = 0; i < this.state.citynames.length; i++)
+        for (var i = 0; i < citynames.length; i++)
         {
             options.push({
-                value: this.state.citynames[i],
-                label: this.state.citynames[i]
+                value: citynames[i],
+                text: citynames[i]
             });
         }
         this.setState({
@@ -41,7 +40,6 @@ export default class CityDashboard extends Component {
             throw Error;
         }
         let data = {};
-        const {citynames} = this.state;
         for (let i = 0; i < citynames.length ; i++)
         {
             data[citynames[i]] = { 
@@ -71,9 +69,9 @@ export default class CityDashboard extends Component {
             throw Error;
         }
         var data = {};
-        for (var i = 0; i < this.state.citynames.length ; i++)
+        for (var i = 0; i < citynames.length ; i++)
         {
-            data[this.state.citynames[i]] = JSON.parse(JSON.stringify(base));
+            data[citynames[i]] = JSON.parse(JSON.stringify(base));
         }
 
         for (var i = 0; i < indata.length ; i++)
@@ -88,90 +86,68 @@ export default class CityDashboard extends Component {
     }
 
     render(){
+        const { data, households, curCity } = this.state;
         return(
-            <Container className="dashboard">
-                <Row>
-                    <Col md={3}>
-                        <Row>
-                            <Col>
-                                <h1>Age</h1>
-                                <h1>Age Chart</h1>
-                                <h1>Age Table</h1>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h1>Subpopulations</h1>
-                                <h1>Subpopulations Table</h1>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col md={9}>
-                        <Row>
-                            <Col md={8}>
-                                <Row>
-                                    <Col>
-                                        <div className="widget">
-                                            <h3>2019 Riverside County PIT Count</h3>
-                                            <h4>{this.state.curCity}</h4>
-                                            <h4>City Level Information</h4>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <div className="widget">
-                                            <h4>City Totals</h4>
-                                            <Row>
-                                                <Col md={4}>
-                                                    <h5>Chronically Homeless</h5>
-                                                    <h5>| Some Num |</h5>
-                                                </Col>
-                                                <Col md={4}>
-                                                    <h5>Total Unsheleterd</h5>
-                                                    <h5>| Some Num |</h5>
-                                                </Col>
-                                                <Col md={4}>
-                                                    <h5>Percent of District</h5>
-                                                    <h5>| Some Num |</h5>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <h1>Ethnicity</h1>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col md={4}>
-                                <Row>
-                                    <Col>
-                                        <h1>City Selector</h1>
-                                        <Select options={this.state.selectOptions} onChange={ (value) => {if (value.value.length > 2) { 
-                                            this.setState({curCities: [value.value]}); console.log(value); } } } />
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <h1>Gender</h1>
-                                        <h1>Gender Table</h1>
-                                        <h1>Gender Chart</h1>
-                                    </Col>
-                                </Row>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h1>Race</h1>
-                                <h1>Race Table and Chart</h1>
-                            </Col>
-                        </Row>
-                    </Col>
-                    
-                </Row>
-            </Container>
+            <Grid padded="horizontally" className="dashboard">
+                <Grid.Row>
+                    <Grid.Column width={4}>
+                        <Grid.Row className="widget">
+                            <h1>Age</h1>
+                            <h1>Age Chart</h1>
+                            <h1>Age Table</h1>
+                        </Grid.Row>
+                        <Grid.Row className="widget">
+                            <h1>Subpopulations</h1>
+                            <h1>Subpopulations Table</h1>
+                        </Grid.Row>
+                    </Grid.Column>
+                    <Grid.Column width={8}>
+                        <Grid.Row className="widget">
+                            <h3>2019 Riverside County PIT Count</h3>
+                            <h4>{curCity} - District {data[curCity] && data[curCity].District}</h4>
+                            <h4>City Level Information</h4>
+                        </Grid.Row>
+                        <Grid.Row className="widget">
+                            <h4>City Totals</h4>
+                            <Grid>
+                                <Grid.Row columns={3}>
+                                    <Grid.Column>
+                                        <h5>Chronically Homeless</h5>
+                                        <h5>| Some Num |</h5>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                        <h5>Total Unsheleterd</h5>
+                                        <h5>| Some Num |</h5>
+                                    </Grid.Column>
+                                    <Grid.Column>
+                                        <h5>Percent of District</h5>
+                                        <h5>| Some Num |</h5>
+                                    </Grid.Column>
+                                </Grid.Row>
+                            </Grid>
+                        </Grid.Row>
+                        <Grid.Row className="widget">
+                            <h1>Ethnicity</h1>
+                        </Grid.Row>
+                        <Grid.Row className="widget">
+                            <h1>Race</h1>
+                            <h1>Race Table and Chart</h1>
+                        </Grid.Row>   
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <Grid.Row className="widget">
+                            <h3>City Selector</h3>
+                            <Dropdown selection options={this.state.selectOptions} onChange={ (e, { value }) => {if (value.length > 2) { 
+                                this.setState({curCity: value}); console.log(value); } } } />                                
+                        </Grid.Row>
+                        <Grid.Row className="widget">
+                            <h1>Gender</h1>
+                            <h1>Gender Table</h1>
+                            <h1>Gender Chart</h1>
+                        </Grid.Row>
+                    </Grid.Column> 
+                </Grid.Row>
+            </Grid>
             
         );
     }
