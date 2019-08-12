@@ -8,6 +8,7 @@ import SupervisorialDistricts from './SupervisoralDistrictDash/SupervisorialDist
 import CityTables from './CityTables/CityTables';
 import DIYChart from './DIYChart/DIYChart';
 import TabChartDash from './DemoDashboards/TabChartDash';
+import CityDashboard from './CityDashboard_3.5/CityDashboard'
 import LLMap from './map/map';
 
 import APITest from './APITests/ApiTest';
@@ -23,10 +24,11 @@ export default class Content extends Component{
                     <Route exact path='/GeneralDash' component={GeneralDash}/>
                     <Route exact path='/TabChartDash' component={TabChartDash}/> 
                     <Route exact path='/EditableCharts' component={EditableCharts}/>
-                    <Route exact path='/SupervisorialDistricts' component={SupervisorialDistricts}/>
+                    <Route path='/SupervisorialDistricts' component={SupervisorialDistricts}/>
                     <Route exact path='/CityTables' component={CityTables}/>
                     <Route exact path='/DIYChart' component={DIYChart}/>
                     <Route exact path='/APITest' component={APITest}/>
+                    <Route exact path='/CityDashboard' component={CityDashboard}/>
                 </Switch>
             </div>
         );

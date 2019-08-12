@@ -22,12 +22,13 @@ export default class Header extends Component{
                 {window.innerHeight} {window.innerWidth} is just to give me some help with sizing*/}
                 <p id="router-links">
                 <span><Link to='/'>Map</Link> | </span>
-                <span><Link to='/VeteranDash'>VeteranDash</Link> | </span>
+                {/* <span><Link to='/VeteranDash'>VeteranDash</Link> | </span>
                 <span><Link to='/GeneralDash'>GeneralDash</Link> | </span>
-                <span><Link to='/EditableCharts'>EditableCharts</Link> | </span>
+                <span><Link to='/EditableCharts'>EditableCharts</Link> | </span> */}
                 <span><Link to='/SupervisorialDistricts'>Supervisorial Districts</Link> | </span>
-                <span><Link to='/TabChartDash'>Tab Chart Demo</Link> | </span>
+                {/* <span><Link to='/TabChartDash'>Tab Chart Demo</Link> | </span> */}
                 <span><Link to='/CityTables'>City Table</Link> | </span>
+                <span><Link to='/CityDashboard'>City Dashboard</Link> | </span>
                 {/* <span>    {window.innerHeight} {window.innerWidth}</span> */}
                 <span><Link to='/DIYChart'>DIY Chart</Link></span>
                 </p>

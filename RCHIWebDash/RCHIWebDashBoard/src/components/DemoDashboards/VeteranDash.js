@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TabChartChooser from '../charts/TabChartChooser';
 import '../css/GeneralDash.css';
-
 export default class VeteranDash extends Component {
 	constructor(props){
 		super(props);

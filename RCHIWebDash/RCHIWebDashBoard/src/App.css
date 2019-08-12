@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'acherusgrotesque-regular';
-    src: url('./components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff2') format('woff2'),
+    src: url('/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff2') format('woff2'),
          url('/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
