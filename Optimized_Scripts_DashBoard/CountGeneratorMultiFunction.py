@@ -78,6 +78,7 @@ def get_TotalVIHMP(in_df,column):
         return result
 
 ## ? Recheck the function get_Total_Interview_With CHild and get_total_WithChild
+#! I got my result base on creating a household with Adult and Children , While the counts on the dashboard are based on how many child are marked in the csv 
 def get_Total_Interview_withChild(in_df):
     total_adults = in_df.loc[lambda df:\
          ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18))\
@@ -268,7 +269,7 @@ def get_TotalOptimize(in_df,column=None, value=None):
         result = in_df.loc[lambda df: (df[column[0]] == value[0]) | (df[column[1]] == value[1]), :].shape[0] 
         return result
 
-def create_table()->"dataframe":
+def District_table()->"dataframe":
     ## OPTIMIZE:
     new_df = {'District':[1,2,3,4,5],
               'Total Count': table_totalCountDistrict,
@@ -285,10 +286,10 @@ def create_table()->"dataframe":
               'Veterans':table_Veterans,
               'Year':[2019,2019,2019,2019,2019],
               'Household':table_totalHouseHolds,
-              'Adults and Children':table_totalHouseHoldsAdultandChildren,
-              'Only Children':table_totalHouseHoldsOnlyChildren,
-              'Only Adults':table_totalHouseHoldsOnlyAdults,
-              'Households Interviewed':table_totalHouseHoldsInterview,
+              'Adults and Children (Interview)':table_totalHouseHoldsAdultandChildren,
+              'Only Children (Interview)':table_totalHouseHoldsOnlyChildren,
+              'Only Adults (Interview)':table_totalHouseHoldsOnlyAdults,
+              'Households (Interviewed)':table_totalHouseHoldsInterview,
               'Chronic': table_totalChronicHomeless,
               'Not Chronic':table_totalnotChronicHomeless,
               'Asian': table_Asian,
@@ -374,19 +375,6 @@ table_totalnotChronicHomeless = [
     get_Total_NotChronicHomeless(df_d4),
     get_Total_NotChronicHomeless(df_d5)
 ]
-
-#! ENd of Not Sure if this values are correct for totalHouseHolds both interview and observer 
-
-
-print("Testing ----------")
-print("Total Households: ", table_totalHouseHolds)
-print("Total Households Adult and Children: ", table_totalHouseHoldsAdultandChildren)
-print("Total Households Only Children", table_totalHouseHoldsOnlyChildren)
-print("Total Households Only Adults", table_totalHouseHoldsOnlyAdults)
-print("Total Households(Inteview): ", table_totalHouseHoldsInterview)
-print("Total Chronically Homeless (Interview): ", table_totalChronicHomeless)
-print("Total Not Chronically Homeless (Interview): ", table_totalnotChronicHomeless)
-print("Testing Ended -----------\n\n")
 
 table_totalCountDistrict = [
     get_district_count(df_d1,['Interview','Observation']),
@@ -589,7 +577,7 @@ Create District Table
 '''
 print('------District Table--------')
 print('\n')
-District_Table = create_table()
+District_Table = District_table()
 print(District_Table.to_string())
 print('\n')
 
