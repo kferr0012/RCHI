@@ -8,7 +8,7 @@ This file contains a function to calculate for each attribute
 
 import pandas as pd
 
-df = pd.read_csv('../HouseholdQuestions_Cities_Districts_040119_1300.csv')
+df = pd.read_csv('../../../HouseholdQuestions_Cities_Districts_040119_1300.csv')
 
 df_d1 = df.loc[lambda df: df['DISTRICT'] == 1, :]
 df_d2 = df.loc[lambda df: df['DISTRICT'] == 2, :]
@@ -77,12 +77,25 @@ def get_TotalVIHMP(in_df,column):
         result = in_df.loc[lambda df: (df[column] == "Yes"), :].shape[0] 
         return result
 
+## ? Recheck the function get_Total_Interview_With CHild and get_total_WithChild
 def get_Total_Interview_withChild(in_df):
-    result = in_df.loc[lambda df: (df['Household Survey Type'] == "Interview") & (df['Relationship To HoH'] == "Child") & (df['Age As Of Today'] < 18), ['P_GlobalID']]
-    return len(result.drop_duplicates())
+    total_adults = in_df.loc[lambda df:\
+         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18))\
+            ,['ParentGlobalID']]\
+                .drop_duplicates(subset='ParentGlobalID')
+
+
+    total_children = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18))\
+            ,['ParentGlobalID']]\
+                .drop_duplicates(subset='ParentGlobalID')
+    
+    intersected_df = pd.merge(total_adults, total_children, how='inner').drop_duplicates(subset='ParentGlobalID')
+
+    return intersected_df.shape[0]
 
 def get_Total_withChild(in_df):
-    result = in_df.loc[lambda df:((df['Age Observed'] == "Under18") & (df['P_Number of Adults'] == 1)) | ((df['Relationship To HoH'] == "Child") & (df['Age As Of Today'] < 18)) , ['P_GlobalID']]
+    result = in_df.loc[lambda df:((df['Age Observed'] == "Under18") & (df['P_Number of Adults'] == 1)) | ((df['Relationship To HoH'] == "Child") & (df['Age As Of Today'] < 18)) , ['ParentGlobalID']]
     return len(result.drop_duplicates())
 
 def get_Total_DistrictCount(in_df):
@@ -104,6 +117,101 @@ def get_Total_ObserveCount(in_df):
 def get_Total_Veterans(in_df):
     result = in_df.loc[lambda df: df['Veteran'] == 1, :].shape[0]
     return result
+
+
+#! Working on functions
+
+def get_Total_Households(in_df):
+    result = in_df['ParentGlobalID'].drop_duplicates().shape[0]
+    return result
+
+def get_Total_Households_AdultsandChildren(in_df):
+    total_adults = in_df.loc[lambda df:\
+         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18))\
+        #    | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Over25') | (df['Age Observed'] == 'Under24')))\
+                ,['ParentGlobalID']]\
+                    .drop_duplicates(subset='ParentGlobalID')
+
+
+    total_children = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18))\
+        #    | ((df['Household Survey Type'] == 'Observation') & (df['Age Observed'] == 'Under18'))\
+               ,['ParentGlobalID']]\
+                   .drop_duplicates(subset='ParentGlobalID')
+    
+    intersected_df = pd.merge(total_adults, total_children, how='inner').drop_duplicates(subset='ParentGlobalID')
+
+    return intersected_df.shape[0]
+
+def get_Total_Households_OnlyChildren(in_df):
+    total_children = in_df.loc[lambda df:\
+    ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18))\
+        # | ((df['Household Survey Type'] == 'Observation') & (df['Age Observed'] == 'Under18'))\
+            ,['ParentGlobalID']]\
+                .drop_duplicates(subset='ParentGlobalID')
+
+    total_Adults = in_df.loc[lambda df:\
+         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18))\
+        #    | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Over25') | (df['Age Observed'] == 'Under24')))\
+                ,['ParentGlobalID']]\
+                    .drop_duplicates(subset='ParentGlobalID')
+
+
+    #set_diff_df = pd.concat([total_Adults, total_children, total_children]).drop_duplicates(keep=False)
+    set_diff_df = total_children.merge(total_Adults, indicator=True, how="left")[lambda x: x._merge=='left_only'].drop('_merge',1).drop_duplicates()
+
+    return set_diff_df.shape[0]
+
+def get_Total_Households_OnlyAdults(in_df):
+    total_Adults = in_df.loc[lambda df:\
+         ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18))\
+        #    | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Over25') | (df['Age Observed'] == 'Under24')))\
+                ,['ParentGlobalID']]\
+                    .drop_duplicates(subset='ParentGlobalID')
+
+
+    total_children = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] < 18))\
+        #    | ((df['Household Survey Type'] == 'Observation') & ((df['Age Observed'] == 'Under18') | ((df['Age Observed'] == 'NotSure'))))\
+               ,['ParentGlobalID']]\
+                   .drop_duplicates(subset='ParentGlobalID')
+
+
+    #set_diff_df = pd.concat([total_Adults, total_children, total_children]).drop_duplicates(keep=False)
+    set_diff_df = total_Adults.merge(total_children, indicator=True, how="left")[lambda x: x._merge=='left_only'].drop('_merge',1).drop_duplicates()
+
+    return set_diff_df.shape[0]
+
+def get_Total_Households_Interview(in_df):
+    result = in_df.loc[lambda df: df['Household Survey Type'] == 'Interview', ['ParentGlobalID']].drop_duplicates(subset='ParentGlobalID').shape[0]
+    return result
+
+
+## ? Check with kevin the results for this one 
+# ! I believe my number are corrects. The number in the dashboard are just based on the people who are marked as chronically homeless, but it does not consider 
+# ! It does not consider people in the same household who should be marked as chronically homeless. My code counts does who are marked as chronically homeless
+#! and people who should have been marked as chronically homeless based on the household status. This will affect count for chronically homeless individuals
+
+def get_Total_ChronicHomeless(in_df):
+
+    ChronicallyHomelessHouseholds = in_df.loc[lambda df:\
+       ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1))\
+           | ((df['Household Survey Type'] == 'Observation') & (df['Chronically Homeless Status'] == 1))\
+            , ['ParentGlobalID']].drop_duplicates(subset='ParentGlobalID')
+
+    total_persons = in_df.loc[lambda df:\
+        ((df['Household Survey Type'] == 'Interview'))\
+            | ((df['Household Survey Type'] == 'Observation'))
+                , ['ParentGlobalID']]['ParentGlobalID']\
+                    .isin(ChronicallyHomelessHouseholds['ParentGlobalID']).sum()
+    
+    return total_persons
+
+def get_Total_NotChronicHomeless(in_df):
+    return  get_district_count(in_df,['Interview','Observation']) - get_Total_ChronicHomeless(in_df)
+
+#! Working on Function ended 
+
 
 '''
 This Function works for:
@@ -176,13 +284,13 @@ def create_table()->"dataframe":
               'Unknown Gender': table_UnknownGender,
               'Veterans':table_Veterans,
               'Year':[2019,2019,2019,2019,2019],
-              'Household':[-1,-1,-1,-1,-1],
-              'Adults and Children':[-1,-1,-1,-1,-1],
-              'Only Children':[-1,-1,-1,-1,-1],
-              'Only Adults':[-1,-1,-1,-1,-1],
-              'Households Interviewed':[-1,-1,-1,-1,-1],
-              'Chronic': table_chronic,
-              'Not Chronic':[-1,-1,-1,-1,-1],
+              'Household':table_totalHouseHolds,
+              'Adults and Children':table_totalHouseHoldsAdultandChildren,
+              'Only Children':table_totalHouseHoldsOnlyChildren,
+              'Only Adults':table_totalHouseHoldsOnlyAdults,
+              'Households Interviewed':table_totalHouseHoldsInterview,
+              'Chronic': table_totalChronicHomeless,
+              'Not Chronic':table_totalnotChronicHomeless,
               'Asian': table_Asian,
               'American Indian': table_AmericanIndian,
               'Black': table_Black,
@@ -207,7 +315,79 @@ def createTable_YearFinalCount(currentYear):
 START
 Table Inputs for District Table
 
-'''
+# '''
+
+#! Not Sure if this values are correct for totalHouseHolds both interview and observer 
+table_totalHouseHolds = [
+    get_Total_Households(df_d1),
+    get_Total_Households(df_d2),
+    get_Total_Households(df_d3),
+    get_Total_Households(df_d4),
+    get_Total_Households(df_d5)
+]
+
+
+table_totalHouseHoldsAdultandChildren = [
+    get_Total_Households_AdultsandChildren(df_d1),
+    get_Total_Households_AdultsandChildren(df_d2),
+    get_Total_Households_AdultsandChildren(df_d3),
+    get_Total_Households_AdultsandChildren(df_d4),
+    get_Total_Households_AdultsandChildren(df_d5)
+]
+
+table_totalHouseHoldsOnlyChildren = [
+    get_Total_Households_OnlyChildren(df_d1),
+    get_Total_Households_OnlyChildren(df_d2),
+    get_Total_Households_OnlyChildren(df_d3),
+    get_Total_Households_OnlyChildren(df_d4),
+    get_Total_Households_OnlyChildren(df_d5)
+]
+
+table_totalHouseHoldsOnlyAdults = [
+    get_Total_Households_OnlyAdults(df_d1),
+    get_Total_Households_OnlyAdults(df_d2),
+    get_Total_Households_OnlyAdults(df_d3),
+    get_Total_Households_OnlyAdults(df_d4),
+    get_Total_Households_OnlyAdults(df_d5)
+]
+
+table_totalHouseHoldsInterview = [
+    get_Total_Households_Interview(df_d1),
+    get_Total_Households_Interview(df_d2),
+    get_Total_Households_Interview(df_d3),
+    get_Total_Households_Interview(df_d4),
+    get_Total_Households_Interview(df_d5)
+]
+
+table_totalChronicHomeless = [
+    get_Total_ChronicHomeless(df_d1),
+    get_Total_ChronicHomeless(df_d2),
+    get_Total_ChronicHomeless(df_d3),
+    get_Total_ChronicHomeless(df_d4),
+    get_Total_ChronicHomeless(df_d5)
+]
+
+table_totalnotChronicHomeless = [
+    get_Total_NotChronicHomeless(df_d1),
+    get_Total_NotChronicHomeless(df_d2),
+    get_Total_NotChronicHomeless(df_d3),
+    get_Total_NotChronicHomeless(df_d4),
+    get_Total_NotChronicHomeless(df_d5)
+]
+
+#! ENd of Not Sure if this values are correct for totalHouseHolds both interview and observer 
+
+
+print("Testing ----------")
+print("Total Households: ", table_totalHouseHolds)
+print("Total Households Adult and Children: ", table_totalHouseHoldsAdultandChildren)
+print("Total Households Only Children", table_totalHouseHoldsOnlyChildren)
+print("Total Households Only Adults", table_totalHouseHoldsOnlyAdults)
+print("Total Households(Inteview): ", table_totalHouseHoldsInterview)
+print("Total Chronically Homeless (Interview): ", table_totalChronicHomeless)
+print("Total Not Chronically Homeless (Interview): ", table_totalnotChronicHomeless)
+print("Testing Ended -----------\n\n")
+
 table_totalCountDistrict = [
     get_district_count(df_d1,['Interview','Observation']),
     get_district_count(df_d2,['Interview','Observation']),
@@ -304,10 +484,6 @@ table_Veterans = [
     get_Total_Veterans(df_d5),
 ]
 
-table_chronic = [
-    5,2,5,-5,-5
-]
-
 table_Asian = [
     get_race_count(df_d1, ['Asian','Asian']),
     get_race_count(df_d2, ['Asian','Asian']),
@@ -387,7 +563,7 @@ table_YearFinalCount = [
     get_age_count(df, 'youth'),
     get_YouthCount(df, 'Interview'),
     get_YouthCount(df, 'Observation'),
-    'Still Missing',
+    get_Total_ChronicHomeless(df),
     get_Total_Interview_withChild(df),
     get_Total_Elderly(df),
     get_TotalVIHMP(df,'Domestic Violence Victim'),
