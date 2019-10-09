@@ -1,7 +1,7 @@
 from rest_framework import viewsets, permissions, generics
 from rest_framework.filters import SearchFilter
-from backend.models import Trends, SubpopulationsByCity2019, VolunteerDeployment, SubpopulationsByYear, HouseholdsByCityYearInterview
-from .serializers import TrendsSerializer, SubpopulationsByCity2019Serializer, VolunteerDeploymentSerializer, SubpopulationsByYearSerializer ,HouseholdsByCityYearInterviewSerializer
+from backend.models import Trends, SubpopulationsByCity2019, VolunteerDeployment, SubpopulationsByYear, HouseholdsByCityYearInterview, CityTotalsByYear
+from .serializers import TrendsSerializer, SubpopulationsByCity2019Serializer, VolunteerDeploymentSerializer, SubpopulationsByYearSerializer ,HouseholdsByCityYearInterviewSerializer, CityTotalsByYearSerializer
 from django.db.models import Q
 
 class HouseholdsByCityYearInterviewViewSet(viewsets.ModelViewSet):
@@ -13,17 +13,11 @@ class HouseholdsByCityYearInterviewViewSet(viewsets.ModelViewSet):
 
 
 class SubpopulationsByCity2019ViewSet(viewsets.ModelViewSet):
+    queryset = SubpopulationsByCity2019.objects.all()
     serializer_class = SubpopulationsByCity2019Serializer
     filter_backends = [SearchFilter]
     search_fields = ['district','category','subpopulation']
 
-    def get_queryset(self):
-        qs = SubpopulationsByCity2019.objects.all()
-        query = self.request.GET.get('q')
-        if query is not None:
-            print(query)
-            qs = qs.filter(Q(district__icontains=query) | Q(city__icontains=query)).distinct()
-        return qs
 
 class SubpopulationByYearViewSet(viewsets.ModelViewSet):
     queryset = SubpopulationsByYear.objects.all()
@@ -38,6 +32,11 @@ class VolunteerDeploymentViewSet(viewsets.ModelViewSet):
 
     search_fields = ['district']
 
+class CityTotalByYearViewSet(viewsets.ModelViewSet):
+    queryset = CityTotalsByYear.objects.all()
+    serializer_class = CityTotalsByYearSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['district']
 
 #Maybe
 class TrendsViewSet(viewsets.ModelViewSet):
