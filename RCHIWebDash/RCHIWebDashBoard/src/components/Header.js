@@ -30,7 +30,8 @@ export default class Header extends Component{
                 <span><Link to='/CityTables'>City Table</Link> | </span>
                 <span><Link to='/CityDashboard'>City Dashboard</Link> | </span>
                 {/* <span>    {window.innerHeight} {window.innerWidth}</span> */}
-                <span><Link to='/DIYChart'>DIY Chart</Link></span>
+                <span><Link to='/DIYChart'>DIY Chart</Link> |</span>
+                <span><Link to='/UnshelteredTrends'>Unsheltered Trends</Link></span>
                 </p>
             </div>
         );
