@@ -24,3 +24,6 @@ yarn-error.log*
 
 #Backend files
 *.pyc
+package-lock.json
+package.json
+
