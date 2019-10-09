@@ -1,5 +1,8 @@
 from django.db import models
 
+# SubpopulationByCity2019
+# householdsbycity2019
+
 class HouseholdsByCityYearInterview(models.Model):
 	year = models.IntegerField()
 	district = models.IntegerField()
@@ -30,6 +33,14 @@ class VolunteerDeployment(models.Model):
 	district = models.IntegerField()
 	deploymentSite = models.CharField(max_length=50)
 	count = models.IntegerField()
+
+class CityTotalsByYear(models.Model):
+	year = models.IntegerField()
+	district = models.IntegerField()
+	sheltered = models.BooleanField(default=False)
+	city = models.CharField(max_length=100)
+	total = models.IntegerField()
+	volunteers = models.CharField(max_length=50)
 
 #Maybe
 class Trends(models.Model):
