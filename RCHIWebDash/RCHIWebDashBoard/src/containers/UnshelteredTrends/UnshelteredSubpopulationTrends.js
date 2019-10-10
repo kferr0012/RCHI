@@ -6,8 +6,6 @@ import TrendPage1 from '../../components/UnshelteredTrendsPage/Layout/TrendsPage
 import TrendPage2 from '../../components/UnshelteredTrendsPage/Layout/TrendsPages/LayoutPage2'
 import TrendPage3 from '../../components/UnshelteredTrendsPage/Layout/TrendsPages/LayoutPage3'
 
-
-import GeneralTrends from '../../components/UnshelteredTrendsPage/Trends/GeneralTrends'
 import GeneralTrendsNivo from '../../components/UnshelteredTrendsPage/Trends/GeneralTrendsNivo'
 import YouthTrend from '../../components/UnshelteredTrendsPage/Trends/YouthTrend'
 import SubstanceAbuseTrend from '../../components/UnshelteredTrendsPage/Trends/SubstanceAbuseTrend'
@@ -46,9 +44,9 @@ class UnshelteredSubpopulationTrends extends Component{
     TrendSelectedHandler(){
         return this.state.trendsSelected.map((trend, index )=> {
             if(trend === "Jail Release 12 Months") return <GeneralTrendsNivo id={index} key={index} label = 'with in last 12 months' query={trend} title="Incarceration"/>
-            else if(trend === "Youth (18-24)") return <YouthTrend id={index} key={index}/>
-            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend/> 
-            else return <GeneralTrendsNivo subHeader={'Interviewed Only'} id={'Interviewed'} key={index} query={trend} header={trend}/>
+            else if(trend === "Youth (18-24)") return <YouthTrend  header={trend} subHeader={'Interviewed Only'} id={index} key={index} query={trend}/>
+            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend header={trend} subHeader={''} id={index} key={index} query={"Subpopulations"}/> 
+            else return <GeneralTrendsNivo header={trend} subHeader={'Interviewed Only'} id={'Interviewed'} key={index} query={trend}/>
         })
     }
 
