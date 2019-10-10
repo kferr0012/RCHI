@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import LineChart from '../../Utilities/GraphTypes/Line'
+import NivoLineChart from '../../Utilities/GraphTypes/NivoLine'
 
 //! Rewrite this script
 
@@ -49,40 +49,38 @@ class SubstanceAbuseGraph extends Component {
 
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Subpopulations')
+        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search='+ this.props.query)
             .then(response => {
 
-            const labels = Array.from(new Set(response.data.map( input => input.year)))
-                this.setState({
-                    chartData: {
-                        labels: labels.map(label => label),
-                        datasets:[
-                            {
-                                label:'Alcohol Abuse',
-                                data: this.typeSelected(false,"Alcohol Abuse", response.data).map( i => i.count),
-                                backgroundColor:'rgba(75,192,192,0.6)',
-                                borderWidth:5,
-                                fill:false,
-                                borderColor:'rgba(75,192,192,0.6)'
-                            },
-                            {
-                                label:'Drug Abuse',
-                                data: this.typeSelected(false,"Drug Abuse", response.data).map( i => i.count),
-                                backgroundColor:'rgba(153,102,255,0.6)',
-                                borderWidth:5,
-                                fill:false,
-                                borderColor:'rgba(153,102,255,0.6)'
-                            },
-                            {
-                                label:'Either Or',
-                                data: this.typeSelected(false,"Substance Abuse", response.data).map( i => i.count),
-                                backgroundColor:'rgba(255,159,64,0.6)',
-                                borderWidth:5,
-                                fill:false,
-                                borderColor:'rgba(255,159,64,0.6)'
+                var completeData = []
+                const categories = ["Alcohol Abuse", 'Drug Abuse', 'Substance Abuse']
+
+                const filterData = response.data.filter(index => index.sheltered === false 
+                    && (index.subpopulation === categories[0] || index.subpopulation === categories[1] || index.subpopulation === categories[2]))
+                    for(var i = 0; i< categories.length; i++){
+                        const data = filterData.reduce((accumulator, index) => {
+                            if(categories[i] === index.subpopulation){
+                                accumulator.push({
+                                            "x" : index.year,
+                                            "y" : index.observation + index.interview
+                                        })
                             }
-                        ]
+                            return accumulator;
+                        }, [])
+
+                        if(categories[i] === 'Substance Abuse'){
+                        completeData.push({"id": "Either Or","data": [{"x":2019, "y":498}, ]})
+                        }
+                        else{
+                            completeData.push({"id": categories[i],"data": data})
+                        }
+
                     }
+
+                    console.log("Complete Data: ", completeData)
+
+                this.setState({
+                    chartData: completeData
                 })
             }) 
     }
@@ -94,7 +92,7 @@ class SubstanceAbuseGraph extends Component {
         }
         if(this.state.chartData){
             return(
-                <LineChart charData={this.state.chartData} displayLegend={true} title="Substance Abuse" legendPosition="bottom"/>
+                <NivoLineChart  subHeader={this.props.subHeader} header={this.props.header} data={this.state.chartData}/>
             )
         }
     }
