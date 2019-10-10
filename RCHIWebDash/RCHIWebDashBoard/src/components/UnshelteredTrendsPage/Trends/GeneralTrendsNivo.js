@@ -14,6 +14,9 @@ class GeneralTrends extends Component {
         axios.get('http://localhost:8000/api/SubpopulationsByYear/?search='+this.props.query) 
             .then(response => {
                 const filterData = response.data.filter(index => (index.sheltered === false))
+
+
+
                 const data = filterData.map(index => {
                     return {
                         "x" : index.year,
