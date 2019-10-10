@@ -11,7 +11,7 @@ const NivoResponsivePie = ({data,header, subHeader}) => (
             </Header>
             <ResponsivePie 
         data={data}
-        margin={{ top: 40, right: 20, bottom: 80, left: 20 }}
+        margin={{ top: 40, right: 100, bottom: 80, left: 100 }}
         colors={{ scheme: 'category10' }}
         borderColor={{ from: 'color', modifiers: [ [ 'darker', '0.3' ] ] }}
         radialLabel={function(e){return e.id + "\n" +" ("+e.value+")"}}
