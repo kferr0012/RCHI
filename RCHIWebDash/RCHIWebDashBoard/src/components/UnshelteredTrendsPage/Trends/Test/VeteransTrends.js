@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import axios from 'axios'
 // import LineChart from '../../Utilities/GraphTypes/Line'
-import NivoLineChar from '../../Utilities/GraphTypes/NivoLine'
+import NivoLineChar from '../../../Utilities/GraphTypes/NivoLine'
 
 class VeteranGraph extends Component {
     constructor(){

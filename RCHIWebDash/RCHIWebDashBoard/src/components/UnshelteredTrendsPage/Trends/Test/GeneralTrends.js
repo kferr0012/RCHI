@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import LineChart from '../../Utilities/GraphTypes/Line'
+import LineChart from '../../../Utilities/GraphTypes/Line'
 
 class GeneralTrends extends Component {
     constructor(props){

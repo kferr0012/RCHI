@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import axios from 'axios'
-import LineChart from '../../Utilities/GraphTypes/Line'
+import LineChart from '../../../Utilities/GraphTypes/Line'
 
 class BrainInjuryGraph extends Component {
     constructor(){
