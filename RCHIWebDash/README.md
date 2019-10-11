@@ -6,9 +6,9 @@
 Setup a Virtual Enviroment
 pipenv or virtualenv
 Add dependencies
-  -
-  -
-  -
+  - djangorestframework
+  - django-filter
+  - django-cors-headers
 ```
 
 ```bash
@@ -29,10 +29,9 @@ Setup Data in BackEnd
 ```bash
 Setup for FrontEnd
 1)Install React
-2)Add dependencies
-  -
-  -
-  -
+2)Add dependencies (npm / yard)
+  - @nivo/bar, @nivo/pie, @nivo/line
+  - semantic-ui-react
 cd RCHIWebDashBoard
 npm start
 Page should open on localhost:3000
