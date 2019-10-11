@@ -36,3 +36,18 @@ cd RCHIWebDashBoard
 npm start
 Page should open on localhost:3000
 ```
+
+# FrameWork of FrontEnd
+```bash
+Two Main Folders
+1)containers (Contain Page Main Layout)
+  - Unsheltered Supervisory Districts
+  - Unsheltered Trends
+  - etc..
+2)components (Function JS Files)
+  - Utilities
+    * Graphs
+    * Tools
+  - Unsheltered Superviosry Districts
+  - Unsheltered Trend Page
+```
