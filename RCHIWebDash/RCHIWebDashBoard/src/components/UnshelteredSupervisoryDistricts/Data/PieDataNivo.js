@@ -53,7 +53,7 @@ class PieData extends Component{
         }
         if(this.state.chartData){
             return(
-                    <NivoPieChart  subHeader={this.props.subHeader} header={this.props.header} data={this.state.chartData}/>
+                    <NivoPieChart height = {this.props.height}  subHeader={this.props.subHeader} header={this.props.header} data={this.state.chartData}/>
             )
         }
     }

@@ -8,28 +8,21 @@ import PieDataNivo from '../Data/PieDataNivo'
 import PitCountTrend from '../Data/PitCountTrend'
 import PitCountByCity from '../Data/PitCountByCity'
 import NivoBar from '../Data/BarDataNivo'
+import DistrictPopTable from '../../SupervisoralDistrictDash/DistrictPopTable'
 
 const PageLayout = ({currentDistrict}) => {
     return (
-    <Grid  celled>
-        <Grid.Row  columns={3}>
-            <Grid.Column>
-                <PitCountTrend clickedDistrict={currentDistrict} query={currentDistrict} header={"Pit Count Trend"} subHeader={""} />
+        <Grid celled>
+        <Grid.Row >
+            <Grid.Column width={8} >
+                <PitCountTrend height={(window.innerHeight*.50)} clickedDistrict={currentDistrict} query={currentDistrict} header={"Pit Count Trend"} subHeader={""} />
             </Grid.Column>
-            <Grid.Column>
-                <Grid.Row>
-                        <GridColumn>
-                            <PieDataNivo clickedDistrict={currentDistrict} currentDistrict={currentDistrict}  query={currentDistrict + ",Chronically Homeless"} header={"Chronically Homeless"} subHeader={""}/>
-                        </GridColumn>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <GridColumn>
-                        <PieDataNivo clickedDistrict={currentDistrict} query={currentDistrict + ",Ethinicity"} header={"Ethnicity"} subHeader={""}/>
-                        </GridColumn>
-                    </Grid.Row>
+            <Grid.Column width={4}>
+                            <PieDataNivo height={(window.innerHeight*.23)} clickedDistrict={currentDistrict} currentDistrict={currentDistrict}  query={currentDistrict + ",Chronically Homeless"} header={"Chronically Homeless"} subHeader={""}/>
+                            <PieDataNivo  height={(window.innerHeight*.23)} clickedDistrict={currentDistrict} query={currentDistrict + ",Ethinicity"} header={"Ethnicity"} subHeader={""}/>
             </Grid.Column>
-            <Grid.Column>
-                <NivoBar/>
+            <Grid.Column width={4}>
+            <h6>Population Counts</h6> 
             </Grid.Column>
         </Grid.Row>
 

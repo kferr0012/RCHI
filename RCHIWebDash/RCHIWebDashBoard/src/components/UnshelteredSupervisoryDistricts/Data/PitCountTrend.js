@@ -59,7 +59,7 @@ class PitCountTrend extends Component {
         }
         if(this.state.chartData){
             return(
-                    <NivoLineChart  subHeader={''} header={"PitCountTrend"} data={this.state.chartData}/>
+                    <NivoLineChart  height={this.props.height} subHeader={''} header={"PitCountTrend"} data={this.state.chartData}/>
             )
         }
     }

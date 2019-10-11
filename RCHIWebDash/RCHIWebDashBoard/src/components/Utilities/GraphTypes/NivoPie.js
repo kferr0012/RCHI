@@ -3,8 +3,8 @@ import { ResponsivePie } from '@nivo/pie'
 import {Header} from 'semantic-ui-react'
 import { isAbsolute } from 'path'
 
-const NivoResponsivePie = ({data,header, subHeader}) => (
-    <div style={{height: '20em'}}>
+const NivoResponsivePie = ({data,header, subHeader, height}) => (
+    <div style={{height:height ? (height) : "20em"}}>
         <Header size='medium' textAlign='center' style={{marginBottom:0}}>
                 {header}
                 <Header sub>{subHeader}</Header>

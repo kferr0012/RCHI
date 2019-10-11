@@ -2,9 +2,10 @@ import { ResponsiveLine } from '@nivo/line'
 import {Header} from 'semantic-ui-react'
 import React from 'react'
 
-const ResponsiveNivoLine = ({ data,header,subHeader}) => {
+const ResponsiveNivoLine = ({ data,header,subHeader,height}) => {
+    console.log("Height : ", height)
     return(
-        <div style={{height: '20em'}}>
+        <div style={{height:height ? (height) : "20em"}}>
 
             <Header size='medium' textAlign='center' style={{marginBottom:0}}>
                 {header}
