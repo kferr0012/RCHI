@@ -1,18 +1,16 @@
 import React from 'react'
 import {Grid, GridColumn} from 'semantic-ui-react'
 
-import HouseHoldComposition from '../Data/HouseHoldComposition'
-import VolunteersDeployment from '../Data/VolunteerDeploymentSite'
-import DistrictRaceBar from '../Data/dynamic_race_bar_chart'
-import PieDataNivo from '../Data/PieDataNivo'
-import PitCountTrend from '../Data/PitCountTrend'
-import PitCountByCity from '../Data/PitCountByCity'
-import NivoBar from '../Data/BarDataNivo'
-import DistrictPopTable from '../../SupervisoralDistrictDash/DistrictPopTable'
+import HouseHoldComposition from '../../../components/UnshelteredSupervisoryDistricts/Data/HouseHoldComposition'
+import VolunteersDeployment from '../../../components/UnshelteredSupervisoryDistricts/Data/VolunteerDeploymentSite'
+import DistrictRaceBar from '../../../components/UnshelteredSupervisoryDistricts/Data/dynamic_race_bar_chart'
+import PieDataNivo from '../../../components/UnshelteredSupervisoryDistricts/Data/PieDataNivo'
+import PitCountTrend from '../../../components/UnshelteredSupervisoryDistricts/Data/PitCountTrend'
+import PitCountByCity from '../../../components/UnshelteredSupervisoryDistricts/Data/PitCountByCity'
 
 const PageLayout = ({currentDistrict}) => {
     return (
-        <Grid celled>
+        <Grid >
         <Grid.Row >
             <Grid.Column width={8} >
                 <PitCountTrend height={(window.innerHeight*.50)} clickedDistrict={currentDistrict} query={currentDistrict} header={"Pit Count Trend"} subHeader={""} />

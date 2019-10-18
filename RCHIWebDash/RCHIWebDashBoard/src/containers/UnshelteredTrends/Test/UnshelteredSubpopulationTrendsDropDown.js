@@ -4,7 +4,7 @@ import {Container,Grid, Header,Segment} from 'semantic-ui-react'
 import YouthTrend from '../../../components/UnshelteredTrendsPage/Trends/YouthTrend'
 import SubstanceAbuseTrend from '../../../components/UnshelteredTrendsPage/Trends/SubstanceAbuseTrend'
 import DropdownTrends from '../../../components/Utilities/tools/Dropdown'
-import GeneralTrends from '../../../components/UnshelteredTrendsPage/Trends/GeneralTrends'
+import GeneralTrends from '../../components/UnshelteredTrendsPage/Trends/GeneralTrends'
 
 
 class UnshelteredSubpopulationTrendsDropDown extends Component {

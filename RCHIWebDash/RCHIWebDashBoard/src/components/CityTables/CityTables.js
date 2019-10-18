@@ -41,11 +41,24 @@ export default class CityTables extends Component {
     }
 
     async fetchHouseholdData() {
-        const promise = await axios.get("http://localhost:8000/api/HouseholdsByCity2019/");
+        const promise = await axios.get("http://localhost:8000/api/HouseholdsByCityYearInterview/");
         const indata = promise.status===200 ? promise.data: [];
         if (indata.length === 0){
             throw Error;
         }
+
+
+        // const map = indata.reduce((accumulator, currentValue) => {
+        //     if(!accumulator[currentValue.city]){
+        //         var intTotH = parseInt(this.state.households[curCity]['Total Households']);
+        //         accumulator[currentValue.city] = { 'Total Households': currentValue.totalHouseholds, 'Adults Only': currentValue.adultsOnly
+        //                                             , 'Children Only': currentValue.childrenOnly, 'Adults and Children': currentValue.adultsAndChildren }
+        //         return accumulator
+        //     }
+        // }, {})
+
+
+
         let data = {};
         const {citynames} = this.state;
         for (let i = 0; i < citynames.length ; i++)
@@ -57,14 +70,16 @@ export default class CityTables extends Component {
                 'Adults and Children':0
             }
         }
+
         for (let i = 0; i < indata.length ; i++)
         {
-            data[indata[i]['city']]['Total Households'] = indata[i]['totalHouseholds'];
-            data[indata[i]['city']]['Adults Only'] = indata[i]['adultsOnly'];
-            data[indata[i]['city']]['Children Only'] = indata[i]['childrenOnly'];
-            data[indata[i]['city']]['Adults and Children'] = indata[i]['adultsAndChildren'];
-            
+            data[indata[i].city]['Total Households'] = indata[i].totalHouseholds
+            data[indata[i].city]['Adults Only'] = indata[i].adultsOnly
+            data[indata[i].city]['Children Only'] = indata[i].childrenOnly
+            data[indata[i].city]['Adults and Children'] = indata[i].adultsAndChildren            
         }
+
+        // console.log(map)
         this.setState({
             households: data
         })
