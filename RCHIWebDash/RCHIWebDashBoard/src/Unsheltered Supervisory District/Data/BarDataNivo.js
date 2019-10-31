@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import NivoBarChart from '../../Utilities/GraphTypes/NivoBar'
+
+import NivoBarChart from '../../components/Utilities/GraphTypes/NivoBar'
 
 class BarData extends Component{
     constructor(props){

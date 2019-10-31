@@ -9,8 +9,9 @@ import CityTables from './CityTables/CityTables';
 import DIYChart from './DIYChart/DIYChart';
 import TabChartDash from './DemoDashboards/TabChartDash';
 import CityDashboard from './CityDashboard_3.5/CityDashboard'
-import UnshelteredSubpopulationTrends from '../containers/UnshelteredTrends/UnshelteredSubpopulationTrends'
-import UnsheleteredSupervisoryDistricts from '../containers/UnshelteredSupervisoryDistricts.js/UnshelteredSupervisoryDistricts'
+
+import UnshelteredSubpopulationTrends from '../Unsheltered Trends/UnshelteredSubpopulationTrends'
+import UnsheleteredSupervisoryDistricts from '../Unsheltered Supervisory District/UnshelteredSupervisoryDistricts'
 import LLMap from './map/map';
 
 import APITest from './APITests/ApiTest';

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import NivoLineChart from '../../Utilities/GraphTypes/NivoLine'
+
+
+import NivoLineChart from '../../components/Utilities/GraphTypes/NivoLine'
 
 class GeneralTrends extends Component {
     constructor(props){

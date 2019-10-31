@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import NivoLineChart from '../../Utilities/GraphTypes/NivoLine'
+
+import NivoLineChart from '../../components/Utilities/GraphTypes/NivoLine'
 
 //! Rewrite this script
 

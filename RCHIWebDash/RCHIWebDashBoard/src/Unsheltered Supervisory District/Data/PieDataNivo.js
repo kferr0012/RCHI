@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import NivoPieChart from '../../Utilities/GraphTypes/NivoPie'
+
+import NivoPieChart from '../../components/Utilities/GraphTypes/NivoPie'
 
 class PieData extends Component{
     constructor(props){
