@@ -14,7 +14,7 @@ Add dependencies
 ```bash
 Setup Data in BackEnd 
 1)Install Django
-2)cd RCHIWebDash
+2)cd RCHI/RCHIWebDash
 3) Setup Tables in database
   - python3 manage.py makemigrations
   - python3 manage.py migrate
@@ -29,10 +29,9 @@ Setup Data in BackEnd
 ```bash
 Setup for FrontEnd
 1)Install React
-2)Add dependencies (npm / yard)
-  - @nivo/bar, @nivo/pie, @nivo/line
-  - semantic-ui-react
-cd RCHIWebDashBoard
+2)cd RCHI/RCHIWebDash/RCHIWebDashBoard
+3)npm install: 
+  - @nivo/bar, @nivo/pie, @nivo/line, apex-char, react-bootstrap, apex-charts-react, etc, semantic-ui-react
 npm start
 Page should open on localhost:3000
 ```
