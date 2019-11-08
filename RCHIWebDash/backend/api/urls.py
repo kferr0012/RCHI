@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.contrib import admin
-from .views import TrendsViewSet, SubpopulationsByCity2019ViewSet, VolunteerDeploymentViewSet, SubpopulationByYearViewSet, HouseholdsByCityYearInterviewViewSet,CityTotalByYearViewSet
+from .views import TrendsViewSet, SubpopulationsByCity2019ViewSet, VolunteerDeploymentViewSet, SubpopulationByYearViewSet, HouseholdsByCityYearInterviewViewSet,CityTotalByYearViewSet,GeneralTableSubpopulations2019ViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -11,8 +11,7 @@ router.register('SubpopulationsByCity2019',SubpopulationsByCity2019ViewSet, base
 router.register('VolunteerDeployment',VolunteerDeploymentViewSet,basename='VolunteerDeployment')
 router.register('SubpopulationsByYear',SubpopulationByYearViewSet,basename='SubpopulationsByYear')
 router.register('CityTotalByYear',CityTotalByYearViewSet,basename='CityTotalByYear')
-
-
+router.register('GeneralTableSubpopulations2019',GeneralTableSubpopulations2019ViewSet, basename = "GeneralTableSubpopulations2019")
 
 
 urlpatterns = [

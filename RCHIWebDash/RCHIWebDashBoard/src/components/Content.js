@@ -16,6 +16,7 @@ import LLMap from './map/map';
 
 import APITest from './APITests/ApiTest';
 
+import Sandbox from './TestingBranch/Sandbox'
 
 export default class Content extends Component{
     render(){
@@ -33,6 +34,7 @@ export default class Content extends Component{
                     <Route exact path='/APITest' component={APITest}/>
                     <Route exact path='/CityDashboard' component={CityDashboard}/>
                     <Route exact path='/UnshelteredTrends' component={UnshelteredSubpopulationTrends}/>
+                    <Route exact path='/Sandbox' component={Sandbox}/>
                 </Switch>
             </div>
         );

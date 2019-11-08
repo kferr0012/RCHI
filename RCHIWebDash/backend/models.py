@@ -52,6 +52,13 @@ class Trends(models.Model):
 	observation = models.IntegerField()
 	total = models.IntegerField()
 
+class GeneralTableSubpopulations2019(models.Model):
+	id = models.CharField(max_length = 100, primary_key = True)
+	category = models.CharField(max_length=100)
+	subpopulation = models.CharField(max_length=100)
+	interview = models.IntegerField()
+	observation = models.IntegerField()
+	total = models.IntegerField()
 
 
 
