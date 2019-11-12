@@ -13,6 +13,7 @@ import CityDashboard from './CityDashboard_3.5/CityDashboard'
 import UnshelteredSubpopulationTrends from '../Unsheltered Trends/UnshelteredSubpopulationTrends'
 import UnsheleteredSupervisoryDistricts from '../Unsheltered Supervisory District/UnshelteredSupervisoryDistricts'
 import LLMap from './map/map';
+import LineGraph from '../components/charts/LineGraph';
 
 import APITest from './APITests/ApiTest';
 
@@ -33,6 +34,7 @@ export default class Content extends Component{
                     <Route exact path='/APITest' component={APITest}/>
                     <Route exact path='/CityDashboard' component={CityDashboard}/>
                     <Route exact path='/UnshelteredTrends' component={UnshelteredSubpopulationTrends}/>
+                    <Route exact path='/newFeature' component={LineGraph} />
                 </Switch>
             </div>
         );
