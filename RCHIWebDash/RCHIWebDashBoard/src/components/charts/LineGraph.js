@@ -2,12 +2,19 @@ import React from 'react';
 import { ResponsiveLine } from '@nivo/line'
 
 export default class LineGraph extends React.Component {
-  render() {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null
+    }
+  }
+  
+  componentDidMount = async event => {
+    
+    // TODO: replace static data with API call to backend..upload data in a table as an API reference
     var data = [
       {
         'id': "Volunteers",
-        'color' : "hsl(125, 70%, 50%)",
         'data': [
           {
             'x': "2015",
@@ -32,34 +39,7 @@ export default class LineGraph extends React.Component {
         ]
       },
       {
-        'id': "Unsheltered",
-        'color' : "hsl(293, 70%, 50%)",
-        'data': [
-          {
-            'x': "2015",
-            'y': "1587"
-          },
-          {
-            'x': "2016",
-            'y': "1351"
-          },
-          {
-            'x': "2017",
-            'y': "1638"
-          },
-          {
-            'x': "2018",
-            'y': "1685"
-          },
-          {
-            'x': "2019",
-            'y': "2045"
-          }
-        ]
-      },
-      {
         'id': "Sheltered",
-        'color' : "#000000",
         'data': [
           {
             'x': "2015",
@@ -82,16 +62,49 @@ export default class LineGraph extends React.Component {
             'y': "766"
           }
         ]
+      },
+      {
+        'id': "Unsheltered",
+        'data': [
+          {
+            'x': "2015",
+            'y': "1587"
+          },
+          {
+            'x': "2016",
+            'y': "1351"
+          },
+          {
+            'x': "2017",
+            'y': "1638"
+          },
+          {
+            'x': "2018",
+            'y': "1685"
+          },
+          {
+            'x': "2019",
+            'y': "2045"
+          }
+        ]
       }
-    ]
+    ];
+    this.setState({data: data});
+  }
+
+  render() {
+
+    
 
     return (
+      // TODO: make div size responsive to the page dimensions
       <div style={{height: "500px"}}>
+        <h1>Homeless Population Trend</h1>
         <ResponsiveLine
-          data={data}
+          data={this.state.data}
           margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
           xScale={{ type: 'point' }}
-          yScale={{ type: 'linear', stacked: true, min: 'auto', max: 'auto' }}
+          yScale={{ type: 'linear', stacked: false, min: 0, max: 'auto' }}
           axisTop={null}
           axisRight={null}
           axisBottom={{
@@ -99,7 +112,7 @@ export default class LineGraph extends React.Component {
               tickSize: 5,
               tickPadding: 5,
               tickRotation: 0,
-              legend: 'transportation',
+              legend: '',
               legendOffset: 36,
               legendPosition: 'middle'
           }}
@@ -108,20 +121,20 @@ export default class LineGraph extends React.Component {
               tickSize: 5,
               tickPadding: 5,
               tickRotation: 0,
-              legend: 'count',
+              legend: '',
               legendOffset: -40,
               legendPosition: 'middle'
           }}
           colors={{ scheme: "nivo" }}
-          lineWidth={3}
+          lineWidth={2}
           pointSize={10}
-          pointColor={{ theme: 'background' }}
+          pointColor={{ from: 'color', modifiers: [] }}
           pointBorderWidth={2}
           pointBorderColor={{ from: 'serieColor' }}
           pointLabel="y"
           pointLabelYOffset={-12}
           enableArea={true}
-          areaOpacity={0.5}
+          areaOpacity={0.65}
           useMesh={true}
           legends={[
               {
