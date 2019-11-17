@@ -60,7 +60,8 @@ class GeneralTableSubpopulations2019(models.Model):
 	observation = models.IntegerField()
 	total = models.IntegerField()
 
-
-
-
-
+class GeneralTableSubpopulationsSheltered2019(models.Model):
+	id = models.CharField(max_length = 100, primary_key = True)
+	category = models.CharField(max_length=100)
+	subpopulation = models.CharField(max_length=100)
+	total = models.IntegerField()

@@ -17,7 +17,7 @@ export default class Sandbox extends Component {
         this.state = {
             mydata : ""
         }
-
+        
         this.runBar = this.runBar.bind(this)
     }
 
@@ -138,9 +138,10 @@ export default class Sandbox extends Component {
         console.log("rerender")
         console.log(data)
         return(
-        <div style = {{height: 400}}>
+        <div style = {{height: 500 , width: 300}}>
             This is an example text
             {this.state.mydata ? this.runBar(): null}
+
         </div>
     )
     }
