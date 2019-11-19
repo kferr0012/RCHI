@@ -1,27 +1,71 @@
 import React from 'react';
-import { ResponsiveLine } from '@nivo/line'
 import {ResponsivePie} from "@nivo/pie";
+import { ResponsiveBar } from '@nivo/bar';
 
 export default class PieChart extends React.Component {
-    render() {
 
-        var data = [
-            {
-                "id": "male",
-                "value": 583,
-                "color": "hsl(101, 70%, 50%)"
-            },
-            {
-                "id": "female",
-                "value": 514,
-                "color": "hsl(247, 70%, 50%)"
+      constructor(props){
+        console.log("starting")
+        super(props)
+        this.state = {
+            mydata : ""
+        }
+
+        this.runPie = this.runPie.bind(this)
+    }
+
+
+
+       async componentDidMount(){
+
+        var self = this
+        await fetch('http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Gender', {
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
             }
-        ]
+        })
+        .then(response => response.json())
+        .then((data) =>{
+            this.setState({mydata:data})
+        })
+        .catch(err => {
+            console.log("no data found")
+        })
+        
+        console.log("data:")
+        console.log(this.state.mydata)
+        console.log(this.state.mydata.length)
+        console.log(this.state.mydata[0].total)
 
+      
+
+      
+    }
+
+    
+    runPie(){
+
+        let i;
+        for (i = 0; i < this.state.mydata.length - 1; i++) {
+            this.state.mydata[i].value = this.state.mydata[i].total
+            this.state.mydata[i].id = this.state.mydata[i].subpopulation
+            this.state.mydata[i].label = this.state.mydata[i].subpopulation
+            delete this.state.mydata[i].total;
+            delete this.state.mydata[i].subpopulation;
+        } 
+   
+
+
+        console.log(this.state.mydata)
+
+
+       
         return (
-            <div style={{height: "500px"}}>
-                <ResponsivePie
-                    data={data}
+            <ResponsivePie
+                    data={this.state.mydata}
+                    keys={["interview", "observation"]}
+                    indexBy= "subpopulation" 
                     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                     padAngle={0.7}
                     cornerRadius={3}
@@ -132,7 +176,17 @@ export default class PieChart extends React.Component {
                         }
                     ]}
                 />
-            </div>
-        );
+            )
+    }
+    render() {
+        let totalValues = this.state.mydata;
+        console.log(totalValues)
+        return (
+           <div style = {{height: 400}}>
+         Gender
+            {this.state.mydata ? this.runPie(): null}
+        </div>
+        
+        )
     }
 }
