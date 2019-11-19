@@ -17,7 +17,8 @@ import LLMap from './map/map';
 import APITest from './APITests/ApiTest';
 
 import Sandbox from './TestingBranch/Sandbox'
-
+import GeneralTable from '../Unsheltered Sheltered General/GeneralTable'
+import CityTable from '../Unsheltered Cities/CityTable'
 export default class Content extends Component{
     render(){
         return(
@@ -35,6 +36,8 @@ export default class Content extends Component{
                     <Route exact path='/CityDashboard' component={CityDashboard}/>
                     <Route exact path='/UnshelteredTrends' component={UnshelteredSubpopulationTrends}/>
                     <Route exact path='/Sandbox' component={Sandbox}/>
+                    <Route exact path = "/GeneralTable" component = {GeneralTable} />
+                    <Route exact path = "/CityBreakdown" component = {CityTable} />
                 </Switch>
             </div>
         );
