@@ -35,6 +35,7 @@ export default class Header extends Component{
                 <span><Link to='/Sandbox'>Sandbox</Link> | </span>
                 <span><Link to='/GeneralTable'>General Table</Link> | </span>
                 <span><Link to='/CityBreakdown'>City Breakdown Table</Link> | </span>
+                <span><Link to='/UnshelteredvsSheltered'>Unsheltered vs Sheltered</Link> | </span>
                 </p>
             </div>
         );

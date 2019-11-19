@@ -8,7 +8,7 @@ export default class GeneralTable extends Component{
 
 
     }
-    
+
     componentDidMount(){
         
     }
@@ -18,7 +18,7 @@ export default class GeneralTable extends Component{
         <div>
             <BarGraph height = {600} 
             width = {800} 
-            url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race'
+            url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?category=Race'
             indexBy = "subpopulation"
             keys = {["interview", "observation"]}
             
