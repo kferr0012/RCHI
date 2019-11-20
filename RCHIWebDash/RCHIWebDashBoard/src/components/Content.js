@@ -17,7 +17,8 @@ import LLMap from './map/map';
 import APITest from './APITests/ApiTest';
 
 import Sandbox from './TestingBranch/Sandbox'
-import PieChart from "./charts/PieChart";
+import GeneralPieChart from "./charts/PieChart";
+import PieChart2 from "./charts/SubPopulationPieChart";
 
 export default class Content extends Component{
     render(){
@@ -36,7 +37,8 @@ export default class Content extends Component{
                     <Route exact path='/CityDashboard' component={CityDashboard}/>
                     <Route exact path='/UnshelteredTrends' component={UnshelteredSubpopulationTrends}/>
                     <Route exact path='/Sandbox' component={Sandbox}/>
-                    <Route exact path='/Pie' component={PieChart}/>
+                    <Route exact path='/Pie' component={GeneralPieChart}/>
+                    <Route exact path='/PieChart2' component={PieChart2}/>
                 </Switch>
             </div>
         );

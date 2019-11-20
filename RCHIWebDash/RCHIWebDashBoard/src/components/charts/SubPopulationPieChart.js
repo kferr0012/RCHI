@@ -1,16 +1,34 @@
 import React from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
+import { citynames} from '../CityDashboard_3.5/constants';
+import { Grid, Dropdown } from 'semantic-ui-react';
 
-export default class GeneralPieChart extends React.Component {
+export default class PieChart2 extends React.Component {
 
       constructor(props){
+        console.log("starting")
         super(props)
         this.state = {
-            mydata : ""
+            mydata : "", 
+            curCity: 'RIVERSIDE',
+            selectOptions: []
         }
 
         this.runPie = this.runPie.bind(this)
+    }
+      componentWillMount() {
+        var options = [];
+        for (var i = 0; i < citynames.length; i++)
+        {
+            options.push({
+                value: citynames[i],
+                text: citynames[i]
+            });
+        }
+        this.setState({
+            selectOptions: options
+        })
     }
 
 
@@ -18,7 +36,7 @@ export default class GeneralPieChart extends React.Component {
        async componentDidMount(){
 
         var self = this
-        await fetch('http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Gender', {
+        await fetch('http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Gender', {
             headers: {
                 'Accept': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest'
@@ -34,7 +52,8 @@ export default class GeneralPieChart extends React.Component {
         
         console.log("data:")
         console.log(this.state.mydata)
-    
+        console.log(this.state.mydata.length)
+ 
 
       
 
@@ -45,19 +64,13 @@ export default class GeneralPieChart extends React.Component {
     runPie(){
 
         let i;
-        let totalValues = this.state.mydata;
-        for (i = 0; i < this.state.mydata.length - 1; i++) {
-            if(this.state.mydata[i].subpopulation == 'Total'){
-                delete this.state.mydata[i];
-            }
-            this.state.mydata[i].value = this.state.mydata[i].total
+        for (i = 0; i < this.state.mydata.length; i++) {
+            this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation
             this.state.mydata[i].id = this.state.mydata[i].subpopulation
-            this.state.mydata[i].label = this.state.mydata[i].subpopulation
-            delete this.state.mydata[i].total;
-            delete this.state.mydata[i].subpopulation;
+        } 
+   
 
-        }
-        
+
         console.log(this.state.mydata)
 
 
@@ -180,8 +193,13 @@ export default class GeneralPieChart extends React.Component {
             )
     }
     render() {
+        let totalValues = this.state.mydata;
+        console.log(totalValues)
         return (
            <div style = {{height: 400}}>
+          <Dropdown selection options={this.state.selectOptions} onChange={ (e, { value }) => {if (value.length > 2) { 
+                                this.setState({curCity: value}); console.log(value); } } } />     
+
          Gender
             {this.state.mydata ? this.runPie(): null}
         </div>
