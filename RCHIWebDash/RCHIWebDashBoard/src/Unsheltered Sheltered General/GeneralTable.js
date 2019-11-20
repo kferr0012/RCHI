@@ -19,7 +19,7 @@ export default class GeneralTable extends Component{
             <Layout>
             <BarGraph height = {600} 
             width = {800} 
-            url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?category=Race'
+            url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race'
             indexBy = "subpopulation"
             keys = {["interview", "observation"]}
             

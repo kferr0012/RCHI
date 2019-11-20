@@ -1,5 +1,7 @@
 from rest_framework import viewsets, permissions, generics
 from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
+
 from backend.models import *
 from .serializers import *
 from django.db.models import Q
@@ -16,7 +18,7 @@ class SubpopulationsByCity2019ViewSet(viewsets.ModelViewSet):
     queryset = SubpopulationsByCity2019.objects.all()
     serializer_class = SubpopulationsByCity2019Serializer
     filter_backends = [SearchFilter]
-    search_fields = ['district','category','subpopulation']
+    search_fields = ['district','category','city','subpopulation']
 
 
 class SubpopulationByYearViewSet(viewsets.ModelViewSet):
@@ -61,7 +63,11 @@ class TrendsViewSet(viewsets.ModelViewSet):
 class GeneralTableSubpopulations2019ViewSet(viewsets.ModelViewSet):
     queryset = GeneralTableSubpopulations2019.objects.all()
     serializer_class = GeneralTableSubpopulations2019Serializer
+    
+    #filter_backends = [DjangoFilterBackend]
     filter_backends = [SearchFilter]
+    #filterset_fields = ['subpopulation', 'category']
+
     search_fields = ['category','subpopulation']
 
 class GeneralTableSubpopulationsSheltered2019ViewSet(viewsets.ModelViewSet):
