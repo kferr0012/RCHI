@@ -22,7 +22,7 @@ export default class BarGraph extends Component{
     async fetchData(){
         var self = this
         console.log("fetching in " + this.state.url)
-        await fetch('http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/?category=Race/', {
+        await fetch(this.state.url, {
             headers: {
                 'Accept': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest'
