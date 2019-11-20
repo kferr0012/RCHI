@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from backend.models import HouseholdsByCityYearInterview, SubpopulationsByCity2019, VolunteerDeployment,Trends, SubpopulationsByYear, HouseholdsByCityYearInterview, CityTotalsByYear, GeneralTableSubpopulations2019
+from backend.models import *
 
 class HouseholdsByCityYearInterviewSerializer(serializers.ModelSerializer):
     class Meta:
@@ -39,4 +39,9 @@ class CityTotalsByYearSerializer(serializers.ModelSerializer):
 class GeneralTableSubpopulations2019Serializer(serializers.ModelSerializer):
     class Meta:
         model = GeneralTableSubpopulations2019
+        fields = '__all__'
+
+class GeneralTableSubpopulationsSheltered2019Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = GeneralTableSubpopulationsSheltered2019
         fields = '__all__'

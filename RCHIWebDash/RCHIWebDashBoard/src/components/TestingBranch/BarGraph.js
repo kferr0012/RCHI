@@ -1,30 +1,28 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react'
 import {Text} from 'react'
 import { ResponsiveBar } from '@nivo/bar';
-//import bar graph component
-const data = [
-    {"id":1,"district":"5","city":"BANNING","category":"Race","subpopulation":"American Indian","interview":100,"observation":0},
-    {"id":1,"district":"5","city":"BANNING","category":"Race","subpopulation":"Asian","interview":2,"observation":0},
-    {"id":1,"district":"5","city":"BANNING","category":"Race","subpopulation":"White","interview":100, "observation":0},
-    {"id":1,"district":"5","city":"BANNING","category":"Race","subpopulation":"American Indian","interview":2,"observation":0}
-]
 
-export default class Sandbox extends Component {
-
+export default class BarGraph extends Component{
     constructor(props){
-        console.log("starting")
         super(props)
+
         this.state = {
-            mydata : ""
+            url : this.props.url,
+            index : this.props.indexBy,
+            keys : this.props.keys,
+            height : this.props.height,
+            width : this.props.width,
+            mydata : []
+
         }
-        
+
         this.runBar = this.runBar.bind(this)
+
     }
-
-    async componentDidMount(){
-
+    async fetchData(){
         var self = this
-        await fetch('http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race', {
+        console.log("fetching in " + this.state.url)
+        await fetch('http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/?category=Race/', {
             headers: {
                 'Accept': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest'
@@ -32,29 +30,31 @@ export default class Sandbox extends Component {
         })
         .then(response => response.json())
         .then((data) =>{
-            this.setState({mydata:data})
+            console.log("data found")
+            self.setState({mydata:data})
         })
         .catch(err => {
             console.log("no data found")
         })
         
-        console.log("data:")
-        console.log(this.state.mydata)
-
-        //delete this.state.mydate["id"]
-        console.log("now:")
-        console.log(this.state.mydata[263])
         this.setState({dataUpdated : true})
+    }
+
+    async componentWillReceiveProps(){
+        this.setState({url : this.props.url})
+        await this.fetchData()
+    }
+    async componentWillMount(){
+        await this.fetchData()
     }
 
     runBar(){
 
-        console.log(this.state.mydata)
         return(
             <ResponsiveBar
             data={this.state.mydata}
-            keys={["interview", "observation"]}
-            indexBy= "subpopulation" 
+            keys={this.state.keys}
+            indexBy= {this.state.index} 
             margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
             padding={0}
             groupMode="grouped"
@@ -134,15 +134,11 @@ export default class Sandbox extends Component {
     }
 
     render(){
-
-        console.log("rerender")
-        console.log(data)
         return(
-        <div style = {{height: 500 , width: 300}}>
-            This is an example text
+        <div style = {{height: this.state.height , width: this.state.width}}>
             {this.state.mydata ? this.runBar(): null}
 
         </div>
-    )
+        )
     }
 }
