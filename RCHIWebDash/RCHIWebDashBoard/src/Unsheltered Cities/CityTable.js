@@ -10,7 +10,7 @@ export default class CityTable extends Component{
         this.state = {
             cityChoice : "Beaumont",
             value : "",
-            trigger : true  
+            trigger : true
 
         }
 
@@ -34,7 +34,7 @@ export default class CityTable extends Component{
         return(
 
             <div>
-
+            
             <BarGraph height = {400} 
             width = {800} 
             url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search='+ city + '+Race'}
@@ -54,6 +54,7 @@ export default class CityTable extends Component{
         )
     }
     render(){
+    
         return(
             <div>
             <input style = {{width : 300}} type="text" value={this.state.value} onChange={this.handleChange} />

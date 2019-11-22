@@ -1,6 +1,8 @@
 from rest_framework import viewsets, permissions, generics
 from rest_framework.filters import SearchFilter
 
+#from django_filters.rest_framework import DjangoFilterBackend
+
 
 from backend.models import *
 from .serializers import *
