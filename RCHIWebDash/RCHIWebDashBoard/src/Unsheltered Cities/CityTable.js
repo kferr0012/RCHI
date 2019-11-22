@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import BarGraph from '../components/TestingBranch/BarGraph'
 import {CustomToggle, CustomMenu} from './components/CustomToggle'
 import {Dropdown, Button} from 'react-bootstrap'
+import PieChart from "../components/charts/PieChart";
+import PieGraph from "../components/charts/PieGraph";
 
 export default class CityTable extends Component{
     constructor(props){
@@ -47,8 +49,18 @@ export default class CityTable extends Component{
             url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search='+ city + '+Gender'}
             indexBy = "subpopulation"
             keys = {["interview", "observation"]}
+
             
-            /> 
+            />
+
+           <PieGraph height = {400}
+                     url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Ethinicity+' + city}
+           />
+                <PieGraph height = {400}
+                          url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Gender+' + city}
+                />
+
+
 
             </div>    
         )
