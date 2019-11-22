@@ -16,7 +16,7 @@ export default class GeneralTable extends Component{
         console.log("rendering")
         return(
         <div>
-            <Layout>
+
             <BarGraph height = {600} 
             width = {800} 
             url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race'
@@ -25,13 +25,7 @@ export default class GeneralTable extends Component{
             
             /> 
            
-            <LineGraph
-            />
 
-            <Table
-            
-            />
-            </Layout>
         </div>
 
         )

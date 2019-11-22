@@ -27,7 +27,7 @@ export default class CityTable extends Component{
         console.log("before: ")
         console.log(this.state.cityChoice)
 
-        this.setState({cityChoice : this.state.value.trim()})
+        this.setState({cityChoice : this.state.value})
     }
     
     runGraphs(city){
@@ -55,7 +55,7 @@ export default class CityTable extends Component{
     }
     render(){
         return(
-            <div height = {300}>
+            <div>
             <input style = {{width : 300}} type="text" value={this.state.value} onChange={this.handleChange} />
             <Button onClick = {this.handleSubmit}> Submit </Button>           
 
