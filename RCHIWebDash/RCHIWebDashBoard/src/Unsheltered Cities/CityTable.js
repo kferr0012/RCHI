@@ -4,6 +4,7 @@ import {CustomToggle, CustomMenu} from './components/CustomToggle'
 import {Dropdown, Button} from 'react-bootstrap'
 import PieChart from "../components/charts/PieChart";
 import PieGraph from "../components/charts/PieGraph";
+import Number from "../components/Numbers/Number";
 
 export default class CityTable extends Component{
     constructor(props){
@@ -59,6 +60,13 @@ export default class CityTable extends Component{
                 <PieGraph height = {400}
                           url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Gender+' + city}
                 />
+
+
+                <Number height = {400}
+                          url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + city}
+                />
+
+
 
 
 
