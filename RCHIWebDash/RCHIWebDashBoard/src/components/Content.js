@@ -18,6 +18,7 @@ import LineGraph from '../components/charts/LineGraph';
 import APITest from './APITests/ApiTest';
 
 import Sandbox from './TestingBranch/Sandbox'
+import GeneralPieChart from "./charts/PieChart";
 import GeneralTable from '../Unsheltered Sheltered General/GeneralTable'
 import CityTable from '../Unsheltered Cities/CityTable'
 
@@ -40,9 +41,14 @@ export default class Content extends Component{
                     <Route exact path='/UnshelteredTrends' component={UnshelteredSubpopulationTrends}/>
                     <Route exact path='/newFeature' component={LineGraph} />
                     <Route exact path='/Sandbox' component={Sandbox}/>
+
+                    <Route exact path='/Pie' component={GeneralPieChart}/>
+             
+
                     <Route exact path = "/GeneralTable" component = {GeneralTable} />
                     <Route exact path = "/CityBreakdown" component = {CityTable} />
                     <Route exact path = "/UnshelteredVsSheltered" component = {UnsheleteredVsSheltered} />
+
                 </Switch>
             </div>
         );
