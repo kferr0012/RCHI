@@ -2,7 +2,7 @@ import React from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 
-export default class PieGraph extends React.Component {
+export default class PieChart2 extends React.Component {
 
     constructor(props){
         super(props)
@@ -55,12 +55,8 @@ export default class PieGraph extends React.Component {
 
         let i;
         let totalValues = this.state.mydata;
-        for (i = 0; i < this.state.mydata.length - 1; i++) {
-            if(this.state.mydata[i].subpopulation === 'Total'){
-                delete this.state.mydata[i];
-            }
-   
-            this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation
+        for (i = 0; i < this.state.mydata.length; i++) {
+            this.state.mydata[i].value = this.state.mydata[i].total
             this.state.mydata[i].id = this.state.mydata[i].subpopulation
             this.state.mydata[i].label = this.state.mydata[i].subpopulation
             delete this.state.mydata[i].subpopulation;

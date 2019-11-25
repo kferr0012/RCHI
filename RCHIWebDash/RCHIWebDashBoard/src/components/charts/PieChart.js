@@ -6,9 +6,10 @@ export default class GeneralPieChart extends React.Component {
 
       constructor(props){
         super(props)
-        this.state = {
-            mydata : ""
-        }
+        this.state = {  
+            data: [],
+            newData: []
+         };
 
         this.runPie = this.runPie.bind(this)
     }
@@ -34,6 +35,15 @@ export default class GeneralPieChart extends React.Component {
         
         console.log("data:")
         console.log(this.state.mydata)
+        const filterData = this.state.mydata.filter(index => (index.id !== "Total"))
+        this.state.newData = filterData
+        console.log(filterData)
+        
+
+
+
+
+
     
 
       
@@ -45,11 +55,11 @@ export default class GeneralPieChart extends React.Component {
     runPie(){
 
         let i;
-        let totalValues = this.state.mydata;
-        for (i = 0; i < this.state.mydata.length - 1; i++) {
-            if(this.state.mydata[i].subpopulation == 'Total'){
-                delete this.state.mydata[i];
-            }
+        const filterData = this.state.mydata.filter(index => (index.id !== "Total"))
+        console.log(filterData)
+        this.state.mydata = filterData;
+        console.log(this.state.mydata)
+        for (i = 0; i < this.state.mydata.length; i++) {
             this.state.mydata[i].value = this.state.mydata[i].total
             this.state.mydata[i].id = this.state.mydata[i].subpopulation
             this.state.mydata[i].label = this.state.mydata[i].subpopulation
@@ -58,15 +68,13 @@ export default class GeneralPieChart extends React.Component {
 
         }
         
-        console.log(this.state.mydata)
+
 
 
        
         return (
             <ResponsivePie
                     data={this.state.mydata}
-                    keys={["interview", "observation"]}
-                    indexBy= "subpopulation" 
                     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                     padAngle={0.7}
                     cornerRadius={3}

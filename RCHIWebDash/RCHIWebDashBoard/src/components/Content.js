@@ -19,7 +19,6 @@ import APITest from './APITests/ApiTest';
 
 import Sandbox from './TestingBranch/Sandbox'
 import GeneralPieChart from "./charts/PieChart";
-import PieChart2 from "./charts/SubPopulationPieChart";
 import GeneralTable from '../Unsheltered Sheltered General/GeneralTable'
 import CityTable from '../Unsheltered Cities/CityTable'
 
@@ -44,7 +43,7 @@ export default class Content extends Component{
                     <Route exact path='/Sandbox' component={Sandbox}/>
 
                     <Route exact path='/Pie' component={GeneralPieChart}/>
-                    <Route exact path='/PieChart2' component={PieChart2}/>
+             
 
                     <Route exact path = "/GeneralTable" component = {GeneralTable} />
                     <Route exact path = "/CityBreakdown" component = {CityTable} />
