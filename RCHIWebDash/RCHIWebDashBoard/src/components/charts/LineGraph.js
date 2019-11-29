@@ -10,7 +10,6 @@ export default class LineGraph extends React.Component {
   }
   
   componentDidMount = async event => {
-    
     // TODO: replace static data with API call to backend..upload data in a table as an API reference
     var data = [
       {
@@ -93,13 +92,10 @@ export default class LineGraph extends React.Component {
   }
 
   render() {
-
-    
-
     return (
       // TODO: make div size responsive to the page dimensions
-      <div style={{height: "500px"}}>
-        <h1>Homeless Population Trend</h1>
+      // <div style={{maxHeight: "100%", minHeight: "100%"}}>
+      <>
         <ResponsiveLine
           data={this.state.data}
           margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -163,7 +159,8 @@ export default class LineGraph extends React.Component {
               }
           ]}
         />
-      </div>
+      </>
+      // </div>
     );
   }
 }

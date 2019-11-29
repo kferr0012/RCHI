@@ -1,0 +1,41 @@
+/* .dash-row {
+  min-height: 250px;
+} */
+
+.dash-col-reg {
+  padding: 10px;
+  height: 250px;
+}
+
+.dash-col-big {
+  padding: 10px;
+  height: 500px;
+}
+
+.component-header {
+  font-size: 1.3em;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  height: 100%;
+}
+
+.custom-r1 {
+  grid-row: 1 span 1;
+}
+
+.custom-r2 {
+  display: grid;
+  grid-row: 2 span 1;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+.custom-r2c1 {
+  grid-column-end: 1 span 1;
+}
+
+.custom-r2c2 {
+  grid-column-end: 2 span 1;
+}
