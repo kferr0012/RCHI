@@ -4,6 +4,7 @@ import DistrictPopTable from './DistrictPopTable'
 import DoughnutChart from '../charts/DoughnutChart'
 import LineChart from '../charts/LineChart';
 import BarChart from '../charts/BarChart';
+import { Row, Col } from 'antd';
 
 import '../css/GeneralDash.css'
 
@@ -164,15 +165,11 @@ export default class SupervisorialDistrictDash extends Component {
             <Grid container>
                 <Grid.Row>
                     <Grid.Column width={12}>
-                        <Grid.Row>
-                            <Grid.Column>
-                                <h4>2019 Riverside County PIT Unsheltered Count - Supervisory District {this.props.District_Num}</h4>
+                        <Row type="flex" justify="center" align="top">
+                            <Col>
                                 <p><SupervisorialDistrictsHeader/> </p>
-                            </Grid.Column>
-                            {/* <div className="col-sm-1">
-                                <h2><Link to='/SupervisorialDistricts/2'>&gt;</Link></h2>
-                            </div> */}
-                        </Grid.Row>
+                            </Col>
+                        </Row>
                         <br />
                         <Grid.Row>
                             <Grid>
