@@ -507,6 +507,13 @@ export default class GeneralTable extends Component{
               tableName = "Unsheltered Statistics"
             />
 
+            <TableComponent
+              data = {this.const_data_for_sheltered_table}
+              year1 = {2018}
+              year2 = {2019}
+              tableName = "Sheltered Statistics"
+            />
+
 
         </div>
 
