@@ -79,9 +79,9 @@ class TableComponent extends Component{
     }
 
 
-    for(let i = 0; i < unpopulated_array.length; ++i){
-      console.log(unpopulated_array[i]);
-    }
+    // for(let i = 0; i < unpopulated_array.length; ++i){
+    //   console.log(unpopulated_array[i]);
+    // }
 
     this.state.filteredData = unpopulated_array;
 
@@ -94,7 +94,7 @@ class TableComponent extends Component{
         flag : true
       }
     );
-    console.log(this.state.filteredData);
+    // console.log(this.state.filteredData);
   }
 
   render(){
@@ -136,8 +136,6 @@ class TableComponent extends Component{
           </Table.Body>
 
         </Table>
-        {console.log(this.state.filteredData)}
-        {console.log(this.state.filteredData[0].rowName)}
       </div>
     )
   }
