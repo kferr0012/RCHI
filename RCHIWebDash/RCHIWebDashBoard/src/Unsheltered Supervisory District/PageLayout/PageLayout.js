@@ -1,7 +1,6 @@
 import React from 'react'
 import {Grid, GridColumn, MountNode} from 'semantic-ui-react'
 import { Row, Col } from 'antd';
-
 import HouseHoldComposition from '../Data/HouseHoldComposition'
 
 import VolunteersDeployment from '../Data/VolunteerDeploymentSite'
@@ -10,10 +9,15 @@ import PieDataNivo from '../Data/PieDataNivo'
 import PitCountTrend from '../Data/PitCountTrend'
 import PitCountByCity from '../Data/PitCountByCity'
 
+
+
+//const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
+
+
 const PageLayout = ({currentDistrict}) => {
-    return (
-        <div>
-            <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} className="my-row-1" type="flex" justify="space-around" align="middle">
+    return(
+    <div>
+        <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} className="my-row-1" type="flex" justify="space-around" align="middle">
                 
                 <Col className="gutter-row" span={10}>
                     <div className="gutter-box"> 
@@ -35,8 +39,8 @@ const PageLayout = ({currentDistrict}) => {
                         <h4>Population Counts</h4> 
                     </div>
                 </Col>
-            </Row>
-            <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="space-between" align="bottom">
+        </Row>
+        <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="space-between" align="bottom">
                 <Col className="gutter-row" span={4}>
                     <PitCountByCity currentDistrict={currentDistrict} query={currentDistrict} header={"PIT Count By City"} subHeader={""}/>
                 </Col>
@@ -49,7 +53,7 @@ const PageLayout = ({currentDistrict}) => {
                 <Col className="gutter-row" span={6}>
                     <HouseHoldComposition clickedDistrict={currentDistrict} currentDistrict={currentDistrict}  query={currentDistrict} header={"Household Composition"} subHeader={"Interview Only"}/>
                 </Col>
-            </Row>
+        </Row> 
                 {/* <Row >
                     <Col span={8} >
                         <PitCountTrend height={(window.innerHeight*.50)} clickedDistrict={currentDistrict} query={currentDistrict} header={"Pit Count Trend"} subHeader={""} />
