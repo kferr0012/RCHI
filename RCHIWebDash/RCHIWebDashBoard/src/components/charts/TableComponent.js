@@ -11,7 +11,8 @@ class TableComponent extends Component{
       year2 : null,
       filteredData: [],
       body: null,
-      flag: false
+      flag: false,
+      width : null
     }
   }
 
@@ -91,7 +92,8 @@ class TableComponent extends Component{
         year1 : this.props.year1,
         year2 : this.props.year2,
         filteredData: unpopulated_array,
-        flag : true
+        flag : true,
+        width : this.props.width
       }
     );
     // console.log(this.state.filteredData);
@@ -103,7 +105,7 @@ class TableComponent extends Component{
     }
     else{
     return(
-      <div>
+      <div style = {{width: this.state.width}}>
         <Table Cell Structured>
           <Table.Header>
             <Table.Row>

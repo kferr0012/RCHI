@@ -4,6 +4,7 @@ import BarGraph from '../components/TestingBranch/BarGraph'
 import PieGraph from "../components/charts/PieGraph";
 import PieChart2 from "../components/charts/PieChart2"
 import TableComponent from "../components/charts/TableComponent"
+import TableComponent2 from "../components/charts/TableComponent2"
 
 export default class GeneralTable extends Component{
     constructor(props){
@@ -470,6 +471,45 @@ export default class GeneralTable extends Component{
             "total":77
           }
         ];
+
+      this.table2data = [
+        {
+          "id":1,
+          "subpopulation":"Individuals",
+          "type":"Sheltered",
+          "total":10
+        },
+        {
+          "id":2,
+          "subpopulation":"Individuals",
+          "type":"Unsheltered",
+          "total":20
+        },
+        {
+          "id":3,
+          "subpopulation":"Individuals",
+          "type":"ZZZ",
+          "total":30
+        },
+        {
+          "id":4,
+          "subpopulation":"Adults",
+          "type":"Sheltered",
+          "total":10
+        },
+        {
+          "id":5,
+          "subpopulation":"Adults",
+          "type":"Unsheltered",
+          "total":20
+        },
+        {
+          "id":6,
+          "subpopulation":"Adults",
+          "type":"ZZZ",
+          "total":30
+        }
+      ]
     }
 
     componentDidMount(){
@@ -504,6 +544,7 @@ export default class GeneralTable extends Component{
               data = {this.const_data_for_unsheltered_table}
               year1 = {2018}
               year2 = {2019}
+              width = {500}
               tableName = "Unsheltered Statistics"
             />
 
@@ -511,7 +552,14 @@ export default class GeneralTable extends Component{
               data = {this.const_data_for_sheltered_table}
               year1 = {2018}
               year2 = {2019}
+              width = {500}
               tableName = "Sheltered Statistics"
+            />
+
+            <TableComponent2
+              data = {this.table2data}
+              tableName = "Insert Table 2 Name here"
+              width = {700}
             />
 
 
