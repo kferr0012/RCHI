@@ -47,18 +47,6 @@ export default class CityTables extends Component {
             throw Error;
         }
 
-
-        // const map = indata.reduce((accumulator, currentValue) => {
-        //     if(!accumulator[currentValue.city]){
-        //         var intTotH = parseInt(this.state.households[curCity]['Total Households']);
-        //         accumulator[currentValue.city] = { 'Total Households': currentValue.totalHouseholds, 'Adults Only': currentValue.adultsOnly
-        //                                             , 'Children Only': currentValue.childrenOnly, 'Adults and Children': currentValue.adultsAndChildren }
-        //         return accumulator
-        //     }
-        // }, {})
-
-
-
         let data = {};
         const {citynames} = this.state;
         for (let i = 0; i < citynames.length ; i++)
@@ -71,15 +59,15 @@ export default class CityTables extends Component {
             }
         }
 
-        for (let i = 0; i < indata.length ; i++)
-        {
-            data[indata[i].city]['Total Households'] = indata[i].totalHouseholds
-            data[indata[i].city]['Adults Only'] = indata[i].adultsOnly
-            data[indata[i].city]['Children Only'] = indata[i].childrenOnly
-            data[indata[i].city]['Adults and Children'] = indata[i].adultsAndChildren            
-        }
+            indata.map(city => {
+            data[city.city]= {
+                'Total Households' : city.totalHouseholds,
+                'Adults Only':city.adultsOnly,
+                'Children Only':city.childrenOnly,	
+                'Adults and Children':city.adultsAndChildren
+            }
+        })
 
-        // console.log(map)
         this.setState({
             households: data
         })
