@@ -51,24 +51,24 @@ export default class CityTable extends Component{
             url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search='+ city + '+Gender'}
             indexBy = "subpopulation"
             keys = {["interview", "observation"]}
-
-            
+ 
             />
 
            <PieGraph height = {400}
                      url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Ethinicity+' + city}
            />
-                <PieGraph height = {400}
-                          url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Gender+' + city}
-                />
+
+            <PieGraph height = {400}
+                        url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Gender+' + city}
+            />
 
 
-                <Number height = {400}
-                          url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + city}
-                />
-                <Total height = {400}
-                        url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Age+' + city}
-                />
+            <Number height = {400}
+                        url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + city}
+            />
+            <Total height = {400}
+                    url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Age+' + city}
+            />
 
 
 

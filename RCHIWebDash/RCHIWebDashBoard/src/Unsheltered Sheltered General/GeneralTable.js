@@ -527,16 +527,16 @@ export default class GeneralTable extends Component{
 
             />
 
-            <PieGraph height = {500}
+            <PieGraph height = {1000}
             url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Gender'
             />
 
-            <PieGraph height = {500}
+            <PieGraph height = {200}
             url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=households'
             />
 
 
-            <PieChart2 height = {500}
+            <PieChart2 height = {1000}
             url = "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/?search=Ethnicity"
             />
 

@@ -9,6 +9,7 @@ export default class PieGraph extends React.Component {
         this.state = {
             url : this.props.url,
             height : this.props.height,
+            width : this.props.width,
             mydata : []
         }
 
@@ -188,7 +189,7 @@ export default class PieGraph extends React.Component {
     }
     render() {
         return (
-            <div style = {{height: this.state.height}}>
+            <div style = {{height: this.state.height, width: this.state.width}}>
                 {this.state.mydata ? this.runPie(): null}
             </div>
 

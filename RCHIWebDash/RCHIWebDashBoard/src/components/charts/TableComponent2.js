@@ -143,7 +143,7 @@ class TableComponent2 extends Component{
     }
     else{
     return(
-      <div style = {{width: this.props.width}}>
+      <div style = {{height : this.props.height , width: this.props.width}}>
         <Table Cell Structured>
           <Table.Header>
             <Table.Row>
