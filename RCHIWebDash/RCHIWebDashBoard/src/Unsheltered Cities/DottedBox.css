@@ -1,0 +1,12 @@
+.DottedBox {
+    margin: 40px;
+    border: 3px dotted rgb(134, 101, 107);
+  }
+  
+  .DottedBox_content {
+    font-size: 15px;
+    text-align: center;
+    border-collapse: collapse;
+    height: 200px;
+    width: 250px
+  }

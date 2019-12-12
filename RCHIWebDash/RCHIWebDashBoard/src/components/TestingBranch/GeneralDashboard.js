@@ -257,6 +257,7 @@ export default class Dashboard extends React.Component {
       <div className="container my-2">
         <h2>General Sheltered and Unsheltered Information</h2>
         <div className="row dash-row">
+
           <div className="col-md dash-col-reg">
             <p className="component-header">Overall 21% increase in homeless count from 2018.</p>
             <TableComponent2
@@ -270,8 +271,11 @@ export default class Dashboard extends React.Component {
             <span className="component-header">Homeless Population Trend</span>
             <LineGraph />
           </div>
+
         </div>
+
         <div className="row dash-row" style={{height: '500px'}}>
+
           <div className="col-md dash-col-big">
             <div className="custom-grid">
               <div className="custom-r1">

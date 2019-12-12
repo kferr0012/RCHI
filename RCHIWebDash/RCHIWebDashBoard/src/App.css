@@ -21,6 +21,7 @@
  *
  *
  */
+ @import '~antd/dist/antd.css';
 
 @font-face {
     font-family: 'acherusgrotesque-regular';
@@ -30,6 +31,10 @@
     font-style: normal;
 
 }
+.my-row-1{
+  height:450px;
+}
+
 .App{
   font: 'acherusgrotesque-regular';
   text-align: center;

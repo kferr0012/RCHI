@@ -8,7 +8,17 @@ const data = [
     {"id":1,"district":"5","city":"BANNING","category":"Race","subpopulation":"White","interview":100, "observation":0},
     {"id":1,"district":"5","city":"BANNING","category":"Race","subpopulation":"American Indian","interview":2,"observation":0}
 ]
-
+const theme = {
+    axis: {
+      textColor: '#eee',
+      fontSize: '34px',
+      tickColor: '#eee',
+    },
+    grid: {
+      stroke: '#888',
+      strokeWidth: 1
+    },
+  };
 export default class Sandbox extends Component {
 
     constructor(props){
@@ -47,6 +57,22 @@ export default class Sandbox extends Component {
         this.setState({dataUpdated : true})
     }
 
+    async refresh(){
+        var self = this
+        await fetch('http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race', {
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then((data) =>{
+            this.setState({mydata:data})
+        })
+        .catch(err => {
+            console.log("no data found")
+        })
+    }
     runBar(){
 
         console.log(this.state.mydata)
@@ -58,7 +84,9 @@ export default class Sandbox extends Component {
             margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
             padding={0}
             groupMode="grouped"
-            colors={{ scheme: 'nivo' }}
+            theme={theme}
+            // colors={{ scheme: 'nivo' }}
+            colors={['rgba(125, 114, 140, 0.53)','rgba(119, 63, 191, 0.38)']}
             defs={[
                 {
                     id: 'dots',
@@ -84,7 +112,7 @@ export default class Sandbox extends Component {
             axisTop={null}
             axisRight={null}
             axisBottom={{
-                tickSize: 5,
+                tickSize: 2,
                 tickPadding: 5,
                 tickRotation: 0,
                 legend: 'Race',
@@ -97,11 +125,16 @@ export default class Sandbox extends Component {
                 tickRotation: 0,
                 legend: 'Count',
                 legendPosition: 'middle',
-                legendOffset: -40
+                legendOffset: -40,
+                legends: {
+                    text: {
+                        fontSize: 100,
+                    }
+                }
             }}
             labelSkipWidth={12}
             labelSkipHeight={12}
-            labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+            labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 7] ] }}
             legends={[
                 {
                     dataFrom: 'keys',
@@ -141,7 +174,7 @@ export default class Sandbox extends Component {
         <div style = {{height: 500 , width: 300}}>
             This is an example text
             {this.state.mydata ? this.runBar(): null}
-
+            <button onClick={this.refresh}>click me </button>
         </div>
     )
     }
