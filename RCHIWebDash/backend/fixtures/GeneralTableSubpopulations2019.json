@@ -62,4 +62,12 @@
     {"pk": 63, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Households", "subpopulation": "Adults Only", "interview": 1263, "observation": 0, "total": 1263}},
     {"pk": 64, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Households", "subpopulation": "Children Only", "interview": 2, "observation": 0, "total": 2}},
     {"pk": 65, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Households", "subpopulation": "Adults and Children", "interview": 0, "observation": 0, "total": 2}},
-    {"pk": 66, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Households", "subpopulation": "Total", "interview": 1267, "observation": 0, "total": 1267}}]
+    {"pk": 66, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Households", "subpopulation": "Total", "interview": 1267, "observation": 0, "total": 1267}},
+    {"pk": 67, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "AbandonedBuilding", "interview": 52, "observation": 0, "total": 52}},
+    {"pk": 68, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Bus", "interview": 5, "observation": 0, "total": 5}},
+    {"pk": 69, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Other", "interview": 80, "observation": 0, "total": 80}},
+    {"pk": 70, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Park", "interview": 54, "observation": 0, "total": 54}},
+    {"pk": 71, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Street", "interview": 583, "observation": 0, "total": 583}},
+    {"pk": 72, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "UnderBridge", "interview": 42, "observation": 0, "total": 42}},
+    {"pk": 73, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Vehicle", "interview": 225, "observation": 0, "total": 225}},
+    {"pk": 74, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "UnderBridge", "interview": 309, "observation": 0, "total": 309}}]
