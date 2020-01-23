@@ -156,22 +156,18 @@ class TableComponent2 extends Component{
             </Table.Row>
             {console.log(this.state)}
             <Table.Row>
-            <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
-            {
-              this.state.type_array.map( (iterator, idx)=>{
-                  return(
-                      <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
-                  );
-              })
-            }
-
+              <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
+              {
+                this.state.type_array.map( (iterator, idx)=>{
+                    return(
+                        <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
+                    );
+                })
+              }
             </Table.Row>
           </Table.Header>
-
           <Table.Body>
-
           </Table.Body>
-
         </Table>
       </>
     )

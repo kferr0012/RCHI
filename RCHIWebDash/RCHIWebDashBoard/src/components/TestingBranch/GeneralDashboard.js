@@ -262,8 +262,6 @@ export default class Dashboard extends React.Component {
             <p className="component-header">Overall 21% increase in homeless count from 2018.</p>
             <TableComponent2
               data = {this.GeneralData}
-              height = {300}
-              width = {500}
               tableName = "Sheltered Statistics"
             />
           </div>
@@ -274,47 +272,38 @@ export default class Dashboard extends React.Component {
 
         </div>
 
-        <div className="row dash-row" style={{height: '500px'}}>
+        <div className="row dash-row">
 
           <div className="col-md dash-col-big">
-            <div className="custom-grid">
-              <div className="custom-r1">
+            <div className="gen-grid">
+              <div className="gen-r1">
                 <p className="component-header">Race and Ethnicity</p>
-                <h6>
-                <BarGraph height = {200}
-                  width = {600}
+                <BarGraph
                   url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race'
                   indexBy = "subpopulation"
                   keys = {["interview", "observation"]}
-
-                  />
-
-                </h6>
+                />
               </div>
-              <div className="custom-r2">
-                <div className="custom-r2c1">
+              <div className="gen-r2">
+                <div className="gen-r2c1">
                   <p className="component-header">Gender</p>
-                    <PieChart2 height = {200}
+                  <PieChart2
                     url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Gender'
-                    />
-                  
-
+                  />
                 </div>
-                <div className="custom-r2c2">
+                <div className="gen-r2c2">
                   <p className="component-header">Ethnicity</p>
-                  <PieChart2 height = {200}
+                  <PieChart2
                       url = "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/?search=Ethnicity"
-                      />
+                  />
                 </div>
               </div>
             </div>
           </div>
           <div className="col-md dash-col-big">
-
             <p className="component-header">Unsheltered Only Demographic</p>
             <div className="row dash-row">
-
-            <div className="col-md dash-col-reg">
+              <div className="col-md dash-col-reg">
                 <p className="component-header">18%</p>
                 <p>have mental health issues</p>    
                 <br/>
@@ -325,33 +314,29 @@ export default class Dashboard extends React.Component {
                 <p>have physical disability</p>
                 <br/>
                 <p className="component-header">18%</p>
-                <p>experience PTSD</p>    
-            
+                <p>experience PTSD</p>
+              </div>
+              <div className="col-md dash-col-reg">
+                <p className="component-header">2045</p>
+                <p>Total Unsheltered Count</p>
+                <Table Cell Structured>
+                  <Table.Row>
+                    <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
+                    <Table.HeaderCell textAlign='center'>{1347}</Table.HeaderCell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
+                    <Table.HeaderCell textAlign='center'>{698}</Table.HeaderCell>
+                  </Table.Row>
+                </Table>
+                <PieChart2
+                  url='http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Households'
+                />
+              </div>
+              <div className="col-md dash-col-reg">
+                <span className="component-header">Living Situations</span>
+              </div>
             </div>
-            
-            <div className="col-md dash-col-reg">
-              <p className="component-header">2045</p>
-              <p>Total Unsheltered Count</p>
-            <Table.Row>
-            <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
-            <Table.HeaderCell textAlign='center'>{1347}</Table.HeaderCell>
-            </Table.Row>
-            <Table.Row>
-            <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
-            <Table.HeaderCell textAlign='center'>{698}</Table.HeaderCell>
-            </Table.Row>
-            <PieChart2 height = {50}
-            url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Households' />
-            </div>
-
-            <div className="col-md dash-col-reg">
-            <span className="component-header">Living Situations</span>
-            
-            </div>
-
-
-            </div>
-            
           </div>
         </div>
       </div>

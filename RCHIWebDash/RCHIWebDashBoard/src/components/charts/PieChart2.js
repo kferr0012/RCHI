@@ -184,9 +184,9 @@ export default class PieChart2 extends React.Component {
     }
     render() {
         return (
-            <div style = {{height: this.state.height}}>
-                {this.state.mydata ? this.runPie(): null}
-            </div>
+            <>
+                {this.state.mydata.size > 0 ? this.runPie(): null}
+            </>
 
         )
     }

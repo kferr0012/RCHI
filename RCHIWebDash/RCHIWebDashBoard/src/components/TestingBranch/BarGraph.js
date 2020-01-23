@@ -136,7 +136,7 @@ export default class BarGraph extends Component{
     render(){
         return(
         <>
-            {this.state.mydata ? this.runBar(): null}
+            {this.state.mydata.size > 0 ? this.runBar(): null}
         </>
         )
     }
