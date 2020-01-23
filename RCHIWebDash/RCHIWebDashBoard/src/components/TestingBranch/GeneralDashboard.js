@@ -32,7 +32,7 @@ export default class Dashboard extends React.Component {
       {
         "id":3,
         "subpopulation":"Individuals",
-        "year":"209",
+        "year":"2019",
         "type":"Total Count",
         "total":2811
       },
@@ -252,6 +252,37 @@ export default class Dashboard extends React.Component {
   ]
 
   }
+
+  componentDidMount(){
+
+    //fetch data
+    /*
+    this.state.url = ["http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/", 
+                      "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/"]
+
+    var self = this;
+    var myData = []
+    for(var i = 0; i< this.state.url.length; i++){
+      await fetch(this.state.url[i], {
+        headers: {
+            'Accept': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+      .then(response => response.json())
+      .then((data) =>{
+          console.log("data found")
+          
+      })
+      .catch(err => {
+          console.log("no data found")
+      })
+    
+    }
+    
+    */
+    
+  }
   render() {
     return(
       <div className="container my-2">
@@ -260,12 +291,7 @@ export default class Dashboard extends React.Component {
 
           <div className="col-md dash-col-reg">
             <p className="component-header">Overall 21% increase in homeless count from 2018.</p>
-            <TableComponent2
-              data = {this.GeneralData}
-              height = {300}
-              width = {500}
-              tableName = "Sheltered Statistics"
-            />
+            <LineGraph/>
           </div>
           <div className="col-md dash-col-reg">
             <span className="component-header">Homeless Population Trend</span>
@@ -280,7 +306,7 @@ export default class Dashboard extends React.Component {
             <div className="custom-grid">
               <div className="custom-r1">
                 <p className="component-header">Race and Ethnicity</p>
-                <h6>
+                <div>
                 <BarGraph height = {200}
                   width = {600}
                   url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race'
@@ -289,7 +315,7 @@ export default class Dashboard extends React.Component {
 
                   />
 
-                </h6>
+                </div>
               </div>
               <div className="custom-r2">
                 <div className="custom-r2c1">
@@ -301,7 +327,7 @@ export default class Dashboard extends React.Component {
 
                 </div>
                 <div className="custom-r2c2">
-                  <p className="component-header">Ethnicity</p>
+                  <span className="component-header">Ethnicity</span>
                   <PieChart2 height = {200}
                       url = "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/?search=Ethnicity"
                       />

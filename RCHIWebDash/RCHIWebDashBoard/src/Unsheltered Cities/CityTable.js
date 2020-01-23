@@ -26,13 +26,54 @@ export default class CityTable extends Component{
         this.state = {
             cityChoice : "Beaumont",
             value : "",
-            trigger : true
+            trigger : true,
+            fetched: false
 
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.myData = []
+        
+    }
+    async getData(){
 
+        if(!this.state.fetched){
+        this.state.url = ["http://127.0.0.1:8000/api/CityTotalByYear/?",
+                          "http://127.0.0.1:8000/api/SubpopulationsByCity2019/?",
+                         ]
+        
+          
+        for(var i = 0 ; i < this.state.url.length ; i++){
+           
+            await fetch(this.state.url, {
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then((data) =>{
+                console.log("data found")
+                this.myData[i] = data
+            })
+            .catch(err => {
+                console.log("no data found")
+            })
+        
+        }
+
+        }
+        console.log("finally fetched")
+        console.log(this.myData)
+
+        this.setState({
+            fetched : true
+        })
+
+    }
+    componentDidMount(){
+        this.getData()
     }
 
     handleChange(event) {
