@@ -135,10 +135,9 @@ export default class BarGraph extends Component{
 
     render(){
         return(
-        <div style = {{height: this.state.height , width: this.state.width}}>
+        <>
             {this.state.mydata ? this.runBar(): null}
-
-        </div>
+        </>
         )
     }
 }
