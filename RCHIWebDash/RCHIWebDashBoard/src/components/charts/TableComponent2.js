@@ -143,7 +143,7 @@ class TableComponent2 extends Component{
     }
     else{
     return(
-      <div style = {{height : this.props.height , width: this.props.width}}>
+      <>
         <Table Cell Structured>
           <Table.Header>
             <Table.Row>
@@ -154,9 +154,7 @@ class TableComponent2 extends Component{
                 </Header>
               </Table.HeaderCell>
             </Table.Row>
-
             {console.log(this.state)}
-
             <Table.Row>
             <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
             {
@@ -175,7 +173,7 @@ class TableComponent2 extends Component{
           </Table.Body>
 
         </Table>
-      </div>
+      </>
     )
   }
   }
