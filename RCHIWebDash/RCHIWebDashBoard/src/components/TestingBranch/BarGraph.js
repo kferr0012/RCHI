@@ -7,50 +7,16 @@ export default class BarGraph extends Component{
         super(props)
 
         this.state = {
-            url : this.props.url,
             index : this.props.indexBy,
             keys : this.props.keys,
-            height : this.props.height,
-            width : this.props.width,
-            mydata : []
+            mydata : this.props.data
 
         }
-
-        this.runBar = this.runBar.bind(this)
-
-    }
-    async fetchData(){
-        var self = this
-        console.log("fetching in " + this.state.url)
-        await fetch(this.state.url, {
-            headers: {
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        })
-        .then(response => response.json())
-        .then((data) =>{
-            console.log("data found")
-            self.setState({mydata:data})
-        })
-        .catch(err => {
-            console.log("no data found")
-        })
-        
-        this.setState({dataUpdated : true})
     }
 
-    async componentWillReceiveProps(){
-        this.setState({url : this.props.url})
-        await this.fetchData()
-    }
-    async componentWillMount(){
-        await this.fetchData()
-    }
-
-    runBar(){
-
+    render(){
         return(
+        <>
             <ResponsiveBar
             data={this.state.mydata}
             keys={this.state.keys}
@@ -129,16 +95,9 @@ export default class BarGraph extends Component{
             animate={true}
             motionStiffness={90}
             motionDamping={15}
-        /> 
-        )
-    }
-
-    render(){
-        return(
-        <div style = {{height: this.state.height , width: this.state.width}}>
-            {this.state.mydata ? this.runBar(): null}
-
-        </div>
+        />
+         
+    </>
         )
     }
 }

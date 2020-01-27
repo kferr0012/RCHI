@@ -6,10 +6,12 @@ import PieChart2 from "../components/charts/PieChart2"
 import TableComponent from "../components/charts/TableComponent"
 import TableComponent2 from "../components/charts/TableComponent2"
 
+import fetchTest from '../components/Utilities/ListManipulation/fetchTest'
+
 export default class GeneralTable extends Component{
     constructor(props){
         super(props)
-
+        console.log("constructor")
         this.const_data_for_unsheltered_table = [
           {
             "id":1,
@@ -519,6 +521,7 @@ export default class GeneralTable extends Component{
         console.log("rendering")
         return(
         <div>
+            <fetchTest></fetchTest>
             <BarGraph height = {600}
             width = {800}
             url = 'http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race'
