@@ -1,13 +1,38 @@
 #myleafletmap{
     /* height: 600px;
     width: 600px; */
-    position: relative; left: 50%;
-    transform: translateX(-50%);
+    
+    
+    /* transform: translateX(-50%);  */
     /* margin: 10vh 0vh 0vh 10vh; */
 }
 
 .leaflet-container {
-    height: 400px;
-    width: 700px;
+    /* display: flex;
+    position: relative; 
+    left: 2vw; */
+    /* left: 50%;
+    transform: translateX(0%);  */
+    height: 75vh;
+    width: 50vw;;
     background: #FFF;
+    overflow: hidden;
+}
+
+.chartTitle {
+    position: absolute;
+    top: 1vh;
+    align-self: center;
+}
+
+.chart {
+    /* top: 0vh;
+    left: 0vw; */
+    margin: 2.5vh 0 0 2vw;
+    position: relative; 
+    display: flex;
+    position: relative; 
+    height: 35vh;
+    width: 45vw;
+    border: #eee 1px solid;
 }
