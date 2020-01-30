@@ -11,7 +11,6 @@ export default class BarGraph extends Component{
             index : this.props.indexBy,
             keys : this.props.keys,
             mydata : this.props.data,
-            orientation: this.props.orientation
         }
 
         console.log("BarGraph data")
@@ -24,7 +23,7 @@ export default class BarGraph extends Component{
             <ResponsiveBar
             data={this.state.mydata}
             keys={this.state.keys}
-            indexBy= {this.state.index} 
+            indexBy= {this.state.index}    
             margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
             padding={0}
             groupMode="grouped"
