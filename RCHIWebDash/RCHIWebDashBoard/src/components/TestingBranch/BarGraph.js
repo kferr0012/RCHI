@@ -6,11 +6,12 @@ export default class BarGraph extends Component{
     constructor(props){
         super(props)
 
+        
         this.state = {
             index : this.props.indexBy,
             keys : this.props.keys,
-            mydata : this.props.data
-
+            mydata : this.props.data,
+            orientation: this.props.orientation
         }
 
         console.log("BarGraph data")

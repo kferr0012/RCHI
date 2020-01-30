@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import '../components/css/dash.css';
 
 import BarGraph from  '../components/TestingBranch/BarGraph'
 import PieChart2 from '../components/charts/PieChart2'
@@ -11,7 +12,6 @@ import {filter, subset, filterList} from '../components/Utilities/ListManipulati
 import {combine} from '../components/Utilities/ListManipulation/combine'
 
 export default class UnsheleteredVsSheltered extends Component{
-
 
     constructor(props){
         super(props)
@@ -38,44 +38,64 @@ export default class UnsheleteredVsSheltered extends Component{
     }
 
     renderDashboards(){
-        console.log("rerendering dashboard ")
-        console.log(this.state)
 
-        
-        console.log("this is the race table")
-        console.log(this.state.Tables["GeneralTableSubpopulations2019"]["Race"])
-
-        const Tables = this.state.Tables
-
-        console.log("filtering race table")
-         var newTable = filterList(Tables["GeneralTableSubpopulations2019"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])
-        // console.log(newTable)
-        // var newTable2 = filterList(getTable("GeneralTableSubpopulations2019","Race"), "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])
-        // console.log(newTable2)
-        console.log("state of race table now")
-        console.log(this.state.Tables["GeneralTableSubpopulations2019"]["Race"])
         return(
 
             <div>
-                
-                <div style = {{height : 400 , width : 600}}>
-                <BarGraph
-                    data = {filterList(Tables["GeneralTableSubpopulations2019"]["Gender"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
-                    indexBy = "subpopulation"
-                    keys = {["total"]}        
-                    /> 
 
-                <LineGraph/>
-
-
+            <div className="container my-2" style={{backgroundColor: "#6f58c9"}}>
+            <h2>Sheltered vs Unsheltered</h2>
+            <div className="row dash-row">
+              <div className="col-md dash-col-com">
+                <div className="svu-grid">
+                    <div className="svu-r1">
+                      <h6>Sheltered Statistics Table</h6>
+                    </div>
+                    <div className="svu-r2">
+                      <h6>Sheltered Household Composition</h6>
+                    </div>
+                  </div>
                 </div>
-                <div style = {{height: 400, width: 600}}>
-                <PieChart2 height = {200}
-                    data = {filterList(Tables["GeneralTableSubpopulations2019"]["Gender"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
+              <div className="col-md dash-col-com">
+                <div className="gen-grid">
+                  <div className="svu-r1">
+                    {/* <span className="component-header">Homeless Population Trend</span> */}
+                    <LineGraph />
+                  </div>
+                  <div className="svu-r2">
+                    {/* FIXME: need to make 2 column format for bar graphs to be side-by-side */}
+                    {/* <span className="component-header">Bar Graphs</span> */}
+                    {/* <BarGraph
+                      url="http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Age"
+                      indexBy="subpopulation"
+                      keys={["interview", "observation"]}        
+                    />
+                    <BarGraph 
+                      url="http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Race"
+                      indexBy="subpopulation"
+                      keys={["interview", "observation"]}        
+                    /> */}
+                  </div>
+                </div>
+              </div>
+              <div className="col-md dash-col-com">
+                <div className="svu-grid">
+                  <div className="svu-r1">
+                    <h6>Unsheltered Statistics Table</h6>
+                  </div>
+                  <div className="svu-r2">
+                    <h6>Unsheltered Household Composition</h6>
+                    <PieChart2
+                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
+                    footer = {false}
                     />
                 </div>
-                
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
         )
     }
 
@@ -86,8 +106,6 @@ export default class UnsheleteredVsSheltered extends Component{
             <div>
             {this.state.rendered ? this.renderDashboards() : 0}
             </div>
-            
         )
-
     }
 }

@@ -10,6 +10,7 @@ export default class PieChart2 extends React.Component {
             url : this.props.url,
             height : this.props.height,
             mydata : this.props.data,
+            footer : this.props.footer,
         }
 
         console.log("Pie chart")
@@ -128,7 +129,7 @@ export default class PieChart2 extends React.Component {
                         id: 'lines'
                     }
                 ]}
-                legends={[
+                legends={this.props.footer? [
                     {
                         anchor: 'bottom',
                         direction: 'row',
@@ -147,7 +148,7 @@ export default class PieChart2 extends React.Component {
                             }
                         ]
                     }
-                ]}
+                ] : []}
             />
         </>
     )

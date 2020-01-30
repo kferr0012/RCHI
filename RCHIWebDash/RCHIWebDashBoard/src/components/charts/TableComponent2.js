@@ -143,7 +143,7 @@ class TableComponent2 extends Component{
     }
     else{
     return(
-      <div style = {{height : this.props.height , width: this.props.width}}>
+      <>
         <Table Cell Structured>
           <Table.Header>
             <Table.Row>
@@ -154,28 +154,22 @@ class TableComponent2 extends Component{
                 </Header>
               </Table.HeaderCell>
             </Table.Row>
-
             {console.log(this.state)}
-
             <Table.Row>
-            <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
-            {
-              this.state.type_array.map( (iterator, idx)=>{
-                  return(
-                      <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
-                  );
-              })
-            }
-
+              <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
+              {
+                this.state.type_array.map( (iterator, idx)=>{
+                    return(
+                        <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
+                    );
+                })
+              }
             </Table.Row>
           </Table.Header>
-
           <Table.Body>
-
           </Table.Body>
-
         </Table>
-      </div>
+      </>
     )
   }
   }
