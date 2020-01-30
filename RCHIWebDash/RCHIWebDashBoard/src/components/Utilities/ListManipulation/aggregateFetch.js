@@ -1,7 +1,7 @@
 
 export async function aggregateFetch(listOfURLs){
 
-    
+    console.log("aggregateFetch")
     var outputTable = {}
 
     for(var i = 0; i< listOfURLs.length; i++){
@@ -28,11 +28,17 @@ export async function aggregateFetch(listOfURLs){
         
     }
 
+    console.log("fetched Data")
+    console.log(outputTable)
+
     for(var key in outputTable){
         outputTable[key] = expandOnField(outputTable[key], "category")
     }
+
+    console.log("expanding data")
     console.log(outputTable)
 
+    console.log("end aggregate Fetch")
     return outputTable
 
 }

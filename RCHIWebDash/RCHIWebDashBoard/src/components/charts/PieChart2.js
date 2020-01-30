@@ -9,67 +9,36 @@ export default class PieChart2 extends React.Component {
         this.state = {
             url : this.props.url,
             height : this.props.height,
-            mydata : []
+            mydata : this.props.data,
         }
 
-        this.runPie = this.runPie.bind(this)
+        console.log("Pie chart")
+        console.log(this.state)
     }
 
-
-
-    async fetchData(){
-
-        var self = this
-        await fetch(this.state.url, {
-            headers: {
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        })
-            .then(response => response.json())
-            .then((data) =>{
-                this.setState({mydata:data})
-            })
-            .catch(err => {
-                console.log("no data found")
-            })
-
-        console.log("data:")
-        console.log(this.state.mydata)
-
-
-
-
-
-    }
-
-    async componentWillReceiveProps(){
-        this.setState({url : this.props.url})
-        await this.fetchData()
-    }
-    async componentWillMount(){
-        await this.fetchData()
-    }
-
-    runPie(){
-
-        let i;
-        let totalValues = this.state.mydata;
-        for (i = 0; i < this.state.mydata.length; i++) {
-            this.state.mydata[i].value = this.state.mydata[i].total
-            this.state.mydata[i].id = this.state.mydata[i].subpopulation
-            this.state.mydata[i].label = this.state.mydata[i].subpopulation
-            delete this.state.mydata[i].subpopulation;
+    render(){
+        console.log("Pie Chart render")
+        
+        var mydata = JSON.parse(JSON.stringify(this.props.data))
+        for (var i = 0; i < mydata.length; i++) {
+            mydata[i].value = mydata[i].total
+            mydata[i].id = mydata[i].subpopulation
+            mydata[i].label = mydata[i].subpopulation
+            delete mydata[i].subpopulation;
 
         }
 
+        console.log("state data")
         console.log(this.state.mydata)
+
+        console.log(mydata)
 
 
 
         return (
+            <>
             <ResponsivePie
-                data={this.state.mydata}
+                data={mydata}
                 margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                 padAngle={0.7}
                 cornerRadius={3}
@@ -180,14 +149,9 @@ export default class PieChart2 extends React.Component {
                     }
                 ]}
             />
-        )
-    }
-    render() {
-        return (
-            <div style = {{height: this.state.height}}>
-                {this.state.mydata ? this.runPie(): null}
-            </div>
-
-        )
-    }
+        </>
+    )
+        
+}
+   
 }

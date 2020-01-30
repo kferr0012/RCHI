@@ -12,6 +12,9 @@ export default class BarGraph extends Component{
             mydata : this.props.data
 
         }
+
+        console.log("BarGraph data")
+        console.log(this.props.data)
     }
 
     render(){
