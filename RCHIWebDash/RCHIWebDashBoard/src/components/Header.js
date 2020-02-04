@@ -1,9 +1,36 @@
 import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import logo from './logo.png';
+
 
 export default class Header extends Component{
+
+    state = {activeItem: ''}
+
+    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
     render(){
+        const {activeItem} = this.state;
         return(
+            //     {window.innerHeight} {window.innerWidth} is just to give me some help with sizing*/}
+            //     <p id="router-links">
+            //     <span><Link to='/'>Map</Link> | </span>
+            //     {/* <span><Link to='/VeteranDash'>VeteranDash</Link> | </span>
+            //     <span><Link to='/GeneralDash'>GeneralDash</Link> | </span>
+            //     <span><Link to='/EditableCharts'>EditableCharts</Link> | </span> */}
+            //     <span><Link to='/SupervisorialDistricts'>Supervisorial Districts</Link> | </span>
+            //     {/* <span><Link to='/TabChartDash'>Tab Chart Demo</Link> | </span> */}
+            //     <span><Link to='/CityTables'>City Table</Link> | </span>
+            //     <span><Link to='/CityDashboard'>City Dashboard</Link> | </span>
+            //     {/* <span>    {window.innerHeight} {window.innerWidth}</span> */}
+            //     <span><Link to='/DIYChart'>DIY Chart</Link> |</span>
+            //     <span><Link to='/UnshelteredTrends'>Unsheltered Trends</Link> | </span>
+            //     <span><Link to='/Sandbox'>Sandbox</Link> | </span>
+            //     <span><Link to='/GeneralTable'>General Table</Link> | </span>
+            //     <span><Link to='/CityBreakdown'>City Breakdown Table</Link> | </span>
+            //     <span><Link to='/UnshelteredvsSheltered'>Unsheltered vs Sheltered</Link> | </span>
+            //     </p>
             <div>
                 <div className="App-header">
                     {/* This is weirdly typed to get each capital letter a different size and color */}
@@ -18,25 +45,36 @@ export default class Header extends Component{
                         <span>NFORMATICS </span>
                     </p>
                 </div>
-                {/* notice the " | "  at the end of each span to demarcate each link 
-                {window.innerHeight} {window.innerWidth} is just to give me some help with sizing*/}
-                <p id="router-links">
-                <span><Link to='/'>Map</Link> | </span>
-                {/* <span><Link to='/VeteranDash'>VeteranDash</Link> | </span>
-                <span><Link to='/GeneralDash'>GeneralDash</Link> | </span>
-                <span><Link to='/EditableCharts'>EditableCharts</Link> | </span> */}
-                <span><Link to='/SupervisorialDistricts'>Supervisorial Districts</Link> | </span>
-                {/* <span><Link to='/TabChartDash'>Tab Chart Demo</Link> | </span> */}
-                <span><Link to='/CityTables'>City Table</Link> | </span>
-                <span><Link to='/CityDashboard'>City Dashboard</Link> | </span>
-                {/* <span>    {window.innerHeight} {window.innerWidth}</span> */}
-                <span><Link to='/DIYChart'>DIY Chart</Link> |</span>
-                <span><Link to='/UnshelteredTrends'>Unsheltered Trends</Link> | </span>
-                <span><Link to='/Sandbox'>Sandbox</Link> | </span>
-                <span><Link to='/GeneralTable'>General Table</Link> | </span>
-                <span><Link to='/CityBreakdown'>City Breakdown Table</Link> | </span>
-                <span><Link to='/UnshelteredvsSheltered'>Unsheltered vs Sheltered</Link> | </span>
-                </p>
+                {/* notice the " | "  at the end of each span to demarcate each link */}
+                
+            
+                <Menu secondary>
+                    <Menu.Item>
+                        <img src={logo} />
+                    </Menu.Item>
+                    <Menu.Item
+                        name='home'
+                        active={activeItem === 'home'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                        name='messages'
+                        active={activeItem === 'messages'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                        name='friends'
+                        active={activeItem === 'friends'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Menu position='right'>
+                        <Menu.Item
+                        name='logout'
+                        active={activeItem === 'logout'}
+                        onClick={this.handleItemClick}
+                        />
+                    </Menu.Menu>
+                </Menu>
             </div>
         );
     }
