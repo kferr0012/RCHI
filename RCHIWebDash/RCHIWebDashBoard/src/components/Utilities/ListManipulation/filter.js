@@ -38,9 +38,9 @@ export function filterList (data, category, valueList){
 }
 export function subset(data, category, valueList){
     var newData = []
-    for ( const x in data ) {
+    for ( var x = 0; x < data.length; x++  ) {
 
-        if ( x[category] == valueList ) {
+        if ( data[x][category] == valueList ) {
             newData.push(data[x]);
         }
     }

@@ -8,7 +8,7 @@ import SupervisorDistricts from './json/Supervisor_Districts.json'
 import Cities from './json/Cities.json'
 import County from './json/County.json'
 
-import { remove, get } from '../Utilities/ListManipulation/filter'
+import { remove, subset } from '../Utilities/ListManipulation/filter'
 import { combine } from '../Utilities/ListManipulation/combine'
 import { countyColor, backgroundStroke, lat, lng, subPopLink, cityNames, raceCategories, genderCategories, defaultZoom  } from './constants';
 import CategoryBar from './CategoryBar'
@@ -40,12 +40,12 @@ export default class LLMap extends Component {
         var raceData = indata;
         raceData = remove( raceData , 'subpopulation', 'Total');
         raceData = remove( raceData , 'city', 'Riverside');
-        raceData = get( raceData, 'category', 'Race');
+        raceData = subset( raceData, 'category', 'Race');
 
         var genderData = indata;
         genderData = remove( genderData , 'subpopulation', 'Total');
         genderData = remove( genderData , 'city', 'Riverside');
-        genderData = get( genderData, 'category', 'Gender');
+        genderData = subset( genderData, 'category', 'Gender');
 
         this.setState({
             data: indata,
@@ -188,15 +188,15 @@ export default class LLMap extends Component {
             else {
                 place = disp.charAt(0) + disp.slice(1).toLowerCase();
             }   
-            curData = get(data, "city", disp );
+            curData = subset(data, "city", disp );
         }
         else {
             place = "Supervisoral District " + disp.toString();
-            curData = get(data, "district", disp.toString() );
+            curData = subset(data, "district", disp.toString() );
         }
         
 
-        var t = get(get(curData, 'category', 'Age'), 'subpopulation', 'Total'); // gets totals
+        var t = subset(subset(curData, 'category', 'Age'), 'subpopulation', 'Total'); // gets totals
 
         var tot = 0;
         for (var x = 0; x < t.length; x++){

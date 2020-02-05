@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ResponsiveBar } from '@nivo/bar';
-import { remove, get } from '../Utilities/ListManipulation/filter'
+import { remove, subset } from '../Utilities/ListManipulation/filter'
 
 export default class CategoryBar extends Component{
     constructor(props){
@@ -22,9 +22,9 @@ export default class CategoryBar extends Component{
         if (curClicked === 0 ) // if 0 sum up entire county
             filterData = rawData;
         else if (curClicked.length > 1) // if longer then a digit, its a city and sort based on name
-            filterData = get(rawData, 'city' , curClicked);
+            filterData = subset(rawData, 'city' , curClicked);
         else // else its a district and get by district
-            filterData = get(rawData, 'district' , curClicked.toString() ) 
+            filterData = subset(rawData, 'district' , curClicked.toString() ) 
 
         var newData = {...keys}; // initializes newData object for sums
 
