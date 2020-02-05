@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import BarGraph from  '../components/TestingBranch/BarGraph';
+import LineGraph from '../components/charts/LineGraph';
+import TableComponent4 from '../components/charts/TableComponent4.js';
 import '../components/css/dash.css';
 
 import BarGraph from  '../components/TestingBranch/BarGraph'
 import PieChart2 from '../components/charts/PieChart2'
 import LineGraph from '../components/charts/LineGraph'
+import TableComponent4 from '../components/charts/TableComponent4.js';
 
 import {aggregateFetch} from '../components/Utilities/ListManipulation/aggregateFetch'
 import fetchTest from '../components/Utilities/ListManipulation/fetchTest'
