@@ -1,3 +1,6 @@
+.allContent {
+    height: 75vh;
+}
 #myleafletmap{
     /* height: 600px;
     width: 600px; */
@@ -14,7 +17,7 @@
     /* left: 50%;
     transform: translateX(0%);  */
     height: 75vh;
-    width: 50vw;;
+    /* width: 50vw;; */
     background: #FFF;
     overflow: hidden;
 }
@@ -28,11 +31,11 @@
 .chart {
     /* top: 0vh;
     left: 0vw; */
-    margin: 2.5vh 0 0 2vw;
+    margin: 1vh 1vw 1vh 1vw;
     position: relative; 
     display: flex;
     position: relative; 
-    height: 35vh;
-    width: 45vw;
+    height: 36vh;
+    /* width: 45vw; */
     border: #eee 1px solid;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup, GeoJSON, LayersControl } from 'react-leaflet';
 import axios from 'axios';
+import { Dimmer, Loader } from 'semantic-ui-react';
 
 import './map.css';
 import SupervisorDistricts from './json/Supervisor_Districts.json'
@@ -204,7 +205,7 @@ export default class LLMap extends Component {
         }
 
         return (
-            <div>
+            <div className="allContent">
                 <h4 key={Math.random()}>{place} - Total Unsheltered Individuals: {tot}</h4>
                 <div className="row">
                     <div className="col-md">
