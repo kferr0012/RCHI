@@ -23,4 +23,7 @@
 {"pk": 24, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Gender", "subpopulation": "Unknown", "total": 95}},
 {"pk": 25, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Ethnicity", "subpopulation": "Hispanic", "total": 551}},
 {"pk": 26, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Ethnicity", "subpopulation": "Non-Hispanic", "total": 1133}},
-{"pk": 27, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Ethnicity", "subpopulation": "Unknown", "total": 361}}]
+{"pk": 27, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Ethnicity", "subpopulation": "Unknown", "total": 361}},
+{"pk": 28, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Household", "subpopulation": "Adults Only", "total": 456}},
+{"pk": 29, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Household", "subpopulation": "Adults and Children", "total": 82}},
+{"pk": 30, "model": "backend.GeneralTableSubpopulationsSheltered2019", "fields": {"category": "Household", "subpopulation": "Chilren Only", "total": 15}}]

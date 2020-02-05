@@ -1,5 +1,0 @@
-[
-{"pk": 1, "model": "backend.HomelessPopulationTrend", "fields": {"id": "Volunteers", "data": [{"x": "2015","y": "597"},{"x": "2016","y": "503"},{"x": "2017","y": "498"},{"x": "2018","y": "486"},{"x": "2019","y": "745"}]}},
-{"pk": 2, "model": "backend.HomelessPopulationTrend", "fields": {"id": "Sheltered", "data": [{"x": "2015","y": "880"},{"x": "2016","y": "814"},{"x": "2017","y": "768"},{"x": "2018","y": "631"},{"x": "2019","y": "766"}]}},
-{"pk": 3, "model": "backend.HomelessPopulationTrend", "fields": {"id": "Unsheltered", "data": [{"x": "2015","y": "1587"},{"x": "2016","y": "1351"},{"x": "2017","y": "1638"},{"x": "2018","y": "1685"},{"x": "2019","y": "2045"}]}}
-]
