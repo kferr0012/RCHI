@@ -1,43 +1,121 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Menu, Segment, Responsive } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react'
+
 import { Link } from 'react-router-dom'
 
 export default class Header extends Component{
-    render(){
-        return(
-            <div>
-                <div className="App-header">
-                    {/* This is weirdly typed to get each capital letter a different size and color */}
-                    <p id="title">
-                        <span className="title-highlight">R</span>
-                        <span>IVERSIDE </span>
-                        <span className="title-highlight">C</span>
-                        <span>OUNTY </span>
-                        <span className="title-highlight">H</span>
-                        <span>EALTH </span>
-                        <span className="title-highlight">I</span>
-                        <span>NFORMATICS </span>
-                    </p>
-                </div>
-                {/* notice the " | "  at the end of each span to demarcate each link 
-                {window.innerHeight} {window.innerWidth} is just to give me some help with sizing*/}
-                <p id="router-links">
-                <span><Link to='/'>Map</Link> | </span>
-                {/* <span><Link to='/VeteranDash'>VeteranDash</Link> | </span>
-                <span><Link to='/GeneralDash'>GeneralDash</Link> | </span>
-                <span><Link to='/EditableCharts'>EditableCharts</Link> | </span> */}
-                <span><Link to='/SupervisorialDistricts'>Supervisorial Districts</Link> | </span>
-                {/* <span><Link to='/TabChartDash'>Tab Chart Demo</Link> | </span> */}
-                <span><Link to='/CityTables'>City Table</Link> | </span>
-                <span><Link to='/CityDashboard'>City Dashboard</Link> | </span>
-                {/* <span>    {window.innerHeight} {window.innerWidth}</span> */}
-                <span><Link to='/DIYChart'>DIY Chart</Link> |</span>
-                <span><Link to='/UnshelteredTrends'>Unsheltered Trends</Link> | </span>
-                <span><Link to='/Sandbox'>Sandbox</Link> | </span>
-                <span><Link to='/GeneralTable'>General Table</Link> | </span>
-                <span><Link to='/CityBreakdown'>City Breakdown Table</Link> | </span>
-                <span><Link to='/UnshelteredvsSheltered'>Unsheltered vs Sheltered</Link> | </span>
-                </p>
-            </div>
-        );
-    }
+  state = { activeItem: 'Map' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <div>
+      <a id="title-highlight">RCHI<span id="title">Riverside County Health Informatics</span></a>  
+      <Segment.Group id="segment">
+        <Responsive as={Segment} minWidth={1206}>
+        <Menu pointing secondary >
+          <Menu.Item
+            name="Map"
+            active={activeItem === "Map"}
+            onClick={this.handleItemClick}
+            as={Link} to ="/"
+          />
+          <Menu.Item
+            name="Supervisorial Districts"
+            active={activeItem === "Supervisorial Districts"}
+            onClick={this.handleItemClick}
+            as={Link} to ="/SupervisorialDistricts"
+          />
+          <Menu.Item
+            name="City Dashboards"
+            active={activeItem === "City Dashboards"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/CityDashboard'
+          />
+          <Menu.Item
+            name="Unsheltered Trends"
+            active={activeItem === "Unsheltered Trends"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/UnshelteredTrends'
+          />
+          <Menu.Item
+            name="General Table"
+            active={activeItem === "General Table"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/GeneralTable'
+          />
+          <Menu.Item
+            name="City Table"
+            active={activeItem === "City Table"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/CityTables'
+          />
+          <Menu.Item
+            name="City Breakdown Table"
+            active={activeItem === "City Breakdown Table"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/CityBreakdown'
+          />
+          <Menu.Item
+            name="Unsheltered vs Sheltered"
+            active={activeItem === "Unsheltered vs Sheltered"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/UnshelteredvsSheltered'
+          />
+          <Menu.Item
+            name="DIY Chart"
+            active={activeItem === "DIY Chart"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/DIYChart'
+          />
+          <Menu.Item
+            name="Sandbox"
+            active={activeItem === "Sandbox"}
+            onClick={this.handleItemClick}
+            as={Link} to ='/Sandbox'
+          />
+        </Menu>
+        </Responsive>
+
+         
+        <Responsive as={Segment} maxWidth={1205}>
+         <Dropdown text="browse" id="hamburger">
+            <Dropdown.Menu>
+                <Dropdown.Item name="Map" as={Link} to ="/" text='Map' active={activeItem === "Map"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Item name="Supervisorial Districts" text='Supervisorial Districts' as={Link} to ='/SupervisorialDistricts' active={activeItem === "Supervisorial Districts"}
+            onClick={this.handleItemClick} />
+                <Dropdown.Divider />
+                <Dropdown.Item name="City Dashboards" text='City Dashboards' as={Link} to ='/CityDashboard' active={activeItem === "City Dashboards"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Item text='Unsheltered Trends' name="Unsheltered Trends" as={Link} to ='/UnshelteredTrends'  active={activeItem === "Unsheltered Trends"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Divider />
+                <Dropdown.Item text='General Table' name="General Table" as={Link} to ='/GeneralTable' active={activeItem === "General Table"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Item text='City Table' name="City Table" as={Link} to ='/CityTables'  active={activeItem === "City Table"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Item text='City Breakdown Table' name="City Breakdown Table" as={Link} to ='/CityBreakdown' active={activeItem === "City Breakdown Table"}
+            onClick={this.handleItemClick}>
+                </Dropdown.Item>
+                <Dropdown.Item text='Unsheltered vs Sheltered' name="Unsheltered vs Sheltered" as={Link} to ='/UnshelteredvsSheltered'   active={activeItem === "Unsheltered vs Sheltered"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Divider />
+                <Dropdown.Item text='DIY Chart' name="DIY Chart" as={Link} to ='/DIYChart' active={activeItem === "DIY Chart"}
+            onClick={this.handleItemClick}/>
+                <Dropdown.Item text='Sandbox' name="Sandbox" as={Link} to ='/Sandbox' active={activeItem === "Sandbox"}
+            onClick={this.handleItemClick}/>
+            </Dropdown.Menu>
+        </Dropdown> 
+        </Responsive>
+      </Segment.Group>
+       
+      </div>
+    
+    )
+  }
 }
