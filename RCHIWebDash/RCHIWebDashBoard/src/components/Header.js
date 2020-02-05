@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import logo from './logo.png';
 
 
 export default class Header extends Component{
-
-    state = {activeItem: ''}
-
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
     render(){
-        const {activeItem} = this.state;
         return(
             
             <div>
@@ -28,8 +20,8 @@ export default class Header extends Component{
                         <span>NFORMATICS </span>
                     </p>
                 </div>
-                {/* notice the " | "  at the end of each span to demarcate each link */}
-                {/*{window.innerHeight} {window.innerWidth} is just to give me some help with sizing*/}
+                {/* notice the " | "  at the end of each span to demarcate each link 
+                {window.innerHeight} {window.innerWidth} is just to give me some help with sizing*/}
                 <p id="router-links">
                 <span><Link to='/'>Map</Link> | </span>
                 {/* <span><Link to='/VeteranDash'>VeteranDash</Link> | </span>
@@ -47,7 +39,6 @@ export default class Header extends Component{
                 <span><Link to='/CityBreakdown'>City Breakdown Table</Link> | </span>
                 <span><Link to='/UnshelteredvsSheltered'>Unsheltered vs Sheltered</Link> | </span>
                 </p>
-            
             </div>
         );
     }
