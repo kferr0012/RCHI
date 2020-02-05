@@ -3,12 +3,12 @@
 export function combine ( array1, array2 ) {
     var ids = new Set([]);
     var cb = array1;
-    for ( const x in array1 ) {
-        ids.add(x.id);
+    for ( var x = 0; x < array1.length; x++ ) {
+        ids.add(array1[x].id);
     }
-    for ( const x in array2 ) { 
-        if ( !ids.has(x.id) ) {
-            cb.push(x);
+    for ( var x = 0; x < array2.length; x++ ) {
+        if ( !ids.has(array2[x].id) ) {
+            cb.push(array2[x]);
         }
     }
     return cb;

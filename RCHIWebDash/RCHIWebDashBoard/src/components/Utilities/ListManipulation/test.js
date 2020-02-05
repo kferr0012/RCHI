@@ -1,7 +1,8 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import { combine } from "./combine.js";
-import { filter }  from "./filter.js";
+import { get }  from "./filter.js";
 
 export default class Test extends Component {
     constructor(props){
@@ -31,11 +32,11 @@ export default class Test extends Component {
             console.log( inData.length ); // 32
             console.log( inData );
             // tests filter
-            var d1 = filter( inData, "district", 1 );
-            var d2 = filter( inData, "district", 2 );
-            var d3 = filter( inData, "district", 3 );
-            var d4 = filter( inData, "district", 4 );
-            var d5 = filter( inData, "district", 5 );
+            var d1 = get( inData, "district", 1 );
+            var d2 = get( inData, "district", 2 );
+            var d3 = get( inData, "district", 3 );
+            var d4 = get( inData, "district", 4 );
+            var d5 = get( inData, "district", 5 );
 
             // test combine works
             var cb = combine(d1, d2);
@@ -55,8 +56,3 @@ export default class Test extends Component {
         return <div></div>
     }
 }
-
-
-
-
-
