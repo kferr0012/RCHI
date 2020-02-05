@@ -1,5 +1,5 @@
 
-export async function aggregateFetch(listOfURLs){
+export async function aggregateFetch(listOfURLs, expandData = true){
 
     console.log("aggregateFetch")
     var outputTable = {}
@@ -31,12 +31,11 @@ export async function aggregateFetch(listOfURLs){
     console.log("fetched Data")
     console.log(outputTable)
 
-    for(var key in outputTable){
-        outputTable[key] = expandOnField(outputTable[key], "category")
+    if(expandData){
+        for(var key in outputTable){
+            outputTable[key] = expandOnField(outputTable[key], "category")
+        }
     }
-
-    console.log("expanding data")
-    console.log(outputTable)
 
     console.log("end aggregate Fetch")
     return outputTable
@@ -59,6 +58,9 @@ export function expandOnField(jsonList,field){
             differentTables[category].push(jsonList[i])   
         }
     }
+
+    console.log("expanding data")
+    console.log(differentTables)
 
     return differentTables
 

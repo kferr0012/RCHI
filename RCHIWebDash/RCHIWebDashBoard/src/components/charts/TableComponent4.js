@@ -14,7 +14,7 @@ class TableComponent4 extends Component{
       col_size : null,
       body_function : null,
       test_function : null,
-      mystyle : null
+      
     }
   }
 
@@ -151,17 +151,25 @@ class TableComponent4 extends Component{
     }
     else{
     return(
-      <div style = {this.state.mystyle}>
+      <div style = {{height: '100%', width: '100%', position:'absolute'}}>
         <Table Cell Structured style={{ borderWidth: "1px" }}>
+          
           <Table.Header>
-            <Table.Row>
+
+            {this.props.tableName ? 
+
+              <Table.Row>
               <Table.HeaderCell colSpan={this.state.col_size+1} textAlign='center'>
                 <Header>
                   {this.props.tableName}
                   <Header.Subheader/>
                 </Header>
               </Table.HeaderCell>
-            </Table.Row>
+              </Table.Row>
+              : 
+              null
+            }
+            
 
             <Table.Row>
             <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>

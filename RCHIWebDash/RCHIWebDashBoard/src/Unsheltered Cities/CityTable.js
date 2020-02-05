@@ -1,14 +1,24 @@
 import React, {Component} from 'react'
-import BarGraph from '../components/TestingBranch/BarGraph'
+
 import {CustomToggle, CustomMenu} from './components/CustomToggle'
 import {Dropdown, Button} from 'react-bootstrap'
-import PieChart from "../components/charts/PieChart";
-import PieGraph from "../components/charts/PieGraph";
+
 import Number from "../components/Numbers/Number";
 import Total from '../components/Numbers/Total'
 import {Row, Col} from 'antd'
 
+import Select from 'react-select'
+
 import './DottedBox.css';
+
+import BarGraph from  '../components/TestingBranch/BarGraph'
+import PieChart2 from '../components/charts/PieChart2'
+import LineGraph from '../components/charts/LineGraph'
+import TableComponent4 from '../components/charts/TableComponent4.js';
+
+import {aggregateFetch, expandOnField} from '../components/Utilities/ListManipulation/aggregateFetch'
+import {filter, subset, filterList} from '../components/Utilities/ListManipulation/filter'
+import { getOverflowOptions } from 'antd/lib/tooltip/placements';
 
 const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
@@ -24,74 +34,81 @@ export default class CityTable extends Component{
         super(props)
 
         this.state = {
-            cityChoice : "Beaumont",
+            cityChoice : "BEAUMONT",
             value : "",
             trigger : true,
-            fetched: false
+            fetched: false,
 
+            urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/",
+                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/",
+                    "http://127.0.0.1:8000/api/SubpopulationsByCity2019/"],
+            Tables : [],
+            selectOptions: []
         }
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.myData = []
         
     }
-    async getData(){
+    
+    getOptions(options){
 
-        if(!this.state.fetched){
-        this.state.url = ["http://127.0.0.1:8000/api/CityTotalByYear/?",
-                          "http://127.0.0.1:8000/api/SubpopulationsByCity2019/?",
-                         ]
-        
-          
-        for(var i = 0 ; i < this.state.url.length ; i++){
-           
-            await fetch(this.state.url, {
-                headers: {
-                    'Accept': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            })
-            .then(response => response.json())
-            .then((data) =>{
-                console.log("data found")
-                this.myData[i] = data
-            })
-            .catch(err => {
-                console.log("no data found")
-            })
-        
+        var newData = []
+        for(var i = 0; i< options.length;i++){
+            var newObject = {
+                'value' : options[i],
+                'label' : options[i]
+            }
+
+            newData.push(newObject)
         }
 
-        }
-        console.log("finally fetched")
-        console.log(this.myData)
+        return newData
 
+    }
+
+    async componentDidMount(){
+        console.log("didMount")
+
+        var myTables = await aggregateFetch(this.state.urls, false)
+        myTables["GeneralTableSubpopulations2019"] = expandOnField(myTables["GeneralTableSubpopulations2019"], "category")
+        myTables["GeneralTableSubpopulationsSheltered2019"] = expandOnField(myTables["GeneralTableSubpopulationsSheltered2019"], "category")
+        myTables["SubpopulationsByCity2019"] = expandOnField(myTables["SubpopulationsByCity2019"],"city")
+         
+        for(const key in myTables["SubpopulationsByCity2019"]){
+            myTables["SubpopulationsByCity2019"][key] = expandOnField(myTables["SubpopulationsByCity2019"][key], "category")
+        }
+
+
+        
         this.setState({
-            fetched : true
+            Tables: myTables,
+            selectOptions: this.getOptions(Object.keys(myTables["SubpopulationsByCity2019"])),
+            rendered : true
         })
 
-    }
-    componentDidMount(){
-        this.getData()
+        console.log("available Tables")
+        console.log(this.state.Tables)
+
+        
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-      }
-    
-    handleSubmit(event) {
-        console.log("before: ")
-        console.log(this.state.cityChoice)
+    runGraphs(){
 
-        this.setState({cityChoice : this.state.value})
-    }
-    
-    runGraphs(city){
+        console.log("states")
+        console.log(this.state)
+
+        const Tables = this.state.Tables
         return(
 
             <div>
-                 <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="space-around" align="middle" >
+
+                <Select options={this.state.selectOptions} onChange={ (value) => {
+                    this.setState({
+                        cityChoice : value.value
+                    })
+                }} />
+
+                <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="space-around" align="middle" >
                 <Col className="gutter-row" span={7}>
                     <h5>Age Table</h5> 
                     <DottedBox >col-1</DottedBox>
@@ -130,7 +147,7 @@ export default class CityTable extends Component{
                                         graph
                                     </Col>
                                     <Col className="gutter-row" span={12}>
-                                        pie graph
+                                        
                                     </Col>
                                 </row>
                             </Col>
@@ -151,41 +168,12 @@ export default class CityTable extends Component{
                         </Row>
                 </Col>
             </Row>
-            <BarGraph height = {400} 
-            width = {800} 
-            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search='+ city + '+Race'}
-            indexBy = "subpopulation"
-            keys = {["interview", "observation"]}
-            
-            /> 
-            <BarGraph height = {400} 
-            width = {800} 
-            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search='+ city + '+Gender'}
-            indexBy = "subpopulation"
-            keys = {["interview", "observation"]}
- 
+
+        <div style = {{height: 1000, width: 800, position: "flex"}}>
+            <PieChart2
+                data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"]}
             />
-
-           <PieGraph height = {400}
-                     url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Ethinicity+' + city}
-           />
-
-            <PieGraph height = {400}
-                        url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Gender+' + city}
-            />
-
-
-            <Number height = {400}
-                        url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + city}
-            />
-            <Total height = {400}
-                    url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Age+' + city}
-            />
-
-
-
-
-
+        </div>
             </div>    
         )
     }
@@ -193,10 +181,7 @@ export default class CityTable extends Component{
     
         return(
             <div>
-            <input style = {{width : 300}} type="text" value={this.state.value} onChange={this.handleChange} />
-            <Button onClick = {this.handleSubmit}> Submit </Button>           
-
-            {this.runGraphs(this.state.cityChoice)}
+                {this.state.rendered ? this.runGraphs() : 0}
             </div>
         )
     }

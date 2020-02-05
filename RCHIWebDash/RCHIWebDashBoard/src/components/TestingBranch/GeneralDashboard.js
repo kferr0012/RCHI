@@ -86,7 +86,7 @@ export default class Dashboard extends Component{
                     <p className="component-header">Ethnicity</p>
                   
                     <PieChart2
-                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total"])}
                     />
                     
                   </div>
