@@ -19,7 +19,7 @@ export default class BarGraph extends Component{
 
     render(){
         return(
-        <>
+        <div style = {{height: '100%', width: '100%', position:'absolute'}}>
             <ResponsiveBar
             data={this.state.mydata}
             keys={this.state.keys}
@@ -100,7 +100,7 @@ export default class BarGraph extends Component{
             motionDamping={15}
         />
          
-    </>
+    </div>
         )
     }
 }

@@ -84,11 +84,11 @@ export default class Dashboard extends Component{
                   </div>
                   <div className="gen-r2c2">
                     <p className="component-header">Ethnicity</p>
-                    {
-                      <PieChart2
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
-                      />
-                    }
+                  
+                    <PieChart2
+                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                    />
+                    
                   </div>
                 </div>
               </div>
@@ -122,6 +122,10 @@ export default class Dashboard extends Component{
                       <Table.HeaderCell textAlign='center'>{698}</Table.HeaderCell>
                     </Table.Row>
                   </Table>
+
+                  <PieChart2
+                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
+                  />
                   {/* <PieChart2
                     url='http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/?search=Households'
                   /> */}

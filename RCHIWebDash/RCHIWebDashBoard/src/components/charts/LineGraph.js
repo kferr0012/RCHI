@@ -95,7 +95,7 @@ export default class LineGraph extends React.Component {
     return (
       // TODO: make div size responsive to the page dimensions
       // <div style={{maxHeight: "100%", minHeight: "100%"}}>
-      <>
+      <div style = {{height: '100%', width: '100%', position:'absolute'}}>
         <ResponsiveLine
           data={this.state.data}
           margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -159,7 +159,7 @@ export default class LineGraph extends React.Component {
               }
           ]}
         />
-      </>
+      </div>
       // </div>
     );
   }

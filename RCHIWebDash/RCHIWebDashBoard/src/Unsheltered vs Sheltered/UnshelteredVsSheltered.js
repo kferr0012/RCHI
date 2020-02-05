@@ -51,7 +51,12 @@ export default class UnsheleteredVsSheltered extends Component{
                       <h6>Sheltered Statistics Table</h6>
                     </div>
                     <div className="svu-r2">
-                      <h6>Sheltered Household Composition</h6>
+                      
+                      {/* <p className="component-header">Sheltered Households </p> */}
+                      <PieChart2
+                        data = {filterList(this.state.Tables["GeneralTableSubpopulationsSheltered2019"]["Household"],"subpopulation", ["Total"])}
+                        footer = {false}
+                      />
                     </div>
                   </div>
                 </div>
@@ -62,17 +67,23 @@ export default class UnsheleteredVsSheltered extends Component{
                     <LineGraph />
                   </div>
                   <div className="svu-r2">
+
+                    <div className = "col-md dash-col-reg">
                     {/* FIXME: need to make 2 column format for bar graphs to be side-by-side */}
                     <BarGraph 
                       data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Age"], "subpopulation", ["Total","Unknown Age"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                     />
-                    <BarGraph
-                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
-                    indexBy = {"subpopulation"}
-                    keys = {["total"]}
-                    />
+                    </div>
+
+                    <div className = "col-md dash-col-reg">
+                      <BarGraph
+                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
+                      indexBy = {"subpopulation"}
+                      keys = {["total"]}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -81,16 +92,16 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r1">
                     <h6>Unsheltered Statistics Table</h6>
                     
-                    
                   </div>
                   <div className="svu-r2">
-                    <h6>Unsheltered Household Composition</h6>
+                    <p className="component-header">Unsheltered Households </p>
                     <PieChart2
-                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
-                    footer = {false}
+                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
+                      footer = {false}
                     />
-                </div>
+                    
                   </div>
+                </div>
                 </div>
               </div>
             </div>
