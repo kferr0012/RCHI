@@ -44,26 +44,18 @@
 
 .App-header {
   background-color: #FFF;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
+  flex-direction: row;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
 }
 
-#title{
-  font: 'acherusgrotesque-regular';
-  font-size: calc(10px + 3vw);
-  color: #DDD;
-  text-shadow: 2px 2px #F0F0F0;
-  margin-bottom: 0;
-}
 
-.title-highlight{
-  font-size: calc(10px + 4.3vw);
-  color: var(--main-theme-color);
-}
+
 
 #router-links{
   text-align: center;
@@ -78,7 +70,32 @@
   text-decoration: none;
 }
 
+#title{
+  font: 'acherusgrotesque-regular';
+  font-size: calc(2px + 1vw);
+  color:var(--main-theme-color);
+  text-shadow: 1px 1px #F0F0F0;
+}
 
+#title-highlight{
+  margin-top: 2%;
+  font-size: calc(2px + 3vw);
+  color: var(--main-theme-color);
+  text-shadow: 2px 2px #F0F0F0;
+  margin-bottom: 0px;
+
+}
+
+#hamburger{
+  font-size: calc(2px + 1.3vw);
+  color: rgb(155, 153, 153);
+}
+#segment{
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  padding: 0px;
+}
 /* .nav-tabs{
   border-bottom: 0;
 }
