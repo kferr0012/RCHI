@@ -97,17 +97,23 @@
 .ct-grid-center {
   display: grid;
   position: relative;
-  grid-template: 1fr 2fr 2fr / 1fr;
+  grid-template: 1.15fr 1.85fr 2fr / 1fr;
   height: 100%;
 }
 
 .ct-center-r1 {
   display: grid;
   position: relative;
-  grid-template: 1fr / 1fr 1fr 1fr;
+  grid-template: 1fr 1.5fr / 1fr 1fr 1fr;
   background-color: #5dfdcb;
 }
 
+.ct-center-r1r1{
+  display: grid;
+  position: relative;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  background-color: #5dfdcb;
+}
 .ct-center-r1c1 {
   display: flex;
   position: relative;
@@ -197,6 +203,13 @@
   display: flex;
   position: relative;
   grid-row: 2 / span 1;
+  background-color: #3b60e4;
+}
+
+.ct-side-r3 {
+  display: flex;
+  position: relative;
+  grid-row: 3 span 1;
   background-color: #3b60e4;
 }
 

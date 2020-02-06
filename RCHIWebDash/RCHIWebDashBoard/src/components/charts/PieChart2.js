@@ -11,10 +11,21 @@ export default class PieChart2 extends React.Component {
             height : this.props.height,
             mydata : this.props.data,
             footer : this.props.footer,
+            margin : this.props.margin,
         }
 
         console.log("Pie chart")
         console.log(this.state)
+    }
+    componentWillReceiveProps(){
+        this.setState({
+            url : this.props.url,
+            height : this.props.height,
+            mydata : this.props.data,
+            footer : this.props.footer,
+            margin : this.props.margin,
+            
+        })
     }
 
     render(){
@@ -40,8 +51,8 @@ export default class PieChart2 extends React.Component {
             <div style = {{height: '100%', width: '100%', position:'absolute'}}>
             <ResponsivePie
                 data={mydata}
-                margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-                padAngle={0.7}
+                margin={this.props.margin}
+                padAngle={0}
                 cornerRadius={3}
                 colors={{ scheme: 'nivo' }}
                 borderWidth={1}
@@ -50,8 +61,8 @@ export default class PieChart2 extends React.Component {
                 radialLabelsTextXOffset={6}
                 radialLabelsTextColor="#333333"
                 radialLabelsLinkOffset={0}
-                radialLabelsLinkDiagonalLength={16}
-                radialLabelsLinkHorizontalLength={24}
+                radialLabelsLinkDiagonalLength={1}
+                radialLabelsLinkHorizontalLength={1}
                 radialLabelsLinkStrokeWidth={1}
                 radialLabelsLinkColor={{ from: 'color' }}
                 slicesLabelsSkipAngle={10}

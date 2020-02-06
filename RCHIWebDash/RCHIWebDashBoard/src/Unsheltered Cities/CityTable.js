@@ -10,6 +10,7 @@ import {Row, Col} from 'antd'
 import Select from 'react-select'
 
 import './DottedBox.css';
+import '../components/css/dash.css';
 
 import BarGraph from  '../components/TestingBranch/BarGraph'
 import PieChart2 from '../components/charts/PieChart2'
@@ -34,10 +35,7 @@ export default class CityTable extends Component{
         super(props)
 
         this.state = {
-            cityChoice : "BEAUMONT",
-            value : "",
-            trigger : true,
-            fetched: false,
+            cityChoice : "BANNING",
 
             urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/",
                     "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/",
@@ -47,7 +45,7 @@ export default class CityTable extends Component{
         }
 
         this.myData = []
-        
+
     }
     
     getOptions(options){
@@ -92,88 +90,143 @@ export default class CityTable extends Component{
         
     }
 
+    setCityChoice(value){
+        this.setState({
+            cityChoice : value.value
+        })
+
+        console.log("updated state")
+    }
+    
     runGraphs(){
 
         console.log("states")
         console.log(this.state)
 
         const Tables = this.state.Tables
+        const cityChoice = this.state.cityChoice
         return(
 
             <div>
+            
+                <div className="container my-2" style={{backgroundColor: "#6f58c9"}}>
+                                <h2>City Level Information</h2>
+                                <Select options={this.state.selectOptions} defaultValue={this.state.selectOptions[0]} onChange={ (value) => this.setCityChoice(value)} />
+                                <div className="row dash-row">
+                                    <div className="col-md dash-col-com">
+                                        <div className="ct-grid-side">
+                                            <div className="ct-side-r1">
+                                                >
+                                                <TableComponent4
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
+                                                        tableName = {"Subpopulations"}
+                                                        height = {"124%"}
+                                                />
+                                                
+                                            </div>
+                                            <div className="ct-side-r2">
+                                                
+                                                <TableComponent4
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Age"],"subpopulation", ["Total"])}
+                                                        tableName = {"Age "}
+                                                        height = {"114%"}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-5 dash-col-com">
+                                        <div className="ct-grid-center">
+                                            <div className="ct-center-r1">
 
-                <Select options={this.state.selectOptions} onChange={ (value) => {
-                    this.setState({
-                        cityChoice : value.value
-                    })
-                }} />
+                                                <div className="ct-center-r1c1">
+                                                    <span className = "component-header">Chronically Homeless</span>                                                    
+                                                </div>
+                                                <div className="ct-center-r1c2">
+                                                    <span className = "component-header">Total Unsheltered Count</span>                            
+                                                </div>
+                                                <div className="ct-center-r1c3">
+                                                    <span className = "component-header">Percent of District</span>
+                                                </div>
 
-                <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="space-around" align="middle" >
-                <Col className="gutter-row" span={7}>
-                    <h5>Age Table</h5> 
-                    <DottedBox >col-1</DottedBox>
-                </Col>
-                <Col className="gutter-row" span={10}>
-                    <Row>
-                        <Col className="gutter-row" span={6}>
-                            num-1
-                            <DottedBox>num-1</DottedBox>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            num-2
-                            <DottedBox>num-2</DottedBox>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            num-3
-                            <DottedBox>num-3</DottedBox>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col className="gutter-row" span={7}>
-                    <h5>Gender</h5> 
-                    <DottedBox> col-3</DottedBox>
-                </Col>
-            </Row>
-            <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="center" align="top" >
-                <Col className="gutter-row"  span={7}>
-                        <h5>Subpopulation</h5> 
-                        <DottedBox >col-1</DottedBox>
-                </Col>
-                <Col className="gutter-row" span={17}>
-                        <Row>
-                            <Col className="gutter-row" span={16}>
-                                <row>
-                                    <Col className="gutter-row" span={12}>
-                                        graph
-                                    </Col>
-                                    <Col className="gutter-row" span={12}>
-                                        
-                                    </Col>
-                                </row>
-                            </Col>
-                            <Col className="gutter-row" span={8}>
-                                bar graph
-                                <DottedBox>num-2</DottedBox>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col className="gutter-row" span={16}>
-                                line graph
-                                <DottedBox>num-1</DottedBox>
-                            </Col>
-                            <Col className="gutter-row" span={8}>
-                                table
-                                <DottedBox>num-2</DottedBox>
-                            </Col>
-                        </Row>
-                </Col>
-            </Row>
+                                                <div className="ct-center-r2c1">
+                                                    <span className = "component-header">
+                                                        <Number height = {400}
+                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + this.state.cityChoice}
+                                                            />
+                                                    </span>
+                                                </div>
+                                                <div className="ct-center-r2c2">
+                                                    <span className = "component-header">
+                                                        <Total height = {400}
+                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Age+' + this.state.cityChoice}
+                                                            />
 
-        <div style = {{height: 1000, width: 800, position: "flex"}}>
-            <PieChart2
-                data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"]}
-            />
-        </div>
+                                                    </span>
+                                                </div>
+                                                <div className="ct-center-r2c3">
+                                                    <span className = "component-header">####</span>
+                                                </div>
+
+                                            </div>
+                                            <div className="ct-center-r2">
+                                                <div className="ct-center-r2c1">
+                                                    <TableComponent4
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
+                                                        tableName = "Hispanic"
+                                                        height = {"100%"}
+                                                    />
+                                                </div>
+                                                <div className="ct-center-r2c2">
+                                                    <PieChart2
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
+                                                        margin = {{bottom : 60, top : 30, right: 60, left : 60}}
+                                                        />
+                                                </div>
+                                            </div>
+                                            <div className="ct-center-r3">
+                                                <span className = "component-header">Race</span>
+                                                <BarGraph 
+                                                    data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Race"],"subpopulation", ["Total"])}
+                                                    indexBy = {"subpopulation"}
+                                                    keys = {["interview"]}
+                                                    margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+                                                    />
+                                            </div>       
+                                        </div>
+                                    </div>
+                                    <div className="col-md dash-col-com">
+                                        <div className="ct-grid-side">
+                                            <div className="ct-side-r1-grid">
+                                                <div className="ct-side-r1r1">
+                                                    <TableComponent4
+                                                        data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"]}
+                                                        tableName = {"Gender"}
+                                                        height = {"100%"}
+                                                    />
+                                                </div>
+                                                <div className="ct-side-r1r2">
+                                                    <BarGraph 
+                                                    data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
+                                                    indexBy = {"subpopulation"}
+                                                    keys = {["interview"]}
+                                                    margin = {{ right: 30, left: 50}}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="ct-side-r2">
+                                                
+                                                <BarGraph 
+                                                    data = {this.state.Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Gender"]}
+                                                    indexBy = {"subpopulation"}
+                                                    keys = {["interview"]}
+                                                    margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+                                                    />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
             </div>    
         )
     }

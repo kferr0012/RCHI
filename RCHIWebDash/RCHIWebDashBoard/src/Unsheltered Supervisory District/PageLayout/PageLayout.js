@@ -15,7 +15,9 @@ import PitCountByCity from '../Data/PitCountByCity'
 
 
 const PageLayout = ({currentDistrict}) => {
+    
     return(
+    
     <div>
         <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} className="my-row-1" type="flex" justify="space-around" align="middle">
                 

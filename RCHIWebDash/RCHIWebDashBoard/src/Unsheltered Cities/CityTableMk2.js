@@ -17,17 +17,17 @@ export default class CityTable extends Component{
         
     }
 
-    // async componentDidMount(){
-    //     console.log("didMount")
-    //     var myTables = await aggregateFetch(this.state.urls)
-    //     this.setState({
-    //         Tables: myTables,
-    //         rendered : true
-    //     })
+    async componentDidMount(){
+        console.log("didMount")
+        var myTables = await aggregateFetch(this.state.urls)
+        this.setState({
+            Tables: myTables,
+            rendered : true
+        })
 
-    //     console.log("available Tables")
-    //     console.log(this.state.Tables)
-    // }
+        console.log("available Tables")
+        console.log(this.state.Tables)
+    }
 
     renderDashboards(){
 
@@ -77,9 +77,13 @@ export default class CityTable extends Component{
                             <div className="ct-side-r1-grid">
                                 <div className="ct-side-r1r1">
                                     <p>Gender table</p>
+                                    
                                 </div>
                                 <div className="ct-side-r1r2">
                                     <p>Gender chart</p>
+                                    <BarGraph
+                                        data = {Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Gender"]}
+                                        />
                                 </div>
                             </div>
                             <div className="ct-side-r2">
