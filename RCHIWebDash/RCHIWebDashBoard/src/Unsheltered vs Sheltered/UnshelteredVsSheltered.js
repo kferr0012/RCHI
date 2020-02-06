@@ -563,6 +563,7 @@ export default class UnsheleteredVsSheltered extends Component{
                       <PieChart2
                         data = {filterList(this.state.Tables["GeneralTableSubpopulationsSheltered2019"]["Household"],"subpopulation", ["Total"])}
                         footer = {false}
+                        margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                       />
                     </div>
                   </div>
@@ -575,18 +576,21 @@ export default class UnsheleteredVsSheltered extends Component{
                   </div>
                   <div className="svu-r2">
 
-                  {/* FIXME: need to make 2 column format for bar graphs to be side-by-side */}
+                    <span className="component-header">Age</span>
                     <BarGraph 
                       data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Age"], "subpopulation", ["Total","Unknown Age"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
+                      margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
                     />
                   </div>
                   <div className="svu-r2">
+                    <span className="component-header"> Ethnicity</span>
                     <BarGraph
                       data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
+                      margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
                     />
                   </div>                  
                 </div>
@@ -607,6 +611,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     <PieChart2
                       data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
                       footer = {false}
+                      margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                     />
                     
                   </div>

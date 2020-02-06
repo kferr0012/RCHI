@@ -98,7 +98,7 @@ export default class LineGraph extends React.Component {
       <div style = {{height: '100%', width: '100%', position:'absolute'}}>
         <ResponsiveLine
           data={this.state.data}
-          margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+          margin={{ top: 25, right: 25, bottom: 50, left: 40}}
           xScale={{ type: 'point' }}
           yScale={{ type: 'linear', stacked: false, min: 0, max: 'auto' }}
           axisTop={null}
@@ -134,11 +134,11 @@ export default class LineGraph extends React.Component {
           useMesh={true}
           legends={[
               {
-                  anchor: 'bottom-right',
-                  direction: 'column',
+                  anchor: 'bottom',
+                  direction: 'row',
                   justify: false,
-                  translateX: 100,
-                  translateY: 0,
+                  translateX: 0,
+                  translateY: 50,
                   itemsSpacing: 0,
                   itemDirection: 'left-to-right',
                   itemWidth: 80,

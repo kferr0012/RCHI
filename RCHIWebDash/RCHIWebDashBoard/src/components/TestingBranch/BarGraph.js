@@ -12,6 +12,8 @@ export default class BarGraph extends Component{
             keys : this.props.keys,
             mydata : this.props.data,
             legend : this.props.legend,
+            margin: this.props.margin,
+            axisTitle : this.props.axisTitle,
         }
 
         console.log("BarGraph data")
@@ -25,7 +27,7 @@ export default class BarGraph extends Component{
             data={this.state.mydata}
             keys={this.state.keys}
             indexBy= {this.state.index}    
-            margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+            margin={this.props.margin}
             padding={0}
             groupMode="grouped"
             colors={{ scheme: 'nivo' }}
@@ -57,7 +59,7 @@ export default class BarGraph extends Component{
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'Race',
+                legend: this.props.axisTitle ? this.props.data[0].category : null,
                 legendPosition: 'middle',
                 legendOffset: 32
             }}
