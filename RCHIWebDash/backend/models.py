@@ -19,6 +19,7 @@ class SubpopulationsByCity2019(models.Model):
 	subpopulation = models.CharField(max_length=100)
 	interview = models.IntegerField()
 	observation = models.IntegerField()
+	total = models.IntegerField()
 
 class SubpopulationsByYear(models.Model):
 	year = models.IntegerField()

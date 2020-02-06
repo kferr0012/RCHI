@@ -7,8 +7,6 @@ import Header from './PageLayout/Utilities/Header'
 
 import PageLayout from './PageLayout/PageLayout'
 
-
-
 class UnshelteredSupervisoryDistricts extends Component{
     constructor(){
         super();

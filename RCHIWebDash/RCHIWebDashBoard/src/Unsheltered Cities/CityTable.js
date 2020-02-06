@@ -152,6 +152,7 @@ export default class CityTable extends Component{
                                                     <p>Hispanic Pie Chart</p>
                                                     <PieChart2
                                                         data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
+                                                        margin = {{bottom : 60, top : 60, left : 20}}
                                                         />
                                                 </div>
                                             </div>
