@@ -91,7 +91,7 @@
   font-size: calc(2px + 1.3vw);
   color: rgb(155, 153, 153);
   position: relative;
-  position: 1;
+  z-index: 1;
 }
 #segment{
   margin: 0;
