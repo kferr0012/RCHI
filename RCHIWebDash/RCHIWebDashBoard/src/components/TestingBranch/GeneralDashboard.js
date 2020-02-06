@@ -290,6 +290,9 @@ export default class Dashboard extends Component{
                     <PieChart2
                       data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
                     />
+                    <TableComponent4
+                      data = {this.state.Tables["GeneralTableSubpopulations2019"]["Gender"]}
+                    />
                   </div>
                   <div className="gen-r2c2">
                     <p className="component-header">Ethnicity</p>
@@ -346,6 +349,9 @@ export default class Dashboard extends Component{
                 <div className="col-md dash-col-reg">
                   <span className="component-header">Living Situations</span>
                   <PieChart2
+                    data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
+                  />
+                  <TableComponent4
                     data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
                   />
                 </div>
