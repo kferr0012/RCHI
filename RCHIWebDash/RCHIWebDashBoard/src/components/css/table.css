@@ -4,6 +4,7 @@ table, th, td {
 
 .table th, .table td {
   padding: .25rem;
+  vertical-align: middle;
 }
 
 .tableContainer {
