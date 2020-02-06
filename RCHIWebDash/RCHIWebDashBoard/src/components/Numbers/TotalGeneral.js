@@ -90,7 +90,6 @@ export default class TotalGeneral extends React.Component {
     render() {
         return (
             <div style = {{height: this.state.height}}>
-                <br/>
                 {this.state.mydata ? this.runTotal(): null}
             </div>
 

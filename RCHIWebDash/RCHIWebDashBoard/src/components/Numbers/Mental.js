@@ -85,7 +85,9 @@ export default class Mental extends React.Component {
 
 
         return (
-           percent
+           <div className = "component-header" style = {{fontSize: "24px"}}>
+                {percent} %
+           </div>
         )
 
 
@@ -97,8 +99,10 @@ export default class Mental extends React.Component {
     render() {
         return (
             <div style = {{height: this.state.height}}>
-                <br/>
-                {this.state.mydata ? this.runTotal(): null}% have mental health issues
+                
+                {this.state.mydata ? this.runTotal(): null}
+
+                <span className = "component-header">mental health issues </span>
             </div>
 
         )

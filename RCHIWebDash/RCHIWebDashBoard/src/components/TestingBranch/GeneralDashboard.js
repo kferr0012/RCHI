@@ -263,7 +263,7 @@ export default class Dashboard extends Component{
               />
             </div>
             <div className="col-md dash-col-reg">
-              {/* <span className="component-header">Homeless Population Trend</span> */}
+              {<span className="component-header">Homeless Population Trend</span>}
               <LineGraph />
             </div>
 
@@ -279,6 +279,7 @@ export default class Dashboard extends Component{
                     data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Race"], "subpopulation", ["Total"])}
                     indexBy = "subpopulation"
                     keys = {["interview", "observation"]}
+                    margin = {{left: 45, top: 50, bottom: 30}}
                   />
                 </div>
                 <div className="gen-r2">
@@ -287,12 +288,13 @@ export default class Dashboard extends Component{
                       <p className="component-header">Gender</p>
                       <PieChart2
                         data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                        margin = {{top: 35, bottom: 10}}
                       />
                     </div>
                     <div className="gen-r2c1r2">
                       <TableComponent4
-                        data = {this.state.Tables["GeneralTableSubpopulations2019"]["Gender"]}
-                        header = {true}
+                        data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total"])}
+                        header = {false}
                         height = {"100%"}
                       />
                     </div>
@@ -301,7 +303,8 @@ export default class Dashboard extends Component{
                     <p className="component-header">Ethnicity</p>
 
                     <PieChart2
-                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total"])}
+                      margin = {{top: 40, bottom: 40, left: 30, right: 30}}  
                     />
 
                   </div>
@@ -309,32 +312,51 @@ export default class Dashboard extends Component{
               </div>
             </div>
             <div className="col-md dash-col-big">
-              <p className="component-header">Unsheltered Only Demographic</p>
+              {/*<span className="component-header">Unsheltered Only Demographic</span> */}
               <div className="gen-grid-2">
-                <div>
-                    <Mental height = {50}
-                            url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
-                    />
-                    <PTSD height = {50}
-                          url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
-                    />
-                    <Substance height = {50}
-                               url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
-                    />
-                    <Physical height = {50}
+                <div className = "gen-s-r">
+                      
+                    <div className="gen-s-r1">
+                        <Mental height = {50}
+                                url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                        />
+                    </div>
+                    <div className="gen-s-r4">
+                        <PTSD height = {50}
                               url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
-                    />
-
+                        />
+                    </div>
+                    <div className="gen-s-r2">
+                        <Substance height = {50}
+                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                        />
+                    </div>
+                    <div className="gen-s-r3">
+                        <Physical height = {50}
+                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                        />
+                    </div>
                 </div>
                 <div className="gen-3r">
-                  <div className="gen-3r-r1">
-                    <p>Total Unsheltered Count</p>
-                    <TotalGeneral height = {50}
-                              url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
-                    />
+                  
+                <div className="gen-3r-r1">
+                    <span className = "component-header" style = {{textAlign: "middle"}}></span>
                   </div>
+
                   <div className="gen-3r-r2">
-                    <Table Cell Structured>
+                    <span className = "component-header" style = {{fontSize:"40px" ,textAlign: "middle"}}>
+                        <TotalGeneral height = {50}
+                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                        />
+                      </span>
+                  </div>
+                  <div className="gen-3r-r3">
+                  
+                    <span className = "component-header">Total Unsheltered Count</span>
+                  </div>
+                  <div className="gen-3r-r4">
+                    
+                    <Table style = {{height: "100%"}}Cell Structured>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
                         <Table.HeaderCell textAlign='center'>{1347}</Table.HeaderCell>
@@ -345,9 +367,11 @@ export default class Dashboard extends Component{
                       </Table.Row>
                     </Table>
                   </div>
-                  <div className="gen-3r-r3">
+                  <div className="gen-3r-r5">
+                    <span className = "component-header">Househhold Type</span>
                     <PieChart2
                       data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
+                      margin = {{top:40, bottom: 40, left: 40, right: 40}}
                     />
                   </div>
                   
@@ -357,6 +381,7 @@ export default class Dashboard extends Component{
                     <span className="component-header">Living Situations</span>
                     <PieChart2
                       data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
+                      margin = {{top:50,bottom:50,left:60, right: 60}}
                     />
                   </div>
                   <div className="gen-r2c1r2">

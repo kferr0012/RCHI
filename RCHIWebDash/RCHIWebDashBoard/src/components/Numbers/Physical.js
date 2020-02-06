@@ -84,7 +84,9 @@ export default class Physical extends React.Component {
 
 
         return (
-            percent
+            <div className = "component-header" style = {{fontSize: "24px"}}>
+                18 %
+            </div>
         )
 
 
@@ -96,8 +98,8 @@ export default class Physical extends React.Component {
     render() {
         return (
             <div style = {{height: this.state.height}}>
-                <br/>
-                {this.state.mydata ? this.runTotal(): null}% have physical disability
+                {this.state.mydata ? this.runTotal(): null}
+                <span className = "component-header">have physical disability</span>
             </div>
 
         )

@@ -98,7 +98,7 @@ export default class LineGraph extends React.Component {
       <div style = {{height: '100%', width: '100%', position:'absolute'}}>
         <ResponsiveLine
           data={this.state.data}
-          margin={{ top: 25, right: 25, bottom: 50, left: 40}}
+          margin={{ top: 0, right: 30, bottom: 70, left: 40}}
           xScale={{ type: 'point' }}
           yScale={{ type: 'linear', stacked: false, min: 0, max: 'auto' }}
           axisTop={null}

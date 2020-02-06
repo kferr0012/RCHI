@@ -573,7 +573,7 @@ export default class UnsheleteredVsSheltered extends Component{
               <div className="col-md dash-col-com">
                 <div className="svu-grid-2">
                   <div className="svu-r1-2">
-                    {/* <span className="component-header">Homeless Population Trend</span> */}
+                    <span className="component-header">Homeless Population Trend</span>
                     <LineGraph />
                   </div>
                   <div className="svu-r2">
