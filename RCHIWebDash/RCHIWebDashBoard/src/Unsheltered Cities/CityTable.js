@@ -109,7 +109,7 @@ export default class CityTable extends Component{
 
             <div>
             
-                <div className="container my-2" style={{backgroundColor: "#6f58c9"}}>
+                <div className="container my-2">
                                 <h2>City Level Information</h2>
                                 <Select options={this.state.selectOptions} defaultValue={this.state.selectOptions[0]} onChange={ (value) => this.setCityChoice(value)} />
                                 <div className="row dash-row">
