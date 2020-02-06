@@ -19,6 +19,7 @@ import Mental from "../Numbers/Mental";
 import Physical from "../Numbers/Physical";
 import PTSD from "../Numbers/PTSD";
 import Substance from "../Numbers/Substance";
+import TotalGeneral from "../Numbers/TotalGeneral";
 
 export default class Dashboard extends Component{
 
@@ -116,7 +117,9 @@ export default class Dashboard extends Component{
 
                 </div>
                 <div className="col-md dash-col-reg">
-                  <p className="component-header">2045</p>
+                    <TotalGeneral height = {50}
+                              url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                    />
                   <p>Total Unsheltered Count</p>
                   <Table Cell Structured>
                     <Table.Row>
