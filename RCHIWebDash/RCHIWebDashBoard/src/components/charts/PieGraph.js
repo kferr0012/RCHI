@@ -57,9 +57,6 @@ export default class PieGraph extends React.Component {
         let i;
         let totalValues = this.state.mydata;
         for (i = 0; i < this.state.mydata.length - 1; i++) {
-            if(this.state.mydata[i].subpopulation === 'Total'){
-                delete this.state.mydata[i];
-            }
    
             this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation
             this.state.mydata[i].id = this.state.mydata[i].subpopulation
