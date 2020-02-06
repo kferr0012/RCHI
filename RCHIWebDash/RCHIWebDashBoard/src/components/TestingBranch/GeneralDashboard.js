@@ -254,7 +254,7 @@ export default class Dashboard extends Component{
           <div className="row dash-row">
 
             <div className="col-md dash-col-reg">
-              <p className="component-header">Overall 21% increase in homeless count from 2018.</p>
+              {/* <p className="component-header">Overall 21% increase in homeless count from 2018.</p> */}
           
               <TableComponent4
                 data={this.table2data}
@@ -263,7 +263,7 @@ export default class Dashboard extends Component{
               />
             </div>
             <div className="col-md dash-col-reg">
-              <span className="component-header">Homeless Population Trend</span>
+              {/* <span className="component-header">Homeless Population Trend</span> */}
               <LineGraph />
             </div>
 
@@ -283,15 +283,19 @@ export default class Dashboard extends Component{
                 </div>
                 <div className="gen-r2">
                   <div className="gen-r2c1">
-                    <p className="component-header">Gender</p>
-                    <PieChart2
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
-                    />
-                    <TableComponent4
-                      data = {this.state.Tables["GeneralTableSubpopulations2019"]["Gender"]}
-                      header = {true}
-                      height = {"100%"}
-                    />
+                    <div className="gen-r2c1r1">
+                      <p className="component-header">Gender</p>
+                      <PieChart2
+                        data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                      />
+                    </div>
+                    <div className="gen-r2c1r2">
+                      <TableComponent4
+                        data = {this.state.Tables["GeneralTableSubpopulations2019"]["Gender"]}
+                        header = {true}
+                        height = {"100%"}
+                      />
+                    </div>
                   </div>
                   <div className="gen-r2c2">
                     <p className="component-header">Ethnicity</p>
@@ -306,8 +310,8 @@ export default class Dashboard extends Component{
             </div>
             <div className="col-md dash-col-big">
               <p className="component-header">Unsheltered Only Demographic</p>
-              <div className="row dash-row">
-                <div className="col-md dash-col-reg">
+              <div className="gen-grid-2">
+                <div>
                     <Mental height = {50}
                             url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
                     />
@@ -322,38 +326,47 @@ export default class Dashboard extends Component{
                     />
 
                 </div>
-                <div className="col-md dash-col-reg">
+                <div className="gen-3r">
+                  <div className="gen-3r-r1">
+                    <p>Total Unsheltered Count</p>
                     <TotalGeneral height = {50}
                               url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
                     />
-                  <p>Total Unsheltered Count</p>
-                  <Table Cell Structured>
-                    <Table.Row>
-                      <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
-                       <Table.HeaderCell textAlign='center'>{1347}</Table.HeaderCell>
-                    </Table.Row>
-                    <Table.Row>
-                      <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
-                      <Table.HeaderCell textAlign='center'>{698}</Table.HeaderCell>
-                    </Table.Row>
-                  </Table>
-
-                  <PieChart2
-                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
-                  />
+                  </div>
+                  <div className="gen-3r-r2">
+                    <Table Cell Structured>
+                      <Table.Row>
+                        <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{1347}</Table.HeaderCell>
+                      </Table.Row>
+                      <Table.Row>
+                        <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{698}</Table.HeaderCell>
+                      </Table.Row>
+                    </Table>
+                  </div>
+                  <div className="gen-3r-r3">
+                    <PieChart2
+                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
+                    />
+                  </div>
                   
                 </div>
-                <div className="col-md dash-col-reg">
-                  <span className="component-header">Living Situations</span>
-                  <PieChart2
-                    data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
-                  />
+                <div className="gen-r2c1">
+                  <div className="gen-r2c1r1">
+                    <span className="component-header">Living Situations</span>
+                    <PieChart2
+                      data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
+                    />
+                  </div>
+                  <div className="gen-r2c1r2">
                     <TableComponent4
                       data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
                       header = {true}
                       height = {"100%"}
                     />
-                </div>
+                  </div>
+              </div>
               </div>
             </div>
           </div>

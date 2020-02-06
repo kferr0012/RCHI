@@ -29,26 +29,72 @@
 }
 
 .gen-r1 {
-  display: grid;
+  display: flex;
   position: relative;
-  grid-row: 1 span 1;
+  grid-row: 1 / span 1;
 }
 
 .gen-r2 {
   display: grid;
   position: relative;
-  grid-row: 2 span 1;
   grid-template: 1fr / 1fr 1fr;
 }
 
 .gen-r2c1 {
-  grid-column-end: 1 span 1;
+  grid-template: 1fr 1fr / 1fr;
   position: relative;
+  display: grid;
+  height: 100%;
+}
+
+.gen-r2c1r1 {
+  grid-row: 1 / span 1;
+  position: relative;
+  display: flex;
+}
+
+.gen-r2c1r2 {
+  grid-row: 2 / span 1;
+  position: relative;
+  display: flex;
 }
 
 .gen-r2c2 {
-  grid-column-end: 2 span 1;
+  grid-column-end: 2 / span 1;
   position: relative;
+  display: flex;
+}
+
+.gen-grid-2 {
+  display: grid;
+  position: relative;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  height: 100%;
+}
+
+.gen-3r {
+  display: grid;
+  position: relative;
+  grid-row: 1fr 1fr 1fr / 1fr;
+  height: 100%;
+}
+
+.gen-3r-r1 {
+  grid-row: 1 / span 1;
+  position: relative;
+  display: flex;
+}
+
+.gen-3r-r2 {
+  grid-row: 2 / span 1;
+  position: relative;
+  display: flex;
+}
+
+.gen-3r-r3 {
+  grid-row: 3 / span 1;
+  position: relative;
+  display: flex;
 }
 
 .svu-grid {
