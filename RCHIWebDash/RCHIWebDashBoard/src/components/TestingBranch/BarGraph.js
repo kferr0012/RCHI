@@ -20,6 +20,21 @@ export default class BarGraph extends Component{
         console.log(this.props.data)
     }
 
+    componentWillReceiveProps()
+    {
+        console.log("willRecieveProps- Bar")
+
+        console.log("mydata")
+        console.log(this.props.data)
+        this.setState({
+            index : this.props.indexBy,
+            keys : this.props.keys,
+            mydata : this.props.data,
+            legend : this.props.legend,
+            margin: this.props.margin,
+            axisTitle : this.props.axisTitle,})
+    }
+
     render(){
         return(
         <div style = {{height: '100%', width: '100%', position:'absolute'}}>

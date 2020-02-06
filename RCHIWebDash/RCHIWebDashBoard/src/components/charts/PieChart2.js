@@ -17,6 +17,16 @@ export default class PieChart2 extends React.Component {
         console.log("Pie chart")
         console.log(this.state)
     }
+    componentWillReceiveProps(){
+        this.setState({
+            url : this.props.url,
+            height : this.props.height,
+            mydata : this.props.data,
+            footer : this.props.footer,
+            margin : this.props.margin,
+            
+        })
+    }
 
     render(){
         console.log("Pie Chart render")
