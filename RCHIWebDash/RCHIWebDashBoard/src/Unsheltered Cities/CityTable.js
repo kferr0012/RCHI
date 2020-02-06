@@ -108,51 +108,78 @@ export default class CityTable extends Component{
         return(
 
             <div>
-
-                <Select options={this.state.selectOptions} defaultValue={this.state.selectOptions[0]} onChange={ (value) => this.setCityChoice(value)} />
-
+            
                 <div className="container my-2" style={{backgroundColor: "#6f58c9"}}>
                                 <h2>City Level Information</h2>
-                                <p>dropdown</p>
+                                <Select options={this.state.selectOptions} defaultValue={this.state.selectOptions[0]} onChange={ (value) => this.setCityChoice(value)} />
                                 <div className="row dash-row">
                                     <div className="col-md dash-col-com">
                                         <div className="ct-grid-side">
                                             <div className="ct-side-r1">
-                                                <p>Suppopulations Table</p>
-                                                <LineGraph />
+                                                >
+                                                <TableComponent4
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
+                                                        tableName = {"Subpopulations"}
+                                                        height = {"124%"}
+                                                />
+                                                
                                             </div>
                                             <div className="ct-side-r2">
-                                                <p>Age Table</p>
-                                                <LineGraph />
+                                                
+                                                <TableComponent4
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Age"],"subpopulation", ["Total"])}
+                                                        tableName = {"Age "}
+                                                        height = {"114%"}
+                                                />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-md-5 dash-col-com">
                                         <div className="ct-grid-center">
                                             <div className="ct-center-r1">
+
                                                 <div className="ct-center-r1c1">
-                                                    <p>Chronically Homeless</p>
-                                                    <LineGraph />
+                                                    <span className = "component-header">Chronically Homeless</span>                                                    
                                                 </div>
                                                 <div className="ct-center-r1c2">
-                                                    <p>Total Unsheltered Count</p>
-                                                    <LineGraph />
+                                                    <span className = "component-header">Total Unsheltered Count</span>                            
                                                 </div>
                                                 <div className="ct-center-r1c3">
-                                                    <p>Percent of District</p>
-                                                    <LineGraph />
+                                                    <span className = "component-header">Percent of District</span>
                                                 </div>
+
+                                                <div className="ct-center-r2c1">
+                                                    <span className = "component-header">
+                                                        <Number height = {400}
+                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + this.state.cityChoice}
+                                                            />
+                                                    </span>
+                                                </div>
+                                                <div className="ct-center-r2c2">
+                                                    <span className = "component-header">
+                                                        <Total height = {400}
+                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Age+' + this.state.cityChoice}
+                                                            />
+
+                                                    </span>
+                                                </div>
+                                                <div className="ct-center-r2c3">
+                                                    <span className = "component-header">####</span>
+                                                </div>
+
                                             </div>
                                             <div className="ct-center-r2">
                                                 <div className="ct-center-r2c1">
-                                                    <p>Hispanic Table</p>
-                                                    <LineGraph />
+                                                    <TableComponent4
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
+                                                        tableName = "Hispanic"
+                                                        height = {"100%"}
+                                                    />
                                                 </div>
                                                 <div className="ct-center-r2c2">
-                                                    <p>Hispanic Pie Chart</p>
                                                     <PieChart2
                                                         data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
-                                                        margin = {{bottom : 60, top : 60, left : 20}}
+                                                        margin = {{bottom : 60, top : 30, right: 60, left : 60}}
                                                         />
                                                 </div>
                                             </div>
@@ -171,21 +198,23 @@ export default class CityTable extends Component{
                                         <div className="ct-grid-side">
                                             <div className="ct-side-r1-grid">
                                                 <div className="ct-side-r1r1">
-                                                    <p>Gender table</p>
-                                                    <LineGraph />
+                                                    <TableComponent4
+                                                        data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"]}
+                                                        tableName = {"Gender"}
+                                                        height = {"100%"}
+                                                    />
                                                 </div>
                                                 <div className="ct-side-r1r2">
-                                                    <p>Gender chart</p>
                                                     <BarGraph 
                                                     data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
                                                     keys = {["interview"]}
-                                                    margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+                                                    margin = {{ right: 30, left: 50}}
                                                     />
                                                 </div>
                                             </div>
                                             <div className="ct-side-r2">
-                                                <p>Race Table</p>
+                                                
                                                 <BarGraph 
                                                     data = {this.state.Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Gender"]}
                                                     indexBy = {"subpopulation"}

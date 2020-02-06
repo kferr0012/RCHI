@@ -80,9 +80,7 @@ export default class Number extends React.Component {
     }
     render() {
         return (
-            <div style = {{height: this.state.height}}>
-                Number of Chronically Homeless
-                <br/>
+            <div>
                 {this.state.mydata ? this.runNumber(): null}
             </div>
 

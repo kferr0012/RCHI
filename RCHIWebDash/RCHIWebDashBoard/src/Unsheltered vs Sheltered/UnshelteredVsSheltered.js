@@ -556,6 +556,8 @@ export default class UnsheleteredVsSheltered extends Component{
                         <TableComponent4
                         data = {data_for_sheltered_table}
                         tableName = "Sheltered Statistics"
+                        header = {true}
+                        height = {"120%"}
                         />
                     </div>
                     <div className="svu-r2-h25">
@@ -602,7 +604,8 @@ export default class UnsheleteredVsSheltered extends Component{
                     <TableComponent4
                       data = {data}
                       tableName = "Unsheltered Statistics"
-
+                      header = {true}
+                      height = {"120%"}
                     />
                     
                   </div>

@@ -46,6 +46,7 @@ export default class BarGraph extends Component{
             padding={0}
             groupMode="grouped"
             colors={{ scheme: 'nivo' }}
+            colorBy="index"
             defs={[
                 {
                     id: 'dots',

@@ -5,6 +5,7 @@ import DoughnutChart from '../charts/DoughnutChart'
 import LineChart from '../charts/LineChart';
 import BarChart from '../charts/BarChart';
 import { Row, Col } from 'antd';
+import TableComponent4 from '../charts/TableComponent4'
 
 import '../css/GeneralDash.css'
 
@@ -72,7 +73,7 @@ export default class SupervisorialDistrictDash extends Component {
     }
     updateChart(){
         console.log( this.props.data2019['Chronic'] + " " + this.state.ChronicChartData[0].datasets[0].data[0]);
-        
+
             this.setState({
                 curDistrict: this.props.District_Num,
                 ChronicChartData: [
@@ -93,12 +94,12 @@ export default class SupervisorialDistrictDash extends Component {
                         labels: ['2015','2016','2017','2018','2019'],
                         datasets:[
                             {
-                                data: [ 
-                                    parseInt(this.props.PIT_Count_Trends['2015']), 
-                                    parseInt(this.props.PIT_Count_Trends['2016']), 
-                                    parseInt(this.props.PIT_Count_Trends['2017']), 
-                                    parseInt(this.props.PIT_Count_Trends['2018']), 
-                                    parseInt(this.props.PIT_Count_Trends['2019']), 
+                                data: [
+                                    parseInt(this.props.PIT_Count_Trends['2015']),
+                                    parseInt(this.props.PIT_Count_Trends['2016']),
+                                    parseInt(this.props.PIT_Count_Trends['2017']),
+                                    parseInt(this.props.PIT_Count_Trends['2018']),
+                                    parseInt(this.props.PIT_Count_Trends['2019']),
                                 ],
                                 backgroundColor: ['#4F9BCC40'],
                                 borderColor: '#4F9BCCa0',
@@ -111,14 +112,14 @@ export default class SupervisorialDistrictDash extends Component {
                         labels: ['Asian','American Indian','Black','White','Multiple','Native Hawaiian','Unknown Race'],
                         datasets:[
                             {
-                                data: [ 
+                                data: [
                                     parseInt(this.props.data2019['Asian']),
-                                    parseInt(this.props.data2019['American Indian']), 
-                                    parseInt(this.props.data2019['Black']), 
-                                    parseInt(this.props.data2019['White']), 
-                                    parseInt(this.props.data2019['Multiple']), 
-                                    parseInt(this.props.data2019['Native Hawaiian']), 
-                                    parseInt(this.props.data2019['Unknown Race']), 
+                                    parseInt(this.props.data2019['American Indian']),
+                                    parseInt(this.props.data2019['Black']),
+                                    parseInt(this.props.data2019['White']),
+                                    parseInt(this.props.data2019['Multiple']),
+                                    parseInt(this.props.data2019['Native Hawaiian']),
+                                    parseInt(this.props.data2019['Unknown Race']),
                                 ],
                                 backgroundColor: [
                                     '#CC804F80',
@@ -141,25 +142,25 @@ export default class SupervisorialDistrictDash extends Component {
                     }
                 ],
             });
-        
+
     }
 	render() {
         //Calculates maxBarChart value by rounding to the nearest 50 and the adding 100 or 50 depending on the round
         var maxBarChart = this.props.data2019['White'] / 50.0;
-        if ( maxBarChart%1 < .5){   
+        if ( maxBarChart%1 < .5){
             maxBarChart = Math.round(maxBarChart + 2) *50;  }
         else{
             maxBarChart = Math.round(maxBarChart + 1) * 50; }
-        
+
         // Updates Chart Data is props are out of sync with state
         if (this.props.data2019['Chronic'] != this.state.ChronicChartData[0].datasets[0].data[0]){
             this.updateChart(); }
-        
+
         //sets riverside asterisk
         var asterisk;
-        if (parseInt(this.props.District_Num) < 3){   
-            // asterisk = (<tr><td>* Riverside is part of both District 1 and 2</td> </tr>) ; } 
-            asterisk = (<p className="asterisk">* Riverside is part of both District 1 and 2</p>) ; } 
+        if (parseInt(this.props.District_Num) < 3){
+            // asterisk = (<tr><td>* Riverside is part of both District 1 and 2</td> </tr>) ; }
+            asterisk = (<p className="asterisk">* Riverside is part of both District 1 and 2</p>) ; }
 
         return(
             <Grid container>
@@ -176,7 +177,7 @@ export default class SupervisorialDistrictDash extends Component {
                                 <Grid.Row>
                                     <Grid.Column width={10}>
                                         <h6>PIT Count Trend</h6>
-                                        {/* 
+                                        {/*
                                             key={Math.random()} this ensures the chart actaully rerenders ebery time the function render is run, otherwise the tables update but not the charts
                                             height={(window.innerHeight*.43)-130} height is scaled based off height of the total window, not sure if this is workable on smaller displays
                                             datasets={this.state.PITTrendChartData} passes in data that in in an array eg. [ {data} ] (built in so its possible to switch datasets from user input)
@@ -187,7 +188,7 @@ export default class SupervisorialDistrictDash extends Component {
                                     </Grid.Column>
                                     <Grid.Column width={6}>
                                         <h6>Chronically Homeless</h6>
-                                        {/* 
+                                        {/*
                                             same as linechart
                                         */}
                                         <DoughnutChart key={Math.random()} height={(window.innerHeight*.43)-130} datasets={this.state.ChronicChartData} data={0} showAllTooltips={true}/>
@@ -198,7 +199,8 @@ export default class SupervisorialDistrictDash extends Component {
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <h6>Population Counts</h6>
-                        {/* 
+
+                        {/*
                             passes in data straight from props
                         */}
                         <DistrictPopTable data2018={this.props.data2018} data2019={this.props.data2019} />
@@ -235,18 +237,18 @@ export default class SupervisorialDistrictDash extends Component {
                                                     <td>{city['2018']}</td>
                                                     <td>{city['2019']}</td>
                                                 </tr>
-                                            );  
+                                            );
                                     })
                                 }
                             </tbody>
                             {/* riverside asterisk */}
-                            
+
                         </table>
-                        { asterisk } 
+                        { asterisk }
                     </Grid.Column>
                     <Grid.Column width={6}>
                         <h6>Race</h6>
-                        {/* 
+                        {/*
                             key={Math.random()} this ensures the chart actaully rerenders ebery time the function render is run, otherwise the tables update but not the charts
                             height={(window.innerHeight*.43)-130} height is scaled based off height of the total window, not sure if this is workable on smaller displays
                             datasets={this.state.PITTrendChartData} passes in data that in in an array eg. [ {data} ] (built in so its possible to switch datasets from user input)
@@ -258,7 +260,7 @@ export default class SupervisorialDistrictDash extends Component {
                     <Grid.Column width={4}>
                         <h6>Household Composition</h6>
                         <table className="width100 bottomTables">
-                            {/* 
+                            {/*
                                 passes in data straight from props
                             */}
                             <thead>
@@ -287,7 +289,7 @@ export default class SupervisorialDistrictDash extends Component {
                         </table>
                     </Grid.Column>
                 </Grid.Row>
-                
+
             </Grid>
         );
     }

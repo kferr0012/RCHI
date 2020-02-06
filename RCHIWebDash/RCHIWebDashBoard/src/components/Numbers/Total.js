@@ -79,9 +79,7 @@ export default class Total extends React.Component {
     }
     render() {
         return (
-            <div style = {{height: this.state.height}}>
-                Total 2019 Unsheltered Count
-                <br/>
+            <div>
                 {this.state.mydata ? this.runTotal(): null}
             </div>
 
