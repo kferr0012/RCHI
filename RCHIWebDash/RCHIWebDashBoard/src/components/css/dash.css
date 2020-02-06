@@ -239,7 +239,13 @@
 .ct-grid-side {
   display: grid;
   position: relative;
-  grid-template: 3fr 2fr / 1fr;
+  grid-template: .6fr 1fr 100px 1fr/ 1fr;
+  height: 100%;
+}
+.ct-grid-side-left {
+  display: grid;
+  position: relative;
+  grid-template: 1.5fr 1fr/ 1fr;
   height: 100%;
 }
 
@@ -266,7 +272,16 @@
   position: relative;
   grid-row: 2 / span 1;
 }
-
+.ct-side-r1r3 {
+  display: flex;
+  position: relative;
+  grid-row: 3 / span 1;
+}
+.ct-side-r1r4 {
+  display: flex;
+  position: relative;
+  grid-row: 4 / span 1;
+}
 .ct-side-r2 {
   display: flex;
   position: relative;
