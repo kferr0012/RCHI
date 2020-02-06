@@ -54,21 +54,43 @@
 .svu-grid {
   display: grid;
   position: relative;
-  grid-template: 1fr / 1fr 1fr;
+  grid-template: 3fr 1fr / 1fr;
+  height: 100%;
+}
+
+.svu-grid-2 {
+  display: grid;
+  position: relative;
+  grid-template: 1fr 1fr / 1fr 1fr;
   height: 100%;
 }
 
 .svu-r1 {
   display: grid;
   position: relative;
-  grid-row:  1 span 1;
+  grid-row:  1 / span 1;
+  background-color: #3b60e4;
+}
+
+.svu-r1-2 {
+  display: grid;
+  position: relative;
+  grid-row:  1 / span 1;
+  grid-column:  1 / span 2;
   background-color: #3b60e4;
 }
 
 .svu-r2 {
   display: grid;
   position: relative;
-  grid-row: 2 span 1;
+  grid-row: 2 / span 1;
+  background-color: #5dfdcb;
+}
+
+.svu-r2-h25 {
+  display: grid;
+  position: relative;
+  grid-row: 2 / span 1;
   background-color: #5dfdcb;
 }
 
