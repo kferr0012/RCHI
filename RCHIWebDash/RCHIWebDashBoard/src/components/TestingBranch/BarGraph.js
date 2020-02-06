@@ -11,6 +11,7 @@ export default class BarGraph extends Component{
             index : this.props.indexBy,
             keys : this.props.keys,
             mydata : this.props.data,
+            legend : this.props.legend,
         }
 
         console.log("BarGraph data")
@@ -71,7 +72,7 @@ export default class BarGraph extends Component{
             labelSkipWidth={12}
             labelSkipHeight={12}
             labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-            legends={[
+            legends={this.props.legend ? [
                 {
                     dataFrom: 'keys',
                     anchor: 'bottom-right',
@@ -94,7 +95,7 @@ export default class BarGraph extends Component{
                         }
                     ]
                 }
-            ]}
+            ] : []}
             animate={true}
             motionStiffness={90}
             motionDamping={15}
