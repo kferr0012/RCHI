@@ -219,11 +219,8 @@ export default class CityTable extends Component{
                                             </div>
                                             <div className="ct-side-r2">
                                                 
-                                                <BarGraph 
-                                                    data = {this.state.Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Gender"]}
-                                                    indexBy = {"subpopulation"}
-                                                    keys = {["interview"]}
-                                                    margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+                                                <TableComponent4 
+                                                    data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Race"]}
                                                     />
                                             </div>
                                         </div>
