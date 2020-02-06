@@ -108,72 +108,74 @@ export default class CityTable extends Component{
                     })
                 }} />
 
-                <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="space-around" align="middle" >
-                <Col className="gutter-row" span={7}>
-                    <h5>Age Table</h5> 
-                    <DottedBox >col-1</DottedBox>
-                </Col>
-                <Col className="gutter-row" span={10}>
-                    <Row>
-                        <Col className="gutter-row" span={6}>
-                            num-1
-                            <DottedBox>num-1</DottedBox>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            num-2
-                            <DottedBox>num-2</DottedBox>
-                        </Col>
-                        <Col className="gutter-row" span={6}>
-                            num-3
-                            <DottedBox>num-3</DottedBox>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col className="gutter-row" span={7}>
-                    <h5>Gender</h5> 
-                    <DottedBox> col-3</DottedBox>
-                </Col>
-            </Row>
-            <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, 20]} type="flex" justify="center" align="top" >
-                <Col className="gutter-row"  span={7}>
-                        <h5>Subpopulation</h5> 
-                        <DottedBox >col-1</DottedBox>
-                </Col>
-                <Col className="gutter-row" span={17}>
-                        <Row>
-                            <Col className="gutter-row" span={16}>
-                                <row>
-                                    <Col className="gutter-row" span={12}>
-                                        graph
-                                    </Col>
-                                    <Col className="gutter-row" span={12}>
-                                        
-                                    </Col>
-                                </row>
-                            </Col>
-                            <Col className="gutter-row" span={8}>
-                                bar graph
-                                <DottedBox>num-2</DottedBox>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col className="gutter-row" span={16}>
-                                line graph
-                                <DottedBox>num-1</DottedBox>
-                            </Col>
-                            <Col className="gutter-row" span={8}>
-                                table
-                                <DottedBox>num-2</DottedBox>
-                            </Col>
-                        </Row>
-                </Col>
-            </Row>
-
-        <div style = {{height: 1000, width: 800, position: "flex"}}>
-            <PieChart2
-                data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"]}
-            />
-        </div>
+                <div className="container my-2" style={{backgroundColor: "#6f58c9"}}>
+                                <h2>City Level Information</h2>
+                                <p>dropdown</p>
+                                <div className="row dash-row">
+                                    <div className="col-md dash-col-com">
+                                        <div className="ct-grid-side">
+                                            <div className="ct-side-r1">
+                                                <p>Suppopulations Table</p>
+                                            </div>
+                                            <div className="ct-side-r2">
+                                                <p>Age Table</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-5 dash-col-com">
+                                        <div className="ct-grid-center">
+                                            <div className="ct-center-r1">
+                                                <div className="ct-center-r1c1">
+                                                    <p>Chronically Homeless</p>
+                                                </div>
+                                                <div className="ct-center-r1c2">
+                                                    <p>Total Unsheltered Count</p>
+                                                </div>
+                                                <div className="ct-center-r1c3">
+                                                    <p>Percent of District</p>
+                                                </div>
+                                            </div>
+                                            <div className="ct-center-r2">
+                                                <div className="ct-center-r2c1">
+                                                    <p>Hispanic Table</p>
+                                                </div>
+                                                <div className="ct-center-r2c2">
+                                                    <p>Hispanic Pie Chart</p>
+                                                    <PieChart2
+                                                        data = {Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Ethinicity"]}
+                                                        />
+                                                </div>
+                                            </div>
+                                            <div className="ct-center-r3">
+                                                <p>Race Bar Chart</p>
+                                                <BarGraph
+                                                    data = {Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Race"]}
+                                                    />
+                                            </div>       
+                                        </div>
+                                    </div>
+                                    <div className="col-md dash-col-com">
+                                        <div className="ct-grid-side">
+                                            <div className="ct-side-r1-grid">
+                                                <div className="ct-side-r1r1">
+                                                    <p>Gender table</p>
+                                                </div>
+                                                <div className="ct-side-r1r2">
+                                                    <p>Gender chart</p>
+                                                    <BarGraph
+                                                        data = {Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Gender"]}
+                                                        />
+                                                </div>
+                                            </div>
+                                            <div className="ct-side-r2">
+                                                <p>Race Table</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
             </div>    
         )
     }
