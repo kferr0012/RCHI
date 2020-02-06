@@ -14,7 +14,7 @@ class TableComponent4 extends Component{
       col_size : null,
       body_function : null,
       test_function : null,
-      
+      mystyle : null
     }
   }
 
@@ -123,7 +123,7 @@ class TableComponent4 extends Component{
     var my_style = {
       width: this.props.width,
       // padding: "30px",
-      // margin: "auto"
+      // margin: "auto",
       height: "100%"
     }
 
@@ -152,25 +152,22 @@ class TableComponent4 extends Component{
     }
     else{
     return(
-      <div className="tableContainer" style = {{height: '100%', width: '100%', position:'absolute'}}>
-        <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "100%", }}>
-          
+      <div className="tableContainer" style = {this.state.mystyle}>
+        <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "80%"}}>
           <Table.Header>
 
-            {this.props.tableName ? 
-
-              <Table.Row>
+            {this.props.tableName ?
+            <Table.Row>
               <Table.HeaderCell colSpan={this.state.col_size+1} textAlign='center'>
                 <Header>
                   {this.props.tableName}
                   <Header.Subheader/>
                 </Header>
               </Table.HeaderCell>
-              </Table.Row>
-              : 
-              null
+            </Table.Row>
+            :null
             }
-            
+
 
             <Table.Row>
             <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
