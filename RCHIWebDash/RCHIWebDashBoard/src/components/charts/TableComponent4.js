@@ -122,8 +122,9 @@ class TableComponent4 extends Component{
     //Styling
     var my_style = {
       width: this.props.width,
-      padding: "30px",
-      margin: "auto"
+      // padding: "30px",
+      // margin: "auto"
+      height: "100%"
     }
 
 
@@ -151,8 +152,8 @@ class TableComponent4 extends Component{
     }
     else{
     return(
-      <div style = {{height: '100%', width: '100%', position:'absolute'}}>
-        <Table Cell Structured style={{ borderWidth: "1px" }}>
+      <div className="tableContainer" style = {{height: '100%', width: '100%', position:'absolute'}}>
+        <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "100%", }}>
           
           <Table.Header>
 
