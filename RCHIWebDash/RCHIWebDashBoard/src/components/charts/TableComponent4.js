@@ -153,7 +153,7 @@ class TableComponent4 extends Component{
     else{
     return(
       <div className="tableContainer" style = {{height: '100%', width: '100%', position:'absolute'}}>
-        <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "80%", }}>
+        <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "100%", }}>
           
           <Table.Header>
 
