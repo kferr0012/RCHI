@@ -168,7 +168,7 @@
 .ct-side-r1 {
   display: flex;
   position: relative;
-  grid-row: 1 span 1;
+  grid-row: 1 / span 1;
   background-color: #3b60e4;
 }
 
@@ -182,21 +182,21 @@
 .ct-side-r1r1 {
   display: flex;
   position: relative;
-  grid-row: 1 span 1;
+  grid-row: 1 / span 1;
   background-color: #3b60e4;
 }
 
 .ct-side-r1r2 {
   display: flex;
   position: relative;
-  grid-row: 2 span 1;
+  grid-row: 2 / span 1;
   background-color: #3b60e4;
 }
 
 .ct-side-r2 {
   display: flex;
   position: relative;
-  grid-row: 2 span 1;
+  grid-row: 2 / span 1;
   background-color: #3b60e4;
 }
 
