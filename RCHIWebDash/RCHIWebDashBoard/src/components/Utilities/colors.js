@@ -32,12 +32,12 @@ export const colors = [
         '#D6F8FF',
     ],
     [
-        '#73AEBA',
-        '#BDF1FC',
-        '#AFCBE0',
-        '#C3D2D5',
-        '#78BECC',
-        '#9FC2C9',
-        '#D6F8FF',
+        '#C7D8BA',
+        '#B4C3CD',
+        '#D5C2D4',
+        '#CCAAA9',
+        '#B3C3D8',
+        '#B7D1F3',
+        '#99ADC6',
     ]
 ];
