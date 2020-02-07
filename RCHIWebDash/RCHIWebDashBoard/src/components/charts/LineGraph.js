@@ -1,6 +1,8 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line'
 
+import { colors } from '../Utilities/colors';
+
 export default class LineGraph extends React.Component {
   constructor(props) {
     super(props);
@@ -121,7 +123,7 @@ export default class LineGraph extends React.Component {
               legendOffset: -40,
               legendPosition: 'middle'
           }}
-          colors={{ scheme: "nivo" }}
+          colors={ colors[7] }
           lineWidth={2}
           pointSize={10}
           pointColor={{ from: 'color', modifiers: [] }}

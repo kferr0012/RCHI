@@ -2,6 +2,7 @@ import { ResponsiveLine } from '@nivo/line'
 import {Header} from 'semantic-ui-react'
 import React from 'react'
 
+import { colors } from '../colors';
 const ResponsiveNivoLine = ({ data,header,subHeader,height}) => {
     console.log("Height : ", height)
     return(
@@ -36,7 +37,7 @@ const ResponsiveNivoLine = ({ data,header,subHeader,height}) => {
                     legendOffset: -40,
                     legendPosition: 'middle'
                 }}
-                colors={{ scheme: 'category10' }}
+                colors={colors[7]}
                 lineWidth={4}
                 pointSize={10}
                 enablePointLabel={true}

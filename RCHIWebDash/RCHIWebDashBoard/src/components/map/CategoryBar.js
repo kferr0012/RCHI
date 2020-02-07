@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ResponsiveBar } from '@nivo/bar';
 import { remove, subset } from '../Utilities/ListManipulation/filter'
+import { colors } from '../Utilities/colors'
 
 export default class CategoryBar extends Component{
     constructor(props){
@@ -36,7 +37,7 @@ export default class CategoryBar extends Component{
         const formatted = Object.keys(newData).map( (x) => {
             return {  // formats data for the nivo bar
                 'name': x,
-                'data': newData[x],
+                'total': newData[x],
             }
         });
 
@@ -55,32 +56,13 @@ export default class CategoryBar extends Component{
             <div style={{position:'absolute', width:'100%', height: '100%'}}>
                 <ResponsiveBar
                     data={this.state.chartData}
-                    keys={['data']}
+                    keys={['total']}
                     indexBy= {'name'} 
                     margin={{ top: 50, right: 20, bottom: 70, left: 60 }} // right was 130
                     padding={0.1} // so bars are not touching
                     groupMode="grouped"
-                    colors={{ scheme: 'nivo' }}
-                    defs={[
-                        {
-                            id: 'dots',
-                            type: 'patternDots',
-                            background: 'inherit',
-                            color: '#38bcb2',
-                            size: 4,
-                            padding: 1,
-                            stagger: true
-                        },
-                        {
-                            id: 'lines',
-                            type: 'patternLines',
-                            background: 'inherit',
-                            color: '#eed312',
-                            rotation: -45,
-                            lineWidth: 6,
-                            spacing: 12
-                        }
-                    ]}
+                    colors={colors[7]}
+                    colorBy="index"
                     borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
                     axisTop={null}
                     axisRight={null}
@@ -91,38 +73,6 @@ export default class CategoryBar extends Component{
                         legend: category,
                         legendPosition: 'middle',
                         legendOffset: 53,
-                        // renderTick: ({ textAnchor, textBaseline, value, x, y }) => {
-                        //     const MAX_LINE_LENGTH = 10;
-                        //     const MAX_LINES = 2;
-                        //     const LENGTH_OF_ELLIPSIS = 3;
-                        //     const TRIM_LENGTH = MAX_LINE_LENGTH * MAX_LINES - LENGTH_OF_ELLIPSIS;
-                        //     const trimWordsOverLength = new RegExp(`^(.{${TRIM_LENGTH}}[^\\w]*).*`);
-                        //     const groupWordsByLength = new RegExp(
-                        //     `([^\\s].{0,${MAX_LINE_LENGTH}}(?=[\\s\\W]|$))`,
-                        //     'gm',
-                        //     );
-                        //     const splitValues = value
-                        //     .replace(trimWordsOverLength, '$1...')
-                        //     .match(groupWordsByLength)
-                        //     .slice(0, 2)
-                        //     .map((val, i) => (
-                        //         <tspan
-                        //         key={val}
-                        //         dy={12 * i}
-                        //         x={-10}
-                        //         style={{ fontFamily: 'sans-serif', fontSize: '11px' }}
-                        //         >
-                        //         {val}
-                        //         </tspan>
-                        //     ));
-                        //     return (
-                        //     <g transform={`translate(${x+5},${y+10})`} rotate={"rotate(-10)"}>
-                        //         <text alignmentBaseline={textBaseline} textAnchor={textAnchor}>
-                        //         {splitValues}
-                        //         </text>
-                        //     </g>
-                        //     );
-                        // }
                     }}
                     axisLeft={{
                         tickSize: 5,
@@ -135,30 +85,6 @@ export default class CategoryBar extends Component{
                     labelSkipWidth={12}
                     labelSkipHeight={12}
                     labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-                    // legends={[ // i didnt like the legend
-                    //     {
-                    //         dataFrom: 'keys',
-                    //         anchor: 'bottom-right',
-                    //         direction: 'column',
-                    //         justify: false,
-                    //         translateX: 120,
-                    //         translateY: 0,
-                    //         itemsSpacing: 2,
-                    //         itemWidth: 100,
-                    //         itemHeight: 20,
-                    //         itemDirection: 'left-to-right',
-                    //         itemOpacity: 0.85,
-                    //         symbolSize: 20,
-                    //         effects: [
-                    //             {
-                    //                 on: 'hover',
-                    //                 style: {
-                    //                     itemOpacity: 1
-                    //                 }
-                    //             }
-                    //         ]
-                    //     }
-                    // ]}
                     animate={true}
                     motionStiffness={90}
                     motionDamping={15}

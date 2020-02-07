@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Text} from 'react'
+import { colors } from "../Utilities/colors"
 import { ResponsiveBar } from '@nivo/bar';
 
 export default class BarGraph extends Component{
@@ -45,7 +46,7 @@ export default class BarGraph extends Component{
             margin={this.props.margin}
             padding={0}
             groupMode="grouped"
-            colors={{ scheme: 'nivo' }}
+            colors={ colors[7] }
             colorBy="index"
             defs={[
                 {

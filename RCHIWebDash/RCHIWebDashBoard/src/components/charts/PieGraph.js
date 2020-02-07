@@ -2,6 +2,8 @@ import React from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 
+import { colors } from '../Utilities/colors';
+
 export default class PieGraph extends React.Component {
 
     constructor(props){
@@ -75,7 +77,7 @@ export default class PieGraph extends React.Component {
                 margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
                 padAngle={0.7}
                 cornerRadius={3}
-                colors={{ scheme: 'nivo' }}
+                colors={colors[7]}
                 borderWidth={1}
                 borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
                 radialLabelsSkipAngle={10}

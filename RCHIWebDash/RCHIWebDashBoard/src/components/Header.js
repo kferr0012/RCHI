@@ -1,18 +1,48 @@
-import React, { Component } from 'react'
-import { Menu, Segment, Responsive } from 'semantic-ui-react'
-import { Dropdown } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Menu, Segment, Responsive, Dropdown } from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
 
-import { Link } from 'react-router-dom'
 
-export default class Header extends Component{
-  state = { activeItem: 'Map' }
-
+class Header extends React.Component{
+ 
+  state = { activeItem: "Map" }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
+    if ((this.props.location.pathname) === "/"){
+      this.state = { activeItem: 'Map' };
+    }
+    if ((this.props.location.pathname) === "/SupervisorialDistricts"){
+      this.state = { activeItem: 'Supervisorial Districts' };
+    }
+    else if ((this.props.location.pathname) === "/CityDashboard"){
+      this.state = { activeItem: 'City Dashboards' };
+    }
+     else if ((this.props.location.pathname) === "/UnshelteredTrends"){
+      this.state = { activeItem: 'Unsheltered Trends' };
+    }
+    else if ((this.props.location.pathname) === "/GeneralTable"){
+      this.state = { activeItem: 'General Table' };
+    }
+    else if ((this.props.location.pathname) === "/CityTables"){
+      this.state = { activeItem: 'City Table' };
+    }
+    else if ((this.props.location.pathname) === "/CityBreakdown"){
+      this.state = { activeItem: 'City Breakdown Table' };
+    }
+    else if ((this.props.location.pathname) === "/UnshelteredvsSheltered"){
+      this.state = { activeItem: 'Unsheltered vs Sheltered' };
+    }
+    else if ((this.props.location.pathname) === "/DIYChart"){
+      this.state = { activeItem: 'DIY Chart' };
+    }
+    else if ((this.props.location.pathname) === "/Sandbox"){
+      this.state = { activeItem: 'Sandbox' };
+    }
+      
     const { activeItem } = this.state
-
     return (
+      
       <div>
       <a id="title-highlight">RCHI<span id="title">Riverside County Health Informatics</span></a>  
       <Segment.Group id="segment">
@@ -119,3 +149,5 @@ export default class Header extends Component{
     )
   }
 }
+
+export default withRouter(Header);

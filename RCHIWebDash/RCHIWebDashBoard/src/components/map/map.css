@@ -1,7 +1,10 @@
 .allContent {
     height: 75vh;
+    position: relative;
+    z-index: 0;
 }
 #myleafletmap{
+    
     /* height: 600px;
     width: 600px; */
     

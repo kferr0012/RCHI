@@ -52,6 +52,7 @@
   align-items: flex-start;
   justify-content: center;
   position: relative;
+  z-index: -1;
 }
 
 
@@ -89,12 +90,16 @@
 #hamburger{
   font-size: calc(2px + 1.3vw);
   color: rgb(155, 153, 153);
+  position: relative;
+  z-index: 1;
 }
 #segment{
   margin: 0;
   border: none;
   box-shadow: none;
   padding: 0px;
+  position: relative;
+
 }
 /* .nav-tabs{
   border-bottom: 0;

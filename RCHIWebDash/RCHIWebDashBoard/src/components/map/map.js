@@ -9,7 +9,7 @@ import Cities from './json/Cities.json'
 import County from './json/County.json'
 
 import { remove, subset } from '../Utilities/ListManipulation/filter'
-import { combine } from '../Utilities/ListManipulation/combine'
+import { colors } from '../Utilities/colors'
 import { countyColor, backgroundStroke, lat, lng, subPopLink, cityNames, raceCategories, genderCategories, defaultZoom  } from './constants';
 import CategoryBar from './CategoryBar'
 
@@ -195,7 +195,6 @@ export default class LLMap extends Component {
             curData = subset(data, "district", disp.toString() );
         }
         
-
         var t = subset(subset(curData, 'category', 'Age'), 'subpopulation', 'Total'); // gets totals
 
         var tot = 0;
@@ -206,6 +205,11 @@ export default class LLMap extends Component {
 
         return (
             <div className="allContent">
+                {/* <h4>Welcome to the Riverside County Health Informatics Data Portal</h4>
+                <p> In this application, we display the data gathered through the annual Riverside County Point-In-Time Homelessness Count.</p>
+                <p> We hope that through these graphs, tables, and dashboards, everyone can better understand the position of the homeless and </p>
+                <p> how the county of Riverside can better serve them.</p>
+                 */}
                 <h4 key={Math.random()}>{place} - Total Unsheltered Individuals: {tot}</h4>
                 <div className="row">
                     <div className="col-md">
@@ -251,7 +255,7 @@ export default class LLMap extends Component {
                                 }}
 
                             />
-                            <LayersControl position="topright" >
+                            <LayersControl collapsed={false} position="topright" >
                                 <LayersControl.BaseLayer name="Districts" checked={true}>
                                     <GeoJSON 
                                         data={SupervisorDistricts}
