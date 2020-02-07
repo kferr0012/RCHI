@@ -118,7 +118,7 @@ export default class CityTable extends Component{
                                 </div>
                                 <div className="row dash-row">
                                     <div className="col-md dash-col-com">
-                                        <div className="ct-grid-side">
+                                        <div className="ct-grid-side-left">
                                             <div className="ct-side-r1">
                                                 >
                                                 <TableComponent4
@@ -200,10 +200,10 @@ export default class CityTable extends Component{
                                     </div>
                                     <div className="col-md dash-col-com">
                                         <div className="ct-grid-side">
-                                            <div className="ct-side-r1-grid">
+                                            
                                                 <div className="ct-side-r1r1">
                                                     <TableComponent4
-                                                        data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"]}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
                                                         tableName = {"Gender"}
                                                         height = {"100%"}
                                                     />
@@ -213,20 +213,22 @@ export default class CityTable extends Component{
                                                     data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
                                                     keys = {["interview"]}
-                                                    margin = {{ right: 30, left: 50}}
+                                                    margin = {{top: 40, bottom:30, right: 30, left: 30}}
                                                     />
                                                 </div>
-                                            </div>
-                                            <div className="ct-side-r2">
+                                                <div className="ct-side-r1r3">
+                                                    <span></span>
                                                 
-                                                <BarGraph 
-                                                    data = {this.state.Tables["SubpopulationsByCity2019"]["BEAUMONT"]["Gender"]}
-                                                    indexBy = {"subpopulation"}
-                                                    keys = {["interview"]}
-                                                    margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
-                                                    />
-                                            </div>
+                                                </div>
+                                                <div className="ct-side-r1r4">
+                                                    <TableComponent4 
+                                                        data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Race"]}
+                                                        />
+                                                    
+                                                </div>
                                         </div>
+                                            
+                                        
                                     </div>
                                 </div>
                             </div>

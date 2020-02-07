@@ -547,7 +547,7 @@ export default class UnsheleteredVsSheltered extends Component{
             <div>
             
             <div className="container my-2">
-            <h2>Sheltered vs Unsheltered</h2>
+            <span className = "component-header">Sheltered vs Unsheltered</span>
             <div className="row dash-row">
               <div className="col-md dash-col-com">
                 <div className="svu-grid">
@@ -573,7 +573,6 @@ export default class UnsheleteredVsSheltered extends Component{
               <div className="col-md-6 dash-col-com">
                 <div className="svu-grid-2">
                   <div className="svu-r1-2">
-                    <span className="component-header">Homeless Population Trend</span>
                     <LineGraph />
                   </div>
                   <div className="svu-r2">

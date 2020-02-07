@@ -70,4 +70,4 @@
     {"pk": 71, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Street", "interview": 583, "observation": 0, "total": 583}},
     {"pk": 72, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "UnderBridge", "interview": 42, "observation": 0, "total": 42}},
     {"pk": 73, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Vehicle", "interview": 225, "observation": 0, "total": 225}},
-    {"pk": 74, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "UnderBridge", "interview": 309, "observation": 0, "total": 309}}]
+    {"pk": 74, "model": "backend.GeneralTableSubpopulations2019", "fields": {"category": "Living Situation", "subpopulation": "Woods", "interview": 309, "observation": 0, "total": 309}}]

@@ -264,7 +264,9 @@ export default class Dashboard extends Component{
             </div>
             <div className="col-md dash-col-reg">
               {<span className="component-header">Homeless Population Trend</span>}
-              <LineGraph />
+              <LineGraph
+                margin = {{ top: 0, right: 30, bottom: 70, left :60}}
+              />
             </div>
 
           </div>
@@ -311,10 +313,10 @@ export default class Dashboard extends Component{
                 </div>
               </div>
             </div>
-            <div className="col-md dash-col-big">
+            <div className="col-md dash-col-big" >
               {/*<span className="component-header">Unsheltered Only Demographic</span> */}
               <div className="gen-grid-2">
-                <div className = "gen-s-r">
+                <div className = "gen-s-r" >
                       
                     <div className="gen-s-r1">
                         <Mental height = {50}
@@ -387,7 +389,7 @@ export default class Dashboard extends Component{
                   <div className="gen-r2c1r2">
                     <TableComponent4
                       data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
-                      header = {true}
+                      header = {false}
                       height = {"100%"}
                     />
                   </div>

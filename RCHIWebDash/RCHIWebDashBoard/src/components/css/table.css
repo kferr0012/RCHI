@@ -3,7 +3,7 @@ table, th, td {
 }
 
 .table th, .table td {
-  padding: .25rem;
+  padding: 0;
   vertical-align: middle;
 }
 
