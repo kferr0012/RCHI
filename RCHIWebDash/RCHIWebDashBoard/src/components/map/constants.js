@@ -1,4 +1,6 @@
-export const countyColor = '#e8c1a0';// '#007bff';
+import { colors } from '../Utilities/colors';
+
+export const countyColor = colors[1];
 
 export const backgroundStroke = '#FFF';
 

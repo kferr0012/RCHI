@@ -3,6 +3,8 @@ import { ResponsivePie } from '@nivo/pie'
 import {Header} from 'semantic-ui-react'
 import { isAbsolute } from 'path'
 
+import { colors } from '../colors';
+
 const NivoResponsivePie = ({data,header, subHeader, height}) => (
     <div style={{height:height ? (height) : "20em"}}>
         <Header size='medium' textAlign='center' style={{marginBottom:0}}>
@@ -12,7 +14,7 @@ const NivoResponsivePie = ({data,header, subHeader, height}) => (
             <ResponsivePie 
         data={data}
         margin={{ top: 40, right: 100, bottom: 80, left: 100 }}
-        colors={{ scheme: 'category10' }}
+        colors={colors[7]}
         borderColor={{ from: 'color', modifiers: [ [ 'darker', '0.3' ] ] }}
         radialLabel={function(e){return e.id + "\n" +" ("+e.value+")"}}
         radialLabelsSkipAngle={10}
