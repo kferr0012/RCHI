@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Chart from 'react-apexcharts';
 import axios from 'axios'
 
+import { colors } from '../../components/Utilities/colors'
+
 
 //Class Component
 class Dynamic_Bar_Chart_Template extends Component{
@@ -45,7 +47,7 @@ class Dynamic_Bar_Chart_Template extends Component{
                 xaxis:{
                   categories:result.map(result=>result[0])
                 },
-                colors:["#8A1EAB"]
+                colors: colors[2]
               },
 
               series:[
