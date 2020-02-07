@@ -203,7 +203,7 @@ export default class CityTable extends Component{
                                             
                                                 <div className="ct-side-r1r1">
                                                     <TableComponent4
-                                                        data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"]}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
                                                         tableName = {"Gender"}
                                                         height = {"100%"}
                                                     />
