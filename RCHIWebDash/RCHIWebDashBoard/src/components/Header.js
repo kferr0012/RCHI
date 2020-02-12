@@ -30,7 +30,7 @@ class Header extends React.Component{
   getActiveItem = () => {
     for ( var i in links){
       if (this.props.location.pathname == links[i].link){
-        return links[i].name; // bad practice change later?
+        return links[i].name;
       } 
     }
     return 'Map';
