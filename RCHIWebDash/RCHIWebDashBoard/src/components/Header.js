@@ -45,7 +45,7 @@ class Header extends React.Component{
       <div>
         <a id="title-highlight">RCHI<span id="title">Riverside County Health Informatics</span></a>  
         <Segment.Group id="segment">
-          <Responsive as={Segment} minWidth={1206}>
+          <Responsive as={Segment} minWidth={1320}>
             <Menu pointing secondary >
               {
                 links.map( (i, idx) => {
@@ -63,7 +63,7 @@ class Header extends React.Component{
               }
             </Menu>
           </Responsive>
-          <Responsive as={Segment} maxWidth={1205}>
+          <Responsive as={Segment} maxWidth={1319}>
           <Dropdown text="browse" id="hamburger">
               <Dropdown.Menu>
                 {

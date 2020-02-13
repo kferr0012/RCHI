@@ -1,0 +1,22 @@
+#nh-container {
+
+}
+
+#nh-2r {
+    display: grid;
+    position: relative;
+    grid-template: 1fr 1fr / 1fr;
+    height: 100%;
+}
+
+#nh-2r-r1 {
+    display: flex;
+    position: relative;
+    grid-row:  1 / span 1;
+}
+
+#nnh-2r-r2 {
+    display: flex;
+    position: relative;
+    grid-row:  2 / span 1;
+}
