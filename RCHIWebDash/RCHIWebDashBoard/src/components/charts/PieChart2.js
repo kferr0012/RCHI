@@ -56,7 +56,7 @@ export default class PieChart2 extends React.Component {
                 margin={this.props.margin}
                 padAngle={0}
                 cornerRadius={3}
-                colors={colors[7]}
+                colors={colors[8]}
                 borderWidth={1}
                 borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
                 radialLabelsSkipAngle={10}
