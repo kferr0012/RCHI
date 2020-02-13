@@ -1,43 +1,56 @@
 export const colors = [
     [],
-    '#AFCBE0',
+    '#BF99B2', // Light Purple
     [
-        '#AFCBE0',
-        '#9FC2C9',
+        '#BF99B2', // Light Purple
+        '#807F85', // Grey
     ],
     [
-        '#AFCBE0',
-        '#C3D2D5',
-        '#9FC2C9',
+        '#BF99B2', // Light Purple
+        '#B2C7F6', // Light Blue
+        '#6D7CA6', // Purple Blue
+        '#807F85', // Grey
     ],
     [
-        '#BDF1FC',
-        '#AFCBE0',
-        '#C3D2D5',
-        '#9FC2C9',
+        '#BF99B2', // Light Purple
+        '#B2C7F6', // Light Blue
+        '#6D7CA6', // Purple Blue
+        '#807F85', // Grey
+        '#BA8C9F', // Medium Purple
     ],
     [
-        '#BDF1FC',
-        '#AFCBE0',
-        '#C3D2D5',
-        '#78BECC',
-        '#9FC2C9',
+        '#BF99B2', // Light Purple
+        '#B2C7F6', // Light Blue
+        '#6D7CA6', // Purple Blue
+        '#807F85', // Grey
+        '#BA8C9F', // Medium Purple
+        '#533747', // Dark Purple
     ],
     [
-        '#BDF1FC',
-        '#AFCBE0',
-        '#C3D2D5',
-        '#78BECC',
-        '#9FC2C9',
-        '#D6F8FF',
+        '#BF99B2', // Light Purple
+        '#B2C7F6', // Light Blue
+        '#6D7CA6', // Purple Blue
+        '#807F85', // Grey
+        '#BA8C9F', // Medium Purple
+        '#533747', // Dark Purple
     ],
     [
-        '#C7D8BA',
-        '#B4C3CD',
-        '#D5C2D4',
-        '#CCAAA9',
-        '#B3C3D8',
-        '#B7D1F3',
-        '#99ADC6',
+        '#BF99B2', // Light Purple
+        '#B2C7F6', // Light Blue
+        '#6D7CA6', // Purple Blue
+        '#807F85', // Grey
+        '#BA8C9F', // Medium Purple
+        '#533747', // Dark Purple
+        '#2F3C4D', // Dark Blue
+    ],
+    [
+        '#BF99B2', // Light Purple
+        '#B2C7F6', // Light Blue
+        '#6D7CA6', // Purple Blue
+        '#807F85', // Grey
+        '#BA8C9F', // Medium Purple
+        '#533747', // Dark Purple
+        '#2F3C4D', // Dark Blue
+        '#E15759', // Red
     ]
 ];
