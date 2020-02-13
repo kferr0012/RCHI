@@ -6,7 +6,7 @@ import { isAbsolute } from 'path'
 import { colors } from '../colors';
 
 const NivoResponsivePie = ({data,header, subHeader, height}) => (
-    <div style={{height:height ? (height) : "20em"}}>
+    <div style={{height:height ? (height) : "20em", width:'100%'}}>
         <Header size='medium' textAlign='center' style={{marginBottom:0}}>
                 {header}
                 <Header sub>{subHeader}</Header>

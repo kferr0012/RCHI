@@ -23,6 +23,8 @@ import GeneralTable from '../Unsheltered Sheltered General/GeneralTable'
 import CityTable from '../Unsheltered Cities/CityTable'
 
 import UnsheleteredVsSheltered from '../Unsheltered vs Sheltered/UnshelteredVsSheltered';
+import NewlyHomelessGrid from '../NewlyHomelessDashboard/NewlyHomelessGrid';
+
 export default class Content extends Component{
     render(){
         return(
@@ -48,6 +50,7 @@ export default class Content extends Component{
                     <Route exact path = "/GeneralTable" component = {GeneralTable} />
                     <Route exact path = "/CityBreakdown" component = {CityTable} />
                     <Route exact path = "/UnshelteredVsSheltered" component = {UnsheleteredVsSheltered} />
+                    <Route exact path = "/NewlyHomeless" component = {NewlyHomelessGrid} />
 
                 </Switch>
             </div>

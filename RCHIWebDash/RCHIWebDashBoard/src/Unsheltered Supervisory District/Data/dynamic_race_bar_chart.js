@@ -89,7 +89,7 @@ class Dynamic_Bar_Chart_Template extends Component{
             options={this.state.chartData.options}
             series={this.state.chartData.series}
             type="bar"
-            width="480"
+            // width="480"
           />
         </div>
     )
