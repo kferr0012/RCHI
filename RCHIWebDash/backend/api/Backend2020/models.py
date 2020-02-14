@@ -55,3 +55,5 @@ class GeneralTableSubpopulationsSheltered2020(models.Model):
 	category = models.CharField(max_length=100)
 	subpopulation = models.CharField(max_length=100)
 	total = models.IntegerField()
+	interview = models.IntegerField()
+	observation = models.IntegerField()

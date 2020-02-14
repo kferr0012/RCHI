@@ -186,11 +186,11 @@
         "model": "backend.SubpopulationsByYear2020",
         "fields": {
             "category": "Age",
-            "observation": "88",
+            "observation": "93",
             "subpopulation": "Youth (18-24)",
             "sheltered": "False",
             "year": "2019",
-            "interview": "93",
+            "interview": "88",
             "total": "181"
         }
     },
@@ -985,6 +985,45 @@
             "sheltered": "False"
         },
         "pk": 76,
+        "model": "backend.SubpopulationsByYear2020"
+    },
+    {
+        "fields": {
+            "year": "2020",
+            "category": "Subpopulations",
+            "interview": 257,
+            "observation": 0,
+            "total": 257,
+            "subpopulation": "Pet Owner",
+            "sheltered": "False"
+        },
+        "pk": 77,
+        "model": "backend.SubpopulationsByYear2020"
+    },
+    {
+        "fields": {
+            "year": "2020",
+            "category": "Subpopulations",
+            "interview": 64,
+            "observation": 0,
+            "total": 64,
+            "subpopulation": "Pet Housing",
+            "sheltered": "False"
+        },
+        "pk": 78,
+        "model": "backend.SubpopulationsByYear2020"
+    },
+    {
+        "fields": {
+            "year": "2020",
+            "category": "Subpopulations",
+            "interview": 441,
+            "observation": 0,
+            "total": 441,
+            "subpopulation": "First Time Homeless",
+            "sheltered": "False"
+        },
+        "pk": 79,
         "model": "backend.SubpopulationsByYear2020"
     }
 ]
