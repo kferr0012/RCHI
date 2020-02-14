@@ -6,7 +6,7 @@ export const availableYears = {
 }
 
 export const availableFiles = {
-    "CityTotalsByYear" : true ,
+    "CityTotalsByYear" : true , 
     "GeneralTableSubpopulations" : true ,
     "HouseholdsByCityYearInterview" : true ,
     "SubpopulationsByCity" : true ,

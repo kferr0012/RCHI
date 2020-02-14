@@ -1,9 +1,22 @@
 import {host,root,availableYears,availableFiles} from '../constants/routing'
 
 export async function aggregateFetchbyConstants(){
+
+    console.log("aggregateFetchbyConstants")
     var fetchURL = host + root
 
     var outputTable = {}
+
+    //setup table
+    for(const yearKey in availableYears){
+        if(!(yearKey in outputTable)){
+            outputTable[yearKey] = {}
+        }
+        for(const file in availableFiles){
+            outputTable[yearKey][file] = []
+        }
+    }
+
     for(const yearKey in availableYears){
         var year = yearKey + '/'
         for(const file in availableFiles){
@@ -11,6 +24,7 @@ export async function aggregateFetchbyConstants(){
             var fetchLink = fetchURL + year + file + "/"
             console.log("fetchlink: ")
             console.log(fetchLink)
+
             await fetch(fetchLink, {
                 headers: {
                     'Accept': 'application/json',
@@ -21,6 +35,7 @@ export async function aggregateFetchbyConstants(){
                 .then((data) =>{
                     console.log( "data found in " + fetchLink)
                     outputTable[yearKey][file] = data
+                    console.log("added data")
                     
                 })
                 .catch(err => {

@@ -39,7 +39,7 @@ export default class Content extends Component{
     }
 
     async componentDidMount(){
-        var fetchedTables = aggregateFetchbyConstants()
+        var fetchedTables = await aggregateFetchbyConstants()
 
         this.setState({
             Tables : fetchedTables,
