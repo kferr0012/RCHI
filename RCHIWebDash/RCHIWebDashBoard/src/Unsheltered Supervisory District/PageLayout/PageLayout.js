@@ -9,13 +9,16 @@ import PieDataNivo from '../Data/PieDataNivo'
 import PitCountTrend from '../Data/PitCountTrend'
 import PitCountByCity from '../Data/PitCountByCity'
 
+import TableComponent4 from '../../components/charts/TableComponent4'
+import {filterList} from '../../components/Utilities/ListManipulation/filter'
 import '../../components/css/newlyHomelessGrid.css';
 
 //const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
-
-const PageLayout = ({currentDistrict}) => {
-    
+const filteredTableList = ["Total","Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability","Unknown Developmental Disability", "No Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV", "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "Unknown Brain Injury", "No Jail", "Unknown Jail"]
+const PageLayout = ({currentDistrict, tables}) => {
+    console.log("PageLayout tables:")
+    console.log(tables)
     return(
         <div id="nh-container">
             <div className="row">
@@ -36,6 +39,11 @@ const PageLayout = ({currentDistrict}) => {
                 <div className="col-lg-3">
                     {/* <p>r1c3</p> */}
                     <h4>Population Counts</h4>
+                    <TableComponent4
+                        data = {filterList(tables["SubpopulationsByCity2019"][currentDistrict]["Age"].concat(tables["SubpopulationsByCity2019"][currentDistrict]["Gender"]).concat(tables["SubpopulationsByCity2019"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList)}
+                        height = {"100%"}
+                    />
+                    
                 </div>
             </div>
             <div className="row">

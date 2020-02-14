@@ -11,7 +11,8 @@ export default class BarGraph extends Component{
         this.state = {
             index : this.props.indexBy,
             keys : this.props.keys,
-            mydata : this.props.data,
+            mydata1 : this.props.data1,
+            mdata2 : this.props.data2,
             legend : this.props.legend,
             margin: this.props.margin,
             axisTitle : this.props.axisTitle,
@@ -30,7 +31,8 @@ export default class BarGraph extends Component{
         this.setState({
             index : this.props.indexBy,
             keys : this.props.keys,
-            mydata : this.props.data,
+            mydata1 : this.props.data1,
+            mdata2 : this.props.data2,
             legend : this.props.legend,
             margin: this.props.margin,
             axisTitle : this.props.axisTitle,})

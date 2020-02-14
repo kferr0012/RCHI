@@ -124,7 +124,7 @@ export default class CityTable extends Component{
                                                 <TableComponent4
                                                         data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
                                                         tableName = {"Subpopulations"}
-                                                        height = {"124%"}
+                                                        height = {"110%"}
                                                 />
                                                 
                                             </div>
@@ -205,7 +205,7 @@ export default class CityTable extends Component{
                                                     <TableComponent4
                                                         data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
                                                         tableName = {"Gender"}
-                                                        height = {"100%"}
+                                                        height = {"120%"}
                                                     />
                                                 </div>
                                                 <div className="ct-side-r1r2">
@@ -223,6 +223,7 @@ export default class CityTable extends Component{
                                                 <div className="ct-side-r1r4">
                                                     <TableComponent4 
                                                         data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Race"]}
+                                                        height = {"115%"}
                                                         />
                                                     
                                                 </div>

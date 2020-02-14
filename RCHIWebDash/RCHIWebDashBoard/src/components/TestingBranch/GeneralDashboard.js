@@ -8,7 +8,7 @@ import { Header, Table} from 'semantic-ui-react';
 import React, {Component} from 'react';
 import '../css/dash.css';
 
-import {aggregateFetch} from '../../components/Utilities/ListManipulation/aggregateFetch'
+import {aggregateFetch, aggregateFetchbyConstants} from '../../components/Utilities/ListManipulation/aggregateFetch'
 import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 
 import {filter, subset, filterList} from '../../components/Utilities/ListManipulation/filter'
@@ -28,6 +28,7 @@ export default class Dashboard extends Component{
         this.state = {
             urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/",
                     "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/"],
+            
             Tables : [],
             render : false
         }
@@ -236,6 +237,10 @@ export default class Dashboard extends Component{
 
     async componentDidMount(){
         console.log("didMount")
+        var fetchString = this.props.host + this.props.root + '2020/GeneralTableSubpopulations/'
+
+        console.log("fetchString")
+        console.log(fetchString)
         var myTables = await aggregateFetch(this.state.urls)
         this.setState({
             Tables: myTables,
