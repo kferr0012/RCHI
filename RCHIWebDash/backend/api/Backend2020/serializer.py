@@ -33,5 +33,5 @@ class GeneralTableSubpopulationsSerializer(serializers.ModelSerializer):
 
 class GeneralTableSubpopulationsShelteredSerializer(serializers.ModelSerializer):
     class Meta:
-        model = GeneralTableSubpopulations2020
+        model = GeneralTableSubpopulationsSheltered2020
         fields = '__all__'
