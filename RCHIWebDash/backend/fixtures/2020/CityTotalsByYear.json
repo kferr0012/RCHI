@@ -8,7 +8,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2018",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -20,7 +21,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2018",
-            "total": "75"
+            "total": "75",
+            "type": "Unsheltered"
         }
     },
     {
@@ -32,7 +34,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2018",
-            "total": "184"
+            "total": "184",
+            "type": "Unsheltered"
         }
     },
     {
@@ -44,7 +47,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2018",
-            "total": "15"
+            "total": "15",
+            "type": "Unsheltered"
         }
     },
     {
@@ -56,7 +60,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2018",
-            "total": "16"
+            "total": "16",
+            "type": "Unsheltered"
         }
     },
     {
@@ -68,7 +73,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2019",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -80,7 +86,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2019",
-            "total": "66"
+            "total": "66",
+            "type": "Unsheltered"
         }
     },
     {
@@ -92,7 +99,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2019",
-            "total": "238"
+            "total": "238",
+            "type": "Unsheltered"
         }
     },
     {
@@ -104,7 +112,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2019",
-            "total": "13"
+            "total": "13",
+            "type": "Unsheltered"
         }
     },
     {
@@ -116,7 +125,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2019",
-            "total": "45"
+            "total": "45",
+            "type": "Unsheltered"
         }
     },
     {
@@ -128,7 +138,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2018",
-            "total": "72"
+            "total": "72",
+            "type": "Unsheltered"
         }
     },
     {
@@ -140,7 +151,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2018",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -152,7 +164,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2018",
-            "total": "148"
+            "total": "148",
+            "type": "Unsheltered"
         }
     },
     {
@@ -164,7 +177,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2018",
-            "total": "4"
+            "total": "4",
+            "type": "Unsheltered"
         }
     },
     {
@@ -176,7 +190,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2018",
-            "total": "182"
+            "total": "182",
+            "type": "Unsheltered"
         }
     },
     {
@@ -188,7 +203,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2018",
-            "total": "4"
+            "total": "4",
+            "type": "Unsheltered"
         }
     },
     {
@@ -200,7 +216,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2019",
-            "total": "164"
+            "total": "164",
+            "type": "Unsheltered"
         }
     },
     {
@@ -212,7 +229,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2019",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -224,7 +242,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2019",
-            "total": "139"
+            "total": "139",
+            "type": "Unsheltered"
         }
     },
     {
@@ -236,7 +255,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2019",
-            "total": "11"
+            "total": "11",
+            "type": "Unsheltered"
         }
     },
     {
@@ -248,7 +268,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2019",
-            "total": "201"
+            "total": "201",
+            "type": "Unsheltered"
         }
     },
     {
@@ -260,7 +281,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2019",
-            "total": "44"
+            "total": "44",
+            "type": "Unsheltered"
         }
     },
     {
@@ -272,7 +294,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2018",
-            "total": "83"
+            "total": "83",
+            "type": "Unsheltered"
         }
     },
     {
@@ -284,7 +307,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2018",
-            "total": "19"
+            "total": "19",
+            "type": "Unsheltered"
         }
     },
     {
@@ -296,7 +320,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2018",
-            "total": "9"
+            "total": "9",
+            "type": "Unsheltered"
         }
     },
     {
@@ -308,7 +333,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2018",
-            "total": "66"
+            "total": "66",
+            "type": "Unsheltered"
         }
     },
     {
@@ -320,7 +346,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2018",
-            "total": "37"
+            "total": "37",
+            "type": "Unsheltered"
         }
     },
     {
@@ -332,7 +359,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2019",
-            "total": "112"
+            "total": "112",
+            "type": "Unsheltered"
         }
     },
     {
@@ -344,7 +372,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2019",
-            "total": "17"
+            "total": "17",
+            "type": "Unsheltered"
         }
     },
     {
@@ -356,7 +385,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2019",
-            "total": "48"
+            "total": "48",
+            "type": "Unsheltered"
         }
     },
     {
@@ -368,7 +398,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2019",
-            "total": "59"
+            "total": "59",
+            "type": "Unsheltered"
         }
     },
     {
@@ -380,7 +411,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2019",
-            "total": "65"
+            "total": "65",
+            "type": "Unsheltered"
         }
     },
     {
@@ -392,7 +424,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "54"
+            "total": "54",
+            "type": "Unsheltered"
         }
     },
     {
@@ -404,7 +437,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "46"
+            "total": "46",
+            "type": "Unsheltered"
         }
     },
     {
@@ -416,7 +450,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "75"
+            "total": "75",
+            "type": "Unsheltered"
         }
     },
     {
@@ -428,7 +463,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "58"
+            "total": "58",
+            "type": "Unsheltered"
         }
     },
     {
@@ -440,7 +476,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -452,7 +489,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "50"
+            "total": "50",
+            "type": "Unsheltered"
         }
     },
     {
@@ -464,7 +502,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "4"
+            "total": "4",
+            "type": "Unsheltered"
         }
     },
     {
@@ -476,7 +515,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -488,7 +528,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "43"
+            "total": "43",
+            "type": "Unsheltered"
         }
     },
     {
@@ -500,7 +541,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "126"
+            "total": "126",
+            "type": "Unsheltered"
         }
     },
     {
@@ -512,7 +554,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "8"
+            "total": "8",
+            "type": "Unsheltered"
         }
     },
     {
@@ -524,7 +567,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2018",
-            "total": "30"
+            "total": "30",
+            "type": "Unsheltered"
         }
     },
     {
@@ -536,7 +580,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "48"
+            "total": "48",
+            "type": "Unsheltered"
         }
     },
     {
@@ -548,7 +593,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "82"
+            "total": "82",
+            "type": "Unsheltered"
         }
     },
     {
@@ -560,7 +606,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "51"
+            "total": "51",
+            "type": "Unsheltered"
         }
     },
     {
@@ -572,7 +619,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "45"
+            "total": "45",
+            "type": "Unsheltered"
         }
     },
     {
@@ -584,7 +632,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "2"
+            "total": "2",
+            "type": "Unsheltered"
         }
     },
     {
@@ -596,7 +645,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "52"
+            "total": "52",
+            "type": "Unsheltered"
         }
     },
     {
@@ -608,7 +658,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "9"
+            "total": "9",
+            "type": "Unsheltered"
         }
     },
     {
@@ -620,7 +671,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "0"
+            "total": "0",
+            "type": "Unsheltered"
         }
     },
     {
@@ -632,7 +684,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "23"
+            "total": "23",
+            "type": "Unsheltered"
         }
     },
     {
@@ -644,7 +697,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "196"
+            "total": "196",
+            "type": "Unsheltered"
         }
     },
     {
@@ -656,7 +710,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "6"
+            "total": "6",
+            "type": "Unsheltered"
         }
     },
     {
@@ -668,7 +723,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2019",
-            "total": "98"
+            "total": "98",
+            "type": "Unsheltered"
         }
     },
     {
@@ -680,7 +736,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "37"
+            "total": "37",
+            "type": "Unsheltered"
         }
     },
     {
@@ -692,7 +749,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "13"
+            "total": "13",
+            "type": "Unsheltered"
         }
     },
     {
@@ -704,7 +762,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "9"
+            "total": "9",
+            "type": "Unsheltered"
         }
     },
     {
@@ -716,7 +775,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "22"
+            "total": "22",
+            "type": "Unsheltered"
         }
     },
     {
@@ -728,7 +788,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "77"
+            "total": "77",
+            "type": "Unsheltered"
         }
     },
     {
@@ -740,7 +801,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "95"
+            "total": "95",
+            "type": "Unsheltered"
         }
     },
     {
@@ -752,7 +814,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2018",
-            "total": "15"
+            "total": "15",
+            "type": "Unsheltered"
         }
     },
     {
@@ -764,7 +827,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "39"
+            "total": "39",
+            "type": "Unsheltered"
         }
     },
     {
@@ -776,7 +840,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "15"
+            "total": "15",
+            "type": "Unsheltered"
         }
     },
     {
@@ -788,7 +853,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "16"
+            "total": "16",
+            "type": "Unsheltered"
         }
     },
     {
@@ -800,7 +866,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "17"
+            "total": "17",
+            "type": "Unsheltered"
         }
     },
     {
@@ -812,7 +879,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "38"
+            "total": "38",
+            "type": "Unsheltered"
         }
     },
     {
@@ -824,7 +892,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "77"
+            "total": "77",
+            "type": "Unsheltered"
         }
     },
     {
@@ -836,7 +905,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2019",
-            "total": "9"
+            "total": "9",
+            "type": "Unsheltered"
         }
     },
     {
@@ -848,7 +918,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2015",
-            "total": "185"
+            "total": "185",
+            "type": "Unsheltered"
         }
     },
     {
@@ -860,7 +931,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2016",
-            "total": "194"
+            "total": "194",
+            "type": "Unsheltered"
         }
     },
     {
@@ -872,7 +944,8 @@
             "district": "5",
             "sheltered": "False",
             "year": "2017",
-            "total": "173"
+            "total": "173",
+            "type": "Unsheltered"
         }
     },
     {
@@ -884,7 +957,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2015",
-            "total": "295"
+            "total": "295",
+            "type": "Unsheltered"
         }
     },
     {
@@ -896,7 +970,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2016",
-            "total": "218"
+            "total": "218",
+            "type": "Unsheltered"
         }
     },
     {
@@ -908,7 +983,8 @@
             "district": "1",
             "sheltered": "False",
             "year": "2017",
-            "total": "288"
+            "total": "288",
+            "type": "Unsheltered"
         }
     },
     {
@@ -920,7 +996,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2015",
-            "total": "442"
+            "total": "442",
+            "type": "Unsheltered"
         }
     },
     {
@@ -932,7 +1009,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2016",
-            "total": "362"
+            "total": "362",
+            "type": "Unsheltered"
         }
     },
     {
@@ -944,7 +1022,8 @@
             "district": "2",
             "sheltered": "False",
             "year": "2017",
-            "total": "393"
+            "total": "393",
+            "type": "Unsheltered"
         }
     },
     {
@@ -956,7 +1035,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2015",
-            "total": "189"
+            "total": "189",
+            "type": "Unsheltered"
         }
     },
     {
@@ -968,7 +1048,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2016",
-            "total": "178"
+            "total": "178",
+            "type": "Unsheltered"
         }
     },
     {
@@ -980,7 +1061,8 @@
             "district": "3",
             "sheltered": "False",
             "year": "2017",
-            "total": "256"
+            "total": "256",
+            "type": "Unsheltered"
         }
     },
     {
@@ -992,7 +1074,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2015",
-            "total": "434"
+            "total": "434",
+            "type": "Unsheltered"
         }
     },
     {
@@ -1004,7 +1087,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2016",
-            "total": "399"
+            "total": "399",
+            "type": "Unsheltered"
         }
     },
     {
@@ -1016,7 +1100,8 @@
             "district": "4",
             "sheltered": "False",
             "year": "2017",
-            "total": "528"
+            "total": "528",
+            "type": "Unsheltered"
         }
     },
     {
@@ -1026,7 +1111,8 @@
             "sheltered": "False",
             "city": "Riverside*",
             "total": "285",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 86,
         "model": "backend.CityTotalsByYear2020"
@@ -1038,7 +1124,8 @@
             "sheltered": "False",
             "city": "Lake Elsinore",
             "total": "46",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 87,
         "model": "backend.CityTotalsByYear2020"
@@ -1050,7 +1137,8 @@
             "sheltered": "False",
             "city": "Unincorporated",
             "total": "47",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 88,
         "model": "backend.CityTotalsByYear2020"
@@ -1062,7 +1150,8 @@
             "sheltered": "False",
             "city": "Wildomar",
             "total": "6",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 89,
         "model": "backend.CityTotalsByYear2020"
@@ -1074,7 +1163,8 @@
             "sheltered": "False",
             "city": "Canyon Lake",
             "total": "0",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 90,
         "model": "backend.CityTotalsByYear2020"
@@ -1086,7 +1176,8 @@
             "sheltered": "False",
             "city": "Norco",
             "total": "12",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 91,
         "model": "backend.CityTotalsByYear2020"
@@ -1098,7 +1189,8 @@
             "sheltered": "False",
             "city": "Corona",
             "total": "82",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 92,
         "model": "backend.CityTotalsByYear2020"
@@ -1110,7 +1202,8 @@
             "sheltered": "False",
             "city": "Riverside*",
             "total": "215",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 93,
         "model": "backend.CityTotalsByYear2020"
@@ -1122,7 +1215,8 @@
             "sheltered": "False",
             "city": "Jurupa Valley",
             "total": "99",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 94,
         "model": "backend.CityTotalsByYear2020"
@@ -1134,7 +1228,8 @@
             "sheltered": "False",
             "city": "Unincorporated",
             "total": "32",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 95,
         "model": "backend.CityTotalsByYear2020"
@@ -1146,7 +1241,8 @@
             "sheltered": "False",
             "city": "Eastvale",
             "total": "4",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 96,
         "model": "backend.CityTotalsByYear2020"
@@ -1158,7 +1254,8 @@
             "sheltered": "False",
             "city": "Temecula",
             "total": "53",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 97,
         "model": "backend.CityTotalsByYear2020"
@@ -1170,7 +1267,8 @@
             "sheltered": "False",
             "city": "Unincorporated",
             "total": "46",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 98,
         "model": "backend.CityTotalsByYear2020"
@@ -1182,7 +1280,8 @@
             "sheltered": "False",
             "city": "Murrieta",
             "total": "16",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 99,
         "model": "backend.CityTotalsByYear2020"
@@ -1194,7 +1293,8 @@
             "sheltered": "False",
             "city": "Hemet",
             "total": "72",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 100,
         "model": "backend.CityTotalsByYear2020"
@@ -1206,7 +1306,8 @@
             "sheltered": "False",
             "city": "San Jacinto",
             "total": "29",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 101,
         "model": "backend.CityTotalsByYear2020"
@@ -1218,7 +1319,8 @@
             "sheltered": "False",
             "city": "Desert Hot Springs",
             "total": "61",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 102,
         "model": "backend.CityTotalsByYear2020"
@@ -1230,7 +1332,8 @@
             "sheltered": "False",
             "city": "Unincorporated",
             "total": "56",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 103,
         "model": "backend.CityTotalsByYear2020"
@@ -1242,7 +1345,8 @@
             "sheltered": "False",
             "city": "La Quinta",
             "total": "3",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 104,
         "model": "backend.CityTotalsByYear2020"
@@ -1254,7 +1358,8 @@
             "sheltered": "False",
             "city": "Coachella",
             "total": "61",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 105,
         "model": "backend.CityTotalsByYear2020"
@@ -1266,7 +1371,8 @@
             "sheltered": "False",
             "city": "Indian Wells",
             "total": "0",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 106,
         "model": "backend.CityTotalsByYear2020"
@@ -1278,7 +1384,8 @@
             "sheltered": "False",
             "city": "Indio",
             "total": "70",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 107,
         "model": "backend.CityTotalsByYear2020"
@@ -1290,7 +1397,8 @@
             "sheltered": "False",
             "city": "Palm Springs",
             "total": "163",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 108,
         "model": "backend.CityTotalsByYear2020"
@@ -1302,7 +1410,8 @@
             "sheltered": "False",
             "city": "Cathedral City",
             "total": "32",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 109,
         "model": "backend.CityTotalsByYear2020"
@@ -1314,7 +1423,8 @@
             "sheltered": "False",
             "city": "Blythe",
             "total": "64",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 110,
         "model": "backend.CityTotalsByYear2020"
@@ -1326,7 +1436,8 @@
             "sheltered": "False",
             "city": "Palm Desert",
             "total": "20",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 111,
         "model": "backend.CityTotalsByYear2020"
@@ -1338,7 +1449,8 @@
             "sheltered": "False",
             "city": "Rancho Mirage",
             "total": "10",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 112,
         "model": "backend.CityTotalsByYear2020"
@@ -1350,7 +1462,8 @@
             "sheltered": "False",
             "city": "Mecca",
             "total": "0",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 113,
         "model": "backend.CityTotalsByYear2020"
@@ -1362,7 +1475,8 @@
             "sheltered": "False",
             "city": "Menifee",
             "total": "17",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 114,
         "model": "backend.CityTotalsByYear2020"
@@ -1374,7 +1488,8 @@
             "sheltered": "False",
             "city": "Perris",
             "total": "45",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 115,
         "model": "backend.CityTotalsByYear2020"
@@ -1386,7 +1501,8 @@
             "sheltered": "False",
             "city": "Unincorporated",
             "total": "13",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 116,
         "model": "backend.CityTotalsByYear2020"
@@ -1398,7 +1514,8 @@
             "sheltered": "False",
             "city": "Beaumont",
             "total": "16",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 117,
         "model": "backend.CityTotalsByYear2020"
@@ -1410,7 +1527,8 @@
             "sheltered": "False",
             "city": "Moreno Valley",
             "total": "90",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 118,
         "model": "backend.CityTotalsByYear2020"
@@ -1422,7 +1540,8 @@
             "sheltered": "False",
             "city": "Calimesa",
             "total": "17",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 119,
         "model": "backend.CityTotalsByYear2020"
@@ -1434,7 +1553,8 @@
             "sheltered": "False",
             "city": "Banning",
             "total": "42",
-            "volunteers": ""
+            "volunteers": "",
+            "type": "Unsheltered"
         },
         "pk": 120,
         "model": "backend.CityTotalsByYear2020"

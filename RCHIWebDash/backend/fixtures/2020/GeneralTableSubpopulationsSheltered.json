@@ -7,7 +7,9 @@
             "subpopulation": "Individuals",
             "interview": 757,
             "observation": 0,
-            "total": 757
+            "total": 757,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -18,7 +20,9 @@
             "subpopulation": "Adults",
             "interview": 560,
             "observation": 0,
-            "total": 560
+            "total": 560,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -29,7 +33,9 @@
             "subpopulation": "Children",
             "interview": 138,
             "observation": 0,
-            "total": 138
+            "total": 138,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -40,7 +46,9 @@
             "subpopulation": "Youth",
             "interview": 57,
             "observation": 0,
-            "total": 57
+            "total": 57,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -51,7 +59,9 @@
             "subpopulation": "Unknown Age",
             "interview": 2,
             "observation": 0,
-            "total": 2
+            "total": 2,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -62,7 +72,9 @@
             "subpopulation": "Households",
             "interview": 575,
             "observation": 0,
-            "total": 575
+            "total": 575,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -73,7 +85,9 @@
             "subpopulation": "Chronically Homeless",
             "interview": 170,
             "observation": 0,
-            "total": 170
+            "total": 170,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -84,7 +98,9 @@
             "subpopulation": "Families w/ Children",
             "interview": 222,
             "observation": 0,
-            "total": 222
+            "total": 222,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -95,7 +111,9 @@
             "subpopulation": "Substance Abuse",
             "interview": 93,
             "observation": 0,
-            "total": 93
+            "total": 93,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -106,7 +124,9 @@
             "subpopulation": "Mental Health Conditions",
             "interview": 230,
             "observation": 0,
-            "total": 230
+            "total": 230,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -117,7 +137,9 @@
             "subpopulation": "Veterans",
             "interview": 35,
             "observation": 0,
-            "total": 35
+            "total": 35,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -128,7 +150,9 @@
             "subpopulation": "Asian",
             "interview": 560,
             "observation": 0,
-            "total": 560
+            "total": 560,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -139,7 +163,9 @@
             "subpopulation": "American Indian",
             "interview": 11,
             "observation": 0,
-            "total": 11
+            "total": 11,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -150,7 +176,9 @@
             "subpopulation": "Black",
             "interview": 201,
             "observation": 0,
-            "total": 201
+            "total": 201,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -161,7 +189,9 @@
             "subpopulation": "White",
             "interview": 505,
             "observation": 0,
-            "total": 505
+            "total": 505,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -172,7 +202,9 @@
             "subpopulation": "Multiple Races",
             "interview": 19,
             "observation": 0,
-            "total": 19
+            "total": 19,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -183,7 +215,9 @@
             "subpopulation": "Native Hawaiian",
             "interview": 0,
             "observation": 0,
-            "total": 0
+            "total": 0,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -194,7 +228,9 @@
             "subpopulation": "Unknown Race",
             "interview": 7,
             "observation": 0,
-            "total": 7
+            "total": 7,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -205,7 +241,9 @@
             "subpopulation": "Male",
             "interview": 404,
             "observation": 0,
-            "total": 404
+            "total": 404,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -216,7 +254,9 @@
             "subpopulation": "Female",
             "interview": 348,
             "observation": 0,
-            "total": 348
+            "total": 348,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -227,7 +267,9 @@
             "subpopulation": "Transgender",
             "interview": 2,
             "observation": 0,
-            "total": 2
+            "total": 2,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -238,7 +280,9 @@
             "subpopulation": "Gender Non-Conf",
             "interview": 0,
             "observation": 0,
-            "total": 0
+            "total": 0,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -249,7 +293,9 @@
             "subpopulation": "Unknown",
             "interview": 3,
             "observation": 0,
-            "total": 3
+            "total": 3,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -260,7 +306,9 @@
             "subpopulation": "Hispanic",
             "interview": 274,
             "observation": 0,
-            "total": 274
+            "total": 274,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -271,7 +319,9 @@
             "subpopulation": "Non-Hispanic",
             "interview": 476,
             "observation": 0,
-            "total": 476
+            "total": 476,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -282,7 +332,9 @@
             "subpopulation": "Unknown",
             "interview": 7,
             "observation": 0,
-            "total": 7
+            "total": 7,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -293,7 +345,9 @@
             "subpopulation": "Adults Only",
             "interview": 534,
             "observation": 0,
-            "total": 534
+            "total": 534,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -304,7 +358,9 @@
             "subpopulation": "Adults and Children",
             "interview": 208,
             "observation": 0,
-            "total": 208
+            "total": 208,
+            "type": "Sheltered",
+            "year": "2020"
         }
     },
     {
@@ -315,7 +371,9 @@
             "subpopulation": "Children Only",
             "interview": 14,
             "observation": 0,
-            "total": 14
+            "total": 14,
+            "type": "Sheltered",
+            "year": "2020"
         }
     }
 ]
