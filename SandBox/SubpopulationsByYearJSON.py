@@ -139,6 +139,23 @@ def get_Total_BrainInjury(in_df, year):
 
     return {"year": year ,"category": "Subpopulations", "interview": str(interview) ,"observation": str(observation), "total": str(interview + observation), "subpopulation": 'Brain Injury', 'sheltered': "False"}
 
+def get_Total_PetOwner(in_df,year):
+    interview = in_df.loc[lambda df: (df['Companion Animal'] == 'Yes') & (df['Number of Animal'] >= 1), :].shape[0]
+    observation = 0
+
+    return {"year": year ,"category": "Subpopulations", "interview": interview ,"observation": observation, "total": interview + observation, "subpopulation": 'Pet Owner', 'sheltered': "False"}
+
+def get_Total_PetHousing(in_df,year):
+    interview = in_df.loc[lambda df: (df['Pet Housing'] == 'Yes') & (df['Companion Animal'] == 'Yes') & (df['Number of Animal'] >= 1), :].shape[0]
+    observation = 0
+
+    return {"year": year ,"category": "Subpopulations", "interview": interview ,"observation": observation, "total": interview + observation, "subpopulation": 'Pet Housing', 'sheltered': "False"}
+
+def get_Total_FirstTimeHomeless(in_df,year):
+    interview = in_df.loc[lambda df: (df['First Time Homeless'] == 'Yes'), :].shape[0]
+    observation = 0
+
+    return {"year": year ,"category": "Subpopulations", "interview": interview ,"observation": observation, "total": interview + observation, "subpopulation": 'First Time Homeless', 'sheltered': "False"}
 
 newData.append({
 "fields":  get_Total_Veterans(df, year)
@@ -198,6 +215,18 @@ newData.append({
 newData.append({
         "fields":  get_Total_BrainInjury(df,year)
         })
+
+
+newData.append({
+        "fields": get_Total_PetOwner(df,year)
+}) 
+newData.append({
+        "fields": get_Total_PetHousing(df,year)
+}) 
+
+newData.append({
+    "fields": get_Total_FirstTimeHomeless(df,year)
+})
 
 
 for x in jsonData:
