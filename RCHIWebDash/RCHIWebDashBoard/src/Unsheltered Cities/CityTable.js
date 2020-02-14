@@ -37,9 +37,9 @@ export default class CityTable extends Component{
         this.state = {
             cityChoice : "BANNING",
 
-            urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/",
-                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/",
-                    "http://127.0.0.1:8000/api/SubpopulationsByCity2019/"],
+            urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
+                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/",
+                    "http://127.0.0.1:8000/api/SubpopulationsByCity/"],
             Tables : [],
             selectOptions: []
         }
@@ -68,19 +68,19 @@ export default class CityTable extends Component{
         console.log("didMount")
 
         var myTables = await aggregateFetch(this.state.urls, false)
-        myTables["GeneralTableSubpopulations2019"] = expandOnField(myTables["GeneralTableSubpopulations2019"], "category")
-        myTables["GeneralTableSubpopulationsSheltered2019"] = expandOnField(myTables["GeneralTableSubpopulationsSheltered2019"], "category")
-        myTables["SubpopulationsByCity2019"] = expandOnField(myTables["SubpopulationsByCity2019"],"city")
+        myTables["GeneralTableSubpopulations"] = expandOnField(myTables["GeneralTableSubpopulations"], "category")
+        myTables["GeneralTableSubpopulationsSheltered"] = expandOnField(myTables["GeneralTableSubpopulationsSheltered"], "category")
+        myTables["SubpopulationsByCity"] = expandOnField(myTables["SubpopulationsByCity"],"city")
          
-        for(const key in myTables["SubpopulationsByCity2019"]){
-            myTables["SubpopulationsByCity2019"][key] = expandOnField(myTables["SubpopulationsByCity2019"][key], "category")
+        for(const key in myTables["SubpopulationsByCity"]){
+            myTables["SubpopulationsByCity"][key] = expandOnField(myTables["SubpopulationsByCity"][key], "category")
         }
 
 
         
         this.setState({
             Tables: myTables,
-            selectOptions: this.getOptions(Object.keys(myTables["SubpopulationsByCity2019"])),
+            selectOptions: this.getOptions(Object.keys(myTables["SubpopulationsByCity"])),
             rendered : true
         })
 
@@ -122,7 +122,7 @@ export default class CityTable extends Component{
                                             <div className="ct-side-r1">
                                                 >
                                                 <TableComponent4
-                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
                                                         tableName = {"Subpopulations"}
                                                         height = {"110%"}
                                                 />
@@ -131,7 +131,7 @@ export default class CityTable extends Component{
                                             <div className="ct-side-r2">
                                                 
                                                 <TableComponent4
-                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Age"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Age"],"subpopulation", ["Total"])}
                                                         tableName = {"Age "}
                                                         height = {"114%"}
                                                 />
@@ -155,14 +155,14 @@ export default class CityTable extends Component{
                                                 <div className="ct-center-r2c1">
                                                     <span className = "component-header">
                                                         <Number height = {400}
-                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=homeless+' + this.state.cityChoice}
+                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
                                                             />
                                                     </span>
                                                 </div>
                                                 <div className="ct-center-r2c2">
                                                     <span className = "component-header">
                                                         <Total height = {400}
-                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity2019/?search=Age+' + this.state.cityChoice}
+                                                            url = {'http://127.0.0.1:8000/api/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
                                                             />
 
                                                     </span>
@@ -175,14 +175,14 @@ export default class CityTable extends Component{
                                             <div className="ct-center-r2">
                                                 <div className="ct-center-r2c1">
                                                     <TableComponent4
-                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
                                                         tableName = "Hispanic"
                                                         height = {"100%"}
                                                     />
                                                 </div>
                                                 <div className="ct-center-r2c2">
                                                     <PieChart2
-                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Ethinicity"],"subpopulation", ["Total"])}
                                                         margin = {{bottom : 60, top : 30, right: 60, left : 60}}
                                                         />
                                                 </div>
@@ -190,7 +190,7 @@ export default class CityTable extends Component{
                                             <div className="ct-center-r3">
                                                 <span className = "component-header">Race</span>
                                                 <BarGraph 
-                                                    data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Race"],"subpopulation", ["Total"])}
+                                                    data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Race"],"subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
                                                     keys = {["interview"]}
                                                     margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
@@ -203,14 +203,14 @@ export default class CityTable extends Component{
                                             
                                                 <div className="ct-side-r1r1">
                                                     <TableComponent4
-                                                        data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
                                                         tableName = {"Gender"}
                                                         height = {"120%"}
                                                     />
                                                 </div>
                                                 <div className="ct-side-r1r2">
                                                     <BarGraph 
-                                                    data = {filterList(this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
+                                                    data = {filterList(this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
                                                     keys = {["interview"]}
                                                     margin = {{top: 40, bottom:30, right: 30, left: 30}}
@@ -222,7 +222,7 @@ export default class CityTable extends Component{
                                                 </div>
                                                 <div className="ct-side-r1r4">
                                                     <TableComponent4 
-                                                        data = {this.state.Tables["SubpopulationsByCity2019"][this.state.cityChoice]["Race"]}
+                                                        data = {this.state.Tables["SubpopulationsByCity"][this.state.cityChoice]["Race"]}
                                                         height = {"115%"}
                                                         />
                                                     

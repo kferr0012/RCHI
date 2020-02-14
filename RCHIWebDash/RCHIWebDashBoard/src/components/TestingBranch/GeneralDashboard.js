@@ -26,8 +26,8 @@ export default class Dashboard extends Component{
         super(props)
 
         this.state = {
-            urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations2019/",
-                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered2019/"],
+            urls :  ["http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
+                     "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/"],
             
             Tables : [],
             render : false
@@ -239,8 +239,6 @@ export default class Dashboard extends Component{
         console.log("didMount")
         var fetchString = this.props.host + this.props.root + '2020/GeneralTableSubpopulations/'
 
-        console.log("fetchString")
-        console.log(fetchString)
         var myTables = await aggregateFetch(this.state.urls)
         this.setState({
             Tables: myTables,
@@ -283,7 +281,7 @@ export default class Dashboard extends Component{
                 <div className="gen-r1">
                   <p className="component-header">Race and Ethnicity</p>
                   <BarGraph
-                    data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Race"], "subpopulation", ["Total"])}
+                    data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total"])}
                     indexBy = "subpopulation"
                     keys = {["interview", "observation"]}
                     margin = {{left: 45, top: 50, bottom: 30}}
@@ -294,13 +292,13 @@ export default class Dashboard extends Component{
                     <div className="gen-r2c1r1">
                       <p className="component-header">Gender</p>
                       <PieChart2
-                        data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                        data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
                         margin = {{top: 35, bottom: 10}}
                       />
                     </div>
                     <div className="gen-r2c1r2">
                       <TableComponent4
-                        data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Gender"],"subpopulation", ["Total"])}
+                        data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Gender"],"subpopulation", ["Total"])}
                         header = {false}
                         height = {"100%"}
                       />
@@ -310,7 +308,7 @@ export default class Dashboard extends Component{
                     <p className="component-header">Ethnicity</p>
 
                     <PieChart2
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Ethinicity"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Ethinicity"],"subpopulation", ["Total"])}
                       margin = {{top: 40, bottom: 40, left: 30, right: 30}}  
                     />
 
@@ -377,7 +375,7 @@ export default class Dashboard extends Component{
                   <div className="gen-3r-r5">
                     <span className = "component-header">Househhold Type</span>
                     <PieChart2
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations2019"]["Households"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
                       margin = {{top:40, bottom: 40, left: 40, right: 40}}
                     />
                   </div>
@@ -387,13 +385,13 @@ export default class Dashboard extends Component{
                   <div className="gen-r2c1r1">
                     <span className="component-header">Living Situations</span>
                     <PieChart2
-                      data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
+                      data = {this.state.Tables["GeneralTableSubpopulations"]["Living Situation"]}
                       margin = {{top:50,bottom:50,left:60, right: 60}}
                     />
                   </div>
                   <div className="gen-r2c1r2">
                     <TableComponent4
-                      data = {this.state.Tables["GeneralTableSubpopulations2019"]["Living Situation"]}
+                      data = {this.state.Tables["GeneralTableSubpopulations"]["Living Situation"]}
                       header = {false}
                       height = {"100%"}
                     />

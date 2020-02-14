@@ -13,5 +13,6 @@ router.register('GeneralTableSubpopulations',GeneralTableSubpopulationsViewSet, 
 router.register('GeneralTableSubpopulationsSheltered', GeneralTableSubpopulationsShelteredViewSet, basename = "GeneralTableSubpopulationsSheltered2019")
 
 urlpatterns = [
-    path('2019/', include(router.urls))
+    path('2019/', include(router.urls)),
+    path('', include(router.urls))
 ]

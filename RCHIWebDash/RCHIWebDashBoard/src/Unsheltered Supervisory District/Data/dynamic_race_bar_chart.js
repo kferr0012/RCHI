@@ -18,7 +18,7 @@ class Dynamic_Bar_Chart_Template extends Component{
   }
 
   formatingData(){
-    axios.get('http://localhost:8000/api/SubpopulationsByCity2019/?search='+ this.props.query)
+    axios.get('http://localhost:8000/api/SubpopulationsByCity/?search='+ this.props.query)
       .then(response=>{
         const filter = response.data.filter(row => (row.subpopulation !== "Total" && row.category === "Race"))
         const new_data = {

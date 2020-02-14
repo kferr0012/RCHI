@@ -8,7 +8,7 @@ export const lat = 33.6906;
 export const lng = -116.1055;
 export const defaultZoom = 7;
 
-export const subPopLink = "http://localhost:8000/api/SubpopulationsByCity2019/";
+export const subPopLink = "http://localhost:8000/api/SubpopulationsByCity/";
 
 export const cityNames = {
     'CATHEDRAL CITY': 'Cathedral City',

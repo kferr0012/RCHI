@@ -40,7 +40,7 @@ const PageLayout = ({currentDistrict, tables}) => {
                     {/* <p>r1c3</p> */}
                     <h4>Population Counts</h4>
                     <TableComponent4
-                        data = {filterList(tables["SubpopulationsByCity2019"][currentDistrict]["Age"].concat(tables["SubpopulationsByCity2019"][currentDistrict]["Gender"]).concat(tables["SubpopulationsByCity2019"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList)}
+                        data = {filterList(tables["SubpopulationsByCity"][currentDistrict]["Age"].concat(tables["SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables["SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList)}
                         height = {"100%"}
                     />
                     

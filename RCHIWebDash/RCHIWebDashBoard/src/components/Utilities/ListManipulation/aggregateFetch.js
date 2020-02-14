@@ -2,7 +2,6 @@ import {host,root,availableYears,availableFiles} from '../constants/routing'
 
 export async function aggregateFetchbyConstants(){
 
-    console.log("aggregateFetchbyConstants")
     var fetchURL = host + root
 
     var outputTable = {}
@@ -22,8 +21,6 @@ export async function aggregateFetchbyConstants(){
         for(const file in availableFiles){
             
             var fetchLink = fetchURL + year + file + "/"
-            console.log("fetchlink: ")
-            console.log(fetchLink)
 
             await fetch(fetchLink, {
                 headers: {
@@ -33,37 +30,36 @@ export async function aggregateFetchbyConstants(){
                 })
                 .then(response => response.json())
                 .then((data) =>{
-                    console.log( "data found in " + fetchLink)
+                    //console.log( "data found in " + fetchLink)
                     outputTable[yearKey][file] = data
-                    console.log("added data")
+                    //console.log("added data")
                     
                 })
                 .catch(err => {
-                    console.log( "no data found in " + fetchLink)
+                    //console.log( "no data found in " + fetchLink)
                 })
         }
 
     }
-
-    console.log("outputTable")
-    console.log(outputTable)
 
     return outputTable
     
 }
 export async function aggregateFetch(listOfURLs, expandData = true){
 
-    console.log("aggregateFetch")
+
+    console.log("AGGREGATE FETCH")
     var outputTable = {}
 
-    //for(var i = 0; i< listOfURLs.length; i++){
+    for(var i = 0; i< listOfURLs.length; i++){
         
-    var urlIndex = listOfURLs
-        //var urlIndex = listOfURLs[i]
-        //urlIndex = urlIndex.split('/')
-        //urlIndex = urlIndex[urlIndex.length - 2]
         
-        await fetch(listOfURLs, {
+        var urlIndex = listOfURLs[i]
+        console.log("url: " + urlIndex)
+        urlIndex = urlIndex.split('/')
+        urlIndex = urlIndex[urlIndex.length - 2]
+        
+        await fetch(listOfURLs[i], {
         headers: {
             'Accept': 'application/json',
             'X-Requested-With': 'XMLHttpRequest'
@@ -79,7 +75,7 @@ export async function aggregateFetch(listOfURLs, expandData = true){
             console.log("no data found for " + urlIndex)
         })
         
-    //}
+    }
 
     console.log("fetched Data")
     console.log(outputTable)

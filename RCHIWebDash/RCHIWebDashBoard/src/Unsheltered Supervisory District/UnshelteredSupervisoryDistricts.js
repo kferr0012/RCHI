@@ -18,7 +18,7 @@ class UnshelteredSupervisoryDistricts extends Component{
             pageDisplayed: null,
             totalPages:5,
             districtDisplay:null,
-            urls : ["http://127.0.0.1:8000/api/SubpopulationsByCity2019/"],
+            urls : ["http://127.0.0.1:8000/api/SubpopulationsByCity/"],
             rendered : false,
 
             
@@ -30,11 +30,11 @@ class UnshelteredSupervisoryDistricts extends Component{
         var Tables = await aggregateFetch(this.state.urls,false)
         
         //generate keys of district
-        Tables["SubpopulationsByCity2019"] = expandOnField(Tables["SubpopulationsByCity2019"],"district")
+        Tables["SubpopulationsByCity"] = expandOnField(Tables["SubpopulationsByCity"],"district")
 
         //generate keys by category
-        for(const key in Tables["SubpopulationsByCity2019"]){
-            Tables["SubpopulationsByCity2019"][key] = expandOnField(Tables["SubpopulationsByCity2019"][key], "category")
+        for(const key in Tables["SubpopulationsByCity"]){
+            Tables["SubpopulationsByCity"][key] = expandOnField(Tables["SubpopulationsByCity"][key], "category")
         }
 
         console.log("Available Tables")

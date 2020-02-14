@@ -74,7 +74,7 @@ export default class CityTables extends Component {
     }
 
     async fetchSubpopulationData() {
-        const promise = await axios.get("http://localhost:8000/api/SubpopulationsByCity2019/");
+        const promise = await axios.get("http://localhost:8000/api/SubpopulationsByCity/");
         const indata = promise.status===200 ? promise.data: [];
         if (indata.length === 0){
             throw Error;

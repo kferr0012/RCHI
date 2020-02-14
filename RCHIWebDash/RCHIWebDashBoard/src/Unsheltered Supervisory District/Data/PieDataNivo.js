@@ -13,7 +13,7 @@ class PieData extends Component{
     }
 
     formatingData(){
-        axios.get('http://localhost:8000/api/SubpopulationsByCity2019/?search='+this.props.query)
+        axios.get('http://localhost:8000/api/SubpopulationsByCity/?search='+this.props.query)
             .then(response => {
                 const filterData = response.data.filter(row => (row.subpopulation !== "Total" && row.city !== "RIVERSIDE"))
 
