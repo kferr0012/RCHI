@@ -4,16 +4,13 @@ from .views import *
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register('Trends', TrendsViewSet, basename='Trends')
-#router.register('General', GeneralViewSet, basename='General')
 router.register('HouseholdsByCityYearInterview', HouseholdsByCityYearInterviewViewSet,basename='HouseholdsByCityYearInterview')
-router.register('SubpopulationsByCity2019',SubpopulationsByCity2019ViewSet, basename='SubpopulationsByCity')
+router.register('SubpopulationsByCity',SubpopulationsByCityViewSet, basename='SubpopulationsByCity')
 router.register('VolunteerDeployment',VolunteerDeploymentViewSet,basename='VolunteerDeployment')
 router.register('SubpopulationsByYear',SubpopulationByYearViewSet,basename='SubpopulationsByYear')
 router.register('CityTotalByYear',CityTotalByYearViewSet,basename='CityTotalByYear')
-router.register('GeneralTableSubpopulations2019',GeneralTableSubpopulations2019ViewSet, basename = "GeneralTableSubpopulations2019")
-router.register('GeneralTableSubpopulationsSheltered2019', GeneralTableSubpopulationsSheltered2019ViewSet, basename = "GeneralTableSubpopulationsSheltered2019")
-
+router.register('GeneralTableSubpopulations',GeneralTableSubpopulationsViewSet, basename = "GeneralTableSubpopulations")
+router.register('GeneralTableSubpopulationsSheltered', GeneralTableSubpopulationsShelteredViewSet, basename = "GeneralTableSubpopulationsSheltered")
 urlpatterns = [
-    path('', include(router.urls))
+    path('2020/', include(router.urls))
 ]

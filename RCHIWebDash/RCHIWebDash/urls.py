@@ -17,5 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-     path('api/', include('backend.api.urls'))
+     path('api/', include('backend.api.Backend2019.urls')),
+     path('api/', include('backend.api.Backend2020.urls'))
 ]
