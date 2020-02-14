@@ -1,0 +1,379 @@
+[
+    {
+        "pk": "1",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Total",
+            "subpopulation": "Individuals",
+            "interview": 757,
+            "observation": 0,
+            "total": 757,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "2",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Age",
+            "subpopulation": "Adults",
+            "interview": 560,
+            "observation": 0,
+            "total": 560,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "3",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Age",
+            "subpopulation": "Children",
+            "interview": 138,
+            "observation": 0,
+            "total": 138,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "4",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Age",
+            "subpopulation": "Youth",
+            "interview": 57,
+            "observation": 0,
+            "total": 57,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "5",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Age",
+            "subpopulation": "Unknown Age",
+            "interview": 2,
+            "observation": 0,
+            "total": 2,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "6",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Households",
+            "interview": 575,
+            "observation": 0,
+            "total": 575,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "7",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Chronically Homeless",
+            "interview": 170,
+            "observation": 0,
+            "total": 170,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "8",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Families w/ Children",
+            "interview": 222,
+            "observation": 0,
+            "total": 222,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "9",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Substance Abuse",
+            "interview": 93,
+            "observation": 0,
+            "total": 93,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "10",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Mental Health Conditions",
+            "interview": 230,
+            "observation": 0,
+            "total": 230,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "11",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Veterans",
+            "interview": 35,
+            "observation": 0,
+            "total": 35,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "13",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "Asian",
+            "interview": 560,
+            "observation": 0,
+            "total": 560,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "14",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "American Indian",
+            "interview": 11,
+            "observation": 0,
+            "total": 11,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "15",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "Black",
+            "interview": 201,
+            "observation": 0,
+            "total": 201,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "16",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "White",
+            "interview": 505,
+            "observation": 0,
+            "total": 505,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "17",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "Multiple Races",
+            "interview": 19,
+            "observation": 0,
+            "total": 19,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "18",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "Native Hawaiian",
+            "interview": 0,
+            "observation": 0,
+            "total": 0,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "19",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Race",
+            "subpopulation": "Unknown Race",
+            "interview": 7,
+            "observation": 0,
+            "total": 7,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "20",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Gender",
+            "subpopulation": "Male",
+            "interview": 404,
+            "observation": 0,
+            "total": 404,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "21",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Gender",
+            "subpopulation": "Female",
+            "interview": 348,
+            "observation": 0,
+            "total": 348,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "22",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Gender",
+            "subpopulation": "Transgender",
+            "interview": 2,
+            "observation": 0,
+            "total": 2,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "23",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Gender",
+            "subpopulation": "Gender Non-Conf",
+            "interview": 0,
+            "observation": 0,
+            "total": 0,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "24",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Gender",
+            "subpopulation": "Unknown",
+            "interview": 3,
+            "observation": 0,
+            "total": 3,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "25",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Ethnicity",
+            "subpopulation": "Hispanic",
+            "interview": 274,
+            "observation": 0,
+            "total": 274,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "26",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Ethnicity",
+            "subpopulation": "Non-Hispanic",
+            "interview": 476,
+            "observation": 0,
+            "total": 476,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "27",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Ethnicity",
+            "subpopulation": "Unknown",
+            "interview": 7,
+            "observation": 0,
+            "total": 7,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "28",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Household",
+            "subpopulation": "Adults Only",
+            "interview": 534,
+            "observation": 0,
+            "total": 534,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "29",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Household",
+            "subpopulation": "Adults and Children",
+            "interview": 208,
+            "observation": 0,
+            "total": 208,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "30",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Household",
+            "subpopulation": "Children Only",
+            "interview": 14,
+            "observation": 0,
+            "total": 14,
+            "type": "Sheltered",
+            "year": "2020"
+        }
+    }
+]

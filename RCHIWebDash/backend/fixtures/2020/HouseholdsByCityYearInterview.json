@@ -7,7 +7,8 @@
             "totalHouseholds": 110,
             "adultsOnly": 108,
             "adultsAndChildren": 1,
-            "childrenOnly": 1
+            "childrenOnly": 1,
+            "type": "Unsheltered"
         },
         "pk": 1,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -20,7 +21,8 @@
             "totalHouseholds": 49,
             "adultsOnly": 49,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 2,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -33,7 +35,8 @@
             "totalHouseholds": 38,
             "adultsOnly": 38,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 3,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -46,7 +49,8 @@
             "totalHouseholds": 11,
             "adultsOnly": 11,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 4,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -59,7 +63,8 @@
             "totalHouseholds": 0,
             "adultsOnly": 0,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 5,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -72,7 +77,8 @@
             "totalHouseholds": 10,
             "adultsOnly": 10,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 6,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -85,7 +91,8 @@
             "totalHouseholds": 64,
             "adultsOnly": 64,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 7,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -98,7 +105,8 @@
             "totalHouseholds": 109,
             "adultsOnly": 108,
             "adultsAndChildren": 0,
-            "childrenOnly": 1
+            "childrenOnly": 1,
+            "type": "Unsheltered"
         },
         "pk": 8,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -111,7 +119,8 @@
             "totalHouseholds": 108,
             "adultsOnly": 108,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 9,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -124,7 +133,8 @@
             "totalHouseholds": 35,
             "adultsOnly": 35,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 10,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -137,7 +147,8 @@
             "totalHouseholds": 0,
             "adultsOnly": 0,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 11,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -150,7 +161,8 @@
             "totalHouseholds": 44,
             "adultsOnly": 44,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 12,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -163,7 +175,8 @@
             "totalHouseholds": 30,
             "adultsOnly": 30,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 13,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -176,7 +189,8 @@
             "totalHouseholds": 15,
             "adultsOnly": 15,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 14,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -189,7 +203,8 @@
             "totalHouseholds": 63,
             "adultsOnly": 63,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 15,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -202,7 +217,8 @@
             "totalHouseholds": 40,
             "adultsOnly": 40,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 16,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -215,7 +231,8 @@
             "totalHouseholds": 42,
             "adultsOnly": 42,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 17,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -228,7 +245,8 @@
             "totalHouseholds": 51,
             "adultsOnly": 50,
             "adultsAndChildren": 0,
-            "childrenOnly": 1
+            "childrenOnly": 1,
+            "type": "Unsheltered"
         },
         "pk": 18,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -241,7 +259,8 @@
             "totalHouseholds": 8,
             "adultsOnly": 8,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 19,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -254,7 +273,8 @@
             "totalHouseholds": 45,
             "adultsOnly": 45,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 20,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -267,7 +287,8 @@
             "totalHouseholds": 1,
             "adultsOnly": 1,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 21,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -280,7 +301,8 @@
             "totalHouseholds": 33,
             "adultsOnly": 33,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 22,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -293,7 +315,8 @@
             "totalHouseholds": 118,
             "adultsOnly": 118,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 23,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -306,7 +329,8 @@
             "totalHouseholds": 51,
             "adultsOnly": 51,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 24,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -319,7 +343,8 @@
             "totalHouseholds": 23,
             "adultsOnly": 23,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 25,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -332,7 +357,8 @@
             "totalHouseholds": 14,
             "adultsOnly": 14,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 26,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -345,7 +371,8 @@
             "totalHouseholds": 5,
             "adultsOnly": 5,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 27,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -358,7 +385,8 @@
             "totalHouseholds": 0,
             "adultsOnly": 0,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 28,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -371,7 +399,8 @@
             "totalHouseholds": 8,
             "adultsOnly": 8,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 29,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -384,7 +413,8 @@
             "totalHouseholds": 48,
             "adultsOnly": 48,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 30,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -397,7 +427,8 @@
             "totalHouseholds": 7,
             "adultsOnly": 7,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 31,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -410,7 +441,8 @@
             "totalHouseholds": 13,
             "adultsOnly": 13,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 32,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -423,7 +455,8 @@
             "totalHouseholds": 26,
             "adultsOnly": 26,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 33,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -436,7 +469,8 @@
             "totalHouseholds": 12,
             "adultsOnly": 12,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 34,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -449,7 +483,8 @@
             "totalHouseholds": 36,
             "adultsOnly": 36,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "type": "Unsheltered"
         },
         "pk": 35,
         "model": "backend.HouseholdsByCityYearInterview2020"

@@ -20,7 +20,7 @@ class SubpopulationsByCityViewSet(viewsets.ModelViewSet):
 
 class SubpopulationByYearViewSet(viewsets.ModelViewSet):
     queryset = SubpopulationsByYear2020.objects.all()
-    serializer_class = SubpopulationsByCitySerializer
+    serializer_class = SubpopulationsByYearSerializer
     filter_backends = [SearchFilter]
     search_fields = ['category', 'subpopulation']
 
