@@ -8,7 +8,7 @@ class TableComponent4 extends Component{
 
     this.state = {
       chartData : null,
-      category_array: [],
+      column_name_array: [],
       filteredData: [],
       flag: false,
       col_size : null,
@@ -19,7 +19,7 @@ class TableComponent4 extends Component{
 
   }
   componentWillReceiveProps(){
-   
+
     this.state.chartData = this.props.data;
 
 
@@ -30,10 +30,22 @@ class TableComponent4 extends Component{
 
 
     //find all the columns
-    for(let i = 0; i < this.state.chartData.length; ++i){
-      if(!column_name_array.includes(this.state.chartData[i].category)){
+    //CONDITIONAL
+    //Check if expandIndex prop is passed in
+    if(this.state.chartData.expandIndex){
+      for(let i = 0; i < this.state.chartData.length; ++i){
+        if(!column_name_array.includes(this.state.chartData[i].expandIndex)){
 
-        column_name_array.push(this.state.chartData[i].category);
+          column_name_array.push(this.state.chartData[i].expandIndex);
+        }
+      }
+    }
+    else{
+      for(let i = 0; i < this.state.chartData.length; ++i){
+        if(!column_name_array.includes(this.state.chartData[i].category)){
+
+          column_name_array.push(this.state.chartData[i].category);
+        }
       }
     }
 
@@ -65,10 +77,23 @@ class TableComponent4 extends Component{
     }
 
     //Populate the unpopulated array
-    for(let i = 0; i < unpopulated_array.length; ++i){
-      for(let k = 0; k < this.state.chartData.length; ++k){
-        if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
-          unpopulated_array[i][this.state.chartData[k].category] = this.state.chartData[k].total;
+    //CONDITIONAL
+    //check if expandIndex prop was passed
+    if(this.state.chartData.expandIndex){
+      for(let i = 0; i < unpopulated_array.length; ++i){
+        for(let k = 0; k < this.state.chartData.length; ++k){
+          if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
+            unpopulated_array[i][this.state.chartData[k].expandIndex] = this.state.chartData[k].total;
+          }
+        }
+      }
+    }
+    else{
+      for(let i = 0; i < unpopulated_array.length; ++i){
+        for(let k = 0; k < this.state.chartData.length; ++k){
+          if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
+            unpopulated_array[i][this.state.chartData[k].category] = this.state.chartData[k].total;
+          }
         }
       }
     }
@@ -129,7 +154,7 @@ class TableComponent4 extends Component{
 
     this.setState(
       {
-        category_array: column_name_array,
+        column_name_array: column_name_array,
         filteredData: unpopulated_array,
         flag : true,
         col_size : column_size,
@@ -155,10 +180,22 @@ class TableComponent4 extends Component{
 
 
     //find all the columns
-    for(let i = 0; i < this.state.chartData.length; ++i){
-      if(!column_name_array.includes(this.state.chartData[i].category)){
+    //CONDITIONAL
+    //Check if expandIndex prop passed
+    if(this.state.chartData.expandIndex){
+      for(let i = 0; i < this.state.chartData.length; ++i){
+        if(!column_name_array.includes(this.state.chartData[i].expandIndex)){
 
-        column_name_array.push(this.state.chartData[i].category);
+          column_name_array.push(this.state.chartData[i].expandIndex);
+        }
+      }
+    }
+    else{
+      for(let i = 0; i < this.state.chartData.length; ++i){
+        if(!column_name_array.includes(this.state.chartData[i].category)){
+
+          column_name_array.push(this.state.chartData[i].category);
+        }
       }
     }
 
@@ -190,10 +227,23 @@ class TableComponent4 extends Component{
     }
 
     //Populate the unpopulated array
-    for(let i = 0; i < unpopulated_array.length; ++i){
-      for(let k = 0; k < this.state.chartData.length; ++k){
-        if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
-          unpopulated_array[i][this.state.chartData[k].category] = this.state.chartData[k].total;
+    //CONDITIONAL
+    //check if expandIndex prop is passed in
+    if(this.state.chartData.expandIndex){
+      for(let i = 0; i < unpopulated_array.length; ++i){
+        for(let k = 0; k < this.state.chartData.length; ++k){
+          if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
+            unpopulated_array[i][this.state.chartData[k].expandIndex] = this.state.chartData[k].total;
+          }
+        }
+      }
+    }
+    else{
+      for(let i = 0; i < unpopulated_array.length; ++i){
+        for(let k = 0; k < this.state.chartData.length; ++k){
+          if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
+            unpopulated_array[i][this.state.chartData[k].category] = this.state.chartData[k].total;
+          }
         }
       }
     }
@@ -254,7 +304,7 @@ class TableComponent4 extends Component{
 
     this.setState(
       {
-        category_array: column_name_array,
+        column_name_array: column_name_array,
         filteredData: unpopulated_array,
         flag : true,
         col_size : column_size,
@@ -272,7 +322,7 @@ class TableComponent4 extends Component{
 
   render(){
 
-    
+
     if(!this.state.flag){
       return(<h3>Loading</h3>);
     }
@@ -295,22 +345,22 @@ class TableComponent4 extends Component{
             }
 
             {this.props.header ?
-            
+
             <Table.Row>
             <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
-            
+
               {
-                this.state.category_array.map( (iterator, idx)=>{
+                this.state.column_name_array.map( (iterator, idx)=>{
                     return(
                         <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
                     );
                 })
               }
-            
-            </Table.Row>
-            
 
-            : 
+            </Table.Row>
+
+
+            :
             null
             }
             </Table.Header>
