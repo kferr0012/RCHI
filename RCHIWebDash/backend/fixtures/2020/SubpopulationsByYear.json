@@ -10,7 +10,7 @@
             "year": "2015",
             "interview": "102",
             "total": "102",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -24,7 +24,7 @@
             "year": "2016",
             "interview": "100",
             "total": "100",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -38,7 +38,7 @@
             "year": "2017",
             "interview": "91",
             "total": "91",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -52,7 +52,7 @@
             "year": "2018",
             "interview": "99",
             "total": "99",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -66,7 +66,7 @@
             "year": "2019",
             "interview": "107",
             "total": "107",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -80,7 +80,7 @@
             "year": "2015",
             "interview": "401",
             "total": "401",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -94,7 +94,7 @@
             "year": "2016",
             "interview": "299",
             "total": "299",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -108,7 +108,7 @@
             "year": "2017",
             "interview": "341",
             "total": "341",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -122,7 +122,7 @@
             "year": "2018",
             "interview": "387",
             "total": "387",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -136,7 +136,7 @@
             "year": "2019",
             "interview": "727",
             "total": "727",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -150,7 +150,7 @@
             "year": "2015",
             "interview": "76",
             "total": "116",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -164,7 +164,7 @@
             "year": "2016",
             "interview": "82",
             "total": "106",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -178,7 +178,7 @@
             "year": "2017",
             "interview": "107",
             "total": "178",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -192,7 +192,7 @@
             "year": "2018",
             "interview": "132",
             "total": "177",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -206,7 +206,7 @@
             "year": "2019",
             "interview": "88",
             "total": "181",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -220,7 +220,7 @@
             "year": "2015",
             "interview": "14",
             "total": "14",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -234,7 +234,7 @@
             "year": "2016",
             "interview": "8",
             "total": "8",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -248,7 +248,7 @@
             "year": "2017",
             "interview": "3",
             "total": "3",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -262,7 +262,7 @@
             "year": "2018",
             "interview": "4",
             "total": "4",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -276,7 +276,7 @@
             "year": "2019",
             "interview": "2",
             "total": "2",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -290,7 +290,7 @@
             "year": "2015",
             "interview": "97",
             "total": "97",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -304,7 +304,7 @@
             "year": "2016",
             "interview": "95",
             "total": "95",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -318,7 +318,7 @@
             "year": "2017",
             "interview": "85",
             "total": "85",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -332,7 +332,7 @@
             "year": "2018",
             "interview": "111",
             "total": "111",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -346,7 +346,7 @@
             "year": "2019",
             "interview": "129",
             "total": "129",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -360,7 +360,7 @@
             "year": "2015",
             "interview": "474",
             "total": "474",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -374,7 +374,7 @@
             "year": "2016",
             "interview": "273",
             "total": "273",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -388,7 +388,7 @@
             "year": "2017",
             "interview": "291",
             "total": "291",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -402,7 +402,7 @@
             "year": "2018",
             "interview": "273",
             "total": "273",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -416,7 +416,7 @@
             "year": "2015",
             "interview": "348",
             "total": "348",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -430,7 +430,7 @@
             "year": "2016",
             "interview": "341",
             "total": "341",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -444,7 +444,7 @@
             "year": "2017",
             "interview": "461",
             "total": "461",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -458,7 +458,7 @@
             "year": "2018",
             "interview": "486",
             "total": "486",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -472,7 +472,7 @@
             "year": "2019",
             "interview": "498",
             "total": "498",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -486,7 +486,7 @@
             "year": "2015",
             "interview": "243",
             "total": "243",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -500,7 +500,7 @@
             "year": "2016",
             "interview": "265",
             "total": "265",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -514,7 +514,7 @@
             "year": "2017",
             "interview": "282",
             "total": "282",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -528,7 +528,7 @@
             "year": "2018",
             "interview": "92",
             "total": "92",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -542,7 +542,7 @@
             "year": "2019",
             "interview": "97",
             "total": "97",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -556,7 +556,7 @@
             "year": "2015",
             "interview": "225",
             "total": "225",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -570,7 +570,7 @@
             "year": "2016",
             "interview": "223",
             "total": "223",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -584,7 +584,7 @@
             "year": "2017",
             "interview": "202",
             "total": "202",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -598,7 +598,7 @@
             "year": "2018",
             "interview": "272",
             "total": "272",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -612,7 +612,7 @@
             "year": "2019",
             "interview": "239",
             "total": "239",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -626,7 +626,7 @@
             "year": "2015",
             "interview": "322",
             "total": "322",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -640,7 +640,7 @@
             "year": "2016",
             "interview": "275",
             "total": "275",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -654,7 +654,7 @@
             "year": "2017",
             "interview": "309",
             "total": "309",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -668,7 +668,7 @@
             "year": "2018",
             "interview": "321",
             "total": "321",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -682,7 +682,7 @@
             "year": "2019",
             "interview": "367",
             "total": "367",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -696,7 +696,7 @@
             "year": "2015",
             "interview": "22",
             "total": "22",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -710,7 +710,7 @@
             "year": "2016",
             "interview": "11",
             "total": "11",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -724,7 +724,7 @@
             "year": "2017",
             "interview": "21",
             "total": "21",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -738,7 +738,7 @@
             "year": "2018",
             "interview": "20",
             "total": "20",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -752,7 +752,7 @@
             "year": "2019",
             "interview": "27",
             "total": "27",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -766,7 +766,7 @@
             "year": "2015",
             "interview": "179",
             "total": "179",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -780,7 +780,7 @@
             "year": "2016",
             "interview": "200",
             "total": "200",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -794,7 +794,7 @@
             "year": "2017",
             "interview": "268",
             "total": "268",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -808,7 +808,7 @@
             "year": "2018",
             "interview": "300",
             "total": "300",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -822,7 +822,7 @@
             "year": "2019",
             "interview": "368",
             "total": "368",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -836,7 +836,7 @@
             "year": "2015",
             "interview": "159",
             "total": "159",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -850,7 +850,7 @@
             "year": "2016",
             "interview": "201",
             "total": "201",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -864,7 +864,7 @@
             "year": "2017",
             "interview": "212",
             "total": "212",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -878,7 +878,7 @@
             "year": "2018",
             "interview": "204",
             "total": "204",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -892,7 +892,7 @@
             "year": "2019",
             "interview": "261",
             "total": "261",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -904,7 +904,7 @@
             "total": "92",
             "subpopulation": "Veteran Yes",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 65,
         "model": "backend.SubpopulationsByYear2020"
@@ -918,7 +918,7 @@
             "total": "100",
             "subpopulation": "Youth (18-24)",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 66,
         "model": "backend.SubpopulationsByYear2020"
@@ -932,7 +932,7 @@
             "total": "447",
             "subpopulation": "Chronically Homeless",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 67,
         "model": "backend.SubpopulationsByYear2020"
@@ -946,7 +946,7 @@
             "total": "5",
             "subpopulation": "Families with Children",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 68,
         "model": "backend.SubpopulationsByYear2020"
@@ -960,7 +960,7 @@
             "total": "104",
             "subpopulation": "Elderly (>62)",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 69,
         "model": "backend.SubpopulationsByYear2020"
@@ -974,7 +974,7 @@
             "total": "406",
             "subpopulation": "Substance Abuse",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 70,
         "model": "backend.SubpopulationsByYear2020"
@@ -988,7 +988,7 @@
             "total": "93",
             "subpopulation": "Victim of Domestic Violence",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 71,
         "model": "backend.SubpopulationsByYear2020"
@@ -1002,7 +1002,7 @@
             "total": "270",
             "subpopulation": "Jail Release 12 Months",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 72,
         "model": "backend.SubpopulationsByYear2020"
@@ -1016,7 +1016,7 @@
             "total": "326",
             "subpopulation": "Mental Health Conditions",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 73,
         "model": "backend.SubpopulationsByYear2020"
@@ -1030,7 +1030,7 @@
             "total": "0",
             "subpopulation": "AIDS or HIV",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 74,
         "model": "backend.SubpopulationsByYear2020"
@@ -1044,7 +1044,7 @@
             "total": "284",
             "subpopulation": "PTSD",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 75,
         "model": "backend.SubpopulationsByYear2020"
@@ -1058,7 +1058,7 @@
             "total": "196",
             "subpopulation": "Brain Injury",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 76,
         "model": "backend.SubpopulationsByYear2020"
@@ -1072,7 +1072,7 @@
             "total": 257,
             "subpopulation": "Pet Owner",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 77,
         "model": "backend.SubpopulationsByYear2020"
@@ -1086,7 +1086,7 @@
             "total": 64,
             "subpopulation": "Pet Housing",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 78,
         "model": "backend.SubpopulationsByYear2020"
@@ -1100,7 +1100,7 @@
             "total": 441,
             "subpopulation": "First Time Homeless",
             "sheltered": "False",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 79,
         "model": "backend.SubpopulationsByYear2020"

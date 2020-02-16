@@ -46,7 +46,7 @@ class ThreeVariableTrend extends Component{
 
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Subpopulations')
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Subpopulations')
             .then(response => {
 
             const labels = Array.from(new Set(response.data.map( input => input.year)))

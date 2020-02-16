@@ -8,7 +8,7 @@
             "interview": 757,
             "observation": 0,
             "total": 757,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -21,7 +21,7 @@
             "interview": 560,
             "observation": 0,
             "total": 560,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -34,7 +34,7 @@
             "interview": 138,
             "observation": 0,
             "total": 138,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -47,7 +47,7 @@
             "interview": 57,
             "observation": 0,
             "total": 57,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -60,7 +60,7 @@
             "interview": 2,
             "observation": 0,
             "total": 2,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -73,7 +73,7 @@
             "interview": 575,
             "observation": 0,
             "total": 575,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -86,7 +86,7 @@
             "interview": 170,
             "observation": 0,
             "total": 170,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -99,7 +99,7 @@
             "interview": 222,
             "observation": 0,
             "total": 222,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -112,7 +112,7 @@
             "interview": 93,
             "observation": 0,
             "total": 93,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -125,7 +125,7 @@
             "interview": 230,
             "observation": 0,
             "total": 230,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -138,7 +138,7 @@
             "interview": 35,
             "observation": 0,
             "total": 35,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -151,7 +151,7 @@
             "interview": 560,
             "observation": 0,
             "total": 560,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -164,7 +164,7 @@
             "interview": 11,
             "observation": 0,
             "total": 11,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -177,7 +177,7 @@
             "interview": 201,
             "observation": 0,
             "total": 201,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -190,7 +190,7 @@
             "interview": 505,
             "observation": 0,
             "total": 505,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -203,7 +203,7 @@
             "interview": 19,
             "observation": 0,
             "total": 19,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -216,7 +216,7 @@
             "interview": 0,
             "observation": 0,
             "total": 0,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -229,7 +229,7 @@
             "interview": 7,
             "observation": 0,
             "total": 7,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -242,7 +242,7 @@
             "interview": 404,
             "observation": 0,
             "total": 404,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -255,7 +255,7 @@
             "interview": 348,
             "observation": 0,
             "total": 348,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -268,7 +268,7 @@
             "interview": 2,
             "observation": 0,
             "total": 2,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -281,7 +281,7 @@
             "interview": 0,
             "observation": 0,
             "total": 0,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -294,7 +294,7 @@
             "interview": 3,
             "observation": 0,
             "total": 3,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -307,7 +307,7 @@
             "interview": 274,
             "observation": 0,
             "total": 274,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -320,7 +320,7 @@
             "interview": 476,
             "observation": 0,
             "total": 476,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -333,7 +333,7 @@
             "interview": 7,
             "observation": 0,
             "total": 7,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -346,7 +346,7 @@
             "interview": 534,
             "observation": 0,
             "total": 534,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -359,7 +359,7 @@
             "interview": 208,
             "observation": 0,
             "total": 208,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     },
@@ -372,7 +372,7 @@
             "interview": 14,
             "observation": 0,
             "total": 14,
-            "type": "Sheltered",
+            "_type": "Sheltered",
             "year": "2020"
         }
     }

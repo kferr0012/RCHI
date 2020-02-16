@@ -51,13 +51,11 @@ export async function aggregateFetch(listOfURLs, expandData = true){
     console.log("AGGREGATE FETCH")
     var outputTable = {}
 
+
     for(var i = 0; i< listOfURLs.length; i++){
         
-        
-        var urlIndex = listOfURLs[i]
-        console.log("url: " + urlIndex)
-        urlIndex = urlIndex.split('/')
-        urlIndex = urlIndex[urlIndex.length - 2]
+        //create index to store the data
+        var mapIndex = getIndex(listOfURLs[i])
         
         await fetch(listOfURLs[i], {
         headers: {
@@ -67,12 +65,12 @@ export async function aggregateFetch(listOfURLs, expandData = true){
         })
         .then(response => response.json())
         .then((data) =>{
-            console.log("data found in " + urlIndex)
-            outputTable[urlIndex] = data
+            console.log("data found in " + mapIndex)
+            outputTable[mapIndex] = data
             
         })
         .catch(err => {
-            console.log("no data found for " + urlIndex)
+            console.log("no data found for " + mapIndex)
         })
         
     }
@@ -89,6 +87,23 @@ export async function aggregateFetch(listOfURLs, expandData = true){
     console.log("end aggregate Fetch")
     return outputTable
 
+}
+
+function getIndex(link){
+
+  link = link.split('/')
+  var outputStr = ""
+
+  //initialize i = 4 because all data is within the same root
+  for(var i = 4 ; i < link.length-1 ; i++){
+    outputStr += link[i] + '/'
+  } 
+
+  /*
+  example;
+  input
+  */
+  return outputStr.substring(0,outputStr.length-1)
 }
 
 export function expandOnField(jsonList,field){

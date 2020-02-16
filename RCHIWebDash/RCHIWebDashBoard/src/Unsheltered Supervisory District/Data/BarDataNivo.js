@@ -12,7 +12,7 @@ class BarData extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByCity/?search=1,race')
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByCity/?search=1,race')
             .then(response => {
                 
                 const filterData = response.data.filter(index => (index.subpopulation !== "Total" && index.city !== "RIVERSIDE"))

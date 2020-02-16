@@ -9,7 +9,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -22,7 +22,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "75",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -35,7 +35,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "184",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -48,7 +48,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "15",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -61,7 +61,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "16",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -74,7 +74,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -87,7 +87,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "66",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -100,7 +100,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "238",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -113,7 +113,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "13",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -126,7 +126,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "45",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -139,7 +139,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "72",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -152,7 +152,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -165,7 +165,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "148",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -178,7 +178,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "4",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -191,7 +191,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "182",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -204,7 +204,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "4",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -217,7 +217,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "164",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -230,7 +230,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -243,7 +243,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "139",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -256,7 +256,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "11",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -269,7 +269,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "201",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -282,7 +282,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "44",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -295,7 +295,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "83",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -308,7 +308,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "19",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -321,7 +321,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "9",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -334,7 +334,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "66",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -347,7 +347,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "37",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -360,7 +360,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "112",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -373,7 +373,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "17",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -386,7 +386,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "48",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -399,7 +399,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "59",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -412,7 +412,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "65",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -425,7 +425,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "54",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -438,7 +438,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "46",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -451,7 +451,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "75",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -464,7 +464,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "58",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -477,7 +477,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -490,7 +490,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "50",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -503,7 +503,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "4",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -516,7 +516,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -529,7 +529,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "43",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -542,7 +542,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "126",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -555,7 +555,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "8",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -568,7 +568,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "30",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -581,7 +581,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "48",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -594,7 +594,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "82",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -607,7 +607,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "51",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -620,7 +620,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "45",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -633,7 +633,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "2",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -646,7 +646,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "52",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -659,7 +659,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "9",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -672,7 +672,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "0",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -685,7 +685,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "23",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -698,7 +698,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "196",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -711,7 +711,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "6",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -724,7 +724,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "98",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -737,7 +737,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "37",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -750,7 +750,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "13",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -763,7 +763,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "9",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -776,7 +776,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "22",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -789,7 +789,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "77",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -802,7 +802,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "95",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -815,7 +815,7 @@
             "sheltered": "False",
             "year": "2018",
             "total": "15",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -828,7 +828,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "39",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -841,7 +841,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "15",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -854,7 +854,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "16",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -867,7 +867,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "17",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -880,7 +880,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "38",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -893,7 +893,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "77",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -906,7 +906,7 @@
             "sheltered": "False",
             "year": "2019",
             "total": "9",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -919,7 +919,7 @@
             "sheltered": "False",
             "year": "2015",
             "total": "185",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -932,7 +932,7 @@
             "sheltered": "False",
             "year": "2016",
             "total": "194",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -945,7 +945,7 @@
             "sheltered": "False",
             "year": "2017",
             "total": "173",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -958,7 +958,7 @@
             "sheltered": "False",
             "year": "2015",
             "total": "295",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -971,7 +971,7 @@
             "sheltered": "False",
             "year": "2016",
             "total": "218",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -984,7 +984,7 @@
             "sheltered": "False",
             "year": "2017",
             "total": "288",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -997,7 +997,7 @@
             "sheltered": "False",
             "year": "2015",
             "total": "442",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1010,7 +1010,7 @@
             "sheltered": "False",
             "year": "2016",
             "total": "362",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1023,7 +1023,7 @@
             "sheltered": "False",
             "year": "2017",
             "total": "393",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1036,7 +1036,7 @@
             "sheltered": "False",
             "year": "2015",
             "total": "189",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1049,7 +1049,7 @@
             "sheltered": "False",
             "year": "2016",
             "total": "178",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1062,7 +1062,7 @@
             "sheltered": "False",
             "year": "2017",
             "total": "256",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1075,7 +1075,7 @@
             "sheltered": "False",
             "year": "2015",
             "total": "434",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1088,7 +1088,7 @@
             "sheltered": "False",
             "year": "2016",
             "total": "399",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1101,7 +1101,7 @@
             "sheltered": "False",
             "year": "2017",
             "total": "528",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -1112,7 +1112,7 @@
             "city": "Riverside*",
             "total": "285",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 86,
         "model": "backend.CityTotalsByYear2020"
@@ -1125,7 +1125,7 @@
             "city": "Lake Elsinore",
             "total": "46",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 87,
         "model": "backend.CityTotalsByYear2020"
@@ -1138,7 +1138,7 @@
             "city": "Unincorporated",
             "total": "47",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 88,
         "model": "backend.CityTotalsByYear2020"
@@ -1151,7 +1151,7 @@
             "city": "Wildomar",
             "total": "6",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 89,
         "model": "backend.CityTotalsByYear2020"
@@ -1164,7 +1164,7 @@
             "city": "Canyon Lake",
             "total": "0",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 90,
         "model": "backend.CityTotalsByYear2020"
@@ -1177,7 +1177,7 @@
             "city": "Norco",
             "total": "12",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 91,
         "model": "backend.CityTotalsByYear2020"
@@ -1190,7 +1190,7 @@
             "city": "Corona",
             "total": "82",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 92,
         "model": "backend.CityTotalsByYear2020"
@@ -1203,7 +1203,7 @@
             "city": "Riverside*",
             "total": "215",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 93,
         "model": "backend.CityTotalsByYear2020"
@@ -1216,7 +1216,7 @@
             "city": "Jurupa Valley",
             "total": "99",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 94,
         "model": "backend.CityTotalsByYear2020"
@@ -1229,7 +1229,7 @@
             "city": "Unincorporated",
             "total": "32",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 95,
         "model": "backend.CityTotalsByYear2020"
@@ -1242,7 +1242,7 @@
             "city": "Eastvale",
             "total": "4",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 96,
         "model": "backend.CityTotalsByYear2020"
@@ -1255,7 +1255,7 @@
             "city": "Temecula",
             "total": "53",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 97,
         "model": "backend.CityTotalsByYear2020"
@@ -1268,7 +1268,7 @@
             "city": "Unincorporated",
             "total": "46",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 98,
         "model": "backend.CityTotalsByYear2020"
@@ -1281,7 +1281,7 @@
             "city": "Murrieta",
             "total": "16",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 99,
         "model": "backend.CityTotalsByYear2020"
@@ -1294,7 +1294,7 @@
             "city": "Hemet",
             "total": "72",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 100,
         "model": "backend.CityTotalsByYear2020"
@@ -1307,7 +1307,7 @@
             "city": "San Jacinto",
             "total": "29",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 101,
         "model": "backend.CityTotalsByYear2020"
@@ -1320,7 +1320,7 @@
             "city": "Desert Hot Springs",
             "total": "61",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 102,
         "model": "backend.CityTotalsByYear2020"
@@ -1333,7 +1333,7 @@
             "city": "Unincorporated",
             "total": "56",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 103,
         "model": "backend.CityTotalsByYear2020"
@@ -1346,7 +1346,7 @@
             "city": "La Quinta",
             "total": "3",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 104,
         "model": "backend.CityTotalsByYear2020"
@@ -1359,7 +1359,7 @@
             "city": "Coachella",
             "total": "61",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 105,
         "model": "backend.CityTotalsByYear2020"
@@ -1372,7 +1372,7 @@
             "city": "Indian Wells",
             "total": "0",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 106,
         "model": "backend.CityTotalsByYear2020"
@@ -1385,7 +1385,7 @@
             "city": "Indio",
             "total": "70",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 107,
         "model": "backend.CityTotalsByYear2020"
@@ -1398,7 +1398,7 @@
             "city": "Palm Springs",
             "total": "163",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 108,
         "model": "backend.CityTotalsByYear2020"
@@ -1411,7 +1411,7 @@
             "city": "Cathedral City",
             "total": "32",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 109,
         "model": "backend.CityTotalsByYear2020"
@@ -1424,7 +1424,7 @@
             "city": "Blythe",
             "total": "64",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 110,
         "model": "backend.CityTotalsByYear2020"
@@ -1437,7 +1437,7 @@
             "city": "Palm Desert",
             "total": "20",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 111,
         "model": "backend.CityTotalsByYear2020"
@@ -1450,7 +1450,7 @@
             "city": "Rancho Mirage",
             "total": "10",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 112,
         "model": "backend.CityTotalsByYear2020"
@@ -1463,7 +1463,7 @@
             "city": "Mecca",
             "total": "0",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 113,
         "model": "backend.CityTotalsByYear2020"
@@ -1476,7 +1476,7 @@
             "city": "Menifee",
             "total": "17",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 114,
         "model": "backend.CityTotalsByYear2020"
@@ -1489,7 +1489,7 @@
             "city": "Perris",
             "total": "45",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 115,
         "model": "backend.CityTotalsByYear2020"
@@ -1502,7 +1502,7 @@
             "city": "Unincorporated",
             "total": "13",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 116,
         "model": "backend.CityTotalsByYear2020"
@@ -1515,7 +1515,7 @@
             "city": "Beaumont",
             "total": "16",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 117,
         "model": "backend.CityTotalsByYear2020"
@@ -1528,7 +1528,7 @@
             "city": "Moreno Valley",
             "total": "90",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 118,
         "model": "backend.CityTotalsByYear2020"
@@ -1541,7 +1541,7 @@
             "city": "Calimesa",
             "total": "17",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 119,
         "model": "backend.CityTotalsByYear2020"
@@ -1554,7 +1554,7 @@
             "city": "Banning",
             "total": "42",
             "volunteers": "",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         },
         "pk": 120,
         "model": "backend.CityTotalsByYear2020"

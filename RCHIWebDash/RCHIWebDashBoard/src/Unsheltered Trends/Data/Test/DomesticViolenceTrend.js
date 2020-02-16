@@ -12,7 +12,7 @@ class DomesticViolenceGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Victim of Domestic Violence') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Victim of Domestic Violence') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

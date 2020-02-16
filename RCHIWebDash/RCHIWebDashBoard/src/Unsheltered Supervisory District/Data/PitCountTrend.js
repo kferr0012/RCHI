@@ -13,7 +13,7 @@ class PitCountTrend extends Component {
     }
 
     formatingData(){
-        axios.get('http://localhost:8000/api/CityTotalByYear/?search='+ this.props.query) 
+        axios.get('http://localhost:8000/api/2020/CityTotalByYear/?search='+ this.props.query) 
             .then(response => {
 
                 const filterData = response.data.filter(index => (index.sheltered === false))

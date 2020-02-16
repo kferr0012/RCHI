@@ -522,7 +522,9 @@ export default class UnsheleteredVsSheltered extends Component{
 
         this.state = {
             urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
-                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/"],
+                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/",
+                    "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulations/",
+                    "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsSheltered/",],
             Tables : [],
             render : false
         }
@@ -563,7 +565,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     <div className="svu-r2-h25">
                       <span className="component-header">Sheltered Households</span>>
                       <PieChart2
-                        data = {filterList(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Household"],"subpopulation", ["Total"])}
+                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Household"],"subpopulation", ["Total"])}
                         footer = {false}
                         margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                       />
@@ -579,7 +581,7 @@ export default class UnsheleteredVsSheltered extends Component{
 
                     <span className="component-header">Age</span>
                     <BarGraph 
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])}
+                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
@@ -588,7 +590,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r2">
                     <span className="component-header"> Ethnicity</span>
                     <BarGraph
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
+                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
@@ -611,7 +613,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r2-h25">
                     <p className="component-header">Unsheltered Households </p>
                     <PieChart2
-                      data = {filterList(this.state.Tables["GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
                       footer = {false}
                       margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                     />

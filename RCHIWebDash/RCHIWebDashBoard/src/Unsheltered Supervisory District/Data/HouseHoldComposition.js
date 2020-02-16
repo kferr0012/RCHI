@@ -25,7 +25,7 @@ class HouseHoldComposition extends Component{
     }
 
   formatingData(){
-    axios.get('http://localhost:8000/api/HouseholdsByCityYearInterview/?search='+this.props.query)
+    axios.get('http://localhost:8000/api/2020/HouseholdsByCityYearInterview/?search='+this.props.query)
       .then(response=>{
         const filter = response.data
         const new_data = {

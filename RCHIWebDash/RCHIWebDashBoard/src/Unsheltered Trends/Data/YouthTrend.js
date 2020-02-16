@@ -12,7 +12,7 @@ class YouthGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search='+ this.props.query) 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search='+ this.props.query) 
             .then(response => {
 
                 var completeData = []

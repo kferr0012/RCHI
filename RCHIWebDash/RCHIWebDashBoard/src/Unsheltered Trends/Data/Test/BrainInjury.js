@@ -12,7 +12,7 @@ class BrainInjuryGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Brain Injury') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Brain Injury') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

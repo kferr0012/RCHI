@@ -12,7 +12,7 @@ class ChronicallyHomelessGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Chronically%20Homeless') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Chronically%20Homeless') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

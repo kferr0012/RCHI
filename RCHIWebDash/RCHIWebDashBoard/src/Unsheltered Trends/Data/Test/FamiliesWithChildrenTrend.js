@@ -12,7 +12,7 @@ class FamiliesWithChildrenGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Families with Children') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Families with Children') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

@@ -25,7 +25,7 @@ class VolunteerDeploymentSite extends Component{
     }
 
     formatingData(){
-      axios.get('http://localhost:8000/api/VolunteerDeployment/?search='+this.props.query)
+      axios.get('http://localhost:8000/api/2020/VolunteerDeployment/?search='+this.props.query)
       .then(response=>{
         
         const formatData = response.data.reduce((accumulator, currentValue) => {

@@ -13,7 +13,7 @@ class VeteranGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Veteran') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Veteran') 
             .then(response => {
                 const filterData = response.data.filter(index => (index.sheltered === false))
                 const data = filterData.map(index => {

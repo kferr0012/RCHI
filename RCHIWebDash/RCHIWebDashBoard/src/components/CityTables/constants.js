@@ -1,4 +1,6 @@
-export const citynames = [
+export const citynames = {
+
+    2019 :[
     'BANNING',				
     'BEAUMONT',
     'BLYTHE',
@@ -32,7 +34,47 @@ export const citynames = [
     'UNINCORPORATED 3',
     'UNINCORPORATED 4',
     'UNINCORPORATED 5',
-];
+    ],
+
+    2020 : [
+    'RIVERSIDE 1',
+    'LAKE ELSINORE',
+    'UNINCORPORATED 1',
+    'WILDOMAR',
+    'CANYON LAKE',
+    'NORCO',
+    'CORONA',
+    'RIVERSIDE 2',
+    'JURUPA VALLEY',
+    'UNINCORPORATED 2',
+    'EASTVALE',
+    'TEMECULA',
+    'UNINCORPORATED 3',
+    'MURRIETA',
+    'HEMET',
+    'SAN JACINTO',
+    'DESERT HOT SPRINGS',
+    'UNINCORPORATED 4',
+    'LA QUINTA',
+    'COACHELLA',
+    'INDIAN WELLS',
+    'INDIO',
+    'PALM SPRINGS',
+    'CATHEDRAL CITY',
+    'BLYTHE',
+    'PALM DESERT',
+    'RANCHO MIRAGE',
+    'MECCA',
+    'MENIFEE',
+    'PERRIS',
+    'UNINCORPORATED 5',
+    'BEAUMONT',
+    'MORENO VALLEY',
+    'CALIMESA',
+    'BANNING',
+    'RIVERSIDE',
+    ]
+};
 
 export const base = {
     'District': 0,
@@ -55,7 +97,7 @@ export const base = {
         'Total': { 'Interview':0, 'Observation':0 },
     },
     'Ethinicity':	{
-        'Hispanic': { 'Interview':0, 'Observation':0 },
+        'Hispanic': {'Interview':0, 'Observation':0 },
         'NonHispanic': { 'Interview':0, 'Observation':0 },
         'Unknown Ethinicity': { 'Interview':0, 'Observation':0 },
         'Total': { 'Interview':0, 'Observation':0 },

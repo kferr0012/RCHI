@@ -12,7 +12,7 @@ class HIVorAIDSGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=AIDS or HIV') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=AIDS or HIV') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

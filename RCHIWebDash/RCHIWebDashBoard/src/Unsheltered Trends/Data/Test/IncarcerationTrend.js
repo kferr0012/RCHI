@@ -12,7 +12,7 @@ class IncarcerationGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Jail Release 12 Months') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Jail Release 12 Months') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

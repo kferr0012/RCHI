@@ -14,9 +14,12 @@ export default class CityTables extends Component {
             data: {},
             curCities: ['RIVERSIDE'],
             households: {},
-            citynames: citynames,
+            year: 2019,
+            citynames: "",
             selectOptions: []
           };
+
+        this.state.citynames = citynames[2019];
     }
 
     componentWillMount() {
@@ -41,13 +44,14 @@ export default class CityTables extends Component {
     }
 
     async fetchHouseholdData() {
-        const promise = await axios.get("http://localhost:8000/api/HouseholdsByCityYearInterview/");
+        const promise = await axios.get("http://localhost:8000/api/" + this.state.year + "/HouseholdsByCityYearInterview/");
         const indata = promise.status===200 ? promise.data: [];
         if (indata.length === 0){
             throw Error;
         }
 
         let data = {};
+
         const {citynames} = this.state;
         for (let i = 0; i < citynames.length ; i++)
         {
@@ -74,11 +78,12 @@ export default class CityTables extends Component {
     }
 
     async fetchSubpopulationData() {
-        const promise = await axios.get("http://localhost:8000/api/SubpopulationsByCity/");
+        const promise = await axios.get("http://localhost:8000/api/" + this.state.year + "/SubpopulationsByCity/");
         const indata = promise.status===200 ? promise.data: [];
         if (indata.length === 0){
-            throw Error;
+            throw Error("ERROR: indata length = 0");
         }
+
         var data = {};
         for (var i = 0; i < this.state.citynames.length ; i++)
         {
@@ -86,7 +91,7 @@ export default class CityTables extends Component {
         }
 
         for (var i = 0; i < indata.length ; i++)
-        {
+        {   
             data[indata[i]['city']]['District'] = indata[i]['district'];
             data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Interview'] = indata[i]['interview'];
             data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Observation'] = indata[i]['observation'];

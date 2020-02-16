@@ -7,7 +7,7 @@
             "deploymentSite": "Cathedral City Police Dept.",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -18,7 +18,7 @@
             "deploymentSite": "CFLC- Planet Youth",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -29,7 +29,7 @@
             "deploymentSite": "City of Riverside Access Center",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -40,7 +40,7 @@
             "deploymentSite": "La Sierra University Church",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -51,7 +51,7 @@
             "deploymentSite": "Oak Creek Center",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -62,7 +62,7 @@
             "deploymentSite": "Operation SafeHouse",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -73,7 +73,7 @@
             "deploymentSite": "RSO Lake Elsinore Station",
             "district": "1",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -84,7 +84,7 @@
             "deploymentSite": "Corona Historic Civic Center",
             "district": "2",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -95,7 +95,7 @@
             "deploymentSite": "EastVale City Hall-Chambers",
             "district": "2",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -106,7 +106,7 @@
             "deploymentSite": "Norco City Hall",
             "district": "2",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -117,7 +117,7 @@
             "deploymentSite": "RSO Jurupa Valley Station",
             "district": "2",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -128,7 +128,7 @@
             "deploymentSite": "California Life Center for Kids",
             "district": "3",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -139,7 +139,7 @@
             "deploymentSite": "City of Temecula HELP Center",
             "district": "3",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -150,7 +150,7 @@
             "deploymentSite": "RSO Hemet Station Area",
             "district": "3",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -161,7 +161,7 @@
             "deploymentSite": "Salvation Army",
             "district": "3",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -172,7 +172,7 @@
             "deploymentSite": "Temecula HELP Center",
             "district": "3",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -183,7 +183,7 @@
             "deploymentSite": "Blythe City Hall",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -194,7 +194,7 @@
             "deploymentSite": "Coachella City Hall",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -205,7 +205,7 @@
             "deploymentSite": "Corona City Hall",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -216,7 +216,7 @@
             "deploymentSite": "DHS PD",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -227,7 +227,7 @@
             "deploymentSite": "La Quinta City Hall",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -238,7 +238,7 @@
             "deploymentSite": "Martha\u2019s Village & Kitchen",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -249,7 +249,7 @@
             "deploymentSite": "Palm Desert \u2013City Hall",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -260,7 +260,7 @@
             "deploymentSite": "Palm Springs City Hall \u2013 Council Chambers",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -271,7 +271,7 @@
             "deploymentSite": "Rancho Mirage City Hall",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -282,7 +282,7 @@
             "deploymentSite": "RSO Palm Desert Station",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -293,7 +293,7 @@
             "deploymentSite": "RSO Thermal Station",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -304,7 +304,7 @@
             "deploymentSite": "SafeHouse of the Desert",
             "district": "4",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -315,7 +315,7 @@
             "deploymentSite": "Banning Senior Center",
             "district": "5",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -326,7 +326,7 @@
             "deploymentSite": "Beaumont Police Department",
             "district": "5",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -337,7 +337,7 @@
             "deploymentSite": "Calimesa City Hall",
             "district": "5",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -348,7 +348,7 @@
             "deploymentSite": "Cottonwood Golf Center",
             "district": "5",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -359,7 +359,7 @@
             "deploymentSite": "Kay Ceniceros Senior",
             "district": "5",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     },
     {
@@ -370,7 +370,7 @@
             "deploymentSite": "RSO Perris Station",
             "district": "5",
             "year": "2020",
-            "type": "Unsheltered"
+            "_type": "Unsheltered"
         }
     }
 ]

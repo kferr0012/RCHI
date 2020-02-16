@@ -12,7 +12,7 @@ class ElderlyGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/SubpopulationsByYear/?search=Elderly (>62)') 
+        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search=Elderly (>62)') 
             .then(response => {
                 const filter  = response.data.filter(row => (row.sheltered === false))
                 const formatedData = filter.map(row => {

@@ -33,7 +33,7 @@ const PageLayout = ({currentDistrict, tables}) => {
                     </div>
                     <div id="nh-2r-r2">
                         {/* <p>r1c2r2</p> */}
-                        <PieDataNivo  height={(window.innerHeight*.23)} clickedDistrict={currentDistrict} query={currentDistrict + ",Ethinicity"} header={"Ethnicity"} subHeader={""}/>
+                        <PieDataNivo  height={(window.innerHeight*.23)} clickedDistrict={currentDistrict} query={currentDistrict + ",Ethnicity"} header={"Ethnicity"} subHeader={""}/>
                     </div>
                 </div>
                 <div className="col-lg-3">

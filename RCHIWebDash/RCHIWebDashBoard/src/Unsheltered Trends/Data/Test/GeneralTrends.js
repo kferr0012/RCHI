@@ -14,7 +14,7 @@ class GeneralTrends extends Component {
 
     componentDidMount(){
         if(this.props.query){
-            axios.get('http://localhost:8000/api/SubpopulationsByYear/?search='+this.props.query)  
+            axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search='+this.props.query)  
             .then(response => {
                 console.log( "label",this.state.query)
                 const filter  = response.data.filter(row => (row.sheltered === false))

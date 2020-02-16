@@ -18,30 +18,38 @@ class UnshelteredSupervisoryDistricts extends Component{
             pageDisplayed: null,
             totalPages:5,
             districtDisplay:null,
-            urls : ["http://127.0.0.1:8000/api/SubpopulationsByCity/"],
+            urls : ["http://127.0.0.1:8000/api/SubpopulationsByCity/",
+                    "http://127.0.0.1:8000/api/2020/SubpopulationsByCity/"],
             rendered : false,
 
             
         }
+    }  
+
+    reformatData(Tables){
+        //generate keys of district
+        Tables["SubpopulationsByCity"] = expandOnField(Tables["SubpopulationsByCity"],"district")
+        Tables["2020/SubpopulationsByCity"] = expandOnField(Tables["2020/SubpopulationsByCity"],"district")
+        //generate keys by category
+
+        for(const key in Tables["SubpopulationsByCity"]){
+            Tables["SubpopulationsByCity"][key] = expandOnField(Tables["SubpopulationsByCity"][key], "category")
+        }
+
+        for(const key in Tables["2020/SubpopulationsByCity"]){
+            Tables["2020/SubpopulationsByCity"][key] = expandOnField(Tables["2020/SubpopulationsByCity"][key], "category")
+        }
+
+        return Tables
+
     }
     
     async componentDidMount(){
         console.log("SD componentDidMount")
         var Tables = await aggregateFetch(this.state.urls,false)
         
-        //generate keys of district
-        Tables["SubpopulationsByCity"] = expandOnField(Tables["SubpopulationsByCity"],"district")
-
-        //generate keys by category
-        for(const key in Tables["SubpopulationsByCity"]){
-            Tables["SubpopulationsByCity"][key] = expandOnField(Tables["SubpopulationsByCity"][key], "category")
-        }
-
-        console.log("Available Tables")
-        console.log(Tables)
-
         this.setState({
-            Tables: Tables,
+            Tables: this.reformatData(Tables),
             rendered : true,
         })
     }
