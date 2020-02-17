@@ -44,13 +44,15 @@ class TableComponent4 extends Component{
     //CONDITIONAL
     //Check if expandIndex prop passed
     console.log("Checking expand_i")
-    console.log(this.state.expand_i);
+    // console.log(this.state.expand_i);
+    var local_expand_i = this.state.expand_i;
     if(this.state.expand_i != null){
       for(let i = 0; i < this.state.chartData.length; ++i){
-        if(!column_name_array.includes(this.state.chartData[i].expandIndex)){
+        console.log(this.state.chartData[i][local_expand_i]);
+        if(!column_name_array.includes(this.state.chartData[i][local_expand_i])){
           console.log("Checking if expandIndex found the correct columns.")
-          console.log(this.state.chartData[i].expandIndex)
-          column_name_array.push(this.state.chartData[i].expandIndex);
+          console.log(this.state.chartData[i][local_expand_i])
+          column_name_array.push(this.state.chartData[i][local_expand_i]);
         }
       }
     }
@@ -98,7 +100,7 @@ class TableComponent4 extends Component{
       for(let i = 0; i < unpopulated_array.length; ++i){
         for(let k = 0; k < this.state.chartData.length; ++k){
           if(unpopulated_array[i]["0"] == this.state.chartData[k].subpopulation){
-            unpopulated_array[i][this.state.chartData[k].expandIndex] = this.state.chartData[k].total;
+            unpopulated_array[i][this.state.chartData[k][this.state.expand_i]] = this.state.chartData[k].total;
           }
         }
       }
