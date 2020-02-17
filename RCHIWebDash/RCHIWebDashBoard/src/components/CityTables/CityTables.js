@@ -14,7 +14,7 @@ export default class CityTables extends Component {
             data: {},
             curCities: ['RIVERSIDE'],
             households: {},
-            year: 2019,
+            year: 2020,
             citynames: "",
             selectOptions: []
           };

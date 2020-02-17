@@ -317,7 +317,7 @@ export default class Dashboard extends Component{
                 <div className="gen-r1">
                   <p className="component-header">Race and Ethnicity</p>
                   <BarGraph
-                    data = {filterList(combineCounts(this.state.Tables["2020/GeneralTableSubpopulations"]["Race"], this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Race"]), "subpopulation", ["Total"])}
+                    data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total"])}
                     indexBy = "subpopulation"
                     keys = {["interview", "observation"]}
                     margin = {{left: 45, top: 50, bottom: 30}}

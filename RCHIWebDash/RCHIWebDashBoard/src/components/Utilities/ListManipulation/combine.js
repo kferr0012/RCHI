@@ -20,7 +20,7 @@ export function combineCounts(list1, list2){
     console.log(list1)
     console.log(list2)
 
-    //make hard copies
+    //make hard copies 
     list1 = JSON.parse(JSON.stringify(list1))
     list2 = JSON.parse(JSON.stringify(list2))
 
@@ -37,7 +37,7 @@ export function combineCounts(list1, list2){
         if (!(category in resultCountsMap)){
             resultCountsMap[category] = {}
         }
-
+        
         if (!(subpopulation in resultCountsMap[category])){
             resultCountsMap[category][subpopulation] = {
                 "interview" : myJson["category"]["subpopulation"]["interview"], 
