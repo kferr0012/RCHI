@@ -27,7 +27,7 @@ for eachjson in jsons
 
 import json
 
-directory = "../RCHIWebDash/backend/fixtures/SubpopulationsByCity2019.json"
+directory = "../../RCHIWebDash/backend/fixtures/2019/SubpopulationsByCity.json"
 
 data = NotImplemented
 with open(directory, "r") as read_file:
@@ -40,12 +40,15 @@ id = 1
 #get aggregate counts for each subpopulation
 subpopulationDict = {}
 for row in data:
+
+    district = row['fields']['district']
     category = row['fields']['category']
     subpopulation = row['fields']['subpopulation']
     interview = row['fields']['interview']
     observation = row['fields']['observation']
     total = int(interview) + int(observation)
 
+    
     if category not in subpopulationDict:
         subpopulationDict[category] = {}
 
@@ -53,10 +56,12 @@ for row in data:
         subpopulationDict[category][subpopulation] = {"interview" : 0,
                                                         "observation" : 0,
                                                         "total" :  0}
-        
-    subpopulationDict[category][subpopulation]["interview"] += int(interview)
-    subpopulationDict[category][subpopulation]["observation"] += int(observation)
-    subpopulationDict[category][subpopulation]["total"] += int(total)
+    if district == "1+2":
+        print("RIVERSIDE")
+    else:
+        subpopulationDict[category][subpopulation]["interview"] += int(interview)
+        subpopulationDict[category][subpopulation]["observation"] += int(observation)
+        subpopulationDict[category][subpopulation]["total"] += int(total)
 
 #print("subpopulation Dict")
 #print(subpopulationDict)
@@ -75,7 +80,9 @@ for eachCategory in subpopulationDict.keys():
         newjson["interview"] = subpopulationDict[eachCategory][eachSubpopulation]["interview"]
         newjson["observation"] = subpopulationDict[eachCategory][eachSubpopulation]["observation"]
         newjson["total"] = subpopulationDict[eachCategory][eachSubpopulation]["total"]
-
+        newjson["_type"] = "Unsheltered"
+        newjson["year"] = 2019
+        
         output["pk"] = id
         output["model"] = "backend.GeneralTableSubpopulations2019"
         output["fields"] = newjson
@@ -89,7 +96,7 @@ print(jsonList)
 
 exit(0)
 
-
+'''
 print("[",end = "")
 for row in data:
     output = {}
@@ -102,6 +109,8 @@ for row in data:
     newjson['observation'] = row['fields']['observation']
     newjson['total'] =  int(row['fields']['interview']) + int(row['fields']['observation'] )
 
+    
+
     output["pk"] = id
     output["model"] = "backend.GeneralTableSubpopulations2019"
     output["fields"] = newjson
@@ -111,8 +120,5 @@ for row in data:
 
 print("]", end = "")
 
-
-
-outputDir = "../RCHIWebDash/backend/fixtures/GeneralSubpopulation2019.json"
-
+'''
     

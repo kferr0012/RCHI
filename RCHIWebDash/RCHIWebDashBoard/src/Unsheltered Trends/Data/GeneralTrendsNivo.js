@@ -28,6 +28,8 @@ class GeneralTrends extends Component {
 
                 const completeData= [{"id": "Interviewed","data": data}]
 
+                console.log("=================" + this.props.query + "====================")
+                console.log(completeData)
                 this.setState({
                     chartData: completeData
                 })

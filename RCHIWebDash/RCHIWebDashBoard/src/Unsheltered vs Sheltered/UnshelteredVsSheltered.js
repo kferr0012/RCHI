@@ -7,514 +7,67 @@ import PieChart2 from '../components/charts/PieChart2'
 import LineGraph from '../components/charts/LineGraph'
 import TableComponent4 from '../components/charts/TableComponent4.js';
 
-import {aggregateFetch} from '../components/Utilities/ListManipulation/aggregateFetch'
+import {aggregateFetch, expandOnField} from '../components/Utilities/ListManipulation/aggregateFetch'
 import fetchTest from '../components/Utilities/ListManipulation/fetchTest'
 
 import {filter, subset, filterList} from '../components/Utilities/ListManipulation/filter'
 import {combine} from '../components/Utilities/ListManipulation/combine'
+import {Header,Segment} from 'semantic-ui-react'
+const FILTERED_COUNTS = [
+  'Total',
+  'Veteran No',
+  'Not Chronically Homeless',
+  'No Substance Abuse',
+  'Unknown Substance Abuse',
+  'PTSD',
+  'No PTSD',
+  'Unknown PTSD',
+  'Mental Health Conditions',
+  'No Mental Health Conditions',
+  'Unknown Mental Health Conditions',
+  'Physical Disability',
+  'No Physical Disability',
+  'Unknown Physical Disability',
+  'Developmental Disability',
+  'No Developmental Disability',
+  'Unknown Developmental Disability',
+  'Brain Injury',
+  'No Brain Injury',
+  'Unknown Brain Injury',
+  'Victim of Domestic Violence',
+  'Not Victim of Domestic Violence',
+  'Unknown Victim of Domestic Violence',
+  'AIDS or HIV',
+  'No AIDS or HIV',
+  'Unknown AIDS or HIV',
+  'Jail Release 90 Days: Probation',
+  'Jail Release 90 Days: Parole',
+  'Jail Release 90 Days: Completed Sentence',
+  'Jail Release 90 Days: (Unspecified)',
+  'Jail Release 12 Months: Probation',
+  'Jail Release 12 Months: Parole',
+  'Jail Release 12 Months: Completed Sentence',
+  'Jail Release 12 Months: (Unspecified)',
+  'No Jail',
+  'Unknown Jail',
+  'Woods',
+  'Vehicle',
+  'UnderBridge',
+  'Street',
+  'Park',
+  'Other',
+  'Bus',
+  'AbandonedBuilding',
+  'Adults Only',
+  'Children Only',
+  'Adults and Children',
+  'Families w/ Children',
+  'Not Veteran',
+  'Households',
+  'Encampment',
+  'Couch'
 
-
-const data =[
-{
-  "id":1,
-  "subpopulation":"Individuals",
-  "year":"2018",
-  "category":"2018",
-  "total":1685
-},
-{
-  "id":2,
-  "subpopulation":"Adults(>=25)",
-  "year":"2018",
-  "category":"2018",
-  "total":1350
-},
-{
-  "id":3,
-  "subpopulation":"Individuals",
-  "year":"2019",
-  "category":"2019",
-  "total":2045
-},
-{
-  "id":4,
-  "subpopulation":"Adults(>=25)",
-  "year":"2019",
-  "category":"2019",
-  "total":1718
-},
-{
-  "id":5,
-  "subpopulation":"Youth(18-24)",
-  "year":"2018",
-  "category":"2018",
-  "total":177
-},
-{
-  "id":6,
-  "subpopulation":"Youth(18-24)",
-  "year":"2019",
-  "category":"2019",
-  "total":181
-},
-{
-  "id":7,
-  "subpopulation":"Children(<=17)",
-  "year":"2018",
-  "category":"2018",
-  "total":4
-},
-{
-  "id":8,
-  "subpopulation":"Children(<=17)",
-  "year":"2019",
-  "category":"2019",
-  "total":15
-},
-{
-  "id":9,
-  "subpopulation":"Unknown Age",
-  "year":"2018",
-  "category":"2018",
-  "total":154
-},
-{
-  "id":10,
-  "subpopulation":"Unknown Age",
-  "year":"2019",
-  "category":"2019",
-  "total":131
-},
-{
-  "id":11,
-  "subpopulation":"Male",
-  "year":"2018",
-  "category":"2018",
-  "total":1131
-},
-{
-  "id":12,
-  "subpopulation":"Male",
-  "year":"2019",
-  "category":"2019",
-  "total":1384
-},
-{
-  "id":13,
-  "subpopulation":"Female",
-  "year":"2018",
-  "category":"2018",
-  "total":488
-},
-{
-  "id":14,
-  "subpopulation":"Female",
-  "year":"2019",
-  "category":"2019",
-  "total":488
-},
-{
-  "id":15,
-  "subpopulation":"Transgender",
-  "year":"2018",
-  "category":"2018",
-  "total":6
-},
-{
-  "id":16,
-  "subpopulation":"Transgender",
-  "year":"2019",
-  "category":"2019",
-  "total":11
-},
-{
-  "id":17,
-  "subpopulation":"Gender Non-Con",
-  "year":"2018",
-  "category":"2018",
-  "total":8
-},
-{
-  "id":18,
-  "subpopulation":"Gender Non-Con",
-  "year":"2019",
-  "category":"2019",
-  "total":7
-},
-{
-  "id":19,
-  "subpopulation":"Unknown Gender",
-  "year":"2018",
-  "category":"2018",
-  "total":52
-},
-{
-  "id":20,
-  "subpopulation":"Unknown Gender",
-  "year":"2019",
-  "category":"2019",
-  "total":95
-},
-{
-  "id":21,
-  "subpopulation":"White",
-  "year":"2018",
-  "category":"2018",
-  "total":934
-},
-{
-  "id":22,
-  "subpopulation":"White",
-  "year":"2019",
-  "category":"2019",
-  "total":1111
-},
-{
-  "id":23,
-  "subpopulation":"Native Hawaiian",
-  "year":"2018",
-  "category":"2018",
-  "total":26
-},
-{
-  "id":24,
-  "subpopulation":"Native Hawaiian",
-  "year":"2019",
-  "category":"2019",
-  "total":21
-},
-{
-  "id":25,
-  "subpopulation":"Black",
-  "year":"2018",
-  "category":"2018",
-  "total":216
-},
-{
-  "id":26,
-  "subpopulation":"Black",
-  "year":"2019",
-  "category":"2019",
-  "total":241
-},
-{
-  "id":27,
-  "subpopulation":"Asian",
-  "year":"2018",
-  "category":"2018",
-  "total":19
-},
-{
-  "id":28,
-  "subpopulation":"Asian",
-  "year":"2019",
-  "category":"2019",
-  "total":26
-},
-{
-  "id":29,
-  "subpopulation":"American Indian",
-  "year":"2018",
-  "category":"2018",
-  "total":103
-},
-{
-  "id":30,
-  "subpopulation":"American Indian",
-  "year":"2019",
-  "category":"2019",
-  "total":66
-},
-{
-  "id":31,
-  "subpopulation":"Multiple Races",
-  "year":"2018",
-  "category":"2018",
-  "total":52
-},
-{
-  "id":32,
-  "subpopulation":"Multiple Races",
-  "year":"2019",
-  "category":"2019",
-  "total":199
-},
-{
-  "id":33,
-  "subpopulation":"Unknown Race",
-  "year":"2018",
-  "category":"2018",
-  "total":335
-},
-{
-  "id":34,
-  "subpopulation":"Unknown Race",
-  "year":"2019",
-  "category":"2019",
-  "total":381
-},
-{
-  "id":35,
-  "subpopulation":"Households",
-  "year":"2018",
-  "category":"2018",
-  "total":1335
-},
-{
-  "id":36,
-  "subpopulation":"Households",
-  "year":"2019",
-  "category":"2019",
-  "total":1843
-},
-{
-  "id":37,
-  "subpopulation":"Chronically Homeless",
-  "year":"2018",
-  "category":"2018",
-  "total":387
-},
-{
-  "id":38,
-  "subpopulation":"Chronically Homeless",
-  "year":"2019",
-  "category":"2019",
-  "total":727
-}
-];
-
-const data_for_sheltered_table = [
-  {
-    "id":1,
-    "subpopulation":"Individuals",
-    "category":"2018",
-    "total":631
-  },
-  {
-    "id":2,
-    "subpopulation":"Adults(>=25)",
-    "category":"2018",
-    "total":415
-  },
-  {
-    "id":3,
-    "subpopulation":"Individuals",
-    "category":"2019",
-    "total":766
-  },
-  {
-    "id":4,
-    "subpopulation":"Adults(>=25)",
-    "category":"2019",
-    "total":484
-  },
-  {
-    "id":5,
-    "subpopulation":"Youth(18-24)",
-    "category":"2018",
-    "total":69
-  },
-  {
-    "id":6,
-    "subpopulation":"Youth(18-24)",
-    "category":"2019",
-    "total":83
-  },
-  {
-    "id":7,
-    "subpopulation":"Children(<=17)",
-    "category":"2018",
-    "total":147
-  },
-  {
-    "id":8,
-    "subpopulation":"Children(<=17)",
-    "category":"2019",
-    "total":199
-  },
-  {
-    "id":9,
-    "subpopulation":"Unknown Age",
-    "category":"2018",
-    "total":0
-  },
-  {
-    "id":10,
-    "subpopulation":"Unknown Age",
-    "category":"2019",
-    "total":0
-  },
-  {
-    "id":11,
-    "subpopulation":"Male",
-    "category":"2018",
-    "total":354
-  },
-  {
-    "id":12,
-    "subpopulation":"Male",
-    "category":"2019",
-    "total":418
-  },
-  {
-    "id":13,
-    "subpopulation":"Female",
-    "category":"2018",
-    "total":272
-  },
-  {
-    "id":14,
-    "subpopulation":"Female",
-    "category":"2019",
-    "total":344
-  },
-  {
-    "id":15,
-    "subpopulation":"Transgender",
-    "category":"2018",
-    "total":4
-  },
-  {
-    "id":16,
-    "subpopulation":"Transgender",
-    "category":"2019",
-    "total":2
-  },
-  {
-    "id":17,
-    "subpopulation":"Gender Non-Con",
-    "category":"2018",
-    "total":1
-  },
-  {
-    "id":18,
-    "subpopulation":"Gender Non-Con",
-    "category":"2019",
-    "total":2
-  },
-  {
-    "id":19,
-    "subpopulation":"Unknown Gender",
-    "category":"2018",
-    "total":0
-  },
-  {
-    "id":20,
-    "subpopulation":"Unknown Gender",
-    "category":"2019",
-    "total":0
-  },
-  {
-    "id":21,
-    "subpopulation":"White",
-    "category":"2018",
-    "total":432
-  },
-  {
-    "id":22,
-    "subpopulation":"White",
-    "category":"2019",
-    "total":515
-  },
-  {
-    "id":23,
-    "subpopulation":"Native Hawaiian",
-    "category":"2018",
-    "total":10
-  },
-  {
-    "id":24,
-    "subpopulation":"Native Hawaiian",
-    "category":"2019",
-    "total":9
-  },
-  {
-    "id":25,
-    "subpopulation":"Black",
-    "category":"2018",
-    "total":133
-  },
-  {
-    "id":26,
-    "subpopulation":"Black",
-    "category":"2019",
-    "total":199
-  },
-  {
-    "id":27,
-    "subpopulation":"Asian",
-    "category":"2018",
-    "total":10
-  },
-  {
-    "id":28,
-    "subpopulation":"Asian",
-    "category":"2019",
-    "total":4
-  },
-  {
-    "id":29,
-    "subpopulation":"American Indian",
-    "category":"2018",
-    "total":22
-  },
-  {
-    "id":30,
-    "subpopulation":"American Indian",
-    "category":"2019",
-    "total":12
-  },
-  {
-    "id":31,
-    "subpopulation":"Multiple Races",
-    "category":"2018",
-    "total":24
-  },
-  {
-    "id":32,
-    "subpopulation":"Multiple Races",
-    "category":"2019",
-    "total":27
-  },
-  {
-    "id":33,
-    "subpopulation":"Unknown Race",
-    "category":"2018",
-    "total":0
-  },
-  {
-    "id":34,
-    "subpopulation":"Unknown Race",
-    "category":"2019",
-    "total":0
-  },
-  {
-    "id":35,
-    "subpopulation":"Households",
-    "category":"2018",
-    "total":471
-  },
-  {
-    "id":36,
-    "subpopulation":"Households",
-    "category":"2019",
-    "total":558
-  },
-  {
-    "id":37,
-    "subpopulation":"Chronically Homeless",
-    "category":"2018",
-    "total":87
-  },
-  {
-    "id":38,
-    "subpopulation":"Chronically Homeless",
-    "category":"2019",
-    "total":77
-  }
-];
-
-
+]
 export default class UnsheleteredVsSheltered extends Component{
 
     constructor(props){
@@ -531,16 +84,56 @@ export default class UnsheleteredVsSheltered extends Component{
         
     }
 
+    formatData(data){
+
+      //2019
+      data["GeneralTableSubpopulations-unexpanded"] = data["GeneralTableSubpopulations"]
+      data["GeneralTableSubpopulationsSheltered-unexpanded"] = data["GeneralTableSubpopulationsSheltered"]
+      data["GeneralTableSubpopulations"] = expandOnField(data["GeneralTableSubpopulations"], "category")
+      data["GeneralTableSubpopulationsSheltered"] = expandOnField(data["GeneralTableSubpopulationsSheltered"], "category")
+      //2020
+      data["2020/GeneralTableSubpopulations-unexpanded"] = data["2020/GeneralTableSubpopulations"]
+      data["2020/GeneralTableSubpopulationsSheltered-unexpanded"] = data["2020/GeneralTableSubpopulationsSheltered"]
+      data["2020/GeneralTableSubpopulations"] = expandOnField(data["2020/GeneralTableSubpopulations"], "category")
+      data["2020/GeneralTableSubpopulationsSheltered"] = expandOnField(data["2020/GeneralTableSubpopulationsSheltered"], "category")
+
+      return data
+    }
     async componentDidMount(){
         console.log("didMount")
-        var myTables = await aggregateFetch(this.state.urls)
+        var myTables = await aggregateFetch(this.state.urls, false)
+        
         this.setState({
-            Tables: myTables,
+            Tables: this.formatData(myTables),
             rendered : true
         })
 
         console.log("available Tables")
         console.log(this.state.Tables)
+    }
+
+    getOrderedUnshelteredData(){
+      var result = this.state.Tables["GeneralTableSubpopulations"]["Total"]
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Age"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Gender"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Ethnicity"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Race"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Subpopulations"])
+                                                                        .concat(this.state.Tables["2020/GeneralTableSubpopulations-unexpanded"])
+
+      return result
+    }
+
+    getOrderedShelteredData(){
+      var result = this.state.Tables["GeneralTableSubpopulationsSheltered"]["Total"]
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Age"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Gender"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Ethnicity"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Race"])
+                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Subpopulations"])
+                                                                        .concat(this.state.Tables["2020/GeneralTableSubpopulationsSheltered-unexpanded"])
+
+      return result
     }
 
     renderDashboards(){
@@ -549,14 +142,20 @@ export default class UnsheleteredVsSheltered extends Component{
             <div>
             
             <div className="container my-2">
-            <span className = "component-header">Sheltered vs Unsheltered</span>
+            <Segment>
+                <Header size="huge"  textAlign='center'>
+                    Sheltered vs Unsheltered
+                    <Header sub> 2020 Riverside County Pit Count</Header>
+                </Header>
+            </Segment>
             <div className="row dash-row">
               <div className="col-md dash-col-com">
                 <div className="svu-grid">
                     <div className="svu-r1">
                         
                         <TableComponent4
-                        data = {data_for_sheltered_table}
+                        data = {filterList(this.getOrderedShelteredData(),"subpopulation", FILTERED_COUNTS)}
+                        expandIndex = {"year"}
                         tableName = "Sheltered Statistics"
                         header = {true}
                         height = {"120%"}
@@ -565,7 +164,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     <div className="svu-r2-h25">
                       <span className="component-header">Sheltered Households</span>>
                       <PieChart2
-                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Household"],"subpopulation", ["Total"])}
+                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Households"],"subpopulation", ["Total"])}
                         footer = {false}
                         margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                       />
@@ -575,7 +174,9 @@ export default class UnsheleteredVsSheltered extends Component{
               <div className="col-md-6 dash-col-com">
                 <div className="svu-grid-2">
                   <div className="svu-r1-2">
-                    <LineGraph />
+                    <LineGraph 
+                      margin = {{top: 40, right: 40, bottom: 60, left: 40 }}
+                    />
                   </div>
                   <div className="svu-r2">
 
@@ -588,7 +189,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     />
                   </div>
                   <div className="svu-r2">
-                    <span className="component-header"> Ethnicity</span>
+                    <span className="component-header"> Race</span>
                     <BarGraph
                       data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
                       indexBy = {"subpopulation"}
@@ -603,8 +204,10 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r1">
                     
                     <TableComponent4
-                      data = {data}
+                      //data = {this.state.Tables["GeneralTableSubpopulations-unexpanded"].concat(this.state.Tables["2020/GeneralTableSubpopulations-unexpanded"])}
+                      data = {filterList(this.getOrderedUnshelteredData(),"subpopulation", FILTERED_COUNTS)}
                       tableName = "Unsheltered Statistics"
+                      expandIndex = {"year"}
                       header = {true}
                       height = {"120%"}
                     />

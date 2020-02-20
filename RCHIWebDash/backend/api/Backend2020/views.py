@@ -50,3 +50,15 @@ class GeneralTableSubpopulationsShelteredViewSet(viewsets.ModelViewSet):
     serializer_class = GeneralTableSubpopulationsShelteredSerializer
     filter_backends = [SearchFilter]
     search_fields = ['category', 'subpopulation']
+
+class GeneralTableSubpopulationsTotalCountsViewSet(viewsets.ModelViewSet):
+    queryset = GeneralTableSubpopulationsTotalCounts.objects.all()
+    serializer_class = GeneralTableSubpopulationsTotalCountsSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['category', 'subpopulation']
+
+class NewlyHomelessByCityViewSet(viewsets.ModelViewSet):
+    queryset = NewlyHomelessByCity.objects.all()
+    serializer_class = NewlyHomelessByCitySerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['district','category','city','subpopulation']

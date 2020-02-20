@@ -21,6 +21,8 @@ import {aggregateFetch, expandOnField} from '../components/Utilities/ListManipul
 import {filter, subset, filterList} from '../components/Utilities/ListManipulation/filter'
 import { getOverflowOptions } from 'antd/lib/tooltip/placements';
 
+import {Header,Segment} from 'semantic-ui-react'
+
 const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
 const DottedBox = () => (
@@ -105,18 +107,20 @@ export default class CityTable extends Component{
     setCityChoice(value){
 
         //temporary solution to racing condition of data availability in nivo components on the dashboards
-        this.setState({
-            cityChoice : value.value
-        })
-        this.setState({
-            cityChoice : value.value
-        })
-        this.setState({
-            cityChoice : value.value
-        })
-        this.setState({
-            cityChoice : value.value
-        })
+    
+        var self = this
+        setTimeout(()=>{
+            this.setState({
+                cityChoice : value.value
+            })
+            this.setState({
+                cityChoice : value.value
+            })
+            this.setState({
+                cityChoice : value.value
+            })
+            
+        },200)
 
 
         console.log("updated state")
@@ -134,10 +138,15 @@ export default class CityTable extends Component{
             <div>
             
                 <div className="container my-2">
-                                <h2>City Level Information</h2>
+                                <Segment>
+                                    <Header size="huge"  textAlign='center'>
+                                        Unsheltered - Cities
+                                        <Header sub> 2020 Riverside County Pit Count</Header>
+                                    </Header>
+                                </Segment>
                                 <div className="row">
                                     <div className="col-md-5 align-self-center">
-                                        <Select options={this.state.selectOptions} defaultValue={this.state.selectOptions[0]} onChange={ (value) => this.setCityChoice(value)} />
+                                        <Select options={this.state.selectOptions} defaultValue={this.state.selectOptions[this.state.selectOptions.length - 1]} onChange={ (value) => this.setCityChoice(value)} />
                                     </div>
                                 </div>
                                 <div className="row dash-row">

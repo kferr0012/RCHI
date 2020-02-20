@@ -30,6 +30,7 @@ class UnshelteredSupervisoryDistricts extends Component{
         //generate keys of district
         Tables["SubpopulationsByCity"] = expandOnField(Tables["SubpopulationsByCity"],"district")
         Tables["2020/SubpopulationsByCity"] = expandOnField(Tables["2020/SubpopulationsByCity"],"district")
+        
         //generate keys by category
 
         for(const key in Tables["SubpopulationsByCity"]){

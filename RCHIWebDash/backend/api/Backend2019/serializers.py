@@ -35,3 +35,8 @@ class GeneralTableSubpopulationsShelteredSerializer(serializers.ModelSerializer)
     class Meta:
         model = GeneralTableSubpopulationsSheltered2019
         fields = '__all__'
+
+class  TrendsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Trends2019
+        fields = '__all__'

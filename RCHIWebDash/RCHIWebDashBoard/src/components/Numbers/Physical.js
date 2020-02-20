@@ -85,7 +85,7 @@ export default class Physical extends React.Component {
 
         return (
             <div className = "component-header" style = {{fontSize: "24px"}}>
-                 {percent} %
+                 {/*percent*/ (291/1983*100).toFixed(2)} %
             </div>
         )
 

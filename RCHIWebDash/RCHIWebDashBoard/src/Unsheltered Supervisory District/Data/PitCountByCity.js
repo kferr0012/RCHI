@@ -21,16 +21,18 @@ class PitCountByCity extends Component{
         
         const formatData = response.data.reduce((accumulator, currentValue) => {
             if(!accumulator[currentValue.city]){
-                accumulator[currentValue.city] = {'2018': 0, '2019': 0, labels: currentValue.city}
+                accumulator[currentValue.city] = {'2018': 0, '2020': 0, labels: currentValue.city}
             }
-            if(currentValue.year == '2018') accumulator[currentValue.city][2018] += currentValue.total
             if(currentValue.year == '2019') accumulator[currentValue.city][2019] += currentValue.total
+            if(currentValue.year == '2020') accumulator[currentValue.city][2020] += currentValue.total
             return accumulator;
         }, {})
         const completeData = Object.keys(formatData).map(key=>{
             return formatData[key]
           })
 
+        console.log("AXIOS DATA")
+        console.log()
         this.setState({
           chartData : this.TableRender(completeData)  
         })
@@ -41,8 +43,8 @@ class PitCountByCity extends Component{
         return data.map( (index,i) => (
             <Table.Row key={i}>
                 <Table.Cell>{index.labels}</Table.Cell>
-                <Table.Cell>{index[2018]}</Table.Cell>
                 <Table.Cell>{index[2019]}</Table.Cell>
+                <Table.Cell>{index[2020]}</Table.Cell>
             </Table.Row>   
         ))
     }
@@ -79,8 +81,8 @@ class PitCountByCity extends Component{
         </Table.Row>
         <Table.Row>
             <Table.HeaderCell>City</Table.HeaderCell>
-            <Table.HeaderCell>2018</Table.HeaderCell>
             <Table.HeaderCell>2019</Table.HeaderCell>
+            <Table.HeaderCell>2020</Table.HeaderCell>
         </Table.Row>
         </Table.Header>
 

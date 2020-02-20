@@ -16,8 +16,8 @@ export default class PieChart2 extends React.Component {
             margin : this.props.margin,
         }
 
-        console.log("Pie chart")
-        console.log(this.state)
+        //console.log("Pie chart")
+        //console.log(this.state)
     }
     componentWillReceiveProps(){
         this.setState({
@@ -31,7 +31,7 @@ export default class PieChart2 extends React.Component {
     }
 
     render(){
-        console.log("Pie Chart render")
+        //console.log("Pie Chart render")
         
         var mydata = JSON.parse(JSON.stringify(this.props.data))
         for (var i = 0; i < mydata.length; i++) {
@@ -42,10 +42,10 @@ export default class PieChart2 extends React.Component {
 
         }
 
-        console.log("state data")
-        console.log(this.state.mydata)
+        //console.log("state data")
+        //console.log(this.state.mydata)
 
-        console.log(mydata)
+        //console.log(mydata)
 
 
 

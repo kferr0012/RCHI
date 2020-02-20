@@ -35,3 +35,13 @@ class GeneralTableSubpopulationsShelteredSerializer(serializers.ModelSerializer)
     class Meta:
         model = GeneralTableSubpopulationsSheltered2020
         fields = '__all__'
+
+class GeneralTableSubpopulationsTotalCountsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GeneralTableSubpopulationsTotalCounts
+        fields = '__all__'
+
+class NewlyHomelessByCitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NewlyHomelessByCity
+        fields = '__all__'        

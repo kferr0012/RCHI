@@ -58,3 +58,18 @@ class GeneralTableSubpopulationsShelteredViewSet(viewsets.ModelViewSet):
     serializer_class = GeneralTableSubpopulationsShelteredSerializer
     filter_backends = [SearchFilter]
     search_fields = ['category', 'subpopulation']
+
+
+class TrendsViewSet(viewsets.ModelViewSet):
+    # queryset = Trends.objects.all()
+    serializer_class = TrendsSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['category','year','subCategory']
+    
+    def get_queryset(self):
+        qs = Trends2019.objects.all()
+        query = self.request.GET.get('q')
+        if query is not None:
+            print(query)
+            qs = qs.filter(Q(year__icontains=query) | Q(category__icontains=query)).distinct()
+        return qs

@@ -30,6 +30,8 @@ class VeteranGraph extends Component {
                     }
                 ]
                 
+                console.log("VETERANS")
+                console.log(data)
 
 
                 this.setState({

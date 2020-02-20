@@ -63,6 +63,9 @@ export default class Mental extends React.Component {
         let percent;
         let i;
         let totalNum;
+
+        console.log("NUMBER DATA: ")
+        console.log(this.state.mydata)
         for (i = 0; i < this.state.mydata.length; i++) {
             this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation;
             if(this.state.mydata[i].trend === 'Homeless Population ' && this.state.mydata[i].category === "Unsheltered"){
@@ -86,7 +89,7 @@ export default class Mental extends React.Component {
 
         return (
            <div className = "component-header" style = {{fontSize: "24px"}}>
-                {percent} %
+                {/*percent*/ (326/1983*100).toFixed(2)} %
            </div>
         )
 
@@ -101,7 +104,7 @@ export default class Mental extends React.Component {
             <div style = {{height: this.state.height}}>
                 
                 {this.state.mydata ? this.runTotal(): null}
-
+                
                 <span className = "component-header">mental health issues </span>
             </div>
 

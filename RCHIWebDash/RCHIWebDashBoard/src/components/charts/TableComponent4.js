@@ -18,8 +18,8 @@ class TableComponent4 extends Component{
       expand_i: this.props.expandIndex,
     }
 
-    console.log(this.props.expandIndex);
-    console.log(this.state)
+    //console.log(this.props.expandIndex);
+    //console.log(this.state)
   }
 
   componentWillReceiveProps(){
@@ -31,7 +31,7 @@ class TableComponent4 extends Component{
 
     this.state.chartData = this.props.data;
 
-    console.log(this.state.expand_i);
+    //console.log(this.state.expand_i);
     var local_expand_index = this.state.expand_i
 
     var label_array = [];
@@ -43,15 +43,15 @@ class TableComponent4 extends Component{
     //find all the columns
     //CONDITIONAL
     //Check if expandIndex prop passed
-    console.log("Checking expand_i")
-    // console.log(this.state.expand_i);
+    //console.log("Checking expand_i")
+    // //console.log(this.state.expand_i);
     var local_expand_i = this.state.expand_i;
     if(this.state.expand_i != null){
       for(let i = 0; i < this.state.chartData.length; ++i){
-        console.log(this.state.chartData[i][local_expand_i]);
+        //console.log(this.state.chartData[i][local_expand_i]);
         if(!column_name_array.includes(this.state.chartData[i][local_expand_i])){
-          console.log("Checking if expandIndex found the correct columns.")
-          console.log(this.state.chartData[i][local_expand_i])
+          //console.log("Checking if expandIndex found the correct columns.")
+          //console.log(this.state.chartData[i][local_expand_i])
           column_name_array.push(this.state.chartData[i][local_expand_i]);
         }
       }
@@ -59,8 +59,8 @@ class TableComponent4 extends Component{
     else{
       for(let i = 0; i < this.state.chartData.length; ++i){
         if(!column_name_array.includes(this.state.chartData[i].category)){
-          console.log("Checking if category found the correct columns.")
-          console.log(this.state.chartData[i].category)
+          //console.log("Checking if category found the correct columns.")
+          //console.log(this.state.chartData[i].category)
           column_name_array.push(this.state.chartData[i].category);
         }
       }
@@ -132,8 +132,8 @@ class TableComponent4 extends Component{
 
 
       Object.keys(it).map((sub_iterator,sub_idx)=>{
-        console.log(sub_iterator)
-        console.log(it[sub_iterator])
+        //console.log(sub_iterator)
+        //console.log(it[sub_iterator])
         return(
           <Table.HeaderCell>{it[sub_iterator]}</Table.HeaderCell>
         );
@@ -181,7 +181,7 @@ class TableComponent4 extends Component{
       }
     );
 
-    console.log(this.state.filteredData);
+    //console.log(this.state.filteredData);
   }
 
 
@@ -233,7 +233,7 @@ class TableComponent4 extends Component{
             </Table.Header>
 
           <Table.Body>
-            {console.log(this.state.filteredData)}
+            {/*console.log(this.state.filteredData)*/}
             {
               this.state.filteredData.map((iterator,idx)=>{
                 if(idx%2==1){

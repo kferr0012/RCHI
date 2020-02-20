@@ -11,6 +11,7 @@ import PitCountByCity from '../Data/PitCountByCity'
 
 import TableComponent4 from '../../components/charts/TableComponent4'
 import {filterList} from '../../components/Utilities/ListManipulation/filter'
+import {combineCountsByCategory} from '../../components/Utilities/ListManipulation/combine'
 import '../../components/css/newlyHomelessGrid.css';
 
 //const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
@@ -40,7 +41,7 @@ const PageLayout = ({currentDistrict, tables}) => {
                     {/* <p>r1c3</p> */}
                     <h4>Population Counts</h4>
                     <TableComponent4
-                        data = {filterList(tables["SubpopulationsByCity"][currentDistrict]["Age"].concat(tables["SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables["SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList)}
+                        data = {combineCountsByCategory(filterList(tables["2020/SubpopulationsByCity"][currentDistrict]["Age"].concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList))}
                         height = {"100%"}
                     />
                     

@@ -36,7 +36,11 @@ export default class LineGraph extends React.Component {
           {
             'x': "2019",
             'y': "745"
-          }
+          },
+          {
+            'x': "2020",
+            'y': "0"
+          },
         ]
       },
       {
@@ -61,7 +65,11 @@ export default class LineGraph extends React.Component {
           {
             'x': "2019",
             'y': "766"
-          }
+          },
+          {
+            'x': "2020",
+            'y': "757"
+          },
         ]
       },
       {
@@ -86,7 +94,12 @@ export default class LineGraph extends React.Component {
           {
             'x': "2019",
             'y': "2045"
-          }
+          },
+          {
+            'x': "2020",
+            'y': "1983"
+          },
+
         ]
       }
     ];

@@ -3,12 +3,12 @@ import BarGraph from '../../components/TestingBranch/BarGraph'
 import PieChart2 from '../charts/PieChart2'
 import TableComponent2 from '../charts/TableComponent2'
 import TableComponent4 from '../charts/TableComponent4'
-import { Header, Table} from 'semantic-ui-react';
+import { Header, Table, Segment} from 'semantic-ui-react';
 
 import React, {Component} from 'react';
 import '../css/dash.css';
 
-import {aggregateFetch, aggregateFetchbyConstants} from '../../components/Utilities/ListManipulation/aggregateFetch'
+import {aggregateFetch, aggregateFetchbyConstants, expandOnField} from '../../components/Utilities/ListManipulation/aggregateFetch'
 import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 
 import {filter, subset, filterList} from '../../components/Utilities/ListManipulation/filter'
@@ -20,6 +20,45 @@ import PTSD from "../Numbers/PTSD";
 import Substance from "../Numbers/Substance";
 import TotalGeneral from "../Numbers/TotalGeneral";
 
+var FILTER_COLUMNS = [
+'Total',
+'Not Veteran',
+'No Substance Abuse',
+'Unknown Substance Abuse',
+'PTSD',
+'No PTSD',
+'Unknown PTSD',
+'No Mental Health Conditions',
+'Unknown Mental Health Conditions',
+'Physical Disability',
+'No Physical Disability',
+'Unknown Physical Disability',
+'Developmental Disability',
+'No Developmental Disability',
+'Unknown Developmental Disability',
+'Brain Injury',
+'No Brain Injury',
+'Unknown Brain Injury',
+'Victim of Domestic Violence',
+'Not Victim of Domestic Violence',
+'Unknown Victim of Domestic Violence',
+'AIDS or HIV',
+'No AIDS or HIV',
+'Unknown AIDS or HIV',
+'Jail Release 90 Days: Probation',
+'Jail Release 90 Days: Parole',
+'Jail Release 90 Days: Completed Sentence',
+'Jail Release 90 Days: (Unspecified)',
+'Jail Release 12 Months: Probation',
+'Jail Release 12 Months: Parole',
+'Jail Release 12 Months: Completed Sentence',
+'Jail Release 12 Months: (Unspecified)',
+'No Jail',
+'Unknown Jail',
+'Chronically Homeless	447',
+'Not Chronically Homeless',
+]
+
 export default class Dashboard extends Component{
 
     constructor(props){
@@ -28,256 +67,53 @@ export default class Dashboard extends Component{
         this.state = {
             urls :  ["http://127.0.0.1:8000/api/2020/GeneralTableSubpopulations/",
                      "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsSheltered/",
+                     "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsTotalCounts/",
                      "http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
                      "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/"],
             
             Tables : [],
             render : false
         }
-
-        this.table2data = [
-        {
-          "id":1,
-          "subpopulation":"Individuals",
-          "category":"Sheltered",
- 					
- 					"_type":"Sheltered",
-          "total":766
-        },
-        {
-          "id":2,
-          "subpopulation":"Individuals",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":2045
-        },
-        {
-          "id":3,
-          "subpopulation":"Individuals",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":2811
-        },
-        {
-          "id":4,
-          "subpopulation":"Adults",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":484
-        },
-        {
-          "id":5,
-          "subpopulation":"Adults",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":1718
-        },
-        {
-          "id":6,
-          "subpopulation":"Adults",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":2202
-        },
-        {
-          "id":7,
-          "subpopulation":"Youth (18-24)",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":83
-        },
-        {
-          "id":8,
-          "subpopulation":"Youth (18-24)",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":181
-        },
-        {
-          "id":9,
-          "subpopulation":"Youth (18-24)",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":264
-        },
-        {
-          "id":10,
-          "subpopulation":"Children (<=17)",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":199
-        },
-        {
-          "id":11,
-          "subpopulation":"Children (<=17)",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":15
-        },
-        {
-          "id":12,
-          "subpopulation":"Children (<=17)",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":214
-        },
-        {
-          "id":13,
-          "subpopulation":"Unknown Ages",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":0
-        },
-        {
-          "id":14,
-          "subpopulation":"Unknown Ages",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":131
-        },
-        {
-          "id":15,
-          "subpopulation":"Unknown Ages",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":131
-        },
-        {
-          "id":16,
-          "subpopulation":"Households",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":558
-        },
-        {
-          "id":17,
-          "subpopulation":"Households",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":1843
-        },
-        {
-          "id":18,
-          "subpopulation":"Households",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":2401
-        },
-        {
-          "id":19,
-          "subpopulation":"Chronically Homeless",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":77
-        },
-        {
-          "id":20,
-          "subpopulation":"Chronically Homeless",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":727
-        },
-        {
-          "id":21,
-          "subpopulation":"Chronically Homeless",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":804
-        },
-        {
-          "id":22,
-          "subpopulation":"Families with Children",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":77
-        },
-        {
-          "id":23,
-          "subpopulation":"Families with Children",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":5
-        },
-        {
-          "id":24,
-          "subpopulation":"Families with Children",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":82
-        },
-        {
-          "id":25,
-          "subpopulation":"Substance Abuse (Drug or Alcohol)",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":59
-        },
-        {
-          "id":26,
-          "subpopulation":"Substance Abuse (Drug or Alcohol)",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":498
-        },
-        {
-          "id":27,
-          "subpopulation":"Substance Abuse (Drug or Alcohol)",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":557
-        },
-        {
-          "id":28,
-          "subpopulation":"Mental Health Conditions",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":148
-        },
-        {
-          "id":29,
-          "subpopulation":"Mental Health Conditions",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":367
-        },
-        {
-          "id":29,
-          "subpopulation":"Mental Health Conditions",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":515
-        },
-        {
-          "id":30,
-          "subpopulation":"Veterans",
-          "category":"Sheltered",
- 					"_type":"Sheltered",
-          "total":56
-        },
-        {
-          "id":31,
-          "subpopulation":"Veterans",
-          "category":"Unsheltered",
- 					"_type":"Unsheltered",
-          "total":107
-        },
-        {
-          "id":32,
-          "subpopulation":"Veterans",
-          "category":"Total Count",
- 					"_type":"Total Count",
-          "total":163
-        },
-      ]
     }
 
-    async componentDidMount(){
-        
-        var fetchString = this.props.host + this.props.root + '2020/GeneralTableSubpopulations/'
+    formatData(Tables){
+      
 
-        var myTables = await aggregateFetch(this.state.urls)
+      //reformat get tables unexpands and expanded by category (easier to process certain components)
+      for(var index in Tables){
+        Tables[index + "-unexpanded"] = Tables[index]
+        Tables[index] = expandOnField(Tables[index], "category")
+      }
+
+      return Tables
+    }
+
+    getOrderedTable(){
+
+      //concat in a specific order to sort data by group
+      var unshelteredData = this.state.Tables["2020/GeneralTableSubpopulations"]["Total"]
+      .concat(this.state.Tables["2020/GeneralTableSubpopulations"]["Age"])
+      .concat(this.state.Tables["2020/GeneralTableSubpopulations"]["Subpopulations"])
+
+      var shelteredData= this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Total"]
+      .concat(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Age"])
+      .concat(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Subpopulations"])
+
+      var totalCounts = this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Total"]
+      .concat(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Age"])
+      .concat(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Subpopulations"])
+
+
+      var resultData = shelteredData.concat(unshelteredData).concat(totalCounts)
+
+      return resultData
+
+    }
+    async componentDidMount(){
+
+        var myTables = await aggregateFetch(this.state.urls, false)
         this.setState({
-            Tables: myTables,
+            Tables: this.formatData(myTables),
             rendered : true
         })
 
@@ -289,14 +125,22 @@ export default class Dashboard extends Component{
       return(
                       
         <div className="container my-2">
-          <h2>General Sheltered and Unsheltered Information</h2>
+
+
+          <Segment>
+              <Header size="huge"  textAlign='center'>
+                  General Sheltered and Unsheltered Information
+                  <Header sub> 2020 Riverside County Pit Count</Header>
+              </Header>
+          </Segment>
           <div className="row dash-row">
 
             <div className="col-md dash-col-reg">
               {/* <p className="component-header">Overall 21% increase in homeless count from 2018.</p> */}
           
               <TableComponent4
-                data={this.table2data}
+                data={filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)}
+                expandIndex = {"_type"}
                 header = {true}
                 height = {"100%"}
               />
@@ -304,7 +148,7 @@ export default class Dashboard extends Component{
             <div className="col-md dash-col-reg">
               {<span className="component-header">Homeless Population Trend</span>}
               <LineGraph
-                margin = {{ top: 0, right: 30, bottom: 70, left :60}}
+                margin = {{ top: 10, right: 30, bottom: 70, left :60}}
               />
             </div>
 
@@ -315,11 +159,11 @@ export default class Dashboard extends Component{
             <div className="col-md dash-col-big">
               <div className="gen-grid">
                 <div className="gen-r1">
-                  <p className="component-header">Race and Ethnicity</p>
+                  <p className="component-header">Race</p>
                   <BarGraph
-                    data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total"])}
+                    data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Race"], "subpopulation", ["Total"])}
                     indexBy = "subpopulation"
-                    keys = {["interview", "observation"]}
+                    keys = {["total"]}
                     margin = {{left: 45, top: 50, bottom: 30}}
                   />
                 </div>
@@ -328,13 +172,13 @@ export default class Dashboard extends Component{
                     <div className="gen-r2c1r1">
                       <p className="component-header">Gender</p>
                       <PieChart2
-                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
                         margin = {{top: 35, bottom: 10}}
                       />
                     </div>
                     <div className="gen-r2c1r2">
                       <TableComponent4
-                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Gender"],"subpopulation", ["Total"])}
+                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total"])}
                         header = {false}
                         height = {"100%"}
                       />
@@ -344,7 +188,7 @@ export default class Dashboard extends Component{
                     <p className="component-header">Ethnicity</p>
 
                     <PieChart2
-                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Ethnicity"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"])}
                       margin = {{top: 40, bottom: 40, left: 30, right: 30}}  
                     />
 
@@ -359,22 +203,22 @@ export default class Dashboard extends Component{
                       
                     <div className="gen-s-r1">
                         <Mental height = {50}
-                                url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                                url = {'http://127.0.0.1:8000/api/SubpopulationsByYear/?search=Mental'}
                         />
                     </div>
                     <div className="gen-s-r4">
                         <PTSD height = {50}
-                              url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                              url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
                         />
                     </div>
                     <div className="gen-s-r2">
                         <Substance height = {50}
-                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
                         />
                     </div>
                     <div className="gen-s-r3">
                         <Physical height = {50}
-                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
                         />
                     </div>
                 </div>
@@ -387,7 +231,7 @@ export default class Dashboard extends Component{
                   <div className="gen-3r-r2">
                     <span className = "component-header" style = {{fontSize:"40px" ,textAlign: "middle"}}>
                         <TotalGeneral height = {50}
-                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2019'}
+                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
                         />
                       </span>
                   </div>
@@ -400,11 +244,11 @@ export default class Dashboard extends Component{
                     <Table style = {{height: "100%"}}Cell Structured>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{1347}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{1193}</Table.HeaderCell>
                       </Table.Row>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{698}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{790}</Table.HeaderCell>
                       </Table.Row>
                     </Table>
                   </div>

@@ -67,3 +67,24 @@ class GeneralTableSubpopulationsSheltered2020(models.Model):
 	observation = models.IntegerField()
 	_type = models.CharField(max_length=50)
 	year = models.IntegerField()
+
+class GeneralTableSubpopulationsTotalCounts(models.Model):
+	id = models.CharField(max_length = 100, primary_key = True)
+	category = models.CharField(max_length=100)
+	subpopulation = models.CharField(max_length=100)
+	total = models.IntegerField()
+	interview = models.IntegerField()
+	observation = models.IntegerField()
+	_type = models.CharField(max_length=50)
+	year = models.IntegerField()
+
+class NewlyHomelessByCity(models.Model):
+	district = models.CharField(max_length=100)
+	city = models.CharField(max_length=100)
+	category = models.CharField(max_length=100)
+	subpopulation = models.CharField(max_length=100)
+	interview = models.IntegerField()
+	observation = models.IntegerField()
+	total = models.IntegerField()
+	year = models.IntegerField()
+

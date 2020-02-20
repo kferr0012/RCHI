@@ -57,7 +57,7 @@
             "interview": 0,
             "observation": 0,
             "subpopulation": "Multiple Races",
-            "total": 0,
+            "total": 39,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -97,7 +97,7 @@
             "observation": 790,
             "subpopulation": "Total",
             "total": 1983,
-            "year": 2020,
+            "year": 2020,   
             "_type": "Unsheltered"
         },
         "pk": 81,
@@ -303,7 +303,7 @@
             "category": "Subpopulations",
             "interview": 92,
             "observation": 0,
-            "subpopulation": "Veteran Yes",
+            "subpopulation": "Veteran",
             "total": 92,
             "year": 2020,
             "_type": "Unsheltered"
@@ -316,7 +316,7 @@
             "category": "Subpopulations",
             "interview": 1069,
             "observation": 0,
-            "subpopulation": "Veteran No",
+            "subpopulation": "Not Veteran",
             "total": 1069,
             "year": 2020,
             "_type": "Unsheltered"
@@ -768,110 +768,6 @@
     },
     {
         "fields": {
-            "category": "Living Situation",
-            "interview": 91,
-            "observation": 0,
-            "subpopulation": "Woods",
-            "total": 91,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 133,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 184,
-            "observation": 0,
-            "subpopulation": "Vehicle",
-            "total": 184,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 134,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 30,
-            "observation": 0,
-            "subpopulation": "UnderBridge",
-            "total": 30,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 135,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 486,
-            "observation": 0,
-            "subpopulation": "Street",
-            "total": 486,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 136,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 42,
-            "observation": 0,
-            "subpopulation": "Park",
-            "total": 42,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 137,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 42,
-            "observation": 0,
-            "subpopulation": "Other",
-            "total": 42,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 138,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 3,
-            "observation": 0,
-            "subpopulation": "Bus",
-            "total": 3,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 139,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 35,
-            "observation": 0,
-            "subpopulation": "AbandonedBuilding",
-            "total": 35,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
-        "pk": 140,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
             "category": "Households",
             "interview": 1193,
             "observation": 790,
@@ -946,6 +842,165 @@
             "_type": "Unsheltered"
         },
         "pk": 146,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "interview": 1029,
+            "observation": 0,
+            "subpopulation": "Households",
+            "total": 1029,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 147   ,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "interview": 5,
+            "observation": 0,
+            "subpopulation": "Families w/ Children",
+            "total": 5,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 148,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Total",
+            "interview": 1193,
+            "observation": 790,
+            "subpopulation": "Individuals",
+            "total": 1983,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 149,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 91,
+            "observation": 0,
+            "subpopulation": "Woods",
+            "total": 91,
+            "year": 2020
+        },
+        "pk": 150,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 258,
+            "observation": 0,
+            "subpopulation": "Encampment",
+            "total": 258,
+            "year": 2020
+        },
+        "pk": 151,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 22,
+            "observation": 0,
+            "subpopulation": "Couch",
+            "total": 22,
+            "year": 2020
+        },
+        "pk": 152,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 184,
+            "observation": 0,
+            "subpopulation": "Vehicle",
+            "total": 184,
+            "year": 2020
+        },
+        "pk": 153,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 30,
+            "observation": 0,
+            "subpopulation": "UnderBridge",
+            "total": 30,
+            "year": 2020
+        },
+        "pk": 154,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 486,
+            "observation": 0,
+            "subpopulation": "Street",
+            "total": 486,
+            "year": 2020
+        },
+        "pk": 155,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 42,
+            "observation": 0,
+            "subpopulation": "Park",
+            "total": 42,
+            "year": 2020
+        },
+        "pk": 156,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 42,
+            "observation": 0,
+            "subpopulation": "Other",
+            "total": 42,
+            "year": 2020
+        },
+        "pk": 157,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 3,
+            "observation": 0,
+            "subpopulation": "Bus",
+            "total": 3,
+            "year": 2020
+        },
+        "pk": 158,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 35,
+            "observation": 0,
+            "subpopulation": "AbandonedBuilding",
+            "total": 35,
+            "year": 2020
+        },
+        "pk": 159,
         "model": "backend.GeneralTableSubpopulations2020"
     }
 ]

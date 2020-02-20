@@ -14,6 +14,52 @@ export function combine ( array1, array2 ) {
     return cb;
 }
 
+export function combineCountsByCategory(data){
+
+    var countMap = {}
+    for(const row in data){
+      var fields = data[row]
+  
+      if(!(fields.category in countMap)){
+        countMap[fields.category] = {}
+      }
+  
+      if(!(fields.subpopulation in countMap[fields.category])){
+        countMap[fields.category][fields.subpopulation] = {
+            subpopulation : fields.subpopulation,
+            category : fields.category,
+            year : fields.year,
+            interview : 0,
+            observation : 0,
+            total : 0
+  
+          }
+      }
+      
+      countMap[fields.category][fields.subpopulation].interview += fields.interview
+      countMap[fields.category][fields.subpopulation].observation += fields.observation
+      countMap[fields.category][fields.subpopulation].total += fields.total
+  
+    }
+  
+    //create Json
+    var outputTable = []
+    for (const category in countMap){
+      
+      for(const subpopulation in countMap[category]){
+        outputTable.push(countMap[category][subpopulation])
+      }
+    }
+    console.log("results")
+  
+    for(const x in outputTable){
+      console.log(outputTable[x])
+    }
+    
+    return outputTable
+  
+  }
+
 export function combineCounts(list1, list2){
 
     console.log("COMBINE COUNTS")

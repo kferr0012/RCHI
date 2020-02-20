@@ -26,6 +26,9 @@ export function filter ( data, catergory, value ) {
 
 export function filterList (data, category, valueList){
     
+    console.log("\tvalueList")
+    console.log(valueList)
+    
     var newData = []
     console.log("filterList")
     for(var i = 0 ; i < data.length;i++){

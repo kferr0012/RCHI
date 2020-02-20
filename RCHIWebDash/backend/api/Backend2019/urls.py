@@ -11,6 +11,7 @@ router.register('SubpopulationsByYear',SubpopulationsByYearViewSet,basename='Sub
 router.register('CityTotalByYear',CityTotalByYearViewSet,basename='CityTotalByYear')
 router.register('GeneralTableSubpopulations',GeneralTableSubpopulationsViewSet, basename = "GeneralTableSubpopulations2019")
 router.register('GeneralTableSubpopulationsSheltered', GeneralTableSubpopulationsShelteredViewSet, basename = "GeneralTableSubpopulationsSheltered2019")
+router.register('Trends', TrendsViewSet, basename='Trends2019')
 
 urlpatterns = [
     path('2019/', include(router.urls)),
