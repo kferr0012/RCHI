@@ -99,7 +99,7 @@ export default class CityTable extends Component{
         var myTables = await aggregateFetch(this.state.urls, false)
         
         this.setState({
-            Tables: this.reformatData(myTables),
+            Tables: await this.reformatData(myTables),
             selectOptions: this.getOptions(Object.keys(myTables[router.activeYear + "/SubpopulationsByCity"])),
             rendered : true
         })

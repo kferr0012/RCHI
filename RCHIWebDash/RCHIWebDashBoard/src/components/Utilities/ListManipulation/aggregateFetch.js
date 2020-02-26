@@ -108,22 +108,32 @@ function getIndex(link){
 
 export function expandOnField(jsonList,field){
 
+    console.log("expandOnField: ")
     var differentTables = {}
+
 
     for(var i = 0; i< jsonList.length;i++){
         
         var category = jsonList[i][field]
-        if(category in differentTables){
-            differentTables[category].push(jsonList[i])
+        console.log("category " + category + ": ")
+
+
+        try{
+            if(category in differentTables){
+                differentTables[category].push(jsonList[i])
+            }
+            else{
+                //not in dictionary
+                differentTables[category] = []
+                differentTables[category].push(jsonList[i])   
+            }
         }
-        else{
-            //not in dictionary
-            differentTables[category] = []
-            differentTables[category].push(jsonList[i])   
+        catch{
+            throw Error("INDEX ERROR: expandOnField trying to access the category: " + category)
         }
     }
 
-    console.log("expanding data")
+    console.log("expandOnField result data: ")
     console.log(differentTables)
 
     return differentTables

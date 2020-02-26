@@ -28,18 +28,34 @@ class UnshelteredSupervisoryDistricts extends Component{
     }  
 
     reformatData(Tables){
+
+        console.log("REFORMAT DATA")
+
+        console.log("GENERATE KEYS by district")
         //generate keys of district
         Tables[router.formerYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.formerYear +"/SubpopulationsByCity"],"district")
         Tables[router.activeYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"],"district")
         
         //generate keys by category
-
-        for(const key in Tables[router.formerYear +"/SubpopulationsByCity"]){
-            Tables[router.formerYear +"/SubpopulationsByCity"][key] = expandOnField(Tables[router.formerYear +"/SubpopulationsByCity"][key], "category")
+        console.log("GENERATE KEYS by category")
+        console.log("TABLES:")
+        console.log(Tables)
+        console.log(router.formerYear + " data"     )
+        for(const key in Tables[router.formerYear + "/SubpopulationsByCity"]){
+            console.log(key + ": ")
+            console.log(Tables[router.formerYear + "/SubpopulationsByCity"][key])
+            Tables[router.formerYear + "/SubpopulationsByCity"][key] = expandOnField(Tables[router.formerYear + "/SubpopulationsByCity"][key], "category")
         }
+        console.log(router.activeYear + " data: ")
+        console.log(Tables[router.activeYear + "/SubpopulationsByCity"])
 
         for(const key in Tables[router.activeYear +"/SubpopulationsByCity"]){
-            Tables[router.activeYear +" /SubpopulationsByCity"][key] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"][key], "category")
+            console.log(key + ": ")
+            console.log("tabl: e")
+            console.log(Tables[router.activeYear + "/SubpopulationsByCity"])
+            console.log("table[key]")
+            console.log(Tables[router.activeYear + "/SubpopulationsByCity"][key])
+            Tables[router.activeYear + "/SubpopulationsByCity"][key] = expandOnField(Tables[router.activeYear + "/SubpopulationsByCity"][key], "category")
         }
 
         return Tables
@@ -56,6 +72,8 @@ class UnshelteredSupervisoryDistricts extends Component{
         })
     }
     NavOnChangeHandler = (e, data) => {
+
+        console.log("NavOnChangeHandler")
         const currentPage = data.activePage
 
 
@@ -66,6 +84,9 @@ class UnshelteredSupervisoryDistricts extends Component{
     } 
 
     render(){
+        console.log("UnshelteredSupervisoryDistricts: rendering")
+        console.log("states:")
+        console.log(this.state)
         return(
 
              <div>

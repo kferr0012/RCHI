@@ -22,7 +22,7 @@ class PitCountByCity extends Component{
         
         const formatData = response.data.reduce((accumulator, currentValue) => {
             if(!accumulator[currentValue.city]){
-                accumulator[currentValue.city] = {'2018': 0, '2020': 0, labels: currentValue.city}
+                accumulator[currentValue.city] = {'2019': 0, '2020': 0, labels: currentValue.city}
             }
             if(currentValue.year == '2019') accumulator[currentValue.city][2019] += currentValue.total
             if(currentValue.year == '2020') accumulator[currentValue.city][2020] += currentValue.total

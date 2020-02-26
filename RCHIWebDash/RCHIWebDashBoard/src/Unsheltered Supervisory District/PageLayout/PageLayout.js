@@ -42,7 +42,7 @@ const PageLayout = ({currentDistrict, tables}) => {
                     {/* <p>r1c3</p> */}
                     <h4>Population Counts</h4>
                     <TableComponent4
-                        data = {combineCountsByCategory(filterList(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Age"].concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList))}
+                        data = {combineCountsByCategory(filterList(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Age"].concat(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList))}
                         height = {"100%"}
                     />
                     

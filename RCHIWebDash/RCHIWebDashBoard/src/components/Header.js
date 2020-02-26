@@ -5,21 +5,13 @@ import { Link, withRouter } from 'react-router-dom';
 // TO ADD A LINK JUST A NAME AND LINK IN LINKS OBJECT
 const links = [
   { name: 'Map',                          link: '/' },
-  { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
-
-  { name: 'divider'},
-
-  { name: 'City Dashboards',              link: '/CityDashboard' },
-  { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
   { name: 'General Table',                link: '/GeneralTable' },
-  { name: 'City Table',                   link: '/CityTables' },
-  { name: '/CityBreakdown',               link: '/CityBreakdown' },
   { name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
-  
+  { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
   { name: 'divider'},
-
-  { name: 'DIY Chart',                    link: '/DIYChart' },
-  { name: 'Sandbox',                      link: '/Sandbox' },
+  { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
+  { name: '/CityBreakdown',               link: '/CityBreakdown' },
+  { name: 'divider'},
   { name: 'Newly Homeless',               link: '/NewlyHomeless' },
 ]
 
