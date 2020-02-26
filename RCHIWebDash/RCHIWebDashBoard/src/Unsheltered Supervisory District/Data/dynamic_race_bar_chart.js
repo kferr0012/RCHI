@@ -4,6 +4,7 @@ import Chart from 'react-apexcharts';
 import axios from 'axios'
 
 import { colors } from '../../components/Utilities/colors'
+import {router} from '../../components/Utilities/constants/routing'
 
 
 //Class Component
@@ -18,7 +19,7 @@ class Dynamic_Bar_Chart_Template extends Component{
   }
 
   formatingData(){
-    axios.get('http://localhost:8000/api/2020/SubpopulationsByCity/?search='+ this.props.query)
+    axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search='+ this.props.query)
       .then(response=>{
         const filter = response.data.filter(row => (row.subpopulation !== "Total" && row.category === "Race"))
         const new_data = {

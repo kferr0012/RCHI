@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
-
+import {router} from '../../components/Utilities/constants/routing'
 import NivoLineChart from '../../components/Utilities/GraphTypes/NivoLine'
 
 class GeneralTrends extends Component {
@@ -13,7 +12,7 @@ class GeneralTrends extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search='+this.props.query) 
+        axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByYear/?search='+this.props.query) 
             .then(response => {
                 const filterData = response.data.filter(index => (index.sheltered === false))
 

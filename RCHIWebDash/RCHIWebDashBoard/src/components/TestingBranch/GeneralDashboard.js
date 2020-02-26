@@ -8,7 +8,8 @@ import { Header, Table, Segment} from 'semantic-ui-react';
 import React, {Component} from 'react';
 import '../css/dash.css';
 
-import {aggregateFetch, aggregateFetchbyConstants, expandOnField} from '../../components/Utilities/ListManipulation/aggregateFetch'
+import {aggregateFetch, expandOnField} from '../../components/Utilities/ListManipulation/aggregateFetch'
+import {router} from '../../components/Utilities/constants/routing'
 import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 
 import {filter, subset, filterList} from '../../components/Utilities/ListManipulation/filter'
@@ -20,7 +21,8 @@ import PTSD from "../Numbers/PTSD";
 import Substance from "../Numbers/Substance";
 import TotalGeneral from "../Numbers/TotalGeneral";
 
-var FILTER_COLUMNS = [
+
+const FILTER_COLUMNS = [
 'Total',
 'Not Veteran',
 'No Substance Abuse',
@@ -65,11 +67,11 @@ export default class Dashboard extends Component{
         super(props)
 
         this.state = {
-            urls :  ["http://127.0.0.1:8000/api/2020/GeneralTableSubpopulations/",
-                     "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsSheltered/",
-                     "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsTotalCounts/",
-                     "http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
-                     "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/"],
+            urls :  [router.host + '/' + router.root  + '/' + router.activeYear +'/' + "GeneralTableSubpopulations/",
+                     router.host + '/' + router.root  + '/' + router.activeYear +'/' + "GeneralTableSubpopulationsSheltered/",
+                     router.host + '/' + router.root  + '/' + router.activeYear +'/' + "GeneralTableSubpopulationsTotalCounts/",
+                     router.host + '/' + router.root  + '/' + router.formerYear +'/' + "GeneralTableSubpopulations/",
+                     router.host + '/' + router.root  + '/' + router.formerYear +'/' + "GeneralTableSubpopulationsSheltered/"],
             
             Tables : [],
             render : false
@@ -91,17 +93,17 @@ export default class Dashboard extends Component{
     getOrderedTable(){
 
       //concat in a specific order to sort data by group
-      var unshelteredData = this.state.Tables["2020/GeneralTableSubpopulations"]["Total"]
-      .concat(this.state.Tables["2020/GeneralTableSubpopulations"]["Age"])
-      .concat(this.state.Tables["2020/GeneralTableSubpopulations"]["Subpopulations"])
+      var unshelteredData = this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Total"]
+      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"])
+      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Subpopulations"])
 
-      var shelteredData= this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Total"]
-      .concat(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Age"])
-      .concat(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Subpopulations"])
+      var shelteredData= this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Total"]
+      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Age"])
+      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Subpopulations"])
 
-      var totalCounts = this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Total"]
-      .concat(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Age"])
-      .concat(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Subpopulations"])
+      var totalCounts = this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Total"]
+      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Age"])
+      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Subpopulations"])
 
 
       var resultData = shelteredData.concat(unshelteredData).concat(totalCounts)
@@ -161,7 +163,7 @@ export default class Dashboard extends Component{
                 <div className="gen-r1">
                   <p className="component-header">Race</p>
                   <BarGraph
-                    data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Race"], "subpopulation", ["Total"])}
+                    data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Race"], "subpopulation", ["Total"])}
                     indexBy = "subpopulation"
                     keys = {["total"]}
                     margin = {{left: 45, top: 50, bottom: 30}}
@@ -172,13 +174,13 @@ export default class Dashboard extends Component{
                     <div className="gen-r2c1r1">
                       <p className="component-header">Gender</p>
                       <PieChart2
-                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                        data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
                         margin = {{top: 35, bottom: 10}}
                       />
                     </div>
                     <div className="gen-r2c1r2">
                       <TableComponent4
-                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total"])}
+                        data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total"])}
                         header = {false}
                         height = {"100%"}
                       />
@@ -188,7 +190,7 @@ export default class Dashboard extends Component{
                     <p className="component-header">Ethnicity</p>
 
                     <PieChart2
-                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"])}
                       margin = {{top: 40, bottom: 40, left: 30, right: 30}}  
                     />
 
@@ -203,22 +205,22 @@ export default class Dashboard extends Component{
                       
                     <div className="gen-s-r1">
                         <Mental height = {50}
-                                url = {'http://127.0.0.1:8000/api/SubpopulationsByYear/?search=Mental'}
+                                url = {router.host + '/' + router.root + "/SubpopulationsByYear/?search=Mental"}
                         />
                     </div>
                     <div className="gen-s-r4">
                         <PTSD height = {50}
-                              url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
+                              url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
                     </div>
                     <div className="gen-s-r2">
                         <Substance height = {50}
-                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
+                                  url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
                     </div>
                     <div className="gen-s-r3">
                         <Physical height = {50}
-                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
+                                  url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
                     </div>
                 </div>
@@ -231,7 +233,7 @@ export default class Dashboard extends Component{
                   <div className="gen-3r-r2">
                     <span className = "component-header" style = {{fontSize:"40px" ,textAlign: "middle"}}>
                         <TotalGeneral height = {50}
-                                  url = {'http://127.0.0.1:8000/api/Trends/?search=2020'}
+                                  url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
                       </span>
                   </div>
@@ -255,7 +257,7 @@ export default class Dashboard extends Component{
                   <div className="gen-3r-r5">
                     <span className = "component-header">Househhold Type</span>
                     <PieChart2
-                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
                       margin = {{top:40, bottom: 40, left: 40, right: 40}}
                     />
                   </div>
@@ -265,13 +267,13 @@ export default class Dashboard extends Component{
                   <div className="gen-r2c1r1">
                     <span className="component-header">Living Situations</span>
                     <PieChart2
-                      data = {this.state.Tables["2020/GeneralTableSubpopulations"]["Living Situation"]}
+                      data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"]}
                       margin = {{top:50,bottom:50,left:60, right: 60}}
                     />
                   </div>
                   <div className="gen-r2c1r2">
                     <TableComponent4
-                      data = {this.state.Tables["2020/GeneralTableSubpopulations"]["Living Situation"]}
+                      data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"]}
                       header = {false}
                       height = {"100%"}
                     />

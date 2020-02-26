@@ -8,6 +8,7 @@ import Header from './PageLayout/Utilities/Header'
 import PageLayout from './PageLayout/PageLayout'
 
 import {aggregateFetch, expandOnField } from './../components/Utilities/ListManipulation/aggregateFetch'
+import { router } from '../components/Utilities/constants/routing'
 
 
 class UnshelteredSupervisoryDistricts extends Component{
@@ -18,8 +19,8 @@ class UnshelteredSupervisoryDistricts extends Component{
             pageDisplayed: null,
             totalPages:5,
             districtDisplay:null,
-            urls : ["http://127.0.0.1:8000/api/SubpopulationsByCity/",
-                    "http://127.0.0.1:8000/api/2020/SubpopulationsByCity/"],
+            urls : [router.host + '/' + router.root + '/' + router.formerYear + "/SubpopulationsByCity/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/"],
             rendered : false,
 
             
@@ -28,17 +29,17 @@ class UnshelteredSupervisoryDistricts extends Component{
 
     reformatData(Tables){
         //generate keys of district
-        Tables["SubpopulationsByCity"] = expandOnField(Tables["SubpopulationsByCity"],"district")
-        Tables["2020/SubpopulationsByCity"] = expandOnField(Tables["2020/SubpopulationsByCity"],"district")
+        Tables[router.formerYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.formerYear +"/SubpopulationsByCity"],"district")
+        Tables[router.activeYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"],"district")
         
         //generate keys by category
 
-        for(const key in Tables["SubpopulationsByCity"]){
-            Tables["SubpopulationsByCity"][key] = expandOnField(Tables["SubpopulationsByCity"][key], "category")
+        for(const key in Tables[router.formerYear +"/SubpopulationsByCity"]){
+            Tables[router.formerYear +"/SubpopulationsByCity"][key] = expandOnField(Tables[router.formerYear +"/SubpopulationsByCity"][key], "category")
         }
 
-        for(const key in Tables["2020/SubpopulationsByCity"]){
-            Tables["2020/SubpopulationsByCity"][key] = expandOnField(Tables["2020/SubpopulationsByCity"][key], "category")
+        for(const key in Tables[router.activeYear +"/SubpopulationsByCity"]){
+            Tables[router.activeYear +"/SubpopulationsByCity"][key] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"][key], "category")
         }
 
         return Tables

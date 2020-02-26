@@ -13,6 +13,9 @@ import fetchTest from '../components/Utilities/ListManipulation/fetchTest'
 import {filter, subset, filterList} from '../components/Utilities/ListManipulation/filter'
 import {combine} from '../components/Utilities/ListManipulation/combine'
 import {Header,Segment} from 'semantic-ui-react'
+
+import{router} from '../components/Utilities/constants/routing'
+
 const FILTERED_COUNTS = [
   'Total',
   'Veteran No',
@@ -74,10 +77,10 @@ export default class UnsheleteredVsSheltered extends Component{
         super(props)
 
         this.state = {
-            urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
-                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/",
-                    "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulations/",
-                    "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsSheltered/",],
+            urls : [router.host + '/' + router.root + '/' + router.formerYear + "/GeneralTableSubpopulations/",
+                    router.host + '/' + router.root + '/' + router.formerYear + "/GeneralTableSubpopulationsSheltered/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulations/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulationsSheltered/",],
             Tables : [],
             render : false
         }
@@ -87,15 +90,15 @@ export default class UnsheleteredVsSheltered extends Component{
     formatData(data){
 
       //2019
-      data["GeneralTableSubpopulations-unexpanded"] = data["GeneralTableSubpopulations"]
-      data["GeneralTableSubpopulationsSheltered-unexpanded"] = data["GeneralTableSubpopulationsSheltered"]
-      data["GeneralTableSubpopulations"] = expandOnField(data["GeneralTableSubpopulations"], "category")
-      data["GeneralTableSubpopulationsSheltered"] = expandOnField(data["GeneralTableSubpopulationsSheltered"], "category")
+      data[router.formerYear + "/GeneralTableSubpopulations-unexpanded"] = data[router.formerYear + "/GeneralTableSubpopulations"]
+      data[router.formerYear + "/" + "GeneralTableSubpopulationsSheltered-unexpanded"] = data[router.formerYear + "/" + "GeneralTableSubpopulationsSheltered"]
+      data[router.formerYear + "/" + "GeneralTableSubpopulations"] = expandOnField(data[router.formerYear + "/" + "GeneralTableSubpopulations"], "category")
+      data[router.formerYear + "/" + "GeneralTableSubpopulationsSheltered"] = expandOnField(data[router.formerYear + "/" + "GeneralTableSubpopulationsSheltered"], "category")
       //2020
-      data["2020/GeneralTableSubpopulations-unexpanded"] = data["2020/GeneralTableSubpopulations"]
-      data["2020/GeneralTableSubpopulationsSheltered-unexpanded"] = data["2020/GeneralTableSubpopulationsSheltered"]
-      data["2020/GeneralTableSubpopulations"] = expandOnField(data["2020/GeneralTableSubpopulations"], "category")
-      data["2020/GeneralTableSubpopulationsSheltered"] = expandOnField(data["2020/GeneralTableSubpopulationsSheltered"], "category")
+      data[router.activeYear + "/GeneralTableSubpopulations-unexpanded"] = data[router.activeYear + "/GeneralTableSubpopulations"]
+      data[router.activeYear + "/GeneralTableSubpopulationsSheltered-unexpanded"] = data[router.activeYear + "/GeneralTableSubpopulationsSheltered"]
+      data[router.activeYear + "/GeneralTableSubpopulations"] = expandOnField(data[router.activeYear + "/GeneralTableSubpopulations"], "category")
+      data[router.activeYear + "/GeneralTableSubpopulationsSheltered"] = expandOnField(data[router.activeYear + "/GeneralTableSubpopulationsSheltered"], "category")
 
       return data
     }
@@ -113,25 +116,25 @@ export default class UnsheleteredVsSheltered extends Component{
     }
 
     getOrderedUnshelteredData(){
-      var result = this.state.Tables["GeneralTableSubpopulations"]["Total"]
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Age"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Gender"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Ethnicity"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Race"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulations"]["Subpopulations"])
-                                                                        .concat(this.state.Tables["2020/GeneralTableSubpopulations-unexpanded"])
+      var result = this.state.Tables[router.formerYear + '/GeneralTableSubpopulations']["Total"]
+                                                                        .concat(this.state.Tables[router.formerYear + '/GeneralTableSubpopulations']["Age"])
+                                                                        .concat(this.state.Tables[router.formerYear + '/GeneralTableSubpopulations']["Gender"])
+                                                                        .concat(this.state.Tables[router.formerYear + '/GeneralTableSubpopulations']["Ethnicity"])
+                                                                        .concat(this.state.Tables[router.formerYear + '/GeneralTableSubpopulations']["Race"])
+                                                                        .concat(this.state.Tables[router.formerYear + '/GeneralTableSubpopulations']["Subpopulations"])
+                                                                        .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations-unexpanded"])
 
       return result
     }
 
     getOrderedShelteredData(){
-      var result = this.state.Tables["GeneralTableSubpopulationsSheltered"]["Total"]
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Age"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Gender"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Ethnicity"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Race"])
-                                                                        .concat(this.state.Tables["GeneralTableSubpopulationsSheltered"]["Subpopulations"])
-                                                                        .concat(this.state.Tables["2020/GeneralTableSubpopulationsSheltered-unexpanded"])
+      var result = this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Total"]
+                                                                        .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Age"])
+                                                                        .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Gender"])
+                                                                        .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Ethnicity"])
+                                                                        .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Race"])
+                                                                        .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Subpopulations"])
+                                                                        .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered-unexpanded"])
 
       return result
     }
@@ -164,7 +167,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     <div className="svu-r2-h25">
                       <span className="component-header">Sheltered Households</span>>
                       <PieChart2
-                        data = {filterList(this.state.Tables["2020/GeneralTableSubpopulationsSheltered"]["Households"],"subpopulation", ["Total"])}
+                        data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Households"],"subpopulation", ["Total"])}
                         footer = {false}
                         margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                       />
@@ -182,7 +185,7 @@ export default class UnsheleteredVsSheltered extends Component{
 
                     <span className="component-header">Age</span>
                     <BarGraph 
-                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
@@ -191,7 +194,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r2">
                     <span className="component-header"> Race</span>
                     <BarGraph
-                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
@@ -204,7 +207,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r1">
                     
                     <TableComponent4
-                      //data = {this.state.Tables["GeneralTableSubpopulations-unexpanded"].concat(this.state.Tables["2020/GeneralTableSubpopulations-unexpanded"])}
+                      //data = {this.state.Tables["GeneralTableSubpopulations-unexpanded"].concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations-unexpanded"])}
                       data = {filterList(this.getOrderedUnshelteredData(),"subpopulation", FILTERED_COUNTS)}
                       tableName = "Unsheltered Statistics"
                       expandIndex = {"year"}
@@ -216,7 +219,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r2-h25">
                     <p className="component-header">Unsheltered Households </p>
                     <PieChart2
-                      data = {filterList(this.state.Tables["2020/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
                       footer = {false}
                       margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
                     />

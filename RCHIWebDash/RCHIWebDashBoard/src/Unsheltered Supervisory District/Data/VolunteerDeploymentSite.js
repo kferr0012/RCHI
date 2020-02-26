@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Header, Table, Container, Tab } from 'semantic-ui-react'
+import {router} from '../../components/Utilities/constants/routing'
 
 //CLEAN
 
@@ -25,7 +26,7 @@ class VolunteerDeploymentSite extends Component{
     }
 
     formatingData(){
-      axios.get('http://localhost:8000/api/2020/VolunteerDeployment/?search='+this.props.query)
+      axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/VolunteerDeployment/?search='+this.props.query)
       .then(response=>{
         
         const formatData = response.data.reduce((accumulator, currentValue) => {

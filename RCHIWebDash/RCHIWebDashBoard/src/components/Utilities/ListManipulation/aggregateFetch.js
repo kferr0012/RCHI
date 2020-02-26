@@ -1,50 +1,50 @@
-import {host,root,availableYears,availableFiles} from '../constants/routing'
+// import {host,root,availableYears,availableFiles} from '../constants/routing'
 
-export async function aggregateFetchbyConstants(){
+// export async function aggregateFetchbyConstants(){
 
-    var fetchURL = host + root
+//     var fetchURL = host + root
 
-    var outputTable = {}
+//     var outputTable = {}
 
-    //setup table
-    for(const yearKey in availableYears){
-        if(!(yearKey in outputTable)){
-            outputTable[yearKey] = {}
-        }
-        for(const file in availableFiles){
-            outputTable[yearKey][file] = []
-        }
-    }
+//     //setup table
+//     for(const yearKey in availableYears){
+//         if(!(yearKey in outputTable)){
+//             outputTable[yearKey] = {}
+//         }
+//         for(const file in availableFiles){
+//             outputTable[yearKey][file] = []
+//         }
+//     }
 
-    for(const yearKey in availableYears){
-        var year = yearKey + '/'
-        for(const file in availableFiles){
+//     for(const yearKey in availableYears){
+//         var year = yearKey + '/'
+//         for(const file in availableFiles){
             
-            var fetchLink = fetchURL + year + file + "/"
+//             var fetchLink = fetchURL + year + file + "/"
 
-            await fetch(fetchLink, {
-                headers: {
-                    'Accept': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-                })
-                .then(response => response.json())
-                .then((data) =>{
-                    //console.log( "data found in " + fetchLink)
-                    outputTable[yearKey][file] = data
-                    //console.log("added data")
+//             await fetch(fetchLink, {
+//                 headers: {
+//                     'Accept': 'application/json',
+//                     'X-Requested-With': 'XMLHttpRequest'
+//                 }
+//                 })
+//                 .then(response => response.json())
+//                 .then((data) =>{
+//                     //console.log( "data found in " + fetchLink)
+//                     outputTable[yearKey][file] = data
+//                     //console.log("added data")
                     
-                })
-                .catch(err => {
-                    //console.log( "no data found in " + fetchLink)
-                })
-        }
+//                 })
+//                 .catch(err => {
+//                     //console.log( "no data found in " + fetchLink)
+//                 })
+//         }
 
-    }
+//     }
 
-    return outputTable
+//     return outputTable
     
-}
+// }
 export async function aggregateFetch(listOfURLs, expandData = true){
 
 

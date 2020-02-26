@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Header, Table} from 'semantic-ui-react'
+import {router} from '../../components/Utilities/constants/routing'
 
 //CLEAN
 
@@ -25,7 +26,7 @@ class HouseHoldComposition extends Component{
     }
 
   formatingData(){
-    axios.get('http://localhost:8000/api/2020/HouseholdsByCityYearInterview/?search='+this.props.query)
+    axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/HouseholdsByCityYearInterview/?search='+this.props.query)
       .then(response=>{
         const filter = response.data
         const new_data = {

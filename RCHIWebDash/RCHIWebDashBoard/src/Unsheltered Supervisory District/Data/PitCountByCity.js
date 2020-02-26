@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Header, Table} from 'semantic-ui-react'
+import {router} from '../../components/Utilities/constants/routing'
 
 //CLEAN
 
@@ -16,7 +17,7 @@ class PitCountByCity extends Component{
   }
 
   formatingData(){
-    axios.get('http://localhost:8000/api/2020/CityTotalByYear/?search='+this.props.query)
+    axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+this.props.query)
       .then(response=>{
         
         const formatData = response.data.reduce((accumulator, currentValue) => {

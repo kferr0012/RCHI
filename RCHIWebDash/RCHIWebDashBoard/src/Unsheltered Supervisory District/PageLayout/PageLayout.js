@@ -14,6 +14,7 @@ import {filterList} from '../../components/Utilities/ListManipulation/filter'
 import {combineCountsByCategory} from '../../components/Utilities/ListManipulation/combine'
 import '../../components/css/newlyHomelessGrid.css';
 
+import {router} from '../../components/Utilities/constants/routing'
 //const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
 const filteredTableList = ["Total","Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability","Unknown Developmental Disability", "No Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV", "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "Unknown Brain Injury", "No Jail", "Unknown Jail"]
@@ -41,7 +42,7 @@ const PageLayout = ({currentDistrict, tables}) => {
                     {/* <p>r1c3</p> */}
                     <h4>Population Counts</h4>
                     <TableComponent4
-                        data = {combineCountsByCategory(filterList(tables["2020/SubpopulationsByCity"][currentDistrict]["Age"].concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList))}
+                        data = {combineCountsByCategory(filterList(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Age"].concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables["2020/SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList))}
                         height = {"100%"}
                     />
                     

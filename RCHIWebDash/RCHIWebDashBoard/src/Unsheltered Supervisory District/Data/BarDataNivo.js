@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import NivoBarChart from '../../components/Utilities/GraphTypes/NivoBar'
+import {router} from '../../components/Utilities/constants/routing'
 
 class BarData extends Component{
     constructor(props){
@@ -12,7 +13,7 @@ class BarData extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/2020/SubpopulationsByCity/?search=1,race')
+        axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=1,race')
             .then(response => {
                 
                 const filterData = response.data.filter(index => (index.subpopulation !== "Total" && index.city !== "RIVERSIDE"))

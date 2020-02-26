@@ -22,6 +22,7 @@ import {filter, subset, filterList} from '../components/Utilities/ListManipulati
 import { getOverflowOptions } from 'antd/lib/tooltip/placements';
 
 import {Header,Segment} from 'semantic-ui-react'
+import {router} from '../components/Utilities/constants/routing'
 
 const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
@@ -39,12 +40,12 @@ export default class CityTable extends Component{
         this.state = {
             cityChoice : "RIVERSIDE", //set default city on first render
 
-            urls : ["http://127.0.0.1:8000/api/GeneralTableSubpopulations/",
-                    "http://127.0.0.1:8000/api/GeneralTableSubpopulationsSheltered/",
-                    "http://127.0.0.1:8000/api/SubpopulationsByCity/",
-                    "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulations/",
-                    "http://127.0.0.1:8000/api/2020/GeneralTableSubpopulationsSheltered/",
-                    "http://127.0.0.1:8000/api/2020/SubpopulationsByCity/",
+            urls : [router.host + '/' + router.root + '/' + router.formerYear + "/GeneralTableSubpopulations/",
+                    router.host + '/' + router.root + '/' + router.formerYear + "/GeneralTableSubpopulationsSheltered/",
+                    router.host + '/' + router.root + '/' + router.formerYear + "/SubpopulationsByCity/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulations/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulationsSheltered/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/",
                     ],
             Tables : [],
             selectOptions: []
@@ -73,21 +74,21 @@ export default class CityTable extends Component{
     reformatData(myTables){
 
         //reformat 2019 data
-        myTables["GeneralTableSubpopulations"] = expandOnField(myTables["GeneralTableSubpopulations"], "category")
-        myTables["GeneralTableSubpopulationsSheltered"] = expandOnField(myTables["GeneralTableSubpopulationsSheltered"], "category")
-        myTables["SubpopulationsByCity"] = expandOnField(myTables["SubpopulationsByCity"],"city")
+        myTables[router.formerYear + "/GeneralTableSubpopulations"] = expandOnField(myTables[router.formerYear + "/GeneralTableSubpopulations"], "category")
+        myTables[router.formerYear + "/GeneralTableSubpopulationsSheltered"] = expandOnField(myTables[router.formerYear + "/GeneralTableSubpopulationsSheltered"], "category")
+        myTables[router.formerYear + "/SubpopulationsByCity"] = expandOnField(myTables[router.formerYear + "/SubpopulationsByCity"],"city")
         
-        for(const key in myTables["SubpopulationsByCity"]){
-            myTables["SubpopulationsByCity"][key] = expandOnField(myTables["SubpopulationsByCity"][key], "category")
+        for(const key in myTables[router.formerYear + "/SubpopulationsByCity"]){
+            myTables[router.formerYear + "/SubpopulationsByCity"][key] = expandOnField(myTables[router.formerYear + "/SubpopulationsByCity"][key], "category")
         }
 
         //reformat 2020 data
-        myTables["2020/GeneralTableSubpopulations"] = expandOnField(myTables["2020/GeneralTableSubpopulations"], "category")
-        myTables["2020/GeneralTableSubpopulationsSheltered"] = expandOnField(myTables["2020/GeneralTableSubpopulationsSheltered"], "category")
-        myTables["2020/SubpopulationsByCity"] = expandOnField(myTables["2020/SubpopulationsByCity"],"city")
+        myTables[router.activeYear + "/GeneralTableSubpopulations"] = expandOnField(myTables[router.activeYear + "/GeneralTableSubpopulations"], "category")
+        myTables[router.activeYear + "/GeneralTableSubpopulationsSheltered"] = expandOnField(myTables[router.activeYear + "/GeneralTableSubpopulationsSheltered"], "category")
+        myTables[router.activeYear + "/SubpopulationsByCity"] = expandOnField(myTables[router.activeYear + "/SubpopulationsByCity"],"city")
         
-        for(const key in myTables["2020/SubpopulationsByCity"]){
-            myTables["2020/SubpopulationsByCity"][key] = expandOnField(myTables["2020/SubpopulationsByCity"][key], "category")
+        for(const key in myTables[router.activeYear + "/SubpopulationsByCity"]){
+            myTables[router.activeYear + "/SubpopulationsByCity"][key] = expandOnField(myTables[router.activeYear + "/SubpopulationsByCity"][key], "category")
         }
         
         return myTables
@@ -99,7 +100,7 @@ export default class CityTable extends Component{
         
         this.setState({
             Tables: this.reformatData(myTables),
-            selectOptions: this.getOptions(Object.keys(myTables["2020/SubpopulationsByCity"])),
+            selectOptions: this.getOptions(Object.keys(myTables[router.activeYear + "/SubpopulationsByCity"])),
             rendered : true
         })
     }
@@ -155,7 +156,7 @@ export default class CityTable extends Component{
                                             <div className="ct-side-r1">
                                                 >
                                                 <TableComponent4
-                                                        data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
+                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
                                                         tableName = {"Subpopulations"}
                                                         height = {"110%"}
                                                 />
@@ -164,7 +165,7 @@ export default class CityTable extends Component{
                                             <div className="ct-side-r2">
                                                 
                                                 <TableComponent4
-                                                        data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Age"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Age"],"subpopulation", ["Total"])}
                                                         tableName = {"Age "}
                                                         height = {"114%"}
                                                 />
@@ -188,14 +189,14 @@ export default class CityTable extends Component{
                                                 <div className="ct-center-r2c1">
                                                     <span className = "component-header">
                                                         <Number height = {400}
-                                                            url = {'http://127.0.0.1:8000/api/2020/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
+                                                            url = {router.host + '/' + router.root + '/' + router.formerYear + '/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
                                                             />
                                                     </span>
                                                 </div>
                                                 <div className="ct-center-r2c2">
                                                     <span className = "component-header">
                                                         <Total height = {400}
-                                                            url = {'http://127.0.0.1:8000/api/2020/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
+                                                            url = {router.host + '/' + router.root + '/' + router.formerYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
                                                             />
 
                                                     </span>
@@ -208,14 +209,14 @@ export default class CityTable extends Component{
                                             <div className="ct-center-r2">
                                                 <div className="ct-center-r2c1">
                                                     <TableComponent4
-                                                        data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Ethnicity"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Ethnicity"],"subpopulation", ["Total"])}
                                                         tableName = "Hispanic"
                                                         height = {"100%"}
                                                     />
                                                 </div>
                                                 <div className="ct-center-r2c2">
                                                     <PieChart2
-                                                        data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Ethnicity"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Ethnicity"],"subpopulation", ["Total"])}
                                                         margin = {{bottom : 60, top : 30, right: 60, left : 60}}
                                                         />
                                                 </div>
@@ -223,7 +224,7 @@ export default class CityTable extends Component{
                                             <div className="ct-center-r3">
                                                 <span className = "component-header">Race</span>
                                                 <BarGraph 
-                                                    data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Race"],"subpopulation", ["Total"])}
+                                                    data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Race"],"subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
                                                     keys = {["interview"]}
                                                     margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
@@ -236,14 +237,14 @@ export default class CityTable extends Component{
                                             
                                                 <div className="ct-side-r1r1">
                                                     <TableComponent4
-                                                        data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
+                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Gender"],"subpopulation", ["Total"])}
                                                         tableName = {"Gender"}
                                                         height = {"120%"}
                                                     />
                                                 </div>
                                                 <div className="ct-side-r1r2">
                                                     <BarGraph 
-                                                    data = {filterList(this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
+                                                    data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
                                                     keys = {["interview"]}
                                                     margin = {{top: 40, bottom:30, right: 30, left: 30}}
@@ -255,7 +256,7 @@ export default class CityTable extends Component{
                                                 </div>
                                                 <div className="ct-side-r1r4">
                                                     <TableComponent4 
-                                                        data = {this.state.Tables["2020/SubpopulationsByCity"][this.state.cityChoice]["Race"]}
+                                                        data = {this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Race"]}
                                                         height = {"115%"}
                                                         />
                                                     

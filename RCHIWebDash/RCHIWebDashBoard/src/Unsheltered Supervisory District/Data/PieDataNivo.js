@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {router} from '../../components/Utilities/constants/routing'
 
 import NivoPieChart from '../../components/Utilities/GraphTypes/NivoPie'
 
@@ -13,7 +14,7 @@ class PieData extends Component{
     }
 
     formatingData(){
-        axios.get('http://localhost:8000/api/2020/SubpopulationsByCity/?search='+this.props.query)
+        axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search='+this.props.query)
             .then(response => {
                 const filterData = response.data.filter(row => (row.subpopulation !== "Total" && row.city !== "RIVERSIDE"))
 

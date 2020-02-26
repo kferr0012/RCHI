@@ -3,6 +3,9 @@ import axios from 'axios'
 
 import NivoLineChart from '../../components/Utilities/GraphTypes/NivoLine'
 
+import {router} from '../../components/Utilities/constants/routing'
+
+
 class YouthGraph extends Component {
     constructor(props){
         super();
@@ -12,7 +15,7 @@ class YouthGraph extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8000/api/2020/SubpopulationsByYear/?search='+ this.props.query) 
+        axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByYear/?search='+ this.props.query) 
             .then(response => {
 
                 var completeData = []
