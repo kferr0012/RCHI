@@ -1,5 +1,5 @@
 import { colors } from '../Utilities/colors';
-import {routing} from '../Utilities/constants/routing'
+import {router} from '../Utilities/constants/routing'
 export const countyColor = colors[1];
 
 export const backgroundStroke = '#FFF';
@@ -8,7 +8,7 @@ export const lat = 33.6906;
 export const lng = -116.1055;
 export const defaultZoom = 7;
 
-export const subPopLink = routing.host + '/' + routing.root + '/' + routing.formerYear + "/SubpopulationsByCity/";
+export const subPopLink = router.host + '/' + router.root + '/' + router.formerYear + "/SubpopulationsByCity/";
 
 export const cityNames = {
     'CATHEDRAL CITY': 'Cathedral City',
