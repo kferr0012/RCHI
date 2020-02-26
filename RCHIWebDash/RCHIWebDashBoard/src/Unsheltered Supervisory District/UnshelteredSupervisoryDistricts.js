@@ -39,7 +39,7 @@ class UnshelteredSupervisoryDistricts extends Component{
         }
 
         for(const key in Tables[router.activeYear +"/SubpopulationsByCity"]){
-            Tables[router.activeYear +"/SubpopulationsByCity"][key] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"][key], "category")
+            Tables[router.activeYear +" /SubpopulationsByCity"][key] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"][key], "category")
         }
 
         return Tables
