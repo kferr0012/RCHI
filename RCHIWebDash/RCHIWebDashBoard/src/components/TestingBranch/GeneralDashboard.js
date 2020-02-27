@@ -25,6 +25,8 @@ import TotalGeneral from "../Numbers/TotalGeneral";
 const FILTER_COLUMNS = [
 'Total',
 'Not Veteran',
+'Veteran No',
+'Unknown Veteran',
 'No Substance Abuse',
 'Unknown Substance Abuse',
 'PTSD',
@@ -93,6 +95,9 @@ export default class Dashboard extends Component{
     getOrderedTable(){
 
       //concat in a specific order to sort data by group
+
+      console.log("this.state.Tables")
+      console.log(this.state.Tables)
       var unshelteredData = this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Total"]
       .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"])
       .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Subpopulations"])
@@ -246,11 +251,11 @@ export default class Dashboard extends Component{
                     <Table style = {{height: "100%"}}Cell Structured>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{1193}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{1383}</Table.HeaderCell>
                       </Table.Row>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{790}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{809}</Table.HeaderCell>
                       </Table.Row>
                     </Table>
                   </div>

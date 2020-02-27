@@ -494,10 +494,11 @@
             "year": "2020",
             "district": 1,
             "city": "RIVERSIDE 1",
-            "totalHouseholds": 104,
-            "adultsOnly": 103,
+            "totalHouseholds": 136,
+            "adultsOnly": 134,
             "adultsAndChildren": 1,
-            "childrenOnly": 0
+            "childrenOnly": 1,
+            "_type": "Unsheltered"
         },
         "pk": 36,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -507,10 +508,11 @@
             "year": "2020",
             "district": 1,
             "city": "LAKE ELSINORE",
-            "totalHouseholds": 35,
-            "adultsOnly": 35,
+            "totalHouseholds": 39,
+            "adultsOnly": 39,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 37,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -520,10 +522,11 @@
             "year": "2020",
             "district": 1,
             "city": "UNINCORPORATED 1",
-            "totalHouseholds": 24,
-            "adultsOnly": 24,
+            "totalHouseholds": 25,
+            "adultsOnly": 25,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 38,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -536,7 +539,8 @@
             "totalHouseholds": 3,
             "adultsOnly": 3,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 39,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -549,7 +553,8 @@
             "totalHouseholds": 0,
             "adultsOnly": 0,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 40,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -562,7 +567,8 @@
             "totalHouseholds": 9,
             "adultsOnly": 9,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 41,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -572,10 +578,11 @@
             "year": "2020",
             "district": 2,
             "city": "CORONA",
-            "totalHouseholds": 42,
-            "adultsOnly": 41,
+            "totalHouseholds": 60,
+            "adultsOnly": 60,
             "adultsAndChildren": 0,
-            "childrenOnly": 1
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 42,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -585,10 +592,11 @@
             "year": "2020",
             "district": 2,
             "city": "RIVERSIDE 2",
-            "totalHouseholds": 103,
-            "adultsOnly": 103,
+            "totalHouseholds": 115,
+            "adultsOnly": 114,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 1,
+            "_type": "Unsheltered"
         },
         "pk": 43,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -598,10 +606,11 @@
             "year": "2020",
             "district": 2,
             "city": "JURUPA VALLEY",
-            "totalHouseholds": 71,
-            "adultsOnly": 71,
-            "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "totalHouseholds": 73,
+            "adultsOnly": 72,
+            "adultsAndChildren": 1,
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 44,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -614,7 +623,8 @@
             "totalHouseholds": 14,
             "adultsOnly": 14,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 45,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -627,7 +637,8 @@
             "totalHouseholds": 1,
             "adultsOnly": 1,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 46,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -637,10 +648,11 @@
             "year": "2020",
             "district": 3,
             "city": "TEMECULA",
-            "totalHouseholds": 35,
-            "adultsOnly": 35,
+            "totalHouseholds": 38,
+            "adultsOnly": 38,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 47,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -650,10 +662,11 @@
             "year": "2020",
             "district": 3,
             "city": "UNINCORPORATED 3",
-            "totalHouseholds": 32,
-            "adultsOnly": 32,
+            "totalHouseholds": 35,
+            "adultsOnly": 35,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 48,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -663,10 +676,11 @@
             "year": "2020",
             "district": 3,
             "city": "MURRIETA",
-            "totalHouseholds": 7,
-            "adultsOnly": 7,
+            "totalHouseholds": 8,
+            "adultsOnly": 8,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 49,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -676,10 +690,11 @@
             "year": "2020",
             "district": 3,
             "city": "HEMET",
-            "totalHouseholds": 53,
-            "adultsOnly": 52,
+            "totalHouseholds": 66,
+            "adultsOnly": 65,
             "adultsAndChildren": 1,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 50,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -689,10 +704,11 @@
             "year": "2020",
             "district": 3,
             "city": "SAN JACINTO",
-            "totalHouseholds": 19,
-            "adultsOnly": 19,
+            "totalHouseholds": 20,
+            "adultsOnly": 20,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 51,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -702,10 +718,11 @@
             "year": "2020",
             "district": 4,
             "city": "DESERT HOT SPRINGS",
-            "totalHouseholds": 36,
-            "adultsOnly": 35,
+            "totalHouseholds": 45,
+            "adultsOnly": 44,
             "adultsAndChildren": 1,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 52,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -715,10 +732,11 @@
             "year": "2020",
             "district": 4,
             "city": "UNINCORPORATED 4",
-            "totalHouseholds": 41,
-            "adultsOnly": 41,
+            "totalHouseholds": 43,
+            "adultsOnly": 43,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 53,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -731,7 +749,8 @@
             "totalHouseholds": 3,
             "adultsOnly": 3,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 54,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -741,10 +760,11 @@
             "year": "2020",
             "district": 4,
             "city": "COACHELLA",
-            "totalHouseholds": 38,
-            "adultsOnly": 38,
+            "totalHouseholds": 45,
+            "adultsOnly": 45,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 55,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -757,7 +777,8 @@
             "totalHouseholds": 0,
             "adultsOnly": 0,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 56,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -767,10 +788,11 @@
             "year": "2020",
             "district": 4,
             "city": "INDIO",
-            "totalHouseholds": 41,
-            "adultsOnly": 41,
+            "totalHouseholds": 49,
+            "adultsOnly": 49,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 57,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -780,10 +802,11 @@
             "year": "2020",
             "district": 4,
             "city": "PALM SPRINGS",
-            "totalHouseholds": 85,
-            "adultsOnly": 84,
+            "totalHouseholds": 108,
+            "adultsOnly": 107,
             "adultsAndChildren": 1,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 58,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -793,10 +816,11 @@
             "year": "2020",
             "district": 4,
             "city": "CATHEDRAL CITY",
-            "totalHouseholds": 27,
-            "adultsOnly": 27,
+            "totalHouseholds": 35,
+            "adultsOnly": 35,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 59,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -806,10 +830,11 @@
             "year": "2020",
             "district": 4,
             "city": "BLYTHE",
-            "totalHouseholds": 25,
-            "adultsOnly": 25,
-            "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "totalHouseholds": 32,
+            "adultsOnly": 31,
+            "adultsAndChildren": 1,
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 60,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -819,10 +844,11 @@
             "year": "2020",
             "district": 4,
             "city": "PALM DESERT",
-            "totalHouseholds": 20,
-            "adultsOnly": 20,
+            "totalHouseholds": 19,
+            "adultsOnly": 19,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 61,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -832,10 +858,11 @@
             "year": "2020",
             "district": 4,
             "city": "RANCHO MIRAGE",
-            "totalHouseholds": 4,
-            "adultsOnly": 4,
+            "totalHouseholds": 6,
+            "adultsOnly": 6,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 62,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -848,7 +875,8 @@
             "totalHouseholds": 0,
             "adultsOnly": 0,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 63,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -858,10 +886,11 @@
             "year": "2020",
             "district": 5,
             "city": "MENIFEE",
-            "totalHouseholds": 15,
-            "adultsOnly": 15,
+            "totalHouseholds": 16,
+            "adultsOnly": 16,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 64,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -871,10 +900,11 @@
             "year": "2020",
             "district": 5,
             "city": "PERRIS",
-            "totalHouseholds": 23,
-            "adultsOnly": 23,
+            "totalHouseholds": 24,
+            "adultsOnly": 24,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 65,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -884,10 +914,11 @@
             "year": "2020",
             "district": 5,
             "city": "UNINCORPORATED 5",
-            "totalHouseholds": 8,
-            "adultsOnly": 8,
+            "totalHouseholds": 9,
+            "adultsOnly": 9,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 66,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -900,7 +931,8 @@
             "totalHouseholds": 12,
             "adultsOnly": 12,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 67,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -910,10 +942,11 @@
             "year": "2020",
             "district": 5,
             "city": "MORENO VALLEY",
-            "totalHouseholds": 62,
-            "adultsOnly": 61,
+            "totalHouseholds": 75,
+            "adultsOnly": 74,
             "adultsAndChildren": 1,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 68,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -926,7 +959,8 @@
             "totalHouseholds": 6,
             "adultsOnly": 6,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 69,
         "model": "backend.HouseholdsByCityYearInterview2020"
@@ -936,10 +970,11 @@
             "year": "2020",
             "district": 5,
             "city": "BANNING",
-            "totalHouseholds": 31,
-            "adultsOnly": 31,
+            "totalHouseholds": 32,
+            "adultsOnly": 32,
             "adultsAndChildren": 0,
-            "childrenOnly": 0
+            "childrenOnly": 0,
+            "_type": "Unsheltered"
         },
         "pk": 70,
         "model": "backend.HouseholdsByCityYearInterview2020"

@@ -19,6 +19,7 @@ import{router} from '../components/Utilities/constants/routing'
 const FILTERED_COUNTS = [
   'Total',
   'Veteran No',
+  'Unknown Veteran',
   'Not Chronically Homeless',
   'No Substance Abuse',
   'Unknown Substance Abuse',

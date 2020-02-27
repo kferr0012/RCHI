@@ -75,7 +75,7 @@ export async function aggregateFetch(listOfURLs, expandData = true){
         
     }
 
-    console.log("fetched Data")
+    console.log("fetched Data: ")
     console.log(outputTable)
 
     if(expandData){
@@ -84,7 +84,7 @@ export async function aggregateFetch(listOfURLs, expandData = true){
         }
     }
 
-    console.log("end aggregate Fetch")
+    console.log("end aggregateFetch")
     return outputTable
 
 }
@@ -115,7 +115,6 @@ export function expandOnField(jsonList,field){
     for(var i = 0; i< jsonList.length;i++){
         
         var category = jsonList[i][field]
-        console.log("category " + category + ": ")
 
 
         try{

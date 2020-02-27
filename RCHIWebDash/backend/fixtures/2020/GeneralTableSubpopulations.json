@@ -2,10 +2,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 15,
-            "observation": 4,
+            "interview": 18,
+            "observation": 6,
             "subpopulation": "Asian",
-            "total": 19,
+            "total": 24,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -15,10 +15,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 48,
+            "interview": 57,
             "observation": 5,
             "subpopulation": "American Indian",
-            "total": 53,
+            "total": 62,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -28,10 +28,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 171,
-            "observation": 83,
+            "interview": 203,
+            "observation": 138,
             "subpopulation": "Black",
-            "total": 254,
+            "total": 341,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -41,10 +41,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 727,
-            "observation": 263,
+            "interview": 845,
+            "observation": 362,
             "subpopulation": "White",
-            "total": 990,
+            "total": 1207,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -54,10 +54,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 0,
-            "observation": 0,
+            "interview": 37,
+            "observation": 6,
             "subpopulation": "Multiple Races",
-            "total": 39,
+            "total": 43,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -67,10 +67,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 18,
-            "observation": 4,
+            "interview": 19,
+            "observation": 5,
             "subpopulation": "Native Hawaiian",
-            "total": 22,
+            "total": 24,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -80,10 +80,10 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 189,
-            "observation": 259,
+            "interview": 204,
+            "observation": 287,
             "subpopulation": "Unknown Race",
-            "total": 448,
+            "total": 491,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -93,11 +93,11 @@
     {
         "fields": {
             "category": "Race",
-            "interview": 1193,
-            "observation": 790,
+            "interview": 1383,
+            "observation": 809,
             "subpopulation": "Total",
-            "total": 1983,
-            "year": 2020,   
+            "total": 2192,
+            "year": 2020,
             "_type": "Unsheltered"
         },
         "pk": 81,
@@ -106,10 +106,10 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "interview": 411,
-            "observation": 102,
+            "interview": 475,
+            "observation": 149,
             "subpopulation": "Hispanic",
-            "total": 513,
+            "total": 624,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -119,10 +119,10 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "interview": 769,
-            "observation": 184,
+            "interview": 880,
+            "observation": 285,
             "subpopulation": "NonHispanic",
-            "total": 953,
+            "total": 1165,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -132,10 +132,10 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "interview": 21,
-            "observation": 338,
+            "interview": 28,
+            "observation": 375,
             "subpopulation": "Unknown Ethnicity",
-            "total": 359,
+            "total": 403,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -145,10 +145,10 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "interview": 1193,
-            "observation": 790,
+            "interview": 1383,
+            "observation": 809,
             "subpopulation": "Total",
-            "total": 1983,
+            "total": 2192,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -158,10 +158,10 @@
     {
         "fields": {
             "category": "Gender",
-            "interview": 825,
-            "observation": 385,
+            "interview": 944,
+            "observation": 509,
             "subpopulation": "Male",
-            "total": 1210,
+            "total": 1453,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -171,10 +171,10 @@
     {
         "fields": {
             "category": "Gender",
-            "interview": 365,
-            "observation": 133,
+            "interview": 423,
+            "observation": 188,
             "subpopulation": "Female",
-            "total": 498,
+            "total": 611,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -184,10 +184,10 @@
     {
         "fields": {
             "category": "Gender",
-            "interview": 0,
+            "interview": 1,
             "observation": 0,
             "subpopulation": "Transgender",
-            "total": 0,
+            "total": 1,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -197,10 +197,10 @@
     {
         "fields": {
             "category": "Gender",
-            "interview": 4,
+            "interview": 7,
             "observation": 0,
             "subpopulation": "Gender Non-Conforming",
-            "total": 4,
+            "total": 7,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -210,10 +210,10 @@
     {
         "fields": {
             "category": "Gender",
-            "interview": 7,
-            "observation": 106,
+            "interview": 8,
+            "observation": 112,
             "subpopulation": "Unknown Gender",
-            "total": 113,
+            "total": 120,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -223,10 +223,10 @@
     {
         "fields": {
             "category": "Gender",
-            "interview": 1193,
-            "observation": 790,
+            "interview": 1383,
+            "observation": 809,
             "subpopulation": "Total",
-            "total": 1983,
+            "total": 2192,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -236,10 +236,10 @@
     {
         "fields": {
             "category": "Age",
-            "interview": 1142,
-            "observation": 410,
+            "interview": 1275,
+            "observation": 458,
             "subpopulation": "Adults (>24)",
-            "total": 1552,
+            "total": 1733,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -249,10 +249,10 @@
     {
         "fields": {
             "category": "Age",
-            "interview": 53,
-            "observation": 47,
+            "interview": 99,
+            "observation": 162,
             "subpopulation": "Youth (18-24)",
-            "total": 100,
+            "total": 261,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -262,10 +262,10 @@
     {
         "fields": {
             "category": "Age",
-            "interview": 6,
-            "observation": 3,
+            "interview": 9,
+            "observation": 18,
             "subpopulation": "Children (<18)",
-            "total": 9,
+            "total": 27,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -276,9 +276,9 @@
         "fields": {
             "category": "Age",
             "interview": 0,
-            "observation": 164,
+            "observation": 171,
             "subpopulation": "Unknown Age",
-            "total": 164,
+            "total": 171,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -288,10 +288,10 @@
     {
         "fields": {
             "category": "Age",
-            "interview": 1193,
-            "observation": 790,
+            "interview": 1383,
+            "observation": 809,
             "subpopulation": "Total",
-            "total": 1983,
+            "total": 2192,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -301,10 +301,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 92,
+            "interview": 113,
             "observation": 0,
-            "subpopulation": "Veteran",
-            "total": 92,
+            "subpopulation": "Veteran Yes",
+            "total": 113,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -314,10 +314,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 1069,
+            "interview": 1223,
             "observation": 0,
-            "subpopulation": "Not Veteran",
-            "total": 1069,
+            "subpopulation": "Veteran No",
+            "total": 1223,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -327,10 +327,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 406,
+            "interview": 47,
             "observation": 0,
-            "subpopulation": "Substance Abuse",
-            "total": 406,
+            "subpopulation": "Unknown Veteran",
+            "total": 47,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -340,10 +340,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 740,
+            "interview": 461,
             "observation": 0,
-            "subpopulation": "No Substance Abuse",
-            "total": 740,
+            "subpopulation": "Substance Abuse",
+            "total": 461,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -353,10 +353,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 49,
+            "interview": 856,
             "observation": 0,
-            "subpopulation": "Unknown Substance Abuse",
-            "total": 49,
+            "subpopulation": "No Substance Abuse",
+            "total": 856,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -366,10 +366,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 284,
+            "interview": 66,
             "observation": 0,
-            "subpopulation": "PTSD",
-            "total": 284,
+            "subpopulation": "Unknown Substance Abuse",
+            "total": 66,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -379,10 +379,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 812,
+            "interview": 348,
             "observation": 0,
-            "subpopulation": "No PTSD",
-            "total": 812,
+            "subpopulation": "PTSD",
+            "total": 348,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -392,10 +392,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 99,
+            "interview": 917,
             "observation": 0,
-            "subpopulation": "Unknown PTSD",
-            "total": 99,
+            "subpopulation": "No PTSD",
+            "total": 917,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -405,10 +405,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 326,
+            "interview": 118,
             "observation": 0,
-            "subpopulation": "Mental Health Conditions",
-            "total": 326,
+            "subpopulation": "Unknown PTSD",
+            "total": 118,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -418,10 +418,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 804,
+            "interview": 384,
             "observation": 0,
-            "subpopulation": "No Mental Health Conditions",
-            "total": 804,
+            "subpopulation": "Mental Health Conditions",
+            "total": 384,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -431,10 +431,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 65,
+            "interview": 916,
             "observation": 0,
-            "subpopulation": "Unknown Mental Health Conditions",
-            "total": 65,
+            "subpopulation": "No Mental Health Conditions",
+            "total": 916,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -444,10 +444,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 291,
+            "interview": 83,
             "observation": 0,
-            "subpopulation": "Physical Disability",
-            "total": 291,
+            "subpopulation": "Unknown Mental Health Conditions",
+            "total": 83,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -457,10 +457,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 838,
+            "interview": 348,
             "observation": 0,
-            "subpopulation": "No Physical Disability",
-            "total": 838,
+            "subpopulation": "Physical Disability",
+            "total": 348,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -470,10 +470,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 66,
+            "interview": 952,
             "observation": 0,
-            "subpopulation": "Unknown Physical Disability",
-            "total": 66,
+            "subpopulation": "No Physical Disability",
+            "total": 952,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -483,10 +483,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 179,
+            "interview": 83,
             "observation": 0,
-            "subpopulation": "Developmental Disability",
-            "total": 179,
+            "subpopulation": "Unknown Physical Disability",
+            "total": 83,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -496,10 +496,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 949,
+            "interview": 208,
             "observation": 0,
-            "subpopulation": "No Developmental Disability",
-            "total": 949,
+            "subpopulation": "Developmental Disability",
+            "total": 208,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -509,10 +509,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 67,
+            "interview": 1086,
             "observation": 0,
-            "subpopulation": "Unknown Developmental Disability",
-            "total": 67,
+            "subpopulation": "No Developmental Disability",
+            "total": 1086,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -522,10 +522,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 196,
+            "interview": 89,
             "observation": 0,
-            "subpopulation": "Brain Injury",
-            "total": 196,
+            "subpopulation": "Unknown Developmental Disability",
+            "total": 89,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -535,10 +535,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 913,
+            "interview": 239,
             "observation": 0,
-            "subpopulation": "No Brain Injury",
-            "total": 913,
+            "subpopulation": "Brain Injury",
+            "total": 239,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -548,10 +548,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 86,
+            "interview": 1039,
             "observation": 0,
-            "subpopulation": "Unknown Brain Injury",
-            "total": 86,
+            "subpopulation": "No Brain Injury",
+            "total": 1039,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -561,10 +561,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 93,
+            "interview": 105,
             "observation": 0,
-            "subpopulation": "Victim of Domestic Violence",
-            "total": 93,
+            "subpopulation": "Unknown Brain Injury",
+            "total": 105,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -574,10 +574,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 1043,
+            "interview": 111,
             "observation": 0,
-            "subpopulation": "Not Victim of Domestic Violence",
-            "total": 1043,
+            "subpopulation": "Victim of Domestic Violence",
+            "total": 111,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -587,10 +587,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 59,
+            "interview": 1199,
             "observation": 0,
-            "subpopulation": "Unknown Victim of Domestic Violence",
-            "total": 59,
+            "subpopulation": "Not Victim of Domestic Violence",
+            "total": 1199,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -600,10 +600,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 0,
+            "interview": 73,
             "observation": 0,
-            "subpopulation": "AIDS or HIV",
-            "total": 0,
+            "subpopulation": "Unknown Victim of Domestic Violence",
+            "total": 73,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -613,10 +613,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 0,
+            "interview": 27,
             "observation": 0,
-            "subpopulation": "No AIDS or HIV",
-            "total": 0,
+            "subpopulation": "AIDS or HIV",
+            "total": 27,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -626,10 +626,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 0,
+            "interview": 1256,
             "observation": 0,
-            "subpopulation": "Unknown AIDS or HIV",
-            "total": 0,
+            "subpopulation": "No AIDS or HIV",
+            "total": 1256,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -639,10 +639,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 50,
+            "interview": 100,
             "observation": 0,
-            "subpopulation": "Jail Release 90 Days: Probation",
-            "total": 50,
+            "subpopulation": "Unknown AIDS or HIV",
+            "total": 100,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -652,10 +652,10 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 12,
+            "interview": 58,
             "observation": 0,
-            "subpopulation": "Jail Release 90 Days: Parole",
-            "total": 12,
+            "subpopulation": "Jail Release 90 Days: Probation",
+            "total": 58,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -665,14 +665,27 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 81,
+            "interview": 14,
             "observation": 0,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
-            "total": 81,
+            "subpopulation": "Jail Release 90 Days: Parole",
+            "total": 14,
             "year": 2020,
             "_type": "Unsheltered"
         },
         "pk": 125,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "interview": 93,
+            "observation": 0,
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "total": 93,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 126,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -685,29 +698,16 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 126,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "interview": 38,
-            "observation": 0,
-            "subpopulation": "Jail Release 12 Months: Probation",
-            "total": 38,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
         "pk": 127,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 21,
+            "interview": 46,
             "observation": 0,
-            "subpopulation": "Jail Release 12 Months: Parole",
-            "total": 21,
+            "subpopulation": "Jail Release 12 Months: Probation",
+            "total": 46,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -717,14 +717,27 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 68,
+            "interview": 24,
             "observation": 0,
-            "subpopulation": "Jail Release 12 Months: Completed Sentence",
-            "total": 68,
+            "subpopulation": "Jail Release 12 Months: Parole",
+            "total": 24,
             "year": 2020,
             "_type": "Unsheltered"
         },
         "pk": 129,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "interview": 77,
+            "observation": 0,
+            "subpopulation": "Jail Release 12 Months: Completed Sentence",
+            "total": 77,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 130,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -737,29 +750,16 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 130,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "interview": 925,
-            "observation": 0,
-            "subpopulation": "No Jail",
-            "total": 925,
-            "year": 2020,
-            "_type": "Unsheltered"
-        },
         "pk": 131,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 0,
+            "interview": 1062,
             "observation": 0,
-            "subpopulation": "Unknown Jail",
-            "total": 0,
+            "subpopulation": "No Jail",
+            "total": 1062,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -768,11 +768,115 @@
     },
     {
         "fields": {
-            "category": "Households",
-            "interview": 1193,
-            "observation": 790,
-            "subpopulation": "Total",
-            "total": 1983,
+            "category": "Subpopulations",
+            "interview": 9,
+            "observation": 0,
+            "subpopulation": "Unknown Jail",
+            "total": 9,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 133,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 94,
+            "observation": 0,
+            "subpopulation": "Woods",
+            "total": 94,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 134,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 277,
+            "observation": 0,
+            "subpopulation": "Encampment",
+            "total": 277,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 135,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 37,
+            "observation": 0,
+            "subpopulation": "Couch",
+            "total": 37,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 136,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 214,
+            "observation": 0,
+            "subpopulation": "Vehicle",
+            "total": 214,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 137,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 31,
+            "observation": 0,
+            "subpopulation": "UnderBridge",
+            "total": 31,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 138,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 552,
+            "observation": 0,
+            "subpopulation": "Street",
+            "total": 552,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 139,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 57,
+            "observation": 0,
+            "subpopulation": "Park",
+            "total": 57,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 140,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Living Situation",
+            "interview": 66,
+            "observation": 0,
+            "subpopulation": "Other",
+            "total": 66,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -781,11 +885,11 @@
     },
     {
         "fields": {
-            "category": "Households",
-            "interview": 1023,
+            "category": "Living Situation",
+            "interview": 6,
             "observation": 0,
-            "subpopulation": "Adults Only",
-            "total": 1023,
+            "subpopulation": "Bus",
+            "total": 6,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -794,11 +898,11 @@
     },
     {
         "fields": {
-            "category": "Households",
-            "interview": 1,
+            "category": "Living Situation",
+            "interview": 49,
             "observation": 0,
-            "subpopulation": "Children Only",
-            "total": 1,
+            "subpopulation": "AbandonedBuilding",
+            "total": 49,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -808,10 +912,10 @@
     {
         "fields": {
             "category": "Households",
-            "interview": 5,
-            "observation": 0,
-            "subpopulation": "Adults and Children",
-            "total": 5,
+            "interview": 1201,
+            "observation": 698,
+            "subpopulation": "Total",
+            "total": 1899,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -820,11 +924,11 @@
     },
     {
         "fields": {
-            "category": "Subpopulations",
-            "interview": 447,
+            "category": "Households",
+            "interview": 1192,
             "observation": 0,
-            "subpopulation": "Chronically Homeless",
-            "total": 447,
+            "subpopulation": "Adults Only",
+            "total": 1192,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -833,11 +937,11 @@
     },
     {
         "fields": {
-            "category": "Subpopulations",
-            "interview": 746,
+            "category": "Households",
+            "interview": 2,
             "observation": 0,
-            "subpopulation": "Not Chronically Homeless",
-            "total": 746,
+            "subpopulation": "Children Only",
+            "total": 2,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -846,24 +950,24 @@
     },
     {
         "fields": {
-            "category": "Subpopulations",
-            "interview": 1029,
+            "category": "Households",
+            "interview": 7,
             "observation": 0,
-            "subpopulation": "Households",
-            "total": 1029,
+            "subpopulation": "Adults and Children",
+            "total": 7,
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 147   ,
+        "pk": 147,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
         "fields": {
             "category": "Subpopulations",
-            "interview": 5,
+            "interview": 530,
             "observation": 0,
-            "subpopulation": "Families w/ Children",
-            "total": 5,
+            "subpopulation": "Chronically Homeless",
+            "total": 530,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -872,11 +976,11 @@
     },
     {
         "fields": {
-            "category": "Total",
-            "interview": 1193,
-            "observation": 790,
-            "subpopulation": "Individuals",
-            "total": 1983,
+            "category": "Subpopulations",
+            "interview": 853,
+            "observation": 0,
+            "subpopulation": "Not Chronically Homeless",
+            "total": 853,
             "year": 2020,
             "_type": "Unsheltered"
         },
@@ -885,122 +989,55 @@
     },
     {
         "fields": {
-            "category": "Living Situation",
-            "interview": 91,
-            "observation": 0,
-            "subpopulation": "Woods",
-            "total": 91,
-            "year": 2020
+            "category": "Total",
+            "interview": 1383,
+            "observation": 809,
+            "subpopulation": "Individuals",
+            "total": 2192,
+            "year": 2020,
+            "_type": "Unsheltered"
         },
         "pk": 150,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 258,
-            "observation": 0,
-            "subpopulation": "Encampment",
-            "total": 258,
-            "year": 2020
-        },
         "pk": 151,
-        "model": "backend.GeneralTableSubpopulations2020"
+        "model": "backend.GeneralTableSubpopulations2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Families w/ Children",
+            "interview": 0,
+            "observation": 0,
+            "total": 2,
+            "year": 2019,
+            "_type": "Unsheltered"
+        }
     },
     {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 22,
-            "observation": 0,
-            "subpopulation": "Couch",
-            "total": 22,
-            "year": 2020
-        },
         "pk": 152,
-        "model": "backend.GeneralTableSubpopulations2020"
+        "model": "backend.GeneralTableSubpopulations2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Households",
+            "interview": 0,
+            "observation": 0,
+            "total": 2,
+            "year": 2019,
+            "_type": "Unsheltered"
+        }
     },
     {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 184,
-            "observation": 0,
-            "subpopulation": "Vehicle",
-            "total": 184,
-            "year": 2020
-        },
         "pk": 153,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
+        "model": "backend.GeneralTableSubpopulations2020",
         "fields": {
-            "category": "Living Situation",
-            "interview": 30,
+            "category": "Subpopulations",
+            "subpopulation": "Households",
+            "interview": 1267,
             "observation": 0,
-            "subpopulation": "UnderBridge",
-            "total": 30,
-            "year": 2020
-        },
-        "pk": 154,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 486,
-            "observation": 0,
-            "subpopulation": "Street",
-            "total": 486,
-            "year": 2020
-        },
-        "pk": 155,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 42,
-            "observation": 0,
-            "subpopulation": "Park",
-            "total": 42,
-            "year": 2020
-        },
-        "pk": 156,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 42,
-            "observation": 0,
-            "subpopulation": "Other",
-            "total": 42,
-            "year": 2020
-        },
-        "pk": 157,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 3,
-            "observation": 0,
-            "subpopulation": "Bus",
-            "total": 3,
-            "year": 2020
-        },
-        "pk": 158,
-        "model": "backend.GeneralTableSubpopulations2020"
-    },
-    {
-        "fields": {
-            "category": "Living Situation",
-            "interview": 35,
-            "observation": 0,
-            "subpopulation": "AbandonedBuilding",
-            "total": 35,
-            "year": 2020
-        },
-        "pk": 159,
-        "model": "backend.GeneralTableSubpopulations2020"
+            "total": 1267,
+            "year": 2019,
+            "_type": "Unsheltered"
+        }
     }
+
 ]

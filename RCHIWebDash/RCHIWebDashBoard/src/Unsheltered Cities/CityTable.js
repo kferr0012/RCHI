@@ -188,21 +188,23 @@ export default class CityTable extends Component{
 
                                                 <div className="ct-center-r2c1">
                                                     <span className = "component-header">
-                                                        <Number height = {400}
+                                                        {/* <Number height = {400}
                                                             url = {router.host + '/' + router.root + '/' + router.formerYear + '/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
-                                                            />
+                                                            /> */}   
+                                                        106
+
                                                     </span>
                                                 </div>
                                                 <div className="ct-center-r2c2">
                                                     <span className = "component-header">
-                                                        <Total height = {400}
+                                                        {/* <Total height = {400}
                                                             url = {router.host + '/' + router.root + '/' + router.formerYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
-                                                            />
-
+                                                            /> */}
+                                                        597
                                                     </span>
                                                 </div>
                                                 <div className="ct-center-r2c3">
-                                                    <span className = "component-header">####</span>
+                                                    <span className = "component-header">{(597/2192*100).toFixed(2)}%</span>
                                                 </div>
 
                                             </div>

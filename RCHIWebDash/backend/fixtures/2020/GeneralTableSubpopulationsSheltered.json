@@ -134,7 +134,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Veteran",
+            "subpopulation": "Veteran Yes",
             "interview": 35,
             "observation": 0,
             "total": 35,

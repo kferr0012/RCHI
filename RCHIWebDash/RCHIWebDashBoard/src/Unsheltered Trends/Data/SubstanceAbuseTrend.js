@@ -50,6 +50,8 @@ class SubstanceAbuseGraph extends Component {
 
 
     componentDidMount(){
+
+        console.log("SUBSTANCE ABUSE TREND: ")
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByYear/?search='+ this.props.query)
             .then(response => {
 
@@ -70,7 +72,8 @@ class SubstanceAbuseGraph extends Component {
                         }, [])
 
                         if(categories[i] === 'Substance Abuse'){
-                        completeData.push({"id": "Either Or","data": [{"x":2019, "y":498}, ]})
+                        completeData.push({"id": "Either Or","data": [{"x":"2019", "y":"498"},{"x":"2020", "y":"461"} ]})
+                        
                         }
                         else{
                             completeData.push({"id": categories[i],"data": data})
@@ -79,7 +82,7 @@ class SubstanceAbuseGraph extends Component {
                     }
 
                     console.log("Complete Data: ", completeData)
-
+                
                 this.setState({
                     chartData: completeData
                 })

@@ -37,24 +37,24 @@ class UnshelteredSupervisoryDistricts extends Component{
         Tables[router.activeYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"],"district")
         
         //generate keys by category
-        console.log("GENERATE KEYS by category")
-        console.log("TABLES:")
-        console.log(Tables)
-        console.log(router.formerYear + " data"     )
+        // console.log("GENERATE KEYS by category")
+        // console.log("TABLES:")
+        // console.log(Tables)
+        // console.log(router.formerYear + " data"     )
         for(const key in Tables[router.formerYear + "/SubpopulationsByCity"]){
-            console.log(key + ": ")
-            console.log(Tables[router.formerYear + "/SubpopulationsByCity"][key])
+            // console.log(key + ": ")
+            // console.log(Tables[router.formerYear + "/SubpopulationsByCity"][key])
             Tables[router.formerYear + "/SubpopulationsByCity"][key] = expandOnField(Tables[router.formerYear + "/SubpopulationsByCity"][key], "category")
         }
-        console.log(router.activeYear + " data: ")
-        console.log(Tables[router.activeYear + "/SubpopulationsByCity"])
+        // console.log(router.activeYear + " data: ")
+        // console.log(Tables[router.activeYear + "/SubpopulationsByCity"])
 
         for(const key in Tables[router.activeYear +"/SubpopulationsByCity"]){
-            console.log(key + ": ")
-            console.log("tabl: e")
-            console.log(Tables[router.activeYear + "/SubpopulationsByCity"])
-            console.log("table[key]")
-            console.log(Tables[router.activeYear + "/SubpopulationsByCity"][key])
+            // console.log(key + ": ")
+            // console.log("tabl: e")
+            // console.log(Tables[router.activeYear + "/SubpopulationsByCity"])
+            // console.log("table[key]")
+            // console.log(Tables[router.activeYear + "/SubpopulationsByCity"][key])
             Tables[router.activeYear + "/SubpopulationsByCity"][key] = expandOnField(Tables[router.activeYear + "/SubpopulationsByCity"][key], "category")
         }
 

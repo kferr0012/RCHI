@@ -17,10 +17,10 @@ export default class LineGraph extends React.Component {
       {
         'id': "Volunteers",
         'data': [
-          {
-            'x': "2015",
-            'y': "597"
-          },
+          // {
+          //   'x': "2015",
+          //   'y': "597"
+          // },
           {
             'x': "2016",
             'y': "503"
@@ -39,17 +39,17 @@ export default class LineGraph extends React.Component {
           },
           {
             'x': "2020",
-            'y': "0"
+            'y': "842"
           },
         ]
       },
       {
         'id': "Sheltered",
         'data': [
-          {
-            'x': "2015",
-            'y': "880"
-          },
+          // {
+          //   'x': "2015",
+          //   'y': "880"
+          // },
           {
             'x': "2016",
             'y': "814"
@@ -75,10 +75,10 @@ export default class LineGraph extends React.Component {
       {
         'id': "Unsheltered",
         'data': [
-          {
-            'x': "2015",
-            'y': "1587"
-          },
+          // {
+          //   'x': "2015",
+          //   'y': "1587"
+          // },
           {
             'x': "2016",
             'y': "1351"
@@ -97,7 +97,7 @@ export default class LineGraph extends React.Component {
           },
           {
             'x': "2020",
-            'y': "1983"
+            'y': "2192"
           },
 
         ]

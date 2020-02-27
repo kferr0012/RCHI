@@ -114,7 +114,7 @@
         "fields": {
             "category": "Subpopulations",
             "year": 2019,
-            "subpopulation": "Veteran",
+            "subpopulation": "Veteran Yes",
             "total": 56,
             "_type": "Sheltered"
         },
@@ -126,7 +126,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "Asian",
-            "total": 26,
+            "total": 4,
             "_type": "Sheltered"
         },
         "pk": 13
@@ -137,7 +137,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "American Indian",
-            "total": 66,
+            "total": 12,
             "_type": "Sheltered"
         },
         "pk": 14
@@ -148,7 +148,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "Black",
-            "total": 241,
+            "total": 199,
             "_type": "Sheltered"
         },
         "pk": 15
@@ -159,7 +159,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "White",
-            "total": 1111,
+            "total": 515,
             "_type": "Sheltered"
         },
         "pk": 16
@@ -170,7 +170,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "Multiple Races",
-            "total": 199,
+            "total": 27,
             "_type": "Sheltered"
         },
         "pk": 17
@@ -181,7 +181,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "Native Hawaiian",
-            "total": 21,
+            "total": 9,
             "_type": "Sheltered"
         },
         "pk": 18
@@ -192,7 +192,7 @@
             "category": "Race",
             "year": 2019,
             "subpopulation": "Unknown Race",
-            "total": 381,
+            "total": 0,
             "_type": "Sheltered"
         },
         "pk": 19
@@ -203,7 +203,7 @@
             "category": "Gender",
             "year": 2019,
             "subpopulation": "Male",
-            "total": 1384,
+            "total": 418,
             "_type": "Sheltered"
         },
         "pk": 20
@@ -214,7 +214,7 @@
             "category": "Gender",
             "year": 2019,
             "subpopulation": "Female",
-            "total": 548,
+            "total": 344,
             "_type": "Sheltered"
         },
         "pk": 21
@@ -225,7 +225,7 @@
             "category": "Gender",
             "year": 2019,
             "subpopulation": "Transgender",
-            "total": 11,
+            "total": 2,
             "_type": "Sheltered"
         },
         "pk": 22
@@ -236,7 +236,7 @@
             "category": "Gender",
             "year": 2019,
             "subpopulation": "Gender Non-Conforming",
-            "total": 7,
+            "total": 2,
             "_type": "Sheltered"
         },
         "pk": 23
@@ -247,7 +247,7 @@
             "category": "Gender",
             "year": 2019,
             "subpopulation": "Unknown Gender",
-            "total": 95,
+            "total": 0,
             "_type": "Sheltered"
         },
         "pk": 24
@@ -258,7 +258,7 @@
             "category": "Ethnicity",
             "year": 2019,
             "subpopulation": "Hispanic",
-            "total": 551,
+            "total": 321,
             "_type": "Sheltered"
         },
         "pk": 25
@@ -269,7 +269,7 @@
             "category": "Ethnicity",
             "year": 2019,
             "subpopulation": "NonHispanic",
-            "total": 1133,
+            "total": 445,
             "_type": "Sheltered"
         },
         "pk": 26
@@ -280,7 +280,7 @@
             "category": "Ethnicity",
             "year": 2019,
             "subpopulation": "Unknown Ethnicity",
-            "total": 361,
+            "total": 0,
             "_type": "Sheltered"
         },
         "pk": 27

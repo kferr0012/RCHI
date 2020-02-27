@@ -79,7 +79,7 @@ export default class TotalGeneral extends React.Component {
 
         return (
             <div>
-            {/*totalNum*/1983}
+            {/*totalNum*/2192}
             </div>
         )
 

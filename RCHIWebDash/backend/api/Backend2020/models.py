@@ -87,4 +87,5 @@ class NewlyHomelessByCity(models.Model):
 	observation = models.IntegerField()
 	total = models.IntegerField()
 	year = models.IntegerField()
+	_type = models.CharField(max_length=50)
 

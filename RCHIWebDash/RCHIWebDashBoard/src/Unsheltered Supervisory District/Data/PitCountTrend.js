@@ -13,9 +13,13 @@ class PitCountTrend extends Component {
     }
 
     formatingData(){
+        console.log("PIT COUNT TREND DATA:")
+    
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+ this.props.query) 
             .then(response => {
-
+                
+                console.log("response: ")
+                console.log(response)
                 const filterData = response.data.filter(index => (index.sheltered === false))
 
                 const formatData = filterData.reduce((accumulator, currentValue) => {
@@ -34,7 +38,8 @@ class PitCountTrend extends Component {
 
 
 
-
+                console.log("completeData: ")
+                console.log(completeData)
                 this.setState({
                     chartData: completeData,
                     currentDistrict: this.props.clickedDistrict
