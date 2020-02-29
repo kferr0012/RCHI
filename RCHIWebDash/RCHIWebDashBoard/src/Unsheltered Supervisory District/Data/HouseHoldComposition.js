@@ -26,15 +26,22 @@ class HouseHoldComposition extends Component{
     }
 
   formatingData(){
+
+    console.log("HOUSEHOLD COMPOSITION")
     axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/HouseholdsByCityYearInterview/?search='+this.props.query)
       .then(response=>{
         const filter = response.data
+        console.log("HOUSEHOLD response:")
+        console.log(response)
+        
         const new_data = {
           'adultsOnly':0, 'adultsAndChildren':0, 'childrenOnly':0
         }
 
         for(let i = 0; i <filter.length; ++i){
+
           // new_data[filter[i].subpopulation] += filter[i].interview + filter[i].observation
+
           new_data['adultsOnly']+= filter[i].adultsOnly;
           new_data['adultsAndChildren']+= filter[i].adultsAndChildren;
           new_data['childrenOnly']+= filter[i].childrenOnly;
@@ -47,10 +54,12 @@ class HouseHoldComposition extends Component{
         clean_data['Children Only'] = new_data['childrenOnly']
 
 
+        
         const completeData = Object.keys(clean_data).map(key=>{
           return {labels: key, values:clean_data[key]}
         })   
-
+        console.log("HOUSEHOLD completeData: ")
+        console.log(completeData)
         this.setState({
           chartData : this.TableRender(completeData),
           currentDistrict: this.props.clickedDistrict

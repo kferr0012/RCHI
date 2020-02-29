@@ -15,12 +15,13 @@ class UnshelteredSupervisoryDistricts extends Component{
     constructor(){
         super();
         this.state = {
-            currentPage : 1,
+            currentPage : 5,
             pageDisplayed: null,
             totalPages:5,
             districtDisplay:null,
             urls : [router.host + '/' + router.root + '/' + router.formerYear + "/SubpopulationsByCity/",
-                    router.host + '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/"],
+                    router.host + '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/",
+                    router.host + '/' + router.root + '/' + router.activeYear + "/CityTotalByYear/"],
             rendered : false,
 
             

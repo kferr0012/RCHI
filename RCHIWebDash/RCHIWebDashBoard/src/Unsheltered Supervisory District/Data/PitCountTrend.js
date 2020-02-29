@@ -14,7 +14,8 @@ class PitCountTrend extends Component {
 
     formatingData(){
         console.log("PIT COUNT TREND DATA:")
-    
+        console.log("this.props.query")
+        console.log(this.props.query)
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+ this.props.query) 
             .then(response => {
                 

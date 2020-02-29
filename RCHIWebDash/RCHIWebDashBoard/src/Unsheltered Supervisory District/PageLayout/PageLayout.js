@@ -13,6 +13,7 @@ import TableComponent4 from '../../components/charts/TableComponent4'
 import {filterList} from '../../components/Utilities/ListManipulation/filter'
 import {combineCountsByCategory} from '../../components/Utilities/ListManipulation/combine'
 import '../../components/css/newlyHomelessGrid.css';
+import BarGraph from '../../components/TestingBranch/BarGraph'
 
 import {router} from '../../components/Utilities/constants/routing'
 //const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
@@ -41,6 +42,8 @@ const PageLayout = ({currentDistrict, tables}) => {
                 <div className="col-lg-3">
                     {/* <p>r1c3</p> */}
                     <h4>Population Counts</h4>
+                    {console.log("/SubpopulationsByCity")}
+                    {console.log("")}
                     <TableComponent4
                         data = {combineCountsByCategory(filterList(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Age"].concat(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Gender"]).concat(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Subpopulations"]), "subpopulation", filteredTableList))}
                         height = {"100%"}
@@ -55,11 +58,17 @@ const PageLayout = ({currentDistrict, tables}) => {
                 </div>
                 <div className="col-lg-2">
                     {/* <p>r2c2</p> */}
-                    <VolunteersDeployment clickedDistrict={currentDistrict} currentDistrict={currentDistrict}  query={currentDistrict} header={"Volunteers By Deployment Site"} subHeader={""}/>
+                    <VolunteersDeployment clickedDistrict={currentDistrict} currentDistrict={currentDistrict}  query={currentDistrict} header={"Volunteers By City"} subHeader={""}/>
                 </div>
                 <div className="col-lg-5">
                     {/* <p>r2c3</p> */}
-                    <DistrictRaceBar clickedDistrict={currentDistrict} query={currentDistrict + ",Race"} header={"Race"} subHeader={""}/>
+                    {/* <DistrictRaceBar clickedDistrict={currentDistrict} query={currentDistrict + ",Race"} header={"Race"} subHeader={""}/> */}
+                    <BarGraph
+                        data = {filterList(combineCountsByCategory(tables[router.activeYear + "/SubpopulationsByCity"][currentDistrict]["Race"]), "subpopulation", ["Total"])}
+                        indexBy = "subpopulation"
+                        keys = {["total"]}
+                        margin = {{left: 45, right: 40, top:10, bottom: 30}}
+                    />
                 </div>
                 <div className="col-lg-3">
                     {/* <p>r2c4</p> */}

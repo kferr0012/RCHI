@@ -29,7 +29,7 @@ class UnshelteredSubpopulationTrends extends Component{
     NavOnChangeHandler = (e, data) => {
         const currentPage = data.activePage
         var newSelected = []
-
+    
 
         if(currentPage === 1){
             newSelected = ['Veteran','Youth (18-24)','Chronically Homeless','Families with Children','Elderly (>62)']

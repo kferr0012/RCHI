@@ -16,6 +16,7 @@ export function combine ( array1, array2 ) {
 
 export function combineCountsByCategory(data){
 
+    console.log("combineCountsByCategory")
     var countMap = {}
     for(const row in data){
       var fields = data[row]
@@ -56,6 +57,10 @@ export function combineCountsByCategory(data){
       console.log(outputTable[x])
     }
     
+    console.log("countMap: ")
+    console.log(countMap)
+    console.log("outputTable:")
+    console.log(outputTable)
     return outputTable
   
   }
