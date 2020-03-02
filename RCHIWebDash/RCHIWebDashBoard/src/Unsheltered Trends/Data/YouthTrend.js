@@ -19,7 +19,7 @@ class YouthGraph extends Component {
             .then(response => {
 
                 var completeData = []
-                const filterData = response.data.filter(index => index.sheltered === false)
+                const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 5)
 
                 const categories = ['Total', 'Interviewed', 'Observed']
 

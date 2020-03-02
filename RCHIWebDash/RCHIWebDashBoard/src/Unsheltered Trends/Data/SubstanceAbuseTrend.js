@@ -14,39 +14,18 @@ class SubstanceAbuseGraph extends Component {
         }
     }
 
-    collectData = (sheltered, category, data) => {
-        return data
-        .filter( row => row.sheltered === sheltered && row.subpopulation === category)
-            .map(row => {return{
-                title: row.year,
-                count: row.interview + row.observation
-            }})
-    }
 
-    typeSelected = (sheltered,category,data) => {
-        const formatedData = data.filter(index => index.sheltered === sheltered && index.subpopulation === category)
-        const newData = [
-            {year: 2015, count: 0}, {year: 2016, count:0},{year: 2017, count:0},{year: 2018, count:0},{year: 2019, count:0}
-        ]
+    collectData = (category , data) => {
 
-        var i=0,j =0
-        while(i < formatedData.length && j < newData.length){
-            if(formatedData[i].year === newData[j].year){
-                newData[j].count = formatedData[i].interview + formatedData[i].observation
-                i++; j++;
-            }
-            else{
-                j++
-            }
+            return data
+                .filter(i => i.subpopulation === category)
+                    .map(j => {
+                        return {
+                            x : j.year,
+                            y : j.total
+                        }
+                    })
         }
-
-
-        return newData
-        
-        // return data
-        //     .filter(index => index.sheltered === sheltered && index.subpopulation === category)
-        //         .map(index => index.interview + index.observation)
-    }
 
 
     componentDidMount(){
@@ -56,32 +35,91 @@ class SubstanceAbuseGraph extends Component {
             .then(response => {
 
                 var completeData = []
-                const categories = ["Alcohol Abuse", 'Drug Abuse', 'Substance Abuse']
 
-                const filterData = response.data.filter(index => index.sheltered === false 
-                    && (index.subpopulation === categories[0] || index.subpopulation === categories[1] || index.subpopulation === categories[2]))
-                    for(var i = 0; i< categories.length; i++){
-                        const data = filterData.reduce((accumulator, index) => {
-                            if(categories[i] === index.subpopulation){
-                                accumulator.push({
-                                            "x" : index.year,
-                                            "y" : index.observation + index.interview
-                                        })
-                            }
-                            return accumulator;
-                        }, [])
+                const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 5)
+                const categories = ['Alcohol Abuse', 'Drug Abuse', 'Substance Abuse']
+                console.log("[RESPONSE DATA]: ", filterData)
 
-                        if(categories[i] === 'Substance Abuse'){
-                        completeData.push({"id": "Either Or","data": [{"x":"2019", "y":"498"},{"x":"2020", "y":"461"} ]})
-                        
-                        }
-                        else{
-                            completeData.push({"id": categories[i],"data": data})
-                        }
-
+                for(var i =0 ; i<categories.length; i++){
+                    if(categories[i] === "Substance Abuse"){
+                        // const nullYear = [{x: 2016, y: null},{x: 2017, y: null}, {x: 2018, y: null},{x: 2019, y: 600},{x: 2020, y: 700}]
+                        const newData = this.collectData(categories[i], filterData)
+                        // console.log("CONCAT DATA: ", nullYear.concat(newData))
+                        // console.log("NULL YEAR:", nullYear)
+                        // console.log("{NEW DATA}: ", newData)
+                        // completeData.push({"id": "Either Or" , "data": newData})
+                        completeData.push({id: "Either Or", data: newData})
                     }
+                    else{
+                        // const nullYear = [{x:2019, y:200},{x: 2020, y: null}]
+                        completeData.push({id: categories[i] , data: this.collectData(categories[i], filterData)})
+                    }
+                }
 
-                    console.log("Complete Data: ", completeData)
+                const TestData = [
+                    {
+                        id: 'fake corp. A',
+                        data: [
+                            { x: 0, y: 7 },
+                            { x: 1, y: 5 },
+                            { x: 2, y: 11 },
+                            { x: 3, y: 12 },
+                            { x: 4, y: 13 },
+                            { x: 5, y: null },
+                            { x: 6, y: 18 },
+                            { x: 7, y: 16 },
+                            { x: 8, y: 8 },
+                            { x: 9, y: 10 },
+                            { x: 10, y: 9 },
+                        ],
+                    },
+                    {
+                        id: 'fake corp. B',
+                        data: [
+                            { x: 3, y: 14 },
+                            { x: 4, y: 16 },
+                            { x: 5, y: 19 },
+                            { x: 6, y: 20 },
+                            { x: 7, y: 18 },
+                        ],
+                    },
+                ]
+
+
+                const test1 = [
+                    {
+                        id: "Alcohol Abuse",
+                        data: [
+                            {x:2016, y :1},
+                            {x:2017, y :2},
+                            {x:2018, y :3},
+                            {x:2019, y :null},
+                            {x:2020, y :null}
+                        ]
+                    },
+                    {
+                        id: "Drug Abuse",
+                        data: [
+                            {x:2016, y :5},
+                            {x:2017, y :6},
+                            {x:2018, y :8},
+                            {x:2019, y :null},
+                            {x:2020, y :null}
+                        ]
+                    },
+                    {
+                        id: "Either Or",
+                        data: [
+                            {x:2016, y :null},
+                            {x:2017, y :null},
+                            {x:2018, y :null},
+                            {x:2019, y :22},
+                            {x:2020, y :25}
+                        ]
+                    }
+                ]
+
+                console.log("[==========SUBSTANCE ABUSE=========]", completeData)
                 
                 this.setState({
                     chartData: completeData

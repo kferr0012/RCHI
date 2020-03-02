@@ -16,7 +16,7 @@ const ResponsiveNivoLine = ({ data,header,subHeader,height}) => {
                 data={data}
                 margin={{ top: 40, right: 20, bottom: 80, left: 30 }}
                 xScale={{ type: 'point' }}
-                yScale={{ type: 'linear', stacked: true, min: 0, max: 'auto'}}
+                yScale={{ type: 'linear', stacked: false, min: 0, max: 'auto'}}
                 axisTop={null}
                 axisRight={null}
                 axisBottom={{

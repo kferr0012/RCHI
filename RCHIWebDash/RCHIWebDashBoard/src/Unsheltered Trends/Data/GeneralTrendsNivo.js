@@ -14,9 +14,9 @@ class GeneralTrends extends Component {
     componentDidMount(){
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByYear/?search='+this.props.query) 
             .then(response => {
-                const filterData = response.data.filter(index => (index.sheltered === false))
+                const filterData = response.data.filter(index => (index.sheltered === false && index.year > router.activeYear - 5))
 
-
+                console.log("[filtered Data:]: ", filterData)
 
                 const data = filterData.map(index => {
                     return {
