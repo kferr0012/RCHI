@@ -913,9 +913,9 @@
         "fields": {
             "category": "Households",
             "interview": 1201,
-            "observation": 698,
+            "observation": 0,
             "subpopulation": "Total",
-            "total": 1899,
+            "total": 1201,
             "year": 2020,
             "_type": "Unsheltered"
         },
