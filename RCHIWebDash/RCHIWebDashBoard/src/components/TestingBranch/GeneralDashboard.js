@@ -61,6 +61,7 @@ const FILTER_COLUMNS = [
 'Unknown Jail',
 'Chronically Homeless	447',
 'Not Chronically Homeless',
+'Couch'
 ]
 
 export default class Dashboard extends Component{
@@ -260,7 +261,7 @@ export default class Dashboard extends Component{
                     </Table>
                   </div>
                   <div className="gen-3r-r5">
-                    <span className = "component-header">Househhold Type</span>
+                    <span className = "component-header">Household Type</span>
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
                       margin = {{top:40, bottom: 40, left: 40, right: 40}}
@@ -272,13 +273,13 @@ export default class Dashboard extends Component{
                   <div className="gen-r2c1r1">
                     <span className="component-header">Living Situations</span>
                     <PieChart2
-                      data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"]}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
                       margin = {{top:50,bottom:50,left:60, right: 60}}
                     />
                   </div>
                   <div className="gen-r2c1r2">
                     <TableComponent4
-                      data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"]}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
                       header = {false}
                       height = {"100%"}
                     />
@@ -292,7 +293,6 @@ export default class Dashboard extends Component{
       )
     }
     render(){
-
         return(
 
             <div>
