@@ -1,0 +1,321 @@
+[
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Total",
+            "year": 2019,
+            "subpopulation": "Individuals",
+            "total": 766,
+            "type": "Sheltered"
+        },
+        "pk": 1
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Age",
+            "year": 2019,
+            "subpopulation": "Adults",
+            "total": 484,
+            "type": "Sheltered"
+        },
+        "pk": 2
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Age",
+            "year": 2019,
+            "subpopulation": "Children",
+            "total": 83,
+            "type": "Sheltered"
+        },
+        "pk": 3
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Age",
+            "year": 2019,
+            "subpopulation": "Youth",
+            "total": 199,
+            "type": "Sheltered"
+        },
+        "pk": 4
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Age",
+            "year": 2019,
+            "subpopulation": "Unknown Age",
+            "total": 0,
+            "type": "Sheltered"
+        },
+        "pk": 5
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Households",
+            "total": 558,
+            "type": "Sheltered"
+        },
+        "pk": 6
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Chronically Homeless",
+            "total": 77,
+            "type": "Sheltered"
+        },
+        "pk": 7
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Families w/ Children",
+            "total": 77,
+            "type": "Sheltered"
+        },
+        "pk": 8
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Substance Abuse",
+            "total": 59,
+            "type": "Sheltered"
+        },
+        "pk": 9
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Mental Health Conditions",
+            "total": 148,
+            "type": "Sheltered"
+        },
+        "pk": 10
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Veterans",
+            "total": 56,
+            "type": "Sheltered"
+        },
+        "pk": 11
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "Asian",
+            "total": 26,
+            "type": "Sheltered"
+        },
+        "pk": 13
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "American Indian",
+            "total": 66,
+            "type": "Sheltered"
+        },
+        "pk": 14
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "Black",
+            "total": 241,
+            "type": "Sheltered"
+        },
+        "pk": 15
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "White",
+            "total": 1111,
+            "type": "Sheltered"
+        },
+        "pk": 16
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "Multiple Races",
+            "total": 199,
+            "type": "Sheltered"
+        },
+        "pk": 17
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "Native Hawaiian",
+            "total": 21,
+            "type": "Sheltered"
+        },
+        "pk": 18
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Race",
+            "year": 2019,
+            "subpopulation": "Unknown Race",
+            "total": 381,
+            "type": "Sheltered"
+        },
+        "pk": 19
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Gender",
+            "year": 2019,
+            "subpopulation": "Male",
+            "total": 1384,
+            "type": "Sheltered"
+        },
+        "pk": 20
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Gender",
+            "year": 2019,
+            "subpopulation": "Female",
+            "total": 548,
+            "type": "Sheltered"
+        },
+        "pk": 21
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Gender",
+            "year": 2019,
+            "subpopulation": "Transgender",
+            "total": 11,
+            "type": "Sheltered"
+        },
+        "pk": 22
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Gender",
+            "year": 2019,
+            "subpopulation": "Gender Non-Conf",
+            "total": 7,
+            "type": "Sheltered"
+        },
+        "pk": 23
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Gender",
+            "year": 2019,
+            "subpopulation": "Unknown",
+            "total": 95,
+            "type": "Sheltered"
+        },
+        "pk": 24
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Ethnicity",
+            "year": 2019,
+            "subpopulation": "Hispanic",
+            "total": 551,
+            "type": "Sheltered"
+        },
+        "pk": 25
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Ethnicity",
+            "year": 2019,
+            "subpopulation": "Non-Hispanic",
+            "total": 1133,
+            "type": "Sheltered"
+        },
+        "pk": 26
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Ethnicity",
+            "year": 2019,
+            "subpopulation": "Unknown",
+            "total": 361,
+            "type": "Sheltered"
+        },
+        "pk": 27
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Household",
+            "year": 2019,
+            "subpopulation": "Adults Only",
+            "total": 456,
+            "type": "Sheltered"
+        },
+        "pk": 28
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Household",
+            "year": 2019,
+            "subpopulation": "Adults and Children",
+            "total": 82,
+            "type": "Sheltered"
+        },
+        "pk": 29
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Household",
+            "year": 2019,
+            "subpopulation": "Chilren Only",
+            "total": 15,
+            "type": "Sheltered"
+        },
+        "pk": 30
+    }
+]
