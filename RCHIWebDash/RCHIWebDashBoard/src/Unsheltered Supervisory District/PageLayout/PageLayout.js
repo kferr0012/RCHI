@@ -54,7 +54,7 @@ const PageLayout = ({currentDistrict, tables}) => {
             <div className="row">
                 <div className="col-lg-2">
                     {/* <p>r2c1</p> */}
-                    <PitCountByCity currentDistrict={currentDistrict} query={currentDistrict} header={"PIT Count By City"} subHeader={""}/>
+                    <PitCountByCity clickedDistrict={currentDistrict} currentDistrict={currentDistrict} query={currentDistrict} header={"PIT Count By City"} subHeader={""}/>
                 </div>
                 <div className="col-lg-2">
                     {/* <p>r2c2</p> */}

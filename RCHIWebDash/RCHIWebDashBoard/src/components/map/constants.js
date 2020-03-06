@@ -8,7 +8,7 @@ export const lat = 33.6906;
 export const lng = -116.1055;
 export const defaultZoom = 7;
 
-export const subPopLink = router.host + '/' + router.root + '/' + router.formerYear + "/SubpopulationsByCity/";
+export const subPopLink = router.host + '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/";
 
 export const cityNames = {
     'CATHEDRAL CITY': 'Cathedral City',
