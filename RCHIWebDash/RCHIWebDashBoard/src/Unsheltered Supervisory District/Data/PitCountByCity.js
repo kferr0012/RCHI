@@ -12,7 +12,7 @@ class PitCountByCity extends Component{
 
     this.state = {
       chartData : null,
-      currentDistrict:1
+      currentDistrict: 0,
     };
   }
 
@@ -35,7 +35,8 @@ class PitCountByCity extends Component{
         console.log("AXIOS DATA")
         console.log()
         this.setState({
-          chartData : this.TableRender(completeData)  
+          chartData : this.TableRender(completeData),
+          currentDistrict: this.props.clickedDistrict  
         })
       })
   }
@@ -43,9 +44,9 @@ class PitCountByCity extends Component{
     TableRender = (data) => {
         return data.map( (index,i) => (
             <Table.Row key={i}>
-                <Table.Cell>{index.labels}</Table.Cell>
-                <Table.Cell>{index[2019]}</Table.Cell>
-                <Table.Cell>{index[2020]}</Table.Cell>
+                <Table.Cell className="SDPitCountCityTableCell">{index.labels}</Table.Cell>
+                <Table.Cell className="SDPitCountCityTableCell">{index[2019]}</Table.Cell>
+                <Table.Cell className="SDPitCountCityTableCell">{index[2020]}</Table.Cell>
             </Table.Row>   
         ))
     }
@@ -74,16 +75,16 @@ class PitCountByCity extends Component{
         <Table.Header>
         <Table.Row>
             <Table.HeaderCell colSpan='3' textAlign='center'>
-                <Header>
+                <Header className="SDPitCountCityTableHeader">
                     PIT Count By City
                     <Header.Subheader></Header.Subheader>
                 </Header>
             </Table.HeaderCell>
         </Table.Row>
         <Table.Row>
-            <Table.HeaderCell>City</Table.HeaderCell>
-            <Table.HeaderCell>2019</Table.HeaderCell>
-            <Table.HeaderCell>2020</Table.HeaderCell>
+            <Table.HeaderCell className="SDPitCountCityHeaderCell">City</Table.HeaderCell>
+            <Table.HeaderCell className="SDPitCountCityHeaderCell">2019</Table.HeaderCell>
+            <Table.HeaderCell className="SDPitCountCityHeaderCell">2020</Table.HeaderCell>
         </Table.Row>
         </Table.Header>
 
