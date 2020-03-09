@@ -15,6 +15,9 @@ export default class BarGraph extends Component{
             legend : this.props.legend,
             margin: this.props.margin,
             axisTitle : this.props.axisTitle,
+            tickValues: this.props.tickValues,
+            gridYValues: this.props.gridYValues,
+            maxValue: this.props.maxValue,
         }
 
         //console.log("BarGraph data")
@@ -44,6 +47,7 @@ export default class BarGraph extends Component{
             keys={this.state.keys}
             indexBy= {this.state.index}    
             margin={this.props.margin}
+            maxValue={this.state.maxValue}
             padding={0.15}
             groupMode="grouped"
             colors={ colors[7] }
@@ -84,13 +88,14 @@ export default class BarGraph extends Component{
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'Count',
-                legendPosition: 'middle',
-                legendOffset: -40
+                tickValues: this.state.tickValues,
+                maxValue: this.state.maxValue,
             }}
-            labelSkipWidth={12}
-            labelSkipHeight={12}
+            gridYValues={this.state.gridYValues}
+            labelSkipWidth={0}
+            labelSkipHeight={0}
             labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
+            labelFormat={d => <tspan y={ -10 }>{ d }</tspan>}
             legends={this.props.legend ? [
                 {
                     dataFrom: 'keys',

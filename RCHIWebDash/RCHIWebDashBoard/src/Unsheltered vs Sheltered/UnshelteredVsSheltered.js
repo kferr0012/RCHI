@@ -83,7 +83,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulations/",
                     router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulationsSheltered/",],
             Tables : [],
-            render : false
+            render : false,
         }
         
     }
@@ -166,11 +166,11 @@ export default class UnsheleteredVsSheltered extends Component{
                         />
                     </div>
                     <div className="svu-r2-h25">
-                      <span className="component-header">Sheltered Households</span>>
+                      <span className="component-header">{"Sheltered Household\nComposition"}</span>>
                       <PieChart2
                         data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Households"],"subpopulation", ["Total"])}
                         footer = {false}
-                        margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
+                        margin = {{ top: 50, right: 0, bottom: 25, left: 0 }}
                       />
                     </div>
                   </div>
@@ -190,6 +190,9 @@ export default class UnsheleteredVsSheltered extends Component{
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+                      tickValues={4}
+                      gridYValues={4}
+                      maxValue={2000}
                     />
                   </div>
                   <div className="svu-r2">
@@ -199,6 +202,9 @@ export default class UnsheleteredVsSheltered extends Component{
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
+                      tickValues={4}
+                      gridYValues={4}
+                      maxValue={2000}
                     />
                   </div>                  
                 </div>
