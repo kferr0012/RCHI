@@ -38,7 +38,7 @@ class GeneralTrends extends Component {
         }
         if(this.state.chartData){
             return(
-                    <NivoLineChart  subHeader={this.props.subHeader} header={this.props.header} data={this.state.chartData}/>
+                    <NivoLineChart  subHeader={this.props.subHeader} header={this.props.header} data={this.state.chartData} legend={this.props.legend}/>
             )
         }
     }

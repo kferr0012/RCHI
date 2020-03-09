@@ -3,8 +3,40 @@ import {Header} from 'semantic-ui-react'
 import React from 'react'
 
 import { colors } from '../colors';
-const ResponsiveNivoLine = ({ data,header,subHeader,height}) => {
+const ResponsiveNivoLine = ({ data,header,subHeader,height,legend}) => {
     console.log("Height : ", height)
+    console.log("Header: ", header, " Legend Value;: ", legend)
+
+    var legendValue = []
+    if(legend){
+        legendValue = [
+            {
+                anchor: 'bottom',
+                direction: 'row',
+                justify: false,
+                translateX: 0,
+                translateY: 41,
+                itemsSpacing: 0,
+                itemDirection: 'left-to-right',
+                itemWidth: 80,
+                itemHeight: 10,
+                itemOpacity: 0.75,
+                symbolSize: 12,
+                symbolShape: 'circle',
+                symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemOpacity: 1
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+
     return(
         <div style={{height:height ? (height) : "20em", width: '100%'}}>
 
@@ -47,32 +79,8 @@ const ResponsiveNivoLine = ({ data,header,subHeader,height}) => {
                 pointLabel="y"
                 pointLabelYOffset={-12}
                 useMesh={true}
-                legends={[
-                    {
-                        anchor: 'bottom',
-                        direction: 'row',
-                        justify: false,
-                        translateX: 0,
-                        translateY: 41,
-                        itemsSpacing: 0,
-                        itemDirection: 'left-to-right',
-                        itemWidth: 80,
-                        itemHeight: 10,
-                        itemOpacity: 0.75,
-                        symbolSize: 12,
-                        symbolShape: 'circle',
-                        symbolBorderColor: 'rgba(0, 0, 0, .5)',
-                        effects: [
-                            {
-                                on: 'hover',
-                                style: {
-                                    itemBackground: 'rgba(0, 0, 0, .03)',
-                                    itemOpacity: 1
-                                }
-                            }
-                        ]
-                    }
-                ]}
+                legends= {legendValue}
+
                 />
         </div>
 )}
