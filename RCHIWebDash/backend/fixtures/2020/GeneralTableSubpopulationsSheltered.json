@@ -375,5 +375,18 @@
             "_type": "Sheltered",
             "year": "2020"
         }
+    },
+    {
+        "pk": "31",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Pet Owners",
+            "interview": 0,
+            "observation": 0,
+            "total": 0,
+            "year": "2020",
+            "_type": "Sheltered"
+        }
     }
 ]

@@ -229,6 +229,21 @@
             "_type": "Unsheltered", 
             "year": 2019
         }
+    },
+    {
+        "model": "backend.GeneralTableSubpopulations2019", 
+        "pk": 75, 
+        "fields": {
+            "total": 0,  
+            "interview": 0,
+            "category": "Subpopulations", 
+            "subpopulation": "Pet Owners", 
+            
+            "observation": 0,
+            
+            "_type": "Unsheltered", 
+            "year": 2019
+        }
     }
     
 ]

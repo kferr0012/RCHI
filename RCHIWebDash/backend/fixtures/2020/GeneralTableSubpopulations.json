@@ -1041,10 +1041,10 @@
     },
     {
         "fields": {
-            "category": "Pet Owners",
+            "category": "Subpopulations",
             "interview": 285,
             "observation": 0,
-            "subpopulation": "Total",
+            "subpopulation": "Pet Owners",
             "total": 285,
             "year": 2020,
             "_type": "Unsheltered"
