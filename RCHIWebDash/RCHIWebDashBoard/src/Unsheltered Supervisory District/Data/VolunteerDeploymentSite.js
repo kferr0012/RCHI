@@ -71,7 +71,7 @@ class VolunteerDeploymentSite extends Component{
             <Table.HeaderCell colSpan='2' textAlign='center'>
                 <Header>
                     Volunteers By Deployment Site
-                    <Header.Subheader>Interview Only</Header.Subheader>
+                    <Header.Subheader></Header.Subheader>
                 </Header>
                 </Table.HeaderCell>
         </Table.Row>
