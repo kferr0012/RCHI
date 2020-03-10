@@ -1,6 +1,6 @@
 
 export const router = {
-    host : "http://127.0.0.1:8000",
+    host : "http://rchi.cs.ucr.edu",
     root : "api",
     activeYear : "2020",
     formerYear: "2019",
