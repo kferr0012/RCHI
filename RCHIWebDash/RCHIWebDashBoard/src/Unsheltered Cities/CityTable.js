@@ -156,8 +156,8 @@ export default class CityTable extends Component{
                                             <div className="ct-side-r1">
                                                 >
                                                 <TableComponent4
-                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail"  ])}
-                                                        tableName = {"Subpopulations"}
+                                                        data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Subpopulations"],"subpopulation", ["Total", "Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability", "Unknown Developmental Disability", "No Brain Injury", "Unknown Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV" , "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "No Jail", "Unknown Jail",  "Unknown Veteran" ])}
+                                                        tableName = {"Subpopulations (Interview Only)"}
                                                         height = {"110%"}
                                                 />
                                                 
@@ -224,7 +224,7 @@ export default class CityTable extends Component{
                                                 </div>
                                             </div>
                                             <div className="ct-center-r3">
-                                                <span className = "component-header">Race</span>
+                                                <span className = "component-header">Race (Interview Only)</span>
                                                 <BarGraph 
                                                     data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Race"],"subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
@@ -245,6 +245,7 @@ export default class CityTable extends Component{
                                                     />
                                                 </div>
                                                 <div className="ct-side-r1r2">
+                                                    <span><b>Gender (Interview Only)</b></span>
                                                     <BarGraph 
                                                     data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
                                                     indexBy = {"subpopulation"}
@@ -260,6 +261,7 @@ export default class CityTable extends Component{
                                                     <TableComponent4 
                                                         data = {this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Race"]}
                                                         height = {"115%"}
+                                                        tableName = {"Race"}
                                                         />
                                                     
                                                 </div>

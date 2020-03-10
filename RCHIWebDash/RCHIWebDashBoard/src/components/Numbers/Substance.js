@@ -87,7 +87,7 @@ export default class Substance extends React.Component {
         return (
             
             <div className = "component-header" style = {{fontSize: "24px"}}>
-                {/*percent*/ (461/1983*100).toFixed(2)} %
+                {Math.round((461/1383*100))} %
             </div>
         )
 

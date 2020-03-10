@@ -86,7 +86,7 @@ export default class PTSD extends React.Component {
 
         return (
             <div className = "component-header" style = {{fontSize: "24px"}}>
-                {/*percent*/ (348/1383 * 100).toFixed(2)} %
+                {Math.round((348/1383 * 100))} %
             </div>
         )
 
