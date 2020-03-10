@@ -25,7 +25,7 @@ SECRET_KEY = '&h=^_9x4&ybqkujnu2(&^ct$@51moey38b%8q3rnz0+j(917)('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rchi.cs.ucr.edu']
 
 
 # Application definition
