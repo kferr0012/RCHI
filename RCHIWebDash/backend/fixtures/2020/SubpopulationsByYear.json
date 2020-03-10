@@ -162,8 +162,8 @@
             "subpopulation": "Youth (18-24)",
             "sheltered": "False",
             "year": "2016",
-            "interview": "82",
-            "total": "106",
+            "interview": "58",
+            "total": "82",
             "_type": "Unsheltered"
         }
     },
@@ -526,8 +526,8 @@
             "subpopulation": "Victim of Domestic Violence",
             "sheltered": "False",
             "year": "2018",
-            "interview": "92",
-            "total": "92",
+            "interview": "97",
+            "total": "97",
             "_type": "Unsheltered"
         }
     },
