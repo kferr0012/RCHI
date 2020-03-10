@@ -176,7 +176,8 @@ export default class SupervisorialDistrictDash extends Component {
                             <Grid>
                                 <Grid.Row>
                                     <Grid.Column width={10}>
-                                        <h6>PIT Count Trend</h6>
+                                        <h6>{"PIT Count Trend"}</h6>
+                                        <h6>{"AAA Trend"}</h6>
                                         {/*
                                             key={Math.random()} this ensures the chart actaully rerenders ebery time the function render is run, otherwise the tables update but not the charts
                                             height={(window.innerHeight*.43)-130} height is scaled based off height of the total window, not sure if this is workable on smaller displays
@@ -184,7 +185,7 @@ export default class SupervisorialDistrictDash extends Component {
                                             data={0} selects the dataset from datasets array (built in so its possible to switch datasets from user input)
                                             showAllTooltips={true} displays all tooltips (the small things that display catergories and numbers)
                                         */}
-                                        <LineChart key={Math.random()} height={(window.innerHeight*.43)-130} datasets={this.state.PITTrendChartData} data={0} showAllTooltips={true}/>
+                                        <LineChart title={"TITLE"} key={Math.random()} height={(window.innerHeight*.43)-130} datasets={this.state.PITTrendChartData} data={0} showAllTooltips={true}/>
                                     </Grid.Column>
                                     <Grid.Column width={6}>
                                         <h6>Chronically Homeless</h6>

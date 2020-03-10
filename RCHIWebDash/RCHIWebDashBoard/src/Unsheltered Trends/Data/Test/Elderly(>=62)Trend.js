@@ -26,7 +26,7 @@ class ElderlyGraph extends Component {
 
                 this.setState({
                     chartData: {
-                        labels: formatedData.map( label => label.title),
+                        labels: formatedData.map( label => "Enderly"),
                         datasets:[
                             {
                                 label:'Interviewed',

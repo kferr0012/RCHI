@@ -16,6 +16,8 @@ class TableComponent4 extends Component{
       test_function : null,
       mystyle : null,
       expand_i: this.props.expandIndex,
+      color: "red",
+      tableFillColor: "#f1f1f1",
     }
 
     //console.log(this.props.expandIndex);
@@ -195,69 +197,69 @@ class TableComponent4 extends Component{
     }
     else{
     return(
-      <div className="tableContainer" style = {{...this.state.mystyle, height: this.props.height, width: "100%" /*, position: 'absolute'*/, padding: 0}}>
-        <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "80%"}}>
-          <Table.Header>
+      <div className="tableContainer" style = {{...this.state.mystyle, height: this.props.height, width: "100%", position: 'absolute', padding: 0}}>
+            <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "80%"}}>
+              <Table.Header>
 
-            {this.props.tableName ?
-            <Table.Row>
-              <Table.HeaderCell colSpan={this.state.col_size+1} textAlign='center'>
-                <Header>
-                  {this.props.tableName}
-                  <Header.Subheader/>
-                </Header>
-              </Table.HeaderCell>
-            </Table.Row>
-            :null
-            }
-
-            {this.props.header ?
-
-            <Table.Row>
-            <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
-
-              {
-                this.state.column_name_array.map( (iterator, idx)=>{
-                    return(
-                        <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
-                    );
-                })
-              }
-
-            </Table.Row>
-
-
-            :
-            null
-            }
-            </Table.Header>
-
-          <Table.Body>
-            {/*console.log(this.state.filteredData)*/}
-            {
-              this.state.filteredData.map((iterator,idx)=>{
-                if(idx%2==1){
-                  return(
-                      <Table.Row>
-                        {
-                          this.state.test_function(iterator)
-                        }
-                      </Table.Row>
-                  )
+                {this.props.tableName ?
+                <Table.Row>
+                  <Table.HeaderCell colSpan={this.state.col_size+1} textAlign='center'>
+                    <Header>
+                      {this.props.tableName}
+                      <Header.Subheader/>
+                    </Header>
+                  </Table.HeaderCell>
+                </Table.Row>
+                :null
                 }
-                else{
-                  return(
-                      <Table.Row bgcolor="lightgray">
-                        {
-                          this.state.test_function(iterator)
-                        }
-                      </Table.Row>
-                  )
+
+                {this.props.header ?
+
+                <Table.Row>
+                <Table.HeaderCell textAlign='center'>         </Table.HeaderCell>
+
+                  {
+                    this.state.column_name_array.map( (iterator, idx)=>{
+                        return(
+                            <Table.HeaderCell textAlign='center'>{iterator}</Table.HeaderCell>
+                        );
+                    })
+                  }
+
+                </Table.Row>
+
+
+                :
+                null
                 }
-              })
-            }
-          </Table.Body>
-        </Table>
+                </Table.Header>
+
+              <Table.Body>
+                {/*console.log(this.state.filteredData)*/}
+                {
+                  this.state.filteredData.map((iterator,idx)=>{
+                    if(idx%2==1){
+                      return(
+                          <Table.Row>
+                            {
+                              this.state.test_function(iterator)
+                            }
+                          </Table.Row>
+                      )
+                    }
+                    else{
+                      return(
+                          <Table.Row bgcolor={this.state.tableFillColor}>
+                            {
+                              this.state.test_function(iterator)
+                            }
+                          </Table.Row>
+                      )
+                    }
+                  })
+                }
+              </Table.Body>
+            </Table>
       </div>
     )
   }
