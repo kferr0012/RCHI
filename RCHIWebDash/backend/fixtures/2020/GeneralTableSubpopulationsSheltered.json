@@ -17,7 +17,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Age",
-            "subpopulation": "Adults (>24)",
+            "subpopulation": "Adults",
             "interview": 560,
             "observation": 0,
             "total": 560,
@@ -30,7 +30,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Age",
-            "subpopulation": "Children (<18)",
+            "subpopulation": "Children",
             "interview": 138,
             "observation": 0,
             "total": 138,
@@ -43,7 +43,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Age",
-            "subpopulation": "Youth (18-24)",
+            "subpopulation": "Youth",
             "interview": 57,
             "observation": 0,
             "total": 57,
@@ -134,7 +134,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Veteran Yes",
+            "subpopulation": "Veterans",
             "interview": 35,
             "observation": 0,
             "total": 35,
@@ -148,9 +148,9 @@
         "fields": {
             "category": "Race",
             "subpopulation": "Asian",
-            "interview": 560,
+            "interview": 7,
             "observation": 0,
-            "total": 560,
+            "total": 7,
             "_type": "Sheltered",
             "year": "2020"
         }
@@ -226,9 +226,9 @@
         "fields": {
             "category": "Race",
             "subpopulation": "Unknown Race",
-            "interview": 7,
+            "interview": 14,
             "observation": 0,
-            "total": 7,
+            "total": 14,
             "_type": "Sheltered",
             "year": "2020"
         }
@@ -277,7 +277,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Gender",
-            "subpopulation": "Gender Non-Conforming",
+            "subpopulation": "Gender Non-Conf",
             "interview": 0,
             "observation": 0,
             "total": 0,
@@ -290,7 +290,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Gender",
-            "subpopulation": "Unknown Gender",
+            "subpopulation": "Unknown",
             "interview": 3,
             "observation": 0,
             "total": 3,
@@ -316,7 +316,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Ethnicity",
-            "subpopulation": "NonHispanic",
+            "subpopulation": "Non-Hispanic",
             "interview": 476,
             "observation": 0,
             "total": 476,
@@ -329,7 +329,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Ethnicity",
-            "subpopulation": "Unknown Ethnicity",
+            "subpopulation": "Unknown",
             "interview": 7,
             "observation": 0,
             "total": 7,
@@ -341,7 +341,7 @@
         "pk": "28",
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
-            "category": "Households",
+            "category": "Household",
             "subpopulation": "Adults Only",
             "interview": 534,
             "observation": 0,
@@ -354,7 +354,7 @@
         "pk": "29",
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
-            "category": "Households",
+            "category": "Household",
             "subpopulation": "Adults and Children",
             "interview": 208,
             "observation": 0,
@@ -367,26 +367,13 @@
         "pk": "30",
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
-            "category": "Households",
+            "category": "Household",
             "subpopulation": "Children Only",
             "interview": 14,
             "observation": 0,
             "total": 14,
             "_type": "Sheltered",
             "year": "2020"
-        }
-    },
-    {
-        "pk": "31",
-        "model": "backend.GeneralTableSubpopulationsSheltered2020",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Pet Owners",
-            "interview": 0,
-            "observation": 0,
-            "total": 0,
-            "year": "2020",
-            "_type": "Sheltered"
         }
     }
 ]
