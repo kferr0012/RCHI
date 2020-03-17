@@ -72,6 +72,8 @@ const FILTERED_COUNTS = [
   'Couch'
 
 ]
+
+const TableOrder = ["Individuals", "Adults (>24)", "Youth (18-24)", "Children", "Unknown Age", "Male", "Female", "Transgender", "Gender Non-Conforming", "Unknown Gender", "Hispanic", "Non-Hispanic", "White", "Native Hawaiin", "Black", "Asian", "American Indian", "Multiple Races", "Unknown Race", "Households", "Chronically Homeless"]
 export default class UnsheleteredVsSheltered extends Component{
 
     constructor(props){

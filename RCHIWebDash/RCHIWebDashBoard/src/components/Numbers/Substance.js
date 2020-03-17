@@ -102,7 +102,7 @@ export default class Substance extends React.Component {
             <div style = {{height: this.state.height}}>
                 
                 {this.state.mydata ? this.runTotal(): null}
-                <span className = "component-header">have substance abuse</span>
+                <span className = "component-header">substance abuse</span>
                 <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
 
             </div>

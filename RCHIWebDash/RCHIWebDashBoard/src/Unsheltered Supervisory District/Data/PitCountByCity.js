@@ -19,8 +19,11 @@ class PitCountByCity extends Component{
   formatingData(){
     axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+this.props.query)
       .then(response=>{
+
+        const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 2)
+        console.log("PIT COUNT BY CITY FILTER DATA: ", filterData)
         
-        const formatData = response.data.reduce((accumulator, currentValue) => {
+        const formatData = filterData.reduce((accumulator, currentValue) => {
             if(!accumulator[currentValue.city]){
                 accumulator[currentValue.city] = {'2019': 0, '2020': 0, labels: currentValue.city}
             }
@@ -32,7 +35,7 @@ class PitCountByCity extends Component{
             return formatData[key]
           })
 
-        console.log("AXIOS DATA")
+        console.log("AXIOS DATA: " , completeData)
         console.log()
         this.setState({
           chartData : this.TableRender(completeData),

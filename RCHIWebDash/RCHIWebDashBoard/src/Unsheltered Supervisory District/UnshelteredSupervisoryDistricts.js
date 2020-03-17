@@ -15,7 +15,7 @@ class UnshelteredSupervisoryDistricts extends Component{
     constructor(){
         super();
         this.state = {
-            currentPage : 5,
+            currentPage : 1,
             pageDisplayed: null,
             totalPages:5,
             districtDisplay:null,

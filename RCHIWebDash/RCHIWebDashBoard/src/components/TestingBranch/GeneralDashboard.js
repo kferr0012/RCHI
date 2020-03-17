@@ -281,6 +281,7 @@ export default class Dashboard extends Component{
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
                       margin = {{top:50,bottom:50,left:60, right: 60}}
+                      enableRadialLabels= {false}
                     />
                   </div>
                   <div className="gen-r2c1r2">

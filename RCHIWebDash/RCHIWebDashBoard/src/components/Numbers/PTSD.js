@@ -101,7 +101,7 @@ export default class PTSD extends React.Component {
             <div style = {{height: this.state.height}}>
                 
                 {this.state.mydata ? this.runTotal(): null} 
-                <span className = "component-header">have PTSD</span>
+                <span className = "component-header">PTSD</span>
                 <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
             </div>
 
