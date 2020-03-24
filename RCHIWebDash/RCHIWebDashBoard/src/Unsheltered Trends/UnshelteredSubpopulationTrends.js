@@ -51,7 +51,7 @@ class UnshelteredSubpopulationTrends extends Component{
             
             if(trend === "Jail Release 12 Months") return <GeneralTrendsNivo header={"Incarceration"} subHeader={'within last 12 months'} query={trend} key={index} id={index}/>
             else if(trend === "Youth (18-24)") return <YouthTrend  header={trend} subHeader={'Interviewed Only'} id={index} key={index} query={trend}/>
-            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend header={trend} subHeader={'Interviewed Only'} query={"Subpopulations"} years={[2019,2020]} keys={["Interviewed"]}/> 
+            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend header={trend} subHeader={'Interviewed Only'} query={"Subpopulations"} years={[2019,2020]} keys={["Interviewed"]}/>  
             else return <GeneralTrendsNivo header={trend} subHeader={'Interviewed Only'} id={'Interviewed'} key={index} query={trend}/>
         })
     }

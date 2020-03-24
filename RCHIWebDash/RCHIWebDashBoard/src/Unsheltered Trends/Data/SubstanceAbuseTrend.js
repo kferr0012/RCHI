@@ -3,10 +3,8 @@ import axios from 'axios'
 import { ResponsiveBar } from '@nivo/bar';
 
 import { colors } from    '../../components/Utilities/colors'
-import NivoLineChart from '../../components/Utilities/GraphTypes/NivoLine'
 import {router} from '../../components/Utilities/constants/routing'
-import { combine } from '../../components/Utilities/ListManipulation/combine';
-import { List } from 'semantic-ui-react';
+
 //! Rewrite this script
 
 class SubstanceAbuseGraph extends Component {
