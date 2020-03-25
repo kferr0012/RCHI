@@ -362,6 +362,12 @@ def get_Total_Households_AdultsandChildren(in_df, city,cityTitle, district=None)
 
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Families with Children',"total": interview + observation}
 
+def get_Total_PetOwner(in_df,city,cityTitle,district=None):
+    interview = in_df.loc[lambda df: (df['Companion Animal'] == 'Yes') & (df['Number of Animal'] >= 1) & (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city), :].shape[0]
+    observation = 0
+
+    return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Pet Owners',"total": interview + observation}
+
 
 for district in range(0,5):
 
@@ -490,6 +496,11 @@ for district in range(0,5):
         "fields":  get_Total_Households_AdultsandChildren(allDistricts[district],city,cityTitle,district + 1)
         })
 
+        data.append({
+        
+        "fields":  get_Total_PetOwner(allDistricts[district],city,cityTitle,district + 1)
+        })
+
 
 
 for districtData in [df_d1_2]:
@@ -615,8 +626,10 @@ for districtData in [df_d1_2]:
         "fields":  get_Total_Households_AdultsandChildren(districtData,city,cityTitle,"1+2")
         })
 
-
+        data.append({
         
+        "fields":  get_Total_PetOwner(districtData,city,cityTitle,"1+2")
+        })
 
 
 
@@ -637,6 +650,7 @@ for d in data:
         d["pk"] = count
         d["model"] = model
         d['fields']['_type'] = 'Unsheltered'
+        d['fields']['year'] = int(year)
         jsonData.append(d)
 
 
