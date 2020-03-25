@@ -368,6 +368,12 @@ def get_Total_Individuals(in_df,year):
 
     return {"category": "Individuals", "interview": interview ,"observation": observation, "subpopulation": 'Total', "total": interview + observation, "year": year}
 
+def get_Total_PetOwner(in_df,year):
+    interview = in_df.loc[lambda df: (df['Companion Animal'] == 'Yes') & (df['Number of Animal'] >= 1) & (df['Household Survey Type'] == 'Interview'), :].shape[0]
+    observation = 0
+
+    return {"category": "Pet Owners", "interview": interview ,"observation": observation, "subpopulation": 'Total', "total": interview + observation, "year": year}
+
 for i in range(len(raceSubpopulation)):
             data.append({
             "fields":  get_race_count(df, raceCategory[i],raceSubpopulation[i],year)
@@ -503,6 +509,10 @@ data.append({
 
 data.append({
         "fields":  get_Total_Individuals(df,year)
+        })
+
+data.append({
+        "fields":  get_Total_PetOwner(df,year)
         })
 
 
