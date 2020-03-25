@@ -48,5 +48,5 @@ class NewlyHomelessByCitySerializer(serializers.ModelSerializer):
 
 class SeniorsSubpopulationsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = SeniorsSubpopulationTotalCounts
+        model = SeniorsSubpopulationTotalCounts2020
         fields = '__all__'
