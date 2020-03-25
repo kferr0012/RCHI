@@ -13,6 +13,7 @@ router.register('GeneralTableSubpopulations',GeneralTableSubpopulationsViewSet, 
 router.register('GeneralTableSubpopulationsSheltered', GeneralTableSubpopulationsShelteredViewSet, basename = "GeneralTableSubpopulationsSheltered")
 router.register('GeneralTableSubpopulationsTotalCounts', GeneralTableSubpopulationsTotalCountsViewSet, basename = "GeneralTableSubpopulationsTotalCounts")
 router.register('NewlyHomelessByCity', NewlyHomelessByCityViewSet, basename = "NewlyHomelessByCity")
+router.register('SeniorsSubpopulations', SeniorsSubpopulationsViewSet, basename="SeniorsSubpopulations")
 urlpatterns = [
     path('2020/', include(router.urls))
 ]

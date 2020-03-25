@@ -45,3 +45,8 @@ class NewlyHomelessByCitySerializer(serializers.ModelSerializer):
     class Meta:
         model = NewlyHomelessByCity
         fields = '__all__'        
+
+class SeniorsSubpopulationsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SeniorsSubpopulationTotalCounts
+        fields = '__all__'
