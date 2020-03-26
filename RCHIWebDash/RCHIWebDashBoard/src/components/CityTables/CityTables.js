@@ -19,7 +19,7 @@ export default class CityTables extends Component {
             selectOptions: []
           };
 
-        this.state.citynames = citynames[2019];
+        this.state.citynames = citynames[2020];
     }
 
     componentWillMount() {
@@ -90,12 +90,18 @@ export default class CityTables extends Component {
             data[this.state.citynames[i]] = JSON.parse(JSON.stringify(base));
         }
 
+        const filter = ["Unknown Veteran" , "Adults Only", 'Children Only', 'Families with Children','Pet Owners', 'Individuals','Newly Homeless']
+
         for (var i = 0; i < indata.length ; i++)
         {   
-            data[indata[i]['city']]['District'] = indata[i]['district'];
-            data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Interview'] = indata[i]['interview'];
-            data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Observation'] = indata[i]['observation'];
+            if(!filter.includes(indata[i]['subpopulation'])){
+                data[indata[i]['city']]['District'] = indata[i]['district'];
+                data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Interview'] = indata[i]['interview'];
+                data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Observation'] = indata[i]['observation'];
+            }
+            // break;
         }
+
         this.setState({
             data: data
         })
@@ -121,7 +127,8 @@ export default class CityTables extends Component {
                 {
                     tableRow = []
                     tableRow.push ( <th colspan="2" rowspan={Titles[Catergories[i]].length}> {Catergories[i]} </th> );
-
+                    console.log("[CURRENT CITY:] ", this.state.data[curCity][Catergories[i]])
+                    // console.log("[CURRENT CITY:] ", this.state.data[curCity])
                     curTot = (  parseInt(this.state.data[curCity][Catergories[i]]['Total']['Observation'])
                                 + parseInt(this.state.data[curCity][Catergories[i]]['Total']['Interview']));
 
