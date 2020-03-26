@@ -69,7 +69,9 @@ const FILTERED_COUNTS = [
   'Not Veteran',
   'Households',
   'Encampment',
-  'Couch'
+  'Couch',
+  'Households (Interview)',
+  'Families w/ Children (Interview)'
 
 ]
 
