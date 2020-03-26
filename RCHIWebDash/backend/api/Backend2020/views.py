@@ -62,3 +62,9 @@ class NewlyHomelessByCityViewSet(viewsets.ModelViewSet):
     serializer_class = NewlyHomelessByCitySerializer
     filter_backends = [SearchFilter]
     search_fields = ['district','category','city','subpopulation']
+
+class SeniorsSubpopulationsViewSet(viewsets.ModelViewSet):
+    queryset =  SeniorsSubpopulationTotalCounts2020.objects.all()
+    serializer_class = SeniorsSubpopulationsSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['category', 'subpopulation']

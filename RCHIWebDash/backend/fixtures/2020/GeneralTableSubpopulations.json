@@ -9,7 +9,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 74,
+        "pk": 1,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -22,7 +22,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 75,
+        "pk": 2,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -35,7 +35,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 76,
+        "pk": 3,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -48,7 +48,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 77,
+        "pk": 4,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -61,7 +61,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 78,
+        "pk": 5,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -74,7 +74,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 79,
+        "pk": 6,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -87,7 +87,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 80,
+        "pk": 7,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -100,7 +100,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 81,
+        "pk": 8,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -113,7 +113,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 82,
+        "pk": 9,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -126,7 +126,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 83,
+        "pk": 10,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -139,7 +139,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 84,
+        "pk": 11,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -152,7 +152,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 85,
+        "pk": 12,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -165,7 +165,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 86,
+        "pk": 13,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -178,7 +178,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 87,
+        "pk": 14,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -191,7 +191,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 88,
+        "pk": 15,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -204,7 +204,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 89,
+        "pk": 16,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -217,7 +217,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 90,
+        "pk": 17,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -230,7 +230,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 91,
+        "pk": 18,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -243,7 +243,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 92,
+        "pk": 19,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -256,7 +256,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 93,
+        "pk": 20,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -269,7 +269,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 94,
+        "pk": 21,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -282,7 +282,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 95,
+        "pk": 22,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -295,7 +295,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 96,
+        "pk": 23,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -303,12 +303,12 @@
             "category": "Subpopulations",
             "interview": 113,
             "observation": 0,
-            "subpopulation": "Veteran Yes",
+            "subpopulation": "Veterans Yes",
             "total": 113,
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 97,
+        "pk": 24,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -321,7 +321,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 98,
+        "pk": 25,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -334,7 +334,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 99,
+        "pk": 26,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -347,7 +347,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 100,
+        "pk": 27,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -360,7 +360,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 101,
+        "pk": 28,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -373,7 +373,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 102,
+        "pk": 29,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -386,7 +386,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 103,
+        "pk": 30,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -399,7 +399,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 104,
+        "pk": 31,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -412,7 +412,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 105,
+        "pk": 32,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -425,7 +425,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 106,
+        "pk": 33,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -438,7 +438,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 107,
+        "pk": 34,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -451,7 +451,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 108,
+        "pk": 35,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -464,7 +464,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 109,
+        "pk": 36,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -477,7 +477,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 110,
+        "pk": 37,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -490,7 +490,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 111,
+        "pk": 38,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -503,7 +503,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 112,
+        "pk": 39,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -516,7 +516,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 113,
+        "pk": 40,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -529,7 +529,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 114,
+        "pk": 41,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -542,7 +542,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 115,
+        "pk": 42,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -555,7 +555,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 116,
+        "pk": 43,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -568,7 +568,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 117,
+        "pk": 44,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -581,7 +581,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 118,
+        "pk": 45,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -594,7 +594,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 119,
+        "pk": 46,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -607,7 +607,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 120,
+        "pk": 47,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -620,7 +620,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 121,
+        "pk": 48,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -633,7 +633,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 122,
+        "pk": 49,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -646,7 +646,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 123,
+        "pk": 50,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -659,7 +659,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 124,
+        "pk": 51,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -672,7 +672,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 125,
+        "pk": 52,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -685,7 +685,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 126,
+        "pk": 53,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -698,7 +698,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 127,
+        "pk": 54,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -711,7 +711,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 128,
+        "pk": 55,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -724,7 +724,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 129,
+        "pk": 56,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -737,7 +737,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 130,
+        "pk": 57,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -750,7 +750,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 131,
+        "pk": 58,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -763,7 +763,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 132,
+        "pk": 59,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -776,7 +776,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 133,
+        "pk": 60,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -789,7 +789,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 134,
+        "pk": 61,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -802,7 +802,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 135,
+        "pk": 62,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -815,7 +815,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 136,
+        "pk": 63,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -828,7 +828,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 137,
+        "pk": 64,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -841,7 +841,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 138,
+        "pk": 65,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -854,7 +854,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 139,
+        "pk": 66,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -867,7 +867,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 140,
+        "pk": 67,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -880,7 +880,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 141,
+        "pk": 68,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -893,7 +893,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 142,
+        "pk": 69,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -906,20 +906,20 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 143,
+        "pk": 70,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
         "fields": {
             "category": "Households",
             "interview": 1201,
-            "observation": 698,
+            "observation": 0,
             "subpopulation": "Total",
-            "total": 1899,
+            "total": 1201,
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 144,
+        "pk": 71,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -932,7 +932,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 145,
+        "pk": 72,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -945,7 +945,20 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 146,
+        "pk": 73,
+        "model": "backend.GeneralTableSubpopulations2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "interview": 7,
+            "observation": 0,
+            "subpopulation": "Families w/ Children (Interview)",
+            "total": 7,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 74,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -958,7 +971,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 147,
+        "pk": 75,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -971,7 +984,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 148,
+        "pk": 76,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -984,7 +997,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 149,
+        "pk": 77,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
@@ -997,47 +1010,33 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 150,
+        "pk": 78,
         "model": "backend.GeneralTableSubpopulations2020"
     },
     {
-        "pk": 151,
-        "model": "backend.GeneralTableSubpopulations2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Families w/ Children",
-            "interview": 0,
+            "interview": 285,
             "observation": 0,
-            "total": 2,
-            "year": 2019,
+            "subpopulation": "Pet Owners",
+            "total": 285,
+            "year": 2020,
             "_type": "Unsheltered"
-        }
+        },
+        "pk": 79,
+        "model": "backend.GeneralTableSubpopulations2020"
     },
     {
-        "pk": 152,
-        "model": "backend.GeneralTableSubpopulations2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Households",
-            "interview": 0,
+            "interview": 1201,
             "observation": 0,
-            "total": 2,
-            "year": 2019,
+            "subpopulation": "Households (Interview)",
+            "total": 1201,
+            "year": 2020,
             "_type": "Unsheltered"
-        }
-    },
-    {
-        "pk": 153,
-        "model": "backend.GeneralTableSubpopulations2020",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Households",
-            "interview": 1267,
-            "observation": 0,
-            "total": 1267,
-            "year": 2019,
-            "_type": "Unsheltered"
-        }
+        },
+        "pk": 80,
+        "model": "backend.GeneralTableSubpopulations2020"
     }
-
 ]

@@ -58,6 +58,7 @@ export default class PieChart2 extends React.Component {
                 cornerRadius={3}
                 colors={colors[8]}
                 borderWidth={1}
+                enableRadialLabels = {this.props.enableRadialLabels}
                 borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
                 radialLabelsSkipAngle={10}
                 radialLabelsTextXOffset={6}

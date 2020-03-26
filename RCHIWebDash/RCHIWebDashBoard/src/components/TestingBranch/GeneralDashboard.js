@@ -156,7 +156,10 @@ export default class Dashboard extends Component{
             <div className="col-md dash-col-reg">
               {<span className="component-header">Homeless Population Trend</span>}
               <LineGraph
-                margin = {{ top: 10, right: 30, bottom: 70, left :60}}
+                margin = {{ top: 20, right: 30, bottom: 70, left :60}}
+                max = {2200}
+                tickValues = {4}
+                gridYValues = {4}
               />
             </div>
 
@@ -173,31 +176,34 @@ export default class Dashboard extends Component{
                     indexBy = "subpopulation"
                     keys = {["total"]}
                     margin = {{left: 45, top: 50, bottom: 30}}
+                    tickValues={4}
+                    gridYValues={4}
+                    maxValue={2000} 
                   />
                 </div>
                 <div className="gen-r2">
                   <div className="gen-r2c1">
-                    <div className="gen-r2c1r1">
+                    {/* <div className="gen-r2c1r1"> */}
                       <p className="component-header">Gender</p>
                       <PieChart2
                         data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
-                        margin = {{top: 35, bottom: 10}}
+                        margin = {{top: 50, bottom: 40, left: 30, right: 30}}
                       />
-                    </div>
-                    <div className="gen-r2c1r2">
+                    {/* </div>
+                     <div className="gen-r2c1r2">
                       <TableComponent4
                         data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total"])}
                         header = {false}
                         height = {"100%"}
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <div className="gen-r2c2">
                     <p className="component-header">Ethnicity</p>
 
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"])}
-                      margin = {{top: 40, bottom: 40, left: 30, right: 30}}  
+                      margin = {{top: 50, bottom: 40, left: 30, right: 30}}  
                     />
 
                   </div>
@@ -275,6 +281,7 @@ export default class Dashboard extends Component{
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
                       margin = {{top:50,bottom:50,left:60, right: 60}}
+                      enableRadialLabels= {false}
                     />
                   </div>
                   <div className="gen-r2c1r2">

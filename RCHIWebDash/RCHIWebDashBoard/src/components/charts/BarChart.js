@@ -8,7 +8,8 @@ export default class BarChart extends Component {
             propdata: this.props.datasets[this.props.data],
             data: this.props.data,
             graphIDX: this.props.graphIDX ? (this.props.graphIDX) : (0), //for editable charts usage
-            rowIDX: this.props.rowIDX ? (this.props.rowIDX) : (0)   //for editable charts usage
+            rowIDX: this.props.rowIDX ? (this.props.rowIDX) : (0),   //for editable charts usage
+            maxTickLimit: this.props.tickValues
         }
 
         //This is to create a plugin to display all tooltips for graph
@@ -136,7 +137,7 @@ export default class BarChart extends Component {
                                 ticks : {
                                     max: this.props.maxYaxis,
                                     min: this.props.minYaxis,
-                                    maxTicksLimit: 10,
+                                    maxTicksLimit: this.state.maxTicksLimit,
                                 },
                             }],
                         },

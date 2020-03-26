@@ -84,8 +84,7 @@ export default class BarGraph extends Component{
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: 'Count',
-                legendPosition: 'middle',
+                tickValues: 5,
                 legendOffset: -40
             }}
             labelSkipWidth={12}

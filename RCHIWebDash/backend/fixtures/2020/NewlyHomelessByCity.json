@@ -288,6 +288,19 @@
     {
         "fields": {
             "category": "Age",
+            "interview": 71,
+            "observation": 0,
+            "subpopulation": "Seniors 60+",
+            "total": 71,
+            "year": 2020,
+            "_type": "Unsheltered"
+        },
+        "pk": 23,
+        "model": "backend.NewlyHomelessByCity"
+    },
+    {
+        "fields": {
+            "category": "Age",
             "interview": 506,
             "observation": 0,
             "subpopulation": "Total",
@@ -295,7 +308,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 23,
+        "pk": 24,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -308,7 +321,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 24,
+        "pk": 25,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -321,7 +334,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 25,
+        "pk": 26,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -334,7 +347,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 26,
+        "pk": 27,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -347,7 +360,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 27,
+        "pk": 28,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -360,7 +373,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 28,
+        "pk": 29,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -373,7 +386,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 29,
+        "pk": 30,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -386,7 +399,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 30,
+        "pk": 31,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -399,7 +412,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 31,
+        "pk": 32,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -412,7 +425,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 32,
+        "pk": 33,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -425,7 +438,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 33,
+        "pk": 34,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -438,7 +451,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 34,
+        "pk": 35,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -451,7 +464,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 35,
+        "pk": 36,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -464,7 +477,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 36,
+        "pk": 37,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -477,7 +490,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 37,
+        "pk": 38,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -490,7 +503,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 38,
+        "pk": 39,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -503,7 +516,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 39,
+        "pk": 40,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -516,7 +529,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 40,
+        "pk": 41,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -529,7 +542,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 41,
+        "pk": 42,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -542,7 +555,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 42,
+        "pk": 43,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -555,7 +568,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 43,
+        "pk": 44,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -568,7 +581,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 44,
+        "pk": 45,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -581,7 +594,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 45,
+        "pk": 46,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -594,7 +607,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 46,
+        "pk": 47,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -607,7 +620,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 47,
+        "pk": 48,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -620,7 +633,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 48,
+        "pk": 49,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -633,7 +646,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 49,
+        "pk": 50,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -646,7 +659,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 50,
+        "pk": 51,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -659,7 +672,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 51,
+        "pk": 52,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -672,7 +685,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 52,
+        "pk": 53,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -685,7 +698,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 53,
+        "pk": 54,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -698,7 +711,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 54,
+        "pk": 55,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -711,7 +724,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 55,
+        "pk": 56,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -724,7 +737,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 56,
+        "pk": 57,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -737,7 +750,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 57,
+        "pk": 58,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -750,7 +763,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 58,
+        "pk": 59,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -763,7 +776,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 59,
+        "pk": 60,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -776,7 +789,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 60,
+        "pk": 61,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -789,7 +802,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 61,
+        "pk": 62,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -802,7 +815,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 62,
+        "pk": 63,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -815,7 +828,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 63,
+        "pk": 64,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -828,7 +841,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 64,
+        "pk": 65,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -841,7 +854,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 65,
+        "pk": 66,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -854,7 +867,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 66,
+        "pk": 67,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -867,7 +880,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 67,
+        "pk": 68,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -880,7 +893,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 68,
+        "pk": 69,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -893,7 +906,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 69,
+        "pk": 70,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -906,7 +919,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 70,
+        "pk": 71,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -919,7 +932,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 71,
+        "pk": 72,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -932,7 +945,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 72,
+        "pk": 73,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -945,7 +958,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 73,
+        "pk": 74,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -958,7 +971,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 74,
+        "pk": 75,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -971,7 +984,7 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 75,
+        "pk": 76,
         "model": "backend.NewlyHomelessByCity"
     },
     {
@@ -984,20 +997,33 @@
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 76,
+        "pk": 77,
         "model": "backend.NewlyHomelessByCity"
     },
     {
         "fields": {
-            "category": "Individuals",
+            "category": "Subpopulations",
             "interview": 506,
             "observation": 0,
-            "subpopulation": "Total",
+            "subpopulation": "Individuals",
             "total": 506,
             "year": 2020,
             "_type": "Unsheltered"
         },
-        "pk": 77,
+        "pk": 78,
+        "model": "backend.NewlyHomelessByCity"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "interview": 95,
+            "observation": 0,
+            "subpopulation": "Pet Owners",
+            "total": 95,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 79,
         "model": "backend.NewlyHomelessByCity"
     }
 ]

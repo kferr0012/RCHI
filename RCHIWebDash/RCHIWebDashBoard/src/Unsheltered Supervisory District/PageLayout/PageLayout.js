@@ -18,7 +18,7 @@ import BarGraph from '../../components/TestingBranch/BarGraph'
 import {router} from '../../components/Utilities/constants/routing'
 //const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
-const filteredTableList = ["Total","Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability","Unknown Developmental Disability", "No Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV", "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "Unknown Brain Injury", "No Jail", "Unknown Jail"]
+const filteredTableList = ["Families with Children","Children Only","Unknown Veteran","Adults Only","Total","Veteran No", "Not Chronically Homeless", "No Substance Abuse", "Unknown Substance Abuse", "No PTSD", "Unknown PTSD", "No Mental Health Conditions", "Unknown Mental Health Conditions", "No Physical Disability", "Unknown Physical Disability", "No Developmental Disability","Unknown Developmental Disability", "No Brain Injury", "Not Victim of Domestic Violence", "Unknown Victim of Domestic Violence", "No AIDS or HIV", "Unknown AIDS or HIV", "Jail Release 90 Days: Probation", "Jail Release 90 Days: Parole", "Jail Release 90 Days: Completed Sentence", "Jail Release 90 Days: (Unspecified)", "Jail Release 12 Months: Probation", "Jail Release 12 Months: Parole", "Jail Release 12 Months: Completed Sentence", "Jail Release 12 Months: (Unspecified)", "Unknown Brain Injury", "No Jail", "Unknown Jail"]
 const PageLayout = ({currentDistrict, tables}) => {
     console.log("PageLayout tables:")
     console.log(tables)
@@ -54,7 +54,7 @@ const PageLayout = ({currentDistrict, tables}) => {
             <div className="row">
                 <div className="col-lg-2">
                     {/* <p>r2c1</p> */}
-                    <PitCountByCity currentDistrict={currentDistrict} query={currentDistrict} header={"PIT Count By City"} subHeader={""}/>
+                    <PitCountByCity clickedDistrict={currentDistrict} currentDistrict={currentDistrict} query={currentDistrict} header={"PIT Count By City"} subHeader={""}/>
                 </div>
                 <div className="col-lg-2">
                     {/* <p>r2c2</p> */}

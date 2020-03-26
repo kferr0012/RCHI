@@ -2,39 +2,17 @@ import pandas as pd
 import numpy as np
 import json
 
-# df = pd.read_csv('../Data/HouseholdQuestions_Cities_Districts_040119_1300.csv',encoding='cp1252')
-df = pd.read_csv('../Data/PIT2020_FEB26,2020.csv')
+data = pd.read_csv('../Data/PIT2020_FEB26,2020.csv')
 
-# df = data.loc[lambda df: df['First Time Homeless'] == 'Yes', :]
-
-#! SCRIPT CHECKED 02/26/2020 10:21 JSON FINISHED
-
-jsonFile = []
-
-# read file
-try:
-    with open('./JSON/2019/GeneralTableSubpopulations2019c.json', 'r') as myfile:
-        data=myfile.read()
-
-    jsonData = json.loads(data)
-
-except(FileNotFoundError):
-    print("[OLD JSON FILE NOT FOUND, GENERATING NEW ONE]")
-    jsonData = []
-
-
-
-
+df = data.loc[lambda df: df['Age As Of Today'] >= 60, :]
 
 year = input("Input Year: ")
-model = 'backend.GeneralTableSubpopulations' + year 
 data = []
+jsonData = []
 count = len(jsonData)
-
 year = int(year)
 
-print("[CREATING NEW JSON FILE]")
-
+print("[CREATING NEW JSON FILE")
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -56,11 +34,8 @@ ethnicitySubpopulation = ["Hispanic", "NonHispanic", "Unknown Ethnicity", 'Total
 genderCategory = [('Male','Male'), ('Female','Female'), ('Transgender', 'Transgender'), ('GenderNonConforming','GenderNonConforming'), ('DoesntKnow','NotSure'), 'Total']
 genderSubpopulation = ['Male', 'Female', 'Transgender', 'Gender Non-Conforming', 'Unknown Gender', 'Total']
 
-ageCategory = [('adult', 'Over25'), ('youth', 'Under24'), ('child', 'Under18'), ('DoesntKnow','NotSure'), 'Total']
-ageSubpopulation = ['Adults (>24)', 'Youth (18-24)', 'Children (<18)', 'Unknown Age', 'Total']
-
 subpopulationCategory = ['Yes', 'No' , 'DoesntKnow']
-veteransSubpopulation = ['Veterans Yes', 'Veteran No', 'Unknown Veteran']
+veteransSubpopulation = ['Veteran Yes', 'Veteran No', 'Unknown Veteran']
 substanceAbuseSubpopulation = ['Substance Abuse', 'No Substance Abuse', 'Unknown Substance Abuse']
 ptsdSubpopulation = ['PTSD', 'No PTSD', 'Unknown PTSD']
 mentalHealthSubpopulation = ['Mental Health Conditions', 'No Mental Health Conditions', 'Unknown Mental Health Conditions']
@@ -93,7 +68,7 @@ def get_race_count(in_df, value, subpopulation,year):
         interview =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['Race'] == value[0]) & (df['GlobalID'].notnull()), :].shape[0]
         observation = in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation') & (df['Race Observed'] == value[1]) & (df['GlobalID'].notnull()), :].shape[0]
    
-    return {"category": "Race", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Race", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_ethnicity_count(in_df, value, subpopulation,year):
     if subpopulation == 'Total':
@@ -106,7 +81,7 @@ def get_ethnicity_count(in_df, value, subpopulation,year):
         interview =  in_df.loc[lambda df: ((df['Ethnicity'] == value[0])  & (df['Household Survey Type'] == 'Interview') & (df['GlobalID'].notnull())), :].shape[0]
         observation = in_df.loc[lambda df: ((df['Hispanic Observed'] == value[1]) & (df['Household Survey Type'] == 'Observation') & (df['GlobalID'].notnull())), :].shape[0]
 
-    return {"category": "Ethnicity", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Ethnicity", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_gender_count(in_df, value, subpopulation,year):
     if subpopulation == 'Total':
@@ -119,29 +94,7 @@ def get_gender_count(in_df, value, subpopulation,year):
         interview =  in_df.loc[lambda df: ( (df['Household Survey Type'] == 'Interview') & (df['Gender'] == value[0]) & (df['GlobalID'].notnull())), :].shape[0]
         observation = in_df.loc[lambda df: ( (df['Household Survey Type'] == 'Observation') & (df['Gender Observed'] == value[1]) & (df['GlobalID'].notnull())), :].shape[0]
 
-    return {"category": "Gender", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
-
-def get_age_count(in_df,value, subpopulation, year):
-    if subpopulation == 'Total':
-        interview = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview'), ['Age As Of Today']].shape[0]
-        observation = in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation'), ['Age Observed']].shape[0]
-
-    elif value[0] == 'child':
-        interview =  in_df.loc[lambda df: ((df['Age As Of Today'] < 18) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
-        observation = in_df.loc[lambda df: ((df['Age Observed'] == value[1]) & (df['Household Survey Type'] == 'Observation')), :].shape[0]
-
-    elif value[0] == 'youth':
-        interview =  in_df.loc[lambda df: (((df['Age As Of Today'] < 25) & (df['Age As Of Today'] >= 18)) & (df['Household Survey Type'] == 'Interview' )), :].shape[0]
-        observation = in_df.loc[lambda df: ((df['Age Observed'] == value[1]) & (df['Household Survey Type'] == 'Observation')), :].shape[0]
-
-    elif value[0] == 'adult':
-        interview =  in_df.loc[lambda df: ((df['Age As Of Today'] >=25) &  (df['Household Survey Type'] == 'Interview')), :].shape[0]
-        observation = in_df.loc[lambda df: ((df['Age Observed'] == value[1]) & (df['Household Survey Type'] == 'Observation')), :].shape[0]
-    elif value[0] == 'DoesntKnow':
-        interview =  in_df.loc[lambda df: (((df['Age As Of Today'] == value[0]) | (df['Age As Of Today'].isnull())) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
-        observation = in_df.loc[lambda df: (((df['Age Observed'] == value[1]) | (df['Age Observed'].isnull())) & (df['Household Survey Type'] == 'Observation')), :].shape[0]
-
-    return {"category": "Age", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Gender", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_Veterans(in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Veteran':
@@ -150,7 +103,7 @@ def get_Total_Veterans(in_df, value, subpopulation, year):
         interview =  in_df.loc[lambda df: ((df['United States Armed Forces'] == value) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_ChronicHomeless(in_df,year):
 
@@ -168,7 +121,7 @@ def get_Total_ChronicHomeless(in_df,year):
     interview = total_persons
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Chronically Homeless', "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Chronically Homeless', "total": interview + observation}
 
 def get_Total_NotChronicHomeless(in_df,year):
     totalCount = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['ParentGlobalID'].notnull()) , :].shape[0] 
@@ -187,7 +140,7 @@ def get_Total_NotChronicHomeless(in_df,year):
     interview = totalCount - total_persons
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Not Chronically Homeless', "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Not Chronically Homeless', "total": interview + observation}
 
 def get_Total_SubstanceAbuse(in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Substance Abuse':
@@ -196,7 +149,7 @@ def get_Total_SubstanceAbuse(in_df, value, subpopulation, year):
         interview =  in_df.loc[lambda df: ((df['Substance Abuse'] == value) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_PTSD(in_df, value, subpopulation, year):
     if subpopulation == 'Unknown PTSD':
@@ -205,7 +158,7 @@ def get_Total_PTSD(in_df, value, subpopulation, year):
         interview =  in_df.loc[lambda df: ((df['PTSD'] == value) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_MentalHealthCondition(in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Mental Health Conditions':
@@ -215,9 +168,9 @@ def get_Total_MentalHealthCondition(in_df, value, subpopulation, year):
 
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
-def get_Total_PhysicalDisability(in_df, value, subpopulation, year):
+def get_Total_PhysicalDisability(in_df, value, subpopulation,year):
     if subpopulation == 'Unknown Physical Disability':
         interview =  in_df.loc[lambda df: (((df['Physical Disability'] == value) | (df['Physical Disability'].isnull()) ) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     else:
@@ -225,7 +178,7 @@ def get_Total_PhysicalDisability(in_df, value, subpopulation, year):
 
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_DevelopmentDisability(in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Developmental Disability':
@@ -235,7 +188,7 @@ def get_Total_DevelopmentDisability(in_df, value, subpopulation, year):
 
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_BrainInjury (in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Brain Injury':
@@ -245,7 +198,7 @@ def get_Total_BrainInjury (in_df, value, subpopulation, year):
 
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_DomesticViolence (in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Victim of Domestic Violence':
@@ -255,7 +208,7 @@ def get_Total_DomesticViolence (in_df, value, subpopulation, year):
 
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_AidsOrHiv (in_df, value, subpopulation, year):
     if subpopulation == 'Unknown AIDS or HIV':
@@ -265,19 +218,19 @@ def get_Total_AidsOrHiv (in_df, value, subpopulation, year):
 
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_Jail90Days (in_df, value, subpopulation, year):
     interview =  in_df.loc[lambda df: ((df['Jail Or Prison'] == 'YesNinetyDays')  & (df['Probation Or Parole'] == value) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_Jail12Months (in_df, value, subpopulation, year):
     interview =  in_df.loc[lambda df: ((df['Jail Or Prison'] == 'YesTwelveMonths')  & (df['Probation Or Parole'] == value) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_NonJailCount (in_df, value, subpopulation, year):
     if subpopulation == 'Unknown Jail':
@@ -286,7 +239,7 @@ def get_Total_NonJailCount (in_df, value, subpopulation, year):
         interview =  in_df.loc[lambda df: ((df['Jail Or Prison'] == value) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_Households_OnlyAdults(in_df,year):
     total_Adults = in_df.loc[lambda df:\
@@ -306,7 +259,7 @@ def get_Total_Households_OnlyAdults(in_df,year):
     observation = 0
 
 
-    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Adults Only', "total": interview + observation, "year": year}
+    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Adults Only', "total": interview + observation}
 
 def get_Total_Households_OnlyChildren(in_df,year):
     total_children = in_df.loc[lambda df:\
@@ -325,9 +278,9 @@ def get_Total_Households_OnlyChildren(in_df,year):
     observation = 0
 
 
-    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Children Only', "total": interview + observation, "year": year}
+    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Children Only', "total": interview + observation}
 
-def get_Total_Households_AdultsandChildren(in_df, year,category,subpopulation):
+def get_Total_Households_AdultsandChildren(in_df, year):
     total_adults = in_df.loc[lambda df:\
          ((df['Household Survey Type'] == 'Interview') & (df['Age As Of Today'] >= 18) & (df['ParentGlobalID'].notnull()) )\
                 ,['ParentGlobalID']]\
@@ -344,7 +297,7 @@ def get_Total_Households_AdultsandChildren(in_df, year,category,subpopulation):
     interview = intersected_df.shape[0]
     observation = 0
 
-    return {"category": category, "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Adults and Children', "total": interview + observation}
 
 def get_Total_LivingSituation(in_df, value, subpopulation, year):
     if subpopulation == 'Other':
@@ -354,33 +307,32 @@ def get_Total_LivingSituation(in_df, value, subpopulation, year):
         
     observation = 0 
 
-    return {"category": "Living Situation", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
+    return {"category": "Living Situation", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_Households(in_df,year):
     interview =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')  & (df['ParentGlobalID'].notnull()) , :].drop_duplicates(subset='ParentGlobalID').shape[0]
-    # observation =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation')  & (df['ParentGlobalID'].notnull()), :].drop_duplicates(subset='ParentGlobalID').shape[0]
-    observation = 0
+    observation =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation')  & (df['ParentGlobalID'].notnull()), :].drop_duplicates(subset='ParentGlobalID').shape[0]
 
-    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Total', "total": interview + observation, "year": year}
-
-def get_Total_Households_Subpopulation(in_df,year):
-    interview =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview')  & (df['ParentGlobalID'].notnull()) , :].drop_duplicates(subset='ParentGlobalID').shape[0]
-    # observation =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation')  & (df['ParentGlobalID'].notnull()), :].drop_duplicates(subset='ParentGlobalID').shape[0]
-    observation = 0
-
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Households (Interview)', "total": interview + observation, "year": year}
+    return {"category": "Households", "interview": interview ,"observation": observation, "subpopulation": 'Total', "total": interview + observation}
 
 def get_Total_Individuals(in_df,year):
     interview =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['GlobalID'].notnull()), ['GlobalID']].drop_duplicates(subset='GlobalID').shape[0]
     observation =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation') & (df['GlobalID'].notnull()), ['GlobalID']].drop_duplicates(subset='GlobalID').shape[0]
 
-    return {"category": "Total", "interview": interview ,"observation": observation, "subpopulation": 'Individuals', "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Individuals', "total": interview + observation}
 
 def get_Total_PetOwner(in_df,year):
     interview = in_df.loc[lambda df: (df['Companion Animal'] == 'Yes') & (df['Number of Animal'] >= 1) & (df['Household Survey Type'] == 'Interview'), :].shape[0]
     observation = 0
 
-    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Pet Owners', "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Pet Owners', "total": interview + observation}
+
+def get_NewlyHomeless(in_df,year):
+    interview = in_df.loc[lambda df: (df['First Time Homeless'] == 'Yes') & (df['Household Survey Type'] == 'Interview'), :].shape[0]
+    observation = 0
+
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Newly Homeless', "total": interview + observation}
+
 
 for i in range(len(raceSubpopulation)):
             data.append({
@@ -397,12 +349,6 @@ for i in range(len(ethnicitySubpopulation)):
 for i in range(len(genderSubpopulation)):
             data.append({
             "fields":  get_gender_count(df, genderCategory[i],genderSubpopulation[i],year)
-            })
-            
-
-for i in range(len(ageSubpopulation)):
-            data.append({
-            "fields":  get_age_count(df, ageCategory[i],ageSubpopulation[i],year)
             })
             
 
@@ -483,11 +429,11 @@ for i in range(len(livingSituationSubpopulation)):
             "fields":  get_Total_LivingSituation(df, livingSituationCategory[i],livingSituationSubpopulation[i],year)
             })
             
-
-
 data.append({
         "fields":  get_Total_Households(df,year)
         })
+
+
 
 data.append({
         "fields":  get_Total_Households_OnlyAdults(df,year)
@@ -500,12 +446,9 @@ data.append({
 
 
 data.append({
-        "fields":  get_Total_Households_AdultsandChildren(df,year,'Subpopulations','Families w/ Children (Interview)')
+        "fields":  get_Total_Households_AdultsandChildren(df,year)
         })
 
-data.append({
-        "fields":  get_Total_Households_AdultsandChildren(df,year,'Households','Adults and Children')
-        })
 
 data.append({
         "fields":  get_Total_ChronicHomeless(df,year)
@@ -525,37 +468,24 @@ data.append({
         })
 
 data.append({
-        "fields":  get_Total_Households_Subpopulation(df,year)
+        "fields":  get_NewlyHomeless(df,year)
         })
-
-
-for x in jsonData:
-    x['model'] = model
-    x['fields']['year'] = 2019
-    x['fields']['_type'] = 'Unsheltered'
-
-
-
-
-jsonFields = [ x["fields"] for x in jsonData]
 
 
 
 for d in data:
-    if d['fields'] not in jsonFields:
-        print("not found: ", d['fields'])
-        count +=1
-        d["pk"] = count
-        d["model"] = model
-        d['fields']['_type'] = 'Unsheltered'
-        jsonData.append(d)
+    count +=1
+    d["pk"] = count
+    d['model'] = 'backend.SeniorsSubpopulationTotalCounts'+str(year)
+    d['fields']['_type'] = 'Unsheltered'
+    d['fields']['year'] = year
+    jsonData.append(d)
 
-
-
-out = open('./JSON/2020/GeneralTableSubpopulations.json','w')
+out = open('./JSON/2020/SeniorsSubpopulationTotalCounts.json','w')
 
 out.write (json.dumps(jsonData, cls=NpEncoder, indent=4))
 out.close()
 
-
 print("[FINISHED CREATING JSON FILE]")
+
+print(df.shape)

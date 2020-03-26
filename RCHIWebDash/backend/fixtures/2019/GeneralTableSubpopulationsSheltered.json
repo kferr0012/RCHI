@@ -114,7 +114,7 @@
         "fields": {
             "category": "Subpopulations",
             "year": 2019,
-            "subpopulation": "Veteran Yes",
+            "subpopulation": "Veterans Yes",
             "total": 56,
             "_type": "Sheltered"
         },
@@ -317,5 +317,16 @@
             "_type": "Sheltered"
         },
         "pk": 30
+    },
+    {
+        "model": "backend.GeneralTableSubpopulationsSheltered2019",
+        "fields": {
+            "category": "Subpopulations",
+            "year": 2019,
+            "subpopulation": "Pet Owners",
+            "total": 0,
+            "_type": "Sheltered"
+        },
+        "pk": 31
     }
 ]

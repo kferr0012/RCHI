@@ -86,7 +86,7 @@ export default class PTSD extends React.Component {
 
         return (
             <div className = "component-header" style = {{fontSize: "24px"}}>
-                {/*percent*/ (348/1383 * 100).toFixed(2)} %
+                {Math.round((348/1383 * 100))} %
             </div>
         )
 
@@ -101,7 +101,7 @@ export default class PTSD extends React.Component {
             <div style = {{height: this.state.height}}>
                 
                 {this.state.mydata ? this.runTotal(): null} 
-                <span className = "component-header">have PTSD</span>
+                <span className = "component-header">PTSD</span>
                 <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
             </div>
 

@@ -69,7 +69,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Households",
+            "subpopulation": "Households (Interview)",
             "interview": 575,
             "observation": 0,
             "total": 575,
@@ -95,7 +95,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Families w/ Children",
+            "subpopulation": "Families w/ Children (Interview)",
             "interview": 222,
             "observation": 0,
             "total": 222,
@@ -134,7 +134,7 @@
         "model": "backend.GeneralTableSubpopulationsSheltered2020",
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Veteran Yes",
+            "subpopulation": "Veterans Yes",
             "interview": 35,
             "observation": 0,
             "total": 35,
@@ -148,9 +148,9 @@
         "fields": {
             "category": "Race",
             "subpopulation": "Asian",
-            "interview": 560,
+            "interview": 7,
             "observation": 0,
-            "total": 560,
+            "total": 7,
             "_type": "Sheltered",
             "year": "2020"
         }
@@ -226,9 +226,9 @@
         "fields": {
             "category": "Race",
             "subpopulation": "Unknown Race",
-            "interview": 7,
+            "interview": 14,
             "observation": 0,
-            "total": 7,
+            "total": 14,
             "_type": "Sheltered",
             "year": "2020"
         }
@@ -372,6 +372,19 @@
             "interview": 14,
             "observation": 0,
             "total": 14,
+            "_type": "Sheltered",
+            "year": "2020"
+        }
+    },
+    {
+        "pk": "31",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Subpopulations",
+            "subpopulation": "Pet Owners",
+            "interview": 0,
+            "observation": 0,
+            "total": 0,
             "_type": "Sheltered",
             "year": "2020"
         }

@@ -20,8 +20,8 @@ class PitCountTrend extends Component {
             .then(response => {
                 
                 console.log("response: ")
-                console.log(response)
-                const filterData = response.data.filter(index => (index.sheltered === false))
+                console.log(response) 
+                const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 5)
 
                 const formatData = filterData.reduce((accumulator, currentValue) => {
                     if(!accumulator[currentValue.year]){

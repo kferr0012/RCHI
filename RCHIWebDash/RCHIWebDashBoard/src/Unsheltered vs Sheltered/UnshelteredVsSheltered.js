@@ -69,9 +69,13 @@ const FILTERED_COUNTS = [
   'Not Veteran',
   'Households',
   'Encampment',
-  'Couch'
+  'Couch',
+  'Households (Interview)',
+  'Families w/ Children (Interview)'
 
 ]
+
+const TableOrder = ["Individuals", "Adults (>24)", "Youth (18-24)", "Children", "Unknown Age", "Male", "Female", "Transgender", "Gender Non-Conforming", "Unknown Gender", "Hispanic", "Non-Hispanic", "White", "Native Hawaiin", "Black", "Asian", "American Indian", "Multiple Races", "Unknown Race", "Households", "Chronically Homeless"]
 export default class UnsheleteredVsSheltered extends Component{
 
     constructor(props){
@@ -83,7 +87,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulations/",
                     router.host + '/' + router.root + '/' + router.activeYear + "/GeneralTableSubpopulationsSheltered/",],
             Tables : [],
-            render : false
+            render : false,
         }
         
     }
@@ -166,11 +170,11 @@ export default class UnsheleteredVsSheltered extends Component{
                         />
                     </div>
                     <div className="svu-r2-h25">
-                      <span className="component-header">Sheltered Households</span>>
+                      <span className="component-header"><div>Sheltered Household</div>Composition</span>>
                       <PieChart2
                         data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Households"],"subpopulation", ["Total"])}
                         footer = {false}
-                        margin = {{ top: 25, right: 0, bottom: 25, left: 0 }}
+                        margin = {{ top: 60, right: 0, bottom: 25, left: 0 }}
                       />
                     </div>
                   </div>
@@ -178,8 +182,12 @@ export default class UnsheleteredVsSheltered extends Component{
               <div className="col-md-6 dash-col-com">
                 <div className="svu-grid-2">
                   <div className="svu-r1-2">
+                  {<span className="component-header">Homeless Population Trend</span>}
                     <LineGraph 
                       margin = {{top: 40, right: 40, bottom: 60, left: 40 }}
+                      max = {2500}
+                      tickValues = {4}
+                      gridYValues = {4}
                     />
                   </div>
                   <div className="svu-r2">
@@ -190,6 +198,9 @@ export default class UnsheleteredVsSheltered extends Component{
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+                      tickValues={4}
+                      gridYValues={4}
+                      maxValue={2000}
                     />
                   </div>
                   <div className="svu-r2">
@@ -199,6 +210,9 @@ export default class UnsheleteredVsSheltered extends Component{
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
+                      tickValues={4}
+                      gridYValues={4}
+                      maxValue={2000}
                     />
                   </div>                  
                 </div>
@@ -218,9 +232,9 @@ export default class UnsheleteredVsSheltered extends Component{
                     
                   </div>
                   <div className="svu-r2-h25">
-                    <p className="component-header">Unsheltered Households </p>
+                    <p className="component-header">Unsheltered Household Composition</p>
                     <TableComponent4
-                      tableName = "Unsheltered Households"
+                      tableName = "Unsheltered Household Composition"
                       data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"]}
                       header = {false}
                       height = {"100%"}

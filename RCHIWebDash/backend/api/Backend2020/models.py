@@ -89,3 +89,12 @@ class NewlyHomelessByCity(models.Model):
 	year = models.IntegerField()
 	_type = models.CharField(max_length=50)
 
+class SeniorsSubpopulationTotalCounts2020(models.Model):
+	id = models.CharField(max_length = 100, primary_key=True)
+	category = models.CharField(max_length=100)
+	subpopulation = models.CharField(max_length=100)
+	interview = models.IntegerField()
+	observation = models.IntegerField()
+	total = models.IntegerField()
+	year = models.IntegerField()
+	_type = models.CharField(max_length=50)

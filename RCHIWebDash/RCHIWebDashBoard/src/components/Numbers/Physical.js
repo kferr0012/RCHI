@@ -85,7 +85,7 @@ export default class Physical extends React.Component {
 
         return (
             <div className = "component-header" style = {{fontSize: "24px"}}>
-                 {/*percent*/ (348/1383*100).toFixed(2)} %
+                 {Math.round((348/1383*100)) /*.toFixed(2)*/} %
             </div>
         )
 
@@ -99,7 +99,7 @@ export default class Physical extends React.Component {
         return (
             <div style = {{height: this.state.height}}>
                 {this.state.mydata ? this.runTotal(): null}
-                <span className = "component-header">have physical disability</span>
+                <span className = "component-header">physical disability</span>
                 <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
             </div>
 

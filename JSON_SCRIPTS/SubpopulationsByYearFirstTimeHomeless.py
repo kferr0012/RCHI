@@ -27,7 +27,7 @@ except(FileNotFoundError):
 
 
 year = input("Input Year: ")
-model = 'backend.FirstTimeGeneralTableSubpopulations' + year 
+model = 'backend.NewlyHomelessByCity'
 data = []
 count = len(jsonData)
 
@@ -56,8 +56,8 @@ ethnicitySubpopulation = ["Hispanic", "NonHispanic", "Unknown Ethnicity", 'Total
 genderCategory = [('Male','Male'), ('Female','Female'), ('Transgender', 'Transgender'), ('GenderNonConforming','GenderNonConforming'), ('DoesntKnow','NotSure'), 'Total']
 genderSubpopulation = ['Male', 'Female', 'Transgender', 'Gender Non-Conforming', 'Unknown Gender', 'Total']
 
-ageCategory = [('adult', 'Over25'), ('youth', 'Under24'), ('child', 'Under18'), ('DoesntKnow','NotSure'), 'Total']
-ageSubpopulation = ['Adults (>24)', 'Youth (18-24)', 'Children (<18)', 'Unknown Age', 'Total']
+ageCategory = [('adult', 'Over25'), ('youth', 'Under24'), ('child', 'Under18'), ('DoesntKnow','NotSure'), ('Seniors 60+'), 'Total']
+ageSubpopulation = ['Adults (>24)', 'Youth (18-24)', 'Children (<18)', 'Unknown Age', 'Seniors 60+', 'Total']
 
 subpopulationCategory = ['Yes', 'No' , 'DoesntKnow']
 veteransSubpopulation = ['Veteran Yes', 'Veteran No', 'Unknown Veteran']
@@ -122,6 +122,7 @@ def get_gender_count(in_df, value, subpopulation,year):
     return {"category": "Gender", "interview": interview ,"observation": observation, "subpopulation": subpopulation, "total": interview + observation, "year": year}
 
 def get_age_count(in_df,value, subpopulation, year):
+    print("Subpopulaton: ", subpopulation)
     if subpopulation == 'Total':
         interview = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview'), ['Age As Of Today']].shape[0]
         observation = in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation'), ['Age Observed']].shape[0]
@@ -137,6 +138,9 @@ def get_age_count(in_df,value, subpopulation, year):
     elif value[0] == 'adult':
         interview =  in_df.loc[lambda df: ((df['Age As Of Today'] >=25) &  (df['Household Survey Type'] == 'Interview')), :].shape[0]
         observation = in_df.loc[lambda df: ((df['Age Observed'] == value[1]) & (df['Household Survey Type'] == 'Observation')), :].shape[0]
+    elif subpopulation == 'Seniors 60+':
+        interview = in_df.loc[lambda df: ((df['Age As Of Today'] >=60) &  (df['Household Survey Type'] == 'Interview')), :].shape[0]
+        observation = 0
     elif value[0] == 'DoesntKnow':
         interview =  in_df.loc[lambda df: (((df['Age As Of Today'] == value[0]) | (df['Age As Of Today'].isnull())) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
         observation = in_df.loc[lambda df: (((df['Age Observed'] == value[1]) | (df['Age Observed'].isnull())) & (df['Household Survey Type'] == 'Observation')), :].shape[0]
@@ -366,7 +370,13 @@ def get_Total_Individuals(in_df,year):
     interview =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['GlobalID'].notnull()), ['GlobalID']].drop_duplicates(subset='GlobalID').shape[0]
     observation =  in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation') & (df['GlobalID'].notnull()), ['GlobalID']].drop_duplicates(subset='GlobalID').shape[0]
 
-    return {"category": "Individuals", "interview": interview ,"observation": observation, "subpopulation": 'Total', "total": interview + observation, "year": year}
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Individuals', "total": interview + observation, "year": year}
+
+def get_Total_PetOwner(in_df,year):
+    interview = in_df.loc[lambda df: (df['Companion Animal'] == 'Yes') & (df['Number of Animal'] >= 1) & (df['Household Survey Type'] == 'Interview'), :].shape[0]
+    observation = 0
+
+    return {"category": "Subpopulations", "interview": interview ,"observation": observation, "subpopulation": 'Pet Owners', "total": interview + observation}
 
 for i in range(len(raceSubpopulation)):
             data.append({
@@ -505,6 +515,10 @@ data.append({
         "fields":  get_Total_Individuals(df,year)
         })
 
+data.append({
+        "fields":  get_Total_PetOwner(df,year)
+        })
+
 
 
 jsonFields = [ x["fields"] for x in jsonData]
@@ -518,11 +532,12 @@ for d in data:
         d["pk"] = count
         d["model"] = model
         d['fields']['_type'] = 'Unsheltered'
+        d['fields']['year'] = year
         jsonData.append(d)
 
 
 
-out = open('./JSON/2020/SubpopulationsByYearFirstTimeHomeless.json','w')
+out = open('./JSON/2020/NewlyHomelessByCity.json','w')
 
 out.write (json.dumps(jsonData, cls=NpEncoder, indent=4))
 out.close()

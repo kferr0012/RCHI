@@ -7,7 +7,10 @@ export default class LineGraph extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null
+      data: null,
+      tickValues: this.props.tickValues,
+      gridYValues: this.props.gridYValues,
+      max: this.props.max,
     }
   }
   
@@ -115,9 +118,10 @@ export default class LineGraph extends React.Component {
           data={this.state.data}
           margin={this.props.margin ? this.props.margin : { top: 0, right: 30, bottom: 70, left: 40}}
           xScale={{ type: 'point' }}
-          yScale={{ type: 'linear', stacked: false, min: 0, max: 'auto' }}
+          yScale={{ type: 'linear', stacked: false, min: 0, max: this.state.max }}
           axisTop={null}
           axisRight={null}
+          gridYValues={this.state.gridYValues}
           axisBottom={{
               orient: 'bottom',
               tickSize: 5,
@@ -130,15 +134,18 @@ export default class LineGraph extends React.Component {
           axisLeft={{
               orient: 'left',
               tickSize: 5,
+              tickValues: this.state.tickValues,
               tickPadding: 5,
               tickRotation: 0,
               legend: '',
               legendOffset: -40,
               legendPosition: 'middle'
+
           }}
           colors={ colors[7] }
           lineWidth={2}
-          pointSize={10}
+          pointSize={5}
+          enablePointLabel={true}
           pointColor={{ from: 'color', modifiers: [] }}
           pointBorderWidth={2}
           pointBorderColor={{ from: 'serieColor' }}
@@ -154,7 +161,7 @@ export default class LineGraph extends React.Component {
                   justify: false,
                   translateX: 0,
                   translateY: 50,
-                  itemsSpacing: 0,
+                  itemsSpacing: 15,
                   itemDirection: 'left-to-right',
                   itemWidth: 80,
                   itemHeight: 20,

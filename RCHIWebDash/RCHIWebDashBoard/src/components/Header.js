@@ -2,17 +2,28 @@ import React, { Component } from 'react';
 import { Menu, Segment, Responsive, Dropdown } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 
+// How it was in the 2019 dashboards
+// const links = [
+//   { name: 'General Table',                link: '/GeneralTable' },
+//   { name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
+//   { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
+//   { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
+//   { name: 'CityBreakdown',               link: '/CityBreakdown' },
+//   { name: 'divider'},
+//   { name: 'Newly Homeless',               link: '/NewlyHomeless' },
+//   { name: 'Map',                          link: '/' },
+// ]
+
 // TO ADD A LINK JUST A NAME AND LINK IN LINKS OBJECT
 const links = [
-  { name: 'Map',                          link: '/' },
-  { name: 'General Table',                link: '/GeneralTable' },
+  { name: 'General Dashboard',                link: '/' },
   { name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
-  { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
-  { name: 'divider'},
-  { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
-  { name: '/CityBreakdown',               link: '/CityBreakdown' },
-  { name: 'divider'},
   { name: 'Newly Homeless',               link: '/NewlyHomeless' },
+  { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
+  { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
+  { name: 'City Breakdown',                link: '/CityBreakdown' },
+  { name: 'Map',                          link: '/Map' },
+  // { name: 'divider'},
 ]
 
 class Header extends React.Component{
