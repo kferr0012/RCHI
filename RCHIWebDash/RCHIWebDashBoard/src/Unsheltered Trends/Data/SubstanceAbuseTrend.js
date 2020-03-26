@@ -98,14 +98,14 @@ class SubstanceAbuseGraph extends Component {
                         borderColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
                         axisTop={null}
                         axisRight={null}
-                        axisBottom={{
-                            tickSize: 5,
-                            tickPadding: 5,
-                            tickRotation: 0,
-                            legend: 'Year',
-                            legendPosition: 'middle',
-                            legendOffset: 32
-                        }}
+                        // axisBottom={{
+                        //     tickSize: 5,
+                        //     tickPadding: 5,
+                        //     tickRotation: 0,
+                        //     legend: 'Year',
+                        //     legendPosition: 'middle',
+                        //     legendOffset: 32
+                        // }}
                         axisLeft={{
                             tickSize: 5,
                             tickPadding: 5,
@@ -114,31 +114,31 @@ class SubstanceAbuseGraph extends Component {
                             legendPosition: 'middle',
                             legendOffset: -40
                         }}
-                        legends={[
-                            {
-                                dataFrom: 'keys',
-                                anchor: 'bottom',
-                                direction: 'row',
-                                justify: false,
-                                symbolShape: 'circle',
-                                translateX: 0,
-                                translateY: 60,
-                                itemsSpacing: 2,
-                                itemWidth: 100,
-                                itemHeight: 20,
-                                itemDirection: 'left-to-right',
-                                itemOpacity: 0.85,
-                                symbolSize: 12,
-                                effects: [
-                                    {
-                                        on: 'hover',
-                                        style: {
-                                            itemOpacity: 1
-                                        }
-                                    }
-                                ]
-                            }
-                        ]}
+                        // legends={[
+                        //     {
+                        //         dataFrom: 'keys',
+                        //         anchor: 'bottom',
+                        //         direction: 'row',
+                        //         justify: false,
+                        //         symbolShape: 'circle',
+                        //         translateX: 0,
+                        //         translateY: 60,
+                        //         itemsSpacing: 2,
+                        //         itemWidth: 100,
+                        //         itemHeight: 20,
+                        //         itemDirection: 'left-to-right',
+                        //         itemOpacity: 0.85,
+                        //         symbolSize: 12,
+                        //         effects: [
+                        //             {
+                        //                 on: 'hover',
+                        //                 style: {
+                        //                     itemOpacity: 1
+                        //                 }
+                        //             }
+                        //         ]
+                        //     }
+                        // ]}
                         labelSkipWidth={12}
                         labelSkipHeight={12}
                         labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
