@@ -39,22 +39,22 @@ export const citynames = {
     2020 : [
     'RIVERSIDE 1',
     'LAKE ELSINORE',
-    'UNINCORPORATED 1',
+    'UNINCORPORATED DISTRICT 1',
     'WILDOMAR',
     'CANYON LAKE',
     'NORCO',
     'CORONA',
     'RIVERSIDE 2',
     'JURUPA VALLEY',
-    'UNINCORPORATED 2',
+    'UNINCORPORATED DISTRICT 2',
     'EASTVALE',
     'TEMECULA',
-    'UNINCORPORATED 3',
+    'UNINCORPORATED DISTRICT 3',
     'MURRIETA',
     'HEMET',
     'SAN JACINTO',
     'DESERT HOT SPRINGS',
-    'UNINCORPORATED 4',
+    'UNINCORPORATED DISTRICT 4',
     'LA QUINTA',
     'COACHELLA',
     'INDIAN WELLS',
@@ -67,7 +67,7 @@ export const citynames = {
     'MECCA',
     'MENIFEE',
     'PERRIS',
-    'UNINCORPORATED 5',
+    'UNINCORPORATED DISTRICT 5',
     'BEAUMONT',
     'MORENO VALLEY',
     'CALIMESA',
@@ -96,10 +96,10 @@ export const base = {
         'Unknown Race': { 'Interview':0, 'Observation':0 },
         'Total': { 'Interview':0, 'Observation':0 },
     },
-    'Ethinicity':	{
+    'Ethnicity':	{
         'Hispanic': {'Interview':0, 'Observation':0 },
         'NonHispanic': { 'Interview':0, 'Observation':0 },
-        'Unknown Ethinicity': { 'Interview':0, 'Observation':0 },
+        'Unknown Ethnicity': { 'Interview':0, 'Observation':0 },
         'Total': { 'Interview':0, 'Observation':0 },
     },
     'Gender':	{
@@ -180,10 +180,10 @@ export const Titles = {
         'Unknown Race',
         'Total', 
     ],
-    'Ethinicity': [ //4
+    'Ethnicity': [ //4
         'Hispanic',
         'NonHispanic',
-        'Unknown Ethinicity',
+        'Unknown Ethnicity',
         'Total',
     ],
     'Gender': [ //6
@@ -270,7 +270,7 @@ export const Titles = {
 
 export const Catergories = [
     'Race',
-    'Ethinicity',
+    'Ethnicity',
     'Gender',
     'Age',
     'Subpopulations'

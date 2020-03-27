@@ -22,6 +22,7 @@ const links = [
   { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
   { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
   { name: 'City Breakdown',                link: '/CityBreakdown' },
+  { name: 'City Table',                   link:  '/CityTables'},
   { name: 'Map',                          link: '/Map' },
   // { name: 'divider'},
 ]

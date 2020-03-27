@@ -19,7 +19,7 @@ export default class CityTables extends Component {
             selectOptions: []
           };
 
-        this.state.citynames = citynames[2019];
+        this.state.citynames = citynames[2020];
     }
 
     componentWillMount() {
@@ -90,12 +90,19 @@ export default class CityTables extends Component {
             data[this.state.citynames[i]] = JSON.parse(JSON.stringify(base));
         }
 
+        const filter = ["Unknown Veteran" , "Adults Only", 'Children Only', 'Families with Children','Pet Owners', 'Individuals','Newly Homeless']
+
         for (var i = 0; i < indata.length ; i++)
         {   
-            data[indata[i]['city']]['District'] = indata[i]['district'];
-            data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Interview'] = indata[i]['interview'];
-            data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Observation'] = indata[i]['observation'];
+            if(!filter.includes(indata[i]['subpopulation'])){
+                data[indata[i]['city']]['District'] = indata[i]['district'];
+                data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Interview'] = indata[i]['interview'];
+                data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Observation'] = indata[i]['observation'];
+                data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Total'] = indata[i]['total'];
+            }
+            // break;
         }
+
         this.setState({
             data: data
         })
@@ -108,11 +115,8 @@ export default class CityTables extends Component {
 
         for (var x = 0; x < this.state.curCities.length && Object.keys(this.state.households).length > 0; x++)
         {
-            //console.log(x);
             curCity= this.state.curCities[x];
-            //console.log(curCity);
             tableRow  = [];
-            //console.log(Object.keys(this.state.data))
             var a = 0, curTot = 0, int = 0, obs = 0;
             if (Object.keys(this.state.data).length > 0)
             {
@@ -121,7 +125,6 @@ export default class CityTables extends Component {
                 {
                     tableRow = []
                     tableRow.push ( <th colspan="2" rowspan={Titles[Catergories[i]].length}> {Catergories[i]} </th> );
-
                     curTot = (  parseInt(this.state.data[curCity][Catergories[i]]['Total']['Observation'])
                                 + parseInt(this.state.data[curCity][Catergories[i]]['Total']['Interview']));
 
@@ -231,14 +234,12 @@ export default class CityTables extends Component {
         return table;
     }
     render(){
-        // console.log(this.state.households);
-        // console.log(this.state.data);
         return(
             <Grid container>
                 <Grid.Row>
                     <Grid.Column width={4}>
                         <Select options={this.state.selectOptions} onChange={ (value) => {if (value.value.length > 2) { 
-                            this.setState({curCities: [value.value]}); console.log(value); } } } />
+                            this.setState({curCities: [value.value]}); } } } />
                         <br/>
                         <ReactToPrint
                             trigger={() => <button href="#">Print Table</button>}
