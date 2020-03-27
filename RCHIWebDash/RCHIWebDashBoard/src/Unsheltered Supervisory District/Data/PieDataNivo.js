@@ -17,7 +17,7 @@ class PieData extends Component{
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search='+this.props.query)
             .then(response => {
                 const filterData = response.data.filter(row => (row.subpopulation !== "Total" && row.city !== "RIVERSIDE"))
-
+   
                 const formatData = filterData.reduce((accumulator, currentValue) => {
                     if(!accumulator[currentValue.subpopulation]){
                         accumulator[currentValue.subpopulation] = {"value": 0, "label": currentValue.subpopulation, "id":currentValue.subpopulation}
