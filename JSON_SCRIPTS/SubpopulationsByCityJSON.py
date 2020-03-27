@@ -182,7 +182,8 @@ def get_Total_ChronicHomeless(in_df,city,cityTitle, district=None):
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Chronically Homeless', "total": interview + observation}
 
 def get_Total_NotChronicHomeless(in_df,city,cityTitle, district=None):
-    totalCount = in_df.loc[lambda df: (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0] 
+    totalCountInterview = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0]
+    totalCountObserved = in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation') & (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0] 
 
     ChronicallyHomelessHouseholds = in_df.loc[lambda df:\
        ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1) & (df['CITYNAME'] == city) &(df['ParentGlobalID'].notnull()))\
@@ -195,8 +196,8 @@ def get_Total_NotChronicHomeless(in_df,city,cityTitle, district=None):
                 , ['ParentGlobalID']]['ParentGlobalID']\
                     .isin(ChronicallyHomelessHouseholds['ParentGlobalID']).sum()
 
-    interview = totalCount - total_persons
-    observation = 0
+    interview = totalCountInterview - total_persons
+    observation = totalCountObserved
 
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Not Chronically Homeless', "total": interview + observation}
 
@@ -386,7 +387,7 @@ for district in range(0,5):
         cityTitle =  city
 
         if city == "RIVERSIDE": cityTitle += ' ' + str(district + 1)
-        elif city == 'UNINCORPORATED DISTRICT 1': cityTitle = 'UNINCORPORATED' + ' ' + str(district + 1)
+        # elif city == 'UNINCORPORATED DISTRICT 1': cityTitle = 'UNINCORPORATED' + ' ' + str(district + 1)
 
         for i in range(len(raceSubpopulation)):
             data.append({
