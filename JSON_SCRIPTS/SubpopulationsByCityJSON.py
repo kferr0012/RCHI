@@ -182,7 +182,7 @@ def get_Total_ChronicHomeless(in_df,city,cityTitle, district=None):
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Chronically Homeless', "total": interview + observation}
 
 def get_Total_NotChronicHomeless(in_df,city,cityTitle, district=None):
-    totalCount = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0] 
+    totalCount = in_df.loc[lambda df: (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0] 
 
     ChronicallyHomelessHouseholds = in_df.loc[lambda df:\
        ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1) & (df['CITYNAME'] == city) &(df['ParentGlobalID'].notnull()))\

@@ -918,11 +918,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RIVERSIDE 1",
-            "interview": 108,
+            "interview": 296,
             "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 108,
+            "total": 296,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -1938,11 +1938,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "LAKE ELSINORE",
-            "interview": 23,
+            "interview": 30,
             "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 23,
+            "total": 30,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -2042,7 +2042,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2057,7 +2057,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2072,7 +2072,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 3,
             "observation": 7,
             "district": 1,
@@ -2087,7 +2087,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 15,
             "observation": 9,
             "district": 1,
@@ -2102,7 +2102,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 4,
             "observation": 0,
             "district": 1,
@@ -2117,7 +2117,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2132,7 +2132,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 8,
             "observation": 1,
             "district": 1,
@@ -2147,7 +2147,7 @@
     {
         "fields": {
             "category": "Race",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 31,
             "observation": 17,
             "district": 1,
@@ -2162,7 +2162,7 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 8,
             "observation": 0,
             "district": 1,
@@ -2177,7 +2177,7 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 22,
             "observation": 9,
             "district": 1,
@@ -2192,7 +2192,7 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 8,
             "district": 1,
@@ -2207,7 +2207,7 @@
     {
         "fields": {
             "category": "Ethnicity",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 31,
             "observation": 17,
             "district": 1,
@@ -2222,7 +2222,7 @@
     {
         "fields": {
             "category": "Gender",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 19,
             "observation": 13,
             "district": 1,
@@ -2237,7 +2237,7 @@
     {
         "fields": {
             "category": "Gender",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 10,
             "observation": 3,
             "district": 1,
@@ -2252,7 +2252,7 @@
     {
         "fields": {
             "category": "Gender",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2267,7 +2267,7 @@
     {
         "fields": {
             "category": "Gender",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2282,7 +2282,7 @@
     {
         "fields": {
             "category": "Gender",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 1,
             "district": 1,
@@ -2297,7 +2297,7 @@
     {
         "fields": {
             "category": "Gender",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 31,
             "observation": 17,
             "district": 1,
@@ -2312,7 +2312,7 @@
     {
         "fields": {
             "category": "Age",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 27,
             "observation": 12,
             "district": 1,
@@ -2327,7 +2327,7 @@
     {
         "fields": {
             "category": "Age",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 4,
             "observation": 2,
             "district": 1,
@@ -2342,7 +2342,7 @@
     {
         "fields": {
             "category": "Age",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2357,7 +2357,7 @@
     {
         "fields": {
             "category": "Age",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 3,
             "district": 1,
@@ -2372,7 +2372,7 @@
     {
         "fields": {
             "category": "Age",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 31,
             "observation": 17,
             "district": 1,
@@ -2387,7 +2387,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2402,7 +2402,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 28,
             "observation": 0,
             "district": 1,
@@ -2417,7 +2417,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 2,
             "observation": 0,
             "district": 1,
@@ -2432,7 +2432,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 6,
             "observation": 0,
             "district": 1,
@@ -2447,7 +2447,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 22,
             "observation": 0,
             "district": 1,
@@ -2462,7 +2462,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 3,
             "observation": 0,
             "district": 1,
@@ -2477,7 +2477,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 7,
             "observation": 0,
             "district": 1,
@@ -2492,7 +2492,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 21,
             "observation": 0,
             "district": 1,
@@ -2507,7 +2507,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 3,
             "observation": 0,
             "district": 1,
@@ -2522,7 +2522,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 8,
             "observation": 0,
             "district": 1,
@@ -2537,7 +2537,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 21,
             "observation": 0,
             "district": 1,
@@ -2552,7 +2552,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 2,
             "observation": 0,
             "district": 1,
@@ -2567,7 +2567,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2582,7 +2582,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 27,
             "observation": 0,
             "district": 1,
@@ -2597,7 +2597,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 4,
             "observation": 0,
             "district": 1,
@@ -2612,7 +2612,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 4,
             "observation": 0,
             "district": 1,
@@ -2627,7 +2627,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 24,
             "observation": 0,
             "district": 1,
@@ -2642,7 +2642,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 3,
             "observation": 0,
             "district": 1,
@@ -2657,7 +2657,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2672,7 +2672,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 28,
             "observation": 0,
             "district": 1,
@@ -2687,7 +2687,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 2,
             "observation": 0,
             "district": 1,
@@ -2702,7 +2702,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2717,7 +2717,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 29,
             "observation": 0,
             "district": 1,
@@ -2732,7 +2732,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 2,
             "observation": 0,
             "district": 1,
@@ -2747,7 +2747,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2762,7 +2762,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 29,
             "observation": 0,
             "district": 1,
@@ -2777,7 +2777,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2792,7 +2792,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2807,7 +2807,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2822,7 +2822,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 2,
             "observation": 0,
             "district": 1,
@@ -2837,7 +2837,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2852,7 +2852,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 1,
             "observation": 0,
             "district": 1,
@@ -2867,7 +2867,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2882,7 +2882,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 2,
             "observation": 0,
             "district": 1,
@@ -2897,7 +2897,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2912,7 +2912,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 25,
             "observation": 0,
             "district": 1,
@@ -2927,7 +2927,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -2942,7 +2942,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 10,
             "observation": 0,
             "district": 1,
@@ -2957,12 +2957,12 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
-            "interview": 21,
+            "city": "UNINCORPORATED 1",
+            "interview": 38,
             "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 21,
+            "total": 38,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -2972,7 +2972,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 25,
             "observation": 0,
             "district": 1,
@@ -2987,7 +2987,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -3002,7 +3002,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 0,
             "observation": 0,
             "district": 1,
@@ -3017,7 +3017,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 18,
             "observation": 0,
             "district": 1,
@@ -3032,7 +3032,7 @@
     {
         "fields": {
             "category": "Individuals",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 31,
             "observation": 17,
             "district": 1,
@@ -3047,7 +3047,7 @@
     {
         "fields": {
             "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
+            "city": "UNINCORPORATED 1",
             "interview": 12,
             "observation": 0,
             "district": 1,
@@ -3978,11 +3978,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "WILDOMAR",
-            "interview": 3,
+            "interview": 6,
             "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 3,
+            "total": 6,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -6018,11 +6018,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "NORCO",
-            "interview": 7,
+            "interview": 10,
             "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 7,
+            "total": 10,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -7038,11 +7038,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "CORONA",
-            "interview": 54,
+            "interview": 99,
             "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 54,
+            "total": 99,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -8058,11 +8058,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RIVERSIDE 2",
-            "interview": 74,
+            "interview": 195,
             "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 74,
+            "total": 195,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -9078,11 +9078,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "JURUPA VALLEY",
-            "interview": 55,
+            "interview": 74,
             "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 55,
+            "total": 74,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -10098,11 +10098,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 2",
-            "interview": 12,
+            "interview": 29,
             "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 12,
+            "total": 29,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -11118,11 +11118,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "EASTVALE",
-            "interview": 2,
+            "interview": 4,
             "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 2,
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -12138,11 +12138,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "TEMECULA",
-            "interview": 33,
+            "interview": 46,
             "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 33,
+            "total": 46,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -13158,11 +13158,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 3",
-            "interview": 21,
+            "interview": 39,
             "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 21,
+            "total": 39,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -14178,11 +14178,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "MURRIETA",
-            "interview": 3,
+            "interview": 11,
             "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 3,
+            "total": 11,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -15198,11 +15198,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "HEMET",
-            "interview": 42,
+            "interview": 64,
             "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 42,
+            "total": 64,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -16218,11 +16218,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "SAN JACINTO",
-            "interview": 18,
+            "interview": 23,
             "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 18,
+            "total": 23,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -17238,11 +17238,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "DESERT HOT SPRINGS",
-            "interview": 45,
+            "interview": 55,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 45,
+            "total": 55,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -18258,11 +18258,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 4",
-            "interview": 31,
+            "interview": 40,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 31,
+            "total": 40,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -20298,11 +20298,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "COACHELLA",
-            "interview": 23,
+            "interview": 53,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 23,
+            "total": 53,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -21318,11 +21318,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "INDIAN WELLS",
-            "interview": 0,
+            "interview": 1,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 0,
+            "total": 1,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -22338,11 +22338,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "INDIO",
-            "interview": 26,
+            "interview": 57,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 26,
+            "total": 57,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -23358,11 +23358,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "PALM SPRINGS",
-            "interview": 58,
+            "interview": 125,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 58,
+            "total": 125,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -24378,11 +24378,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "CATHEDRAL CITY",
-            "interview": 20,
+            "interview": 24,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 20,
+            "total": 24,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -25398,11 +25398,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "BLYTHE",
-            "interview": 24,
+            "interview": 62,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 24,
+            "total": 62,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -27438,11 +27438,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RANCHO MIRAGE",
-            "interview": 2,
+            "interview": 3,
             "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 2,
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -29478,11 +29478,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "MENIFEE",
-            "interview": 8,
+            "interview": 12,
             "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 8,
+            "total": 12,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -30498,11 +30498,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "PERRIS",
-            "interview": 14,
+            "interview": 34,
             "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 14,
+            "total": 34,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -31518,11 +31518,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 5",
-            "interview": 8,
+            "interview": 10,
             "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 8,
+            "total": 10,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -33558,11 +33558,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "MORENO VALLEY",
-            "interview": 63,
+            "interview": 149,
             "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 63,
+            "total": 149,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -34578,11 +34578,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "CALIMESA",
-            "interview": 5,
+            "interview": 13,
             "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 5,
+            "total": 13,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -35598,11 +35598,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "BANNING",
-            "interview": 24,
+            "interview": 34,
             "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 24,
+            "total": 34,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -36618,11 +36618,11 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RIVERSIDE",
-            "interview": 182,
+            "interview": 491,
             "observation": 0,
             "district": "1+2",
             "subpopulation": "Not Chronically Homeless",
-            "total": 182,
+            "total": 491,
             "_type": "Unsheltered",
             "year": 2020
         },
