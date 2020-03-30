@@ -99,7 +99,7 @@ export default class Physical extends React.Component {
         return (
             <div style = {{height: this.state.height}}>
                 {this.state.mydata ? this.runTotal(): null}
-                <span className = "component-header">have physical disability</span>
+                <span className = "component-header">physical disability</span>
                 <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
             </div>
 

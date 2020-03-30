@@ -38,6 +38,8 @@ const FILTER_COLUMNS = [
 "Jail Release 12 Months: (Unspecified)",
 "Unknown Jail",
 "Not Chronically Homeless",
+"Unknown Veteran",
+"Chronically Homeless"
     
 
 ]
@@ -72,6 +74,7 @@ export default class NewlyHomelessGrid extends Component{
             <Segment>
                 <Header size="huge"  textAlign='center'>
                     Unsheltered - Newly Homeless
+                    <h3><b>Interview Onl</b>y</h3>
                     <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
