@@ -235,7 +235,7 @@ export default class CityTable extends Component {
     const cityChoice = this.state.cityChoice;
     return (
       <div>
-        <div className="container my-2" style={{width:ContainerWidth}}>
+        <div className="container my-2">
           <Segment>
             <Header size="huge" textAlign="center">
               Unsheltered - Cities

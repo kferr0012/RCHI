@@ -134,7 +134,7 @@ export default class Dashboard extends Component{
     renderDashboards() {
       return(
                       
-        <div className="container my-2" style={{width:ContainerWidth}}> 
+        <div className="container my-2" > 
 
           <Segment>
               <Header size="huge"  textAlign='center'>

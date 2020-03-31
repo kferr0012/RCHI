@@ -151,7 +151,7 @@ export default class UnsheleteredVsSheltered extends Component{
       return(
           <div>
           
-          <div className="container my-2" style={{ContainerWidth}}>
+          <div className="container my-2" >
           <Segment>
               <Header size="huge"  textAlign='center'>
                   Sheltered vs Unsheltered
@@ -266,44 +266,6 @@ export default class UnsheleteredVsSheltered extends Component{
       )
       
   }
-
-
-
-    // <div className="svu-r2">
-
-    //                 <span className="component-header">Age</span>
-    //                 <BarGraph 
-    //                   data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Age"], "subpopulation", ["Total","Unknown Age"]).concat(
-    //                                         filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])
-    //                   ), ["Unsheltered", "Sheltered"])}
-    //                   indexBy = {"subpopulation"}
-    //                   keys = {["Unsheltered", "Sheltered"]}
-    //                   margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
-    //                   tickValues={4}
-    //                   gridYValues={4}
-    //                   maxValue={3000}
-    //                   groupMode = {'stacked'}
-    //                 />
-    //               </div>
-    //               <div className="svu-r2">
-    //                 <span className="component-header"> Race</span>
-    //                 <BarGraph
-    //                   data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"]).concat(
-    //                         filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])
-    //                   ), ["Unsheltered", "Sheltered"])}
-    //                   indexBy = {"subpopulation"}
-    //                   keys = {["Unsheltered", "Sheltered"]}
-    //                   margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
-    //                   tickValues={4}
-    //                   gridYValues={4}
-    //                   maxValue={2000}
-    //                   groupMode = {'stacked'}
-    //                 />
-    //               </div> 
-
-
-
-
     render(){
 
         return(
