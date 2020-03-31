@@ -162,8 +162,8 @@
             "subpopulation": "Youth (18-24)",
             "sheltered": "False",
             "year": "2016",
-            "interview": "58",
-            "total": "82",
+            "interview": "82",
+            "total": "106",
             "_type": "Unsheltered"
         }
     },
@@ -526,8 +526,8 @@
             "subpopulation": "Victim of Domestic Violence",
             "sheltered": "False",
             "year": "2018",
-            "interview": "97",
-            "total": "97",
+            "interview": "92",
+            "total": "92",
             "_type": "Unsheltered"
         }
     },
@@ -899,9 +899,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "113",
+            "interview": "112",
             "observation": "0",
-            "total": "113",
+            "total": "112",
             "subpopulation": "Veteran Yes",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -913,9 +913,9 @@
         "fields": {
             "year": "2020",
             "category": "Age",
-            "interview": "99",
+            "interview": "94",
             "observation": "162",
-            "total": "261",
+            "total": "256",
             "subpopulation": "Youth (18-24)",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -927,9 +927,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "530",
+            "interview": "519",
             "observation": "0",
-            "total": "530",
+            "total": "519",
             "subpopulation": "Chronically Homeless",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -941,9 +941,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "7",
+            "interview": "6",
             "observation": "0",
-            "total": "7",
+            "total": "6",
             "subpopulation": "Families with Children",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -955,9 +955,9 @@
         "fields": {
             "year": "2020",
             "category": "Age",
-            "interview": "121",
+            "interview": "120",
             "observation": "0",
-            "total": "121",
+            "total": "120",
             "subpopulation": "Elderly (>62)",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -969,9 +969,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "461",
+            "interview": "453",
             "observation": "0",
-            "total": "461",
+            "total": "453",
             "subpopulation": "Substance Abuse",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -983,9 +983,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "111",
+            "interview": "106",
             "observation": "0",
-            "total": "111",
+            "total": "106",
             "subpopulation": "Victim of Domestic Violence",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -997,9 +997,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "312",
+            "interview": "308",
             "observation": "0",
-            "total": "312",
+            "total": "308",
             "subpopulation": "Jail Release 12 Months",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -1011,9 +1011,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "384",
+            "interview": "373",
             "observation": "0",
-            "total": "384",
+            "total": "373",
             "subpopulation": "Mental Health Conditions",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -1039,9 +1039,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "348",
+            "interview": "344",
             "observation": "0",
-            "total": "348",
+            "total": "344",
             "subpopulation": "PTSD",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -1053,9 +1053,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": "239",
+            "interview": "232",
             "observation": "0",
-            "total": "239",
+            "total": "232",
             "subpopulation": "Brain Injury",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -1067,10 +1067,10 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": 285,
+            "interview": 280,
             "observation": 0,
-            "total": 285,
-            "subpopulation": "Pet Owners",
+            "total": 280,
+            "subpopulation": "Pet Owner",
             "sheltered": "False",
             "_type": "Unsheltered"
         },
@@ -1081,9 +1081,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": 71,
+            "interview": 69,
             "observation": 0,
-            "total": 71,
+            "total": 69,
             "subpopulation": "Pet Housing",
             "sheltered": "False",
             "_type": "Unsheltered"
@@ -1095,9 +1095,9 @@
         "fields": {
             "year": "2020",
             "category": "Subpopulations",
-            "interview": 506,
+            "interview": 485,
             "observation": 0,
-            "total": 506,
+            "total": 485,
             "subpopulation": "First Time Homeless",
             "sheltered": "False",
             "_type": "Unsheltered"

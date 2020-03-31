@@ -261,7 +261,7 @@ export default class Dashboard extends Component{
                     <Table style = {{height: "100%"}}Cell Structured>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{1383}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{1346}</Table.HeaderCell>
                       </Table.Row>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>

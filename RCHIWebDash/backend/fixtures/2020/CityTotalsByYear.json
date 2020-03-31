@@ -1110,7 +1110,7 @@
             "district": "1",
             "sheltered": "False",
             "city": "Riverside*",
-            "total": "347",
+            "total": "341",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1123,7 +1123,7 @@
             "district": "1",
             "sheltered": "False",
             "city": "Lake Elsinore",
-            "total": "52",
+            "total": "50",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1135,8 +1135,8 @@
             "year": "2020",
             "district": "1",
             "sheltered": "False",
-            "city": "Unincorporated",
-            "total": "48",
+            "city": "Unincorporated 1",
+            "total": "44",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1201,7 +1201,7 @@
             "district": "2",
             "sheltered": "False",
             "city": "Riverside*",
-            "total": "250",
+            "total": "246",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1214,7 +1214,7 @@
             "district": "2",
             "sheltered": "False",
             "city": "Jurupa Valley",
-            "total": "107",
+            "total": "103",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1226,8 +1226,8 @@
             "year": "2020",
             "district": "2",
             "sheltered": "False",
-            "city": "Unincorporated",
-            "total": "32",
+            "city": "Unincorporated 2",
+            "total": "31",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1253,7 +1253,7 @@
             "district": "3",
             "sheltered": "False",
             "city": "Temecula",
-            "total": "60",
+            "total": "59",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1265,8 +1265,8 @@
             "year": "2020",
             "district": "3",
             "sheltered": "False",
-            "city": "Unincorporated",
-            "total": "57",
+            "city": "Unincorporated 3",
+            "total": "54",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1292,7 +1292,7 @@
             "district": "3",
             "sheltered": "False",
             "city": "Hemet",
-            "total": "94",
+            "total": "93",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1330,8 +1330,8 @@
             "year": "2020",
             "district": "4",
             "sheltered": "False",
-            "city": "Unincorporated",
-            "total": "60",
+            "city": "Unincorporated 4",
+            "total": "58",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1357,7 +1357,7 @@
             "district": "4",
             "sheltered": "False",
             "city": "Coachella",
-            "total": "79",
+            "total": "78",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1396,7 +1396,7 @@
             "district": "4",
             "sheltered": "False",
             "city": "Palm Springs",
-            "total": "190",
+            "total": "189",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1422,7 +1422,7 @@
             "district": "4",
             "sheltered": "False",
             "city": "Blythe",
-            "total": "74",
+            "total": "73",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1435,7 +1435,7 @@
             "district": "4",
             "sheltered": "False",
             "city": "Palm Desert",
-            "total": "19",
+            "total": "18",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1474,7 +1474,7 @@
             "district": "5",
             "sheltered": "False",
             "city": "Menifee",
-            "total": "20",
+            "total": "19",
             "volunteers": "",
             "_type": "Unsheltered"
         },
@@ -1499,7 +1499,7 @@
             "year": "2020",
             "district": "5",
             "sheltered": "False",
-            "city": "Unincorporated",
+            "city": "Unincorporated 5",
             "total": "15",
             "volunteers": "",
             "_type": "Unsheltered"
@@ -1526,7 +1526,7 @@
             "district": "5",
             "sheltered": "False",
             "city": "Moreno Valley",
-            "total": "169",
+            "total": "165",
             "volunteers": "",
             "_type": "Unsheltered"
         },
