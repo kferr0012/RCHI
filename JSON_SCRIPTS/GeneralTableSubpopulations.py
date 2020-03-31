@@ -4,6 +4,7 @@ import json
 
 # df = pd.read_csv('../Data/HouseholdQuestions_Cities_Districts_040119_1300.csv',encoding='cp1252')
 df = pd.read_csv('../Data/PIT2020_FEB26,2020.csv')
+df = df.loc[lambda df: (df['P_Living_Situation'] != 'Couch'), :]
 
 # df = data.loc[lambda df: df['First Time Homeless'] == 'Yes', :]
 

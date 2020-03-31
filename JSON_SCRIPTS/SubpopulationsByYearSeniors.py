@@ -4,7 +4,8 @@ import json
 
 data = pd.read_csv('../Data/PIT2020_FEB26,2020.csv')
 
-df = data.loc[lambda df: df['Age As Of Today'] >= 60, :]
+df = data.loc[lambda df: (df['Age As Of Today'] >= 60) &  (df['P_Living_Situation'] != 'Couch'), :]
+
 
 year = input("Input Year: ")
 data = []
