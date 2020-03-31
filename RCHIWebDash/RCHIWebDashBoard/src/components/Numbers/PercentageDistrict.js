@@ -69,7 +69,7 @@ export default class PercentageDistrict extends React.Component {
         console.log(this.state.number);
         return (
             <div>
-                {((this.state.number / 2192) * 100).toFixed(0)}% 
+                {((this.state.number / 2155) * 100).toFixed(0)}% 
             </div>
         )
 
