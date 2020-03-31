@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import NivoLineChart from '../../components/Utilities/GraphTypes/NivoLine'
+import LineChart from '../../components/reformatedCharts/LineChart'
+import { pitCountTrendMani } from '../../components/Utilities/ChartDataManipulation/lineDataManipulation'
 import {router} from '../../components/Utilities/constants/routing'
 class PitCountTrend extends Component {
     constructor(props){
@@ -13,34 +14,11 @@ class PitCountTrend extends Component {
     }
 
     formatingData(){
-        console.log("PIT COUNT TREND DATA:")
-        console.log("this.props.query")
-        console.log(this.props.query)
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+ this.props.query) 
             .then(response => {
                 
-                console.log("response: ")
-                console.log(response) 
                 const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 5)
-
-                const formatData = filterData.reduce((accumulator, currentValue) => {
-                    if(!accumulator[currentValue.year]){
-                        accumulator[currentValue.year] = {'x': currentValue.year,'y': 0}
-                    }
-                    accumulator[currentValue.year].y += currentValue.total
-                    return accumulator;
-                }, {})
-
-                const data = Object.keys(formatData).map(key=>{
-                    return formatData[key]
-                  })
-
-                const completeData= [{"id": "Interviewed","data": data}]
-
-
-
-                console.log("completeData: ")
-                console.log(completeData)
+                const completeData = pitCountTrendMani(filterData, "District " +  this.props.clickedDistrict)
                 this.setState({
                     chartData: completeData,
                     currentDistrict: this.props.clickedDistrict
@@ -61,19 +39,12 @@ class PitCountTrend extends Component {
     }
 
     render(){
-        if(!this.state.chartData){
-            return <h1></h1>
-        }
-        if(this.state.chartData){
-            return(
-                    <NivoLineChart  height={this.props.height} subHeader={''} header={"PitCountTrend"} data={this.state.chartData}/>
-            )
-        }
+        return (
+            <div>
+                {this.state.chartData ? <LineChart {...this.props} data={this.state.chartData}/> : null}
+            </div>
+        )
     }
-
 }
 
 export default PitCountTrend;
-
-
-// axios.get('http://localhost:8000/api/CityTotalByYear/?search=1') 

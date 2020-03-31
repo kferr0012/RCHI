@@ -89,7 +89,7 @@ export default class Mental extends React.Component {
 
         return (
            <div className = "component-header" style = {{fontSize: "24px"}}>
-                {Math.round((384/1383*100))} %
+                {((384/1383*100)).toFixed(0)}%
            </div>
         )
 

@@ -47,8 +47,6 @@
 // }
 export async function aggregateFetch(listOfURLs, expandData = true){
 
-
-    console.log("AGGREGATE FETCH")
     var outputTable = {}
 
 
@@ -65,18 +63,15 @@ export async function aggregateFetch(listOfURLs, expandData = true){
         })
         .then(response => response.json())
         .then((data) =>{
-            console.log("data found in " + mapIndex)
             outputTable[mapIndex] = data
             
         })
         .catch(err => {
-            console.log("no data found for " + mapIndex)
+
         })
         
     }
 
-    console.log("fetched Data: ")
-    console.log(outputTable)
 
     if(expandData){
         for(var key in outputTable){
@@ -84,7 +79,6 @@ export async function aggregateFetch(listOfURLs, expandData = true){
         }
     }
 
-    console.log("end aggregateFetch")
     return outputTable
 
 }
@@ -108,7 +102,7 @@ function getIndex(link){
 
 export function expandOnField(jsonList,field){
 
-    console.log("expandOnField: ")
+
     var differentTables = {}
 
 
@@ -132,8 +126,7 @@ export function expandOnField(jsonList,field){
         }
     }
 
-    console.log("expandOnField result data: ")
-    console.log(differentTables)
+
 
     return differentTables
 

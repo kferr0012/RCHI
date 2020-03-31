@@ -85,7 +85,7 @@ export default class Physical extends React.Component {
 
         return (
             <div className = "component-header" style = {{fontSize: "24px"}}>
-                 {Math.round((348/1383*100)) /*.toFixed(2)*/} %
+                 {((348/1383*100)).toFixed(0)}%
             </div>
         )
 

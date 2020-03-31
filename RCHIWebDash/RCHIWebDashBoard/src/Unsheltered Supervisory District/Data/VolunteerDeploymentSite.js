@@ -41,7 +41,7 @@ class VolunteerDeploymentSite extends Component{
           })
 
         this.setState({
-          chartData : this.TableRender(completeData),
+          chartData : this.TableRender(completeData.sort( (a,b) => { return b.values - a.values})),
           currentDistrict: this.props.clickedDistrict
         })
       })

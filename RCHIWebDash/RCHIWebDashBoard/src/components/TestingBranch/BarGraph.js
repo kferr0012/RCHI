@@ -18,6 +18,8 @@ export default class BarGraph extends Component{
             tickValues: this.props.tickValues,
             gridYValues: this.props.gridYValues,
             maxValue: this.props.maxValue,
+            groupMode: this.props.groupMode,
+            height: this.props.height
         }
 
         //console.log("BarGraph data")
@@ -40,8 +42,10 @@ export default class BarGraph extends Component{
     }
 
     render(){
+        console.log("HEIGHT: " , this.props.height)
         return(
         <div style = {{height: '100%', width: '100%', position:'absolute'}}>
+            {/* <div style = {{height: this.props.height ?  this.props.height : "100%", width: '100%'}}> */}
             <ResponsiveBar
             data={this.state.mydata}
             keys={this.state.keys}
@@ -49,9 +53,9 @@ export default class BarGraph extends Component{
             margin={this.props.margin}
             maxValue={this.state.maxValue}
             padding={0.15}
-            groupMode="grouped"
+            groupMode={this.state.groupMode}
             colors={ colors[7] }
-            colorBy="index"
+            colorBy="id"
             defs={[
                 {
                     id: 'dots',
@@ -93,9 +97,9 @@ export default class BarGraph extends Component{
             }}
             gridYValues={this.state.gridYValues}
             labelSkipWidth={0}
-            labelSkipHeight={0}
+            labelSkipHeight={4}
             labelTextColor={{ from: 'color', modifiers: [ [ 'darker', 1.6 ] ] }}
-            labelFormat={d => <tspan y={ -10 }>{ d }</tspan>}
+            // labelFormat={d => <tspan y={ -10 }>{ d }</tspan>}
             legends={this.props.legend ? [
                 {
                     dataFrom: 'keys',

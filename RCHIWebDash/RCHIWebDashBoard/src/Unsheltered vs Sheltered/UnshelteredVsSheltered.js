@@ -10,9 +10,11 @@ import TableComponent4 from '../components/charts/TableComponent4.js';
 import {aggregateFetch, expandOnField} from '../components/Utilities/ListManipulation/aggregateFetch'
 import fetchTest from '../components/Utilities/ListManipulation/fetchTest'
 
-import {filter, subset, filterList} from '../components/Utilities/ListManipulation/filter'
+import { shelteredVsUnshelteredMani } from '../components/Utilities/ChartDataManipulation/barDataManipulaton'
+import { ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+import {filter, subset, filterList } from '../components/Utilities/ListManipulation/filter'
 import {combine} from '../components/Utilities/ListManipulation/combine'
-import {Header,Segment} from 'semantic-ui-react'
+import {Header,Segment, Container, Grid} from 'semantic-ui-react'
 
 import{router} from '../components/Utilities/constants/routing'
 
@@ -146,110 +148,161 @@ export default class UnsheleteredVsSheltered extends Component{
 
     renderDashboards(){
 
-        return(
-            <div>
-            
-            <div className="container my-2">
-            <Segment>
-                <Header size="huge"  textAlign='center'>
-                    Sheltered vs Unsheltered
-                    <Header sub> 2020 Riverside County Pit Count</Header>
-                </Header>
-            </Segment>
-            <div className="row dash-row">
-              <div className="col-md dash-col-com">
-                <div className="svu-grid">
-                    <div className="svu-r1">
-                        
-                        <TableComponent4
-                        data = {filterList(this.getOrderedShelteredData(),"subpopulation", FILTERED_COUNTS)}
-                        expandIndex = {"year"}
-                        tableName = "Sheltered Statistics"
-                        header = {true}
-                        height = {"120%"}
-                        />
-                    </div>
-                    <div className="svu-r2-h25">
-                      <span className="component-header"><div>Sheltered Household</div>Composition</span>>
-                      <PieChart2
-                        data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Households"],"subpopulation", ["Total"])}
-                        footer = {false}
-                        margin = {{ top: 60, right: 0, bottom: 25, left: 0 }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              <div className="col-md-6 dash-col-com">
-                <div className="svu-grid-2">
-                  <div className="svu-r1-2">
-                  {<span className="component-header">Homeless Population Trend</span>}
-                    <LineGraph 
-                      margin = {{top: 40, right: 40, bottom: 60, left: 40 }}
-                      max = {2500}
-                      tickValues = {4}
-                      gridYValues = {4}
-                    />
-                  </div>
-                  <div className="svu-r2">
-
-                    <span className="component-header">Age</span>
-                    <BarGraph 
-                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])}
-                      indexBy = {"subpopulation"}
-                      keys = {["total"]}
-                      margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
-                      tickValues={4}
-                      gridYValues={4}
-                      maxValue={2000}
-                    />
-                  </div>
-                  <div className="svu-r2">
-                    <span className="component-header"> Race</span>
-                    <BarGraph
-                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])}
-                      indexBy = {"subpopulation"}
-                      keys = {["total"]}
-                      margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
-                      tickValues={4}
-                      gridYValues={4}
-                      maxValue={2000}
-                    />
-                  </div>                  
-                </div>
-              </div>
-              <div className="col-md dash-col-com">
-                <div className="svu-grid">
+      return(
+          <div>
+          
+          <div className="container my-2" style={{ContainerWidth}}>
+          <Segment>
+              <Header size="huge"  textAlign='center'>
+                  Sheltered vs Unsheltered
+                  <Header sub> 2020 Riverside County Pit Count</Header>
+              </Header>
+          </Segment>
+          <div className="row dash-row">
+            <div className="col-md dash-col-com">
+              <div className="svu-grid">
                   <div className="svu-r1">
-                    
-                    <TableComponent4
-                      //data = {this.state.Tables["GeneralTableSubpopulations-unexpanded"].concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations-unexpanded"])}
-                      data = {filterList(this.getOrderedUnshelteredData(),"subpopulation", FILTERED_COUNTS)}
-                      tableName = "Unsheltered Statistics"
+                      
+                      <TableComponent4
+                      data = {filterList(this.getOrderedShelteredData(),"subpopulation", FILTERED_COUNTS)}
                       expandIndex = {"year"}
+                      tableName = "Sheltered Statistics"
                       header = {true}
                       height = {"120%"}
-                    />
-                    
+                      position = "absolute"
+                      />
                   </div>
                   <div className="svu-r2-h25">
-                    <p className="component-header">Unsheltered Household Composition</p>
+                    <br/>
+                    {/* <span className="component-header"><div>Sheltered Household</div>Composition</span> */}
                     <TableComponent4
-                      tableName = "Unsheltered Household Composition"
-                      data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"]}
-                      header = {false}
-                      height = {"100%"}
-                    />
-                    
+                    tableName = "Sheltered Household Composition"
+                    data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Households"].sort( (a,b) => { return b.total - a.total})}
+                    header = {false}
+                    divHeight = {"100%"}
+                    // position = "absolute"
+                  />
                   </div>
                 </div>
+              </div>
+            <div className="col-md-6 dash-col-com">
+              <div className="svu-grid-2">
+                <div className="svu-r1-2">
+                {<span className="component-header">Homeless Population Trend</span>}
+                  <LineGraph 
+                    margin = {{top: 40, right: 40, bottom: 60, left: 40 }}
+                    max = {2500}
+                    tickValues = {4}
+                    gridYValues = {4}
+                  />
                 </div>
+                <div className="svu-r2">
+
+            <span className="component-header">Age</span>
+            <BarGraph 
+              data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Age"], "subpopulation", ["Total","Unknown Age"]).concat(
+                                    filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])
+              ), ["Unsheltered", "Sheltered"])}
+              indexBy = {"subpopulation"}
+              keys = {["Unsheltered", "Sheltered"]}
+              margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+              tickValues={4}
+              gridYValues={4}
+              maxValue={3000}
+              groupMode = {'stacked'}
+            />
+            </div>
+            <div className="svu-r2">
+            <span className="component-header"> Race</span>
+            <BarGraph
+              data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"]).concat(
+                    filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])
+              ), ["Unsheltered", "Sheltered"])}
+              indexBy = {"subpopulation"}
+              keys = {["Unsheltered", "Sheltered"]}
+              margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
+              tickValues={4}
+              gridYValues={4}
+              maxValue={2000}
+              groupMode = {'stacked'}
+            />
+            </div>                
+              </div>
+            </div>
+            <div className="col-md dash-col-com">
+              <div className="svu-grid">
+                <div className="svu-r1">
+                  
+                  <TableComponent4
+                    //data = {this.state.Tables["GeneralTableSubpopulations-unexpanded"].concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations-unexpanded"])}
+                    data = {filterList(this.getOrderedUnshelteredData(),"subpopulation", FILTERED_COUNTS)}
+                    tableName = "Unsheltered Statistics"
+                    expandIndex = {"year"}
+                    header = {true}
+                    height = {"120%"}
+                    position = "absolute"
+                  />
+                  
+                </div>
+                <div className="svu-r2-h25">
+                  {/* <p className="component-header">Unsheltered Household Composition</p> */}
+
+                  <br/>
+                  <TableComponent4
+                    tableName = "Unsheltered Household Composition"
+                    data = {this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"].sort((a,b) => {return b.total - a.total})}
+                    header = {false}
+                    height = {"100%"}
+                    // position = "ob"
+                  />
+                  
+                </div>
+              </div>
               </div>
             </div>
           </div>
-        
-        )
-        
-    }
+        </div>
+      
+      )
+      
+  }
+
+
+
+    // <div className="svu-r2">
+
+    //                 <span className="component-header">Age</span>
+    //                 <BarGraph 
+    //                   data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Age"], "subpopulation", ["Total","Unknown Age"]).concat(
+    //                                         filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])
+    //                   ), ["Unsheltered", "Sheltered"])}
+    //                   indexBy = {"subpopulation"}
+    //                   keys = {["Unsheltered", "Sheltered"]}
+    //                   margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
+    //                   tickValues={4}
+    //                   gridYValues={4}
+    //                   maxValue={3000}
+    //                   groupMode = {'stacked'}
+    //                 />
+    //               </div>
+    //               <div className="svu-r2">
+    //                 <span className="component-header"> Race</span>
+    //                 <BarGraph
+    //                   data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"]).concat(
+    //                         filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Race"], "subpopulation", ["Total","Unknown Race", "Native Hawaiian", "Asian", "American Indian"])
+    //                   ), ["Unsheltered", "Sheltered"])}
+    //                   indexBy = {"subpopulation"}
+    //                   keys = {["Unsheltered", "Sheltered"]}
+    //                   margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
+    //                   tickValues={4}
+    //                   gridYValues={4}
+    //                   maxValue={2000}
+    //                   groupMode = {'stacked'}
+    //                 />
+    //               </div> 
+
+
+
 
     render(){
 

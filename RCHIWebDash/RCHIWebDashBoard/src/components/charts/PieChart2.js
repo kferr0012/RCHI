@@ -51,6 +51,7 @@ export default class PieChart2 extends React.Component {
 
         return (
             <div style = {{height: '100%', width: '100%', position:'absolute'}}>
+            {/* // <div style={{height:this.state.height, width: '100%'}}> */}
             <ResponsivePie
                 data={mydata}
                 margin={this.props.margin}

@@ -1,9 +1,8 @@
 import React from 'react'
 import {Grid, Segment} from 'semantic-ui-react'
 
-const PageOneTrend = (props) => (
-    <div>
-        <Grid>
+const PageThreeTrend = (props) => (
+        <Grid stackable>
             <Grid.Row verticalAlign='middle'> 
                 <Grid.Column width={8}>
                     <Segment>{props.trendsSelected[0]}</Segment>
@@ -22,7 +21,6 @@ const PageOneTrend = (props) => (
                 </Grid.Column>
             </Grid.Row>
         </Grid>
-    </div>
 )
 
-export default PageOneTrend
+export default PageThreeTrend

@@ -3,9 +3,9 @@ import {Header} from 'semantic-ui-react'
 import React from 'react'
 
 // import { colors } from '../colors';
-const ResponsiveNivoLine = props => {
+const LineChart = props => {
 
-    let { header , subHeader , divHeight, margin, tickValues , gridYValues, maxValue, data , legend ,colors} = props
+    let {stacked, header , subHeader , divHeight, margin, tickValues , gridYValues, maxValue, data , legend ,colors} = props
 
     return(
         <div style={{height:divHeight ? divHeight : "100%", width: '100%'}}>
@@ -17,7 +17,7 @@ const ResponsiveNivoLine = props => {
                 data={data}
                 margin={margin}
                 xScale={{ type: 'point' }}
-                yScale={{ type: 'linear', stacked: false, min: 0, max: maxValue}}
+                yScale={{ type: 'linear', stacked: stacked ? stacked : false, min: 0, max: maxValue}}
                 axisTop={null}
                 axisRight={null}
                 axisBottom={{
@@ -81,4 +81,4 @@ const ResponsiveNivoLine = props => {
         </div>
 )}
 
-export default ResponsiveNivoLine
+export default LineChart

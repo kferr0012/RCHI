@@ -12,7 +12,7 @@ import {Header,Segment, Grid, Container, GridColumn} from 'semantic-ui-react'
 import {filterList} from '../components/Utilities/ListManipulation/filter'
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
-import { newlyHomelessStyling, ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+import { seniorsUnshelteredStyling ,  ContainerWidth} from '../components/chartTablesStyling/chartTablesStyling'
 
 const FILTER_COLUMNS = [
 
@@ -44,17 +44,17 @@ const FILTER_COLUMNS = [
 "Unknown Jail",
 "Not Chronically Homeless",
 "Unknown Veteran",
-"Chronically Homeless"
-    
+"Chronically Homeless",
+"Couch"
 
 ]
 
 
-export default class NewlyHomelessGrid extends Component{
+export default class SeniorDashboardGrid extends Component{
     constructor(){
         super();
         this.state = {
-            urls: [router.host + '/' + router.root + '/' + router.activeYear +"/NewlyHomelessByCity/"],
+            urls: [router.host + '/' + router.root + '/' + router.activeYear +"/SeniorsSubpopulations/"],
             rendered : false,
             Tables : []
         }
@@ -73,7 +73,6 @@ export default class NewlyHomelessGrid extends Component{
     }
 
     renderDashboard(){
-        console.log("NEW HOMELESS AGE DATAaaaa: ", filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS).sort((a,b) => {return b.total - a.total}))
         return(
             <div className="container my-2">
             <Segment>
@@ -89,9 +88,10 @@ export default class NewlyHomelessGrid extends Component{
               <div className="col-sm-8 dash-col-com">
                 <div className="gen-grid">
                     <div className = "gen-r2">
+
                         <div className="gen-r2c2">
                         <TableComponent4 
-                            data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS).sort((a,b) => {return b.total - a.total})}
+                            data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS)}
                             tableName = "Age"
                             height = "120%"
 
@@ -151,10 +151,11 @@ export default class NewlyHomelessGrid extends Component{
     }
 
     dashboard(){
+        console.log("TABLE SENIORS: ", this.state.Tables)
        return <Container style={{width:ContainerWidth}}>
             <Segment>
                 <Header as='h1'  textAlign='center'>
-                     Unsheltered - Newly Homeless
+                     Unsheltered - Newly Seniors 60+
                     <h3><b>Interview Only</b></h3>
                 <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
@@ -165,8 +166,8 @@ export default class NewlyHomelessGrid extends Component{
                     <Grid.Column>
                         {/* <Segment> */}
                             <TableComponent4 
-                                data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS).sort((a,b) => {return b.total - a.total})}
-                                {...newlyHomelessStyling["Age"]}
+                                data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Living Situation"],"subpopulation", FILTER_COLUMNS).sort( (a,b) => { return b.total - a.total})}
+                                {...seniorsUnshelteredStyling["Living Situation"]}
 
                             />
                         {/* </Segment> */}
@@ -175,15 +176,15 @@ export default class NewlyHomelessGrid extends Component{
 
                         {/* <Segment> */}
                             <PieChart 
-                                data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Ethnicity"],"subpopulation", ["Total"]))}
-                                {...newlyHomelessStyling["Ethnicity"]}
+                                data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Ethnicity"],"subpopulation", ["Total"]))}
+                                {...seniorsUnshelteredStyling["Ethnicity"]}
                             />
 
                             <br />
 
                                 <PieChart 
-                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Gender"],"subpopulation", ["Total"]))}
-                                    {...newlyHomelessStyling["Gender"]}
+                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Gender"],"subpopulation", ["Total"]))}
+                                    {...seniorsUnshelteredStyling["Gender"]}
                                 />
                         {/* </Segment> */}
                     </Grid.Column>
@@ -191,8 +192,8 @@ export default class NewlyHomelessGrid extends Component{
                     <Grid.Column>
                         {/* <Segment> */}
                             <TableComponent4 
-                                data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS)}
-                                {...newlyHomelessStyling["Subpopulations"]}
+                                data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Subpopulations"],"subpopulation", FILTER_COLUMNS)}
+                                {...seniorsUnshelteredStyling["Subpopulations"]}
                             />
                         {/* </Segment> */}
                     </Grid.Column>
@@ -203,8 +204,8 @@ export default class NewlyHomelessGrid extends Component{
                     <Grid.Column width={12}>
                         <Segment>
                                 <BarChart 
-                                    data = {this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Race"]}
-                                    {...newlyHomelessStyling["Race"]}
+                                    data = {this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Race"]}
+                                    {...seniorsUnshelteredStyling["Race"]}
                                 />
                             </Segment>
                     </Grid.Column>
@@ -212,8 +213,8 @@ export default class NewlyHomelessGrid extends Component{
                     <Grid.Column width={4}>
                         <Segment>
                             <TableComponent4 
-                                data = {this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Households"]}
-                                {...newlyHomelessStyling["Household"]}
+                                data = {this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Households"]}
+                                {...seniorsUnshelteredStyling["Household"]}
 
                             />
                             </Segment>

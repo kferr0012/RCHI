@@ -10,7 +10,6 @@ function contains(dataRow, category, valueList){
 }
 
 export function filter ( data, catergory, value ) {
-    console.log("filter")
     var newData = [];
     
     for ( const x in data ) {
@@ -19,18 +18,15 @@ export function filter ( data, catergory, value ) {
         }
     }
 
-    console.log("newData")
     console.log(newData)
     return newData;
 }
 
 export function filterList (data, category, valueList){
     
-    console.log("\tvalueList")
-    console.log(valueList)
     
     var newData = []
-    console.log("filterList")
+
     for(var i = 0 ; i < data.length;i++){
         
         if (!contains(data[i], category,valueList)){
@@ -59,4 +55,40 @@ export function remove ( data, category, value ) {
         }
     }
     return newData;
+}
+
+
+export const stackBarGraph =(data, keys) => {
+    console.log("KEYS: ", keys)
+
+    const newDataObject = data.reduce((acc,val) => {
+        let {subpopulation, total, _type} = val
+
+        if(!acc[subpopulation]){
+            acc[subpopulation] = { [_type]: total}
+        }
+        else{
+            acc[subpopulation] = {...acc[subpopulation], [_type]:total }
+        }
+        return acc
+    }, {})
+
+    const newDataArray = Object.entries(newDataObject).map(([key,value]) => {
+        console.log("KEY: ", key)
+        console.log("Value: ", value)
+        let {Unsheltered, Sheltered} = value
+        console.log("Type: ", typeof(Unsheltered))
+        console.log("UNSHELTERRED: ", Unsheltered)
+        return{
+            subpopulation: key,
+            Unsheltered: Unsheltered,
+            Sheltered : Sheltered
+        }
+    })
+
+    console.log("NEW DATA ARRAY: ", newDataArray)
+
+
+
+    return newDataArray
 }

@@ -1,9 +1,10 @@
 import LineGraph from '../charts/LineGraph';
 import BarGraph from '../../components/TestingBranch/BarGraph'
+import BarChart from '../../components/reformatedCharts/BarChart'
 import PieChart2 from '../charts/PieChart2'
 import TableComponent2 from '../charts/TableComponent2'
 import TableComponent4 from '../charts/TableComponent4'
-import { Header, Table, Segment} from 'semantic-ui-react';
+import { Header, Table, Segment,Container,Grid} from 'semantic-ui-react';
 
 import React, {Component} from 'react';
 import '../css/dash.css';
@@ -20,6 +21,7 @@ import Physical from "../Numbers/Physical";
 import PTSD from "../Numbers/PTSD";
 import Substance from "../Numbers/Substance";
 import TotalGeneral from "../Numbers/TotalGeneral";
+import { ContainerWidth } from "../chartTablesStyling/chartTablesStyling"
 
 
 const FILTER_COLUMNS = [
@@ -132,8 +134,7 @@ export default class Dashboard extends Component{
     renderDashboards() {
       return(
                       
-        <div className="container my-2">
-
+        <div className="container my-2" style={{width:ContainerWidth}}> 
 
           <Segment>
               <Header size="huge"  textAlign='center'>
@@ -151,6 +152,7 @@ export default class Dashboard extends Component{
                 expandIndex = {"_type"}
                 header = {true}
                 height = {"100%"}
+                position = "absolute"
               />
             </div>
             <div className="col-md dash-col-reg">
@@ -170,6 +172,7 @@ export default class Dashboard extends Component{
             <div className="col-md dash-col-big">
               <div className="gen-grid">
                 <div className="gen-r1">
+                  <br/>
                   <p className="component-header">Race</p>
                   <BarGraph
                     data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Race"], "subpopulation", ["Total"])}
@@ -286,7 +289,7 @@ export default class Dashboard extends Component{
                   </div>
                   <div className="gen-r2c1r2">
                     <TableComponent4
-                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
+                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"]).sort( (a,b) => { return b.total - a.total})}
                       header = {false}
                       height = {"100%"}
                     />

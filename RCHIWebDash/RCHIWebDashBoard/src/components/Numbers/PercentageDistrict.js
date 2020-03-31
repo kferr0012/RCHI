@@ -2,7 +2,7 @@ import React from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 
-export default class PTSD extends React.Component {
+export default class PercentageDistrict extends React.Component {
 
     constructor(props){
         super(props)
@@ -52,41 +52,24 @@ export default class PTSD extends React.Component {
         await this.fetchData()
     }
 
-
-    round(value, precision) {
-        var multiplier = Math.pow(10, precision || 0);
-        return Math.round(value * multiplier) / multiplier;
-    }
-
     runTotal(){
 
-        let percent;
         let i;
-        let totalNum;
+        let totalValues = this.state.mydata;
         for (i = 0; i < this.state.mydata.length; i++) {
             this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation;
-            if(this.state.mydata[i].trend === 'Homeless Population ' && this.state.mydata[i].category === "Unsheltered"){
-                totalNum = this.state.mydata[i].total;
-
+            if(this.state.mydata[i].subpopulation === 'Total'){
+                this.state.number = this.state.mydata[i].value
             }
-            if(this.state.mydata[i].category === "PTSD"){
-                this.state.number = this.state.mydata[i].total;
-            }
-
-
 
 
         }
 
+        console.log(this.state.mydata);
         console.log(this.state.number);
-        console.log(totalNum);
-        percent = (this.state.number/totalNum) * 100;
-        percent = this.round(percent, 0);
-
-
         return (
-            <div className = "component-header" style = {{fontSize: "24px"}}>
-                {(348/1383 * 100).toFixed(0)}%
+            <div>
+                {((this.state.number / 2192) * 100).toFixed(0)}% 
             </div>
         )
 
@@ -98,11 +81,8 @@ export default class PTSD extends React.Component {
     }
     render() {
         return (
-            <div style = {{height: this.state.height}}>
-                
-                {this.state.mydata ? this.runTotal(): null} 
-                <span className = "component-header">PTSD</span>
-                <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
+            <div>
+                {this.state.mydata ? this.runTotal(): null}
             </div>
 
         )

@@ -388,5 +388,18 @@
             "_type": "Sheltered",
             "year": "2020"
         }
+    },
+    {
+        "pk": "32",
+        "model": "backend.GeneralTableSubpopulationsSheltered2020",
+        "fields": {
+            "category": "Households",
+            "subpopulation": "Total",
+            "interview": 756,
+            "observation": 0,
+            "total": 756,
+            "_type": "Sheltered",
+            "year": "2020"
+        }
     }
 ]

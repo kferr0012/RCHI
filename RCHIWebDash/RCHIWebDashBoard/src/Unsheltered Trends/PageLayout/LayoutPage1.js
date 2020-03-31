@@ -3,7 +3,7 @@ import {Grid, Segment} from 'semantic-ui-react'
 
 const PageOneTrend = (props, key) =>{
  return (
-        <Grid>
+        <Grid stackable>
             <Grid.Row verticalAlign='middle'> 
                 <Grid.Column width={8}>
                     <Segment>{props.trendsSelected[0]}</Segment>

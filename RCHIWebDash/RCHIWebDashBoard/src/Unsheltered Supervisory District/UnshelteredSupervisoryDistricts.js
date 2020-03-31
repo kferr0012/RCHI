@@ -9,6 +9,7 @@ import PageLayout from './PageLayout/PageLayout'
 
 import {aggregateFetch, expandOnField } from './../components/Utilities/ListManipulation/aggregateFetch'
 import { router } from '../components/Utilities/constants/routing'
+import { ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
 
 
 class UnshelteredSupervisoryDistricts extends Component{
@@ -30,9 +31,6 @@ class UnshelteredSupervisoryDistricts extends Component{
 
     reformatData(Tables){
 
-        console.log("REFORMAT DATA")
-
-        console.log("GENERATE KEYS by district")
         //generate keys of district
         Tables[router.formerYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.formerYear +"/SubpopulationsByCity"],"district")
         Tables[router.activeYear +"/SubpopulationsByCity"] = expandOnField(Tables[router.activeYear +"/SubpopulationsByCity"],"district")
@@ -64,7 +62,7 @@ class UnshelteredSupervisoryDistricts extends Component{
     }
     
     async componentDidMount(){
-        console.log("SD componentDidMount")
+   
         var Tables = await aggregateFetch(this.state.urls,false)
         
         this.setState({
@@ -74,7 +72,6 @@ class UnshelteredSupervisoryDistricts extends Component{
     }
     NavOnChangeHandler = (e, data) => {
 
-        console.log("NavOnChangeHandler")
         const currentPage = data.activePage
 
 
@@ -85,15 +82,13 @@ class UnshelteredSupervisoryDistricts extends Component{
     } 
 
     render(){
-        console.log("UnshelteredSupervisoryDistricts: rendering")
-        console.log("states:")
-        console.log(this.state)
+
         return(
 
              <div>
             
              {this.state.rendered ? 
-                <Container style={{width:'80%'}}>           
+                <Container style={{width:ContainerWidth}}>           
 
                 <TrendNavBar totalPages={this.state.totalPages} changed = {this.NavOnChangeHandler}/>
                 <Header currentPage = {this.state.currentPage}/>

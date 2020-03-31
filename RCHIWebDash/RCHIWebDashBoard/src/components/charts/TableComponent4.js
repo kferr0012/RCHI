@@ -191,14 +191,13 @@ class TableComponent4 extends Component{
 
   render(){
 
-
     if(!this.state.flag){
       return(<h3>Loading</h3>);
     }
     else{
     return(
-      <div className="tableContainer" style = {{...this.state.mystyle, height: this.props.height, width: "100%", position: 'absolute', padding: 0}}>
-            <Table Cell Structured unstackable style={{ borderWidth: "1px", height: "80%"}}>
+      <div className="tableContainer" style = {{...this.state.mystyle, height: this.props.divHeight ? this.props.divHeight: '100%', width: "100%", padding: 0, position: this.props.position ? this.props.position : ''}}>
+            <Table Cell Structured unstackable style={{ borderWidth: "1px", height: this.props.tableHeight ? this.props.tableHeight : "80%"}}>
               <Table.Header>
 
                 {this.props.tableName ?

@@ -9,6 +9,8 @@ import TrendPage1 from './PageLayout/LayoutPage1'
 import TrendPage2 from './PageLayout/LayoutPage2' 
 import TrendPage3 from './PageLayout/LayoutPage3' 
 
+import { unshelteredTrendsStyling, ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+
 
 
 import GeneralTrendsNivo from './Data/GeneralTrendsNivo'
@@ -22,7 +24,8 @@ class UnshelteredSubpopulationTrends extends Component{
             currentPage : 1,
             trendsSelected: ['Veteran','Youth (18-24)','Chronically Homeless','Families with Children','Elderly (>62)'],
             pageDisplayed: <TrendPage1/>,
-            totalPages:3
+            totalPages:3,
+            // maxValue = {Veteran: }
         }
     }
 
@@ -48,10 +51,25 @@ class UnshelteredSubpopulationTrends extends Component{
 
     TrendSelectedHandler(){
         return this.state.trendsSelected.map((trend, index )=> {
-            if(trend === "Jail Release 12 Months") return <GeneralTrendsNivo header={"Incarceration"} subHeader={'within last 12 months'} query={trend} key={index} id={index} legend={false}/>
-            else if(trend === "Youth (18-24)") return <YouthTrend  header={trend} subHeader={''} id={index} key={index} query={trend} legend={true}/>
-            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend header={trend} subHeader={'Interviewed Only'} query={"Subpopulations"} years={[2019,2020]} keys={["Interviewed"]}/> 
-            else return <GeneralTrendsNivo header={trend} subHeader={'Interviewed Only'} id={'Interviewed'} key={index} query={trend} legend={false}/>
+            if(trend === "Youth (18-24)") return <YouthTrend  
+                id={index} 
+                key={index} 
+                query={trend}
+                {...unshelteredTrendsStyling[trend]} 
+                />
+            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend 
+                query={"Subpopulations"}
+                indexBy = {"year"}
+                keys={["total"]}
+                {...unshelteredTrendsStyling[trend]} 
+                /> 
+            else return <GeneralTrendsNivo 
+                lineID={trend} 
+                id={'Interviewed'} 
+                key={index} 
+                query={trend}
+                {...unshelteredTrendsStyling[trend]} 
+                />
         })
     }
 
@@ -64,7 +82,7 @@ class UnshelteredSubpopulationTrends extends Component{
 
     render(){
         return(
-            <Container>
+            <Container style={{width:ContainerWidth}}>
                 <TrendNavBar totalPages={this.state.totalPages} changed = {this.NavOnChangeHandler}/>
                 <Header currentPage = {this.state.currentPage}/>
                 {this.PageHandler()}

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {router} from '../../components/Utilities/constants/routing'
+import { pieDataManiInterview } from '../../components/Utilities/ChartDataManipulation/pieDataManipulation'
+import PieChart from '../../components/reformatedCharts/PieChart'
 
 import NivoPieChart from '../../components/Utilities/GraphTypes/NivoPie'
 
@@ -17,27 +19,35 @@ class PieData extends Component{
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search='+this.props.query)
             .then(response => {
                 const filterData = response.data.filter(row => (row.subpopulation !== "Total" && row.city !== "RIVERSIDE"))
-   
-                const formatData = filterData.reduce((accumulator, currentValue) => {
-                    if(!accumulator[currentValue.subpopulation]){
-                        accumulator[currentValue.subpopulation] = {"value": 0, "label": currentValue.subpopulation, "id":currentValue.subpopulation}
+
+                const newDataObject = filterData.reduce((acc,val) => {
+
+                    let {subpopulation, interview, observation, total} = val
+
+                    if(!acc[subpopulation]){
+                        acc[subpopulation] = {interview:0, observation:0, total:0}
                     }
-                    accumulator[currentValue.subpopulation]["value"] += currentValue.interview + currentValue.observation
-                    return accumulator;
+                    acc[subpopulation].interview += interview
+                    acc[subpopulation].observation += observation
+                    acc[subpopulation].total += total
+                    return acc
                 }, {})
 
-                const completeData = Object.keys(formatData).map(key=>{
-                    return formatData[key]
-                  })
+                const newDataArray = Object.entries(newDataObject).map(([key,value]) => {
+                    return{
+                        subpopulation:key,
+                        ...value
+                    }
+                })
 
                   this.setState({
-                    chartData : completeData,
+                    chartData : pieDataManiInterview(newDataArray),
                     currentDistrict: this.props.clickedDistrict
                   })
             })
     }
 
-    componentDidMount(){
+    async componentDidMount(){
         this.formatingData()
     }
 
@@ -50,14 +60,9 @@ class PieData extends Component{
     }
 
     render(){
-        if(!this.state.chartData){
-            return <h1></h1>
-        }
-        if(this.state.chartData){
-            return(
-                    <NivoPieChart height = {this.props.height}  subHeader={this.props.subHeader} header={this.props.header} data={this.state.chartData}/>
-            )
-        }
+        return <div>
+            {this.state.chartData ? <PieChart {...this.props} data={this.state.chartData}/> :  null}
+        </div>
     }
 }
 

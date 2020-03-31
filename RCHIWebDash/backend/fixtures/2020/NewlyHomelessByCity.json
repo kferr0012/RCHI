@@ -236,10 +236,10 @@
     {
         "fields": {
             "category": "Age",
-            "interview": 453,
+            "interview": 382,
             "observation": 0,
-            "subpopulation": "Adults (>24)",
-            "total": 453,
+            "subpopulation": "Adults (25-59)",
+            "total": 382,
             "year": 2020,
             "_type": "Unsheltered"
         },

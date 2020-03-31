@@ -21,7 +21,6 @@ class PitCountByCity extends Component{
       .then(response=>{
 
         const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 2)
-        console.log("PIT COUNT BY CITY FILTER DATA: ", filterData)
         
         const formatData = filterData.reduce((accumulator, currentValue) => {
             if(!accumulator[currentValue.city]){
@@ -34,11 +33,10 @@ class PitCountByCity extends Component{
         const completeData = Object.keys(formatData).map(key=>{
             return formatData[key]
           })
-
-        console.log("AXIOS DATA: " , completeData)
-        console.log()
+        
+          // console.log("PIT DTA: ", completeData.sort( (a,b) => { return (b['2019'] + b['2020']) - (a['2019'] + a['2020'])}))
         this.setState({
-          chartData : this.TableRender(completeData),
+          chartData : this.TableRender(completeData.sort( (a,b) => { return (b['2019'] + b['2020']) - (a['2019'] + a['2020'])})),
           currentDistrict: this.props.clickedDistrict  
         })
       })

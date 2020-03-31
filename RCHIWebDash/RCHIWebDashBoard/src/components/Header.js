@@ -19,6 +19,7 @@ const links = [
   { name: 'General Dashboard',                link: '/' },
   { name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
   { name: 'Newly Homeless',               link: '/NewlyHomeless' },
+  { name: 'Seniors',               link: '/SeniorsDashBoard' },
   { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
   { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
   { name: 'City Breakdown',                link: '/CityBreakdown' },

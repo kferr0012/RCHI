@@ -16,7 +16,6 @@ export function combine ( array1, array2 ) {
 
 export function combineCountsByCategory(data){
 
-    console.log("combineCountsByCategory")
     var countMap = {}
     for(const row in data){
       var fields = data[row]
@@ -51,25 +50,16 @@ export function combineCountsByCategory(data){
         outputTable.push(countMap[category][subpopulation])
       }
     }
-    console.log("results")
   
     for(const x in outputTable){
-      console.log(outputTable[x])
     }
     
-    console.log("countMap: ")
-    console.log(countMap)
-    console.log("outputTable:")
-    console.log(outputTable)
     return outputTable
   
   }
 
 export function combineCounts(list1, list2){
 
-    console.log("COMBINE COUNTS")
-    console.log(list1)
-    console.log(list2)
 
     //make hard copies 
     list1 = JSON.parse(JSON.stringify(list1))
@@ -81,8 +71,7 @@ export function combineCounts(list1, list2){
     for(var index in list1){
         //json get
         var myJson = list1[index]
-        console.log("myJson")
-        console.log(myJson)
+
         var category = myJson["category"]
         var subpopulation = myJson["subpopulation"]
         if (!(category in resultCountsMap)){
@@ -129,8 +118,6 @@ export function combineCounts(list1, list2){
         }
     }
 
-    console.log("RESULT MAP")
-    console.log(resultCountsMap)
 
 
 

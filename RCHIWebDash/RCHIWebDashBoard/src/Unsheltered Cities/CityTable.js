@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
+import {Header,Segment, Grid, Container} from 'semantic-ui-react'
+
 import { CustomToggle, CustomMenu } from "./components/CustomToggle";
 import { Dropdown, Button } from "react-bootstrap";
 
 import Number from "../components/Numbers/Number";
 import Total from "../components/Numbers/Total";
+import PercentageDistrict from "../components/Numbers/PercentageDistrict"
 import { Row, Col } from "antd";
 
 import Select from "react-select";
@@ -12,10 +15,12 @@ import Select from "react-select";
 import "./DottedBox.css";
 import "../components/css/dash.css";
 
-import BarGraph from "../components/TestingBranch/BarGraph";
+import BarGraph2 from "../components/TestingBranch/BarGraph";
 import PieChart2 from "../components/charts/PieChart2";
 import LineGraph from "../components/charts/LineGraph";
 import TableComponent4 from "../components/charts/TableComponent4.js";
+import { unshelteredCitiesStyling, ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+import BarGraph from '../components/reformatedCharts/BarChart'
 
 import {
   aggregateFetch,
@@ -28,7 +33,6 @@ import {
 } from "../components/Utilities/ListManipulation/filter";
 import { getOverflowOptions } from "antd/lib/tooltip/placements";
 
-import { Header, Segment } from "semantic-ui-react";
 import { router } from "../components/Utilities/constants/routing";
 
 const DemoBox = props => (
@@ -40,6 +44,39 @@ const DottedBox = () => (
     <p className="DottedBox_content">Graph/Table</p>
   </div>
 );
+
+const FILTER_COLUMNS= [
+  "Total",
+  "Veteran No",
+  "Not Chronically Homeless",
+  "No Substance Abuse",
+  "Unknown Substance Abuse",
+  "No PTSD",
+  "Unknown PTSD",
+  "No Mental Health Conditions",
+  "Unknown Mental Health Conditions",
+  "No Physical Disability",
+  "Unknown Physical Disability",
+  "No Developmental Disability",
+  "Unknown Developmental Disability",
+  "No Brain Injury",
+  "Unknown Brain Injury",
+  "Not Victim of Domestic Violence",
+  "Unknown Victim of Domestic Violence",
+  "No AIDS or HIV",
+  "Unknown AIDS or HIV",
+  "Jail Release 90 Days: Probation",
+  "Jail Release 90 Days: Parole",
+  "Jail Release 90 Days: Completed Sentence",
+  "Jail Release 90 Days: (Unspecified)",
+  "Jail Release 12 Months: Probation",
+  "Jail Release 12 Months: Parole",
+  "Jail Release 12 Months: Completed Sentence",
+  "Jail Release 12 Months: (Unspecified)",
+  "No Jail",
+  "Unknown Jail",
+  "Unknown Veteran"
+]
 
 export default class CityTable extends Component {
   constructor(props) {
@@ -194,14 +231,11 @@ export default class CityTable extends Component {
   }
 
   runGraphs() {
-    console.log("states");
-    console.log(this.state);
-
     const Tables = this.state.Tables;
     const cityChoice = this.state.cityChoice;
     return (
       <div>
-        <div className="container my-2">
+        <div className="container my-2" style={{width:ContainerWidth}}>
           <Segment>
             <Header size="huge" textAlign="center">
               Unsheltered - Cities
@@ -223,48 +257,15 @@ export default class CityTable extends Component {
             <div className="col-md dash-col-com">
               <div className="ct-grid-side-left">
                 <div className="ct-side-r1">
-                  >
                   <TableComponent4
                     data={filterList(
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
                       ][this.state.cityChoice]["Subpopulations"],
                       "subpopulation",
-                      [
-                        "Total",
-                        "Veteran No",
-                        "Not Chronically Homeless",
-                        "No Substance Abuse",
-                        "Unknown Substance Abuse",
-                        "No PTSD",
-                        "Unknown PTSD",
-                        "No Mental Health Conditions",
-                        "Unknown Mental Health Conditions",
-                        "No Physical Disability",
-                        "Unknown Physical Disability",
-                        "No Developmental Disability",
-                        "Unknown Developmental Disability",
-                        "No Brain Injury",
-                        "Unknown Brain Injury",
-                        "Not Victim of Domestic Violence",
-                        "Unknown Victim of Domestic Violence",
-                        "No AIDS or HIV",
-                        "Unknown AIDS or HIV",
-                        "Jail Release 90 Days: Probation",
-                        "Jail Release 90 Days: Parole",
-                        "Jail Release 90 Days: Completed Sentence",
-                        "Jail Release 90 Days: (Unspecified)",
-                        "Jail Release 12 Months: Probation",
-                        "Jail Release 12 Months: Parole",
-                        "Jail Release 12 Months: Completed Sentence",
-                        "Jail Release 12 Months: (Unspecified)",
-                        "No Jail",
-                        "Unknown Jail",
-                        "Unknown Veteran"
-                      ]
+                      FILTER_COLUMNS
                     )}
-                    tableName={"Subpopulations (Interview Only)"}
-                    height={"110%"}
+                    {...unshelteredCitiesStyling['Subpopulations']}
                   />
                 </div>
                 <div className="ct-side-r2">
@@ -276,8 +277,7 @@ export default class CityTable extends Component {
                       "subpopulation",
                       ["Total"]
                     )}
-                    tableName={"Age "}
-                    height={"114%"}
+                    {...unshelteredCitiesStyling['Age Table']}
                   />
                 </div>
               </div>
@@ -303,23 +303,23 @@ export default class CityTable extends Component {
 
                   <div className="ct-center-r2c1">
                     <span className="component-header">
-                      {/* <Number height = {400}
-                                                            url = {router.host + '/' + router.root + '/' + router.formerYear + '/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
-                                                            /> */}
-                      106
+                      <Number height = {400}
+                       url = {router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
+                      />
                     </span>
                   </div>
                   <div className="ct-center-r2c2">
                     <span className="component-header">
-                      {/* <Total height = {400}
-                                                            url = {router.host + '/' + router.root + '/' + router.formerYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
-                                                            /> */}
-                      597
+                      <Total height = {400}
+                       url = {router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
+                       />
                     </span>
                   </div>
                   <div className="ct-center-r2c3">
-                    <span className="component-header">
-                      {((597 / 2192) * 100).toFixed(2)}%
+                  <span className="component-header">
+                      <PercentageDistrict height = {400}
+                       url = {router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
+                       />
                     </span>
                   </div>
                 </div>
@@ -338,9 +338,6 @@ export default class CityTable extends Component {
                   </div>
                 </div>
                 <div className="ct-center-r3">
-                  <span className="component-header">
-                    Race (Interview Only)
-                  </span>
                   <BarGraph
                     data={filterList(
                       this.state.Tables[
@@ -349,9 +346,7 @@ export default class CityTable extends Component {
                       "subpopulation",
                       ["Total"]
                     )}
-                    indexBy={"subpopulation"}
-                    keys={["interview"]}
-                    margin={{ top: 50, right: 30, bottom: 50, left: 50 }}
+                    {...unshelteredCitiesStyling['Race Chart']}
                   />
                 </div>
               </div>
@@ -363,30 +358,21 @@ export default class CityTable extends Component {
                     data={filterList(
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
-                      ][this.state.cityChoice]["Gender"],
+                      ][this.state.cityChoice]["Gender"].sort( (a,b) => { return b.total - a.total}),
                       "subpopulation",
                       ["Total"]
                     )}
-                    tableName={"Gender"}
-                    height={"120%"}
+                    {...unshelteredCitiesStyling['Gender Table']}
                   />
                 </div>
                 <div className="ct-side-r1r2">
-                  <span>
-                    <b>Gender (Interview Only)</b>
-                  </span>
-                  <BarGraph
-                    data={filterList(
-                      this.state.Tables[
-                        router.activeYear + "/SubpopulationsByCity"
-                      ][this.state.cityChoice]["Gender"],
-                      "subpopulation",
-                      ["Total"]
-                    )}
-                    indexBy={"subpopulation"}
-                    keys={["interview"]}
-                    margin={{ top: 40, bottom: 30, right: 30, left: 30 }}
-                  />
+                    <BarGraph 
+                    data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
+                    // indexBy = {"subpopulation"}
+                    // keys = {["interview"]}
+                    // margin = {{top: 40, bottom:30, right: 30, left: 30}}
+                    {...unshelteredCitiesStyling['Gender Chart']}
+                    />
                 </div>
                 <div className="ct-side-r1r3">
                   <span></span>
@@ -396,10 +382,9 @@ export default class CityTable extends Component {
                     data={
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
-                      ][this.state.cityChoice]["Race"]
+                      ][this.state.cityChoice]["Race"].sort( (a,b) => { return b.total - a.total})
                     }
-                    height={"115%"}
-                    tableName={"Race"}
+                    {...unshelteredCitiesStyling['Race Table']}
                   />
                 </div>
               </div>
