@@ -75,7 +75,7 @@
 .gen-3r {
   display: grid;
   position: relative;
-  grid-template: .4fr .1fr 1fr 2fr 4.3fr / 1fr;
+  grid-template: 0.4fr 0.1fr 1fr 2fr 4.3fr / 1fr;
   height: 100%;
 }
 
@@ -107,7 +107,7 @@
   display: flex;
 }
 
-.gen-s-r{
+.gen-s-r {
   display: grid;
   position: relative;
   grid-template: 1fr 1fr 1fr 1fr / 1fr;
@@ -154,14 +154,14 @@
 .svu-r1 {
   display: grid;
   position: relative;
-  grid-row:  1 / span 1;
+  grid-row: 1 / span 1;
 }
 
 .svu-r1-2 {
   display: grid;
   position: relative;
-  grid-row:  1 / span 1;
-  grid-column:  1 / span 2;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 2;
 }
 
 .svu-r2 {
@@ -189,7 +189,7 @@
   grid-template: 1fr 1.5fr / 1fr 1fr 1fr;
 }
 
-.ct-center-r1r1{
+.ct-center-r1r1 {
   display: grid;
   position: relative;
   grid-template: 1fr / 1fr 1fr 1fr;
@@ -239,7 +239,7 @@
 .ct-grid-side {
   display: grid;
   position: relative;
-  grid-template: .6fr 1fr 100px 1fr/ 1fr;
+  grid-template: 0.6fr 1fr 100px 1fr/ 1fr;
   height: 100%;
 }
 .ct-grid-side-left {
@@ -294,7 +294,41 @@
   grid-row: 3 span 1;
 }
 
-.container{
+.container {
   max-width: 100%;
-  
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #cef;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

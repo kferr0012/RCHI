@@ -228,7 +228,14 @@ export default class NewlyHomelessGrid extends Component{
             <div>
                 {this.state.rendered ? 
                     this.dashboard()
-                    : 0}
+                    : (
+                        <div class="lds-ring">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                      )}
             </div>
         )
     }

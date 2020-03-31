@@ -306,7 +306,14 @@ export default class Dashboard extends Component{
         return(
 
             <div>
-            {this.state.rendered ? this.renderDashboards() : 0}
+            {this.state.rendered ? this.renderDashboards() : (
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        )}
             </div>
         )
     }

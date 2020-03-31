@@ -95,7 +95,14 @@ class UnshelteredSupervisoryDistricts extends Component{
                 <PageLayout currentDistrict={this.state.currentPage} tables = {this.state.Tables}/>    
                 </Container>
 
-             : 0
+                : (
+                  <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                )
             }
 
             </div>
