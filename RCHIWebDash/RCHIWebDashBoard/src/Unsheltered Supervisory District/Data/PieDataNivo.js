@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {router} from '../../components/Utilities/constants/routing'
-import { pieDataManiInterview } from '../../components/Utilities/ChartDataManipulation/pieDataManipulation'
+import { pieDataManiInterview , pieDataManiTotal } from '../../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import PieChart from '../../components/reformatedCharts/PieChart'
 
 import NivoPieChart from '../../components/Utilities/GraphTypes/NivoPie'
@@ -38,10 +38,10 @@ class PieData extends Component{
                         subpopulation:key,
                         ...value
                     }
-                })
+                })          
 
                   this.setState({
-                    chartData : pieDataManiInterview(newDataArray),
+                    chartData: this.props.dataType === "Interview" ? pieDataManiInterview(newDataArray) : pieDataManiTotal(newDataArray),
                     currentDistrict: this.props.clickedDistrict
                   })
             })

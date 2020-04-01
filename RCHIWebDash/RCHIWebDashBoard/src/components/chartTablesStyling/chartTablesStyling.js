@@ -194,6 +194,8 @@ export const unshelteredSupervisoryDistrictStyling = {
 
     "Chronically Homeless":{
         header: "Chronically Homeless",
+        subHeader: "Interview Only",
+        dataType: "Interview",
         margin: {top: 30, bottom: 20},
         divHeight: "12em",
         sortByValue: true,
@@ -318,7 +320,8 @@ export const seniorsUnshelteredStyling = {
     "Living Situation":{
         tableName: "Living Situation",
         tableHeight: "100%",
-        divHeight: "37.8em"
+        divHeight: "37.8em",
+        percentage_flag: "1"
     },
     Ethnicity:{
         margin: {top: 30, bottom: 20},

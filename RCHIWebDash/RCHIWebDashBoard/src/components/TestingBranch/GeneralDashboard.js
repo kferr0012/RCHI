@@ -291,7 +291,7 @@ export default class Dashboard extends Component{
                     <TableComponent4
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"]).sort( (a,b) => { return b.total - a.total})}
                       header = {false}
-                      percentage_flag = {1}
+                      percentage_flag = {true}
                       height = {"100%"}
                     />
                   </div>
