@@ -18,6 +18,7 @@ class TableComponent4 extends Component{
       expand_i: this.props.expandIndex,
       color: "red",
       tableFillColor: "#f1f1f1",
+      percent_flag : this.props.percentage_flag
     }
 
     //console.log(this.props.expandIndex);
@@ -41,6 +42,67 @@ class TableComponent4 extends Component{
     var column_name_array = [];
     var column_size = 0;
 
+    //This portion is creates a new column of percentages
+    //Built specifically for the Living Situations Table in The General DashBoard
+    if(this.state.percent_flag != null){
+
+      //1)Create a new array with percentages
+      //2)Merge new array with the original array
+      //3)Reassign the data with the merged array
+
+      //Grab Total
+      var total = 0
+
+      //Grab the totals of the whole array of JSONS
+      for(let i = 0; i < this.state.chartData.length; ++i){
+        total+=this.state.chartData[i].total
+      }
+
+      //Initialize second array
+      var new_array = []
+
+      //Calculate Percentage
+      for(let k = 0; k < this.state.chartData.length; ++k){
+        let percent_val = this.state.chartData[k].total/total
+
+        //Truncates percent
+        percent_val = Math.floor(percent_val*10000)/100
+
+        //Converts to string
+        let percent_str = percent_val.toString()
+
+
+        //Adds trailing 0
+        if(percent_str.length == 3){
+          percent_str = percent_str.concat('0')
+        }
+
+        percent_str = percent_str.concat('%')
+
+        //Construct new JSONS
+        //Add new JSONS to the new array
+        var new_key_name = 'percentage'
+        var new_key_value = percent_str
+
+        var new_json={}
+
+        new_json['id'] = k.toString()
+        new_json['total']= percent_str
+        new_json['_type']= 'z'
+        new_json['category']= "Living Situations"
+        new_json['subpopulation']=this.state.chartData[k].subpopulation
+
+        new_array.push(new_json)
+      }
+
+      var original_array = this.state.chartData
+
+      //Merge the two arrays
+      var merged_array = original_array.concat(new_array)
+
+      //Reassign state
+      this.state.chartData = merged_array
+    }
 
     //find all the columns
     //CONDITIONAL
