@@ -6,6 +6,7 @@ import axios from 'axios';
 import { citynames, base, SubPopHeaders, Catergories, Titles } from './constants';
 
 import { Grid } from 'semantic-ui-react';
+import { router } from '../Utilities/constants/routing'
 
 export default class CityTables extends Component {
     constructor(props){
@@ -44,7 +45,7 @@ export default class CityTables extends Component {
     }
 
     async fetchHouseholdData() {
-        const promise = await axios.get("http://localhost:8000/api/" + this.state.year + "/HouseholdsByCityYearInterview/");
+        const promise = await axios.get(router.host+ '/' + router.root + '/' + router.activeYear + "/HouseholdsByCityYearInterview/");
         const indata = promise.status===200 ? promise.data: [];
         if (indata.length === 0){
             throw Error;
@@ -78,7 +79,7 @@ export default class CityTables extends Component {
     }
 
     async fetchSubpopulationData() {
-        const promise = await axios.get("http://localhost:8000/api/" + this.state.year + "/SubpopulationsByCity/");
+        const promise = await axios.get(router.host+ '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/");
         const indata = promise.status===200 ? promise.data: [];
         if (indata.length === 0){
             throw Error("ERROR: indata length = 0");
