@@ -77,14 +77,14 @@ export default class Dashboard extends Component{
                      router.host + '/' + router.root  + '/' + router.activeYear +'/' + "GeneralTableSubpopulationsTotalCounts/",
                      router.host + '/' + router.root  + '/' + router.formerYear +'/' + "GeneralTableSubpopulations/",
                      router.host + '/' + router.root  + '/' + router.formerYear +'/' + "GeneralTableSubpopulationsSheltered/"],
-            
+
             Tables : [],
             render : false
         }
     }
 
     formatData(Tables){
-      
+
 
       //reformat get tables unexpands and expanded by category (easier to process certain components)
       for(var index in Tables){
@@ -127,14 +127,14 @@ export default class Dashboard extends Component{
             rendered : true
         })
 
-        
-        
+
+
     }
 
     renderDashboards() {
       return(
-                      
-        <div className="container my-2" > 
+
+        <div className="container my-2" >
 
           <Segment>
               <Header size="huge"  textAlign='center'>
@@ -146,7 +146,7 @@ export default class Dashboard extends Component{
 
             <div className="col-md dash-col-reg">
               {/* <p className="component-header">Overall 21% increase in homeless count from 2018.</p> */}
-          
+
               <TableComponent4
                 data={filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)}
                 expandIndex = {"_type"}
@@ -181,7 +181,7 @@ export default class Dashboard extends Component{
                     margin = {{left: 45, top: 50, bottom: 30}}
                     tickValues={4}
                     gridYValues={4}
-                    maxValue={2000} 
+                    maxValue={2000}
                   />
                 </div>
                 <div className="gen-r2">
@@ -206,7 +206,7 @@ export default class Dashboard extends Component{
 
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"])}
-                      margin = {{top: 50, bottom: 40, left: 30, right: 30}}  
+                      margin = {{top: 50, bottom: 40, left: 30, right: 30}}
                     />
 
                   </div>
@@ -217,7 +217,7 @@ export default class Dashboard extends Component{
               {/*<span className="component-header">Unsheltered Only Demographic</span> */}
               <div className="gen-grid-2">
                 <div className = "gen-s-r" >
-                      
+
                     <div className="gen-s-r1">
                         <Mental height = {50}
                                 url = {router.host + '/' + router.root + "/SubpopulationsByYear/?search=Mental"}
@@ -240,7 +240,7 @@ export default class Dashboard extends Component{
                     </div>
                 </div>
                 <div className="gen-3r">
-                  
+
                 <div className="gen-3r-r1">
                     <span className = "component-header" style = {{textAlign: "middle"}}></span>
                   </div>
@@ -253,11 +253,11 @@ export default class Dashboard extends Component{
                       </span>
                   </div>
                   <div className="gen-3r-r3">
-                  
+
                     <span className = "component-header">Total Unsheltered Count</span>
                   </div>
                   <div className="gen-3r-r4">
-                    
+
                     <Table style = {{height: "100%"}}Cell Structured>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
@@ -276,7 +276,7 @@ export default class Dashboard extends Component{
                       margin = {{top:40, bottom: 40, left: 40, right: 40}}
                     />
                   </div>
-                  
+
                 </div>
                 <div className="gen-r2c1">
                   <div className="gen-r2c1r1">
@@ -291,6 +291,7 @@ export default class Dashboard extends Component{
                     <TableComponent4
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"]).sort( (a,b) => { return b.total - a.total})}
                       header = {false}
+                      percentage_flag = {1}
                       height = {"100%"}
                     />
                   </div>
@@ -299,7 +300,7 @@ export default class Dashboard extends Component{
             </div>
           </div>
         </div>
-        
+
       )
     }
     render(){
