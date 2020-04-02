@@ -66,7 +66,7 @@ def get_Total_CityByYear(in_df, city, year, district = None):
     if city == "RIVERSIDE":
         citytitle += "*"
     elif 'UNINCORPORATED' in city:
-        citytitle = 'UNINCORPORATED ' + str(district) 
+        citytitle = 'Unincorporated'
 
     return {"year": str(year), "district": str(district), "sheltered": "False", "city": citytitle.title(),"total": str(total), "volunteers": ""}
 

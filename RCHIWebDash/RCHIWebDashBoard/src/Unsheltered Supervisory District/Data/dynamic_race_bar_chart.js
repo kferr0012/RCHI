@@ -35,7 +35,6 @@ class Dynamic_Bar_Chart_Template extends Component{
           return [key, new_data[key]]
         })
 
-        // console.log(result)
 
         this.setState({
           chartData : {

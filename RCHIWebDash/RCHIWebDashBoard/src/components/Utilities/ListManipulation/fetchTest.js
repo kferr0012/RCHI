@@ -11,9 +11,7 @@ export default class fetchTest extends Component{
             fetchData : []
         }
 
-        console.log("starting aggregate fetch")
         aggregateFetch(this.state.urls)
-        console.log("ending aggregate fetch")
         
     }
     

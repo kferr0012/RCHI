@@ -177,63 +177,72 @@ export const unshelteredTrendsStyling = {
 };
 
 export const unshelteredSupervisoryDistrictStyling = {
-  "Pit Count Trend": {
-    header: "PIT Count Trend",
-    subHeader: "",
-    divHeight: "30em",
-    margin: { top: 20, right: 20, bottom: 80, left: 30 },
-    colors: colors[7],
-    tickValues: 4,
-    gridYValues: 4,
-    maxValue: 800
-  },
+    "Pit Count Trend":{
+        header: "PIT Count Trend",
+        subHeader: "",
+        divHeight: "30em",
+        margin:{ top: 20, right: 20, bottom: 80, left: 30 },
+        colors: colors[7],
+        tickValues: 4,
+        gridYValues: 4,
+        maxValue: 800
+    },
 
-  "Chronically Homeless": {
-    header: "Chronically Homeless",
-    subHeader: "Interview Only",
-    dataType: "Interview",
-    margin: { top: 30, bottom: 59 },
-    divHeight: "12em",
-    sortByValue: true
-  },
-  Ethnicity: {
-    header: "Ethnicity",
-    margin: { top: 30, bottom: 20 },
-    divHeight: "10em",
-    sortByValue: true
-  },
-  Subpopulations: {
-    tableName: "Subpopulation Statistics",
-    tableHeight: "100%",
-    divHeight: "30em"
-  },
+    "Chronically Homeless":{
+        header: "Chronically Homeless",
+        subHeader: "Interview Only",
+        dataType: "Interview",
+        margin: {top: 30, bottom: 59},
+        divHeight: "12em",
+        sortByValue: true,
+    },
+    Ethnicity:{
+        header: "Ethnicity",
+        margin: {top: 30, bottom: 20},
+        divHeight: "10em",
+        sortByValue: true,
+    },
+    Subpopulations:{
+        tableName: "Subpopulation Statistics",
+        tableHeight: "100%",
+        divHeight: "30em"
+    },
 
-  "PIT Count By City": {
-    header: "PIT Count By City",
-    subHeader: "",
-  },
+    "PIT Count By City":{
+        tableName: "PIT Count By City",
+        subHeader: "" ,
+        header: true,
+        expandIndex: "year",
+        tableHeight: "100%",
+        divHeight: "15.0em"
+    },
 
-  "Volunteers By City": {
-    header: "Volunteers By City",
-    subHeader: ""
-  },
+    "Volunteers By City":{
+        tableName: "Volunteers By City",
+        subHeader: "",
+        tableHeight: "100%",
+        divHeight: "15.0em"
+    },
 
-  Race: {
-    indexBy: "subpopulation",
-    keys: ["total"],
-    margin: { top: 50, right: 30, bottom: 50, left: 50 },
-    divHeight: "15em",
-    header: "Race",
-    maxValue: 300,
-    tickValues: 5,
-    gridYValues: 5
-  },
+    Race: {
+        indexBy: "subpopulation",
+        keys: ["total"],
+        margin: { top: 50, right: 30, bottom: 50, left: 50},
+        divHeight: "15em",
+        header: "Race",
+        maxValue: 300,
+        tickValues: 5,
+        gridYValues: 5,
+    },
 
-  Household: {
-    header: "Household Composition",
-    subHeader: "Interview Only"
-  }
-};
+    Household: {
+        tableName: "Household Composition",
+        subHeader: "",
+        tableHeight: "100%",
+        divHeight: "15.0em"
+    }
+
+}
 
 export const unshelteredCitiesStyling = {
   Subpopulations: {

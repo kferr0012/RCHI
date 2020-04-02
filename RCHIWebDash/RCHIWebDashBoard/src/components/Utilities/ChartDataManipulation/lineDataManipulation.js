@@ -74,8 +74,6 @@ export const youthLineMani = (data, filterList) => {
         return {id: cat, data: data}
     })
 
-    console.log("YOUTH DATA: ", newDataArray)
-
     return newDataArray
 
 }

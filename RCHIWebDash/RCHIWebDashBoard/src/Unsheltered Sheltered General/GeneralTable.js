@@ -12,10 +12,8 @@ import Dashboard from '../components/TestingBranch/GeneralDashboard'
 export default class GeneralTable extends Component{
     constructor(props){
         super(props)
-        console.log("constructor")
     }
     render(){
-        console.log("rendering")
         return(
 
           <div>

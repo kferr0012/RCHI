@@ -32,15 +32,7 @@ export default class Total extends React.Component {
                 this.setState({mydata:data})
             })
             .catch(err => {
-                console.log("no data found")
             })
-
-        console.log("data:")
-        console.log(this.state.mydata)
-
-
-
-
 
     }
 
@@ -65,8 +57,6 @@ export default class Total extends React.Component {
 
         }
 
-        console.log(this.state.mydata);
-        console.log(this.state.number);
         return (
             this.state.number
         )

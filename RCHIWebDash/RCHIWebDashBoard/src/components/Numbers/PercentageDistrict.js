@@ -32,16 +32,8 @@ export default class PercentageDistrict extends React.Component {
                 this.setState({mydata:data})
             })
             .catch(err => {
-                console.log("no data found")
+
             })
-
-        console.log("data:")
-        console.log(this.state.mydata)
-
-
-
-
-
     }
 
     async componentWillReceiveProps(){
@@ -65,8 +57,6 @@ export default class PercentageDistrict extends React.Component {
 
         }
 
-        console.log(this.state.mydata);
-        console.log(this.state.number);
         return (
             <div>
                 {((this.state.number / 2155) * 100).toFixed(0)}% 
