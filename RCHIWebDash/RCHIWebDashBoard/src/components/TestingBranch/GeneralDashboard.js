@@ -99,8 +99,6 @@ export default class Dashboard extends Component{
 
       //concat in a specific order to sort data by group
 
-      console.log("this.state.Tables")
-      console.log(this.state.Tables)
       var unshelteredData = this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Total"]
       .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"])
       .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Subpopulations"])

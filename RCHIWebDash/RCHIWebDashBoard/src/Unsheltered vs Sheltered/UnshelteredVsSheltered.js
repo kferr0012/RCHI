@@ -110,16 +110,12 @@ export default class UnsheleteredVsSheltered extends Component{
       return data
     }
     async componentDidMount(){
-        console.log("didMount")
         var myTables = await aggregateFetch(this.state.urls, false)
         
         this.setState({
             Tables: this.formatData(myTables),
             rendered : true
         })
-
-        console.log("available Tables")
-        console.log(this.state.Tables)
     }
 
     getOrderedUnshelteredData(){
@@ -147,7 +143,6 @@ export default class UnsheleteredVsSheltered extends Component{
     }
 
     renderDashboards(){
-
       return(
           <div>
           

@@ -198,7 +198,6 @@ export default class CityTable extends Component {
     return myTables;
   }
   async componentDidMount() {
-    console.log("didMount");
 
     var myTables = await aggregateFetch(this.state.urls, false);
 
@@ -227,7 +226,6 @@ export default class CityTable extends Component {
       });
     }, 200);
 
-    console.log("updated state");
   }
 
   runGraphs() {

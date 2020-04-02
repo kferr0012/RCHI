@@ -73,7 +73,6 @@ export default class NewlyHomelessGrid extends Component{
     }
 
     renderDashboard(){
-        console.log("NEW HOMELESS AGE DATAaaaa: ", filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS).sort((a,b) => {return b.total - a.total}))
         return(
             <div className="container my-2">
             <Segment>

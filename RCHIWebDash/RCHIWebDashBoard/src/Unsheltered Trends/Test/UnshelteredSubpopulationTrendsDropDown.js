@@ -79,21 +79,13 @@ render(){
               </Grid.Column>)
         }
         else{
-            console.log("Columns")
             return (<Grid.Column width={8}>
                 {x}
               </Grid.Column>)
         }
-        // else{
-        //     console.log("Columnsaaaaaaaaaaaaaa 0")
-        //     return (<Grid.Row columns={1}> 
-        //         <Grid.Column width={16}>
-        //         {x}
-        //        </Grid.Column>)</Grid.Row>)
-        // }
+
     })
 
-    // console.log(trendsSelected)
     return(
         <Container>
             <Segment clearing>

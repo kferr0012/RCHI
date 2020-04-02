@@ -17,16 +17,10 @@ export default class BarGraph extends Component{
             margin: this.props.margin,
             axisTitle : this.props.axisTitle,
         }
-
-        console.log("BarGraph data")
-        console.log(this.props.data)
     }
 
     componentWillReceiveProps()
     {
-        console.log("willRecieveProps- Bar")
-
-        console.log("mydata")
         console.log(this.props.data)
         this.setState({
             index : this.props.indexBy,

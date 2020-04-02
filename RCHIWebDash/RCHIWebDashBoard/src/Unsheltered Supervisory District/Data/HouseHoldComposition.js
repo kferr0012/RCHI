@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { Header, Table} from 'semantic-ui-react'
 import {router} from '../../components/Utilities/constants/routing'
+import TableComponent4 from '../../components/charts/TableComponent4'
 
 //CLEAN
 
@@ -28,36 +29,31 @@ class HouseHoldComposition extends Component{
   formatingData(){
 
     axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/HouseholdsByCityYearInterview/?search='+this.props.query)
-      .then(response=>{
-        const filter = response.data
-        
-        const new_data = {
-          'adultsOnly':0, 'adultsAndChildren':0, 'childrenOnly':0
-        }
+    .then(response=>{
 
-        for(let i = 0; i <filter.length; ++i){
+        const newDataObject = response.data.reduce ((acc, val) => {
+          let {totalHouseholds, adultsOnly,  childrenOnly, adultsAndChildren} = val
+          if(!acc["Total"]){ 
+            acc["Total"] = {total: 0} 
+            acc["Adults Only"] = {total: 0}
+            acc["Adults and Children"] = {total: 0}
+            acc["Children Only"] = {total: 0}}
+          acc["Total"].total += totalHouseholds
+          acc["Adults Only"].total += adultsOnly
+          acc["Adults and Children"].total += adultsAndChildren
+          acc["Children Only"].total += childrenOnly
+          return acc
+        }, {})
 
-          // new_data[filter[i].subpopulation] += filter[i].interview + filter[i].observation
-
-          new_data['adultsOnly']+= filter[i].adultsOnly;
-          new_data['adultsAndChildren']+= filter[i].adultsAndChildren;
-          new_data['childrenOnly']+= filter[i].childrenOnly;
-        }
-
-        var clean_data = {}
-        clean_data['Total Households Interviewed'] = new_data['adultsOnly'] + new_data['adultsAndChildren'] + new_data['childrenOnly']
-        clean_data['Adults Only'] = new_data['adultsOnly']
-        clean_data['Adults and Children'] = new_data['adultsAndChildren']
-        clean_data['Children Only'] = new_data['childrenOnly']
-
-
-        
-        const completeData = Object.keys(clean_data).map(key=>{
-          return {labels: key, values:clean_data[key]}
-        })   
+        const newDataArray = Object.entries(newDataObject).map(([key,value]) => {
+          return{
+            subpopulation: key,
+            ...value
+          }
+        }).sort( (a,b) => {return b.total - a.total})
 
         this.setState({
-          chartData : this.TableRender(completeData),
+          chartData : newDataArray,
           currentDistrict: this.props.clickedDistrict
         })
       })
@@ -77,29 +73,12 @@ class HouseHoldComposition extends Component{
 
 
   render(){
-    if(!this.state.chartData){
-      return <h3>Waiting for Data</h3>
-    }
-    else{
-      return(
-        <Table celled structured>
-        <Table.Header>
-        <Table.Row>
-            <Table.HeaderCell colSpan='2' textAlign='center'>
-                <Header>
-                    Household Composition
-                    <Header.Subheader>Interview Only</Header.Subheader>
-                </Header>
-                </Table.HeaderCell>
-        </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-            {this.state.chartData}
-        </Table.Body>
-    </Table>
-      )
-    }
+    return <div>
+      {this.state.chartData ? <TableComponent4
+        data = {this.state.chartData}
+        {...this.props}
+      /> : 0}
+    </div>
   }
 }
 

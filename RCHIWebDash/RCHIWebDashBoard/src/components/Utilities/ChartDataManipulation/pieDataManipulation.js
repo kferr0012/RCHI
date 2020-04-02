@@ -1,7 +1,4 @@
 export const pieDataManiTotal = data => {
-
-    console.log("Dataaaaaa: ", data)
-
     const newDataArray =data.map(val => {
         let {subpopulation, total} = val
 

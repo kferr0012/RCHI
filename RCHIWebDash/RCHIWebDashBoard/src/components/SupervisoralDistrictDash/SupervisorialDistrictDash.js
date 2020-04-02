@@ -72,7 +72,6 @@ export default class SupervisorialDistrictDash extends Component {
 
     }
     updateChart(){
-        console.log( this.props.data2019['Chronic'] + " " + this.state.ChronicChartData[0].datasets[0].data[0]);
 
             this.setState({
                 curDistrict: this.props.District_Num,

@@ -213,13 +213,19 @@ export const unshelteredSupervisoryDistrictStyling = {
     },
 
     "PIT Count By City":{
-        header: "PIT Count By City",
-        subHeader: ""
+        tableName: "PIT Count By City",
+        subHeader: "" ,
+        header: true,
+        expandIndex: "year",
+        tableHeight: "100%",
+        divHeight: "17.8em"
     },
 
     "Volunteers By City":{
-        header: "Volunteers By City",
-        subHeader: ""
+        tableName: "Volunteers By City",
+        subHeader: "",
+        tableHeight: "100%",
+        divHeight: "17.8em"
     },
 
     Race: {
@@ -234,8 +240,10 @@ export const unshelteredSupervisoryDistrictStyling = {
     },
 
     Household: {
-        header: "Household Composition",
-        subHeader: "Interview Only"
+        tableName: "Household Composition",
+        subHeader: "",
+        tableHeight: "100%",
+        divHeight: "17.8em"
     }
 
 }

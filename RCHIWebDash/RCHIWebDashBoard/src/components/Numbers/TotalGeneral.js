@@ -32,15 +32,7 @@ export default class TotalGeneral extends React.Component {
                 this.setState({mydata:data})
             })
             .catch(err => {
-                console.log("no data found")
             })
-
-        console.log("data:")
-        console.log(this.state.mydata)
-
-
-
-
 
     }
 

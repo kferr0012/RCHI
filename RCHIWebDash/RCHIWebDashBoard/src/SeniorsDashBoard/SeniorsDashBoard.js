@@ -151,7 +151,7 @@ export default class SeniorDashboardGrid extends Component{
     }
 
     dashboard(){
-        console.log("TABLE SENIORS: ", this.state.Tables)
+    
        return <Container style={{width:ContainerWidth}}>
             <Segment>
                 <Header as='h1'  textAlign='center'>
