@@ -16,6 +16,7 @@ import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 import {filter, subset, filterList} from '../../components/Utilities/ListManipulation/filter'
 import {combine, combineCounts} from '../../components/Utilities/ListManipulation/combine'
 import { Bar } from '@nivo/bar';
+import Change from "../Numbers/Change";
 import Mental from "../Numbers/Mental";
 import Physical from "../Numbers/Physical";
 import PTSD from "../Numbers/PTSD";
@@ -145,7 +146,7 @@ export default class Dashboard extends Component{
           <div className="row dash-row">
 
             <div className="col-md dash-col-reg">
-              {/* <p className="component-header">Overall 21% increase in homeless count from 2018.</p> */}
+             
 
               <TableComponent4
                 data={filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)}
@@ -217,23 +218,35 @@ export default class Dashboard extends Component{
               {/*<span className="component-header">Unsheltered Only Demographic</span> */}
               <div className="gen-grid-2">
                 <div className = "gen-s-r" >
-
                     <div className="gen-s-r1">
+                    <Change height = {50}
+                             url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                        />  
+
+
+                      {/* <div style={{height:"50"}}>
+                      <span className= "component-header">4.9%</span>
+                          <h6 className= "component-header">increase in homeless count</h6>
+                          <h6 style = {{color: "#aaaaaa"}}>From 2019</h6>
+                        </div> */}
+
+                    </div>
+                    <div className="gen-s-r2">
                         <Mental height = {50}
                                 url = {router.host + '/' + router.root + "/SubpopulationsByYear/?search=Mental"}
-                        />
+                        />  
                     </div>
-                    <div className="gen-s-r4">
+                    <div className="gen-s-r5">
                         <PTSD height = {50}
                               url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
                     </div>
-                    <div className="gen-s-r2">
+                    <div className="gen-s-r3">
                         <Substance height = {50}
                                   url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
                     </div>
-                    <div className="gen-s-r3">
+                    <div className="gen-s-r4">
                         <Physical height = {50}
                                   url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                         />
@@ -299,6 +312,8 @@ export default class Dashboard extends Component{
               </div>
             </div>
           </div>
+          {/* <hr></hr>
+                  <p className="component-header">Overall, there was a 21% increase in homeless count from 2019.</p> */}
         </div>
 
       )
