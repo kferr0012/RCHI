@@ -281,7 +281,7 @@ export default class Dashboard extends Component{
                     <span className="component-header">Living Situations</span>
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
-                      margin = {{top:50,bottom:50,left:60, right: 60}}
+                      margin = {{top:0,bottom:0,left:30, right: 0}}
                       enableRadialLabels= {false}
                     />
                   </div>

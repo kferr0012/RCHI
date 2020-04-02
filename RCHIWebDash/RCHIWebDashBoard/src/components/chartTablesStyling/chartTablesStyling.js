@@ -245,61 +245,61 @@ export const unshelteredSupervisoryDistrictStyling = {
 }
 
 export const unshelteredCitiesStyling = {
-  Subpopulations: {
-    tableName: "Subpopulation Statistics (Interview Only)",
-    tableHeight: "100%",
-    divHeight: "30em"
-  },
+    Subpopulations:{
+        tableName: "Subpopulation Statistics (Interview Only)",
+        tableHeight: "100%",
+        divHeight: "30em"
+    },
 
-  Ethnicity: {
-    header: "Ethnicity",
-    margin: { top: 30, bottom: 20 },
-    divHeight: "12em",
-    sortByValue: true
-  },
+    Ethnicity:{
+        header: "Ethnicity",
+        margin: {top: 30, bottom: 20},
+        divHeight: "12em",
+        sortByValue: true,
+    },
 
-  "Gender Table": {
-    tableName: "Gender",
-    tableHeight: "100%",
-    divHeight: "100%"
-  },
+    "Gender Table":{
+        tableName: "Gender",
+        tableHeight: "100%",
+        divHeight: "100%"
+    },
 
-  "Gender Chart": {
-    indexBy: "subpopulation",
-    keys: ["interview"],
-    margin: { top: 50, right: 130, bottom: 50, left: 60 },
-    divHeight: "20em",
-    header: "Gender",
-    subHeader: "Interview Only",
-    maxValue: 200,
-    tickValues: 5,
-    gridYValues: 5,
-    labelSkipHeight: 0
-  },
+    "Gender Chart":{
+        indexBy: "subpopulation",
+        keys: ["interview"],
+        margin: { top: 50, right: 0, bottom: 50, left: -10 },
+        divHeight: "20em",
+        header: "Gender",
+        subHeader:"Interview Only",
+        maxValue: 200,
+        tickValues: 5,
+        gridYValues: 5,
+        labelSkipHeight:0
+    },
 
-  "Race Table": {
-    tableName: "Race",
-    tableHeight: "100%",
-    divHeight: "20em"
-  },
+    "Race Table":{
+        tableName: "Race",
+        tableHeight: "100%",
+        divHeight: "20em"
+    },
 
-  "Age Table": {
-    tableName: "Age",
-    tableHeight: "100%",
-    divHeight: "20em"
-  },
+    "Age Table":{
+        tableName: "Age",
+        tableHeight: "100%",
+        divHeight: "20em"
+    },
 
-  "Race Chart": {
-    indexBy: "subpopulation",
-    keys: ["total"],
-    margin: { top: 50, right: 30, bottom: 50, left: 50 },
-    divHeight: "25em",
-    header: "Race",
-    subHeader: "Interview Only",
-    tickValues: 5,
-    gridYValues: 5
-  }
-};
+    "Race Chart": {
+        indexBy: "subpopulation",
+        keys: ["total"],
+        margin: { top: 50, right: 30, bottom: 50, left: 50},
+        divHeight: "25em",
+        header: "Race",
+        subHeader:"Interview Only",
+        tickValues: 5,
+        gridYValues: 5,
+    },
+}
 
 export const unshelteredVsShelteredStyling = {
   Sheltered: {
