@@ -32,15 +32,8 @@ export default class PTSD extends React.Component {
                 this.setState({mydata:data})
             })
             .catch(err => {
-                console.log("no data found")
+
             })
-
-        console.log("data:")
-        console.log(this.state.mydata)
-
-
-
-
 
     }
 
@@ -78,8 +71,6 @@ export default class PTSD extends React.Component {
 
         }
 
-        console.log(this.state.number);
-        console.log(totalNum);
         percent = (this.state.number/totalNum) * 100;
         percent = this.round(percent, 0);
 

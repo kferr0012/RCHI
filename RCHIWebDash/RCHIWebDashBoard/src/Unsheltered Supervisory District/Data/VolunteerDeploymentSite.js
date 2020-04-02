@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { Header, Table, Container, Tab } from 'semantic-ui-react'
 import {router} from '../../components/Utilities/constants/routing'
+import TableComponent4 from '../../components/charts/TableComponent4'
 
 //CLEAN
 
@@ -28,20 +29,15 @@ class VolunteerDeploymentSite extends Component{
     formatingData(){
       axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/VolunteerDeployment/?search='+this.props.query)
       .then(response=>{
-        
-        const formatData = response.data.reduce((accumulator, currentValue) => {
-            if(!accumulator[currentValue.deploymentSite]){
-                accumulator[currentValue.deploymentSite] = {values: currentValue.count, labels: currentValue.deploymentSite}
-            }
-            return accumulator;
-        }, [])
 
-        const completeData = Object.keys(formatData).map(key=>{
-            return formatData[key]
-          })
+        const newDataArray = response.data.map( val => {
+          let {year , count, deploymentSite} = val
+          return {year:year,total:count, subpopulation:deploymentSite}
+        })
 
         this.setState({
-          chartData : this.TableRender(completeData.sort( (a,b) => { return b.values - a.values})),
+          // chartData : this.TableRender(completeData.sort( (a,b) => { return b.values - a.values})),
+          chartData : newDataArray.sort((a,b) => {return b.total - a.total}),
           currentDistrict: this.props.clickedDistrict
         })
       })
@@ -60,29 +56,13 @@ class VolunteerDeploymentSite extends Component{
 }
 
   render(){
-    if(!this.state.chartData){
-      return <h3>Waiting for Data</h3>
-    }
-    else{
-      return(
-        <Table celled structured>
-        <Table.Header>
-        <Table.Row>
-            <Table.HeaderCell colSpan='2' textAlign='center'>
-                <Header>
-                    Volunteers By Deployment Site
-                    <Header.Subheader></Header.Subheader>
-                </Header>
-                </Table.HeaderCell>
-        </Table.Row>
-        </Table.Header>
-
-        <Table.Body>
-            {this.state.chartData}
-        </Table.Body>
-    </Table>
-      )
-    }
+    return <div>
+      {this.state.chartData ?
+        <TableComponent4
+          data = {this.state.chartData}
+          {...this.props}
+        />  : 0}
+    </div>
   }
 }
 

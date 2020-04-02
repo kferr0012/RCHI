@@ -21,29 +21,30 @@
  *
  *
  */
- @import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 @font-face {
-    font-family: 'acherusgrotesque-regular';
-    src: url('/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff2') format('woff2'),
-         url('/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "acherusgrotesque-regular";
+  src: url("/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff2")
+      format("woff2"),
+    url("/components/fonts/Acherus\ Grotesque\ Regular-Webfont/Webfonts/acherusgrotesque_regular_macroman/acherusgrotesque-regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-.my-row-1{
-  height:450px;
+.my-row-1 {
+  height: 450px;
 }
 
-.App{
-  font: 'acherusgrotesque-regular';
+.App {
+  font: "acherusgrotesque-regular";
   text-align: center;
   justify-content: center;
-  --main-theme-color: #C8B0CE;
+  --main-theme-color: #c8b0ce;
 }
 
 .App-header {
-  background-color: #FFF;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -55,51 +56,46 @@
   z-index: -1;
 }
 
-
-
-
-#router-links{
+#router-links {
   text-align: center;
 }
 
-#router-links a{
-  color: #BBB;
+#router-links a {
+  color: #bbb;
 }
 
-#router-links a:hover{
+#router-links a:hover {
   color: #000;
   text-decoration: none;
 }
 
-#title{
-  font: 'acherusgrotesque-regular';
+#title {
+  font: "acherusgrotesque-regular";
   font-size: calc(2px + 1vw);
-  color:var(--main-theme-color);
-  text-shadow: 1px 1px #F0F0F0;
+  color: var(--main-theme-color);
+  text-shadow: 1px 1px #f0f0f0;
 }
 
-#title-highlight{
+#title-highlight {
   margin-top: 2%;
   font-size: calc(2px + 3vw);
   color: var(--main-theme-color);
-  text-shadow: 2px 2px #F0F0F0;
+  text-shadow: 2px 2px #f0f0f0;
   margin-bottom: 0px;
-
 }
 
-#hamburger{
+#hamburger {
   font-size: calc(2px + 1.3vw);
   color: rgb(155, 153, 153);
   position: relative;
   z-index: 1;
 }
-#segment{
+#segment {
   margin: 0;
   border: none;
   box-shadow: none;
   padding: 0px;
   position: relative;
-
 }
 /* .nav-tabs{
   border-bottom: 0;

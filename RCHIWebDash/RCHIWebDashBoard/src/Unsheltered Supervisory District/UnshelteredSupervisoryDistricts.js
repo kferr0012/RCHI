@@ -89,7 +89,6 @@ class UnshelteredSupervisoryDistricts extends Component{
             
              {this.state.rendered ? 
                 <Container style={{width:ContainerWidth}}>           
-
                 <TrendNavBar totalPages={this.state.totalPages} changed = {this.NavOnChangeHandler}/>
                 <Header currentPage = {this.state.currentPage}/>
                 <PageLayout currentDistrict={this.state.currentPage} tables = {this.state.Tables}/>    

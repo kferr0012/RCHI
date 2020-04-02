@@ -50,7 +50,6 @@ class BarData extends Component{
                     return [key, new_data[key]]
                   })
           
-                  console.log("Bar data: ", result)
 
                 // const formatData = filterData.reduce((accumulator, currentValue) => {
                 //     if(!new_data[currentValue.subpopulation]){

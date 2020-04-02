@@ -60,7 +60,6 @@ export default class LLMap extends Component {
         this.setState({
             curClicked: 0,
         })
-        console.log("reset");
     }
     
     fitBounds = (bounds, clicked) => {
@@ -72,7 +71,6 @@ export default class LLMap extends Component {
             this.setState({
                 curClicked: clicked,
             })
-            console.log("zoom");
         }
 
     }
@@ -107,8 +105,6 @@ export default class LLMap extends Component {
     clickDistricts = (feature) => {
         
         var layer = feature.target;
-        console.log(feature);
-        console.log(layer.feature.properties.DISTRICT);
         
         layer.setStyle({
             weight: 1,
@@ -122,8 +118,6 @@ export default class LLMap extends Component {
     clickCities = (feature) => {
         
         var layer = feature.target;
-        console.log(feature);
-        console.log(layer.feature.properties.CITYNAME);
         
         layer.setStyle({
             weight: 1,

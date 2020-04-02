@@ -100,8 +100,6 @@ export default class Dashboard extends Component{
 
       //concat in a specific order to sort data by group
 
-      console.log("this.state.Tables")
-      console.log(this.state.Tables)
       var unshelteredData = this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Total"]
       .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"])
       .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Subpopulations"])
@@ -296,7 +294,7 @@ export default class Dashboard extends Component{
                     <span className="component-header">Living Situations</span>
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
-                      margin = {{top:50,bottom:50,left:60, right: 60}}
+                      margin = {{top:0,bottom:0,left:30, right: 0}}
                       enableRadialLabels= {false}
                     />
                   </div>

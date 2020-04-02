@@ -1135,7 +1135,7 @@
             "year": "2020",
             "district": "1",
             "sheltered": "False",
-            "city": "Unincorporated 1",
+            "city": "Unincorporated",
             "total": "44",
             "volunteers": "",
             "_type": "Unsheltered"
@@ -1226,7 +1226,7 @@
             "year": "2020",
             "district": "2",
             "sheltered": "False",
-            "city": "Unincorporated 2",
+            "city": "Unincorporated",
             "total": "31",
             "volunteers": "",
             "_type": "Unsheltered"
@@ -1265,7 +1265,7 @@
             "year": "2020",
             "district": "3",
             "sheltered": "False",
-            "city": "Unincorporated 3",
+            "city": "Unincorporated",
             "total": "54",
             "volunteers": "",
             "_type": "Unsheltered"
@@ -1330,7 +1330,7 @@
             "year": "2020",
             "district": "4",
             "sheltered": "False",
-            "city": "Unincorporated 4",
+            "city": "Unincorporated",
             "total": "58",
             "volunteers": "",
             "_type": "Unsheltered"
@@ -1499,7 +1499,7 @@
             "year": "2020",
             "district": "5",
             "sheltered": "False",
-            "city": "Unincorporated 5",
+            "city": "Unincorporated",
             "total": "15",
             "volunteers": "",
             "_type": "Unsheltered"

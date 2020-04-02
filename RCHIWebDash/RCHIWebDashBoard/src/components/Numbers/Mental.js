@@ -32,15 +32,8 @@ export default class Mental extends React.Component {
                 this.setState({mydata:data})
             })
             .catch(err => {
-                console.log("no data found")
+
             })
-
-        console.log("data:")
-        console.log(this.state.mydata)
-
-
-
-
 
     }
 
@@ -64,8 +57,6 @@ export default class Mental extends React.Component {
         let i;
         let totalNum;
 
-        console.log("NUMBER DATA: ")
-        console.log(this.state.mydata)
         for (i = 0; i < this.state.mydata.length; i++) {
             this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation;
             if(this.state.mydata[i].trend === 'Homeless Population ' && this.state.mydata[i].category === "Unsheltered"){
@@ -81,8 +72,6 @@ export default class Mental extends React.Component {
 
         }
 
-        console.log(this.state.number);
-        console.log(totalNum);
         percent = (this.state.number/totalNum) * 100;
         percent = this.round(percent, 0);
 

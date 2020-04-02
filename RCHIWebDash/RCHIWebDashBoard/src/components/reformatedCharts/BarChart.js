@@ -8,8 +8,6 @@ const BarChart = props => {
 
     let {labelSkipHeight,header, subHeader ,data, indexBy, keys, legend, margin, axisTitle, tickValues, gridYValues, maxValue, groupMode, divHeight, padding} = props
 
-    console.log("BAR PROPS: ", props)
-
     return(
         <div style = {{height: divHeight ?  divHeight: divHeight, width: '100%'}}>
             <Header size='medium' textAlign='center' style={{marginBottom:0}}>
