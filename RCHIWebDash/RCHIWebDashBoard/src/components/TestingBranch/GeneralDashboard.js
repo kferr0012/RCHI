@@ -13,13 +13,11 @@ import {aggregateFetch, expandOnField} from '../../components/Utilities/ListMani
 import {router} from '../../components/Utilities/constants/routing'
 import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 
-import {filter, subset, filterList} from '../../components/Utilities/ListManipulation/filter'
+import {filter, subset, filterList, NumberCreator} from '../../components/Utilities/ListManipulation/filter'
 import {combine, combineCounts} from '../../components/Utilities/ListManipulation/combine'
 import { Bar } from '@nivo/bar';
-import Mental from "../Numbers/Mental";
-import Physical from "../Numbers/Physical";
-import PTSD from "../Numbers/PTSD";
-import Substance from "../Numbers/Substance";
+import NumberPercentage from "../Numbers/NumberPercentage";
+
 import TotalGeneral from "../Numbers/TotalGeneral";
 import { ContainerWidth } from "../chartTablesStyling/chartTablesStyling"
 
@@ -79,6 +77,7 @@ export default class Dashboard extends Component{
                      router.host + '/' + router.root  + '/' + router.formerYear +'/' + "GeneralTableSubpopulationsSheltered/"],
 
             Tables : [],
+            NumberValues: null,
             render : false
         }
     }
@@ -96,7 +95,6 @@ export default class Dashboard extends Component{
     }
 
     getOrderedTable(){
-
       //concat in a specific order to sort data by group
 
       var unshelteredData = this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Total"]
@@ -120,9 +118,14 @@ export default class Dashboard extends Component{
     async componentDidMount(){
 
         var myTables = await aggregateFetch(this.state.urls, false)
+
+        const NumberValues = NumberCreator(myTables[router.activeYear + "/GeneralTableSubpopulations"])
+
+
         this.setState({
             Tables: this.formatData(myTables),
-            rendered : true
+            rendered : true,
+            NumberValues: NumberValues
         })
 
 
@@ -130,6 +133,8 @@ export default class Dashboard extends Component{
     }
 
     renderDashboards() {
+      // console.log("GENRAL TABLE: ",this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"].filter((val) => { return (val.subpopulation === "Mental Health Conditions" || val.subpopulation === "Individuals")}))
+
       return(
 
         <div className="container my-2" >
@@ -217,23 +222,35 @@ export default class Dashboard extends Component{
                 <div className = "gen-s-r" >
 
                     <div className="gen-s-r1">
-                        <Mental height = {50}
-                                url = {router.host + '/' + router.root + "/SubpopulationsByYear/?search=Mental"}
+                        <NumberPercentage 
+                          height = {50}
+                          data={this.state.NumberValues}
+                          subpopulation={"Mental Health Conditions"}
+                          header ={"mental health issues"}
                         />
                     </div>
                     <div className="gen-s-r4">
-                        <PTSD height = {50}
-                              url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                        <NumberPercentage 
+                          height = {50}
+                          data={this.state.NumberValues}
+                          subpopulation={"PTSD"}
+                          header ={"PTSD"}
                         />
                     </div>
                     <div className="gen-s-r2">
-                        <Substance height = {50}
-                                  url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                        <NumberPercentage 
+                          height = {50}
+                          data={this.state.NumberValues}
+                          subpopulation={"Substance Abuse"}
+                          header ={"substance abuse"}
                         />
                     </div>
                     <div className="gen-s-r3">
-                        <Physical height = {50}
-                                  url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                        <NumberPercentage 
+                          height = {50}
+                          data={this.state.NumberValues}
+                          subpopulation={"Physical Disability"}
+                          header ={"physical disability"}
                         />
                     </div>
                 </div>
@@ -245,8 +262,10 @@ export default class Dashboard extends Component{
 
                   <div className="gen-3r-r2">
                     <span className = "component-header" style = {{fontSize:"40px" ,textAlign: "middle"}}>
-                        <TotalGeneral height = {50}
-                                  url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                        <TotalGeneral 
+                          data={this.state.NumberValues}
+                          subpopulation={"Individuals"}
+                          height = {50}
                         />
                       </span>
                   </div>
@@ -259,11 +278,11 @@ export default class Dashboard extends Component{
                     <Table style = {{height: "100%"}}Cell Structured>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Interview"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{1346}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{this.state.NumberValues['Individuals'].interview}</Table.HeaderCell>
                       </Table.Row>
                       <Table.Row>
                         <Table.HeaderCell textAlign='center'>{"Observational"}</Table.HeaderCell>
-                        <Table.HeaderCell textAlign='center'>{809}</Table.HeaderCell>
+                        <Table.HeaderCell textAlign='center'>{this.state.NumberValues['Individuals'].observation}</Table.HeaderCell>
                       </Table.Row>
                     </Table>
                   </div>

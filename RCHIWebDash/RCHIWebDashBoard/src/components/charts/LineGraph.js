@@ -100,7 +100,7 @@ export default class LineGraph extends React.Component {
           },
           {
             'x': "2020",
-            'y': "2192"
+            'y': "2155"
           },
 
         ]

@@ -84,3 +84,27 @@ export const stackBarGraph =(data, keys) => {
 
     return newDataArray
 }
+
+
+export const NumberCreator = (data) => {
+
+    
+    const filterKeys = ["Individuals", "PTSD", "Mental Health Conditions", "Substance Abuse","Physical Disability"]
+
+    const filterData = data.filter( (val) => {
+        let {subpopulation} = val
+
+        return (filterKeys.includes(subpopulation))
+    })
+
+    const newDataObject = filterData.reduce ((acc,val)=> {
+        let {subpopulation,interview, observation, total} = val
+        if(!acc[subpopulation]){
+            acc[subpopulation] = {interview:interview, observation:observation,total:total}
+        }
+
+        return acc
+    },{})
+
+    return newDataObject
+}
