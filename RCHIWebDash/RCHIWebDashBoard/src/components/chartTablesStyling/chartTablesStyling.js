@@ -266,11 +266,11 @@ export const unshelteredCitiesStyling = {
 
     "Gender Chart":{
         indexBy: "subpopulation",
-        keys: ["interview"],
+        keys: ["total"],
         margin: { top: 50, right: 0, bottom: 50, left: -10 },
         divHeight: "20em",
         header: "Gender",
-        subHeader:"Interview Only",
+        subHeader:"",
         maxValue: 200,
         tickValues: 5,
         gridYValues: 5,
@@ -295,7 +295,7 @@ export const unshelteredCitiesStyling = {
         margin: { top: 50, right: 30, bottom: 50, left: 50},
         divHeight: "25em",
         header: "Race",
-        subHeader:"Interview Only",
+        subHeader:"",
         tickValues: 5,
         gridYValues: 5,
     },
