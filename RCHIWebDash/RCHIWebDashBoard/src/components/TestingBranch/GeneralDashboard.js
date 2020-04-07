@@ -221,6 +221,13 @@ export default class Dashboard extends Component{
               <div className="gen-grid-2">
                 <div className = "gen-s-r" >
 
+                <div className="gen-s-r1">
+                    <Change height = {50}
+                             url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                        />  
+                    </div>
+
+
                     <div className="gen-s-r1">
                         <NumberPercentage 
                           height = {50}
