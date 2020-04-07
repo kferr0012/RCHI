@@ -75,7 +75,7 @@ ageCategory = [('adult', 'Over25'), ('youth', 'Under24'), ('child', 'Under18'), 
 ageSubpopulation = ['Adults (>24)', 'Youth (18-24)', 'Children (<18)', 'Unknown Age', 'Total']
 
 subpopulationCategory = ['Yes', 'No' , 'DoesntKnow']
-veteransSubpopulation = ['Veteran Yes', 'Veteran No', 'Unknown Veteran']
+veteransSubpopulation = ['Veteran Yes', 'Veteran No']
 substanceAbuseSubpopulation = ['Substance Abuse', 'No Substance Abuse', 'Unknown Substance Abuse']
 ptsdSubpopulation = ['PTSD', 'No PTSD', 'Unknown PTSD']
 mentalHealthSubpopulation = ['Mental Health Conditions', 'No Mental Health Conditions', 'Unknown Mental Health Conditions']
@@ -157,8 +157,8 @@ def get_age_count(in_df, value, city, cityTitle, district= None, subpopulation= 
     return {"category": "Age", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": subpopulation, "total": interview + observation}
 
 def get_Total_Veterans(in_df, value, city, cityTitle, district= None, subpopulation= None):
-    if subpopulation == 'Unknown Veteran':
-        interview =  in_df.loc[lambda df: (((df['United States Armed Forces'] == value) | (df['United States Armed Forces'].isnull())) & (df['CITYNAME'] == city) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
+    if subpopulation == 'Veteran No':
+        interview =  in_df.loc[lambda df: (((df['United States Armed Forces'] == value) | (df['United States Armed Forces'] == 'DoesntKnow') | (df['United States Armed Forces'].isnull())) & (df['CITYNAME'] == city) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     else:
         interview =  in_df.loc[lambda df: ((df['United States Armed Forces'] == value) & (df['CITYNAME'] == city) & (df['Household Survey Type'] == 'Interview')), :].shape[0]
     observation = 0
@@ -185,7 +185,7 @@ def get_Total_ChronicHomeless(in_df,city,cityTitle, district=None):
 
 def get_Total_NotChronicHomeless(in_df,city,cityTitle, district=None):
     totalCountInterview = in_df.loc[lambda df: (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0]
-    totalCountObserved = in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation') & (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0] 
+    # totalCountObserved = in_df.loc[lambda df: (df['Household Survey Type'] == 'Observation') & (df['CITYNAME'] == city) & (df['ParentGlobalID'].notnull()), :].shape[0] 
 
     ChronicallyHomelessHouseholds = in_df.loc[lambda df:\
        ((df['Household Survey Type'] == 'Interview') & (df['Chronically Homeless Status'] == 1) & (df['CITYNAME'] == city) &(df['ParentGlobalID'].notnull()))\
@@ -199,7 +199,7 @@ def get_Total_NotChronicHomeless(in_df,city,cityTitle, district=None):
                     .isin(ChronicallyHomelessHouseholds['ParentGlobalID']).sum()
 
     interview = totalCountInterview - total_persons
-    observation = totalCountObserved
+    observation = 0
 
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Not Chronically Homeless', "total": interview + observation}
 
@@ -383,6 +383,13 @@ def get_NewlyHomeless(in_df,city,cityTitle,district=None):
 
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Newly Homeless',"total": interview + observation}
 
+def get_Seniors(in_df,city,cityTitle,district=None):
+    interview = in_df.loc[lambda df: (df['Age As Of Today'] >= 60) & (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city), :].shape[0]
+    observation = 0
+
+    return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Seniors 60+',"total": interview + observation}
+
+
 for district in range(0,5):
 
     for city in allCities[district]:
@@ -523,6 +530,10 @@ for district in range(0,5):
         "fields":  get_NewlyHomeless(allDistricts[district],city,cityTitle,district + 1)
         })
 
+        data.append({
+        "fields":  get_Seniors(allDistricts[district],city,cityTitle,district + 1)
+        })
+
 
 
 for districtData in [df_d1_2]:
@@ -661,6 +672,9 @@ for districtData in [df_d1_2]:
         "fields":  get_NewlyHomeless(districtData,city,cityTitle,"1+2")
         })
 
+        data.append({
+        "fields":  get_Seniors(districtData,city,cityTitle,"1+2")
+        })
 
 
 for x in jsonData:

@@ -723,30 +723,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RIVERSIDE 1",
-            "interview": 129,
+            "interview": 137,
             "observation": 0,
             "district": 1,
             "subpopulation": "Veteran No",
-            "total": 129,
+            "total": 137,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 49,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "RIVERSIDE 1",
-            "interview": 8,
-            "observation": 0,
-            "district": 1,
-            "subpopulation": "Unknown Veteran",
-            "total": 8,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 50,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -761,7 +746,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 51,
+        "pk": 50,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -776,7 +761,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 52,
+        "pk": 51,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -791,7 +776,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 53,
+        "pk": 52,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -806,7 +791,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 54,
+        "pk": 53,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -821,7 +806,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 55,
+        "pk": 54,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -836,7 +821,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 56,
+        "pk": 55,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -851,7 +836,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 57,
+        "pk": 56,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -866,7 +851,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 58,
+        "pk": 57,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -881,7 +866,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 59,
+        "pk": 58,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -896,7 +881,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 60,
+        "pk": 59,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -911,7 +896,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 61,
+        "pk": 60,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -919,14 +904,14 @@
             "category": "Subpopulations",
             "city": "RIVERSIDE 1",
             "interview": 102,
-            "observation": 188,
+            "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 290,
+            "total": 102,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 62,
+        "pk": 61,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -941,7 +926,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 63,
+        "pk": 62,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -956,7 +941,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 64,
+        "pk": 63,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -971,7 +956,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 65,
+        "pk": 64,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -986,7 +971,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 66,
+        "pk": 65,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1001,7 +986,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 67,
+        "pk": 66,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1013,6 +998,21 @@
             "district": 1,
             "subpopulation": "Newly Homeless",
             "total": 53,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 67,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "RIVERSIDE 1",
+            "interview": 20,
+            "observation": 0,
+            "district": 1,
+            "subpopulation": "Seniors 60+",
+            "total": 20,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -1743,30 +1743,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "LAKE ELSINORE",
-            "interview": 37,
+            "interview": 40,
             "observation": 0,
             "district": 1,
             "subpopulation": "Veteran No",
-            "total": 37,
+            "total": 40,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 117,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "LAKE ELSINORE",
-            "interview": 3,
-            "observation": 0,
-            "district": 1,
-            "subpopulation": "Unknown Veteran",
-            "total": 3,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 118,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1781,7 +1766,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 119,
+        "pk": 118,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1796,7 +1781,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 120,
+        "pk": 119,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1811,7 +1796,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 121,
+        "pk": 120,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1826,7 +1811,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 122,
+        "pk": 121,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1841,7 +1826,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 123,
+        "pk": 122,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1856,7 +1841,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 124,
+        "pk": 123,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1871,7 +1856,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 125,
+        "pk": 124,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1886,7 +1871,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 126,
+        "pk": 125,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1901,7 +1886,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 127,
+        "pk": 126,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1916,7 +1901,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 128,
+        "pk": 127,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1931,7 +1916,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 129,
+        "pk": 128,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1939,14 +1924,14 @@
             "category": "Subpopulations",
             "city": "LAKE ELSINORE",
             "interview": 22,
-            "observation": 7,
+            "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 29,
+            "total": 22,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 130,
+        "pk": 129,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1961,7 +1946,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 131,
+        "pk": 130,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1976,7 +1961,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 132,
+        "pk": 131,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -1991,7 +1976,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 133,
+        "pk": 132,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2006,7 +1991,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 134,
+        "pk": 133,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2021,7 +2006,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 135,
+        "pk": 134,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2033,6 +2018,21 @@
             "district": 1,
             "subpopulation": "Newly Homeless",
             "total": 15,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 135,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "LAKE ELSINORE",
+            "interview": 4,
+            "observation": 0,
+            "district": 1,
+            "subpopulation": "Seniors 60+",
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -2763,30 +2763,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 1",
-            "interview": 25,
+            "interview": 26,
             "observation": 0,
             "district": 1,
             "subpopulation": "Veteran No",
-            "total": 25,
+            "total": 26,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 185,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 1",
-            "interview": 1,
-            "observation": 0,
-            "district": 1,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 186,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2801,7 +2786,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 187,
+        "pk": 186,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2816,7 +2801,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 188,
+        "pk": 187,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2831,7 +2816,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 189,
+        "pk": 188,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2846,7 +2831,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 190,
+        "pk": 189,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2861,7 +2846,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 191,
+        "pk": 190,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2876,7 +2861,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 192,
+        "pk": 191,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2891,7 +2876,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 193,
+        "pk": 192,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2906,7 +2891,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 194,
+        "pk": 193,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2921,7 +2906,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 195,
+        "pk": 194,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2936,7 +2921,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 196,
+        "pk": 195,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2951,7 +2936,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 197,
+        "pk": 196,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2959,14 +2944,14 @@
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 1",
             "interview": 19,
-            "observation": 17,
+            "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 36,
+            "total": 19,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 198,
+        "pk": 197,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2981,7 +2966,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 199,
+        "pk": 198,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -2996,7 +2981,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 200,
+        "pk": 199,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3011,7 +2996,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 201,
+        "pk": 200,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3026,7 +3011,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 202,
+        "pk": 201,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3041,7 +3026,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 203,
+        "pk": 202,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3053,6 +3038,21 @@
             "district": 1,
             "subpopulation": "Newly Homeless",
             "total": 9,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 203,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "UNINCORPORATED DISTRICT 1",
+            "interview": 5,
+            "observation": 0,
+            "district": 1,
+            "subpopulation": "Seniors 60+",
+            "total": 5,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -3801,7 +3801,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -3816,7 +3816,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -3831,7 +3831,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -3846,27 +3846,12 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 257,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "WILDOMAR",
-            "interview": 0,
-            "observation": 0,
-            "district": 1,
             "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 258,
+        "pk": 257,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3881,7 +3866,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 259,
+        "pk": 258,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3896,7 +3881,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 260,
+        "pk": 259,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3911,7 +3896,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 261,
+        "pk": 260,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3926,7 +3911,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 262,
+        "pk": 261,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3941,7 +3926,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 263,
+        "pk": 262,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3956,7 +3941,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 264,
+        "pk": 263,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3971,7 +3956,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 265,
+        "pk": 264,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -3979,14 +3964,14 @@
             "category": "Subpopulations",
             "city": "WILDOMAR",
             "interview": 3,
-            "observation": 3,
+            "observation": 0,
             "district": 1,
             "subpopulation": "Not Chronically Homeless",
-            "total": 6,
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 266,
+        "pk": 265,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -4001,7 +3986,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 267,
+        "pk": 266,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -4016,7 +4001,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 268,
+        "pk": 267,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -4031,7 +4016,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 269,
+        "pk": 268,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -4046,7 +4031,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 270,
+        "pk": 269,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -4061,7 +4046,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 271,
+        "pk": 270,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -4072,6 +4057,21 @@
             "observation": 0,
             "district": 1,
             "subpopulation": "Newly Homeless",
+            "total": 0,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 271,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "WILDOMAR",
+            "interview": 0,
+            "observation": 0,
+            "district": 1,
+            "subpopulation": "Seniors 60+",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4821,7 +4821,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4836,7 +4836,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4851,7 +4851,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4866,7 +4866,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4881,7 +4881,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4896,7 +4896,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 12 Months: Probation",
+            "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4911,7 +4911,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 12 Months: Parole",
+            "subpopulation": "Jail Release 12 Months: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4926,7 +4926,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 12 Months: Completed Sentence",
+            "subpopulation": "Jail Release 12 Months: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4941,7 +4941,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Jail Release 12 Months: (Unspecified)",
+            "subpopulation": "No Jail",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4956,7 +4956,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "No Jail",
+            "subpopulation": "Unknown Jail",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4971,7 +4971,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Unknown Jail",
+            "subpopulation": "Chronically Homeless",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -4986,7 +4986,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Chronically Homeless",
+            "subpopulation": "Not Chronically Homeless",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5001,7 +5001,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Not Chronically Homeless",
+            "subpopulation": "Adults Only",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5016,7 +5016,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Adults Only",
+            "subpopulation": "Children Only",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5031,7 +5031,7 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Children Only",
+            "subpopulation": "Families with Children",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5046,27 +5046,12 @@
             "interview": 0,
             "observation": 0,
             "district": 1,
-            "subpopulation": "Families with Children",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 337,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "CANYON LAKE",
-            "interview": 0,
-            "observation": 0,
-            "district": 1,
             "subpopulation": "Pet Owners",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 338,
+        "pk": 337,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -5081,7 +5066,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 339,
+        "pk": 338,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -5092,6 +5077,21 @@
             "observation": 0,
             "district": 1,
             "subpopulation": "Newly Homeless",
+            "total": 0,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 339,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "CANYON LAKE",
+            "interview": 0,
+            "observation": 0,
+            "district": 1,
+            "subpopulation": "Seniors 60+",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5841,7 +5841,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5856,7 +5856,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5871,7 +5871,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5886,7 +5886,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5901,7 +5901,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -5916,27 +5916,12 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 12 Months: Probation",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 395,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "NORCO",
-            "interview": 0,
-            "observation": 0,
-            "district": 2,
             "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 396,
+        "pk": 395,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -5951,7 +5936,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 397,
+        "pk": 396,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -5966,7 +5951,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 398,
+        "pk": 397,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -5981,7 +5966,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 399,
+        "pk": 398,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -5996,7 +5981,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 400,
+        "pk": 399,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6011,7 +5996,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 401,
+        "pk": 400,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6019,14 +6004,14 @@
             "category": "Subpopulations",
             "city": "NORCO",
             "interview": 7,
-            "observation": 3,
+            "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 10,
+            "total": 7,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 402,
+        "pk": 401,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6041,7 +6026,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 403,
+        "pk": 402,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6056,7 +6041,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 404,
+        "pk": 403,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6071,7 +6056,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 405,
+        "pk": 404,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6086,7 +6071,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 406,
+        "pk": 405,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6101,7 +6086,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 407,
+        "pk": 406,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6113,6 +6098,21 @@
             "district": 2,
             "subpopulation": "Newly Homeless",
             "total": 4,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 407,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "NORCO",
+            "interview": 3,
+            "observation": 0,
+            "district": 2,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -6843,30 +6843,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "CORONA",
-            "interview": 51,
+            "interview": 54,
             "observation": 0,
             "district": 2,
             "subpopulation": "Veteran No",
-            "total": 51,
+            "total": 54,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 457,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "CORONA",
-            "interview": 3,
-            "observation": 0,
-            "district": 2,
-            "subpopulation": "Unknown Veteran",
-            "total": 3,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 458,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6881,7 +6866,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 459,
+        "pk": 458,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6896,7 +6881,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 460,
+        "pk": 459,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6911,7 +6896,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 461,
+        "pk": 460,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6926,7 +6911,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 462,
+        "pk": 461,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6941,7 +6926,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 463,
+        "pk": 462,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6956,7 +6941,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 464,
+        "pk": 463,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6971,7 +6956,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 465,
+        "pk": 464,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -6986,7 +6971,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 466,
+        "pk": 465,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7001,7 +6986,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 467,
+        "pk": 466,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7016,7 +7001,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 468,
+        "pk": 467,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7031,7 +7016,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 469,
+        "pk": 468,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7039,14 +7024,14 @@
             "category": "Subpopulations",
             "city": "CORONA",
             "interview": 54,
-            "observation": 45,
+            "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 99,
+            "total": 54,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 470,
+        "pk": 469,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7061,7 +7046,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 471,
+        "pk": 470,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7076,7 +7061,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 472,
+        "pk": 471,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7091,7 +7076,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 473,
+        "pk": 472,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7106,7 +7091,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 474,
+        "pk": 473,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7121,7 +7106,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 475,
+        "pk": 474,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7133,6 +7118,21 @@
             "district": 2,
             "subpopulation": "Newly Homeless",
             "total": 27,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 475,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "CORONA",
+            "interview": 9,
+            "observation": 0,
+            "district": 2,
+            "subpopulation": "Seniors 60+",
+            "total": 9,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -7863,30 +7863,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RIVERSIDE 2",
-            "interview": 110,
+            "interview": 111,
             "observation": 0,
             "district": 2,
             "subpopulation": "Veteran No",
-            "total": 110,
+            "total": 111,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 525,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "RIVERSIDE 2",
-            "interview": 1,
-            "observation": 0,
-            "district": 2,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 526,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7901,7 +7886,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 527,
+        "pk": 526,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7916,7 +7901,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 528,
+        "pk": 527,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7931,7 +7916,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 529,
+        "pk": 528,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7946,7 +7931,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 530,
+        "pk": 529,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7961,7 +7946,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 531,
+        "pk": 530,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7976,7 +7961,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 532,
+        "pk": 531,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -7991,7 +7976,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 533,
+        "pk": 532,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8006,7 +7991,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 534,
+        "pk": 533,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8021,7 +8006,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 535,
+        "pk": 534,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8036,7 +8021,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 536,
+        "pk": 535,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8051,7 +8036,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 537,
+        "pk": 536,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8059,14 +8044,14 @@
             "category": "Subpopulations",
             "city": "RIVERSIDE 2",
             "interview": 71,
-            "observation": 121,
+            "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 192,
+            "total": 71,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 538,
+        "pk": 537,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8081,7 +8066,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 539,
+        "pk": 538,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8096,7 +8081,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 540,
+        "pk": 539,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8111,7 +8096,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 541,
+        "pk": 540,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8126,7 +8111,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 542,
+        "pk": 541,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8141,7 +8126,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 543,
+        "pk": 542,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8153,6 +8138,21 @@
             "district": 2,
             "subpopulation": "Newly Homeless",
             "total": 41,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 543,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "RIVERSIDE 2",
+            "interview": 16,
+            "observation": 0,
+            "district": 2,
+            "subpopulation": "Seniors 60+",
+            "total": 16,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -8883,30 +8883,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "JURUPA VALLEY",
-            "interview": 82,
+            "interview": 83,
             "observation": 0,
             "district": 2,
             "subpopulation": "Veteran No",
-            "total": 82,
+            "total": 83,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 593,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "JURUPA VALLEY",
-            "interview": 1,
-            "observation": 0,
-            "district": 2,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 594,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8921,7 +8906,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 595,
+        "pk": 594,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8936,7 +8921,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 596,
+        "pk": 595,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8951,7 +8936,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 597,
+        "pk": 596,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8966,7 +8951,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 598,
+        "pk": 597,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8981,7 +8966,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 599,
+        "pk": 598,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -8996,7 +8981,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 600,
+        "pk": 599,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9011,7 +8996,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 601,
+        "pk": 600,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9026,7 +9011,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 602,
+        "pk": 601,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9041,7 +9026,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 603,
+        "pk": 602,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9056,7 +9041,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 604,
+        "pk": 603,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9071,7 +9056,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 605,
+        "pk": 604,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9079,14 +9064,14 @@
             "category": "Subpopulations",
             "city": "JURUPA VALLEY",
             "interview": 52,
-            "observation": 19,
+            "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 71,
+            "total": 52,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 606,
+        "pk": 605,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9101,7 +9086,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 607,
+        "pk": 606,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9116,7 +9101,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 608,
+        "pk": 607,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9131,7 +9116,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 609,
+        "pk": 608,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9146,7 +9131,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 610,
+        "pk": 609,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9161,7 +9146,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 611,
+        "pk": 610,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9173,6 +9158,21 @@
             "district": 2,
             "subpopulation": "Newly Homeless",
             "total": 32,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 611,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "JURUPA VALLEY",
+            "interview": 9,
+            "observation": 0,
+            "district": 2,
+            "subpopulation": "Seniors 60+",
+            "total": 9,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -9918,21 +9918,6 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 2",
-            "interview": 0,
-            "observation": 0,
-            "district": 2,
-            "subpopulation": "Unknown Veteran",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 662,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 2",
             "interview": 2,
             "observation": 0,
             "district": 2,
@@ -9941,7 +9926,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 663,
+        "pk": 662,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9956,7 +9941,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 664,
+        "pk": 663,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9971,7 +9956,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 665,
+        "pk": 664,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -9986,7 +9971,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 666,
+        "pk": 665,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10001,7 +9986,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 667,
+        "pk": 666,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10016,7 +10001,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 668,
+        "pk": 667,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10031,7 +10016,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 669,
+        "pk": 668,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10046,7 +10031,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 670,
+        "pk": 669,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10061,7 +10046,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 671,
+        "pk": 670,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10076,7 +10061,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 672,
+        "pk": 671,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10091,7 +10076,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 673,
+        "pk": 672,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10099,14 +10084,14 @@
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 2",
             "interview": 11,
-            "observation": 17,
+            "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 28,
+            "total": 11,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 674,
+        "pk": 673,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10121,7 +10106,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 675,
+        "pk": 674,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10136,7 +10121,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 676,
+        "pk": 675,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10151,7 +10136,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 677,
+        "pk": 676,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10166,7 +10151,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 678,
+        "pk": 677,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10181,7 +10166,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 679,
+        "pk": 678,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -10193,6 +10178,21 @@
             "district": 2,
             "subpopulation": "Newly Homeless",
             "total": 6,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 679,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "UNINCORPORATED DISTRICT 2",
+            "interview": 3,
+            "observation": 0,
+            "district": 2,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -10941,7 +10941,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -10956,7 +10956,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -10971,7 +10971,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -10986,7 +10986,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -11001,7 +11001,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -11016,7 +11016,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 12 Months: Probation",
+            "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -11031,7 +11031,7 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 12 Months: Parole",
+            "subpopulation": "Jail Release 12 Months: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -11046,27 +11046,12 @@
             "interview": 0,
             "observation": 0,
             "district": 2,
-            "subpopulation": "Jail Release 12 Months: Completed Sentence",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 737,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "EASTVALE",
-            "interview": 0,
-            "observation": 0,
-            "district": 2,
             "subpopulation": "Jail Release 12 Months: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 738,
+        "pk": 737,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11081,7 +11066,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 739,
+        "pk": 738,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11096,7 +11081,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 740,
+        "pk": 739,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11111,7 +11096,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 741,
+        "pk": 740,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11119,14 +11104,14 @@
             "category": "Subpopulations",
             "city": "EASTVALE",
             "interview": 2,
-            "observation": 2,
+            "observation": 0,
             "district": 2,
             "subpopulation": "Not Chronically Homeless",
-            "total": 4,
+            "total": 2,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 742,
+        "pk": 741,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11141,7 +11126,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 743,
+        "pk": 742,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11156,7 +11141,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 744,
+        "pk": 743,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11171,7 +11156,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 745,
+        "pk": 744,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11186,7 +11171,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 746,
+        "pk": 745,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11201,7 +11186,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 747,
+        "pk": 746,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11212,6 +11197,21 @@
             "observation": 0,
             "district": 2,
             "subpopulation": "Newly Homeless",
+            "total": 0,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 747,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "EASTVALE",
+            "interview": 0,
+            "observation": 0,
+            "district": 2,
+            "subpopulation": "Seniors 60+",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -11958,21 +11958,6 @@
         "fields": {
             "category": "Subpopulations",
             "city": "TEMECULA",
-            "interview": 0,
-            "observation": 0,
-            "district": 3,
-            "subpopulation": "Unknown Veteran",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 798,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "TEMECULA",
             "interview": 8,
             "observation": 0,
             "district": 3,
@@ -11981,7 +11966,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 799,
+        "pk": 798,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -11996,7 +11981,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 800,
+        "pk": 799,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12011,7 +11996,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 801,
+        "pk": 800,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12026,7 +12011,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 802,
+        "pk": 801,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12041,7 +12026,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 803,
+        "pk": 802,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12056,7 +12041,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 804,
+        "pk": 803,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12071,7 +12056,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 805,
+        "pk": 804,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12086,7 +12071,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 806,
+        "pk": 805,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12101,7 +12086,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 807,
+        "pk": 806,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12116,7 +12101,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 808,
+        "pk": 807,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12131,7 +12116,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 809,
+        "pk": 808,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12139,14 +12124,14 @@
             "category": "Subpopulations",
             "city": "TEMECULA",
             "interview": 32,
-            "observation": 13,
+            "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 45,
+            "total": 32,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 810,
+        "pk": 809,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12161,7 +12146,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 811,
+        "pk": 810,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12176,7 +12161,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 812,
+        "pk": 811,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12191,7 +12176,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 813,
+        "pk": 812,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12206,7 +12191,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 814,
+        "pk": 813,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12221,7 +12206,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 815,
+        "pk": 814,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -12233,6 +12218,21 @@
             "district": 3,
             "subpopulation": "Newly Homeless",
             "total": 19,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 815,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "TEMECULA",
+            "interview": 2,
+            "observation": 0,
+            "district": 3,
+            "subpopulation": "Seniors 60+",
+            "total": 2,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -12981,7 +12981,7 @@
             "interview": 0,
             "observation": 0,
             "district": 3,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -12996,27 +12996,12 @@
             "interview": 0,
             "observation": 0,
             "district": 3,
-            "subpopulation": "Jail Release 90 Days: Probation",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 867,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 3",
-            "interview": 0,
-            "observation": 0,
-            "district": 3,
             "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 868,
+        "pk": 867,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13031,7 +13016,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 869,
+        "pk": 868,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13046,7 +13031,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 870,
+        "pk": 869,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13061,7 +13046,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 871,
+        "pk": 870,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13076,7 +13061,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 872,
+        "pk": 871,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13091,7 +13076,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 873,
+        "pk": 872,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13106,7 +13091,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 874,
+        "pk": 873,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13121,7 +13106,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 875,
+        "pk": 874,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13136,7 +13121,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 876,
+        "pk": 875,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13151,7 +13136,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 877,
+        "pk": 876,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13159,14 +13144,14 @@
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 3",
             "interview": 19,
-            "observation": 18,
+            "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 37,
+            "total": 19,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 878,
+        "pk": 877,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13181,7 +13166,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 879,
+        "pk": 878,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13196,7 +13181,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 880,
+        "pk": 879,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13211,7 +13196,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 881,
+        "pk": 880,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13226,7 +13211,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 882,
+        "pk": 881,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13241,7 +13226,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 883,
+        "pk": 882,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -13253,6 +13238,21 @@
             "district": 3,
             "subpopulation": "Newly Homeless",
             "total": 11,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 883,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "UNINCORPORATED DISTRICT 3",
+            "interview": 2,
+            "observation": 0,
+            "district": 3,
+            "subpopulation": "Seniors 60+",
+            "total": 2,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -13998,21 +13998,6 @@
         "fields": {
             "category": "Subpopulations",
             "city": "MURRIETA",
-            "interview": 0,
-            "observation": 0,
-            "district": 3,
-            "subpopulation": "Unknown Veteran",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 934,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "MURRIETA",
             "interview": 4,
             "observation": 0,
             "district": 3,
@@ -14021,7 +14006,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 935,
+        "pk": 934,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14036,7 +14021,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 936,
+        "pk": 935,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14051,7 +14036,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 937,
+        "pk": 936,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14066,7 +14051,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 938,
+        "pk": 937,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14081,7 +14066,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 939,
+        "pk": 938,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14096,7 +14081,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 940,
+        "pk": 939,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14111,7 +14096,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 941,
+        "pk": 940,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14126,7 +14111,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 942,
+        "pk": 941,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14141,7 +14126,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 943,
+        "pk": 942,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14156,7 +14141,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 944,
+        "pk": 943,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14171,7 +14156,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 945,
+        "pk": 944,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14179,14 +14164,14 @@
             "category": "Subpopulations",
             "city": "MURRIETA",
             "interview": 3,
-            "observation": 8,
+            "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 11,
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 946,
+        "pk": 945,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14201,7 +14186,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 947,
+        "pk": 946,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14216,7 +14201,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 948,
+        "pk": 947,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14231,7 +14216,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 949,
+        "pk": 948,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14246,7 +14231,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 950,
+        "pk": 949,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14261,7 +14246,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 951,
+        "pk": 950,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -14273,6 +14258,21 @@
             "district": 3,
             "subpopulation": "Newly Homeless",
             "total": 3,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 951,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "MURRIETA",
+            "interview": 0,
+            "observation": 0,
+            "district": 3,
+            "subpopulation": "Seniors 60+",
+            "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -15003,30 +15003,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "HEMET",
-            "interview": 64,
+            "interview": 67,
             "observation": 0,
             "district": 3,
             "subpopulation": "Veteran No",
-            "total": 64,
+            "total": 67,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1001,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "HEMET",
-            "interview": 3,
-            "observation": 0,
-            "district": 3,
-            "subpopulation": "Unknown Veteran",
-            "total": 3,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1002,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15041,7 +15026,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1003,
+        "pk": 1002,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15056,7 +15041,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1004,
+        "pk": 1003,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15071,7 +15056,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1005,
+        "pk": 1004,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15086,7 +15071,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1006,
+        "pk": 1005,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15101,7 +15086,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1007,
+        "pk": 1006,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15116,7 +15101,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1008,
+        "pk": 1007,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15131,7 +15116,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1009,
+        "pk": 1008,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15146,7 +15131,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1010,
+        "pk": 1009,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15161,7 +15146,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1011,
+        "pk": 1010,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15176,7 +15161,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1012,
+        "pk": 1011,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15191,7 +15176,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1013,
+        "pk": 1012,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15199,14 +15184,14 @@
             "category": "Subpopulations",
             "city": "HEMET",
             "interview": 41,
-            "observation": 22,
+            "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 63,
+            "total": 41,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1014,
+        "pk": 1013,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15221,7 +15206,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1015,
+        "pk": 1014,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15236,7 +15221,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1016,
+        "pk": 1015,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15251,7 +15236,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1017,
+        "pk": 1016,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15266,7 +15251,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1018,
+        "pk": 1017,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15281,7 +15266,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1019,
+        "pk": 1018,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -15293,6 +15278,21 @@
             "district": 3,
             "subpopulation": "Newly Homeless",
             "total": 29,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1019,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "HEMET",
+            "interview": 8,
+            "observation": 0,
+            "district": 3,
+            "subpopulation": "Seniors 60+",
+            "total": 8,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -16041,7 +16041,7 @@
             "interview": 0,
             "observation": 0,
             "district": 3,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -16056,27 +16056,12 @@
             "interview": 0,
             "observation": 0,
             "district": 3,
-            "subpopulation": "Jail Release 90 Days: Probation",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1071,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "SAN JACINTO",
-            "interview": 0,
-            "observation": 0,
-            "district": 3,
             "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1072,
+        "pk": 1071,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16091,7 +16076,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1073,
+        "pk": 1072,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16106,7 +16091,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1074,
+        "pk": 1073,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16121,7 +16106,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1075,
+        "pk": 1074,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16136,7 +16121,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1076,
+        "pk": 1075,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16151,7 +16136,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1077,
+        "pk": 1076,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16166,7 +16151,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1078,
+        "pk": 1077,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16181,7 +16166,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1079,
+        "pk": 1078,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16196,7 +16181,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1080,
+        "pk": 1079,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16211,7 +16196,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1081,
+        "pk": 1080,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16219,14 +16204,14 @@
             "category": "Subpopulations",
             "city": "SAN JACINTO",
             "interview": 18,
-            "observation": 5,
+            "observation": 0,
             "district": 3,
             "subpopulation": "Not Chronically Homeless",
-            "total": 23,
+            "total": 18,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1082,
+        "pk": 1081,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16241,7 +16226,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1083,
+        "pk": 1082,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16256,7 +16241,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1084,
+        "pk": 1083,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16271,7 +16256,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1085,
+        "pk": 1084,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16286,7 +16271,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1086,
+        "pk": 1085,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16301,7 +16286,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1087,
+        "pk": 1086,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -16313,6 +16298,21 @@
             "district": 3,
             "subpopulation": "Newly Homeless",
             "total": 13,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1087,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "SAN JACINTO",
+            "interview": 4,
+            "observation": 0,
+            "district": 3,
+            "subpopulation": "Seniors 60+",
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -17043,30 +17043,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "DESERT HOT SPRINGS",
-            "interview": 46,
+            "interview": 51,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 46,
+            "total": 51,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1137,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "DESERT HOT SPRINGS",
-            "interview": 5,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 5,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1138,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17081,7 +17066,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1139,
+        "pk": 1138,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17096,7 +17081,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1140,
+        "pk": 1139,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17111,7 +17096,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1141,
+        "pk": 1140,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17126,7 +17111,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1142,
+        "pk": 1141,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17141,7 +17126,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1143,
+        "pk": 1142,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17156,7 +17141,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1144,
+        "pk": 1143,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17171,7 +17156,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1145,
+        "pk": 1144,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17186,7 +17171,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1146,
+        "pk": 1145,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17201,7 +17186,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1147,
+        "pk": 1146,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17216,7 +17201,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1148,
+        "pk": 1147,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17231,7 +17216,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1149,
+        "pk": 1148,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17239,14 +17224,14 @@
             "category": "Subpopulations",
             "city": "DESERT HOT SPRINGS",
             "interview": 45,
-            "observation": 10,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 55,
+            "total": 45,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1150,
+        "pk": 1149,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17261,7 +17246,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1151,
+        "pk": 1150,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17276,7 +17261,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1152,
+        "pk": 1151,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17291,7 +17276,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1153,
+        "pk": 1152,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17306,7 +17291,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1154,
+        "pk": 1153,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17321,7 +17306,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1155,
+        "pk": 1154,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -17333,6 +17318,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 26,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1155,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "DESERT HOT SPRINGS",
+            "interview": 12,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 12,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -18063,30 +18063,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 4",
-            "interview": 41,
+            "interview": 45,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 41,
+            "total": 45,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1205,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 4",
-            "interview": 4,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 4,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1206,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18101,7 +18086,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1207,
+        "pk": 1206,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18116,7 +18101,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1208,
+        "pk": 1207,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18131,7 +18116,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1209,
+        "pk": 1208,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18146,7 +18131,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1210,
+        "pk": 1209,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18161,7 +18146,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1211,
+        "pk": 1210,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18176,7 +18161,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1212,
+        "pk": 1211,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18191,7 +18176,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1213,
+        "pk": 1212,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18206,7 +18191,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1214,
+        "pk": 1213,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18221,7 +18206,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1215,
+        "pk": 1214,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18236,7 +18221,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1216,
+        "pk": 1215,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18251,7 +18236,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1217,
+        "pk": 1216,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18259,14 +18244,14 @@
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 4",
             "interview": 30,
-            "observation": 9,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 39,
+            "total": 30,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1218,
+        "pk": 1217,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18281,7 +18266,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1219,
+        "pk": 1218,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18296,7 +18281,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1220,
+        "pk": 1219,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18311,7 +18296,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1221,
+        "pk": 1220,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18326,7 +18311,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1222,
+        "pk": 1221,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18341,7 +18326,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1223,
+        "pk": 1222,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -18353,6 +18338,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 12,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1223,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "UNINCORPORATED DISTRICT 4",
+            "interview": 9,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 9,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -19101,7 +19101,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19116,7 +19116,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19131,7 +19131,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19146,7 +19146,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19161,7 +19161,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19176,7 +19176,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Probation",
+            "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19191,7 +19191,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Parole",
+            "subpopulation": "Jail Release 12 Months: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -19206,27 +19206,12 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Completed Sentence",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1281,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "LA QUINTA",
-            "interview": 0,
-            "observation": 0,
-            "district": 4,
             "subpopulation": "Jail Release 12 Months: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1282,
+        "pk": 1281,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19241,7 +19226,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1283,
+        "pk": 1282,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19256,7 +19241,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1284,
+        "pk": 1283,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19271,7 +19256,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1285,
+        "pk": 1284,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19286,7 +19271,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1286,
+        "pk": 1285,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19301,7 +19286,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1287,
+        "pk": 1286,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19316,7 +19301,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1288,
+        "pk": 1287,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19331,7 +19316,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1289,
+        "pk": 1288,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19346,7 +19331,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1290,
+        "pk": 1289,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19361,7 +19346,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1291,
+        "pk": 1290,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -19373,6 +19358,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 1,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1291,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "LA QUINTA",
+            "interview": 0,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -20103,30 +20103,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "COACHELLA",
-            "interview": 45,
+            "interview": 46,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 45,
+            "total": 46,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1341,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "COACHELLA",
-            "interview": 1,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1342,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20141,7 +20126,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1343,
+        "pk": 1342,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20156,7 +20141,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1344,
+        "pk": 1343,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20171,7 +20156,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1345,
+        "pk": 1344,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20186,7 +20171,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1346,
+        "pk": 1345,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20201,7 +20186,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1347,
+        "pk": 1346,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20216,7 +20201,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1348,
+        "pk": 1347,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20231,7 +20216,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1349,
+        "pk": 1348,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20246,7 +20231,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1350,
+        "pk": 1349,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20261,7 +20246,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1351,
+        "pk": 1350,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20276,7 +20261,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1352,
+        "pk": 1351,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20291,7 +20276,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1353,
+        "pk": 1352,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20299,14 +20284,14 @@
             "category": "Subpopulations",
             "city": "COACHELLA",
             "interview": 23,
-            "observation": 30,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 53,
+            "total": 23,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1354,
+        "pk": 1353,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20321,7 +20306,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1355,
+        "pk": 1354,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20336,7 +20321,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1356,
+        "pk": 1355,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20351,7 +20336,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1357,
+        "pk": 1356,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20366,7 +20351,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1358,
+        "pk": 1357,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20381,7 +20366,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1359,
+        "pk": 1358,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -20393,6 +20378,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 20,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1359,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "COACHELLA",
+            "interview": 6,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 6,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -21141,7 +21141,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21156,7 +21156,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21171,7 +21171,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21186,7 +21186,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21201,7 +21201,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21216,7 +21216,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Probation",
+            "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21231,7 +21231,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Parole",
+            "subpopulation": "Jail Release 12 Months: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21246,7 +21246,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Completed Sentence",
+            "subpopulation": "Jail Release 12 Months: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21261,7 +21261,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: (Unspecified)",
+            "subpopulation": "No Jail",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21276,7 +21276,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "No Jail",
+            "subpopulation": "Unknown Jail",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21291,7 +21291,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Unknown Jail",
+            "subpopulation": "Chronically Homeless",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -21306,27 +21306,12 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Chronically Homeless",
+            "subpopulation": "Not Chronically Homeless",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1421,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "INDIAN WELLS",
-            "interview": 0,
-            "observation": 1,
-            "district": 4,
-            "subpopulation": "Not Chronically Homeless",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1422,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -21341,7 +21326,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1423,
+        "pk": 1422,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -21356,7 +21341,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1424,
+        "pk": 1423,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -21371,7 +21356,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1425,
+        "pk": 1424,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -21386,7 +21371,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1426,
+        "pk": 1425,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -21401,7 +21386,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1427,
+        "pk": 1426,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -21412,6 +21397,21 @@
             "observation": 0,
             "district": 4,
             "subpopulation": "Newly Homeless",
+            "total": 0,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1427,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "INDIAN WELLS",
+            "interview": 0,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -22143,30 +22143,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "INDIO",
-            "interview": 49,
+            "interview": 51,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 49,
+            "total": 51,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1477,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "INDIO",
-            "interview": 2,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 2,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1478,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22181,7 +22166,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1479,
+        "pk": 1478,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22196,7 +22181,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1480,
+        "pk": 1479,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22211,7 +22196,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1481,
+        "pk": 1480,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22226,7 +22211,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1482,
+        "pk": 1481,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22241,7 +22226,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1483,
+        "pk": 1482,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22256,7 +22241,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1484,
+        "pk": 1483,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22271,7 +22256,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1485,
+        "pk": 1484,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22286,7 +22271,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1486,
+        "pk": 1485,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22301,7 +22286,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1487,
+        "pk": 1486,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22316,7 +22301,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1488,
+        "pk": 1487,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22331,7 +22316,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1489,
+        "pk": 1488,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22339,14 +22324,14 @@
             "category": "Subpopulations",
             "city": "INDIO",
             "interview": 26,
-            "observation": 31,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 57,
+            "total": 26,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1490,
+        "pk": 1489,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22361,7 +22346,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1491,
+        "pk": 1490,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22376,7 +22361,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1492,
+        "pk": 1491,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22391,7 +22376,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1493,
+        "pk": 1492,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22406,7 +22391,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1494,
+        "pk": 1493,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22421,7 +22406,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1495,
+        "pk": 1494,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -22433,6 +22418,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 16,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1495,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "INDIO",
+            "interview": 3,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -23163,30 +23163,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "PALM SPRINGS",
-            "interview": 107,
+            "interview": 112,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 107,
+            "total": 112,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1545,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "PALM SPRINGS",
-            "interview": 5,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 5,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1546,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23201,7 +23186,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1547,
+        "pk": 1546,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23216,7 +23201,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1548,
+        "pk": 1547,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23231,7 +23216,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1549,
+        "pk": 1548,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23246,7 +23231,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1550,
+        "pk": 1549,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23261,7 +23246,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1551,
+        "pk": 1550,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23276,7 +23261,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1552,
+        "pk": 1551,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23291,7 +23276,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1553,
+        "pk": 1552,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23306,7 +23291,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1554,
+        "pk": 1553,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23321,7 +23306,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1555,
+        "pk": 1554,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23336,7 +23321,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1556,
+        "pk": 1555,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23351,7 +23336,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1557,
+        "pk": 1556,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23359,14 +23344,14 @@
             "category": "Subpopulations",
             "city": "PALM SPRINGS",
             "interview": 58,
-            "observation": 67,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 125,
+            "total": 58,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1558,
+        "pk": 1557,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23381,7 +23366,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1559,
+        "pk": 1558,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23396,7 +23381,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1560,
+        "pk": 1559,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23411,7 +23396,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1561,
+        "pk": 1560,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23426,7 +23411,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1562,
+        "pk": 1561,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23441,7 +23426,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1563,
+        "pk": 1562,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -23453,6 +23438,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 42,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1563,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "PALM SPRINGS",
+            "interview": 25,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 25,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -24183,30 +24183,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "CATHEDRAL CITY",
-            "interview": 37,
+            "interview": 38,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 37,
+            "total": 38,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1613,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "CATHEDRAL CITY",
-            "interview": 1,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1614,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24221,7 +24206,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1615,
+        "pk": 1614,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24236,7 +24221,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1616,
+        "pk": 1615,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24251,7 +24236,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1617,
+        "pk": 1616,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24266,7 +24251,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1618,
+        "pk": 1617,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24281,7 +24266,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1619,
+        "pk": 1618,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24296,7 +24281,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1620,
+        "pk": 1619,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24311,7 +24296,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1621,
+        "pk": 1620,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24326,7 +24311,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1622,
+        "pk": 1621,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24341,7 +24326,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1623,
+        "pk": 1622,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24356,7 +24341,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1624,
+        "pk": 1623,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24371,7 +24356,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1625,
+        "pk": 1624,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24379,14 +24364,14 @@
             "category": "Subpopulations",
             "city": "CATHEDRAL CITY",
             "interview": 20,
-            "observation": 4,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 24,
+            "total": 20,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1626,
+        "pk": 1625,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24401,7 +24386,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1627,
+        "pk": 1626,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24416,7 +24401,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1628,
+        "pk": 1627,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24431,7 +24416,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1629,
+        "pk": 1628,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24446,7 +24431,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1630,
+        "pk": 1629,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24461,7 +24446,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1631,
+        "pk": 1630,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -24473,6 +24458,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 7,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1631,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "CATHEDRAL CITY",
+            "interview": 3,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -25203,30 +25203,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "BLYTHE",
-            "interview": 33,
+            "interview": 34,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 33,
+            "total": 34,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1681,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "BLYTHE",
-            "interview": 1,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1682,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25241,7 +25226,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1683,
+        "pk": 1682,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25256,7 +25241,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1684,
+        "pk": 1683,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25271,7 +25256,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1685,
+        "pk": 1684,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25286,7 +25271,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1686,
+        "pk": 1685,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25301,7 +25286,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1687,
+        "pk": 1686,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25316,7 +25301,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1688,
+        "pk": 1687,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25331,7 +25316,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1689,
+        "pk": 1688,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25346,7 +25331,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1690,
+        "pk": 1689,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25361,7 +25346,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1691,
+        "pk": 1690,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25376,7 +25361,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1692,
+        "pk": 1691,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25391,7 +25376,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1693,
+        "pk": 1692,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25399,14 +25384,14 @@
             "category": "Subpopulations",
             "city": "BLYTHE",
             "interview": 24,
-            "observation": 38,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 62,
+            "total": 24,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1694,
+        "pk": 1693,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25421,7 +25406,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1695,
+        "pk": 1694,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25436,7 +25421,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1696,
+        "pk": 1695,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25451,7 +25436,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1697,
+        "pk": 1696,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25466,7 +25451,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1698,
+        "pk": 1697,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25481,7 +25466,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1699,
+        "pk": 1698,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -25493,6 +25478,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 13,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1699,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "BLYTHE",
+            "interview": 7,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 7,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -26238,21 +26238,6 @@
         "fields": {
             "category": "Subpopulations",
             "city": "PALM DESERT",
-            "interview": 0,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1750,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "PALM DESERT",
             "interview": 3,
             "observation": 0,
             "district": 4,
@@ -26261,7 +26246,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1751,
+        "pk": 1750,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26276,7 +26261,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1752,
+        "pk": 1751,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26291,7 +26276,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1753,
+        "pk": 1752,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26306,7 +26291,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1754,
+        "pk": 1753,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26321,7 +26306,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1755,
+        "pk": 1754,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26336,7 +26321,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1756,
+        "pk": 1755,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26351,7 +26336,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1757,
+        "pk": 1756,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26366,7 +26351,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1758,
+        "pk": 1757,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26381,7 +26366,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1759,
+        "pk": 1758,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26396,7 +26381,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1760,
+        "pk": 1759,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26411,7 +26396,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1761,
+        "pk": 1760,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26426,7 +26411,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1762,
+        "pk": 1761,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26441,7 +26426,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1763,
+        "pk": 1762,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26456,7 +26441,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1764,
+        "pk": 1763,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26471,7 +26456,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1765,
+        "pk": 1764,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26486,7 +26471,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1766,
+        "pk": 1765,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26501,7 +26486,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1767,
+        "pk": 1766,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -26513,6 +26498,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 10,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1767,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "PALM DESERT",
+            "interview": 2,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 2,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -27243,30 +27243,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RANCHO MIRAGE",
-            "interview": 9,
+            "interview": 10,
             "observation": 0,
             "district": 4,
             "subpopulation": "Veteran No",
-            "total": 9,
+            "total": 10,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1817,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "RANCHO MIRAGE",
-            "interview": 1,
-            "observation": 0,
-            "district": 4,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1818,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27281,7 +27266,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1819,
+        "pk": 1818,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27296,7 +27281,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1820,
+        "pk": 1819,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27311,7 +27296,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1821,
+        "pk": 1820,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27326,7 +27311,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1822,
+        "pk": 1821,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27341,7 +27326,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1823,
+        "pk": 1822,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27356,7 +27341,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1824,
+        "pk": 1823,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27371,7 +27356,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1825,
+        "pk": 1824,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27386,7 +27371,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1826,
+        "pk": 1825,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27401,7 +27386,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1827,
+        "pk": 1826,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27416,7 +27401,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1828,
+        "pk": 1827,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27431,7 +27416,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1829,
+        "pk": 1828,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27439,14 +27424,14 @@
             "category": "Subpopulations",
             "city": "RANCHO MIRAGE",
             "interview": 2,
-            "observation": 1,
+            "observation": 0,
             "district": 4,
             "subpopulation": "Not Chronically Homeless",
-            "total": 3,
+            "total": 2,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1830,
+        "pk": 1829,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27461,7 +27446,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1831,
+        "pk": 1830,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27476,7 +27461,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1832,
+        "pk": 1831,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27491,7 +27476,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1833,
+        "pk": 1832,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27506,7 +27491,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1834,
+        "pk": 1833,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27521,7 +27506,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1835,
+        "pk": 1834,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -27533,6 +27518,21 @@
             "district": 4,
             "subpopulation": "Newly Homeless",
             "total": 5,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1835,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "RANCHO MIRAGE",
+            "interview": 0,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
+            "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -28281,7 +28281,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28296,7 +28296,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28311,7 +28311,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28326,7 +28326,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28341,7 +28341,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28356,7 +28356,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Probation",
+            "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28371,7 +28371,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Parole",
+            "subpopulation": "Jail Release 12 Months: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28386,7 +28386,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: Completed Sentence",
+            "subpopulation": "Jail Release 12 Months: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28401,7 +28401,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Jail Release 12 Months: (Unspecified)",
+            "subpopulation": "No Jail",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28416,7 +28416,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "No Jail",
+            "subpopulation": "Unknown Jail",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28431,7 +28431,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Unknown Jail",
+            "subpopulation": "Chronically Homeless",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28446,7 +28446,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Chronically Homeless",
+            "subpopulation": "Not Chronically Homeless",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28461,7 +28461,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Not Chronically Homeless",
+            "subpopulation": "Adults Only",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28476,7 +28476,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Adults Only",
+            "subpopulation": "Children Only",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28491,7 +28491,7 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Children Only",
+            "subpopulation": "Families with Children",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -28506,27 +28506,12 @@
             "interview": 0,
             "observation": 0,
             "district": 4,
-            "subpopulation": "Families with Children",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1901,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "MECCA",
-            "interview": 0,
-            "observation": 0,
-            "district": 4,
             "subpopulation": "Pet Owners",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1902,
+        "pk": 1901,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -28541,7 +28526,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1903,
+        "pk": 1902,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -28552,6 +28537,21 @@
             "observation": 0,
             "district": 4,
             "subpopulation": "Newly Homeless",
+            "total": 0,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1903,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "MECCA",
+            "interview": 0,
+            "observation": 0,
+            "district": 4,
+            "subpopulation": "Seniors 60+",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -29283,30 +29283,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "MENIFEE",
-            "interview": 14,
+            "interview": 15,
             "observation": 0,
             "district": 5,
             "subpopulation": "Veteran No",
-            "total": 14,
+            "total": 15,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 1953,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "MENIFEE",
-            "interview": 1,
-            "observation": 0,
-            "district": 5,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 1954,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29321,7 +29306,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1955,
+        "pk": 1954,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29336,7 +29321,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1956,
+        "pk": 1955,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29351,7 +29336,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1957,
+        "pk": 1956,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29366,7 +29351,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1958,
+        "pk": 1957,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29381,7 +29366,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1959,
+        "pk": 1958,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29396,7 +29381,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1960,
+        "pk": 1959,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29411,7 +29396,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1961,
+        "pk": 1960,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29426,7 +29411,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1962,
+        "pk": 1961,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29441,7 +29426,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1963,
+        "pk": 1962,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29456,7 +29441,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1964,
+        "pk": 1963,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29471,7 +29456,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1965,
+        "pk": 1964,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29479,14 +29464,14 @@
             "category": "Subpopulations",
             "city": "MENIFEE",
             "interview": 7,
-            "observation": 4,
+            "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 11,
+            "total": 7,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1966,
+        "pk": 1965,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29501,7 +29486,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1967,
+        "pk": 1966,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29516,7 +29501,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1968,
+        "pk": 1967,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29531,7 +29516,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1969,
+        "pk": 1968,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29546,7 +29531,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1970,
+        "pk": 1969,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29561,7 +29546,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 1971,
+        "pk": 1970,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -29573,6 +29558,21 @@
             "district": 5,
             "subpopulation": "Newly Homeless",
             "total": 4,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 1971,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "MENIFEE",
+            "interview": 3,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -30303,30 +30303,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "PERRIS",
-            "interview": 30,
+            "interview": 31,
             "observation": 0,
             "district": 5,
             "subpopulation": "Veteran No",
-            "total": 30,
+            "total": 31,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 2021,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "PERRIS",
-            "interview": 1,
-            "observation": 0,
-            "district": 5,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2022,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30341,7 +30326,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2023,
+        "pk": 2022,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30356,7 +30341,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2024,
+        "pk": 2023,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30371,7 +30356,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2025,
+        "pk": 2024,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30386,7 +30371,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2026,
+        "pk": 2025,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30401,7 +30386,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2027,
+        "pk": 2026,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30416,7 +30401,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2028,
+        "pk": 2027,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30431,7 +30416,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2029,
+        "pk": 2028,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30446,7 +30431,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2030,
+        "pk": 2029,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30461,7 +30446,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2031,
+        "pk": 2030,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30476,7 +30461,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2032,
+        "pk": 2031,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30491,7 +30476,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2033,
+        "pk": 2032,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30499,14 +30484,14 @@
             "category": "Subpopulations",
             "city": "PERRIS",
             "interview": 14,
-            "observation": 20,
+            "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 34,
+            "total": 14,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2034,
+        "pk": 2033,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30521,7 +30506,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2035,
+        "pk": 2034,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30536,7 +30521,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2036,
+        "pk": 2035,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30551,7 +30536,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2037,
+        "pk": 2036,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30566,7 +30551,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2038,
+        "pk": 2037,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30581,7 +30566,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2039,
+        "pk": 2038,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -30593,6 +30578,21 @@
             "district": 5,
             "subpopulation": "Newly Homeless",
             "total": 10,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2039,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "PERRIS",
+            "interview": 4,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -31341,7 +31341,7 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -31356,7 +31356,7 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Jail Release 90 Days: Probation",
+            "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -31371,7 +31371,7 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Jail Release 90 Days: Parole",
+            "subpopulation": "Jail Release 90 Days: Completed Sentence",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -31386,7 +31386,7 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Jail Release 90 Days: Completed Sentence",
+            "subpopulation": "Jail Release 90 Days: (Unspecified)",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -31401,7 +31401,7 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Jail Release 90 Days: (Unspecified)",
+            "subpopulation": "Jail Release 12 Months: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -31416,27 +31416,12 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Jail Release 12 Months: Probation",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2095,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "UNINCORPORATED DISTRICT 5",
-            "interview": 0,
-            "observation": 0,
-            "district": 5,
             "subpopulation": "Jail Release 12 Months: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2096,
+        "pk": 2095,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31451,7 +31436,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2097,
+        "pk": 2096,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31466,7 +31451,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2098,
+        "pk": 2097,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31481,7 +31466,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2099,
+        "pk": 2098,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31496,7 +31481,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2100,
+        "pk": 2099,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31511,7 +31496,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2101,
+        "pk": 2100,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31519,14 +31504,14 @@
             "category": "Subpopulations",
             "city": "UNINCORPORATED DISTRICT 5",
             "interview": 8,
-            "observation": 2,
+            "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 10,
+            "total": 8,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2102,
+        "pk": 2101,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31541,7 +31526,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2103,
+        "pk": 2102,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31556,7 +31541,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2104,
+        "pk": 2103,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31571,7 +31556,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2105,
+        "pk": 2104,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31586,7 +31571,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2106,
+        "pk": 2105,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31601,7 +31586,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2107,
+        "pk": 2106,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -31612,6 +31597,21 @@
             "observation": 0,
             "district": 5,
             "subpopulation": "Newly Homeless",
+            "total": 1,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2107,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "UNINCORPORATED DISTRICT 5",
+            "interview": 1,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
             "total": 1,
             "_type": "Unsheltered",
             "year": 2020
@@ -32358,21 +32358,6 @@
         "fields": {
             "category": "Subpopulations",
             "city": "BEAUMONT",
-            "interview": 0,
-            "observation": 0,
-            "district": 5,
-            "subpopulation": "Unknown Veteran",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2158,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "BEAUMONT",
             "interview": 1,
             "observation": 0,
             "district": 5,
@@ -32381,7 +32366,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2159,
+        "pk": 2158,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32396,7 +32381,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2160,
+        "pk": 2159,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32411,7 +32396,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2161,
+        "pk": 2160,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32426,7 +32411,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2162,
+        "pk": 2161,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32441,7 +32426,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2163,
+        "pk": 2162,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32456,7 +32441,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2164,
+        "pk": 2163,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32471,7 +32456,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2165,
+        "pk": 2164,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32486,7 +32471,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2166,
+        "pk": 2165,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32501,7 +32486,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2167,
+        "pk": 2166,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32516,7 +32501,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2168,
+        "pk": 2167,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32531,7 +32516,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2169,
+        "pk": 2168,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32546,7 +32531,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2170,
+        "pk": 2169,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32561,7 +32546,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2171,
+        "pk": 2170,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32576,7 +32561,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2172,
+        "pk": 2171,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32591,7 +32576,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2173,
+        "pk": 2172,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32606,7 +32591,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2174,
+        "pk": 2173,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32621,7 +32606,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2175,
+        "pk": 2174,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -32633,6 +32618,21 @@
             "district": 5,
             "subpopulation": "Newly Homeless",
             "total": 7,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2175,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "BEAUMONT",
+            "interview": 3,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -33363,30 +33363,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "MORENO VALLEY",
-            "interview": 71,
+            "interview": 72,
             "observation": 0,
             "district": 5,
             "subpopulation": "Veteran No",
-            "total": 71,
+            "total": 72,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 2225,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "MORENO VALLEY",
-            "interview": 1,
-            "observation": 0,
-            "district": 5,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2226,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33401,7 +33386,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2227,
+        "pk": 2226,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33416,7 +33401,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2228,
+        "pk": 2227,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33431,7 +33416,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2229,
+        "pk": 2228,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33446,7 +33431,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2230,
+        "pk": 2229,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33461,7 +33446,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2231,
+        "pk": 2230,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33476,7 +33461,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2232,
+        "pk": 2231,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33491,7 +33476,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2233,
+        "pk": 2232,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33506,7 +33491,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2234,
+        "pk": 2233,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33521,7 +33506,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2235,
+        "pk": 2234,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33536,7 +33521,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2236,
+        "pk": 2235,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33551,7 +33536,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2237,
+        "pk": 2236,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33559,14 +33544,14 @@
             "category": "Subpopulations",
             "city": "MORENO VALLEY",
             "interview": 59,
-            "observation": 86,
+            "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 145,
+            "total": 59,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2238,
+        "pk": 2237,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33581,7 +33566,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2239,
+        "pk": 2238,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33596,7 +33581,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2240,
+        "pk": 2239,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33611,7 +33596,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2241,
+        "pk": 2240,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33626,7 +33611,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2242,
+        "pk": 2241,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33641,7 +33626,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2243,
+        "pk": 2242,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -33653,6 +33638,21 @@
             "district": 5,
             "subpopulation": "Newly Homeless",
             "total": 32,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2243,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "MORENO VALLEY",
+            "interview": 8,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
+            "total": 8,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -34401,7 +34401,7 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Unknown Veteran",
+            "subpopulation": "Jail Release 90 Days: Probation",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
@@ -34416,27 +34416,12 @@
             "interview": 0,
             "observation": 0,
             "district": 5,
-            "subpopulation": "Jail Release 90 Days: Probation",
-            "total": 0,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2295,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "CALIMESA",
-            "interview": 0,
-            "observation": 0,
-            "district": 5,
             "subpopulation": "Jail Release 90 Days: Parole",
             "total": 0,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2296,
+        "pk": 2295,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34451,7 +34436,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2297,
+        "pk": 2296,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34466,7 +34451,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2298,
+        "pk": 2297,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34481,7 +34466,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2299,
+        "pk": 2298,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34496,7 +34481,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2300,
+        "pk": 2299,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34511,7 +34496,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2301,
+        "pk": 2300,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34526,7 +34511,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2302,
+        "pk": 2301,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34541,7 +34526,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2303,
+        "pk": 2302,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34556,7 +34541,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2304,
+        "pk": 2303,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34571,7 +34556,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2305,
+        "pk": 2304,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34579,14 +34564,14 @@
             "category": "Subpopulations",
             "city": "CALIMESA",
             "interview": 5,
-            "observation": 8,
+            "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 13,
+            "total": 5,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2306,
+        "pk": 2305,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34601,7 +34586,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2307,
+        "pk": 2306,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34616,7 +34601,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2308,
+        "pk": 2307,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34631,7 +34616,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2309,
+        "pk": 2308,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34646,7 +34631,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2310,
+        "pk": 2309,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34661,7 +34646,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2311,
+        "pk": 2310,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -34673,6 +34658,21 @@
             "district": 5,
             "subpopulation": "Newly Homeless",
             "total": 3,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2311,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "CALIMESA",
+            "interview": 1,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
+            "total": 1,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -35403,30 +35403,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "BANNING",
-            "interview": 27,
+            "interview": 28,
             "observation": 0,
             "district": 5,
             "subpopulation": "Veteran No",
-            "total": 27,
+            "total": 28,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 2361,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "BANNING",
-            "interview": 1,
-            "observation": 0,
-            "district": 5,
-            "subpopulation": "Unknown Veteran",
-            "total": 1,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2362,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35441,7 +35426,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2363,
+        "pk": 2362,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35456,7 +35441,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2364,
+        "pk": 2363,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35471,7 +35456,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2365,
+        "pk": 2364,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35486,7 +35471,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2366,
+        "pk": 2365,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35501,7 +35486,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2367,
+        "pk": 2366,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35516,7 +35501,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2368,
+        "pk": 2367,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35531,7 +35516,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2369,
+        "pk": 2368,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35546,7 +35531,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2370,
+        "pk": 2369,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35561,7 +35546,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2371,
+        "pk": 2370,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35576,7 +35561,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2372,
+        "pk": 2371,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35591,7 +35576,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2373,
+        "pk": 2372,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35599,14 +35584,14 @@
             "category": "Subpopulations",
             "city": "BANNING",
             "interview": 24,
-            "observation": 10,
+            "observation": 0,
             "district": 5,
             "subpopulation": "Not Chronically Homeless",
-            "total": 34,
+            "total": 24,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2374,
+        "pk": 2373,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35621,7 +35606,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2375,
+        "pk": 2374,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35636,7 +35621,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2376,
+        "pk": 2375,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35651,7 +35636,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2377,
+        "pk": 2376,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35666,7 +35651,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2378,
+        "pk": 2377,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35681,7 +35666,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2379,
+        "pk": 2378,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -35693,6 +35678,21 @@
             "district": 5,
             "subpopulation": "Newly Homeless",
             "total": 14,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2379,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "BANNING",
+            "interview": 3,
+            "observation": 0,
+            "district": 5,
+            "subpopulation": "Seniors 60+",
+            "total": 3,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -36423,30 +36423,15 @@
         "fields": {
             "category": "Subpopulations",
             "city": "RIVERSIDE",
-            "interview": 239,
+            "interview": 248,
             "observation": 0,
             "district": "1+2",
             "subpopulation": "Veteran No",
-            "total": 239,
+            "total": 248,
             "_type": "Unsheltered",
             "year": 2020
         },
         "pk": 2429,
-        "model": "backend.SubpopulationsByCity2020"
-    },
-    {
-        "fields": {
-            "category": "Subpopulations",
-            "city": "RIVERSIDE",
-            "interview": 9,
-            "observation": 0,
-            "district": "1+2",
-            "subpopulation": "Unknown Veteran",
-            "total": 9,
-            "_type": "Unsheltered",
-            "year": 2020
-        },
-        "pk": 2430,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36461,7 +36446,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2431,
+        "pk": 2430,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36476,7 +36461,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2432,
+        "pk": 2431,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36491,7 +36476,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2433,
+        "pk": 2432,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36506,7 +36491,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2434,
+        "pk": 2433,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36521,7 +36506,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2435,
+        "pk": 2434,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36536,7 +36521,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2436,
+        "pk": 2435,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36551,7 +36536,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2437,
+        "pk": 2436,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36566,7 +36551,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2438,
+        "pk": 2437,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36581,7 +36566,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2439,
+        "pk": 2438,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36596,7 +36581,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2440,
+        "pk": 2439,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36611,7 +36596,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2441,
+        "pk": 2440,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36619,14 +36604,14 @@
             "category": "Subpopulations",
             "city": "RIVERSIDE",
             "interview": 173,
-            "observation": 309,
+            "observation": 0,
             "district": "1+2",
             "subpopulation": "Not Chronically Homeless",
-            "total": 482,
+            "total": 173,
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2442,
+        "pk": 2441,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36641,7 +36626,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2443,
+        "pk": 2442,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36656,7 +36641,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2444,
+        "pk": 2443,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36671,7 +36656,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2445,
+        "pk": 2444,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36686,7 +36671,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2446,
+        "pk": 2445,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36701,7 +36686,7 @@
             "_type": "Unsheltered",
             "year": 2020
         },
-        "pk": 2447,
+        "pk": 2446,
         "model": "backend.SubpopulationsByCity2020"
     },
     {
@@ -36713,6 +36698,21 @@
             "district": "1+2",
             "subpopulation": "Newly Homeless",
             "total": 94,
+            "_type": "Unsheltered",
+            "year": 2020
+        },
+        "pk": 2447,
+        "model": "backend.SubpopulationsByCity2020"
+    },
+    {
+        "fields": {
+            "category": "Subpopulations",
+            "city": "RIVERSIDE",
+            "interview": 36,
+            "observation": 0,
+            "district": "1+2",
+            "subpopulation": "Seniors 60+",
+            "total": 36,
             "_type": "Unsheltered",
             "year": 2020
         },

@@ -224,6 +224,9 @@ export default class CityTable extends Component {
       this.setState({
         cityChoice: value.value
       });
+      this.setState({
+        cityChoice: value.value
+      });
     }, 200);
 
   }

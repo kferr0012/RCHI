@@ -91,7 +91,7 @@ export default class CityTables extends Component {
             data[this.state.citynames[i]] = JSON.parse(JSON.stringify(base));
         }
 
-        const filter = ["Unknown Veteran" , "Adults Only", 'Children Only', 'Families with Children','Pet Owners', 'Individuals','Newly Homeless']
+        const filter = ["Unknown Veteran" , "Adults Only", 'Children Only', 'Families with Children','Pet Owners', 'Individuals','Newly Homeless','Seniors 60+']
 
         for (var i = 0; i < indata.length ; i++)
         {   
