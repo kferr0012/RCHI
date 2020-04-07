@@ -51,7 +51,7 @@ const BarChart = props => {
         axisBottom={{
             tickSize: 5,
             tickPadding: 5,
-            tickRotation: 0,
+            tickRotation: -12,
             legend: axisTitle ? this.props.data[0].category : null,
             legendPosition: 'middle',
             legendOffset: 32
