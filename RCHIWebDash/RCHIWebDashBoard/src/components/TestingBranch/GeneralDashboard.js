@@ -18,6 +18,7 @@ import {combine, combineCounts} from '../../components/Utilities/ListManipulatio
 import { Bar } from '@nivo/bar';
 import NumberPercentage from "../Numbers/NumberPercentage";
 
+import Change from "../Numbers/Change";
 import TotalGeneral from "../Numbers/TotalGeneral";
 import { ContainerWidth } from "../chartTablesStyling/chartTablesStyling"
 
@@ -148,7 +149,7 @@ export default class Dashboard extends Component{
           <div className="row dash-row">
 
             <div className="col-md dash-col-reg">
-              {/* <p className="component-header">Overall 21% increase in homeless count from 2018.</p> */}
+             
 
               <TableComponent4
                 data={filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)}
@@ -228,7 +229,7 @@ export default class Dashboard extends Component{
                     </div>
 
 
-                    <div className="gen-s-r1">
+                    <div className="gen-s-r2">
                         <NumberPercentage 
                           height = {50}
                           data={this.state.NumberValues}
@@ -236,7 +237,7 @@ export default class Dashboard extends Component{
                           header ={"mental health issues"}
                         />
                     </div>
-                    <div className="gen-s-r4">
+                    <div className="gen-s-r5">
                         <NumberPercentage 
                           height = {50}
                           data={this.state.NumberValues}
@@ -244,7 +245,7 @@ export default class Dashboard extends Component{
                           header ={"PTSD"}
                         />
                     </div>
-                    <div className="gen-s-r2">
+                    <div className="gen-s-r3">
                         <NumberPercentage 
                           height = {50}
                           data={this.state.NumberValues}
@@ -252,7 +253,7 @@ export default class Dashboard extends Component{
                           header ={"substance abuse"}
                         />
                     </div>
-                    <div className="gen-s-r3">
+                    <div className="gen-s-r4">
                         <NumberPercentage 
                           height = {50}
                           data={this.state.NumberValues}
@@ -323,6 +324,8 @@ export default class Dashboard extends Component{
               </div>
             </div>
           </div>
+          {/* <hr></hr>
+                  <p className="component-header">Overall, there was a 21% increase in homeless count from 2019.</p> */}
         </div>
 
       )

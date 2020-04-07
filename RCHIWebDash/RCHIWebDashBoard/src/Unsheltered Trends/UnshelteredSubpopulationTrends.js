@@ -51,18 +51,41 @@ class UnshelteredSubpopulationTrends extends Component{
 
     TrendSelectedHandler(){
         return this.state.trendsSelected.map((trend, index )=> {
-            if(trend === "Youth (18-24)") return <YouthTrend  
+            if(trend === "Youth (18-24)"){ return <YouthTrend  
                 id={index} 
                 key={index} 
                 query={trend}
                 {...unshelteredTrendsStyling[trend]} 
                 />
+             
+            }
             else if(trend === "Substance Abuse") return <SubstanceAbuseTrend 
                 query={"Subpopulations"}
                 indexBy = {"year"}
                 keys={["total"]}
                 {...unshelteredTrendsStyling[trend]} 
                 /> 
+            else if (trend === "Chronically Homeless") return <div>
+                <GeneralTrendsNivo
+                lineID={trend} 
+                id={'Interviewed'} 
+                key={index} 
+                query={trend}
+                {...unshelteredTrendsStyling[trend]} 
+                />
+                <p>* Between 2018-2020, the question changed</p>
+            </div>
+            else if (trend === "Victim of Domestic Violence"){return <div>
+                <GeneralTrendsNivo
+                lineID={trend} 
+                id={'Interviewed'} 
+                key={index} 
+                query={trend}
+                {...unshelteredTrendsStyling[trend]} 
+                />
+                <p>* Between 2017-2018, the question changed</p>
+            </div>
+            }
             else return <GeneralTrendsNivo 
                 lineID={trend} 
                 id={'Interviewed'} 
