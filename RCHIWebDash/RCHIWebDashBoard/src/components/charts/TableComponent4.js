@@ -258,7 +258,7 @@ class TableComponent4 extends Component{
     }
     else{
     return(
-      <div className="tableContainer" style = {{...this.state.mystyle, height: this.props.divHeight ? this.props.divHeight: '100%', width: "100%", padding: 0, position: this.props.position ? this.props.position : ''}}>
+      <div className="tableContainer" style = {{...this.state.mystyle, height: this.props.divHeight ? this.props.divHeight: '100%', width: "100%", padding: 15, position: this.props.position ? this.props.position : ''}}>
             <Table Cell Structured unstackable style={{ borderWidth: "1px", height: this.props.tableHeight ? this.props.tableHeight : "80%"}}>
               <Table.Header>
 

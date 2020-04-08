@@ -295,10 +295,14 @@ export default class Dashboard extends Component{
                     </Table>
                   </div>
                   <div className="gen-3r-r5">
-                    <span className = "component-header">Household Type</span>
-                    <PieChart2
+                    {/* <span className = "component-header">Household Type</span> */}
+                    <TableComponent4
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Households"],"subpopulation", ["Total"])}
-                      margin = {{top:40, bottom: 40, left: 40, right: 40}}
+                      header={false}
+                      tableHeight= {"100%"}
+                      divHeight= {"12.0em"}
+                      tableName={"Household Composition"}
+                      position= {"absolute"}
                     />
                   </div>
 
