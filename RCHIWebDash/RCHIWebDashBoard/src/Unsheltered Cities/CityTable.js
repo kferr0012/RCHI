@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-import {Header,Segment, Grid, Container} from 'semantic-ui-react'
+import { Header, Segment, Grid, Container } from "semantic-ui-react";
 
 import { CustomToggle, CustomMenu } from "./components/CustomToggle";
 import { Dropdown, Button } from "react-bootstrap";
 
 import Number from "../components/Numbers/Number";
 import Total from "../components/Numbers/Total";
-import PercentageDistrict from "../components/Numbers/PercentageDistrict"
+import PercentageDistrict from "../components/Numbers/PercentageDistrict";
 import { Row, Col } from "antd";
 
 import Select from "react-select";
@@ -19,23 +19,26 @@ import BarGraph2 from "../components/TestingBranch/BarGraph";
 import PieChart2 from "../components/charts/PieChart2";
 import LineGraph from "../components/charts/LineGraph";
 import TableComponent4 from "../components/charts/TableComponent4.js";
-import { unshelteredCitiesStyling, ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
-import BarGraph from '../components/reformatedCharts/BarChart'
+import {
+  unshelteredCitiesStyling,
+  ContainerWidth,
+} from "../components/chartTablesStyling/chartTablesStyling";
+import BarGraph from "../components/reformatedCharts/BarChart";
 
 import {
   aggregateFetch,
-  expandOnField
+  expandOnField,
 } from "../components/Utilities/ListManipulation/aggregateFetch";
 import {
   filter,
   subset,
-  filterList
+  filterList,
 } from "../components/Utilities/ListManipulation/filter";
 import { getOverflowOptions } from "antd/lib/tooltip/placements";
 
 import { router } from "../components/Utilities/constants/routing";
 
-const DemoBox = props => (
+const DemoBox = (props) => (
   <p className={`height-${props.value}`}>{props.children}</p>
 );
 
@@ -45,7 +48,7 @@ const DottedBox = () => (
   </div>
 );
 
-const FILTER_COLUMNS= [
+const FILTER_COLUMNS = [
   "Total",
   "Veteran No",
   "Not Chronically Homeless",
@@ -75,8 +78,8 @@ const FILTER_COLUMNS= [
   "Jail Release 12 Months: (Unspecified)",
   "No Jail",
   "Unknown Jail",
-  "Unknown Veteran"
-]
+  "Unknown Veteran",
+];
 
 export default class CityTable extends Component {
   constructor(props) {
@@ -121,10 +124,10 @@ export default class CityTable extends Component {
           router.root +
           "/" +
           router.activeYear +
-          "/SubpopulationsByCity/"
+          "/SubpopulationsByCity/",
       ],
       Tables: [],
-      selectOptions: []
+      selectOptions: [],
     };
 
     this.myData = [];
@@ -135,7 +138,7 @@ export default class CityTable extends Component {
     for (var i = 0; i < options.length; i++) {
       var newObject = {
         value: options[i],
-        label: options[i]
+        label: options[i],
       };
 
       newData.push(newObject);
@@ -198,7 +201,6 @@ export default class CityTable extends Component {
     return myTables;
   }
   async componentDidMount() {
-
     var myTables = await aggregateFetch(this.state.urls, false);
 
     this.setState({
@@ -206,7 +208,7 @@ export default class CityTable extends Component {
       selectOptions: this.getOptions(
         Object.keys(myTables[router.activeYear + "/SubpopulationsByCity"])
       ),
-      rendered: true
+      rendered: true,
     });
   }
 
@@ -216,19 +218,18 @@ export default class CityTable extends Component {
     var self = this;
     setTimeout(() => {
       this.setState({
-        cityChoice: value.value
+        cityChoice: value.value,
       });
       this.setState({
-        cityChoice: value.value
+        cityChoice: value.value,
       });
       this.setState({
-        cityChoice: value.value
+        cityChoice: value.value,
       });
       this.setState({
-        cityChoice: value.value
+        cityChoice: value.value,
       });
     }, 200);
-
   }
 
   runGraphs() {
@@ -250,7 +251,7 @@ export default class CityTable extends Component {
                 defaultValue={
                   this.state.selectOptions[this.state.selectOptions.length - 1]
                 }
-                onChange={value => this.setCityChoice(value)}
+                onChange={(value) => this.setCityChoice(value)}
               />
             </div>
           </div>
@@ -266,7 +267,7 @@ export default class CityTable extends Component {
                       "subpopulation",
                       FILTER_COLUMNS
                     )}
-                    {...unshelteredCitiesStyling['Subpopulations']}
+                    {...unshelteredCitiesStyling["Subpopulations"]}
                   />
                 </div>
                 <div className="ct-side-r2">
@@ -278,7 +279,7 @@ export default class CityTable extends Component {
                       "subpopulation",
                       ["Total"]
                     )}
-                    {...unshelteredCitiesStyling['Age Table']}
+                    {...unshelteredCitiesStyling["Age Table"]}
                   />
                 </div>
               </div>
@@ -304,23 +305,50 @@ export default class CityTable extends Component {
 
                   <div className="ct-center-r2c1">
                     <span className="component-header">
-                      <Number height = {400}
-                       url = {router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=homeless+' + this.state.cityChoice}
+                      <Number
+                        height={400}
+                        url={
+                          router.host +
+                          "/" +
+                          router.root +
+                          "/" +
+                          router.activeYear +
+                          "/SubpopulationsByCity/?search=homeless+" +
+                          this.state.cityChoice
+                        }
                       />
                     </span>
                   </div>
                   <div className="ct-center-r2c2">
                     <span className="component-header">
-                      <Total height = {400}
-                       url = {router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
-                       />
+                      <Total
+                        height={400}
+                        url={
+                          router.host +
+                          "/" +
+                          router.root +
+                          "/" +
+                          router.activeYear +
+                          "/SubpopulationsByCity/?search=Age+" +
+                          this.state.cityChoice
+                        }
+                      />
                     </span>
                   </div>
                   <div className="ct-center-r2c3">
-                  <span className="component-header">
-                      <PercentageDistrict height = {400}
-                       url = {router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByCity/?search=Age+' + this.state.cityChoice}
-                       />
+                    <span className="component-header">
+                      <PercentageDistrict
+                        height={400}
+                        url={
+                          router.host +
+                          "/" +
+                          router.root +
+                          "/" +
+                          router.activeYear +
+                          "/SubpopulationsByCity/?search=Age+" +
+                          this.state.cityChoice
+                        }
+                      />
                     </span>
                   </div>
                 </div>
@@ -334,8 +362,28 @@ export default class CityTable extends Component {
                         "subpopulation",
                         ["Total"]
                       )}
-                      margin={{ bottom: 60, top: 30, right: 60, left: 60 }}
+                      margin={{ bottom: 60, top: 30, right: 200, left: 60 }}
                     />
+                    <div style={{ marginLeft: 310 }}>
+                      <span className="component-header">Interview Count</span>
+                      <p className="component-header">
+                        {
+                          this.state.Tables[
+                            router.activeYear + "/SubpopulationsByCity"
+                          ][this.state.cityChoice]["Individuals"][0].interview
+                        }
+                      </p>
+                      <span className="component-header">
+                        Observation Count
+                      </span>
+                      <p className="component-header">
+                        {
+                          this.state.Tables[
+                            router.activeYear + "/SubpopulationsByCity"
+                          ][this.state.cityChoice]["Individuals"][0].observation
+                        }
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="ct-center-r3">
@@ -347,7 +395,7 @@ export default class CityTable extends Component {
                       "subpopulation",
                       ["Total"]
                     )}
-                    {...unshelteredCitiesStyling['Race Chart']}
+                    {...unshelteredCitiesStyling["Race Chart"]}
                   />
                 </div>
               </div>
@@ -359,33 +407,41 @@ export default class CityTable extends Component {
                     data={filterList(
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
-                      ][this.state.cityChoice]["Gender"].sort( (a,b) => { return b.total - a.total}),
+                      ][this.state.cityChoice]["Gender"].sort((a, b) => {
+                        return b.total - a.total;
+                      }),
                       "subpopulation",
                       ["Total"]
                     )}
-                    {...unshelteredCitiesStyling['Gender Table']}
+                    {...unshelteredCitiesStyling["Gender Table"]}
                   />
                 </div>
                 <div className="ct-side-r1r2">
-                    <BarGraph 
-                    data = {filterList(this.state.Tables[router.activeYear + "/SubpopulationsByCity"][this.state.cityChoice]["Gender"], "subpopulation", ["Total"])}
+                  <BarGraph
+                    data={filterList(
+                      this.state.Tables[
+                        router.activeYear + "/SubpopulationsByCity"
+                      ][this.state.cityChoice]["Gender"],
+                      "subpopulation",
+                      ["Total"]
+                    )}
                     // indexBy = {"subpopulation"}
                     // keys = {["interview"]}
                     // margin = {{top: 40, bottom:30, right: 30, left: 30}}
-                    {...unshelteredCitiesStyling['Gender Chart']}
-                    />
+                    {...unshelteredCitiesStyling["Gender Chart"]}
+                  />
                 </div>
                 <div className="ct-side-r1r3">
                   <span></span>
                 </div>
                 <div className="ct-side-r1r4">
                   <TableComponent4
-                    data={
-                      this.state.Tables[
-                        router.activeYear + "/SubpopulationsByCity"
-                      ][this.state.cityChoice]["Race"].sort( (a,b) => { return b.total - a.total})
-                    }
-                    {...unshelteredCitiesStyling['Race Table']}
+                    data={this.state.Tables[
+                      router.activeYear + "/SubpopulationsByCity"
+                    ][this.state.cityChoice]["Race"].sort((a, b) => {
+                      return b.total - a.total;
+                    })}
+                    {...unshelteredCitiesStyling["Race Table"]}
                   />
                 </div>
               </div>
@@ -396,13 +452,19 @@ export default class CityTable extends Component {
     );
   }
   render() {
-    return <div>{this.state.rendered ? this.runGraphs() : (
-      <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    return (
+      <div>
+        {this.state.rendered ? (
+          this.runGraphs()
+        ) : (
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        )}
       </div>
-    )}</div>;
+    );
   }
 }
