@@ -366,7 +366,7 @@ export default class CityTable extends Component {
                     />
                     <div style={{ marginLeft: 310 }}>
                       <span className="component-header">Interview Count</span>
-                      <p className="component-header">
+                      <p className="component-header" style={{ marginTop: 10 }}>
                         {
                           this.state.Tables[
                             router.activeYear + "/SubpopulationsByCity"
@@ -376,7 +376,7 @@ export default class CityTable extends Component {
                       <span className="component-header">
                         Observation Count
                       </span>
-                      <p className="component-header">
+                      <p className="component-header" style={{ marginTop: 10 }}>
                         {
                           this.state.Tables[
                             router.activeYear + "/SubpopulationsByCity"
