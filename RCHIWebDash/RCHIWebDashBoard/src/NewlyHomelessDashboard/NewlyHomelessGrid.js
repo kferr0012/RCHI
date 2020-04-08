@@ -155,6 +155,7 @@ export default class NewlyHomelessGrid extends Component{
                 <Header as='h1'  textAlign='center'>
                      Unsheltered - Newly Homeless
                     <h3><b>Interview Only</b></h3>
+                    <h6><i>*First time homeless within 12 months</i></h6>
                 <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
