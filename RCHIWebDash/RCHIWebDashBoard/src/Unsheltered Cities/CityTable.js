@@ -31,6 +31,7 @@ import {
   subset,
   filterList
 } from "../components/Utilities/ListManipulation/filter";
+import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
 import { getOverflowOptions } from "antd/lib/tooltip/placements";
 
 import { router } from "../components/Utilities/constants/routing";
@@ -259,25 +260,25 @@ export default class CityTable extends Component {
               <div className="ct-grid-side-left">
                 <div className="ct-side-r1">
                   <TableComponent4
-                    data={filterList(
+                    data={changeVals2020(filterList(
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
                       ][this.state.cityChoice]["Subpopulations"],
                       "subpopulation",
                       FILTER_COLUMNS
-                    )}
+                    ))}
                     {...unshelteredCitiesStyling['Subpopulations']}
                   />
                 </div>
                 <div className="ct-side-r2">
                   <TableComponent4
-                    data={filterList(
+                    data={changeVals2020(filterList(
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
                       ][this.state.cityChoice]["Age"],
                       "subpopulation",
                       ["Total"]
-                    )}
+                    ))}
                     {...unshelteredCitiesStyling['Age Table']}
                   />
                 </div>
@@ -356,13 +357,13 @@ export default class CityTable extends Component {
               <div className="ct-grid-side">
                 <div className="ct-side-r1r1">
                   <TableComponent4
-                    data={filterList(
+                    data={changeVals2020(filterList(
                       this.state.Tables[
                         router.activeYear + "/SubpopulationsByCity"
                       ][this.state.cityChoice]["Gender"].sort( (a,b) => { return b.total - a.total}),
                       "subpopulation",
                       ["Total"]
-                    )}
+                    ))}
                     {...unshelteredCitiesStyling['Gender Table']}
                   />
                 </div>

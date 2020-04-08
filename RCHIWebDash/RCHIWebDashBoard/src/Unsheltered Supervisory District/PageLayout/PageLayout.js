@@ -8,6 +8,7 @@ import PitCountTrend from "../Data/PitCountTrend";
 import PitCountByCity from "../Data/PitCountByCity";
 
 import { filterList } from "../../components/Utilities/ListManipulation/filter";
+import { changeVals2020 } from '../../components/Utilities/ListManipulation/changeValue'
 import { combineCountsByCategory } from "../../components/Utilities/ListManipulation/combine";
 import "../../components/css/newlyHomelessGrid.css";
 import "./PageLayout.css";
@@ -90,7 +91,7 @@ const PageLayout = ({ currentDistrict, tables }) => {
         <Grid.Column>
           <TableComponent4
             data={combineCountsByCategory(
-              filterList(
+              changeVals2020(filterList(
                 tables[router.activeYear + "/SubpopulationsByCity"][
                   currentDistrict
                 ]["Age"]
@@ -106,7 +107,7 @@ const PageLayout = ({ currentDistrict, tables }) => {
                   ),
                 "subpopulation",
                 filteredTableList
-              )
+              ))
             )}
             {...unshelteredSupervisoryDistrictStyling["Subpopulations"]}
           />

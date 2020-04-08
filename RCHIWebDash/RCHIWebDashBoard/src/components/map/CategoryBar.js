@@ -73,6 +73,38 @@ export default class CategoryBar extends Component{
                         legend: category,
                         legendPosition: 'middle',
                         legendOffset: 53,
+                        renderTick: ({ textAnchor, textBaseline, value, x, y }) => {
+                            const MAX_LINE_LENGTH = 10;
+                            const MAX_LINES = 2;
+                            const LENGTH_OF_ELLIPSIS = 3;
+                            const TRIM_LENGTH = MAX_LINE_LENGTH * MAX_LINES - LENGTH_OF_ELLIPSIS;
+                            const trimWordsOverLength = new RegExp(`^(.{${TRIM_LENGTH}}[^\\w]*).*`);
+                            const groupWordsByLength = new RegExp(
+                              `([^\\s].{0,${MAX_LINE_LENGTH}}(?=[\\s\\W]|$))`,
+                              'gm',
+                            );
+                            const splitValues = value
+                              .replace(trimWordsOverLength, '$1...')
+                              .match(groupWordsByLength)
+                              .slice(0, 2)
+                              .map((val, i) => (
+                                <tspan
+                                  key={val}
+                                  dy={12 * i}
+                                  x={10}
+                                  style={{ fontFamily: 'sans-serif', fontSize: '11px' }}
+                                >
+                                  {val}
+                                </tspan>
+                              ));
+                            return (
+                              <g transform={`translate(${x},${y+20})`}>
+                                <text alignmentBaseline={textBaseline} textAnchor={textAnchor}>
+                                  {splitValues}
+                                </text>
+                              </g>
+                            );
+                          }
                     }}
                     axisLeft={{
                         tickSize: 5,
