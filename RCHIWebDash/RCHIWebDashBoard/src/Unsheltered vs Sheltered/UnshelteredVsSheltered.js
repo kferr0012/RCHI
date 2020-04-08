@@ -196,8 +196,8 @@ export default class UnsheleteredVsSheltered extends Component{
 
             <span className="component-header">Age</span>
             <BarGraph 
-              data = {shelteredVsUnshelteredMani(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Age"], "subpopulation", ["Total","Unknown Age"]).concat(
-                                    filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"])
+              data = {shelteredVsUnshelteredMani(changeVals2020(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered"]["Age"], "subpopulation", ["Total","Unknown Ages"])).concat(
+                changeVals2020(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Age"], "subpopulation", ["Total","Unknown Age"]))
               ), ["Unsheltered", "Sheltered"])}
               indexBy = {"subpopulation"}
               keys = {["Unsheltered", "Sheltered"]}
