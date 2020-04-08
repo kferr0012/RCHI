@@ -1,405 +1,392 @@
 [
     {
-        "pk": 1,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
         "fields": {
             "category": "Total",
-            "subpopulation": "Individuals",
-            "year": 2020,
+            "total": 2826,
+            "interview": 2017,
             "_type": "Total Count",
-            "interview": 2103,
             "observation": 809,
-            "total": 2912
-        }
+            "year": 2020,
+            "subpopulation": "Individuals"
+        },
+        "pk": 1,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
-        "pk": 2,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
         "fields": {
             "category": "Age",
-            "subpopulation": "Adults (>24)",
-            "year": 2020,
+            "total": 2201,
+            "interview": 1743,
             "_type": "Total Count",
-            "interview": 1805,
             "observation": 458,
-            "total": 2263
-        }
+            "year": 2020,
+            "subpopulation": "Adults (>24)"
+        },
+        "pk": 2,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
-        "pk": 3,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
         "fields": {
             "category": "Age",
-            "subpopulation": "Children (<18)",
-            "year": 2020,
+            "total": 130,
+            "interview": 112,
             "_type": "Total Count",
-            "interview": 145,
             "observation": 18,
-            "total": 163
-        }
+            "year": 2020,
+            "subpopulation": "Children (<18)"
+        },
+        "pk": 3,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
-        "pk": 4,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
         "fields": {
             "category": "Age",
-            "subpopulation": "Youth (18-24)",
-            "year": 2020,
+            "total": 324,
+            "interview": 162,
             "_type": "Total Count",
-            "interview": 151,
             "observation": 162,
-            "total": 313
-        }
+            "year": 2020,
+            "subpopulation": "Youth (18-24)"
+        },
+        "pk": 4,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
-        "pk": 5,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
         "fields": {
             "category": "Age",
-            "subpopulation": "Unknown Age",
-            "year": 2020,
+            "total": 171,
+            "interview": 0,
             "_type": "Total Count",
-            "interview": 2,
             "observation": 171,
-            "total": 173
-        }
+            "year": 2020,
+            "subpopulation": "Unknown Age"
+        },
+        "pk": 5,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
+        "fields": {
+            "category": "Subpopulations",
+            "total": 1701,
+            "interview": 1701,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Households (Interview)"
+        },
         "pk": 6,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Households (Interview)",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 1744,
-            "observation": 0,
-            "total": 1744
-        }
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
+        "fields": {
+            "category": "Subpopulations",
+            "total": 647,
+            "interview": 647,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Chronically Homeless"
+        },
         "pk": 7,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Chronically Homeless",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 689,
-            "observation": 0,
-            "total": 689
-        }
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
+        "fields": {
+            "category": "Subpopulations",
+            "total": 54,
+            "interview": 54,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Families w/ Children (Interview)"
+        },
         "pk": 8,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Families w/ Children (Interview)",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 228,
-            "observation": 0,
-            "total": 228
-        }
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
+        "fields": {
+            "category": "Subpopulations",
+            "total": 534,
+            "interview": 534,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Substance Abuse"
+        },
         "pk": 9,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Substance Abuse",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 546,
-            "observation": 0,
-            "total": 546
-        }
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
+        "fields": {
+            "category": "Subpopulations",
+            "total": 557,
+            "interview": 557,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Mental Health Conditions"
+        },
         "pk": 10,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Mental Health Conditions",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 603,
-            "observation": 0,
-            "total": 603
-        }
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
+        "fields": {
+            "category": "Subpopulations",
+            "total": 162,
+            "interview": 162,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Veterans Yes"
+        },
         "pk": 11,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
         "fields": {
             "category": "Subpopulations",
-            "subpopulation": "Veterans Yes",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 147,
-            "observation": 0,
-            "total": 147
-        }
-    },
-    {
-        "pk": 12,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "Asian",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 25,
-            "observation": 6,
-            "total": 31
-        }
-    },
-    {
-        "pk": 13,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "American Indian",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 67,
-            "observation": 5,
-            "total": 72
-        }
-    },
-    {
-        "pk": 14,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "Black",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 397,
-            "observation": 138,
-            "total": 535
-        }
-    },
-    {
-        "pk": 15,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "White",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 1327,
-            "observation": 362,
-            "total": 1689
-        }
-    },
-    {
-        "pk": 16,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "Multiple Races",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 53,
-            "observation": 6,
-            "total": 59
-        }
-    },
-    {
-        "pk": 17,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "Native Hawaiian",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 17,
-            "observation": 5,
-            "total": 22
-        }
-    },
-    {
-        "pk": 18,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Race",
-            "subpopulation": "Unknown Race",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 217,
-            "observation": 287,
-            "total": 504
-        }
-    },
-    {
-        "pk": 19,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Gender",
-            "subpopulation": "Male",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 1320,
-            "observation": 509,
-            "total": 1829
-        }
-    },
-    {
-        "pk": 20,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Gender",
-            "subpopulation": "Female",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 764,
-            "observation": 188,
-            "total": 952
-        }
-    },
-    {
-        "pk": 21,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Gender",
-            "subpopulation": "Transgender",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 3,
-            "observation": 0,
-            "total": 3
-        }
-    },
-    {
-        "pk": 22,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Gender",
-            "subpopulation": "Gender Non-Conforming",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 5,
-            "observation": 0,
-            "total": 5
-        }
-    },
-    {
-        "pk": 23,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Gender",
-            "subpopulation": "Unknown Gender",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 11,
-            "observation": 112,
-            "total": 123
-        }
-    },
-    {
-        "pk": 24,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Ethnicity",
-            "subpopulation": "Hispanic",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 737,
-            "observation": 149,
-            "total": 886
-        }
-    },
-    {
-        "pk": 25,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Ethnicity",
-            "subpopulation": "NonHispanic",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 1332,
-            "observation": 285,
-            "total": 1617
-        }
-    },
-    {
-        "pk": 26,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Ethnicity",
-            "subpopulation": "Unknown Ethnicity",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 34,
-            "observation": 375,
-            "total": 409
-        }
-    },
-    {
-        "pk": 27,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Households",
-            "subpopulation": "Adults Only",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 1696,
-            "observation": 0,
-            "total": 1696
-        }
-    },
-    {
-        "pk": 28,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Households",
-            "subpopulation": "Adults and Children",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 214,
-            "observation": 0,
-            "total": 214
-        }
-    },
-    {
-        "pk": 29,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Households",
-            "subpopulation": "Children Only",
-            "year": 2020,
-            "_type": "Total Count",
-            "interview": 15,
-            "observation": 0,
-            "total": 15
-        }
-    },
-    {
-        "pk": 30,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
-        "fields": {
-            "category": "Subpopulations",
-            "subpopulation": "Pet Owners",
-            "year": 2020,
-            "_type": "Total Count",
+            "total": 280,
             "interview": 280,
+            "_type": "Total Count",
             "observation": 0,
-            "total": 280
-        }
+            "year": 2020,
+            "subpopulation": "Pet Owners"
+        },
+        "pk": 12,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     },
     {
-        "pk": 31,
-        "model": "backend.GeneralTableSubpopulationsTotalCounts",
+        "fields": {
+            "category": "Race",
+            "total": 31,
+            "interview": 25,
+            "_type": "Total Count",
+            "observation": 6,
+            "year": 2020,
+            "subpopulation": "Asian"
+        },
+        "pk": 13,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Race",
+            "total": 72,
+            "interview": 67,
+            "_type": "Total Count",
+            "observation": 5,
+            "year": 2020,
+            "subpopulation": "American Indian"
+        },
+        "pk": 14,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Race",
+            "total": 509,
+            "interview": 371,
+            "_type": "Total Count",
+            "observation": 138,
+            "year": 2020,
+            "subpopulation": "Black"
+        },
+        "pk": 15,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Race",
+            "total": 1640,
+            "interview": 1278,
+            "_type": "Total Count",
+            "observation": 362,
+            "year": 2020,
+            "subpopulation": "White"
+        },
+        "pk": 16,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Race",
+            "total": 60,
+            "interview": 54,
+            "_type": "Total Count",
+            "observation": 6,
+            "year": 2020,
+            "subpopulation": "Multiple Races"
+        },
+        "pk": 17,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Race",
+            "total": 490,
+            "interview": 203,
+            "_type": "Total Count",
+            "observation": 287,
+            "year": 2020,
+            "subpopulation": "Unknown Race"
+        },
+        "pk": 18,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Gender",
+            "total": 1806,
+            "interview": 1297,
+            "_type": "Total Count",
+            "observation": 509,
+            "year": 2020,
+            "subpopulation": "Male"
+        },
+        "pk": 19,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Gender",
+            "total": 891,
+            "interview": 703,
+            "_type": "Total Count",
+            "observation": 188,
+            "year": 2020,
+            "subpopulation": "Female"
+        },
+        "pk": 20,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Gender",
+            "total": 3,
+            "interview": 3,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Transgender"
+        },
+        "pk": 21,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Gender",
+            "total": 6,
+            "interview": 6,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Gender Non-Conforming"
+        },
+        "pk": 22,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Gender",
+            "total": 120,
+            "interview": 8,
+            "_type": "Total Count",
+            "observation": 112,
+            "year": 2020,
+            "subpopulation": "Unknown Gender"
+        },
+        "pk": 23,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Ethnicity",
+            "total": 1030,
+            "interview": 881,
+            "_type": "Total Count",
+            "observation": 149,
+            "year": 2020,
+            "subpopulation": "Hispanic"
+        },
+        "pk": 24,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Ethnicity",
+            "total": 1394,
+            "interview": 1109,
+            "_type": "Total Count",
+            "observation": 285,
+            "year": 2020,
+            "subpopulation": "NonHispanic"
+        },
+        "pk": 25,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Ethnicity",
+            "total": 402,
+            "interview": 27,
+            "_type": "Total Count",
+            "observation": 375,
+            "year": 2020,
+            "subpopulation": "Unknown Ethnicity"
+        },
+        "pk": 26,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
         "fields": {
             "category": "Households",
-            "subpopulation": "Total",
-            "year": 2020,
+            "total": 1635,
+            "interview": 1635,
             "_type": "Total Count",
-            "interview": 1925,
             "observation": 0,
-            "total": 1925
-        }
+            "year": 2020,
+            "subpopulation": "Adults Only"
+        },
+        "pk": 27,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Households",
+            "total": 54,
+            "interview": 54,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Adults and Children"
+        },
+        "pk": 28,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Households",
+            "total": 12,
+            "interview": 12,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Children Only"
+        },
+        "pk": 29,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
+    },
+    {
+        "fields": {
+            "category": "Households",
+            "total": 1701,
+            "interview": 1701,
+            "_type": "Total Count",
+            "observation": 0,
+            "year": 2020,
+            "subpopulation": "Total"
+        },
+        "pk": 30,
+        "model": "backend.GeneralTableSubpopulationsTotalCounts"
     }
 ]

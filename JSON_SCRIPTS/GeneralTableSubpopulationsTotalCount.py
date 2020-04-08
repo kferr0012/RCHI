@@ -23,8 +23,8 @@ for shelteredDataID in shelteredData:
             subpopulation = shelteredDataID['fields']['subpopulation']
             year = 2020
             _type = 'Total Count'
-            interview = shelteredDataID['fields']['interview'] + unshelteredID['fields']['interview']
-            observation = shelteredDataID['fields']['observation'] + unshelteredID['fields']['observation']
+            interview = int(shelteredDataID['fields']['interview']) + unshelteredID['fields']['interview']
+            observation = int(shelteredDataID['fields']['observation']) + unshelteredID['fields']['observation']
             total = interview + observation
 
 
