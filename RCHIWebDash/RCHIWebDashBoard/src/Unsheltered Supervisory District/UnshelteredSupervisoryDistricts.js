@@ -75,10 +75,33 @@ class UnshelteredSupervisoryDistricts extends Component{
         const currentPage = data.activePage
 
 
-        this.setState({
-            currentPage: currentPage,
-            districtDisplay: <PageLayout currentDistrict={this.state.currentPage} tables = {this.state.Tables}/>
-        })
+        setTimeout(() => {
+            this.setState({
+                currentPage: currentPage,
+                districtDisplay: <PageLayout currentDistrict={this.state.currentPage} tables = {this.state.Tables}/>
+            })
+            this.setState({
+                currentPage: currentPage,
+                districtDisplay: <PageLayout currentDistrict={this.state.currentPage} tables = {this.state.Tables}/>
+            })
+        }, 200)
+
+
+
+        // setTimeout(() => {
+        //     this.setState({
+        //       cityChoice: value.value
+        //     });
+        //     this.setState({
+        //       cityChoice: value.value
+        //     });
+        //     this.setState({
+        //       cityChoice: value.value
+        //     });
+        //     this.setState({
+        //       cityChoice: value.value
+        //     });
+        //   }, 200);
     } 
 
     render(){

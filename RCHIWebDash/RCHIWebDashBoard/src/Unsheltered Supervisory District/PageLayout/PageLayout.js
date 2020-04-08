@@ -113,7 +113,7 @@ const PageLayout = ({ currentDistrict, tables }) => {
         </Grid.Column>
       </Grid.Row>
 
-      <Grid.Row verticalAlign="middle" stretched columns={4}>
+      <Grid.Row verticalAlign="middle" stretched columns={3}>
         <Grid.Column width={0}>
           <PitCountByCity
             clickedDistrict={currentDistrict}
@@ -138,6 +138,8 @@ const PageLayout = ({ currentDistrict, tables }) => {
             {...unshelteredSupervisoryDistrictStyling["Household"]}
           />
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row style={{marginTop:"10px"}}>
         <Grid.Column width={13}>
           <BarChart
             data={filterList(
@@ -152,7 +154,6 @@ const PageLayout = ({ currentDistrict, tables }) => {
             {...unshelteredSupervisoryDistrictStyling["Race"]}
           />
         </Grid.Column>
-     
       </Grid.Row>
     </Grid>
   );
