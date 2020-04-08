@@ -4,7 +4,7 @@ import BarChart from '../../components/reformatedCharts/BarChart'
 import PieChart2 from '../charts/PieChart2'
 import TableComponent2 from '../charts/TableComponent2'
 import TableComponent4 from '../charts/TableComponent4'
-import { Header, Table, Segment,Container,Grid} from 'semantic-ui-react';
+import { Header, Table, Segment,Container,Grid, Label} from 'semantic-ui-react';
 
 import React, {Component} from 'react';
 import '../css/dash.css';
@@ -148,9 +148,13 @@ export default class Dashboard extends Component{
           </Segment>
           <div className="row dash-row">
 
-            <div className="col-md dash-col-reg">
+            <div className="col-md dash-col-reg" style={{marginBottom:15}}>
              
-
+              <Label attached='top left'>
+                <Change height = {15}
+                              url = {router.host + '/' + router.root + '/Trends/?search=2020'}
+                />  
+              </Label>
               <TableComponent4
                 data={filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)}
                 expandIndex = {"_type"}
@@ -302,7 +306,7 @@ export default class Dashboard extends Component{
                       tableHeight= {"100%"}
                       divHeight= {"12.0em"}
                       tableName={"Household Composition"}
-                      position= {"absolute"}
+                      padding = {15}
                     />
                   </div>
 
@@ -322,6 +326,7 @@ export default class Dashboard extends Component{
                       header = {false}
                       percentage_flag = {true}
                       height = {"100%"}
+                      padding = {10}
                     />
                   </div>
               </div>
