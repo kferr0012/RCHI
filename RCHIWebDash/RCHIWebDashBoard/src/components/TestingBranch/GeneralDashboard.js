@@ -150,7 +150,7 @@ export default class Dashboard extends Component{
 
             <div className="col-md dash-col-reg" style={{marginBottom:15}}>
              
-              <Label attached='top left'>
+              <Label attached='top left'> 
                 <Change height = {15}
                               url = {router.host + '/' + router.root + '/Trends/?search=2020'}
                 />  
@@ -224,48 +224,41 @@ export default class Dashboard extends Component{
             <div className="col-md dash-col-big" >
               {/*<span className="component-header">Unsheltered Only Demographic</span> */}
               <div className="gen-grid-2">
-                <div className = "gen-s-r" >
+              <div className = "gen-s-r" >
 
-                <div className="gen-s-r1">
-                    <Change height = {50}
-                             url = {router.host + '/' + router.root + '/Trends/?search=2020'}
-                        />  
-                    </div>
-
-
-                    <div className="gen-s-r2">
-                        <NumberPercentage 
-                          height = {50}
-                          data={this.state.NumberValues}
-                          subpopulation={"Mental Health Conditions"}
-                          header ={"mental health issues"}
-                        />
-                    </div>
-                    <div className="gen-s-r5">
-                        <NumberPercentage 
-                          height = {50}
-                          data={this.state.NumberValues}
-                          subpopulation={"PTSD"}
-                          header ={"PTSD"}
-                        />
-                    </div>
-                    <div className="gen-s-r3">
-                        <NumberPercentage 
-                          height = {50}
-                          data={this.state.NumberValues}
-                          subpopulation={"Substance Abuse"}
-                          header ={"substance abuse"}
-                        />
-                    </div>
-                    <div className="gen-s-r4">
-                        <NumberPercentage 
-                          height = {50}
-                          data={this.state.NumberValues}
-                          subpopulation={"Physical Disability"}
-                          header ={"physical disability"}
-                        />
-                    </div>
-                </div>
+                  <div className="gen-s-r1">
+                      <NumberPercentage 
+                        height = {50}
+                        data={this.state.NumberValues}
+                        subpopulation={"Mental Health Conditions"}
+                        header ={"mental health issues"}
+                      />
+                  </div>
+                  <div className="gen-s-r4">
+                      <NumberPercentage 
+                        height = {50}
+                        data={this.state.NumberValues}
+                        subpopulation={"PTSD"}
+                        header ={"PTSD"}
+                      />
+                  </div>
+                  <div className="gen-s-r2">
+                      <NumberPercentage 
+                        height = {50}
+                        data={this.state.NumberValues}
+                        subpopulation={"Substance Abuse"}
+                        header ={"substance abuse"}
+                      />
+                  </div>
+                  <div className="gen-s-r3">
+                      <NumberPercentage 
+                        height = {50}
+                        data={this.state.NumberValues}
+                        subpopulation={"Physical Disability"}
+                        header ={"physical disability"}
+                      />
+                  </div>
+                  </div>
                 <div className="gen-3r">
 
                 <div className="gen-3r-r1">
@@ -313,7 +306,15 @@ export default class Dashboard extends Component{
                 </div>
                 <div className="gen-r2c1">
                   <div className="gen-r2c1r1">
-                    <span className="component-header">Living Situations</span>
+                  <Header size="small"  textAlign='center'>
+                      Living Situations
+                      <br/>
+                      <span style={{color:'grey', fontSize:'12px'}}>Interview Only </span>
+                      {/* <Header sub> Interview Only</Header> */}
+                  </Header>
+                    {/* <span className="component-header">Living Situations</span>
+                    <br/>
+                    <span>Interview Only</span> */}
                     <PieChart2
                       data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
                       margin = {{top:0,bottom:0,left:30, right: 0}}
