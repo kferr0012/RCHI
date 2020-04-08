@@ -14,6 +14,7 @@ import {router} from '../../components/Utilities/constants/routing'
 import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 
 import {filter, subset, filterList, NumberCreator} from '../../components/Utilities/ListManipulation/filter'
+import { changeVals2020 } from '../../components/Utilities/ListManipulation/changeValue'
 import {combine, combineCounts} from '../../components/Utilities/ListManipulation/combine'
 import { Bar } from '@nivo/bar';
 import NumberPercentage from "../Numbers/NumberPercentage";
@@ -156,7 +157,7 @@ export default class Dashboard extends Component{
                 />  
               </Label>
               <TableComponent4
-                data={filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)}
+                data={changeVals2020(filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS))}
                 expandIndex = {"_type"}
                 header = {true}
                 height = {"100%"}

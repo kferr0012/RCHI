@@ -271,7 +271,7 @@ export const unshelteredCitiesStyling = {
         divHeight: "20em",
         header: "Gender",
         subHeader:"",
-        maxValue: 200,
+        // maxValue: 200,
         tickValues: 5,
         gridYValues: 5,
         labelSkipHeight:0

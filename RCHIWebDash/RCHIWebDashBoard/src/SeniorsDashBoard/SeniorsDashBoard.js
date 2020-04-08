@@ -10,6 +10,7 @@ import BarChart from '../components/reformatedCharts/BarChart'
 import PieChart from '../components/reformatedCharts/PieChart'
 import {Header,Segment, Grid, Container, GridColumn} from 'semantic-ui-react'
 import {filterList} from '../components/Utilities/ListManipulation/filter'
+import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
 import { seniorsUnshelteredStyling ,  ContainerWidth} from '../components/chartTablesStyling/chartTablesStyling'
@@ -138,7 +139,7 @@ export default class SeniorDashboardGrid extends Component{
                 {/*<span className="component-header">Unsheltered Only Demographic</span> */}
                 <div className="gen-r2">
                   <TableComponent4 
-                    data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS)}
+                    data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS))}
                     tableName = "Subpopulations"
                     height = "120%"
                     />
@@ -155,7 +156,7 @@ export default class SeniorDashboardGrid extends Component{
        return <Container style={{width:ContainerWidth}}>
             <Segment>
                 <Header as='h1'  textAlign='center'>
-                     Unsheltered - Newly Seniors 60+
+                     Unsheltered - Seniors 60+
                     <h3><b>Interview Only</b></h3>
                 <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
@@ -192,7 +193,7 @@ export default class SeniorDashboardGrid extends Component{
                     <Grid.Column>
                         {/* <Segment> */}
                             <TableComponent4 
-                                data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Subpopulations"],"subpopulation", FILTER_COLUMNS)}
+                                data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Subpopulations"],"subpopulation", FILTER_COLUMNS))}
                                 {...seniorsUnshelteredStyling["Subpopulations"]}
                             />
                         {/* </Segment> */}
