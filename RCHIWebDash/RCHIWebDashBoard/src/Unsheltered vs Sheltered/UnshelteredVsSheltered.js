@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import { colors } from '../components/Utilities/colors.js';
 import '../components/css/dash.css';
 
 import BarGraph from  '../components/TestingBranch/BarGraph'
@@ -206,6 +206,7 @@ export default class UnsheleteredVsSheltered extends Component{
               gridYValues={4}
               maxValue={3000}
               groupMode = {'stacked'}
+              colors = {colors[9]}
             />
             </div>
             <div className="svu-r2">
@@ -221,6 +222,7 @@ export default class UnsheleteredVsSheltered extends Component{
               gridYValues={4}
               maxValue={2000}
               groupMode = {'stacked'}
+              colors = { colors[9] }
             />
             </div>                
               </div>

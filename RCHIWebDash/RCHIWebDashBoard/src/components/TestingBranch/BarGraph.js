@@ -19,7 +19,8 @@ export default class BarGraph extends Component{
             gridYValues: this.props.gridYValues,
             maxValue: this.props.maxValue,
             groupMode: this.props.groupMode,
-            height: this.props.height
+            height: this.props.height,
+            colors: this.props.colors
         }
 
         //console.log("BarGraph data")
@@ -37,12 +38,13 @@ export default class BarGraph extends Component{
             keys : this.props.keys,
             mydata : this.props.data,
             legend : this.props.legend,
+            colors: this.props.colors,
             margin: this.props.margin,
             axisTitle : this.props.axisTitle,})
     }
 
     render(){
- 
+        console.log("COLORS: ")
         return(
         <div style = {{height: '100%', width: '100%', position:'absolute'}}>
             {/* <div style = {{height: this.props.height ?  this.props.height : "100%", width: '100%'}}> */}
@@ -54,7 +56,7 @@ export default class BarGraph extends Component{
             maxValue={this.state.maxValue}
             padding={0.15}
             groupMode={this.state.groupMode}
-            colors={ colors[7] }
+            colors={ this.state.colors ? this.state.colors : colors[7] }
             colorBy="id"
             defs={[
                 {

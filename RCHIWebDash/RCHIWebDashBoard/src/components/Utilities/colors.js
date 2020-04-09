@@ -52,5 +52,9 @@ export const colors = [
         '#533747', // Dark Purple
         '#2F3C4D', // Dark Blue
         '#E15759', // Red
+    ],
+    [
+        '#6D7CA6', // Purple Blue,
+        '#B2C7F6', // Light Blue
     ]
 ];
