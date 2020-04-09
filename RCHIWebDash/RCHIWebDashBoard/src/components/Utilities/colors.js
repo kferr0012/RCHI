@@ -54,7 +54,7 @@ export const colors = [
         '#E15759', // Red
     ],
     [
-        '#6D7CA6', // Purple Blue,
-        '#B2C7F6', // Light Blue
+        '#929DBC', // Purple Blue,
+        '#C5D5F8', // Light Blue
     ]
 ];
