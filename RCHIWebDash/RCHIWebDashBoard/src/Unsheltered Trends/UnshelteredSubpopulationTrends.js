@@ -59,21 +59,26 @@ class UnshelteredSubpopulationTrends extends Component{
                 />
              
             }
-            else if(trend === "Substance Abuse") return <SubstanceAbuseTrend 
-                query={"Subpopulations"}
-                indexBy = {"year"}
-                keys={["total"]}
-                {...unshelteredTrendsStyling[trend]} 
-                /> 
+            else if(trend === "Substance Abuse") return <div>
+               
+                    <SubstanceAbuseTrend 
+                    query={"Subpopulations"}
+                    indexBy = {"year"}
+                    keys={["total"]}
+                    footnote = {"Before 2018, questions are not comparable."}
+                    {...unshelteredTrendsStyling[trend]} 
+                    /> 
+                </div>
             else if (trend === "Chronically Homeless") return <div>
                 <GeneralTrendsNivo
                 lineID={trend} 
                 id={'Interviewed'} 
                 key={index} 
                 query={trend}
+                footnote = {["In 2019, the question changed.", "In 2020, newly homeless questions were added."]}
                 {...unshelteredTrendsStyling[trend]} 
-                />
-                <p>* Between 2018-2020, the question changed</p>
+            />
+               
             </div>
             else if (trend === "Victim of Domestic Violence"){return <div>
                 <GeneralTrendsNivo
@@ -81,9 +86,9 @@ class UnshelteredSubpopulationTrends extends Component{
                 id={'Interviewed'} 
                 key={index} 
                 query={trend}
+                footnote = {["In 2018, the question changed."]}
                 {...unshelteredTrendsStyling[trend]} 
                 />
-                <p>* Between 2017-2018, the question changed</p>
             </div>
             }
             else return <GeneralTrendsNivo 

@@ -14,13 +14,15 @@ class SubstanceAbuseGraph extends Component {
         super();
         this.state = {
             barData: null,
+            footnote: null
         }
     }
     componentDidMount(){
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/SubpopulationsByYear/?search='+ this.props.query)
             .then(response => {
                 this.setState({
-                    barData: barByYearMani(response.data, {_typeFilter: "Unsheltered", yearFilter: router.activeYear - 2})
+                    barData: barByYearMani(response.data, {_typeFilter: "Unsheltered", yearFilter: router.activeYear - 2}),
+                    footnote: this.props.footnote
                 })
             }) 
     }
@@ -29,6 +31,11 @@ class SubstanceAbuseGraph extends Component {
     render(){
         return (<div>
             {this.state.barData ? <BarChart {...this.props} data={this.state.barData}  /> : null}
+            { this.state.footnote  ? 
+                <p>* {this.state.footnote}</p>
+                :
+                null    
+             }
         </div>)
     }
 }
