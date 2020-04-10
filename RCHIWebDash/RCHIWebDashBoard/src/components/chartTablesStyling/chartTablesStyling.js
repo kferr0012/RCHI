@@ -54,6 +54,7 @@ export const unshelteredTrendsStyling = {
   "Chronically Homeless": {
     header: "Chronically Homeless",
     subHeader: "Interviewed Only",
+    footnote: ["In 2019, the question changed.", "In 2020, newly homeless question was added."],
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -100,6 +101,7 @@ export const unshelteredTrendsStyling = {
   "Victim of Domestic Violence": {
     header: "Victim of Domestic Violence",
     subHeader: "Interviewed Only",
+    footnote: ["In 2018, the question changed."],
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -166,6 +168,7 @@ export const unshelteredTrendsStyling = {
   "Substance Abuse": {
     header: "Substance Abuse",
     subHeader: "Interviewed Only",
+    footnote: "Before 2018, questions are not comparable.",
     divHeight: "25em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
