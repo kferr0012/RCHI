@@ -61,7 +61,7 @@ export default class SeniorDashboardGrid extends Component{
     }
 
     async componentDidMount(){
-        
+
         var Tables = await aggregateFetch(this.state.urls)
 
         this.setState({
@@ -69,7 +69,7 @@ export default class SeniorDashboardGrid extends Component{
             rendered : true,
 
         })
-        
+
     }
 
     renderDashboard(){
@@ -82,49 +82,49 @@ export default class SeniorDashboardGrid extends Component{
                     <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
-  
+
             <div className="row dash-row">
-  
+
               <div className="col-sm-8 dash-col-com">
                 <div className="gen-grid">
                     <div className = "gen-r2">
 
                         <div className="gen-r2c2">
-                        <TableComponent4 
+                        <TableComponent4
                             data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS)}
                             tableName = "Age"
                             height = "120%"
 
                         />
-                        
-    
+
+
                         </div>
                         <div className="gen-r2c1">
                         <div className="gen-r2c1r1">
                             <p className="component-header">Ethnicity</p>
-                            <PieChart2 
+                            <PieChart2
                             data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Ethnicity"],"subpopulation", ["Total"])}
                             margin = {{top: 30, bottom: 20}}
                             />
                         </div>
                         <div className="gen-r2c1r2">
                         <p className="component-header">Gender</p>
-                        <PieChart2 
+                        <PieChart2
                             data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Gender"],"subpopulation", ["Total"])}
                             margin = {{top: 30,bottom: 20}}
                             />
-                            
+
                         </div>
                         </div>
 
                     </div>
-                    
-                 
+
+
                     <div style = {{position: "relative",
                                     display: "grid",
                                     height: "100%"}}>
                     <p className="component-header">Race</p>
-                    <BarGraph 
+                    <BarGraph
                       data = {this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Race"]}
                       indexBy = {"subpopulation"}
                       keys = {["total"]}
@@ -137,12 +137,12 @@ export default class SeniorDashboardGrid extends Component{
               <div className="col-sm-4 dash-col-com" >
                 {/*<span className="component-header">Unsheltered Only Demographic</span> */}
                 <div className="gen-r2">
-                  <TableComponent4 
+                  <TableComponent4
                     data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS)}
                     tableName = "Subpopulations"
                     height = "120%"
                     />
-                    
+
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default class SeniorDashboardGrid extends Component{
     }
 
     dashboard(){
-    
+
        return <Container style={{width:ContainerWidth}}>
             <Segment>
                 <Header as='h1'  textAlign='center'>
@@ -160,12 +160,12 @@ export default class SeniorDashboardGrid extends Component{
                 <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
-            
+
             <Grid stackable >
-                <Grid.Row verticalAlign='middle' stretched columns={3} divided> 
+                <Grid.Row verticalAlign='middle' stretched columns={3} divided>
                     <Grid.Column>
                         {/* <Segment> */}
-                            <TableComponent4 
+                            <TableComponent4
                                 data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Living Situation"],"subpopulation", FILTER_COLUMNS).sort( (a,b) => { return b.total - a.total})}
                                 {...seniorsUnshelteredStyling["Living Situation"]}
 
@@ -175,14 +175,14 @@ export default class SeniorDashboardGrid extends Component{
                     <Grid.Column>
 
                         {/* <Segment> */}
-                            <PieChart 
+                            <PieChart
                                 data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Ethnicity"],"subpopulation", ["Total"]))}
                                 {...seniorsUnshelteredStyling["Ethnicity"]}
                             />
 
                             <br />
 
-                                <PieChart 
+                                <PieChart
                                     data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Gender"],"subpopulation", ["Total"]))}
                                     {...seniorsUnshelteredStyling["Gender"]}
                                 />
@@ -191,9 +191,11 @@ export default class SeniorDashboardGrid extends Component{
 
                     <Grid.Column>
                         {/* <Segment> */}
-                            <TableComponent4 
+                            <TableComponent4
                                 data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Subpopulations"],"subpopulation", FILTER_COLUMNS)}
                                 {...seniorsUnshelteredStyling["Subpopulations"]}
+                                percentage_flag = {1}
+                                individuals_row = {1}
                             />
                         {/* </Segment> */}
                     </Grid.Column>
@@ -203,7 +205,7 @@ export default class SeniorDashboardGrid extends Component{
                 <Grid.Row verticalAlign='middle' stretched >
                     <Grid.Column width={12}>
                         <Segment>
-                                <BarChart 
+                                <BarChart
                                     data = {this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Race"]}
                                     {...seniorsUnshelteredStyling["Race"]}
                                 />
@@ -212,7 +214,7 @@ export default class SeniorDashboardGrid extends Component{
 
                     <Grid.Column width={4}>
                         <Segment>
-                            <TableComponent4 
+                            <TableComponent4
                                 data = {this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Households"]}
                                 {...seniorsUnshelteredStyling["Household"]}
 
@@ -227,7 +229,7 @@ export default class SeniorDashboardGrid extends Component{
     render(){
         return(
             <div>
-                {this.state.rendered ? 
+                {this.state.rendered ?
                     this.dashboard()
                     : (
                         <div class="lds-ring">

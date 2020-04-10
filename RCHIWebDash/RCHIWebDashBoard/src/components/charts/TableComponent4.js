@@ -18,7 +18,8 @@ class TableComponent4 extends Component{
       expand_i: this.props.expandIndex,
       color: "red",
       tableFillColor: "#f1f1f1",
-      percent_flag : this.props.percentage_flag
+      percent_flag : this.props.percentage_flag,
+      individuals_row : this.props.individuals_row
     }
 
     //console.log(this.props.expandIndex);
@@ -50,12 +51,26 @@ class TableComponent4 extends Component{
       //2)Merge new array with the original array
       //3)Reassign the data with the merged array
 
+      if(this.state.individuals_row != null){
+        console.log('Individuals row passed')
+      }
+
       //Grab Total
       var total = 0
 
-      //Grab the totals of the whole array of JSONS
-      for(let i = 0; i < this.state.chartData.length; ++i){
-        total+=this.state.chartData[i].total
+      if(this.state.individuals_row != null){
+        for(let i = 0; i < this.state.chartData.length; ++i){
+          if(this.state.chartData[i].subpopulation =='Individuals'){
+            total = this.state.chartData[i].total
+            this.state.chartData.splice(i,1)
+          }
+        }
+      }
+      else{
+        //Grab the totals of the whole array of JSONS
+        for(let i = 0; i < this.state.chartData.length; ++i){
+          total+=this.state.chartData[i].total
+        }
       }
 
       //Initialize second array
@@ -66,18 +81,16 @@ class TableComponent4 extends Component{
         let percent_val = this.state.chartData[k].total/total
 
         //Truncates percent
-        percent_val = Math.floor(percent_val*10000)/100
+        percent_val = Math.floor(percent_val*100)
 
         //Converts to string
         let percent_str = percent_val.toString()
 
-
-        //Adds trailing 0
-        if(percent_str.length == 3){
-          percent_str = percent_str.concat('0')
-        }
-
         percent_str = percent_str.concat('%')
+
+        if(percent_str == '0%'){
+          percent_str = '<1%'
+        }
 
         //Construct new JSONS
         //Add new JSONS to the new array
