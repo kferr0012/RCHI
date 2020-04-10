@@ -27,8 +27,7 @@ class PitCountByCity extends Component{
         const formatData = filterData.map( value => {
           let {year, city, total} = value
           return { year: year, total: total, subpopulation:city}
-        }).sort((a,b) => {return b.total - a.total})
-
+        })
         this.setState({
           chartData : formatData,
           currentDistrict: this.props.clickedDistrict  
