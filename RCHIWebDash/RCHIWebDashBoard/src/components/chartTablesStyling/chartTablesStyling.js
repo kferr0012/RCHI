@@ -185,7 +185,7 @@ export const unshelteredSupervisoryDistrictStyling = {
         subHeader: "",
         divHeight: "30em",
         margin:{ top: 20, right: 20, bottom: 80, left: 30 },
-        colors: colors[7],
+        colors: colors[1],
         tickValues: 4,
         gridYValues: 4,
         maxValue: 800
