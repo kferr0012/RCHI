@@ -86,25 +86,11 @@ export default class Change extends React.Component {
 
     }
     render() {
-    //     return (
-    //       <div style = {{height: this.state.height}}>
-                
-    //       {this.state.mydata ? this.runTotal(): null}
-          
-    //       <span className = "component-header">Increase in homeless count</span>
-    //       <h6 style = {{color: "#aaaaaa"}}>From 2019</h6>
-    //   </div>
-
-        
-
-    //     <span className = "component-header">Overall, {value}% increase in</span>
-    //     <h6 style = {{color: "#aaaaaa"}}>homeless count from From 2019</h6>
-    //     )
 
 
         return (
             <div style = {{height: this.state.height,  padding:0, marginBottom:0}}>
-                <span className = "component-header" style = {{fontSize: "12px"}}>Overall, <span style={{color:'#B2C7F6', fontSize:"13px"}}>{((( 2912/2811 - 1)*100)).toFixed(0)}%</span> increase in</span>
+                <span className = "component-header" style = {{fontSize: "12px"}}>Overall, <span style={{color:'#B2C7F6', fontSize:"13px"}}>{((( 2155/2045 - 1)*100)).toFixed(0)}%</span> increase in</span>
                 <h6 style = {{color: "#aaaaaa" ,fontSize: "12px"}}>homeless count from From 2019</h6>
             </div>
         )
