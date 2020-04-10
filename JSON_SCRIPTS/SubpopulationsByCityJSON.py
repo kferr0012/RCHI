@@ -653,7 +653,7 @@ for districtData in [df_d1_2]:
             
         for i in range(len(livingSituationSubpopulation)):
             data.append({
-            "fields":  get_Total_LivingSituation(allDistricts[district], livingSituationCategory[i],city,cityTitle,district + 1,livingSituationSubpopulation[i])
+            "fields":  get_Total_LivingSituation(districtData, livingSituationCategory[i],city,cityTitle,"1+2",livingSituationSubpopulation[i])
             })
 
         data.append({

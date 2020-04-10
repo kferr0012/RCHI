@@ -30,9 +30,21 @@ class VolunteerDeploymentSite extends Component{
       axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/VolunteerDeployment/?search='+this.props.query)
       .then(response=>{
 
-        const newDataArray = response.data.map( val => {
-          let {year , count, deploymentSite} = val
-          return {year:year,total:count, subpopulation:deploymentSite}
+        const newDataObject = response.data.reduce((acc,val) => {
+            let {year, count, deploymentSite} =val
+            if(!acc[deploymentSite]){
+              acc[deploymentSite] = {year:year, total: 0}
+            }
+            acc[deploymentSite].total += count
+
+            return acc
+        }, {})
+
+        const newDataArray = Object.entries(newDataObject).map(([key,value]) => {
+          return {
+            subpopulation: key,
+            ...value
+          }
         })
 
         this.setState({

@@ -114,34 +114,8 @@ const PageLayout = ({ currentDistrict, tables }) => {
         </Grid.Column>
       </Grid.Row>
 
-      <Grid.Row verticalAlign="middle" stretched columns={3}>
-        <Grid.Column width={0}>
-          <PitCountByCity
-            clickedDistrict={currentDistrict}
-            currentDistrict={currentDistrict}
-            query={currentDistrict}
-            {...unshelteredSupervisoryDistrictStyling["PIT Count By City"]}
-          />
-        </Grid.Column>
-        <Grid.Column width={3}>
-          <VolunteersDeployment
-            clickedDistrict={currentDistrict}
-            currentDistrict={currentDistrict}
-            query={currentDistrict}
-            {...unshelteredSupervisoryDistrictStyling["Volunteers By City"]}
-          />
-        </Grid.Column>
-        <Grid.Column width={3}>
-          <HouseHoldComposition
-            clickedDistrict={currentDistrict}
-            currentDistrict={currentDistrict}
-            query={currentDistrict}
-            {...unshelteredSupervisoryDistrictStyling["Household"]}
-          />
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row style={{marginTop:"10px"}}>
-        <Grid.Column width={13}>
+      <Grid.Row>
+        <Grid.Column width={16} vertical floated='left'>
           <BarChart
             data={filterList(
               combineCountsByCategory(
@@ -153,6 +127,33 @@ const PageLayout = ({ currentDistrict, tables }) => {
               ["Total"]
             )}
             {...unshelteredSupervisoryDistrictStyling["Race"]}
+          />
+        </Grid.Column>
+      </Grid.Row>
+
+      <Grid.Row verticalAlign="middle" stretched columns={3}>
+        <Grid.Column width={5}>
+          <PitCountByCity
+            clickedDistrict={currentDistrict}
+            currentDistrict={currentDistrict}
+            query={currentDistrict}
+            {...unshelteredSupervisoryDistrictStyling["PIT Count By City"]}
+          />
+        </Grid.Column>
+        <Grid.Column width={5}>
+          <HouseHoldComposition
+            clickedDistrict={currentDistrict}
+            currentDistrict={currentDistrict}
+            query={currentDistrict}
+            {...unshelteredSupervisoryDistrictStyling["Household"]}
+          />
+        </Grid.Column>
+        <Grid.Column width={5}>
+          <VolunteersDeployment
+            clickedDistrict={currentDistrict}
+            currentDistrict={currentDistrict}
+            query={currentDistrict}
+            {...unshelteredSupervisoryDistrictStyling["Volunteers By City"]}
           />
         </Grid.Column>
       </Grid.Row>

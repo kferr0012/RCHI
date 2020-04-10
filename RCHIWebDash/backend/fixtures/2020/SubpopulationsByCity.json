@@ -41838,11 +41838,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 9,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Woods",
-            "total": 0,
+            "total": 9,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41853,11 +41853,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 60,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Encampment",
-            "total": 0,
+            "total": 60,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41870,7 +41870,7 @@
             "city": "RIVERSIDE",
             "interview": 0,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Couch",
             "total": 0,
             "_type": "Unsheltered",
@@ -41883,11 +41883,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 33,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Vehicle",
-            "total": 0,
+            "total": 33,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41898,11 +41898,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 4,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "UnderBridge",
-            "total": 0,
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41913,11 +41913,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 123,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Street",
-            "total": 0,
+            "total": 123,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41928,11 +41928,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 29,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Park",
-            "total": 0,
+            "total": 29,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41943,11 +41943,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 12,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Other",
-            "total": 0,
+            "total": 12,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41958,11 +41958,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 4,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Bus",
-            "total": 0,
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },
@@ -41973,11 +41973,11 @@
         "fields": {
             "category": "Living Situation",
             "city": "RIVERSIDE",
-            "interview": 0,
+            "interview": 4,
             "observation": 0,
-            "district": 5,
+            "district": "1+2",
             "subpopulation": "Abandoned Building",
-            "total": 0,
+            "total": 4,
             "_type": "Unsheltered",
             "year": 2020
         },

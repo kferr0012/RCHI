@@ -37,6 +37,7 @@ class VolunteerDeployment2020(models.Model):
 	deploymentSite = models.CharField(max_length=50)
 	count = models.IntegerField()
 	_type = models.CharField(max_length=50)
+	category = models.CharField(max_length=50)
 
 class CityTotalsByYear2020(models.Model):
 	year = models.IntegerField()
