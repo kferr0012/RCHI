@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Header, Table} from 'semantic-ui-react'
 import {router} from '../../components/Utilities/constants/routing'
 import TableComponent4 from '../../components/charts/TableComponent4'
+import {  filterTypeAndYear } from '../../components/Utilities/ListManipulation/filter'
 
 //CLEAN
 
@@ -30,7 +31,7 @@ class HouseHoldComposition extends Component{
 
     axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/HouseholdsByCityYearInterview/?search='+this.props.query)
     .then(response=>{
-
+        
         const newDataObject = response.data.reduce ((acc, val) => {
           let {totalHouseholds, adultsOnly,  childrenOnly, adultsAndChildren} = val
           if(!acc["Total"]){ 

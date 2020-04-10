@@ -13,7 +13,7 @@ jsonFile = []
 
 # read file
 try:
-    with open('./JSON/2019/HouseholdsByCityYearInterview.json', 'r') as myfile:
+    with open('./JSON/2019/HouseholdsByCityYearInterview.jsonr', 'r') as myfile:
         data=myfile.read()
 
     jsonData = json.loads(data)
