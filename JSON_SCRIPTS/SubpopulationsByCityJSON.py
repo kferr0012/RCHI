@@ -90,6 +90,9 @@ jail12MonthsSubpopulation = ['Jail Release 12 Months: Probation', 'Jail Release 
 jailCategory = ['No', 'DoesntKnow']
 jailNoSubpopulation = ['No Jail', 'Unknown Jail']
 
+livingSituationCategory = ['Woods', 'Encampment', 'Couch', 'Vehicle','UnderBridge', 'Street', 'Park', 'Other','Bus','AbandonedBuilding']
+livingSituationSubpopulation = ['Woods', 'Encampment', 'Couch', 'Vehicle','UnderBridge', 'Street', 'Park', 'Other','Bus','Abandoned Building']
+
 
 def get_race_count(in_df, value, city, cityTitle, district= None, subpopulation= None):
     if subpopulation == 'Total':
@@ -389,6 +392,16 @@ def get_Seniors(in_df,city,cityTitle,district=None):
 
     return {"category": "Subpopulations", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": 'Seniors 60+',"total": interview + observation}
 
+def get_Total_LivingSituation(in_df, value, city, cityTitle, district, subpopulation):
+    if subpopulation == 'Other':
+        interview =  in_df.loc[lambda df: (((df['P_Living_Situation'] == value) | (df['P_Living_Situation'].isnull()) ) & (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city)), :].shape[0]
+    else:
+        interview =  in_df.loc[lambda df: ((df['P_Living_Situation'] == value) & (df['Household Survey Type'] == 'Interview') & (df['CITYNAME'] == city) ), :].shape[0]
+        
+    observation = 0 
+
+    return {"category": "Living Situation", "city": cityTitle, "interview": interview ,"observation": observation,"district": district, "subpopulation": subpopulation, "total": interview + observation}
+
 
 for district in range(0,5):
 
@@ -489,6 +502,11 @@ for district in range(0,5):
         for i in range(len(jailNoSubpopulation)):
             data.append({
             "fields":  get_Total_NonJailCount(allDistricts[district], jailCategory[i],city,cityTitle,district + 1,jailNoSubpopulation[i])
+            })
+        
+        for i in range(len(livingSituationSubpopulation)):
+            data.append({
+            "fields":  get_Total_LivingSituation(allDistricts[district], livingSituationCategory[i],city,cityTitle,district + 1,livingSituationSubpopulation[i])
             })
             
 
@@ -633,6 +651,10 @@ for districtData in [df_d1_2]:
             "fields":  get_Total_NonJailCount(districtData, jailCategory[i],city,cityTitle,"1+2",jailNoSubpopulation[i])
             })
             
+        for i in range(len(livingSituationSubpopulation)):
+            data.append({
+            "fields":  get_Total_LivingSituation(allDistricts[district], livingSituationCategory[i],city,cityTitle,district + 1,livingSituationSubpopulation[i])
+            })
 
         data.append({
         "fields":  get_Total_ChronicHomeless(districtData,city,cityTitle,"1+2")

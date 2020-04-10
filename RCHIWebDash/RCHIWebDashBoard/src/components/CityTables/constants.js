@@ -76,6 +76,26 @@ export const citynames = {
     ]
 };
 
+export const filterData = [
+    "Unknown Veteran" 
+    , "Adults Only", 
+    'Children Only', 
+    'Families with Children',
+    'Pet Owners', 'Individuals',
+    'Newly Homeless',
+    'Seniors 60+',
+    'Woods',
+    'Encampment', 
+    'Couch', 
+    'Vehicle',
+    'UnderBridge', 
+    'Street', 
+    'Park', 
+    'Other',
+    'Bus',
+    'Abandoned Building'
+]
+
 export const base = {
     'District': 0,
     'Age':	{

@@ -3,7 +3,7 @@ import './CityTables.css'
 import ReactToPrint from 'react-to-print';
 import Select from 'react-select'
 import axios from 'axios';
-import { citynames, base, SubPopHeaders, Catergories, Titles } from './constants';
+import { citynames, base, SubPopHeaders, Catergories, Titles ,filterData} from './constants';
 
 import { Grid } from 'semantic-ui-react';
 import { router } from '../Utilities/constants/routing'
@@ -91,11 +91,9 @@ export default class CityTables extends Component {
             data[this.state.citynames[i]] = JSON.parse(JSON.stringify(base));
         }
 
-        const filter = ["Unknown Veteran" , "Adults Only", 'Children Only', 'Families with Children','Pet Owners', 'Individuals','Newly Homeless','Seniors 60+']
-
         for (var i = 0; i < indata.length ; i++)
         {   
-            if(!filter.includes(indata[i]['subpopulation'])){
+            if(!filterData.includes(indata[i]['subpopulation'])){
                 data[indata[i]['city']]['District'] = indata[i]['district'];
                 data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Interview'] = indata[i]['interview'];
                 data[indata[i]['city']][indata[i]['category']][indata[i]['subpopulation']]['Observation'] = indata[i]['observation'];
