@@ -76,7 +76,7 @@ jailCategory = ['No', 'DoesntKnow']
 jailNoSubpopulation = ['No Jail', 'Unknown Jail']
 
 livingSituationCategory = ['Woods', 'Encampment', 'Couch', 'Vehicle','UnderBridge', 'Street', 'Park', 'Other','Bus','AbandonedBuilding']
-livingSituationSubpopulation = ['Woods', 'Encampment', 'Couch', 'Vehicle','UnderBridge', 'Street', 'Park', 'Other','Bus','AbandonedBuilding']
+livingSituationSubpopulation = ['Woods', 'Encampment', 'Couch', 'Vehicle','UnderBridge', 'Street', 'Park', 'Other','Bus','Abandoned Building']
 
 def get_race_count(in_df, value, subpopulation,year):
 

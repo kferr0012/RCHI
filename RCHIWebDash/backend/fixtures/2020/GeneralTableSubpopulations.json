@@ -901,7 +901,7 @@
             "category": "Living Situation",
             "interview": 49,
             "observation": 0,
-            "subpopulation": "AbandonedBuilding",
+            "subpopulation": "Abandoned Building",
             "total": 49,
             "year": 2020,
             "_type": "Unsheltered"
