@@ -42,7 +42,7 @@ export const newlyHomelessStyling = {
 export const unshelteredTrendsStyling = {
   Veteran: {
     header: "Veteran",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -53,7 +53,7 @@ export const unshelteredTrendsStyling = {
 
   "Chronically Homeless": {
     header: "Chronically Homeless",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -64,7 +64,7 @@ export const unshelteredTrendsStyling = {
 
   "Families with Children": {
     header: "Families with Children ",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -75,7 +75,7 @@ export const unshelteredTrendsStyling = {
 
   "Elderly (>62)": {
     header: "Elderly (>62)",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -99,7 +99,7 @@ export const unshelteredTrendsStyling = {
 
   "Victim of Domestic Violence": {
     header: "Victim of Domestic Violence",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -121,7 +121,7 @@ export const unshelteredTrendsStyling = {
 
   "AIDS or HIV": {
     header: "AIDS or HIV",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -132,7 +132,7 @@ export const unshelteredTrendsStyling = {
 
   "Mental Health Conditions": {
     header: "Mental Health Conditions",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -143,7 +143,7 @@ export const unshelteredTrendsStyling = {
 
   PTSD: {
     header: "PTSD",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -154,7 +154,7 @@ export const unshelteredTrendsStyling = {
 
   "Brain Injury": {
     header: "Brain Injury",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -165,7 +165,7 @@ export const unshelteredTrendsStyling = {
 
   "Substance Abuse": {
     header: "Substance Abuse",
-    subHeader: "Interviewed Only",
+    subHeader: "Interview Only",
     divHeight: "25em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
