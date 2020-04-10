@@ -42,6 +42,7 @@ const FILTER_COLUMNS = [
 "Jail Release 12 Months: Parole",
 "Jail Release 12 Months: Completed Sentence",
 "Jail Release 12 Months: (Unspecified)",
+"No Jail",
 "Unknown Jail",
 "Not Chronically Homeless",
 "Unknown Veteran",

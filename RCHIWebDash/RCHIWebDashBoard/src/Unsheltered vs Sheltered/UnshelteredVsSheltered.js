@@ -64,7 +64,7 @@ const FILTERED_COUNTS = [
   'Park',
   'Other',
   'Bus',
-  'AbandonedBuilding',
+  'Abandoned Building',
   'Adults Only',
   'Children Only',
   'Adults and Children',
