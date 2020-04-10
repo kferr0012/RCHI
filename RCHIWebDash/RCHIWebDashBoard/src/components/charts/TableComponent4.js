@@ -69,7 +69,8 @@ class TableComponent4 extends Component{
       else{
         //Grab the totals of the whole array of JSONS
         for(let i = 0; i < this.state.chartData.length; ++i){
-          total+=this.state.chartData[i].total
+          if(this.state.chartData[i].subpopulation != 'Total')
+            total+=this.state.chartData[i].total
         }
       }
 
