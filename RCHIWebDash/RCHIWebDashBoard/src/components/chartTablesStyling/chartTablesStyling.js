@@ -6,37 +6,45 @@ export const newlyHomelessStyling = {
   Age: {
     tableName: "Age",
     tableHeight: "100%",
-    divHeight: "37.8em"
+    divHeight: "20.8em",
+    padding: {},
+  },
+  "Living Situation": {
+    tableName: "Living Situation",
+    tableHeight: "100%",
+    divHeight: "20.8em",
+    percentage_flag: "1",
+    padding: {},
   },
   Ethnicity: {
     margin: { top: 30, bottom: 20 },
     divHeight: "15em",
     sortByValue: true,
-    header: "Ethnicity"
+    header: "Ethnicity",
   },
   Gender: {
     margin: { top: 30, bottom: 20 },
     divHeight: "15em",
     sortByValue: true,
-    header: "Gender"
+    header: "Gender",
   },
   Subpopulations: {
     tableName: "Subpopulation Statistics",
     tableHeight: "100%",
-    divHeight: "37.8em"
+    divHeight: "37.8em",
   },
   Race: {
     indexBy: "subpopulation",
     keys: ["total"],
     margin: { top: 50, right: 30, bottom: 50, left: 50 },
     divHeight: "25em",
-    header: "Race"
+    header: "Race",
   },
   Household: {
     tableName: "Household Composition",
     tableHeight: "100%",
-    divHeight: "25em"
-  }
+    divHeight: "25em",
+  },
 };
 
 export const unshelteredTrendsStyling = {
@@ -48,7 +56,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 200
+    maxValue: 200,
   },
 
   "Chronically Homeless": {
@@ -59,7 +67,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 800
+    maxValue: 800,
   },
 
   "Families with Children": {
@@ -70,7 +78,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 10
+    maxValue: 10,
   },
 
   "Elderly (>62)": {
@@ -81,7 +89,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 200
+    maxValue: 200,
   },
 
   "Youth (18-24)": {
@@ -94,7 +102,7 @@ export const unshelteredTrendsStyling = {
     gridYValues: 5,
     maxValue: 600,
     stacked: true,
-    legend: true
+    legend: true,
   },
 
   "Victim of Domestic Violence": {
@@ -105,7 +113,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 4,
     gridYValues: 4,
-    maxValue: 500
+    maxValue: 500,
   },
 
   "Jail Release 12 Months": {
@@ -116,7 +124,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 500
+    maxValue: 500,
   },
 
   "AIDS or HIV": {
@@ -127,7 +135,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 50
+    maxValue: 50,
   },
 
   "Mental Health Conditions": {
@@ -138,7 +146,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 500
+    maxValue: 500,
   },
 
   PTSD: {
@@ -149,7 +157,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 500
+    maxValue: 500,
   },
 
   "Brain Injury": {
@@ -160,7 +168,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 500
+    maxValue: 500,
   },
 
   "Substance Abuse": {
@@ -172,152 +180,151 @@ export const unshelteredTrendsStyling = {
     tickValues: 5,
     gridYValues: 5,
     maxValue: 200,
-    padding: 0.75
-  }
+    padding: 0.75,
+  },
 };
 
 export const unshelteredSupervisoryDistrictStyling = {
-    "Pit Count Trend":{
-        header: "PIT Count Trend",
-        subHeader: "",
-        divHeight: "30em",
-        margin:{ top: 20, right: 20, bottom: 80, left: 30 },
-        colors: colors[7],
-        tickValues: 4,
-        gridYValues: 4,
-        maxValue: 800
-    },
+  "Pit Count Trend": {
+    header: "PIT Count Trend",
+    subHeader: "",
+    divHeight: "30em",
+    margin: { top: 20, right: 20, bottom: 80, left: 30 },
+    colors: colors[7],
+    tickValues: 4,
+    gridYValues: 4,
+    maxValue: 800,
+  },
 
-    "Chronically Homeless":{
-        header: "Chronically Homeless",
-        subHeader: "Interview Only",
-        dataType: "Interview",
-        margin: {top: 30, bottom: 59},
-        divHeight: "12em",
-        sortByValue: true,
-    },
-    Ethnicity:{
-        header: "Ethnicity",
-        margin: {top: 30, bottom: 20},
-        divHeight: "10em",
-        sortByValue: true,
-    },
-    Subpopulations:{
-        tableName: "Subpopulation Statistics",
-        tableHeight: "100%",
-        divHeight: "30em"
-    },
+  "Chronically Homeless": {
+    header: "Chronically Homeless",
+    subHeader: "Interview Only",
+    dataType: "Interview",
+    margin: { top: 30, bottom: 59 },
+    divHeight: "12em",
+    sortByValue: true,
+  },
+  Ethnicity: {
+    header: "Ethnicity",
+    margin: { top: 30, bottom: 20 },
+    divHeight: "10em",
+    sortByValue: true,
+  },
+  Subpopulations: {
+    tableName: "Subpopulation Statistics",
+    tableHeight: "100%",
+    divHeight: "30em",
+  },
 
-    "PIT Count By City":{
-        tableName: "PIT Count By City",
-        subHeader: "" ,
-        header: true,
-        expandIndex: "year",
-        tableHeight: "100%",
-        divHeight: "15.0em"
-    },
+  "PIT Count By City": {
+    tableName: "PIT Count By City",
+    subHeader: "",
+    header: true,
+    expandIndex: "year",
+    tableHeight: "100%",
+    divHeight: "15.0em",
+  },
 
-    "Volunteers By City":{
-        tableName: "Volunteers By City",
-        subHeader: "",
-        tableHeight: "100%",
-        divHeight: "15.0em"
-    },
+  "Volunteers By City": {
+    tableName: "Volunteers By City",
+    subHeader: "",
+    tableHeight: "100%",
+    divHeight: "15.0em",
+  },
 
-    Race: {
-        indexBy: "subpopulation",
-        keys: ["total"],
-        margin: { top: 50, right: 30, bottom: 50, left: 50},
-        divHeight: "15em",
-        header: "Race",
-        maxValue: 300,
-        tickValues: 5,
-        gridYValues: 5,
-    },
+  Race: {
+    indexBy: "subpopulation",
+    keys: ["total"],
+    margin: { top: 50, right: 30, bottom: 50, left: 50 },
+    divHeight: "15em",
+    header: "Race",
+    maxValue: 300,
+    tickValues: 5,
+    gridYValues: 5,
+  },
 
-    Household: {
-        tableName: "Household Composition",
-        subHeader: "",
-        tableHeight: "100%",
-        divHeight: "15.0em"
-    }
-
-}
+  Household: {
+    tableName: "Household Composition",
+    subHeader: "",
+    tableHeight: "100%",
+    divHeight: "15.0em",
+  },
+};
 
 export const unshelteredCitiesStyling = {
-    Subpopulations:{
-        tableName: "Subpopulation Statistics (Interview Only)",
-        tableHeight: "100%",
-        divHeight: "30em"
-    },
+  Subpopulations: {
+    tableName: "Subpopulation Statistics (Interview Only)",
+    tableHeight: "100%",
+    divHeight: "30em",
+  },
 
-    Ethnicity:{
-        header: "Ethnicity",
-        margin: {top: 30, bottom: 20},
-        divHeight: "12em",
-        sortByValue: true,
-    },
+  Ethnicity: {
+    header: "Ethnicity",
+    margin: { top: 30, bottom: 20 },
+    divHeight: "12em",
+    sortByValue: true,
+  },
 
-    "Gender Table":{
-        tableName: "Gender",
-        tableHeight: "100%",
-        divHeight: "100%"
-    },
+  "Gender Table": {
+    tableName: "Gender",
+    tableHeight: "100%",
+    divHeight: "100%",
+  },
 
-    "Gender Chart":{
-        indexBy: "subpopulation",
-        keys: ["total"],
-        margin: { top: 50, right: 0, bottom: 50, left: -10 },
-        divHeight: "20em",
-        header: "Gender",
-        subHeader:"",
-        // maxValue: 200,
-        tickValues: 5,
-        gridYValues: 5,
-        labelSkipHeight:0
-    },
+  "Gender Chart": {
+    indexBy: "subpopulation",
+    keys: ["total"],
+    margin: { top: 50, right: 0, bottom: 50, left: -10 },
+    divHeight: "20em",
+    header: "Gender",
+    subHeader: "",
+    // maxValue: 200,
+    tickValues: 5,
+    gridYValues: 5,
+    labelSkipHeight: 0,
+  },
 
-    "Race Table":{
-        tableName: "Race",
-        tableHeight: "100%",
-        divHeight: "20em"
-    },
+  "Race Table": {
+    tableName: "Race",
+    tableHeight: "100%",
+    divHeight: "20em",
+  },
 
-    "Age Table":{
-        tableName: "Age",
-        tableHeight: "100%",
-        divHeight: "20em"
-    },
+  "Age Table": {
+    tableName: "Age",
+    tableHeight: "100%",
+    divHeight: "20em",
+  },
 
-    "Race Chart": {
-        indexBy: "subpopulation",
-        keys: ["total"],
-        margin: { top: 50, right: 30, bottom: 50, left: 50},
-        divHeight: "25em",
-        header: "Race",
-        subHeader:"",
-        tickValues: 5,
-        gridYValues: 5,
-    },
-}
+  "Race Chart": {
+    indexBy: "subpopulation",
+    keys: ["total"],
+    margin: { top: 50, right: 30, bottom: 50, left: 50 },
+    divHeight: "25em",
+    header: "Race",
+    subHeader: "",
+    tickValues: 5,
+    gridYValues: 5,
+  },
+};
 
 export const unshelteredVsShelteredStyling = {
   Sheltered: {
     tableName: "Sheltered Statistics",
     tableHeight: "100%",
-    divHeight: "40em"
+    divHeight: "40em",
   },
   Unsheltered: {
     tableName: "Unsheltered Statistics",
     tableHeight: "100%",
-    divHeight: "25em"
+    divHeight: "25em",
   },
 
   "Unsheltered Household": {
     tableName: "Unsheltered Statistics",
     tableHeight: "100%",
-    divHeight: "15em"
-  }
+    divHeight: "15em",
+  },
 };
 
 export const seniorsUnshelteredStyling = {
@@ -325,35 +332,35 @@ export const seniorsUnshelteredStyling = {
     tableName: "Living Situation",
     tableHeight: "100%",
     divHeight: "37.8em",
-    percentage_flag: "1"
+    percentage_flag: "1",
   },
   Ethnicity: {
     margin: { top: 30, bottom: 20 },
     divHeight: "15em",
     sortByValue: true,
-    header: "Ethnicity"
+    header: "Ethnicity",
   },
   Gender: {
     margin: { top: 30, bottom: 20 },
     divHeight: "15em",
     sortByValue: true,
-    header: "Gender"
+    header: "Gender",
   },
   Subpopulations: {
     tableName: "Subpopulation Statistics",
     tableHeight: "100%",
-    divHeight: "37.8em"
+    divHeight: "37.8em",
   },
   Race: {
     indexBy: "subpopulation",
     keys: ["total"],
     margin: { top: 50, right: 30, bottom: 50, left: 50 },
     divHeight: "25em",
-    header: "Race"
+    header: "Race",
   },
   Household: {
     tableName: "Household Composition",
     tableHeight: "100%",
-    divHeight: "25em"
-  }
+    divHeight: "25em",
+  },
 };

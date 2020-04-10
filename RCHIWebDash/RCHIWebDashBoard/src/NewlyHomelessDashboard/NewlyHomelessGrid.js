@@ -13,7 +13,7 @@ import {filterList} from '../components/Utilities/ListManipulation/filter'
 import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
-import { newlyHomelessStyling, ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '../components/chartTablesStyling/chartTablesStyling'
 
 const FILTER_COLUMNS = [
 
@@ -168,6 +168,11 @@ export default class NewlyHomelessGrid extends Component{
                             <TableComponent4 
                                 data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS)).sort((a,b) => {return b.total - a.total})}
                                 {...newlyHomelessStyling["Age"]}
+
+                            />
+                             <TableComponent4 
+                                data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Living Situation"],"subpopulation", FILTER_COLUMNS).sort( (a,b) => { return b.total - a.total})}
+                                {...newlyHomelessStyling["Living Situation"]}
 
                             />
                         {/* </Segment> */}
