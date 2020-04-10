@@ -51,10 +51,6 @@ class TableComponent4 extends Component{
       //2)Merge new array with the original array
       //3)Reassign the data with the merged array
 
-      if(this.state.individuals_row != null){
-        console.log('Individuals row passed')
-      }
-
       //Grab Total
       var total = 0
 
