@@ -62,7 +62,7 @@ class UnshelteredSubpopulationTrends extends Component{
             else if(trend === "Substance Abuse") return <div>
                
                     <SubstanceAbuseTrend 
-                    query={"Subpopulations"}
+                    query={"Substance Abuse"}
                     indexBy = {"year"}
                     keys={["total"]}
                     // footnote = {"Before 2018, questions are not comparable."}

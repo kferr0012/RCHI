@@ -83,7 +83,7 @@ export const unshelteredTrendsStyling = {
   },
 
   "Elderly (>62)": {
-    header: "Elderly (>62)",
+    header: "Elderly (≥62)",
     subHeader: "Interview Only",
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
@@ -182,7 +182,7 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 200,
+    maxValue: 600,
     padding: 0.75,
   },
 };

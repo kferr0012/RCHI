@@ -121,6 +121,7 @@ export default class Dashboard extends Component{
 
         var myTables = await aggregateFetch(this.state.urls, false)
 
+        //This Functions Returns a list of objects with the Highlighted Numbers used in the dashboard
         const NumberValues = NumberCreator(myTables[router.activeYear + "/GeneralTableSubpopulations"])
 
 
