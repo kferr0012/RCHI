@@ -22,6 +22,7 @@ import TableComponent4 from "../components/charts/TableComponent4.js";
 import {
   unshelteredCitiesStyling,
   ContainerWidth,
+  seniorsUnshelteredStyling,
 } from "../components/chartTablesStyling/chartTablesStyling";
 import BarGraph from "../components/reformatedCharts/BarChart";
 
@@ -286,6 +287,16 @@ export default class CityTable extends Component {
                     {...unshelteredCitiesStyling['Age Table']}
                   />
                   */}
+                  <TableComponent4
+                    data={this.state.Tables[
+                      router.activeYear + "/SubpopulationsByCity"
+                    ][this.state.cityChoice]["Living Situation"].sort(
+                      (a, b) => {
+                        return b.total - a.total;
+                      }
+                    )}
+                    {...unshelteredCitiesStyling["Living Situation"]}
+                  />
                 </div>
               </div>
             </div>
@@ -303,7 +314,10 @@ export default class CityTable extends Component {
                     </span>
                   </div>
                   <div className="ct-center-r1c3">
-                    <span className="component-header">
+                    <span
+                      className="component-header"
+                      style={{ marginBottom: 20 }}
+                    >
                       Percent of District
                     </span>
                   </div>
@@ -369,9 +383,12 @@ export default class CityTable extends Component {
                       )}
                       margin={{ bottom: 60, top: 30, right: 200, left: 60 }}
                     />
-                    <div style={{ marginLeft: 310 }}>
+                    <div style={{ marginLeft: 310, marginTop: -50 }}>
                       <span className="component-header">Interview Count</span>
-                      <p className="component-header" style={{ marginTop: 10 }}>
+                      <p
+                        className="component-header"
+                        style={{ marginTop: 20, marginBottom: 30 }}
+                      >
                         {
                           this.state.Tables[
                             router.activeYear + "/SubpopulationsByCity"
@@ -381,7 +398,7 @@ export default class CityTable extends Component {
                       <span className="component-header">
                         Observation Count
                       </span>
-                      <p className="component-header" style={{ marginTop: 10 }}>
+                      <p className="component-header" style={{ marginTop: 20 }}>
                         {
                           this.state.Tables[
                             router.activeYear + "/SubpopulationsByCity"
@@ -423,7 +440,7 @@ export default class CityTable extends Component {
                     {...unshelteredCitiesStyling["Gender Table"]}
                   />
                 </div>
-                <div className="ct-side-r1r2">
+                <div className="ct-side-r1r2" style={{ marginTop: 260 }}>
                   <BarGraph
                     data={filterList(
                       this.state.Tables[
@@ -437,21 +454,6 @@ export default class CityTable extends Component {
                     // margin = {{top: 40, bottom:30, right: 30, left: 30}}
                     {...unshelteredCitiesStyling["Gender Chart"]}
                   />
-                </div>
-                <div className="ct-side-r1r3">
-                  <span></span>
-                </div>
-                <div className="ct-side-r1r4">
-                  {/*
-                  <TableComponent4
-                    data={this.state.Tables[
-                      router.activeYear + "/SubpopulationsByCity"
-                    ][this.state.cityChoice]["Race"].sort((a, b) => {
-                      return b.total - a.total;
-                    })}
-                    {...unshelteredCitiesStyling["Race Table"]}
-                  />
-                  */}
                 </div>
               </div>
             </div>

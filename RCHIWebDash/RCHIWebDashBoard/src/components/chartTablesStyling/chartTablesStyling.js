@@ -62,7 +62,10 @@ export const unshelteredTrendsStyling = {
   "Chronically Homeless": {
     header: "Chronically Homeless",
     subHeader: "Interview Only",
-    footnote: ["In 2019, the question changed.", "In 2020, newly homeless question was added."],
+    footnote: [
+      "In 2019, the question changed.",
+      "In 2020, newly homeless question was added.",
+    ],
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -188,36 +191,36 @@ export const unshelteredTrendsStyling = {
 };
 
 export const unshelteredSupervisoryDistrictStyling = {
-    "Pit Count Trend":{
-        header: "PIT Count Trend",
-        subHeader: "",
-        divHeight: "30em",
-        margin:{ top: 20, right: 20, bottom: 80, left: 30 },
-        colors: colors[1],
-        tickValues: 4,
-        gridYValues: 4,
-        maxValue: 800
-    },
+  "Pit Count Trend": {
+    header: "PIT Count Trend",
+    subHeader: "",
+    divHeight: "30em",
+    margin: { top: 20, right: 20, bottom: 80, left: 30 },
+    colors: colors[1],
+    tickValues: 4,
+    gridYValues: 4,
+    maxValue: 800,
+  },
 
-    "Chronically Homeless":{
-        header: "Chronically Homeless",
-        subHeader: "Interview Only",
-        dataType: "Interview",
-        margin: {top: 30, bottom: 59},
-        divHeight: "12em",
-        sortByValue: true,
-    },
-    Ethnicity:{
-        header: "Ethnicity",
-        margin: {top: 30, bottom: 20},
-        divHeight: "10em",
-        sortByValue: true,
-    },
-    Subpopulations:{
-        tableName: "Subpopulation Statistics",
-        tableHeight: "100%",
-        divHeight: "30em"
-    },
+  "Chronically Homeless": {
+    header: "Chronically Homeless",
+    subHeader: "Interview Only",
+    dataType: "Interview",
+    margin: { top: 30, bottom: 59 },
+    divHeight: "12em",
+    sortByValue: true,
+  },
+  Ethnicity: {
+    header: "Ethnicity",
+    margin: { top: 30, bottom: 20 },
+    divHeight: "10em",
+    sortByValue: true,
+  },
+  Subpopulations: {
+    tableName: "Subpopulation Statistics",
+    tableHeight: "100%",
+    divHeight: "30em",
+  },
 
   "Chronically Homeless": {
     header: "Chronically Homeless",
@@ -291,7 +294,7 @@ export const unshelteredCitiesStyling = {
   "Gender Table": {
     tableName: "Gender",
     tableHeight: "100%",
-    divHeight: "100%",
+    divHeight: "200%",
   },
 
   "Gender Chart": {
@@ -328,6 +331,13 @@ export const unshelteredCitiesStyling = {
     subHeader: "",
     tickValues: 5,
     gridYValues: 5,
+  },
+
+  "Living Situation": {
+    tableName: "Living Situation",
+    tableHeight: "100%",
+    divHeight: "20.8em",
+    percentage_flag: "1",
   },
 };
 
