@@ -53,13 +53,13 @@ export default class PercentageDistrict extends React.Component {
             if(this.state.mydata[i].subpopulation === 'Total'){
                 this.state.number = this.state.mydata[i].value
             }
-
-
         }
+
+        const percentage = ((this.state.number / 2155) * 100).toFixed(0)
 
         return (
             <div>
-                {((this.state.number / 2155) * 100).toFixed(0)}% 
+                {percentage < 1 ? "<1" : percentage}%
             </div>
         )
 

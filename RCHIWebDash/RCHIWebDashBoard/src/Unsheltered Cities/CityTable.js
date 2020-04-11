@@ -81,6 +81,7 @@ const FILTER_COLUMNS = [
   "No Jail",
   "Unknown Jail",
   "Unknown Veteran",
+  "Couch"
 ];
 
 export default class CityTable extends Component {
@@ -288,9 +289,9 @@ export default class CityTable extends Component {
                   />
                   */}
                   <TableComponent4
-                    data={this.state.Tables[
+                    data={filterList(this.state.Tables[
                       router.activeYear + "/SubpopulationsByCity"
-                    ][this.state.cityChoice]["Living Situation"].sort(
+                    ][this.state.cityChoice]["Living Situation"],"subpopulation",FILTER_COLUMNS).sort(
                       (a, b) => {
                         return b.total - a.total;
                       }
@@ -318,7 +319,9 @@ export default class CityTable extends Component {
                       className="component-header"
                       style={{ marginBottom: 20 }}
                     >
-                      Percent of District
+                      Percent of District {this.state.Tables[
+                            router.activeYear + "/SubpopulationsByCity"
+                          ][this.state.cityChoice]["Individuals"][0].district}
                     </span>
                   </div>
 
