@@ -332,3 +332,40 @@
     transform: rotate(360deg);
   }
 }
+
+.sub-tots {
+  grid-template: 1fr 1fr / 1fr 1fr;
+  position: relative;
+  display: grid;
+}
+
+.sub-tots-c1r1 {
+  display: flex;
+  position: relative;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  justify-content: center;
+  align-items: center;
+}
+.sub-tots-c2r1 {
+  display: flex;
+  position: relative;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-tots-c1r2 {
+  display: flex;
+  position: relative;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1
+}
+
+.sub-tots-c2r2 {
+  display: flex;
+  position: relative;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1
+}

@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import {aggregateFetch, aggregateFetchbyConstants, expandOnField} from '../components/Utilities/ListManipulation/aggregateFetch'
+import { aggregateFetch } from '../components/Utilities/ListManipulation/aggregateFetch'
 
 import '../components/css/dash.css'
 import TableComponent4 from '../components/charts/TableComponent4';
-import LineGraph from '../components/charts/LineGraph';
 import PieChart2 from '../components/charts/PieChart2';
 import BarGraph from '../components/TestingBranch/BarGraph';
 import BarChart from '../components/reformatedCharts/BarChart'
@@ -14,6 +13,8 @@ import { changeVals2020 } from '../components/Utilities/ListManipulation/changeV
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
 import { seniorsUnshelteredStyling ,  ContainerWidth} from '../components/chartTablesStyling/chartTablesStyling'
+import Total from "../components/Numbers/Total";
+import PercentageDistrict from "../components/Numbers/PercentageDistrict";
 
 const FILTER_COLUMNS = [
 
@@ -86,7 +87,6 @@ export default class SeniorDashboardGrid extends Component{
             </Segment>
   
             <div className="row dash-row">
-  
               <div className="col-sm-8 dash-col-com">
                 <div className="gen-grid">
                     <div className = "gen-r2">
@@ -96,10 +96,7 @@ export default class SeniorDashboardGrid extends Component{
                             data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Age"],"subpopulation", FILTER_COLUMNS)}
                             tableName = "Age"
                             height = "120%"
-
                         />
-                        
-    
                         </div>
                         <div className="gen-r2c1">
                         <div className="gen-r2c1r1">
@@ -115,13 +112,9 @@ export default class SeniorDashboardGrid extends Component{
                             data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Gender"],"subpopulation", ["Total"])}
                             margin = {{top: 30,bottom: 20}}
                             />
-                            
                         </div>
                         </div>
-
                     </div>
-                    
-                 
                     <div style = {{position: "relative",
                                     display: "grid",
                                     height: "100%"}}>
@@ -133,7 +126,6 @@ export default class SeniorDashboardGrid extends Component{
                       margin = {{ top: 50, right: 30, bottom: 50, left: 50}}
                     />
                     </div>
-
                 </div>
               </div>
               <div className="col-sm-4 dash-col-com" >
@@ -153,7 +145,6 @@ export default class SeniorDashboardGrid extends Component{
     }
 
     dashboard(){
-    
        return <Container style={{width:ContainerWidth}}>
             <Segment>
                 <Header as='h1'  textAlign='center'>
@@ -170,27 +161,60 @@ export default class SeniorDashboardGrid extends Component{
                             <TableComponent4 
                                 data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Living Situation"],"subpopulation", FILTER_COLUMNS).sort( (a,b) => { return b.total - a.total})}
                                 {...seniorsUnshelteredStyling["Living Situation"]}
-
                             />
                         {/* </Segment> */}
                     </Grid.Column>
                     <Grid.Column>
-
                         {/* <Segment> */}
-                            <PieChart 
-                                data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Ethnicity"],"subpopulation", ["Total"]))}
-                                {...seniorsUnshelteredStyling["Ethnicity"]}
-                            />
-
-                            <br />
-
-                                <PieChart 
-                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Gender"],"subpopulation", ["Total"]))}
-                                    {...seniorsUnshelteredStyling["Gender"]}
-                                />
+                        <div className="sub-tots">
+                            <div className="sub-tots-c1r1">
+                                <span className="component-header">Total Unsheltered</span>
+                            </div>
+                            <div className="sub-tots-c1r2">
+                                <div className="component-header">
+                                    <Total
+                                        height={400}
+                                        url={
+                                        router.host +
+                                        "/" +
+                                        router.root +
+                                        "/" +
+                                        router.activeYear +
+                                        "/SeniorsSubpopulations/?search=Race"
+                                        }
+                                    />
+                                </div>
+                            </div>
+                            <div className="sub-tots-c2r1">
+                                <span className="component-header">Percentage of Unsheltered</span>
+                            </div>
+                            <div className="sub-tots-c2r2">
+                                <div className="component-header">
+                                    <PercentageDistrict
+                                        height={400}
+                                        url={
+                                        router.host +
+                                        "/" +
+                                        router.root +
+                                        "/" +
+                                        router.activeYear +
+                                        "/SeniorsSubpopulations/?search=Race"
+                                        }
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <PieChart 
+                            data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Ethnicity"],"subpopulation", ["Total"]))}
+                            {...seniorsUnshelteredStyling["Ethnicity"]}
+                        />
+                        <br />
+                        <PieChart 
+                            data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Gender"],"subpopulation", ["Total"]))}
+                            {...seniorsUnshelteredStyling["Gender"]}
+                        />
                         {/* </Segment> */}
                     </Grid.Column>
-
                     <Grid.Column>
                         {/* <Segment> */}
                             <TableComponent4 
@@ -199,9 +223,7 @@ export default class SeniorDashboardGrid extends Component{
                             />
                         {/* </Segment> */}
                     </Grid.Column>
-
                 </Grid.Row>
-
                 <Grid.Row verticalAlign='middle' stretched >
                     <Grid.Column width={12}>
                         <Segment>
@@ -211,13 +233,11 @@ export default class SeniorDashboardGrid extends Component{
                                 />
                             </Segment>
                     </Grid.Column>
-
                     <Grid.Column width={4}>
                         <Segment>
                             <TableComponent4 
                                 data = {this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Households"]}
                                 {...seniorsUnshelteredStyling["Household"]}
-
                             />
                             </Segment>
                     </Grid.Column>
