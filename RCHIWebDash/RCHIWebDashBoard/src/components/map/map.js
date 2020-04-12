@@ -168,7 +168,7 @@ export default class LLMap extends Component {
             }   
         }
         else {
-            clickedHeader = "Supervisoral District " + curClicked.toString();
+            clickedHeader = "Supervisory District " + curClicked.toString();
         }
 
         if (disp == 0) {
