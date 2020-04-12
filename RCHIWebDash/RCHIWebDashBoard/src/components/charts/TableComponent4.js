@@ -35,6 +35,17 @@ class TableComponent4 extends Component{
 
     this.state.chartData = this.props.data;
 
+    //Special Case that converts Pet Owner value to 0 if count is either sheltered or in 2019
+    for(let i = 0; i < this.state.chartData.length; ++i){
+      if(this.state.chartData[i].subpopulation == 'Pet Owners'){
+        if(this.state.chartData[i]._type == 'Sheltered'){
+          this.state.chartData[i].total = 'N/A'
+        } else if (this.state.chartData[i].year == 2019){
+          this.state.chartData[i].total = 'N/A'
+        }
+      }
+    }
+
     //console.log(this.state.expand_i);
     var local_expand_index = this.state.expand_i
 
