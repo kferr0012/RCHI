@@ -15,6 +15,9 @@ import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/
 import { router } from '../components/Utilities/constants/routing';
 import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '../components/chartTablesStyling/chartTablesStyling'
 
+import Total from "../components/Numbers/Total";
+import PercentageDistrict from "../components/Numbers/PercentageDistrict";
+
 const FILTER_COLUMNS = [
 
 "Veteran No",
@@ -178,7 +181,44 @@ export default class NewlyHomelessGrid extends Component{
                         {/* </Segment> */}
                     </Grid.Column>
                     <Grid.Column>
-
+                        <div className="sub-tots">
+                            <div className="sub-tots-c1r1">
+                                <span className="component-header">Total Unsheltered</span>
+                            </div>
+                            <div className="sub-tots-c1r2">
+                                <div className="component-header">
+                                    <Total
+                                        height={400}
+                                        url={
+                                        router.host +
+                                        "/" +
+                                        router.root +
+                                        "/" +
+                                        router.activeYear +
+                                        "/NewlyHomelessByCity/?search=Race"
+                                        }
+                                    />
+                                </div>
+                            </div>
+                            <div className="sub-tots-c2r1">
+                                <span className="component-header">Percentage of Unsheltered</span>
+                            </div>
+                            <div className="sub-tots-c2r2">
+                                <div className="component-header">
+                                    <PercentageDistrict
+                                        height={400}
+                                        url={
+                                        router.host +
+                                        "/" +
+                                        router.root +
+                                        "/" +
+                                        router.activeYear +
+                                        "/NewlyHomelessByCity/?search=Race"
+                                        }
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         {/* <Segment> */}
                             <PieChart 
                                 data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Ethnicity"],"subpopulation", ["Total"]))}
