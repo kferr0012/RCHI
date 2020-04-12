@@ -3,21 +3,18 @@ import { colors } from '../components/Utilities/colors.js';
 import '../components/css/dash.css';
 
 import BarGraph from  '../components/TestingBranch/BarGraph'
-import PieChart2 from '../components/charts/PieChart2'
 import LineGraph from '../components/charts/LineGraph'
 import TableComponent4 from '../components/charts/TableComponent4.js';
 
 import {aggregateFetch, expandOnField} from '../components/Utilities/ListManipulation/aggregateFetch'
-import fetchTest from '../components/Utilities/ListManipulation/fetchTest'
 
 import { shelteredVsUnshelteredMani } from '../components/Utilities/ChartDataManipulation/barDataManipulaton'
-import { ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
-import {filter, subset, filterList } from '../components/Utilities/ListManipulation/filter'
+import {filterList, orderSubs } from '../components/Utilities/ListManipulation/filter'
 import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
-import {combine} from '../components/Utilities/ListManipulation/combine'
-import {Header,Segment, Container, Grid} from 'semantic-ui-react'
+import {Header,Segment} from 'semantic-ui-react'
 
 import{router} from '../components/Utilities/constants/routing'
+import { uvsSubpopOrder } from './constants';
 
 const FILTERED_COUNTS = [
   'Total',
@@ -160,7 +157,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   <div className="svu-r1">
                       
                       <TableComponent4
-                      data = {changeVals2020(filterList(this.getOrderedShelteredData(),"subpopulation", FILTERED_COUNTS))}
+                      data = {orderSubs(changeVals2020(filterList(this.getOrderedShelteredData(),"subpopulation", FILTERED_COUNTS)), uvsSubpopOrder, 2)}
                       expandIndex = {"year"}
                       tableName = "Sheltered Statistics"
                       header = {true}
@@ -233,7 +230,7 @@ export default class UnsheleteredVsSheltered extends Component{
                   
                   <TableComponent4
                     //data = {this.state.Tables["GeneralTableSubpopulations-unexpanded"].concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations-unexpanded"])}
-                    data = {changeVals2020(filterList(this.getOrderedUnshelteredData(),"subpopulation", FILTERED_COUNTS))}
+                    data = {orderSubs(changeVals2020(filterList(this.getOrderedUnshelteredData(),"subpopulation", FILTERED_COUNTS)), uvsSubpopOrder, 2)}
                     tableName = "Unsheltered Statistics"
                     expandIndex = {"year"}
                     header = {true}
