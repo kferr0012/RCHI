@@ -185,7 +185,7 @@ export default class LLMap extends Component {
             curData = subset(data, "city", disp );
         }
         else {
-            place = "Supervisoral District " + disp.toString();
+            place = "Supervisory District " + disp.toString();
             curData = subset(data, "district", disp.toString() );
         }
         
