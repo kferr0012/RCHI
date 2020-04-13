@@ -44,7 +44,6 @@ export default class BarGraph extends Component{
     }
 
     render(){
-        console.log("COLORS: ")
         return(
         <div style = {{height: '100%', width: '100%', position:'absolute'}}>
             {/* <div style = {{height: this.props.height ?  this.props.height : "100%", width: '100%'}}> */}

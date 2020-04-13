@@ -120,7 +120,7 @@ export function orderSubs( data, order, cols ){
             }
         }
     }
-    console.log(data)
-    console.log(ordered)
+    // console.log(data)
+    // console.log(ordered)
     return ordered;
 }
