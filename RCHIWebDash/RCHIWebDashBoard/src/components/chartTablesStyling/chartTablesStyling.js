@@ -223,25 +223,6 @@ export const unshelteredSupervisoryDistrictStyling = {
     divHeight: "30em",
   },
 
-  "Chronically Homeless": {
-    header: "Chronically Homeless",
-    subHeader: "Interview Only",
-    dataType: "Interview",
-    margin: { top: 30, bottom: 59 },
-    divHeight: "12em",
-    sortByValue: true,
-  },
-  Ethnicity: {
-    header: "Ethnicity",
-    margin: { top: 30, bottom: 20 },
-    divHeight: "10em",
-    sortByValue: true,
-  },
-  Subpopulations: {
-    tableName: "Subpopulation Statistics",
-    tableHeight: "100%",
-    divHeight: "30em",
-  },
 
   "PIT Count By City": {
     tableName: "PIT Count By City",

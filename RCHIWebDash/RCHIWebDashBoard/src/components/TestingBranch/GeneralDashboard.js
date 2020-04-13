@@ -317,7 +317,7 @@ export default class Dashboard extends Component{
                     <span>Interview Only</span> */}
                     <PieChart2
                       data = {pieDataManiInterview(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"]),0.1)}
-                      margin = {{top:0,bottom:0,left:30, right: 0}}
+                      margin = {{top:50,bottom:10,left:30, right: 0}}
                       enableRadialLabels= {false}
                       percentageFilter = {0.1}
                     />

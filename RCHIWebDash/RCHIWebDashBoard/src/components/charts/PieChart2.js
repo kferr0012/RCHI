@@ -48,9 +48,9 @@ export default class PieChart2 extends React.Component {
                 radialLabelsTextXOffset={6}
                 radialLabelsTextColor="#333333"
                 radialLabelsLinkOffset={0}
-                radialLabelsLinkDiagonalLength={1}
+                radialLabelsLinkDiagonalLength={3}
                 radialLabelsLinkHorizontalLength={1}
-                radialLabelsLinkStrokeWidth={1}
+                radialLabelsLinkStrokeWidth={3}
                 radialLabelsLinkColor={{ from: 'color' }}
                 slicesLabelsSkipAngle={10}
                 slicesLabelsTextColor="#333333"
