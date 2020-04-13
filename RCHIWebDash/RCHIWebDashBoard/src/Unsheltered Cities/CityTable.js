@@ -277,18 +277,6 @@ export default class CityTable extends Component {
                   />
                 </div>
                 <div className="ct-side-r2">
-                  {/*
-                  <TableComponent4
-                    data={changeVals2020(filterList(
-                      this.state.Tables[
-                        router.activeYear + "/SubpopulationsByCity"
-                      ][this.state.cityChoice]["Age"],
-                      "subpopulation",
-                      ["Total"]
-                    ))}
-                    {...unshelteredCitiesStyling['Age Table']}
-                  />
-                  */}
                   <TableComponent4
                     data={filterList(
                       this.state.Tables[
@@ -313,24 +301,8 @@ export default class CityTable extends Component {
                     </span>
                   </div>
                   <div className="ct-center-r1c2">
-                    <span className="component-header">
-                      Total Unsheltered Count
-                    </span>
+                    <span className="component-header">Interview Count</span>
                   </div>
-                  {/*<div className="ct-center-r1c3">
-                    <span
-                      className="component-header"
-                      style={{ marginBottom: 20 }}
-                    >
-                      Percent of District{" "}
-                      {
-                        this.state.Tables[
-                          router.activeYear + "/SubpopulationsByCity"
-                        ][this.state.cityChoice]["Individuals"][0].district
-                      }
-                    </span>
-                  </div>
-                  */}
 
                   <div className="ct-center-r2c1">
                     <span className="component-header">
@@ -350,38 +322,13 @@ export default class CityTable extends Component {
                   </div>
                   <div className="ct-center-r2c2">
                     <span className="component-header">
-                      <Total
-                        height={400}
-                        url={
-                          router.host +
-                          "/" +
-                          router.root +
-                          "/" +
-                          router.activeYear +
-                          "/SubpopulationsByCity/?search=Age+" +
-                          this.state.cityChoice
+                        {
+                          this.state.Tables[
+                            router.activeYear + "/SubpopulationsByCity"
+                          ][this.state.cityChoice]["Individuals"][0].interview
                         }
-                      />
-                    </span>
+                      </span>
                   </div>
-                  {/*
-                  <div className="ct-center-r2c3">
-                    <span className="component-header">
-                      <PercentageDistrict
-                        height={400}
-                        url={
-                          router.host +
-                          "/" +
-                          router.root +
-                          "/" +
-                          router.activeYear +
-                          "/SubpopulationsByCity/?search=Age+" +
-                          this.state.cityChoice
-                        }
-                      />
-                    </span>
-                  </div>
-                  */}
                 </div>
                 <div className="ct-center-r2">
                   <div>
@@ -417,6 +364,14 @@ export default class CityTable extends Component {
               <div className="ct-grid-side-right">
                 <div className="ct-center-r1">
                   <div className="ct-center-r1c1">
+                    <span className="component-header">Observation Count</span>
+                  </div>
+                  <div className="ct-center-r1c2">
+                    <span className="component-header">
+                      Total Unsheltered Count
+                    </span>
+                  </div>
+                  <div className="ct-center-r1c3">
                     <span
                       className="component-header"
                       style={{ marginBottom: 20 }}
@@ -429,16 +384,19 @@ export default class CityTable extends Component {
                       }
                     </span>
                   </div>
-                  <div className="ct-center-r1c2">
-                    <span className="component-header">Observation Count</span>
-                  </div>
-                  <div className="ct-center-r1c3">
-                    <span className="component-header">Interview Count</span>
-                  </div>
 
                   <div className="ct-center-r2c1">
                     <span className="component-header">
-                      <PercentageDistrict
+                        {
+                          this.state.Tables[
+                            router.activeYear + "/SubpopulationsByCity"
+                          ][this.state.cityChoice]["Individuals"][0].observation
+                        }
+                      </span>
+                  </div>
+                  <div className="ct-center-r2c2">
+                    <span className="component-header">
+                      <Total
                         height={400}
                         url={
                           router.host +
@@ -452,22 +410,20 @@ export default class CityTable extends Component {
                       />
                     </span>
                   </div>
-                  <div className="ct-center-r2c2">
-                    <span className="component-header">
-                      {
-                        this.state.Tables[
-                          router.activeYear + "/SubpopulationsByCity"
-                        ][this.state.cityChoice]["Individuals"][0].observation
-                      }
-                    </span>
-                  </div>
                   <div className="ct-center-r2c3">
                     <span className="component-header">
-                      {
-                        this.state.Tables[
-                          router.activeYear + "/SubpopulationsByCity"
-                        ][this.state.cityChoice]["Individuals"][0].interview
-                      }
+                      <PercentageDistrict
+                        height={400}
+                        url={
+                          router.host +
+                          "/" +
+                          router.root +
+                          "/" +
+                          router.activeYear +
+                          "/SubpopulationsByCity/?search=Age+" +
+                          this.state.cityChoice
+                        }
+                      />
                     </span>
                   </div>
                 </div>
