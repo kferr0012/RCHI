@@ -36,6 +36,7 @@ import {
   filterList,
 } from "../components/Utilities/ListManipulation/filter";
 import { changeVals2020 } from "../components/Utilities/ListManipulation/changeValue";
+import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { getOverflowOptions } from "antd/lib/tooltip/placements";
 
 import { router } from "../components/Utilities/constants/routing";
@@ -81,6 +82,7 @@ const FILTER_COLUMNS = [
   "No Jail",
   "Unknown Jail",
   "Unknown Veteran",
+  "Couch"
 ];
 
 export default class CityTable extends Component {
@@ -288,9 +290,9 @@ export default class CityTable extends Component {
                   />
                   */}
                   <TableComponent4
-                    data={this.state.Tables[
+                    data={filterList(this.state.Tables[
                       router.activeYear + "/SubpopulationsByCity"
-                    ][this.state.cityChoice]["Living Situation"].sort(
+                    ][this.state.cityChoice]["Living Situation"],"subpopulation",FILTER_COLUMNS).sort(
                       (a, b) => {
                         return b.total - a.total;
                       }
@@ -318,7 +320,9 @@ export default class CityTable extends Component {
                       className="component-header"
                       style={{ marginBottom: 20 }}
                     >
-                      Percent of District
+                      Percent of District {this.state.Tables[
+                            router.activeYear + "/SubpopulationsByCity"
+                          ][this.state.cityChoice]["Individuals"][0].district}
                     </span>
                   </div>
 
@@ -373,14 +377,14 @@ export default class CityTable extends Component {
                 </div>
                 <div className="ct-center-r2">
                   <div>
-                    <PieChart2
-                      data={filterList(
+                    <PieChart2 
+                      data={pieDataManiTotal(filterList(
                         this.state.Tables[
                           router.activeYear + "/SubpopulationsByCity"
                         ][this.state.cityChoice]["Ethnicity"],
                         "subpopulation",
                         ["Total"]
-                      )}
+                      ))}
                       margin={{ bottom: 60, top: 30, right: 200, left: 60 }}
                     />
                     <div style={{ marginLeft: 310, marginTop: -50 }}>

@@ -2,7 +2,6 @@ import LineGraph from '../charts/LineGraph';
 import BarGraph from '../../components/TestingBranch/BarGraph'
 import BarChart from '../../components/reformatedCharts/BarChart'
 import PieChart2 from '../charts/PieChart2'
-import TableComponent2 from '../charts/TableComponent2'
 import TableComponent4 from '../charts/TableComponent4'
 import { Header, Table, Segment,Container,Grid, Label} from 'semantic-ui-react';
 import {pieDataManiTotal , pieDataManiInterview }  from '../Utilities/ChartDataManipulation/pieDataManipulation'
@@ -12,18 +11,15 @@ import '../css/dash.css';
 
 import {aggregateFetch, expandOnField} from '../../components/Utilities/ListManipulation/aggregateFetch'
 import {router} from '../../components/Utilities/constants/routing'
-import fetchTest from '../../components/Utilities/ListManipulation/fetchTest'
 
-import {filter, subset, filterList, NumberCreator} from '../../components/Utilities/ListManipulation/filter'
+import {orderSubs, filterList, NumberCreator} from '../../components/Utilities/ListManipulation/filter'
 import { changeVals2020 } from '../../components/Utilities/ListManipulation/changeValue'
-import {combine, combineCounts} from '../../components/Utilities/ListManipulation/combine'
-import { Bar } from '@nivo/bar';
 import NumberPercentage from "../Numbers/NumberPercentage";
 
 import Change from "../Numbers/Change";
 import TotalGeneral from "../Numbers/TotalGeneral";
-import { ContainerWidth } from "../chartTablesStyling/chartTablesStyling"
 
+import { genSubpopOrder } from './constants'
 
 const FILTER_COLUMNS = [
 'Total',
@@ -159,7 +155,7 @@ export default class Dashboard extends Component{
                 />  
               </Label>
               <TableComponent4
-                data={changeVals2020(filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS))}
+                data={orderSubs(changeVals2020(filterList(this.getOrderedTable(),"subpopulation", FILTER_COLUMNS)), genSubpopOrder, 3)}
                 expandIndex = {"_type"}
                 header = {true}
                 height = {"100%"}

@@ -108,3 +108,19 @@ export const NumberCreator = (data) => {
 
     return newDataObject
 }
+
+export function orderSubs( data, order, cols ){
+    let ordered = new Array(order.length*cols);
+    let k = 0;
+    for (let i = 0; i < order.length; i++){
+        for (let j = 0; j < data.length; j++){
+            if (data[j]["subpopulation"] === order[i]){
+                ordered[k] = data[j];
+                k++;
+            }
+        }
+    }
+    console.log(data)
+    console.log(ordered)
+    return ordered;
+}
