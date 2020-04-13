@@ -27,6 +27,7 @@ export const newlyHomelessStyling = {
     divHeight: "15em",
     sortByValue: true,
     header: "Gender",
+    percentage: 0.1
   },
   Subpopulations: {
     tableName: "Subpopulation Statistics",

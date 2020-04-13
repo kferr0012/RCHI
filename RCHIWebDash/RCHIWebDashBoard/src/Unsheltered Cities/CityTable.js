@@ -36,6 +36,7 @@ import {
   filterList,
 } from "../components/Utilities/ListManipulation/filter";
 import { changeVals2020 } from "../components/Utilities/ListManipulation/changeValue";
+import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { getOverflowOptions } from "antd/lib/tooltip/placements";
 
 import { router } from "../components/Utilities/constants/routing";
@@ -376,14 +377,14 @@ export default class CityTable extends Component {
                 </div>
                 <div className="ct-center-r2">
                   <div>
-                    <PieChart2
-                      data={filterList(
+                    <PieChart2 
+                      data={pieDataManiTotal(filterList(
                         this.state.Tables[
                           router.activeYear + "/SubpopulationsByCity"
                         ][this.state.cityChoice]["Ethnicity"],
                         "subpopulation",
                         ["Total"]
-                      )}
+                      ))}
                       margin={{ bottom: 60, top: 30, right: 200, left: 60 }}
                     />
                     <div style={{ marginLeft: 310, marginTop: -50 }}>

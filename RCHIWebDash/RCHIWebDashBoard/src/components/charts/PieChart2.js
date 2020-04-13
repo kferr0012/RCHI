@@ -1,6 +1,7 @@
 import React from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
+import { pieDataManiInterview } from '../Utilities/ChartDataManipulation/pieDataManipulation'
 
 import { colors } from '../Utilities/colors';
 
@@ -31,29 +32,11 @@ export default class PieChart2 extends React.Component {
     }
 
     render(){
-        //console.log("Pie Chart render")
-        
-        var mydata = JSON.parse(JSON.stringify(this.props.data))
-        for (var i = 0; i < mydata.length; i++) {
-            mydata[i].value = mydata[i].total
-            mydata[i].id = mydata[i].subpopulation
-            mydata[i].label = mydata[i].subpopulation
-            delete mydata[i].subpopulation;
-
-        }
-
-        //console.log("state data")
-        //console.log(this.state.mydata)
-
-        //console.log(mydata)
-
-
-
         return (
             <div style = {{height: '100%', width: '100%', position:'absolute'}}>
             {/* // <div style={{height:this.state.height, width: '100%'}}> */}
             <ResponsivePie
-                data={mydata}
+                data={this.props.data}
                 margin={this.props.margin}
                 padAngle={0}
                 cornerRadius={3}

@@ -46,16 +46,15 @@ export default class PercentageDistrict extends React.Component {
 
     runTotal(){
 
-        let i;
-        let totalValues = this.state.mydata;
-        for (i = 0; i < this.state.mydata.length; i++) {
-            this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation;
-            if(this.state.mydata[i].subpopulation === 'Total'){
-                this.state.number = this.state.mydata[i].value
+        const totalCount = this.state.mydata.reduce((acc, val) =>{
+            let {subpopulation, interview, observation} = val
+            if(subpopulation !="Total"){
+                return acc + interview + observation
             }
-        }
+            return acc
+        },0)
 
-        const percentage = ((this.state.number / 2155) * 100).toFixed(0)
+        const percentage = ((totalCount / 2155) * 100).toFixed(0)
 
         return (
             <div>
