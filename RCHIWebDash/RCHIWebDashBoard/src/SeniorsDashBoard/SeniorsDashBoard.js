@@ -222,7 +222,7 @@ export default class SeniorDashboardGrid extends Component{
                                 data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Subpopulations"],"subpopulation", FILTER_COLUMNS))}
                                 {...seniorsUnshelteredStyling["Subpopulations"]}
                                 percentage_flag = {1}
-                                individuals_row = {1}
+                                individuals_row = {null}
                             />
                         {/* </Segment> */}
                     </Grid.Column>
