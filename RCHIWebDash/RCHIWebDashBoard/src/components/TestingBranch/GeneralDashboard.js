@@ -221,7 +221,7 @@ export default class Dashboard extends Component{
                 </div>
               </div>
             </div>
-            <div className="col-md dash-col-big" >
+            <div className="col-md dash-col-big gen-sub-dash" >
               {/*<span className="component-header">Unsheltered Only Demographic</span> */}
               <div className="gen-grid-2">
               <div className = "gen-s-r" >

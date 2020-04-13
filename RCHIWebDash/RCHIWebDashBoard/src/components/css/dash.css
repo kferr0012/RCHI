@@ -370,3 +370,8 @@
   grid-column: 2 / span 1;
   grid-row: 2 / span 1
 }
+
+.gen-sub-dash {
+  /* border: .2rem solid #ddd; */
+  background-color: #dddddd55;
+}
