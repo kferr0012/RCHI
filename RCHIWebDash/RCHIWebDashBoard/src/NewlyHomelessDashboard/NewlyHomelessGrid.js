@@ -241,7 +241,7 @@ export default class NewlyHomelessGrid extends Component{
                                 data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS))}
                                 {...newlyHomelessStyling["Subpopulations"]}
                                 percentage_flag = {1}
-                                individuals_row = {1}
+                                individuals_row = {null}
                             />
                         {/* </Segment> */}
                     </Grid.Column>
