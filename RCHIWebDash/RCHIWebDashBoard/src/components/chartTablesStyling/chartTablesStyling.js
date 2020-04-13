@@ -180,7 +180,7 @@ export const unshelteredTrendsStyling = {
   "Substance Abuse": {
     header: "Substance Abuse",
     subHeader: "Interview Only",
-    footnote: "Before 2018, questions are not comparable.",
+    footnote: "Before 2019, questions are not comparable.",
     divHeight: "25em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -233,7 +233,7 @@ export const unshelteredSupervisoryDistrictStyling = {
   },
 
   "Volunteers By City": {
-    tableName: "Volunteers By City",
+    tableName: "Volunteers by Deployment Site",
     subHeader: "",
     tableHeight: "100%",
     divHeight: "15.0em",
