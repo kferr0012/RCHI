@@ -33,6 +33,10 @@ export default class PieChart2 extends React.Component {
     render(){
         //console.log("Pie Chart render")
         
+        const totalCount = this.props.data.reduce((acc, val) => acc + val.total,0)
+        console.log("Total COunt General Dashboard: ",  totalCount)
+
+
         var mydata = JSON.parse(JSON.stringify(this.props.data))
         for (var i = 0; i < mydata.length; i++) {
             mydata[i].value = mydata[i].total
