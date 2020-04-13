@@ -27,7 +27,7 @@ export const newlyHomelessStyling = {
     divHeight: "15em",
     sortByValue: true,
     header: "Gender",
-    percentage: 0.1
+    percentage: 0.1,
   },
   Subpopulations: {
     tableName: "Subpopulation Statistics",
@@ -223,7 +223,6 @@ export const unshelteredSupervisoryDistrictStyling = {
     divHeight: "30em",
   },
 
-
   "PIT Count By City": {
     tableName: "PIT Count By City",
     subHeader: "",
@@ -276,14 +275,14 @@ export const unshelteredCitiesStyling = {
   "Gender Table": {
     tableName: "Gender",
     tableHeight: "100%",
-    divHeight: "200%",
+    divHeight: "100%",
   },
 
   "Gender Chart": {
     indexBy: "subpopulation",
     keys: ["total"],
-    margin: { top: 50, right: 0, bottom: 50, left: -10 },
-    divHeight: "20em",
+    margin: { top: 0, right: 0, bottom: 40, left: -10 },
+    divHeight: "25em",
     header: "Gender",
     subHeader: "",
     // maxValue: 200,
