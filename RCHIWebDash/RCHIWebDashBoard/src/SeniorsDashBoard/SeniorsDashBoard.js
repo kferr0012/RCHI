@@ -47,7 +47,8 @@ const FILTER_COLUMNS = [
 "Not Chronically Homeless",
 "Unknown Veteran",
 "Chronically Homeless",
-"Couch"
+"Couch",
+"Individuals"
 
 ]
 
@@ -185,7 +186,7 @@ export default class SeniorDashboardGrid extends Component{
                             <br />
 
                                 <PieChart 
-                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Gender"],"subpopulation", ["Total"]))}
+                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Gender"],"subpopulation", ["Total","Unknown Gender", "Gender Non-Conforming", "Transgender"]))}
                                     {...seniorsUnshelteredStyling["Gender"]}
                                 />
                         {/* </Segment> */}
@@ -206,7 +207,7 @@ export default class SeniorDashboardGrid extends Component{
                     <Grid.Column width={12}>
                         <Segment>
                                 <BarChart 
-                                    data = {this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Race"]}
+                                    data = {filterList(this.state.Tables[router.activeYear + "/SeniorsSubpopulations"]["Race"],"subpopulation",["Total"])}
                                     {...seniorsUnshelteredStyling["Race"]}
                                 />
                             </Segment>

@@ -5,6 +5,7 @@ import PieChart2 from '../charts/PieChart2'
 import TableComponent2 from '../charts/TableComponent2'
 import TableComponent4 from '../charts/TableComponent4'
 import { Header, Table, Segment,Container,Grid, Label} from 'semantic-ui-react';
+import {pieDataManiTotal , pieDataManiInterview }  from '../Utilities/ChartDataManipulation/pieDataManipulation'
 
 import React, {Component} from 'react';
 import '../css/dash.css';
@@ -198,9 +199,10 @@ export default class Dashboard extends Component{
                   <div className="gen-r2c1">
                     {/* <div className="gen-r2c1r1"> */}
                       <p className="component-header">Gender</p>
-                      <PieChart2
-                        data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total", "Transgender", "Gender Non-Conforming"])}
+                      <PieChart2 
+                        data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total"]),0.1)}
                         margin = {{top: 50, bottom: 40, left: 30, right: 30}}
+                        percentageFilter = {0.25}
                       />
                     {/* </div>
                      <div className="gen-r2c1r2">
@@ -215,7 +217,7 @@ export default class Dashboard extends Component{
                     <p className="component-header">Ethnicity</p>
 
                     <PieChart2
-                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"])}
+                      data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"]),0.1)}
                       margin = {{top: 50, bottom: 40, left: 30, right: 30}}
                     />
 
@@ -318,9 +320,10 @@ export default class Dashboard extends Component{
                     <br/>
                     <span>Interview Only</span> */}
                     <PieChart2
-                      data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"])}
+                      data = {pieDataManiInterview(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"]),0.1)}
                       margin = {{top:0,bottom:0,left:30, right: 0}}
                       enableRadialLabels= {false}
+                      percentageFilter = {0.1}
                     />
                   </div>
                   <div className="gen-r2c1r2">

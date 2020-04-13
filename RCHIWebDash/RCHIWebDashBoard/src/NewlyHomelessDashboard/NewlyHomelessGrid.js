@@ -47,7 +47,8 @@ const FILTER_COLUMNS = [
 "Not Chronically Homeless",
 "Unknown Veteran",
 "Chronically Homeless",
-"Couch"
+"Couch",
+"Individuals"
 ]
 
 
@@ -188,7 +189,7 @@ export default class NewlyHomelessGrid extends Component{
                             <br />
 
                                 <PieChart 
-                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Gender"],"subpopulation", ["Total"]))}
+                                    data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Gender"],"subpopulation", ["Total"]),newlyHomelessStyling["Gender"].percentage)}
                                     {...newlyHomelessStyling["Gender"]}
                                 />
                         {/* </Segment> */}
@@ -209,7 +210,7 @@ export default class NewlyHomelessGrid extends Component{
                     <Grid.Column width={12}>
                         <Segment>
                                 <BarChart 
-                                    data = {this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Race"]}
+                                    data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Race"],"subpopulation",["Total"])}
                                     {...newlyHomelessStyling["Race"]}
                                 />
                             </Segment>
