@@ -119,6 +119,7 @@ export default class CityTables extends Component {
             var a = 0, curTot = 0, int = 0, obs = 0;
             if (Object.keys(this.state.data).length > 0)
             {
+                console.log("Current City: ", this.state.data[curCity], " city: ", curCity)
             // creates table row then pushes to table
                 for (var i = 0; i < 4; i++)
                 {

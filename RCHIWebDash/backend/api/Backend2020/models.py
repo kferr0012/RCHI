@@ -2,7 +2,7 @@ from django.db import models
 
 class HouseholdsByCityYearInterview2020(models.Model):
 	year = models.IntegerField()
-	district = models.IntegerField()
+	district = models.CharField(max_length=50)
 	city = models.CharField(max_length=50)
 	totalHouseholds = models.IntegerField()
 	adultsOnly = models.IntegerField()

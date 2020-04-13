@@ -488,5 +488,19 @@
         },
         "pk": 35,
         "model": "backend.HouseholdsByCityYearInterview2020"
+    },
+    {
+        "fields": {
+            "year": "2020",
+            "district": "1+2",
+            "city": "RIVERSIDE",
+            "totalHouseholds": 241,
+            "adultsOnly": 239,
+            "adultsAndChildren": 1,
+            "childrenOnly": 1,
+            "_type": "Unsheltered"
+        },
+        "pk": 36,
+        "model": "backend.HouseholdsByCityYearInterview2020"
     }
 ]

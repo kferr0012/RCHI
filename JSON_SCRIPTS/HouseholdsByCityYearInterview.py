@@ -40,6 +40,8 @@ df_d3 = df.loc[lambda df: df['DISTRICT'] == 3, :]
 df_d4 = df.loc[lambda df: df['DISTRICT'] == 4, :]
 df_d5 = df.loc[lambda df: df['DISTRICT'] == 5, :]
 
+df_d1_2 = df.loc[lambda df: (df['DISTRICT'] == 1) | (df['DISTRICT'] == 2) , :]
+
 cities_d1 = ['RIVERSIDE', 'LAKE ELSINORE', 'UNINCORPORATED DISTRICT 1', 'WILDOMAR',"CANYON LAKE"]
 cities_d2 = ['NORCO', 'CORONA', 'RIVERSIDE', 'JURUPA VALLEY', 'UNINCORPORATED DISTRICT 2',"EASTVALE"]
 cities_d3 = ['TEMECULA', 'UNINCORPORATED DISTRICT 3', 'MURRIETA', 'HEMET', 'SAN JACINTO']
@@ -191,7 +193,19 @@ for city in cities_d5:
     }
     })
 
-
+for city in ["RIVERSIDE"]:
+    cityTitle =  city
+    data.append({
+    "fields":  {
+        "year": year,
+        "district": "1+2",
+        "city": cityTitle,
+        "totalHouseholds": get_Total_Households_Interview(df_d1_2, city),
+        "adultsOnly": get_Total_Households_OnlyAdults(df_d1_2, city),
+        "adultsAndChildren":get_Total_Households_AdultsandChildren(df_d1_2, city),
+        "childrenOnly": get_Total_Households_OnlyChildren(df_d1_2, city),
+    }
+    })
 
 for x in jsonData:
     x['model'] = model
