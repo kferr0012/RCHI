@@ -54,11 +54,11 @@ export default class PercentageDistrict extends React.Component {
             return acc
         },0)
 
-        const percentage = ((totalCount / 2155) * 100).toFixed(0)
+        const percentage = ((totalCount / 2155) * 100)
 
         return (
             <div>
-                {percentage < 1 ? "<1" : percentage}%
+                {percentage < 1 && percentage != 0 ? "<1" : Math.round(percentage).toString() +"%"}
             </div>
         )
 
