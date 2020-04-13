@@ -114,9 +114,12 @@ export default class CityTables extends Component {
 
         for (var x = 0; x < this.state.curCities.length && Object.keys(this.state.households).length > 0; x++)
         {
+
+            var maxIntTot = 0
+            var maxObsTot = 0
             curCity= this.state.curCities[x];
             tableRow  = [];
-            var a = 0, curTot = 0, int = 0, obs = 0;
+            var a = 0, curTot = 0, int = 0, obs = 0 , supTot;
             if (Object.keys(this.state.data).length > 0)
             {
                 console.log("Current City: ", this.state.data[curCity], " city: ", curCity)
@@ -128,16 +131,23 @@ export default class CityTables extends Component {
                     curTot = (  parseInt(this.state.data[curCity][Catergories[i]]['Total']['Observation'])
                                 + parseInt(this.state.data[curCity][Catergories[i]]['Total']['Interview']));
 
+                    supTot = parseInt(this.state.data[curCity][Catergories[i]]['Total']['Interview'])
+
                     for (var j = 0; j < Titles[Catergories[i]].length; j++)
                     {
                         int = parseInt(this.state.data[curCity][Catergories[i]][Titles[Catergories[i]][j]]['Interview']);
                         obs = parseInt(this.state.data[curCity][Catergories[i]][Titles[Catergories[i]][j]]['Observation']);
 
+                        maxIntTot = Math.max(maxIntTot,int)
+                        maxObsTot = Math.max(maxObsTot,obs)
+
                         tableRow.push ( <td>{Titles[Catergories[i]][j]} </td>);
                         tableRow.push ( <td> {int} </td> );
                         tableRow.push ( <td> {obs} </td> );
                         tableRow.push ( <td> {int + obs} </td> );
-                        tableRow.push ( <td> { Math.round( ( int + obs  ) / ( curTot )  * 100 ).toString() + '%' } </td> );
+                        const percentage = ( int + obs  ) / ( curTot )  * 100
+                        tableRow.push(<td> {percentage < 1 && percentage != 0 ? '<1%' : Math.round(percentage).toString() + '%'} </td>)
+                        // tableRow.push ( <td> { Math.round( ( int + obs  ) / ( curTot )  * 100 ).toString() + '%' } </td> );
                         
                         if ( Titles[Catergories[i]][j] == 'Total')
                             table.push( <tr className="shaded"> {tableRow} </tr>);
@@ -151,7 +161,7 @@ export default class CityTables extends Component {
                     a+=1
                 }
                 tableRow = []
-                tableRow.push ( <th rowspan='53'> Subpopulations </th> );
+                tableRow.push ( <th rowspan='53'> Subpopulations <br/> <strong style={{fontSize: 8}}>Interview Only</strong> </th> );
 
                 var intTot = 0;
                 var obsTot = 0;
@@ -168,7 +178,8 @@ export default class CityTables extends Component {
                         tableRow.push ( <td> {int} </td> );
                         tableRow.push ( <td> {obs} </td> );
                         tableRow.push ( <td> {int + obs} </td> );
-                        tableRow.push ( <td> { Math.round( ( int + obs  ) / ( curTot )  * 100 ).toString() + '%' } </td> );
+                        const percentage = ( int + obs  ) / ( supTot )  * 100
+                        tableRow.push(<td> {percentage < 1 && percentage != 0 ? '<1%' : Math.round(percentage).toString() + '%'} </td>)
                         table.push( <tr> {tableRow } </tr>);
                         tableRow = []
                     }
@@ -192,7 +203,8 @@ export default class CityTables extends Component {
                 tableRow.push ( <td> {this.state.households[curCity]['Adults Only']} </td> );
                 tableRow.push ( <td> {0} </td> );
                 tableRow.push ( <td> {h1} </td> );
-                tableRow.push ( <td> {Math.round( ( h1 ) / ( intTotH )  * 100 ).toString() + '%'  } </td> );
+                var percentage = ( h1  ) / ( intTotH )  * 100
+                tableRow.push(<td> {percentage < 1 && percentage != 0 ? '<1%' : Math.round(percentage).toString() + '%'} </td>)
                 table.push( <tr> {tableRow} </tr>);
                 tableRow = []  
 
@@ -201,7 +213,8 @@ export default class CityTables extends Component {
                 tableRow.push ( <td> {this.state.households[curCity]['Children Only']} </td> );
                 tableRow.push ( <td> {0} </td> );
                 tableRow.push ( <td> {h2} </td> );
-                tableRow.push ( <td> {Math.round( ( h2 ) / ( intTotH )  * 100 ).toString() + '%'  } </td> );
+                percentage = ( h2  ) / ( intTotH )  * 100
+                tableRow.push(<td> {percentage < 1 && percentage != 0 ? '<1%' : Math.round(percentage).toString() + '%'} </td>)
                 table.push( <tr> {tableRow} </tr>);
                 tableRow = []  
 
@@ -210,7 +223,8 @@ export default class CityTables extends Component {
                 tableRow.push ( <td> {this.state.households[curCity]['Adults and Children']} </td> );
                 tableRow.push ( <td> {0} </td> );
                 tableRow.push ( <td> {h3} </td> );
-                tableRow.push ( <td> {Math.round( ( h3 ) / ( intTotH )  * 100 ).toString() + '%'  } </td> );
+                percentage = ( h3  ) / ( intTotH )  * 100
+                tableRow.push(<td> {percentage < 1 && percentage != 0 ? '<1%' : Math.round(percentage).toString() + '%'} </td>)
                 table.push( <tr> {tableRow} </tr>);
                 tableRow = []  
                 
@@ -223,9 +237,9 @@ export default class CityTables extends Component {
                 tableRow = []  
 
                 tableRow.push ( <th colspan="3"> Total Unsheltered Homeless Individuals</th> );
-                tableRow.push ( <td> {intTot} </td> );
-                tableRow.push ( <td> {obsTot} </td> );
-                tableRow.push ( <td> {intTot + obsTot} </td> );
+                tableRow.push ( <td> {maxIntTot} </td> );
+                tableRow.push ( <td> {maxObsTot} </td> );
+                tableRow.push ( <td> {maxIntTot + maxObsTot} </td> );
                 tableRow.push ( <td> {'100%' } </td> );
                 table.push( <tr className="shaded"> {tableRow} </tr>);
                 tableRow = []  
