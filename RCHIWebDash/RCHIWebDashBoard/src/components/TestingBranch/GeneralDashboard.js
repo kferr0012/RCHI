@@ -321,6 +321,7 @@ export default class Dashboard extends Component{
                       enableRadialLabels= {true}
                       percentageFilter = {0.1}
                       height = {"15em"}
+                      truncate = {true}
                     />
                   </div>
                   <div className="gen-r2c1r2">

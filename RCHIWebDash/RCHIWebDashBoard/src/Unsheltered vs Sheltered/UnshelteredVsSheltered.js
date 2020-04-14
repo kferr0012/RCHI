@@ -184,7 +184,7 @@ export default class UnsheleteredVsSheltered extends Component{
                 {<span className="component-header">Homeless Population Trend</span>}
                   <LineGraph 
                     margin = {{top: 40, right: 40, bottom: 60, left: 40 }}
-                    max = {2500}
+                    max = {4000}
                     tickValues = {4}
                     gridYValues = {4}
                   />
