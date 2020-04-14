@@ -25,6 +25,7 @@
     "react-select": "^2.4.3",
     "reactcss": "^1.2.3",
     "semantic-ui-react": "^0.87.3",
+    "truncate-html": "^1.0.3",
     "typescript": "^3.5.3"
   },
   "scripts": {
