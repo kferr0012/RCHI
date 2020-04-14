@@ -109,6 +109,7 @@ export default class LineGraph extends React.Component {
     this.setState({data: data});
   }
 
+
   render() {
     return (
       // TODO: make div size responsive to the page dimensions
@@ -118,7 +119,37 @@ export default class LineGraph extends React.Component {
           data={this.state.data}
           margin={this.props.margin ? this.props.margin : { top: 0, right: 30, bottom: 70, left: 40}}
           xScale={{ type: 'point' }}
-          yScale={{ type: 'linear', stacked: false, min: 0, max: this.state.max }}
+          yScale={{ type: 'linear', stacked: true, min: 0, max: this.state.max }}
+          enableSlices = "x"
+          sliceTooltip={({ slice }) => {
+            // const total = slice.points.reduce((acc, point)=> {
+            //   if(point.serieId !== "Volunteers"){
+            //     return acc + point.data.yFormatted
+            //   }
+            //   return acc
+            // },0)
+            return (
+                <div
+                    style={{
+                        background: 'white',
+                        padding: '9px 12px',
+                        border: '1px solid #ccc',
+                    }}
+                >
+                    <div><strong>Year:</strong> {slice.points[0].data.x}</div>
+                    {slice.points.map(point => (
+                        <div
+                            key={point.id}
+                            style={{
+                                color: point.serieColor,
+                                padding: '3px 0',
+                            }}
+                        >
+                            <strong>{point.serieId}</strong> [{point.data.yFormatted}]
+                        </div>
+                    ))}
+                </div>
+            )}}
           axisTop={null}
           axisRight={null}
           gridYValues={this.state.gridYValues}
@@ -131,17 +162,18 @@ export default class LineGraph extends React.Component {
               legendOffset: 36,
               legendPosition: 'middle'
           }}
-          axisLeft={{
-              orient: 'left',
-              tickSize: 5,
-              tickValues: this.state.tickValues,
-              tickPadding: 5,
-              tickRotation: 0,
-              legend: '',
-              legendOffset: -40,
-              legendPosition: 'middle'
+          // axisLeft={{
+          //     orient: 'left',
+          //     tickSize: 5,
+          //     tickValues: this.state.tickValues,
+          //     tickPadding: 5,
+          //     tickRotation: 0,
+          //     legend: '',
+          //     legendOffset: -40,
+          //     legendPosition: 'middle'
 
-          }}
+          // }}
+          axisLeft={null}
           colors={ colors[7] }
           lineWidth={2}
           pointSize={5}
@@ -149,7 +181,7 @@ export default class LineGraph extends React.Component {
           pointColor={{ from: 'color', modifiers: [] }}
           pointBorderWidth={2}
           pointBorderColor={{ from: 'serieColor' }}
-          pointLabel="y"
+          // pointLabel={function(e , i){ console.log("Line Graph: ", i) }}
           pointLabelYOffset={-12}
           enableArea={true}
           areaOpacity={0.65}

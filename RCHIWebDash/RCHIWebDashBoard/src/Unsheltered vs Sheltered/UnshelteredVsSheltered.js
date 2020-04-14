@@ -217,7 +217,7 @@ export default class UnsheleteredVsSheltered extends Component{
               margin = {{ top: 50, right: 30, bottom: 50, left: 50 }}
               tickValues={4}
               gridYValues={4}
-              maxValue={2000}
+              maxValue={4000}
               groupMode = {'stacked'}
               colors = { colors[9] }
             />

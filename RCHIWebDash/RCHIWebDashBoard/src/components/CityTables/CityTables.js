@@ -40,7 +40,15 @@ export default class CityTables extends Component {
         }
 
         this.setState({
-            selectOptions: options
+            selectOptions: options.sort((a,b) => {
+                if(a.label > b.label){
+                  return 1
+                }
+                if(b.label > a.label){
+                  return -1;
+                }
+                return 0
+              })
         })
     }
 

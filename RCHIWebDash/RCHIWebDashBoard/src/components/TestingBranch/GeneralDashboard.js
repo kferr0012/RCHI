@@ -166,7 +166,7 @@ export default class Dashboard extends Component{
               {<span className="component-header">Homeless Population Trend</span>}
               <LineGraph
                 margin = {{ top: 20, right: 30, bottom: 70, left :60}}
-                max = {2200}
+                max = {4000}
                 tickValues = {4}
                 gridYValues = {4}
               />
@@ -317,9 +317,10 @@ export default class Dashboard extends Component{
                     <span>Interview Only</span> */}
                     <PieChart2
                       data = {pieDataManiInterview(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulations"]["Living Situation"],"subpopulation", ["Couch"]),0.1)}
-                      margin = {{top:50,bottom:10,left:30, right: 0}}
-                      enableRadialLabels= {false}
+                      margin = {{top:80,bottom:10,left:30, right: 0}}
+                      enableRadialLabels= {true}
                       percentageFilter = {0.1}
+                      height = {"13.6em"}
                     />
                   </div>
                   <div className="gen-r2c1r2">

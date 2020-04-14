@@ -90,7 +90,7 @@ export default class CityTable extends Component {
     super(props);
 
     this.state = {
-      cityChoice: "RIVERSIDE", //set default city on first render
+      cityChoice: "BANNING", //set default city on first render
 
       urls: [
         router.host +
@@ -147,8 +147,15 @@ export default class CityTable extends Component {
 
       newData.push(newObject);
     }
-
-    return newData;
+    return newData.sort((a,b) => {
+      if(a.label > b.label){
+        return 1
+      }
+      if(b.label > a.label){
+        return -1;
+      }
+      return 0
+    });
   }
 
   reformatData(myTables) {
@@ -211,7 +218,7 @@ export default class CityTable extends Component {
       Tables: await this.reformatData(myTables),
       selectOptions: this.getOptions(
         Object.keys(myTables[router.activeYear + "/SubpopulationsByCity"])
-      ),
+      ).sort(),
       rendered: true,
     });
   }
@@ -253,7 +260,7 @@ export default class CityTable extends Component {
               <Select
                 options={this.state.selectOptions}
                 defaultValue={
-                  this.state.selectOptions[this.state.selectOptions.length - 1]
+                  this.state.selectOptions[0]
                 }
                 onChange={(value) => this.setCityChoice(value)}
               />
