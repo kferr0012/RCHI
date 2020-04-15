@@ -281,8 +281,8 @@ export const unshelteredCitiesStyling = {
   "Gender Chart": {
     indexBy: "subpopulation",
     keys: ["total"],
-    margin: { top: 0, right: 0, bottom: 40, left: -10 },
-    divHeight: "25em",
+    margin: { top: 30, right: 30, bottom: 50, left: 50 },
+    divHeight: "20em",
     header: "Gender",
     subHeader: "",
     // maxValue: 200,
@@ -306,8 +306,8 @@ export const unshelteredCitiesStyling = {
   "Race Chart": {
     indexBy: "subpopulation",
     keys: ["total"],
-    margin: { top: 50, right: 30, bottom: 50, left: 50 },
-    divHeight: "25em",
+    margin: { top: 30, right: 30, bottom: 50, left: 50 },
+    divHeight: "30em",
     header: "Race",
     subHeader: "",
     tickValues: 5,

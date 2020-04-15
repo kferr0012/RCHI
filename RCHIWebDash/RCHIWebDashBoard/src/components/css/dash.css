@@ -177,124 +177,30 @@
   grid-row: 2 / span 1;
 }
 
-.ct-grid-center {
-  display: grid;
-  position: relative;
-  grid-template: 1.15fr 1.85fr 2fr / 1fr;
-  height: 100%;
-}
-
-.ct-center-r1 {
-  display: grid;
-  position: relative;
-  grid-template: 1fr 1.5fr / 1fr 1fr 1fr;
-}
-
-.ct-center-r1r1 {
-  display: grid;
-  position: relative;
-  grid-template: 1fr / 1fr 1fr 1fr;
-}
-.ct-center-r1c1 {
-  display: flex;
-  position: relative;
-  grid-column: 1 / span 1;
-}
-
-.ct-center-r1c2 {
-  display: flex;
-  position: relative;
-  grid-column: 2 / span 1;
-}
-
-.ct-center-r1c3 {
-  display: flex;
-  position: relative;
-  grid-column: 3 / span 1;
-}
-
-.ct-center-r2 {
-  display: grid;
-  position: relative;
-  grid-template: 1fr / 1fr 1fr;
-}
-
-.ct-center-r2c1 {
-  display: flex;
-  position: relative;
-  grid-column: 1 / span 1;
-}
-
-.ct-center-r2c2 {
-  display: flex;
-  position: relative;
-  grid-column: 2 / span 1;
-}
-
-.ct-center-r3 {
-  display: flex;
-  position: relative;
-  grid-column: 1 / span 1;
-}
-
-.ct-grid-side {
-  display: grid;
-  position: relative;
-  grid-template: 0.6fr 1fr 100px 1fr/ 1fr;
-  height: 100%;
-}
-.ct-grid-side-left {
+.ct-grid {
   display: grid;
   position: relative;
   grid-template: 1.5fr 1fr/ 1fr;
   height: 100%;
 }
 
-.ct-side-r1 {
+.ct-r1 {
   display: flex;
   position: relative;
   grid-row: 1 / span 1;
 }
 
-.ct-side-r1-grid {
+.ct-r2 {
+  display: flex;
+  position: relative;
+  grid-row: 2 / span 1;
+}
+
+.ct-pie-r1 {
   display: grid;
   position: relative;
-  grid-template: 1fr 1fr / 1fr;
+  grid-template: 1fr / 1fr 1fr;
 }
-
-.ct-side-r1r1 {
-  display: flex;
-  position: relative;
-  grid-row: 1 / span 1;
-}
-
-.ct-side-r1r2 {
-  display: flex;
-  position: relative;
-  grid-row: 2 / span 1;
-}
-.ct-side-r1r3 {
-  display: flex;
-  position: relative;
-  grid-row: 3 / span 1;
-}
-.ct-side-r1r4 {
-  display: flex;
-  position: relative;
-  grid-row: 4 / span 1;
-}
-.ct-side-r2 {
-  display: flex;
-  position: relative;
-  grid-row: 2 / span 1;
-}
-
-.ct-side-r3 {
-  display: flex;
-  position: relative;
-  grid-row: 3 span 1;
-}
-
 .container {
   max-width: 80%;
 }
