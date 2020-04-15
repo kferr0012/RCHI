@@ -173,7 +173,7 @@ export default class CityTable extends Component {
           </div>
           <br/>
           <div className="row dash-row">
-            <div className="col-lg ct-col">
+            <div className="col-lg ct-number">
               <span className="component-header">
                 Total Unsheltered Individuals
               </span>
@@ -189,12 +189,12 @@ export default class CityTable extends Component {
                 />
               </span>
             </div>
-            <div className="col-lg ct-col">
+            <div className="col-lg ct-number">
               <span
                 className="component-header"
                 style={{ marginBottom: 20 }}
               >
-                Percent of District{" "}
+                Percent of <br/> District{" "}
                 {
                   Tables[
                     router.activeYear + "/SubpopulationsByCity"
@@ -213,7 +213,7 @@ export default class CityTable extends Component {
                 />
               </span>
             </div>
-            <div className="col-lg ct-col">
+            <div className="col-lg ct-number">
               <span className="component-header">
                 Chronically Homeless
               </span>
@@ -229,7 +229,7 @@ export default class CityTable extends Component {
                 />
               </span>
             </div>
-            <div className="col-lg ct-col">
+            <div className="col-lg ct-number">
               <span className="component-header">
                 Individuals Observed
               </span>
@@ -242,7 +242,7 @@ export default class CityTable extends Component {
                 }
               </span>
             </div>
-            <div className="col-lg ct-col">
+            <div className="col-lg ct-number">
               <span className="component-header">
                 Individuals Interviewed
               </span>

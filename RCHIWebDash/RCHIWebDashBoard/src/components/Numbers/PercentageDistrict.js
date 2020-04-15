@@ -58,7 +58,7 @@ export default class PercentageDistrict extends React.Component {
 
         return (
             <div>
-                {percentage < 1 && percentage != 0 ? "<1" : Math.round(percentage).toString() +"%"}
+                {percentage < 1 && percentage != 0 ? "<1%" : Math.round(percentage).toString() +"%"}
             </div>
         )
 
