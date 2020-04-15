@@ -9,7 +9,7 @@ import TrendPage1 from './PageLayout/LayoutPage1'
 import TrendPage2 from './PageLayout/LayoutPage2' 
 import TrendPage3 from './PageLayout/LayoutPage3' 
 
-import { unshelteredTrendsStyling, ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+import { unshelteredTrendsStyling, ContainerWidth } from '../components/Utilities/styling/chartTablesStyling'
 
 
 

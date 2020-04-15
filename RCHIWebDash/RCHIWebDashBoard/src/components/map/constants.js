@@ -1,4 +1,4 @@
-import { colors } from '../Utilities/colors';
+import { colors } from '../Utilities/styling/colors';
 import {router} from '../Utilities/constants/routing'
 export const countyColor = colors[1];
 

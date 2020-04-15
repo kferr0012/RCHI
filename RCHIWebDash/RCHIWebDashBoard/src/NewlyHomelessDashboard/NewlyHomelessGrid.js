@@ -13,7 +13,7 @@ import {filterList} from '../components/Utilities/ListManipulation/filter'
 import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
-import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '../components/chartTablesStyling/chartTablesStyling'
+import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '../components/Utilities/styling/chartTablesStyling'
 
 import Total from "../components/Numbers/Total";
 import PercentageDistrict from "../components/Numbers/PercentageDistrict";

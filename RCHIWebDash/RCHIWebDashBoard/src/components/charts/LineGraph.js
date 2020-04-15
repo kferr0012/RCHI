@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsiveLine } from '@nivo/line'
 
-import { colors } from '../Utilities/colors';
+import { colors } from '../Utilities/styling/colors';
 
 export default class LineGraph extends React.Component {
   constructor(props) {

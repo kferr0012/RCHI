@@ -20,7 +20,7 @@ import { pieDataManiTotal } from "../components/Utilities/ChartDataManipulation/
 import { router } from "../components/Utilities/constants/routing";
 
 // styling 
-import { unshelteredCitiesStyling } from "../components/chartTablesStyling/chartTablesStyling";
+import { unshelteredCitiesStyling } from "../components/Utilities/styling/chartTablesStyling";
 import "./DottedBox.css";
 import "../components/css/dash.css";
 

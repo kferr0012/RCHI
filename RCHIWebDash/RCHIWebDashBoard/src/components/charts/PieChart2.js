@@ -4,7 +4,7 @@ import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 import { pieDataManiInterview } from '../Utilities/ChartDataManipulation/pieDataManipulation'
 
-import { colors } from '../Utilities/colors';
+import { colors } from '../Utilities/styling/colors';
 
 export default class PieChart2 extends React.Component {
 

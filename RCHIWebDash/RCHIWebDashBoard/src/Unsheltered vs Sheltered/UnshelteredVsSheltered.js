@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { colors } from '../components/Utilities/colors.js';
+import { colors } from '../components/Utilities/styling/colors.js';
 import '../components/css/dash.css';
 
 import BarGraph from  '../components/TestingBranch/BarGraph'

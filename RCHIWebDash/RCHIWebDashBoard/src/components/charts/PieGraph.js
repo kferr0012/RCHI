@@ -2,7 +2,7 @@ import React from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 
-import { colors } from '../Utilities/colors';
+import { colors } from '../Utilities/styling/colors';
 
 export default class PieGraph extends React.Component {
 
