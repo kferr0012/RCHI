@@ -320,7 +320,7 @@ export default class Dashboard extends Component{
                       margin = {{top:80,bottom:10,left:30, right: 0}}
                       enableRadialLabels= {true}
                       percentageFilter = {0.1}
-                      height = {"15em"}
+                      height = {"11.8em"}
                       truncate = {true}
                     />
                   </div>
