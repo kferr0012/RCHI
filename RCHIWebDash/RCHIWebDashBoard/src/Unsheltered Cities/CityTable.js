@@ -183,9 +183,10 @@ export default class CityTable extends Component {
                   height={400}
                   url={
                     mainRoute +
-                    "/SubpopulationsByCity/?search=Age+" +
+                    "/SubpopulationsByCity/?search=Individuals+" +
                     cityChoice
                   }
+                  cityChoice ={cityChoice}
                 />
               </span>
             </div>
@@ -207,9 +208,19 @@ export default class CityTable extends Component {
                   height={400}
                   url={
                     mainRoute +
-                    "/SubpopulationsByCity/?search=Age+" +
+                    "/SubpopulationsByCity/?search=Individuals+" +
                     cityChoice
                   }
+
+                  districtUrl = {
+                    mainRoute +
+                    "/CityTotalByYear/?search=" +
+                    Tables[
+                      router.activeYear + "/SubpopulationsByCity"
+                    ][cityChoice]["Individuals"][0].district
+                  }
+                  activeYear = {router.activeYear}
+                  cityChoice = {cityChoice}
                 />
               </span>
             </div>

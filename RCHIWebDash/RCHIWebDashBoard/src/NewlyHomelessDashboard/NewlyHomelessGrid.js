@@ -196,8 +196,10 @@ export default class NewlyHomelessGrid extends Component{
                                         router.root +
                                         "/" +
                                         router.activeYear +
-                                        "/NewlyHomelessByCity/?search=Race"
+                                        "/NewlyHomelessByCity/?search=Individuals"
                                         }
+                                        cityChoice = {""}
+                                        dashboard = {"Newly Homeless"}
                                     />
                                 </div>
                             </div>
@@ -214,8 +216,20 @@ export default class NewlyHomelessGrid extends Component{
                                         router.root +
                                         "/" +
                                         router.activeYear +
-                                        "/NewlyHomelessByCity/?search=Race"
+                                        "/NewlyHomelessByCity/?search=Individuals"
                                         }
+
+                                        districtUrl = {
+                                            router.host +
+                                            "/" +
+                                            router.root +
+                                            "/" +
+                                            router.activeYear +
+                                                "/CityTotalByYear/"
+                                          }
+                                          activeYear = {router.activeYear}
+                                          cityChoice = {""}
+                                          dashboard = {"Newly Homeless"}
                                     />
                                 </div>
                             </div>

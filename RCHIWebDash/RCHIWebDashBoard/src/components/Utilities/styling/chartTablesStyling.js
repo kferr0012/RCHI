@@ -89,6 +89,9 @@ export const unshelteredTrendsStyling = {
   "Elderly (>62)": {
     header: "Elderly (≥62)",
     subHeader: "Interview Only",
+    footnote: [
+      "≥62 due to HUD definition",
+    ],
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
