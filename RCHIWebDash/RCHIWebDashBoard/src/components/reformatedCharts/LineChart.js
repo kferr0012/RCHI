@@ -5,7 +5,7 @@ import React from 'react'
 // import { colors } from '../colors';
 const LineChart = props => {
 
-    let {stacked, header , subHeader , divHeight, margin, tickValues , gridYValues, maxValue, data , legend ,colors} = props
+    let {slice ,stacked, header , subHeader , divHeight, margin, tickValues , gridYValues, maxValue, data , legend ,colors} = props
 
     return(
         <div style={{height:divHeight ? divHeight : "100%", width: '100%'}}>
@@ -18,8 +18,33 @@ const LineChart = props => {
                 margin={margin}
                 xScale={{ type: 'point' }}
                 yScale={{ type: 'linear', stacked: stacked ? stacked : false, min: 0, max: maxValue}}
+                enableSlices = "x"
+                sliceTooltip={({ slice }) => {
+                    return (
+                        <div
+                            style={{
+                                background: 'white',
+                                padding: '9px 12px',
+                                border: '1px solid #ccc',
+                            }}
+                        >
+                            <div><strong>Year:</strong> {slice.points[0].data.x}</div>
+                            {slice.points.map(point => (
+                                <div
+                                    key={point.id}
+                                    style={{
+                                        color: point.serieColor,
+                                        padding: '3px 0',
+                                    }}
+                                >
+                                    <strong>{point.serieId}</strong> [{point.data.yFormatted}]
+                                </div>
+                            ))}
+                        </div>
+                    )}}
+
                 axisTop={null}
-                axisRight={null}
+                axisRight={null} 
                 axisBottom={{
                     orient: 'bottom',
                     tickSize: 5,
@@ -29,7 +54,7 @@ const LineChart = props => {
                     legendOffset: 36,
                     legendPosition: 'middle'
                 }}
-                axisLeft={{
+                axisLeft={slice ? null :{
                     orient: 'left',
                     tickSize: 5,
                     tickPadding: 5,

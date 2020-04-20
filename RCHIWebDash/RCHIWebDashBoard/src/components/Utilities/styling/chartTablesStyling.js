@@ -111,6 +111,7 @@ export const unshelteredTrendsStyling = {
     maxValue: 600,
     stacked: true,
     legend: true,
+    slice: true
   },
 
   "Victim of Domestic Violence": {
