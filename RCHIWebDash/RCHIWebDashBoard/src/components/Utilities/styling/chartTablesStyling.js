@@ -108,10 +108,10 @@ export const unshelteredTrendsStyling = {
     colors: colors[7],
     tickValues: 5,
     gridYValues: 5,
-    maxValue: 600,
-    stacked: true,
+    maxValue: 300,
+    // stacked: true,
     legend: true,
-    slice: true
+    // slice: true
   },
 
   "Victim of Domestic Violence": {
