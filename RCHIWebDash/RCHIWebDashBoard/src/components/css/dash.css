@@ -22,6 +22,12 @@
   margin: 15px,15px;
 }
 
+.component-subheader {
+  /* position: relative; */
+  font-size: .7em;
+  color: grey;
+}
+
 .gen-grid {
   display: grid;
   position: relative;

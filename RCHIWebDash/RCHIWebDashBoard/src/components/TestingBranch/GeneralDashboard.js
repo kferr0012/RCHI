@@ -180,7 +180,9 @@ export default class Dashboard extends Component{
               <div className="gen-grid">
                 <div className="gen-r1">
                   <br/>
-                  <p className="component-header">Race</p>
+                  <p className="component-header">Race
+                    <p className="component-subheader">Total Count </p>
+                  </p>
                   <BarGraph
                     data = {filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Race"], "subpopulation", ["Total"])}
                     indexBy = "subpopulation"
@@ -194,7 +196,9 @@ export default class Dashboard extends Component{
                 <div className="gen-r2">
                   <div className="gen-r2c1">
                     {/* <div className="gen-r2c1r1"> */}
-                      <p className="component-header">Gender</p>
+                      <p className="component-header">Gender
+                        <p className="component-subheader">Total Count </p>
+                      </p>
                       <PieChart2 
                         data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Gender"],"subpopulation", ["Total"]),0.1)}
                         margin = {{top: 50, bottom: 40, left: 30, right: 30}}
@@ -210,7 +214,9 @@ export default class Dashboard extends Component{
                     </div> */}
                   </div>
                   <div className="gen-r2c2">
-                    <p className="component-header">Ethnicity</p>
+                    <p className="component-header">Ethnicity
+                      <p className="component-subheader">Total Count </p>
+                    </p>
 
                     <PieChart2
                       data = {pieDataManiTotal(filterList(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsTotalCounts"]["Ethnicity"],"subpopulation", ["Total"]),0.1)}
