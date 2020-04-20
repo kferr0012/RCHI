@@ -9,7 +9,7 @@ import PageLayout from './PageLayout/PageLayout'
 
 import {aggregateFetch, expandOnField } from './../components/Utilities/ListManipulation/aggregateFetch'
 import { router } from '../components/Utilities/constants/routing'
-import { ContainerWidth } from '../components/chartTablesStyling/chartTablesStyling'
+import { ContainerWidth } from '../components/Utilities/styling/chartTablesStyling'
 
 
 class UnshelteredSupervisoryDistricts extends Component{

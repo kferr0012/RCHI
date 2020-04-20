@@ -4,7 +4,7 @@ import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 import { pieDataManiInterview } from '../Utilities/ChartDataManipulation/pieDataManipulation'
 
-import { colors } from '../Utilities/colors';
+import { colors } from '../Utilities/styling/colors';
 
 export default class PieChart2 extends React.Component {
 
@@ -46,7 +46,7 @@ export default class PieChart2 extends React.Component {
                 borderWidth={1}
                 enableRadialLabels = {this.props.enableRadialLabels}
                 borderColor={{ from: 'color', modifiers: [ [ 'darker', 0.2 ] ] }}
-                radialLabel={d => this.props.truncate ? truncate(d.id,8) : d.id}
+                radialLabel={d => this.props.truncate ? truncate(d.id,7) : d.id}
                 radialLabelsSkipAngle={10}
                 radialLabelsTextXOffset={6}
                 radialLabelsTextColor="#333333"

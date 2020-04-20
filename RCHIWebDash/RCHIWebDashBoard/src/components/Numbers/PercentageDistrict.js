@@ -10,6 +10,7 @@ export default class PercentageDistrict extends React.Component {
             url : this.props.url,
             height : this.props.height,
             mydata : [],
+            districtCount: null,
             number: 0,
         }
 
@@ -34,6 +35,22 @@ export default class PercentageDistrict extends React.Component {
             .catch(err => {
 
             })
+
+
+        await fetch(this.props.districtUrl, {
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+            .then(response => response.json())
+            .then((data) =>{
+                this.setState({districtCount:data})
+            })
+            .catch(err => {
+
+            })
+        
     }
 
     async componentWillReceiveProps(){
@@ -47,14 +64,38 @@ export default class PercentageDistrict extends React.Component {
     runTotal(){
 
         const totalCount = this.state.mydata.reduce((acc, val) =>{
-            let {subpopulation, interview, observation} = val
-            if(subpopulation !="Total"){
-                return acc + interview + observation
+            let {city, total} = val
+            if(city === this.props.cityChoice){
+                return acc + total
             }
             return acc
         },0)
 
-        const percentage = ((totalCount / 2155) * 100)
+        var districtTotal = 0
+
+        if (this.state.districtCount !== null) {
+            districtTotal = this.state.districtCount.reduce((acc, val) => {
+                let { year, total, district } = val
+
+                if(year == this.props.activeYear){
+                    if(this.props.dashboard === "Seniors" || this.props.dashboard === "Newly Homeless"){
+                        if (district !== "1+2"){
+                            return acc + total
+                        }
+                    }
+                    else{
+                        return acc + total
+                    }
+                }
+                return acc
+            }, 0)
+        }
+
+        console.log("TOTAL COUNT: ", totalCount)
+        console.log("DISTRICT TOTAL: ", districtTotal)
+
+
+        const percentage = ((totalCount / districtTotal) * 100)
 
         return (
             <div>

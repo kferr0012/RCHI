@@ -4,7 +4,7 @@ import { ResponsiveBar } from '@nivo/bar';
 import BarChart from '../../components/reformatedCharts/BarChart'
 import { barByYearMani } from '../../components/Utilities/ChartDataManipulation/barDataManipulaton'
 
-import { colors } from    '../../components/Utilities/colors'
+import { colors } from    '../../components/Utilities/styling/colors'
 import {router} from '../../components/Utilities/constants/routing'
 
 //! Rewrite this script

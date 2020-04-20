@@ -20,7 +20,7 @@ import { pieDataManiTotal } from "../components/Utilities/ChartDataManipulation/
 import { router } from "../components/Utilities/constants/routing";
 
 // styling 
-import { unshelteredCitiesStyling } from "../components/chartTablesStyling/chartTablesStyling";
+import { unshelteredCitiesStyling } from "../components/Utilities/styling/chartTablesStyling";
 import "./DottedBox.css";
 import "../components/css/dash.css";
 
@@ -183,9 +183,10 @@ export default class CityTable extends Component {
                   height={400}
                   url={
                     mainRoute +
-                    "/SubpopulationsByCity/?search=Age+" +
+                    "/SubpopulationsByCity/?search=Individuals+" +
                     cityChoice
                   }
+                  cityChoice ={cityChoice}
                 />
               </span>
             </div>
@@ -207,9 +208,19 @@ export default class CityTable extends Component {
                   height={400}
                   url={
                     mainRoute +
-                    "/SubpopulationsByCity/?search=Age+" +
+                    "/SubpopulationsByCity/?search=Individuals+" +
                     cityChoice
                   }
+
+                  districtUrl = {
+                    mainRoute +
+                    "/CityTotalByYear/?search=" +
+                    Tables[
+                      router.activeYear + "/SubpopulationsByCity"
+                    ][cityChoice]["Individuals"][0].district
+                  }
+                  activeYear = {router.activeYear}
+                  cityChoice = {cityChoice}
                 />
               </span>
             </div>

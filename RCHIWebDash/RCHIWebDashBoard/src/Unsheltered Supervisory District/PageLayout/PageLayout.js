@@ -18,7 +18,7 @@ import TableComponent4 from "../../components/charts/TableComponent4";
 
 import { router } from "../../components/Utilities/constants/routing";
 
-import { unshelteredSupervisoryDistrictStyling } from "../../components/chartTablesStyling/chartTablesStyling";
+import { unshelteredSupervisoryDistrictStyling } from "../../components/Utilities/styling/chartTablesStyling";
 
 const filteredTableList = [
   "Families with Children",

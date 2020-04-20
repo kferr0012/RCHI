@@ -1558,5 +1558,18 @@
         },
         "pk": 120,
         "model": "backend.CityTotalsByYear2020"
+    },
+    {
+        "fields": {
+            "year": "2020",
+            "district": "1+2",
+            "sheltered": "False",
+            "city": "Riverside",
+            "total": "946",
+            "volunteers": "",
+            "_type": "Unsheltered"
+        },
+        "pk": 121,
+        "model": "backend.CityTotalsByYear2020"
     }
 ]

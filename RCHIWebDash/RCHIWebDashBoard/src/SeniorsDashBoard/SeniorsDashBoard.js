@@ -12,7 +12,7 @@ import {filterList} from '../components/Utilities/ListManipulation/filter'
 import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
-import { seniorsUnshelteredStyling ,  ContainerWidth} from '../components/chartTablesStyling/chartTablesStyling'
+import { seniorsUnshelteredStyling ,  ContainerWidth} from '../components/Utilities/styling/chartTablesStyling'
 import Total from "../components/Numbers/Total";
 import PercentageDistrict from "../components/Numbers/PercentageDistrict";
 
@@ -83,6 +83,7 @@ export default class SeniorDashboardGrid extends Component{
                 <Header size="huge"  textAlign='center'>
                     Unsheltered - Newly Homeless
                     <h3><b>Interview Only</b></h3>
+                    <h6><i>60+ due program eligibility criteria</i></h6>
                     <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
@@ -151,6 +152,7 @@ export default class SeniorDashboardGrid extends Component{
                 <Header as='h1'  textAlign='center'>
                      Unsheltered - Seniors 60+
                     <h3><b>Interview Only</b></h3>
+                    <h6><i>60+ due to program eligibility criteria</i></h6>
                 <Header sub> 2020 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
@@ -181,8 +183,10 @@ export default class SeniorDashboardGrid extends Component{
                                         router.root +
                                         "/" +
                                         router.activeYear +
-                                        "/SeniorsSubpopulations/?search=Race"
+                                        "/SeniorsSubpopulations/?search=Individuals"
                                         }
+
+                                        cityChoice = {""}
                                     />
                                 </div>
                             </div>
@@ -199,8 +203,19 @@ export default class SeniorDashboardGrid extends Component{
                                         router.root +
                                         "/" +
                                         router.activeYear +
-                                        "/SeniorsSubpopulations/?search=Race"
+                                        "/SeniorsSubpopulations/?search=Individuals"
                                         }
+
+                                        districtUrl = {
+                                            router.host +
+                                            "/" +
+                                            router.root +
+                                            "/" +
+                                            router.activeYear +
+                                                "/CityTotalByYear/"
+                                          }
+                                          activeYear = {router.activeYear}
+                                          dashboard = {"Seniors"}
                                     />
                                 </div>
                             </div>

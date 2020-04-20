@@ -9,7 +9,7 @@ import Cities from './json/Cities.json'
 import County from './json/County.json'
 
 import { remove, subset } from '../Utilities/ListManipulation/filter'
-import { colors } from '../Utilities/colors'
+import { colors } from '../Utilities/styling/colors'
 import { countyColor, backgroundStroke, lat, lng, subPopLink, cityNames, raceCategories, genderCategories, defaultZoom  } from './constants';
 import CategoryBar from './CategoryBar'
 

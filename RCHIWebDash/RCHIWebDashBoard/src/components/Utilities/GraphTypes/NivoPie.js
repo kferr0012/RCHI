@@ -3,7 +3,7 @@ import { ResponsivePie } from '@nivo/pie'
 import {Header} from 'semantic-ui-react'
 import { isAbsolute } from 'path'
 
-import { colors } from '../colors';
+import { colors } from '../styling/colors';
 
 const NivoResponsivePie = ({data,header, subHeader, height}) => (
     <div style={{height:height ? (height) : "20em", width:'100%'}}>

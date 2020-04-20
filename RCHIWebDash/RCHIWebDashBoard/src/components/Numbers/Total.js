@@ -46,19 +46,26 @@ export default class Total extends React.Component {
 
     runTotal(){
 
-        let i;
-        let totalValues = this.state.mydata;
-        for (i = 0; i < this.state.mydata.length; i++) {
-            this.state.mydata[i].value = this.state.mydata[i].interview + this.state.mydata[i].observation;
-            if(this.state.mydata[i].subpopulation === 'Total'){
-                this.state.number = this.state.mydata[i].value
-            }
+        var totalCount = 0
 
-
+        if(this.props.cityChoice !== ""){
+            totalCount = this.state.mydata.reduce((acc, val) =>{
+                let {city, total} = val
+                if(city === this.props.cityChoice){
+                    return acc + total
+                }
+                return acc
+            },0)
+        }
+        else{
+            totalCount = this.state.mydata.reduce((acc, val) =>{
+                let {total} = val
+                return acc + total
+            },0)
         }
 
         return (
-            this.state.number
+            totalCount
         )
 
 

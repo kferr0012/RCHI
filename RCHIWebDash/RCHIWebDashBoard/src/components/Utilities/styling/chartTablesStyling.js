@@ -1,4 +1,4 @@
-import { colors } from "../Utilities/colors";
+import { colors } from "./colors";
 
 export const ContainerWidth = "80%";
 
@@ -89,6 +89,9 @@ export const unshelteredTrendsStyling = {
   "Elderly (>62)": {
     header: "Elderly (≥62)",
     subHeader: "Interview Only",
+    footnote: [
+      "≥62 due to HUD definition",
+    ],
     divHeight: "30em",
     margin: { top: 20, right: 20, bottom: 80, left: 30 },
     colors: colors[7],
@@ -108,6 +111,7 @@ export const unshelteredTrendsStyling = {
     maxValue: 600,
     stacked: true,
     legend: true,
+    slice: true
   },
 
   "Victim of Domestic Violence": {

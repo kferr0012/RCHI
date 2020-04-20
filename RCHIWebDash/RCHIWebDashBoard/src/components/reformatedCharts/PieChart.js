@@ -2,7 +2,7 @@ import React,  {useState} from 'react';
 import {ResponsivePie} from "@nivo/pie";
 import {Header} from 'semantic-ui-react'
 
-import { colors } from '../Utilities/colors';
+import { colors } from '../Utilities/styling/colors';
 
 const PieChart = props => {
     let {data, margin,sortByValue, innerRadius, padAngle, cornerRadius ,legends, divHeight, header, subHeader} = props

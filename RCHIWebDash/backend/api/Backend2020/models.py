@@ -41,7 +41,7 @@ class VolunteerDeployment2020(models.Model):
 
 class CityTotalsByYear2020(models.Model):
 	year = models.IntegerField()
-	district = models.IntegerField()
+	district = models.CharField(max_length=50)
 	sheltered = models.BooleanField(default=False)
 	city = models.CharField(max_length=100)
 	total = models.IntegerField()

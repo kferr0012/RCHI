@@ -13,7 +13,7 @@ import {filterList} from '../components/Utilities/ListManipulation/filter'
 import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue'
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation'
 import { router } from '../components/Utilities/constants/routing';
-import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '../components/chartTablesStyling/chartTablesStyling'
+import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '../components/Utilities/styling/chartTablesStyling'
 
 import Total from "../components/Numbers/Total";
 import PercentageDistrict from "../components/Numbers/PercentageDistrict";
@@ -196,8 +196,10 @@ export default class NewlyHomelessGrid extends Component{
                                         router.root +
                                         "/" +
                                         router.activeYear +
-                                        "/NewlyHomelessByCity/?search=Race"
+                                        "/NewlyHomelessByCity/?search=Individuals"
                                         }
+                                        cityChoice = {""}
+                                        dashboard = {"Newly Homeless"}
                                     />
                                 </div>
                             </div>
@@ -214,8 +216,20 @@ export default class NewlyHomelessGrid extends Component{
                                         router.root +
                                         "/" +
                                         router.activeYear +
-                                        "/NewlyHomelessByCity/?search=Race"
+                                        "/NewlyHomelessByCity/?search=Individuals"
                                         }
+
+                                        districtUrl = {
+                                            router.host +
+                                            "/" +
+                                            router.root +
+                                            "/" +
+                                            router.activeYear +
+                                                "/CityTotalByYear/"
+                                          }
+                                          activeYear = {router.activeYear}
+                                          cityChoice = {""}
+                                          dashboard = {"Newly Homeless"}
                                     />
                                 </div>
                             </div>
