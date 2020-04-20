@@ -22,7 +22,7 @@ class PitCountByCity extends Component{
     axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+this.props.query)
       .then(response=>{
 
-        const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 2)
+        const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 2 && index.city !== "Riverside")
 
         const formatData = filterData.map( value => {
           let {year, city, total} = value

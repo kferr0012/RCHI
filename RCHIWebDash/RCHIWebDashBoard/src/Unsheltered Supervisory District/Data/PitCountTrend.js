@@ -17,7 +17,7 @@ class PitCountTrend extends Component {
         axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+ this.props.query) 
             .then(response => {
                 
-                const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 5)
+                const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 5 && index.city !== "Riverside")
                 const completeData = pitCountTrendMani(filterData, "District " +  this.props.clickedDistrict)
                 this.setState({
                     chartData: completeData,
