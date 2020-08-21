@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import { router } from "../components/Utilities/constants/routing";
 
 import GeneralDash from "./DemoDashboards/GeneralDash";
 import VeteranDash from "./DemoDashboards/VeteranDash";
@@ -15,6 +16,7 @@ import UnshelteredSubpopulationTrends from "../Unsheltered Trends/UnshelteredSub
 import UnsheleteredSupervisoryDistricts from "../Unsheltered Supervisory District/UnshelteredSupervisoryDistricts";
 import LLMap from "./map/map";
 import GeneralDashboard from "../components/TestingBranch/GeneralDashboard";
+import GeneralDashboard2 from "../components/TestingBranch/GeneralDashboard2";
 
 import APITest from "./APITests/ApiTest";
 
@@ -26,9 +28,8 @@ import errorPage from "./404Page";
 
 import UnsheleteredVsSheltered from "../Unsheltered vs Sheltered/UnshelteredVsSheltered";
 import NewlyHomelessGrid from "../NewlyHomelessDashboard/NewlyHomelessGrid";
-import { router } from "../components/Utilities/constants/routing";
+import NewlyHomelessGrid2 from "../NewlyHomelessDashboard/NewlyHomeless2";
 
-//import { aggregateFetchbyConstants } from './Utilities/ListManipulation/aggregateFetch';
 
 export default class Content extends Component {
   constructor() {
@@ -61,7 +62,16 @@ export default class Content extends Component {
                   <GeneralTable router={router} Tables={this.state.Tables} />
                 )}
               />
-
+              <Route
+                exact
+                path="/Gen"
+                component={() => (
+                  <GeneralDashboard2
+                    router={router}
+                    Tables={this.state.Tables}
+                  />
+                )}
+              />
               <Route
                 exact
                 path="/GeneralTable"
@@ -89,6 +99,13 @@ export default class Content extends Component {
                   />
                 )}
               />
+              <Route
+              exact path='/NewlyHomeless2'
+              component={()=> (
+                <NewlyHomelessGrid2
+                router={router}
+                Tables={this.state.Tables}/>
+              )}/>
               <Route
                 exact
                 path="/SeniorsDashBoard"
@@ -201,6 +218,7 @@ export default class Content extends Component {
                   />
                 )}
               />
+            
               <Route
                 exact
                 path="/Sandbox"

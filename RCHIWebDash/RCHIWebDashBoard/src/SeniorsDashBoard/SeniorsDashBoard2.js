@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { aggregateFetch } from '../components/Utilities/ListManipulation/aggregateFetch';
 import Card from '@material-ui/core/Card';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import '../components/css/dash.css';
 import TableComponent4 from '../components/charts/TableComponent4';
 import BarChart from '../components/reformatedCharts/BarChart';
 import PieChart from '../components/reformatedCharts/PieChart';
 
-import { Header, Segment } from 'semantic-ui-react';
-// import { Header, Segment, Container } from 'semantic-ui-react';
+import { Header, Segment, Container } from 'semantic-ui-react';
 import { filterList } from '../components/Utilities/ListManipulation/filter';
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation';
 import { router } from '../components/Utilities/constants/routing';
@@ -85,15 +83,15 @@ export default class SeniorsDashBoard2 extends Component {
   title() {
     // Page banner
     return (
-      <div style={{width:'100%'}}>
+      <div style={{ width: '100%' }}>
         <Segment>
           <Header as='h1' textAlign='center'>
             Unsheltered - Seniors 60+
             <h3>
-              <strong>Interview Only</strong>
+              <b>Interview Only</b>
             </h3>
             <h6>
-              <em>60+ due to program eligibility criteria</em>
+              <i>60+ due to program eligibility criteria</i>
             </h6>
             <Header sub> 2020 Riverside County Pit Count</Header>
           </Header>
@@ -129,14 +127,11 @@ export default class SeniorsDashBoard2 extends Component {
     );
     return (
       <div className='container'>
+        {this.title()}
+        {/* <Container style={{ width: ContainerWidth }}> */}
         <Grid container spacing={3}>
-          <Grid container item xs={12}>
-            {this.title()}
-          </Grid>
           <Grid container item xs={4}>
             {/* Living Situation Table, sorted by highest to lowest count */}
-            <Grid container item xs={12}>
-
             <div className='seniorTable'>
               <TableComponent4
                 data={filterList(
@@ -149,16 +144,15 @@ export default class SeniorsDashBoard2 extends Component {
                 {...seniorsUnshelteredStyling['Living Situation']}
               />
             </div>
-            </Grid>
           </Grid>
 
           <Grid container item xs={4}>
             {/* Number of Total Unsheltered */}
             <Grid container item xs={6} className='seniorNumbers'>
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <span className='component-header'>Total Unsheltered</span>
               </Grid>
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <span className='component-header'>
                   <Total
                     url={`${router.host}/${router.root}/${router.activeYear}/SeniorsSubpopulations/?search=Individuals`}
@@ -170,12 +164,12 @@ export default class SeniorsDashBoard2 extends Component {
             </Grid>
             {/* Percent of Unsheltered are Seniors*/}
             <Grid container item xs={6} className='seniorNumbers'>
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <span className='component-header'>
                   Percentage of Unsheltered
                 </span>
               </Grid>
-              <Grid item xs={12}>
+              <Grid container item xs={12}>
                 <span className='component-header'>
                   <PercentageDistrict
                     url={`${router.host}/${router.root}/${router.activeYear}/SeniorsSubpopulations/?search=Individuals`}
@@ -186,7 +180,7 @@ export default class SeniorsDashBoard2 extends Component {
                 </span>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
+            <Grid container item xs={12}>
               {/* Ethnicity Pie Chart  */}
               <PieChart
                 data={pieDataManiTotal(
@@ -201,7 +195,7 @@ export default class SeniorsDashBoard2 extends Component {
                 {...seniorsUnshelteredStyling['Ethnicity']}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid container item xs={12}>
               {/* Gender Pie Chart */}
               <PieChart
                 data={pieDataManiTotal(
@@ -251,11 +245,9 @@ export default class SeniorsDashBoard2 extends Component {
               />
             </Card>
           </Grid>
+
           <Grid container item xs={3}>
-            <Card
-              variant='outlined'
-              style={{ width: '100%' }}
-              className='seniorTable'>
+            <Card style={{ width: '100%' }} className='seniorTable'>
               {/* Household Composition table sorted from highest to least counts */}
               <TableComponent4
                 data={filterList(
@@ -270,21 +262,12 @@ export default class SeniorsDashBoard2 extends Component {
             </Card>
           </Grid>
         </Grid>
+        {/* </Container> */}
       </div>
     );
   }
 
   render() {
-    return (
-      <div>
-        {this.state.rendered ? (
-          this.dashboard()
-        ) : (
-          <div>
-            <div class='lds-ring'></div>
-          </div>
-        )}
-      </div>
-    );
+    return <div>{this.state.rendered ? this.dashboard() : <div></div>}</div>;
   }
 }

@@ -1,5 +1,4 @@
 // filters a single dataArray
-
 function contains(dataRow, category, valueList){
     for (var i = 0 ;  i< valueList.length;i++){
         if(dataRow[category] == valueList[i]){
@@ -22,8 +21,13 @@ export function filter ( data, catergory, value ) {
     return newData;
 }
 
+/**
+ * @param {Object} data - data to be filtered
+ * @param {string} category - the column name to look at when filtering
+ * @param {Object} valueList - list of column names that should be filtered out from data
+ * @returns {Object} data without rows specified by valueList
+ */
 export function filterList (data, category, valueList){
-    
     
     var newData = []
 

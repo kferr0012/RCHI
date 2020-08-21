@@ -292,3 +292,32 @@
   /* border: .2rem solid #ddd; */
   background-color: #dddddd55;
 }
+
+
+.seniorTable{
+  width:100%;
+  margin: 5px;
+  padding:10px
+}
+
+.seniorNumbers{
+  padding-top: 5%;
+}
+
+.grey-box {
+  background-color: #dddddd55;
+  padding: 2%  0 2% 0;
+}
+
+.change-label {
+  background-color: #e8e8e8;
+  width: 30%;
+  margin-bottom: 5px;
+}
+
+.homeless-population-trend {
+  /* padding: 10px; */
+  height: 100%;
+  width: 100%;
+  position: relative;
+}

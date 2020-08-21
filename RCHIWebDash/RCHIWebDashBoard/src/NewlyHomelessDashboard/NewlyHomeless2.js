@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { aggregateFetch } from '../components/Utilities/ListManipulation/aggregateFetch';
-import Card from '@material-ui/core/Card';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
 import '../components/css/dash.css';
 import TableComponent4 from '../components/charts/TableComponent4';
+import PieChart2 from '../components/charts/PieChart2';
+import BarGraph from '../components/TestingBranch/BarGraph';
 import BarChart from '../components/reformatedCharts/BarChart';
 import PieChart from '../components/reformatedCharts/PieChart';
-
 import { Header, Segment } from 'semantic-ui-react';
-// import { Header, Segment, Container } from 'semantic-ui-react';
+import { Card, Container, Grid } from '@material-ui/core';
 import { filterList } from '../components/Utilities/ListManipulation/filter';
+import { changeVals2020 } from '../components/Utilities/ListManipulation/changeValue';
 import { pieDataManiTotal } from '../components/Utilities/ChartDataManipulation/pieDataManipulation';
 import { router } from '../components/Utilities/constants/routing';
 import {
-  seniorsUnshelteredStyling,
-  ContainerWidth
+  newlyHomelessStyling,
+  ContainerWidth,
+  seniorsUnshelteredStyling
 } from '../components/Utilities/styling/chartTablesStyling';
+
 import Total from '../components/Numbers/Total';
 import PercentageDistrict from '../components/Numbers/PercentageDistrict';
 
@@ -55,19 +56,12 @@ const FILTER_COLUMNS = [
   'Individuals'
 ];
 
-const FILTER_GENDERS = [
-  'Total',
-  'Gender Non-Conforming',
-  'Unknown Gender',
-  'Transgender'
-];
-
-export default class SeniorsDashBoard2 extends Component {
+export default class NewlyHomelessGrid2 extends Component {
   constructor() {
     super();
     this.state = {
       urls: [
-        `${router.host}/${router.root}/${router.activeYear}/SeniorsSubpopulations/`
+        `${router.host}/${router.root}/${router.activeYear}/NewlyHomelessByCity/`
       ],
       rendered: false,
       Tables: []
@@ -83,17 +77,17 @@ export default class SeniorsDashBoard2 extends Component {
   }
 
   title() {
-    // Page banner
+    // Page Banner
     return (
-      <div style={{width:'100%'}}>
+      <div style={{ width: '100%' }}>
         <Segment>
           <Header as='h1' textAlign='center'>
-            Unsheltered - Seniors 60+
+            Unsheltered - Newly Homeless
             <h3>
               <strong>Interview Only</strong>
             </h3>
             <h6>
-              <em>60+ due to program eligibility criteria</em>
+              <em>First time homeless within 12 months</em>
             </h6>
             <Header sub> 2020 Riverside County Pit Count</Header>
           </Header>
@@ -103,52 +97,47 @@ export default class SeniorsDashBoard2 extends Component {
   }
 
   dashboard() {
-    console.log(
-      'Seniors Subpop Living situation',
-      this.state.Tables[`${router.activeYear}/SeniorsSubpopulations`]
-    );
-    console.log(
-      'Filtered Seniors Subpop Living situation',
-      filterList(
-        this.state.Tables[`${router.activeYear}/SeniorsSubpopulations`][
-          'Living Situation'
-        ],
-        'subpopulation',
-        FILTER_COLUMNS
-      )
-    );
-    console.log(
-      'Filtered Seniors Subpop Living situation',
-      filterList(
-        this.state.Tables[`${router.activeYear}/SeniorsSubpopulations`][
-          'Living Situation'
-        ],
-        'category',
-        FILTER_COLUMNS
-      )
-    );
     return (
       <div className='container'>
         <Grid container spacing={3}>
           <Grid container item xs={12}>
+            {/* Title */}
             {this.title()}
           </Grid>
-          <Grid container item xs={4}>
-            {/* Living Situation Table, sorted by highest to lowest count */}
-            <Grid container item xs={12}>
 
-            <div className='seniorTable'>
+          <Grid container xs={4}>
+            {/* Age Table, sorted and showing percentage */}
+            <Grid item xs={12}>
+              <TableComponent4
+                data={changeVals2020(
+                  filterList(
+                    this.state.Tables[
+                      `${router.activeYear}/NewlyHomelessByCity`
+                    ]['Age'],
+                    'subpopulation',
+                    FILTER_COLUMNS
+                  )
+                ).sort((a, b) => b.total - a.total)}
+                percentage_flag={1}
+                tableName='Age'
+                height='120%'
+                {...newlyHomelessStyling['Age']}
+              />
+            </Grid>
+
+            {/* Living Situation Table, sorted and showing percentage */}
+            <Grid item xs={12}>
               <TableComponent4
                 data={filterList(
-                  this.state.Tables[
-                    `${router.activeYear}/SeniorsSubpopulations`
-                  ]['Living Situation'],
+                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                    'Living Situation'
+                  ],
                   'subpopulation',
                   FILTER_COLUMNS
                 ).sort((a, b) => b.total - a.total)}
-                {...seniorsUnshelteredStyling['Living Situation']}
+                percentage_flag={1}
+                {...newlyHomelessStyling['Living Situation']}
               />
-            </div>
             </Grid>
           </Grid>
 
@@ -161,7 +150,7 @@ export default class SeniorsDashBoard2 extends Component {
               <Grid item xs={12}>
                 <span className='component-header'>
                   <Total
-                    url={`${router.host}/${router.root}/${router.activeYear}/SeniorsSubpopulations/?search=Individuals`}
+                    url={`${router.host}/${router.root}/${router.activeYear}/NewlyHomelessByCity/?search=Individuals`}
                     cityChoice={''}
                     height={400}
                   />
@@ -169,7 +158,7 @@ export default class SeniorsDashBoard2 extends Component {
               </Grid>
             </Grid>
             {/* Percent of Unsheltered are Seniors*/}
-            <Grid container item xs={6} className='seniorNumbers'>
+            <Grid container item xs={6}>
               <Grid item xs={12}>
                 <span className='component-header'>
                   Percentage of Unsheltered
@@ -178,10 +167,11 @@ export default class SeniorsDashBoard2 extends Component {
               <Grid item xs={12}>
                 <span className='component-header'>
                   <PercentageDistrict
-                    url={`${router.host}/${router.root}/${router.activeYear}/SeniorsSubpopulations/?search=Individuals`}
+                    url={`${router.host}/${router.root}/${router.activeYear}/NewlyHomelessByCity/?search=Individuals`}
                     districtUrl={`${router.host}/${router.root}/${router.activeYear}/CityTotalByYear/`}
                     activeYear={router.activeYear}
-                    dashboard={'Seniors'}
+                    cityChoice={''}
+                    dashboard={'Newly Homeless'}
                   />
                 </span>
               </Grid>
@@ -192,13 +182,13 @@ export default class SeniorsDashBoard2 extends Component {
                 data={pieDataManiTotal(
                   filterList(
                     this.state.Tables[
-                      `${router.activeYear}/SeniorsSubpopulations`
+                      `${router.activeYear}/NewlyHomelessByCity`
                     ]['Ethnicity'],
                     'subpopulation',
                     ['Total']
                   )
                 )}
-                {...seniorsUnshelteredStyling['Ethnicity']}
+                {...newlyHomelessStyling['Ethnicity']}
               />
             </Grid>
             <Grid item xs={12}>
@@ -207,65 +197,69 @@ export default class SeniorsDashBoard2 extends Component {
                 data={pieDataManiTotal(
                   filterList(
                     this.state.Tables[
-                      `${router.activeYear}/SeniorsSubpopulations`
+                      `${router.activeYear}/NewlyHomelessByCity`
                     ]['Gender'],
                     'subpopulation',
-                    FILTER_GENDERS
-                  )
+                    ['Total']
+                  ),
+                  newlyHomelessStyling['Gender'].percentage
                 )}
-                {...seniorsUnshelteredStyling['Gender']}
+                {...newlyHomelessStyling['Gender']}
               />
             </Grid>
           </Grid>
+
           <Grid container item xs={4}>
-            {/*  Subpopulation Statistics Table with percentage shown*/}
-            <div className='seniorTable'>
-              <TableComponent4
-                data={filterList(
-                  this.state.Tables[
-                    `${router.activeYear}/SeniorsSubpopulations`
-                  ]['Subpopulations'],
+            {/* Subpopulation Statistics Table */}
+            <TableComponent4
+              data={changeVals2020(
+                filterList(
+                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                    'Subpopulations'
+                  ],
                   'subpopulation',
                   FILTER_COLUMNS
-                )}
-                percentage_flag={1}
-                {...seniorsUnshelteredStyling['Subpopulations']}
-              />
-            </div>
+                )
+              )}
+              tableName='Subpopulation Statistics'
+              percentage_flag={1}
+              individuals_row={null}
+              {...newlyHomelessStyling['Subpopulations']}
+            />
           </Grid>
-          <Grid container item xs={9}>
-            {/* Race Bar graph */}
+
+          {/* Race Barchart */}
+          <Grid container item xs={8}>
             <Card
               variant='outlined'
               style={{ width: '100%' }}
               className='seniorTable'>
               <BarChart
                 data={filterList(
-                  this.state.Tables[
-                    `${router.activeYear}/SeniorsSubpopulations`
-                  ]['Race'],
+                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                    'Race'
+                  ],
                   'subpopulation',
                   ['Total']
                 )}
-                {...seniorsUnshelteredStyling['Race']}
+                {...newlyHomelessStyling['Race']}
               />
             </Card>
           </Grid>
-          <Grid container item xs={3}>
+          {/* Household Composition */}
+          <Grid container item xs={4}>
             <Card
               variant='outlined'
               style={{ width: '100%' }}
               className='seniorTable'>
-              {/* Household Composition table sorted from highest to least counts */}
               <TableComponent4
-                data={filterList(
-                  this.state.Tables[
-                    `${router.activeYear}/SeniorsSubpopulations`
-                  ]['Households'],
-                  'subpopulation',
-                  FILTER_COLUMNS
-                )}
-                {...seniorsUnshelteredStyling['Household']}
+                data={
+                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                    'Households'
+                  ]
+                }
+                {...newlyHomelessStyling['Household']}
+                percentage_flag={1}
               />
             </Card>
           </Grid>
@@ -273,15 +267,17 @@ export default class SeniorsDashBoard2 extends Component {
       </div>
     );
   }
-
   render() {
     return (
       <div>
         {this.state.rendered ? (
           this.dashboard()
         ) : (
-          <div>
-            <div class='lds-ring'></div>
+          <div class='lds-ring'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         )}
       </div>
