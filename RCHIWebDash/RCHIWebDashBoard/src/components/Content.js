@@ -16,7 +16,6 @@ import UnshelteredSubpopulationTrends from "../Unsheltered Trends/UnshelteredSub
 import UnsheleteredSupervisoryDistricts from "../Unsheltered Supervisory District/UnshelteredSupervisoryDistricts";
 import LLMap from "./map/map";
 import GeneralDashboard from "../components/TestingBranch/GeneralDashboard";
-import GeneralDashboard2 from "../components/TestingBranch/GeneralDashboard2";
 
 import APITest from "./APITests/ApiTest";
 
@@ -28,7 +27,6 @@ import errorPage from "./404Page";
 
 import UnsheleteredVsSheltered from "../Unsheltered vs Sheltered/UnshelteredVsSheltered";
 import NewlyHomelessGrid from "../NewlyHomelessDashboard/NewlyHomelessGrid";
-import NewlyHomelessGrid2 from "../NewlyHomelessDashboard/NewlyHomeless2";
 
 
 export default class Content extends Component {
@@ -62,16 +60,7 @@ export default class Content extends Component {
                   <GeneralTable router={router} Tables={this.state.Tables} />
                 )}
               />
-              <Route
-                exact
-                path="/Gen"
-                component={() => (
-                  <GeneralDashboard2
-                    router={router}
-                    Tables={this.state.Tables}
-                  />
-                )}
-              />
+              
               <Route
                 exact
                 path="/GeneralTable"
@@ -99,13 +88,7 @@ export default class Content extends Component {
                   />
                 )}
               />
-              <Route
-              exact path='/NewlyHomeless2'
-              component={()=> (
-                <NewlyHomelessGrid2
-                router={router}
-                Tables={this.state.Tables}/>
-              )}/>
+              
               <Route
                 exact
                 path="/SeniorsDashBoard"

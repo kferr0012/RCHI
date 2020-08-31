@@ -311,13 +311,50 @@
 
 .change-label {
   background-color: #e8e8e8;
-  width: 30%;
+  width: 200px;
   margin-bottom: 5px;
 }
 
 .homeless-population-trend {
-  /* padding: 10px; */
   height: 100%;
   width: 100%;
+  min-height: 150px;
+}
+
+.living-situation-pie-chart {
+  width: 100%;
   position: relative;
+}
+
+.number-percentage {
+  position: relative;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dashboard {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 14px;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 14px;
+}
+
+.subheader {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+  color: rgba(0,0,0,.6);
+  font-weight: 400;
 }
