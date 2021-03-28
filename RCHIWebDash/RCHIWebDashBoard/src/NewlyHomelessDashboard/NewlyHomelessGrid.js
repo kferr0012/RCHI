@@ -18,6 +18,9 @@ import { newlyHomelessStyling, ContainerWidth, seniorsUnshelteredStyling} from '
 import Total from "../components/Numbers/Total";
 import PercentageDistrict from "../components/Numbers/PercentageDistrict";
 
+//Frontend data import
+import {dashboardData} from '../frontendData2021/firstTimeHomelessAndCovidData'
+
 const FILTER_COLUMNS = [
 
 "Veteran No",
@@ -84,7 +87,7 @@ export default class NewlyHomelessGrid extends Component{
                 <Header size="huge"  textAlign='center'>
                     Unsheltered - Newly Homeless
                     <h3><b>Interview Only</b></h3>
-                    <Header sub> 2020 Riverside County Pit Count</Header>
+                    <Header sub> 2021 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
 
@@ -158,10 +161,10 @@ export default class NewlyHomelessGrid extends Component{
        return <Container style={{width:ContainerWidth}}>
             <Segment>
                 <Header as='h1'  textAlign='center'>
-                     Unsheltered - Newly Homeless
-                    <h3><b>Interview Only</b></h3>
+                     Shelter - First Time Homeless And COVID-19 Programs
+                    
                     <h6><i>First time homeless within 12 months</i></h6>
-                <Header sub> 2020 Riverside County Pit Count</Header>
+                <Header sub> 2021 Riverside County Pit Count</Header>
                 </Header>
             </Segment>
 
@@ -176,15 +179,16 @@ export default class NewlyHomelessGrid extends Component{
                             />
                              <TableComponent4 
                                 data = {filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Living Situation"],"subpopulation", FILTER_COLUMNS).sort( (a,b) => { return b.total - a.total})}
+                                //{...newlyHomelessStyling["Living Situation"]}
                                 {...newlyHomelessStyling["Living Situation"]}
-
+                                tableName = "Prior Living Situation"
                             />
                         {/* </Segment> */}
                     </Grid.Column>
                     <Grid.Column>
                         <div className="sub-tots">
                             <div className="sub-tots-c1r1">
-                                <span className="component-header">Total Unsheltered</span>
+                                <span className="component-header">Total Sheltered</span>
                             </div>
                             <div className="sub-tots-c1r2">
                                 <div className="component-header">
@@ -204,7 +208,7 @@ export default class NewlyHomelessGrid extends Component{
                                 </div>
                             </div>
                             <div className="sub-tots-c2r1">
-                                <span className="component-header">Percentage of Unsheltered</span>
+                                <span className="component-header">Percentage of Sheltered</span>
                             </div>
                             <div className="sub-tots-c2r2">
                                 <div className="component-header">
@@ -252,7 +256,8 @@ export default class NewlyHomelessGrid extends Component{
                     <Grid.Column>
                         {/* <Segment> */}
                             <TableComponent4 
-                                data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS))}
+                                //data = {changeVals2020(filterList(this.state.Tables[router.activeYear + "/NewlyHomelessByCity"]["Subpopulations"],"subpopulation", FILTER_COLUMNS))}
+                                data = {dashboardData[0]}
                                 {...newlyHomelessStyling["Subpopulations"]}
                                 percentage_flag = {1}
                                 individuals_row = {null}

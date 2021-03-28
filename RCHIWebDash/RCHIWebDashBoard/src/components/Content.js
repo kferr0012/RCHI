@@ -81,7 +81,8 @@ export default class Content extends Component {
               />
               <Route
                 exact
-                path="/NewlyHomeless"
+                //path="/NewlyHomeless"
+                path="/FirstTimeHomelessAndCOVID"
                 component={() => (
                   <NewlyHomelessGrid
                     router={router}
