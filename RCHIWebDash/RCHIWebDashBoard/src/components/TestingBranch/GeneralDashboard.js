@@ -30,7 +30,7 @@ import {
 import { genSubpopOrder } from './constants';
 
 import '../css/dash.css';
-import { Header, Segment } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 import {
   Grid, 
   Paper,
@@ -493,7 +493,7 @@ export default class Dashboard extends Component {
                     <div className="living-situation-pie-chart">
                       {/* living situations pie chart */}
                       <Header size='small' textAlign='center'>
-                        Living Situations
+                        Prior Living Situations
                       </Header>
                         <PieChart2
                           data={pieDataManiInterview(
