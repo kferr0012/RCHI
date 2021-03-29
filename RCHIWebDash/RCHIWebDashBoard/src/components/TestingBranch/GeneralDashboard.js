@@ -32,16 +32,93 @@ import { genSubpopOrder } from './constants';
 import '../css/dash.css';
 import { Header, Segment } from 'semantic-ui-react';
 import {
-  Grid,
-  Table,
-  TableCell,
-  TableHead,
-  TableRow,
-  TableContainer,
+  Grid, 
   Paper,
-  Card
 } from '@material-ui/core';
+const uvsSubpopOrder = [
+  'Individuals',
+  'Adults (≥25)',
+  'Youth (18-24)',
+  'Children (≤17)',
+  'Unknown Ages',
+  'Male',
+  'Female',
+  'Transgender',
+  'Gender Non-Con',
+  'Unknown Gender',
+  'Hispanic',
+  'NonHispanic',
+  'Unknown Ethnicity',
+  'Asian',
+  'American Indian',
+  'Black',
+  'White',
+  'Multiple Races',
+  'Native Hawaiian',
+  'Unknown Race',
+  'Chronically Homeless',
+  'Substance Abuse',
+  'Veterans',
+  'Pet Owners',
+];
+const FILTERED_COUNTS = [
+  'Total',
+  'Veteran No',
+  'Unknown Veteran',
+  'Not Chronically Homeless',
+  'No Substance Abuse',
+  'Unknown Substance Abuse',
+  'PTSD',
+  'No PTSD',
+  'Unknown PTSD',
+  'Mental Health Conditions',
+  'No Mental Health Conditions',
+  'Unknown Mental Health Conditions',
+  'Physical Disability',
+  'No Physical Disability',
+  'Unknown Physical Disability',
+  'Developmental Disability',
+  'No Developmental Disability',
+  'Unknown Developmental Disability',
+  'Brain Injury',
+  'No Brain Injury',
+  'Unknown Brain Injury',
+  'Victim of Domestic Violence',
+  'Not Victim of Domestic Violence',
+  'Unknown Victim of Domestic Violence',
+  'AIDS or HIV',
+  'No AIDS or HIV',
+  'Unknown AIDS or HIV',
+  'Jail Release 90 Days: Probation',
+  'Jail Release 90 Days: Parole',
+  'Jail Release 90 Days: Completed Sentence',
+  'Jail Release 90 Days: (Unspecified)',
+  'Jail Release 12 Months: Probation',
+  'Jail Release 12 Months: Parole',
+  'Jail Release 12 Months: Completed Sentence',
+  'Jail Release 12 Months: (Unspecified)',
+  'No Jail',
+  'Unknown Jail',
+  'Woods',
+  'Vehicle',
+  'UnderBridge',
+  'Street',
+  'Park',
+  'Other',
+  'Bus',
+  'Abandoned Building',
+  'Adults Only',
+  'Children Only',
+  'Adults and Children',
+  'Families w/ Children',
+  'Not Veteran',
+  'Households',
+  'Encampment',
+  'Couch',
+  'Households (Interview)',
+  'Families w/ Children (Interview)'
 
+]
 const FILTER_COLUMNS = [
   'Total',
   'Not Veteran',
@@ -112,6 +189,19 @@ export default class Dashboard extends Component {
     return Tables;
   }
 
+  getOrderedShelteredData(){
+    var result = this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Total"]
+                                                                      .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Age"])
+                                                                      .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Gender"])
+                                                                      .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Ethnicity"])
+                                                                      .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Race"])
+                                                                      .concat(this.state.Tables[router.formerYear + "/GeneralTableSubpopulationsSheltered"]["Subpopulations"])
+                                                                      .concat(this.state.Tables[router.activeYear + "/GeneralTableSubpopulationsSheltered-unexpanded"])
+
+    return result
+  }
+
+
   getOrderedTable() {
     //concat in a specific order to sort data by group
     var unshelteredData = this.state.Tables[
@@ -181,8 +271,7 @@ export default class Dashboard extends Component {
       <div className="dashboard">
         <Paper variant="elevation" elevation={2}>
           <h1 className="dashboard-title">
-            General Sheltered and Unsheltered Information
-            <p className="subheader"> 2020 Riverside County Pit Count</p>
+            General Sheltered Information
           </h1>
         </Paper>
       </div>
@@ -192,7 +281,7 @@ export default class Dashboard extends Component {
   dashboard() {
     return (
       <div className='container'>
-        <Grid container item spacing={3}>
+        <Grid container item spacing={3} md={12}>
           <Grid container item md={12}>
             {this.title()}
           </Grid>
@@ -207,28 +296,19 @@ export default class Dashboard extends Component {
                 />
               </div>
               <TableComponent4
-                data={orderSubs(
-                  changeVals2020(
-                    filterList(
-                      this.getOrderedTable(),
-                      'subpopulation',
-                      FILTER_COLUMNS
-                    )
-                  ),
-                  genSubpopOrder,
-                  3
-                )}
-                expandIndex={'_type'}
-                header={true}
-                height={'100%'}
-                // position='absolute'
+              data = {orderSubs(changeVals2020(filterList(this.getOrderedShelteredData(),"subpopulation", FILTERED_COUNTS)), uvsSubpopOrder, 2)}
+              expandIndex = {"year"}
+              tableName = "Sheltered Statistics"
+              header = {true}
+              height = {"120%"}
+              // position = "absolute"
               />
             </Grid>
-            <Grid container item md={12}>
+            <Grid container md={12}>
+              <Grid item md={6}>
               {/* Race Bar Graph */}
               <p className='component-header'>
-                Race
-                <p className='component-subheader'>Total Count </p>
+                Race <p className='component-subheader'>Total Count </p>
               </p>
               <BarChart
                 data={filterList(
@@ -246,6 +326,31 @@ export default class Dashboard extends Component {
                 gridYValues={4}
                 maxValue={2000}
               />
+
+              </Grid>
+              <Grid item md={6}>
+              <p className='component-header'>
+                Age
+                <p className='component-subheader'>Total Count </p>
+              </p>
+              <BarChart
+                data={filterList(
+                  this.state.Tables[
+                    `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
+                  ]['Age'],
+                  'subpopulation',
+                  ['Total']
+                )}
+                indexBy={'subpopulation'}
+                keys={['total']}
+                margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
+                divHeight={'15em'}
+                tickValues={4}
+                gridYValues={4}
+                maxValue={2000}
+              />
+
+              </Grid>
             </Grid>
             <Grid container item md={6}>
               {/* Gender pie chart */}
@@ -294,7 +399,7 @@ export default class Dashboard extends Component {
               />
             </Grid>
           </Grid>
-          <Grid container item md={6} spacing={1}>
+          <Grid container item md={6}>
             <Grid container item md={12}>
               {/* Homeless Population Trend Graph*/}
               <span className='component-header'>
@@ -302,22 +407,23 @@ export default class Dashboard extends Component {
               </span>
               <div className='homeless-population-trend' style={{position: 'relative'}}>
                 <LineGraph
-                  margin={{ top: 20, right: 30, bottom: 70, left: 30 }}
+                  margin={{ top: 20, right: 30, bottom: 100, left: 30 }}
                   max={4000}
                   tickValues={4}
                   gridYValues={4}
                 />
               </div>
             </Grid>
-            <Grid container item md={12} className='grey-box'>
-              <Grid container item md={4}>
+            <Grid container md={12} className='grey-box' spacing={2}>
+              <Grid container item md={4} spacing={1}>
                 <Grid item md={12}>
-                  {/* Mental health issues percent */}
+                  {/* Mental health conditions percent */}
                   <NumberPercentage
                     height={50}
                     data={this.state.NumberValues}
                     subpopulation={'Mental Health Conditions'}
-                    header={'mental health issues'}
+                    header={'mental health conditions'}
+                    hideInterview={true}
                   />
                 </Grid>
                 <Grid item md={12}>
@@ -328,6 +434,8 @@ export default class Dashboard extends Component {
                       data={this.state.NumberValues}
                       subpopulation={'Substance Abuse'}
                       header={'substance abuse'}
+                      hideInterview={true}
+
                     />
                   </div>
                 </Grid>
@@ -339,24 +447,15 @@ export default class Dashboard extends Component {
                       data={this.state.NumberValues}
                       subpopulation={'Physical Disability'}
                       header={'physical disability'}
+                      hideInterview={true}
                     />
                   </div>
                 </Grid>
-                <Grid item md={12}>
-                  {/* ptsd percent*/}
-                  <div className="number-percentage">
-                    <NumberPercentage
-                      height={50}
-                      data={this.state.NumberValues}
-                      subpopulation={'PTSD'}
-                      header={'PTSD'}
-                    />
-                  </div>
-                </Grid>
+                
               </Grid>
               <Grid container item md={4} spacing={1}>
                 <Grid container item md={12}>
-                  {/* Total unsheltered count */}
+                  {/* Total sheltered count */}
                   <span>
                     <div style={{ fontSize: '40px', textAlign: 'middle' }}>
                     <TotalGeneral
@@ -366,32 +465,9 @@ export default class Dashboard extends Component {
                     />
                     </div>
                     <span className='component-header'>
-                      Total Unsheltered Count
+                      Total Sheltered Count
                     </span>
                   </span>
-                </Grid>
-                <Grid item md={12}>
-                  {/* interview/observational table */}
-                  <TableContainer component={Paper}>
-                    <Table>
-                      <TableHead>
-                        <TableRow>
-                          <TableCell>Interview</TableCell>
-                          <TableCell align='right'>
-                            {' '}
-                            {this.state.NumberValues['Individuals'].interview}
-                          </TableCell>
-                        </TableRow>
-                        <TableRow>
-                          <TableCell>Observational</TableCell>
-                          <TableCell align='right'>
-                            {' '}
-                            {this.state.NumberValues['Individuals'].observation}
-                          </TableCell>
-                        </TableRow>
-                      </TableHead>
-                    </Table>
-                  </TableContainer>
                 </Grid>
                 <Grid container item md={12}>
                   {/* household composition table */}
@@ -418,10 +494,6 @@ export default class Dashboard extends Component {
                       {/* living situations pie chart */}
                       <Header size='small' textAlign='center'>
                         Living Situations
-                        <br />
-                        <span style={{ color: 'grey', fontSize: '12px' }}>
-                          Interview Only{' '}
-                        </span>
                       </Header>
                         <PieChart2
                           data={pieDataManiInterview(
