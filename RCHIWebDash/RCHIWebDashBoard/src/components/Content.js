@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import { router } from "../components/Utilities/constants/routing";
 
 import GeneralDash from "./DemoDashboards/GeneralDash";
 import VeteranDash from "./DemoDashboards/VeteranDash";
@@ -26,9 +27,7 @@ import errorPage from "./404Page";
 
 import UnsheleteredVsSheltered from "../Unsheltered vs Sheltered/UnshelteredVsSheltered";
 import NewlyHomelessGrid from "../NewlyHomelessDashboard/NewlyHomelessGrid";
-import { router } from "../components/Utilities/constants/routing";
 
-//import { aggregateFetchbyConstants } from './Utilities/ListManipulation/aggregateFetch';
 
 export default class Content extends Component {
   constructor() {
@@ -61,7 +60,7 @@ export default class Content extends Component {
                   <GeneralTable router={router} Tables={this.state.Tables} />
                 )}
               />
-
+              
               <Route
                 exact
                 path="/GeneralTable"
@@ -89,6 +88,7 @@ export default class Content extends Component {
                   />
                 )}
               />
+              
               <Route
                 exact
                 path="/SeniorsDashBoard"
@@ -201,6 +201,7 @@ export default class Content extends Component {
                   />
                 )}
               />
+            
               <Route
                 exact
                 path="/Sandbox"

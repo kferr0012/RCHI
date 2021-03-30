@@ -1,4 +1,10 @@
-// changes map[id] in array from val to new val
+/**
+ *  @param {Object} array - data to change
+ *  @param {Object} id - list of column to change, for example "subpopulation"
+ *  @param {Object} vals - list of old column names, for example "Seniors 60+"
+ *  @param {Object} newval - list of new column names, for example "Seniors (>= 60)"
+ *  changes map[id] in array from val to new val
+ *  */
 export function changeVal( array, id , val, newval ) {
     return array.map( ( map ) => {
         if ( map[id] === val )

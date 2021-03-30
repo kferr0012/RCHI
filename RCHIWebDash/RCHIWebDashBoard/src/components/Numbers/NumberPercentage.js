@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NumberPercentage =  (props) => {
-    let {data, height, subpopulation, header} = props
+    let {data, height, subpopulation, header, hideInterview} = props
 
     const numerator = data[subpopulation].interview
     const denominator = data["Individuals"].interview
@@ -12,7 +12,7 @@ const NumberPercentage =  (props) => {
                  {((numerator/denominator*100)).toFixed()}%
             </div>
             <span className = "component-header">{header} </span>
-            <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>
+            {props.hideInterview ? null : <h6 style = {{color: "#aaaaaa"}}>Interview Only</h6>}
         </div>
     )
 }
