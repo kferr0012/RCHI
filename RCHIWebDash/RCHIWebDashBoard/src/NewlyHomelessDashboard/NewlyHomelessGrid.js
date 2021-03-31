@@ -18,6 +18,9 @@ import "../components/css/dash.css";
 import { newlyHomelessStyling } from "../components/Utilities/styling/chartTablesStyling";
 import { Card, Grid, Paper } from "@material-ui/core";
 
+//Frontend data import
+import {dashboardData} from "../frontendData2021/firstTimeHomelessData";
+
 const FILTER_COLUMNS = [
   "Veteran No",
   "No Substance Abuse",
@@ -79,14 +82,14 @@ export default class NewlyHomelessGrid extends Component {
       <div className="dashboard">
         <Paper variant="elevation" elevation={2}>
           <h1 className="dashboard-title">
-          Unsheltered - Newly Homeless
+          Shelter - First Time Homeless and COVID-19 Programs
           <h3>
             <strong>Interview Only</strong>
           </h3>
           <h6>
               <em>First time homeless within 12 months</em>
             </h6>
-            <p className="subheader"> 2020 Riverside County Pit Count</p>
+            <p className="subheader"> 2021 Riverside County Pit Count</p>
           </h1>
         </Paper>
       </div>
@@ -134,6 +137,7 @@ export default class NewlyHomelessGrid extends Component {
                 ).sort((a, b) => b.total - a.total)}
                 percentage_flag={1}
                 {...newlyHomelessStyling["Living Situation"]}
+                tableName = "Prior Living Situation"
               />
             </Grid>
           </Grid>
@@ -142,7 +146,7 @@ export default class NewlyHomelessGrid extends Component {
             <Grid container item md={12}>
               <Grid container item md={6} className="seniorNumbers">
                 {/* Number of Total Unsheltered */}
-                <span className="component-header">Total Unsheltered</span>
+                <span className="component-header">Total Sheltered</span>
                 <br />
                 <Grid container item md={12}>
                   <span className="component-header">
@@ -157,7 +161,7 @@ export default class NewlyHomelessGrid extends Component {
               <Grid container item md={6} className="seniorNumbers">
                 {/* Percent of Unsheltered are Seniors*/}
                 <span className="component-header">
-                  Percentage of Unsheltered
+                  Percentage of Sheltered
                 </span>
                 <br />
                 <Grid container item md={12}>
@@ -212,6 +216,7 @@ export default class NewlyHomelessGrid extends Component {
           <Grid container item md={4}>
             {/* Subpopulation Statistics Table */}
             <TableComponent4
+              /*
               data={changeVals2020(
                 filterList(
                   this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
@@ -220,7 +225,8 @@ export default class NewlyHomelessGrid extends Component {
                   "subpopulation",
                   FILTER_COLUMNS
                 )
-              )}
+              )} */
+              data = {dashboardData[0]}
               tableName="Subpopulation Statistics"
               percentage_flag={1}
               individuals_row={null}
