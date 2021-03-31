@@ -80,7 +80,7 @@ export default class Content extends Component {
               />
               <Route
                 exact
-                path="/NewlyHomeless"
+                path="/FirstTimeHomeless"
                 component={() => (
                   <NewlyHomelessGrid
                     router={router}
