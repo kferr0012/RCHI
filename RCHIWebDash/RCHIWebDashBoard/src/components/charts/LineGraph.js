@@ -11,13 +11,16 @@ export default class LineGraph extends React.Component {
       tickValues: this.props.tickValues,
       gridYValues: this.props.gridYValues,
       max: this.props.max,
+      categories: this.props.categories
     }
   }
   
   componentDidMount = async event => {
     // TODO: replace static data with API call to backend..upload data in a table as an API reference
-    var data = [
-      {
+    // gets total data from each year
+    let graphData = [];
+    if (this.state.categories.includes("volunteers")) {
+      graphData.push({
         'id': "Volunteers",
         'data': [
           // {
@@ -45,8 +48,11 @@ export default class LineGraph extends React.Component {
             'y': "842"
           },
         ]
-      },
-      {
+      })
+    }
+
+    if (this.state.categories.includes("sheltered")) {
+      graphData.push({
         'id': "Sheltered",
         'data': [
           // {
@@ -74,8 +80,11 @@ export default class LineGraph extends React.Component {
             'y': "729"
           },
         ]
-      },
-      {
+      })
+    }
+      
+    if (this.state.categories.includes("unsheltered")) {
+      graphData.push({
         'id': "Unsheltered",
         'data': [
           // {
@@ -105,8 +114,10 @@ export default class LineGraph extends React.Component {
 
         ]
       }
-    ];
-    this.setState({data: data});
+    )
+    }
+    
+    this.setState({data: graphData});
   }
 
 
@@ -122,12 +133,6 @@ export default class LineGraph extends React.Component {
           yScale={{ type: 'linear', stacked: true, min: 0, max: this.state.max }}
           enableSlices = "x"
           sliceTooltip={({ slice }) => {
-            // const total = slice.points.reduce((acc, point)=> {
-            //   if(point.serieId !== "Volunteers"){
-            //     return acc + point.data.yFormatted
-            //   }
-            //   return acc
-            // },0)
             return (
                 <div
                     style={{
@@ -162,17 +167,7 @@ export default class LineGraph extends React.Component {
               legendOffset: 36,
               legendPosition: 'middle'
           }}
-          // axisLeft={{
-          //     orient: 'left',
-          //     tickSize: 5,
-          //     tickValues: this.state.tickValues,
-          //     tickPadding: 5,
-          //     tickRotation: 0,
-          //     legend: '',
-          //     legendOffset: -40,
-          //     legendPosition: 'middle'
-
-          // }}
+ 
           axisLeft={null}
           colors={ colors[7] }
           lineWidth={2}
@@ -181,7 +176,6 @@ export default class LineGraph extends React.Component {
           pointColor={{ from: 'color', modifiers: [] }}
           pointBorderWidth={2}
           pointBorderColor={{ from: 'serieColor' }}
-          // pointLabel={function(e , i){ console.log("Line Graph: ", i) }}
           pointLabelYOffset={-12}
           enableArea={true}
           areaOpacity={0.65}
@@ -214,7 +208,6 @@ export default class LineGraph extends React.Component {
           ]}
         />
       </div>
-      // </div>
     );
   }
 }

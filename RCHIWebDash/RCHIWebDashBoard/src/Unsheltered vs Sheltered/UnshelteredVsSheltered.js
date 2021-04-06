@@ -187,6 +187,7 @@ export default class UnsheleteredVsSheltered extends Component{
                     max = {4000}
                     tickValues = {4}
                     gridYValues = {4}
+                    categories={["unsheltered","sheltered","volunteers"]}
                   />
                 </div>
                 <div className="svu-r2">
