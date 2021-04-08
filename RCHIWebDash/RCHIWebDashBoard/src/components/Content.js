@@ -10,6 +10,8 @@ import DIYChart from "./DIYChart/DIYChart";
 import TabChartDash from "./DemoDashboards/TabChartDash";
 import CityDashboard from "./CityDashboard_3.5/CityDashboard";
 import SeniorsDashboard from "./../SeniorsDashBoard/SeniorsDashBoard";
+import NewYouth from "../NewYouth/NewYouth";
+
 
 import UnshelteredSubpopulationTrends from "../Unsheltered Trends/UnshelteredSubpopulationTrends";
 import UnsheleteredSupervisoryDistricts from "../Unsheltered Supervisory District/UnshelteredSupervisoryDistricts";
@@ -98,6 +100,16 @@ export default class Content extends Component {
               />
               <Route
                 exact
+                path="/NewYouth"
+                component={() => (
+                  <NewYouth
+                    router={router}
+                    Tables={this.state.Tables}
+                  />
+                )}
+              />
+              <Route
+                exact
                 path="/UnshelteredTrends"
                 component={() => (
                   <UnshelteredSubpopulationTrends
@@ -123,6 +135,9 @@ export default class Content extends Component {
                   <CityTable router={router} Tables={this.state.Tables} />
                 )}
               />
+          
+
+              {/* Unused Links */}
               <Route
                 exact
                 path="/Map"
@@ -130,8 +145,6 @@ export default class Content extends Component {
                   <LLMap router={router} Tables={this.state.Tables} />
                 )}
               />
-
-              {/* Unused Links */}
               <Route
                 exact
                 path="/VeteranDash"

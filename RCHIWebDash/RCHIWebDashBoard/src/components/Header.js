@@ -12,6 +12,8 @@ import { Link, withRouter } from 'react-router-dom';
 //   { name: 'divider'},
 //   { name: 'Newly Homeless',               link: '/NewlyHomeless' },
 //   { name: 'Map',                          link: '/' },
+//   { name: 'City Table',                   link:  '/CityTables'},
+//   { name: 'Map',                          link: '/Map' },
 // ]
 
 // TO ADD A LINK JUST A NAME AND LINK IN LINKS OBJECT
@@ -20,11 +22,10 @@ const links = [
   { name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
   { name: 'First Time Homeless',               link: '/FirstTimeHomeless' },
   { name: 'Seniors',               link: '/SeniorsDashBoard' },
+  { name: 'New Youth',               link: '/NewYouth' },
   { name: 'Unsheltered Trends',           link: '/UnshelteredTrends' },
   { name: 'Supervisorial Districts',      link: '/SupervisorialDistricts' },
   { name: 'City Breakdown',                link: '/CityBreakdown' },
-  { name: 'City Table',                   link:  '/CityTables'},
-  { name: 'Map',                          link: '/Map' },
   // { name: 'divider'},
 ]
 

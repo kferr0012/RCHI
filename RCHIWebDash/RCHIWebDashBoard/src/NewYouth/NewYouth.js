@@ -14,52 +14,13 @@ import { pieDataManiTotal } from "../components/Utilities/ChartDataManipulation/
 import { router } from "../components/Utilities/constants/routing";
 
 import "../components/css/dash.css";
-import { seniorsUnshelteredStyling } from "../components/Utilities/styling/chartTablesStyling";
+import { newYouthStyling } from "../components/Utilities/styling/chartTablesStyling";
 import { Card, Grid, Paper} from "@material-ui/core";
 
-const FILTER_COLUMNS = [
-  "Veteran No",
-  "No Substance Abuse",
-  "Unknown Substance Abuse",
-  "No PTSD",
-  "Unknown PTSD",
-  "No Mental Health Conditions",
-  "Unknown Mental Health Conditions",
-  "No Physical Disability",
-  "Unknown Physical Disability",
-  "No Developmental Disability",
-  "Unknown Developmental Disability",
-  "No Brain Injury",
-  "Unknown Brain Injury",
-  "Not Victim of Domestic Violence",
-  "Unknown Victim of Domestic Violence",
-  "No AIDS or HIV",
-  "Unknown AIDS or HIV",
-  "Jail Release 90 Days: Probation",
-  "Jail Release 90 Days: Parole",
-  "Jail Release 90 Days: Completed Sentence",
-  "Jail Release 90 Days: (Unspecified)",
-  "Jail Release 12 Months: Probation",
-  "Jail Release 12 Months: Parole",
-  "Jail Release 12 Months: Completed Sentence",
-  "Jail Release 12 Months: (Unspecified)",
-  "No Jail",
-  "Unknown Jail",
-  "Not Chronically Homeless",
-  "Unknown Veteran",
-  "Chronically Homeless",
-  "Couch",
-  "Individuals",
-];
+import {FILTER_COLUMNS, FILTER_GENDERS} from './constants.js';
 
-const FILTER_GENDERS = [
-  "Total",
-  "Gender Non-Conforming",
-  "Unknown Gender",
-  "Transgender",
-];
 
-export default class SeniorsDashBoard2 extends Component {
+export default class NewYouth extends Component {
   constructor() {
     super();
     this.state = {
@@ -83,18 +44,16 @@ export default class SeniorsDashBoard2 extends Component {
     // Page banner
     return (
       <div className="dashboard">
-        <Paper variant="elevation" elevation={2}>
-          <h1 className="dashboard-title">
-          Seniors
-          <h3>
-            <strong>Sheltered Only</strong>
-          </h3>
-          <h6>
-              <em>First time homeless within 12 months</em>
-            </h6>
-          </h1>
-        </Paper>
-    </div>
+      <Paper variant="elevation" elevation={2}>
+        <h1 className="dashboard-title">
+        New Youth
+        <h3>
+          <strong>Sheltered Only</strong>
+        </h3>
+       
+        </h1>
+      </Paper>
+  </div>
     );
   }
 
@@ -141,17 +100,17 @@ export default class SeniorsDashBoard2 extends Component {
                     "subpopulation",
                     FILTER_COLUMNS
                   ).sort((a, b) => b.total - a.total)}
-                  {...seniorsUnshelteredStyling["Living Situation"]}
+                  {...newYouthStyling["Living Situation"]}
                 />
               </div>
             </Grid>
           </Grid>
 
           <Grid container item md={4}>
-            {/* Number of Total Unsheltered */}
+            {/* Number of Total */}
             <Grid container item md={6} className="seniorNumbers">
               <Grid container item md={12}>
-                <span className="component-header">Total Unsheltered</span>
+                <span className="component-header">Total Sheltered</span>
               </Grid>
               <Grid container item md={12}>
                 <span className="component-header">
@@ -167,7 +126,7 @@ export default class SeniorsDashBoard2 extends Component {
             <Grid container item md={6} className="seniorNumbers">
               <Grid container item md={12}>
                 <span className="component-header">
-                  Percentage of Unsheltered
+                  Percentage of Sheltered
                 </span>
               </Grid>
               <Grid container item md={12}>
@@ -193,7 +152,7 @@ export default class SeniorsDashBoard2 extends Component {
                     ["Total"]
                   )
                 )}
-                {...seniorsUnshelteredStyling["Ethnicity"]}
+                {...newYouthStyling["Ethnicity"]}
               />
             </Grid>
             <Grid container item md={12}>
@@ -208,7 +167,7 @@ export default class SeniorsDashBoard2 extends Component {
                     FILTER_GENDERS
                   )
                 )}
-                {...seniorsUnshelteredStyling["Gender"]}
+                {...newYouthStyling["Gender"]}
               />
             </Grid>
           </Grid>
@@ -224,7 +183,7 @@ export default class SeniorsDashBoard2 extends Component {
                   FILTER_COLUMNS
                 )}
                 percentage_flag={1}
-                {...seniorsUnshelteredStyling["Subpopulations"]}
+                {...newYouthStyling["Subpopulations"]}
               />
             </div>
           </Grid>
@@ -243,7 +202,7 @@ export default class SeniorsDashBoard2 extends Component {
                   "subpopulation",
                   ["Total"]
                 )}
-                {...seniorsUnshelteredStyling["Race"]}
+                {...newYouthStyling["Race"]}
               />
             </Card>
           </Grid>
@@ -262,7 +221,7 @@ export default class SeniorsDashBoard2 extends Component {
                   "subpopulation",
                   FILTER_COLUMNS
                 )}
-                {...seniorsUnshelteredStyling["Household"]}
+                {...newYouthStyling["Household"]}
               />
             </Card>
           </Grid>

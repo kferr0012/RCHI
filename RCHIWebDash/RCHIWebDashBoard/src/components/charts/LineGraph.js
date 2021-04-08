@@ -23,10 +23,6 @@ export default class LineGraph extends React.Component {
       graphData.push({
         'id': "Volunteers",
         'data': [
-          // {
-          //   'x': "2015",
-          //   'y': "597"
-          // },
           {
             'x': "2016",
             'y': "503"
