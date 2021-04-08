@@ -20,6 +20,9 @@ import { router } from "../../components/Utilities/constants/routing";
 
 import { unshelteredSupervisoryDistrictStyling } from "../../components/Utilities/styling/chartTablesStyling";
 
+//Import frontend data
+import {dashboardDataDistrict1} from "../../frontendData2021/supervisoryDistrictData.js";
+
 const filteredTableList = [
   "Families with Children",
   "Children Only",
@@ -55,7 +58,125 @@ const filteredTableList = [
   "No Jail",
   "Unknown Jail"
 ];
-const PageLayout = ({ currentDistrict, tables }) => {
+
+
+
+const PageLayout = ({ currentDistrict, tables, currentP }) => {
+
+  console.log("From child component"); //it works
+  console.log(currentDistrict);
+
+  if(currentDistrict == 1){
+      return (
+        <Grid stackable>
+          <Grid.Row verticalAlign="middle" stretched columns={3} divided>
+            <Grid.Column>
+              {/* <p className="component-header">PitCount Trend</p> */}
+              <PitCountTrend
+                // height={(window.innerHeight*.50)}
+                clickedDistrict={currentDistrict}
+                query={currentDistrict}
+                {...unshelteredSupervisoryDistrictStyling["Pit Count Trend"]}
+              />
+            </Grid.Column>
+            <Grid.Column>
+              <PieDataNivo
+                // height={(window.innerHeight*.23)}
+          
+                clickedDistrict={currentDistrict}
+                currentDistrict={currentDistrict}
+                query={currentDistrict + ",Chronically Homeless"}
+                header={"Chronically Homeless"}
+                {...unshelteredSupervisoryDistrictStyling["Chronically Homeless"]}
+              />
+    
+              <br />
+              
+              <PieDataNivo
+                clickedDistrict={currentDistrict}
+                currentDistrict={currentDistrict}
+                query={currentDistrict + ",Ethnicity"}
+                {...unshelteredSupervisoryDistrictStyling["Ethnicity"]}
+              />
+            </Grid.Column>
+            <Grid.Column>
+              <TableComponent4
+                /*
+                data={combineCountsByCategory(
+                  changeVals2020(filterList(
+                    tables[router.activeYear + "/SubpopulationsByCity"][
+                      currentDistrict
+                    ]["Age"]
+                      .concat(
+                        tables[router.activeYear + "/SubpopulationsByCity"][
+                          currentDistrict
+                        ]["Gender"]
+                      )
+                      .concat(
+                        tables[router.activeYear + "/SubpopulationsByCity"][
+                          currentDistrict
+                        ]["Subpopulations"]
+                      ),
+                    "subpopulation",
+                    filteredTableList
+                  ))
+                )}
+                */
+               data={dashboardDataDistrict1[0]}
+                {...unshelteredSupervisoryDistrictStyling["Subpopulations"]}
+              />
+            </Grid.Column>
+          </Grid.Row>
+    
+          <Grid.Row>
+            <Grid.Column width={16} vertical floated='left'>
+              <BarChart
+                data={filterList(
+                  combineCountsByCategory(
+                    tables[router.activeYear + "/SubpopulationsByCity"][
+                      currentDistrict
+                    ]["Race"]
+                  ),
+                  "subpopulation",
+                  ["Total"]
+                )}
+                {...unshelteredSupervisoryDistrictStyling["Race"]}
+              />
+            </Grid.Column>
+          </Grid.Row>
+    
+          <Grid.Row verticalAlign="middle" stretched columns={3}>
+            <Grid.Column width={5}>
+              <PitCountByCity
+                clickedDistrict={currentDistrict}
+                currentDistrict={currentDistrict}
+                query={currentDistrict}
+                {...unshelteredSupervisoryDistrictStyling["PIT Count By City"]}
+              />
+            </Grid.Column>
+            <Grid.Column width={5}>
+              <HouseHoldComposition
+                clickedDistrict={currentDistrict}
+                currentDistrict={currentDistrict}
+                query={currentDistrict}
+                {...unshelteredSupervisoryDistrictStyling["Household"]}
+              />
+            </Grid.Column>
+            <Grid.Column width={5}>
+              <VolunteersDeployment
+                clickedDistrict={currentDistrict}
+                currentDistrict={currentDistrict}
+                query={currentDistrict}
+                {...unshelteredSupervisoryDistrictStyling["Volunteers By City"]}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      );
+    }
+
+  else{
+
   return (
     <Grid stackable>
       <Grid.Row verticalAlign="middle" stretched columns={3} divided>
@@ -159,6 +280,7 @@ const PageLayout = ({ currentDistrict, tables }) => {
       </Grid.Row>
     </Grid>
   );
+}
 };
 
 export default PageLayout;
