@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import { router } from "../components/Utilities/constants/routing";
 
-import GeneralDash from "./DemoDashboards/GeneralDash";
 import VeteranDash from "./DemoDashboards/VeteranDash";
 import EditableCharts from "./EditableChartsDash/EditableCharts";
 import SupervisorialDistricts from "./SupervisoralDistrictDash/SupervisorialDistricts";
@@ -11,17 +10,17 @@ import DIYChart from "./DIYChart/DIYChart";
 import TabChartDash from "./DemoDashboards/TabChartDash";
 import CityDashboard from "./CityDashboard_3.5/CityDashboard";
 import SeniorsDashboard from "./../SeniorsDashBoard/SeniorsDashBoard";
+import NewYouth from "../NewYouth/NewYouth";
+
 
 import UnshelteredSubpopulationTrends from "../Unsheltered Trends/UnshelteredSubpopulationTrends";
 import UnsheleteredSupervisoryDistricts from "../Unsheltered Supervisory District/UnshelteredSupervisoryDistricts";
 import LLMap from "./map/map";
-import GeneralDashboard from "../components/TestingBranch/GeneralDashboard";
+import GeneralDashboard from "../General Dashboard/GeneralDashboard";
 
 import APITest from "./APITests/ApiTest";
 
-import Sandbox from "./TestingBranch/Sandbox";
 import GeneralPieChart from "./charts/PieChart";
-import GeneralTable from "../Unsheltered Sheltered General/GeneralTable";
 import CityTable from "../Unsheltered Cities/CityTable";
 import errorPage from "./404Page";
 
@@ -57,7 +56,7 @@ export default class Content extends Component {
                 exact
                 path="/"
                 component={() => (
-                  <GeneralTable router={router} Tables={this.state.Tables} />
+                  <GeneralDashboard router={router} Tables={this.state.Tables} />
                 )}
               />
               
@@ -65,7 +64,7 @@ export default class Content extends Component {
                 exact
                 path="/GeneralTable"
                 component={() => (
-                  <GeneralTable router={router} Tables={this.state.Tables} />
+                  <GeneralDashboard router={router} Tables={this.state.Tables} />
                 )}
               />
               <Route
@@ -101,6 +100,16 @@ export default class Content extends Component {
               />
               <Route
                 exact
+                path="/NewYouth"
+                component={() => (
+                  <NewYouth
+                    router={router}
+                    Tables={this.state.Tables}
+                  />
+                )}
+              />
+              <Route
+                exact
                 path="/UnshelteredTrends"
                 component={() => (
                   <UnshelteredSubpopulationTrends
@@ -126,6 +135,9 @@ export default class Content extends Component {
                   <CityTable router={router} Tables={this.state.Tables} />
                 )}
               />
+          
+
+              {/* Unused Links */}
               <Route
                 exact
                 path="/Map"
@@ -133,8 +145,6 @@ export default class Content extends Component {
                   <LLMap router={router} Tables={this.state.Tables} />
                 )}
               />
-
-              {/* Unused Links */}
               <Route
                 exact
                 path="/VeteranDash"
@@ -142,13 +152,7 @@ export default class Content extends Component {
                   <VeteranDash router={router} Tables={this.state.Tables} />
                 )}
               />
-              <Route
-                exact
-                path="/GeneralDash"
-                component={() => (
-                  <GeneralDash router={router} Tables={this.state.Tables} />
-                )}
-              />
+              
               <Route
                 exact
                 path="/TabChartDash"
@@ -191,24 +195,9 @@ export default class Content extends Component {
                   <APITest router={router} Tables={this.state.Tables} />
                 )}
               />
-              <Route
-                exact
-                path="/generalDashboard"
-                component={() => (
-                  <GeneralDashboard
-                    router={router}
-                    Tables={this.state.Tables}
-                  />
-                )}
-              />
+             
             
-              <Route
-                exact
-                path="/Sandbox"
-                component={() => (
-                  <Sandbox router={router} Tables={this.state.Tables} />
-                )}
-              />
+             
               <Route component={errorPage} />
             </Switch>
           </div>
