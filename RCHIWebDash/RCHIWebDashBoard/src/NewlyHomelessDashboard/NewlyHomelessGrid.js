@@ -84,12 +84,12 @@ export default class NewlyHomelessGrid extends Component {
           <h1 className="dashboard-title">
           Shelter - First Time Homeless and COVID-19 Programs
           <h3>
-            <strong>Interview Only</strong>
+            <strong>Sheltered Only</strong>
           </h3>
           <h6>
               <em>First time homeless within 12 months</em>
             </h6>
-            <p className="subheader"> 2021 Riverside County Pit Count</p>
+           
           </h1>
         </Paper>
       </div>

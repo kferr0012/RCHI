@@ -382,3 +382,40 @@ export const seniorsUnshelteredStyling = {
     divHeight: "25em",
   },
 };
+export const newYouthStyling = {
+  "Living Situation": {
+    tableName: "Living Situation",
+    tableHeight: "100%",
+    divHeight: "37.8em",
+    percentage_flag: "1",
+  },
+  Ethnicity: {
+    margin: { top: 30, bottom: 20 },
+    divHeight: "15em",
+    sortByValue: true,
+    header: "Ethnicity",
+  },
+  Gender: {
+    margin: { top: 30, bottom: 20 },
+    divHeight: "15em",
+    sortByValue: true,
+    header: "Gender",
+  },
+  Subpopulations: {
+    tableName: "Subpopulation Statistics",
+    tableHeight: "100%",
+    divHeight: "37.8em",
+  },
+  Race: {
+    indexBy: "subpopulation",
+    keys: ["total"],
+    margin: { top: 50, right: 30, bottom: 50, left: 50 },
+    divHeight: "25em",
+    header: "Race",
+  },
+  Household: {
+    tableName: "Age Breakdown",
+    tableHeight: "100%",
+    divHeight: "25em",
+  },
+};
