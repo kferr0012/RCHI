@@ -19,7 +19,7 @@ import { Link, withRouter } from 'react-router-dom';
 // TO ADD A LINK JUST A NAME AND LINK IN LINKS OBJECT
 const links = [
   { name: 'General Dashboard',                link: '/' },
-  { name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
+  //{ name: 'Unsheltered vs Sheltered',     link: '/UnshelteredvsSheltered' },
   { name: 'First Time Homeless',               link: '/FirstTimeHomeless' },
   { name: 'Seniors',               link: '/SeniorsDashBoard' },
   { name: 'New Youth',               link: '/NewYouth' },
