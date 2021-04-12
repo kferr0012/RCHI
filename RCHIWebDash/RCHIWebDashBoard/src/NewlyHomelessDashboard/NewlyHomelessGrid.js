@@ -213,13 +213,14 @@ export default class NewlyHomelessGrid extends Component {
             </Grid>
           </Grid>
 
-          <Grid container item md={4}>
-            {/* Subpopulation Statistics Table */}
-            <TableComponent4
-              /*
-              data={changeVals2020(
-                filterList(
-                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+          <Grid container md={4}>
+            <Grid container item md={12}>
+              {/* Subpopulation Statistics Table */}
+               <TableComponent4
+                /*
+                data={changeVals2020(
+                  filterList(
+                    this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
                     "Subpopulations"
                   ],
                   "subpopulation",
@@ -227,15 +228,35 @@ export default class NewlyHomelessGrid extends Component {
                 )
               )} */
               data = {dashboardData[0]}
-              tableName="Subpopulation Statistics"
               percentage_flag={1}
               individuals_row={null}
-              {...newlyHomelessStyling["Subpopulations"]}
+              {...newlyHomelessStyling["Age"]}
+              tableName="Subpopulation Statistics"
             />
+            </Grid>
+
+            {/* Household Composition Table */}
+            <Grid container item md={12}>
+              <Card
+              variant="outlined"
+              style={{ width: "100%" }}
+              className="seniorTable"
+              >
+                <TableComponent4
+                  data={
+                    this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                      "Households"
+                    ]
+                  }
+                  {...newlyHomelessStyling["Household"]}
+                  percentage_flag={1}
+                />
+              </Card>
+            </Grid>
           </Grid>
 
           {/* Race Barchart */}
-          <Grid container item md={8}>
+          <Grid container item md={3}>
             <Card
               variant="outlined"
               style={{ width: "100%" }}
@@ -253,21 +274,66 @@ export default class NewlyHomelessGrid extends Component {
               />
             </Card>
           </Grid>
-          {/* Household Composition */}
-          <Grid container item md={4}>
+
+          {/* Barriers to Living Barchart */}
+          <Grid container item md={3}>
             <Card
               variant="outlined"
               style={{ width: "100%" }}
               className="seniorTable"
             >
-              <TableComponent4
-                data={
+              <BarChart
+                data={filterList(
                   this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
-                    "Households"
-                  ]
-                }
-                {...newlyHomelessStyling["Household"]}
-                percentage_flag={1}
+                    "Race"
+                  ],
+                  "subpopulation",
+                  ["Total"]
+                )}
+                {...newlyHomelessStyling["Race"]}
+                header = "Barriers to Living"
+              />
+            </Card>
+          </Grid>
+
+          {/* Income Level Barchart */}
+          <Grid container item md={3}>
+            <Card
+              variant="outlined"
+              style={{ width: "100%" }}
+              className="seniorTable"
+            >
+              <BarChart
+                data={filterList(
+                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                    "Race"
+                  ],
+                  "subpopulation",
+                  ["Total"]
+                )}
+                {...newlyHomelessStyling["Race"]}
+                header = "Income Level"
+              />
+            </Card>
+          </Grid>
+
+          {/* Chronically Homeless Families Barchart */}
+          <Grid container item md={3}>
+            <Card
+              variant="outlined"
+              style={{ width: "100%" }}
+              className="seniorTable"
+            >
+              <BarChart
+                data={filterList(
+                  this.state.Tables[`${router.activeYear}/NewlyHomelessByCity`][
+                    "Race"
+                  ],
+                  "subpopulation",
+                  ["Total"]
+                )}
+                {...newlyHomelessStyling["Race"]}
+                header = "Chronically Homeless Families"
               />
             </Card>
           </Grid>
