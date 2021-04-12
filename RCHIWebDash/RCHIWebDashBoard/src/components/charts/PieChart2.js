@@ -3,7 +3,7 @@ import truncate from 'truncate-html'
 import {ResponsivePie} from "@nivo/pie";
 import { ResponsiveBar } from '@nivo/bar';
 import { pieDataManiInterview } from '../Utilities/ChartDataManipulation/pieDataManipulation'
-
+import {Header} from 'semantic-ui-react';
 import { colors } from '../Utilities/styling/colors';
 
 export default class PieChart2 extends React.Component {
@@ -16,11 +16,10 @@ export default class PieChart2 extends React.Component {
             mydata : this.props.data,
             footer : this.props.footer,
             margin : this.props.margin,
-            position: this.props.position
+            position: this.props.position,
+            header: this.props.header,
+            subHeader: this.props.subHeader,
         }
-
-        //console.log("Pie chart")
-        //console.log(this.state)
     }
     componentWillReceiveProps(){
         this.setState({
@@ -29,7 +28,9 @@ export default class PieChart2 extends React.Component {
             mydata : this.props.data,
             footer : this.props.footer,
             margin : this.props.margin,
-            position: this.props.position
+            position: this.props.position,
+            header: this.props.header,
+            subHeader: this.props.subHeader,
             
         })
     }
@@ -37,7 +38,11 @@ export default class PieChart2 extends React.Component {
     render(){
         return (
             <div style = {{height: this.props.height ? this.props.height : '100%', width: '100%', position: this.state.position ? this.state.position : 'absolute'}}>
-            {/* // <div style={{height:this.state.height, width: '100%'}}> */}
+                {this.state.header || this.state.subHeader ? <Header size='medium' textAlign='center' style={{marginBottom:0}}>
+                    {this.state.header}
+                    <Header sub>{this.state.subHeader}</Header>
+                </Header> : null}
+            
             <ResponsivePie
                 data={this.props.data}
                 margin={this.props.margin}
