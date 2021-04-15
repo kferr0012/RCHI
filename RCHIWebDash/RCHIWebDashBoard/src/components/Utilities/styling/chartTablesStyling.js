@@ -209,7 +209,9 @@ export const unshelteredSupervisoryDistrictStyling = {
 
   "Chronically Homeless": {
     header: "Chronically Homeless",
-    subHeader: "Interview Only",
+    //subHeader: "Interview Only",
+    //remove interview only
+    subHeader: "",
     dataType: "Interview",
     margin: { top: 30, bottom: 59 },
     divHeight: "12em",

@@ -1,0 +1,270 @@
+var subpopulationStatisticsArray = [
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Adults (>=25)",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Youth (18-24)",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Children (<=17)",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Unknown Ages",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Male",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Female",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Transgender",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Gender Non-Con",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Unknown Gender",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Substance Abuse",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    /*{
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "PTSD",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },*/
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Mental Health Conditions",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Physical Disability",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Development Disability",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    /*{
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Brain Injury",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },*/
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Victims of Domestic Violence",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "AIDS or HIV",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Veterans",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Chronically Homeless",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    /*{
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Pet Owners",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },*/
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Newly Homeless",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+    {
+        category: "SupervisoryDistrict",
+        city: "",
+        district: "",
+        id: 25,
+        interview: 39,
+        observation: 0,
+        subpopulation: "Seniors (>=60)",
+        total: 39,
+        year: 2020,
+        _type: "Unsheltered"
+    },
+];
+
+var supervisoryDistrict2Data = [subpopulationStatisticsArray];
+
+export { supervisoryDistrict2Data };

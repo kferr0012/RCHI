@@ -24,7 +24,7 @@ class UnshelteredSupervisoryDistricts extends Component{
                     router.host + '/' + router.root + '/' + router.activeYear + "/SubpopulationsByCity/",
                     router.host + '/' + router.root + '/' + router.activeYear + "/CityTotalByYear/"],
             rendered : false,
-
+            currP : 1,
             
         }
     }  
@@ -62,18 +62,23 @@ class UnshelteredSupervisoryDistricts extends Component{
     }
     
     async componentDidMount(){
+        //first time load
+        //console.log(this.state.currentPage);
    
         var Tables = await aggregateFetch(this.state.urls,false)
         
+        //update the state
         this.setState({
             Tables: this.reformatData(Tables),
             rendered : true,
+            currP : this.state.currentPage,
         })
     }
     NavOnChangeHandler = (e, data) => {
 
         const currentPage = data.activePage
-
+        //when clicking a page
+        //console.log(currentPage);
 
         setTimeout(() => {
             this.setState({
