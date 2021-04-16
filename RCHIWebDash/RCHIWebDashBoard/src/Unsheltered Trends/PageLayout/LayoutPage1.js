@@ -5,7 +5,7 @@ const PageOneTrend = (props, key) =>{
  return (
         <Grid stackable>
             <Grid.Row verticalAlign='middle'> 
-                <Grid.Column width={4}>
+                <Grid.Column width={8}>
                     <Segment>{props.trendsSelected[4]}</Segment>
                 </Grid.Column>
                 <Grid.Column width={8}>
@@ -17,7 +17,7 @@ const PageOneTrend = (props, key) =>{
             </Grid.Row>
 
             <Grid.Row verticalAlign='middle'>
-                <Grid.Column width={4}>
+                <Grid.Column width={8}>
                     <Segment>{props.trendsSelected[2]}</Segment>
                 </Grid.Column>
                 <Grid.Column width={8}>
