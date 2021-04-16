@@ -12,14 +12,14 @@ const PageThreeTrend = (props) => (
                 </Grid.Column>
             </Grid.Row>
 
-            <Grid.Row>
+            {/* <Grid.Row>
                 <Grid.Column width={8}>
                     <Segment>{props.trendsSelected[2]}</Segment>
                 </Grid.Column>
                 <Grid.Column width={8}>
                     <Segment>{props.trendsSelected[3]}</Segment>
                 </Grid.Column>
-            </Grid.Row>
+            </Grid.Row> */}
         </Grid>
 )
 
