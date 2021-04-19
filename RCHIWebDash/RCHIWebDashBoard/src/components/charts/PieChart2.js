@@ -37,7 +37,7 @@ export default class PieChart2 extends React.Component {
 
     render(){
         return (
-            <div style = {{height: this.props.height ? this.props.height : '100%', width: '100%', position: this.state.position ? this.state.position : 'absolute'}}>
+            <div style = {{height: this.props.height ? this.props.height : '100%', width: '100%', position: this.state.position ? this.state.position : 'absolute', minWidth: '200px'}}>
                 {this.state.header || this.state.subHeader ? <Header size='medium' textAlign='center' style={{marginBottom:0}}>
                     {this.state.header}
                     <Header sub>{this.state.subHeader}</Header>
