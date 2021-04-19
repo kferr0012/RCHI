@@ -6,7 +6,6 @@ import { Grid, Paper } from '@material-ui/core';
 
 // components
 import Number from '../components/Numbers/Number';
-import Total from '../components/Numbers/Total';
 import PercentageDistrict from '../components/Numbers/PercentageDistrict';
 import PieChart2 from '../components/charts/PieChart2';
 import TableComponent4 from '../components/charts/TableComponent4.js';
@@ -131,7 +130,6 @@ export default class CityTable extends Component {
 
   setCityChoice(value) {
     //temporary solution to racing condition of data availability in nivo components on the dashboards
-
     var self = this;
     setTimeout(() => {
       this.setState({

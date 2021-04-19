@@ -277,9 +277,10 @@ export const unshelteredCitiesStyling = {
   },
 
   "Pie Chart": {
-    margin: { top: 20, bottom: 60 },
+    // margin: { top: 20, bottom: 60 },
     height: "18em",
     sortByValue: true,
+    position: "relative",
   },
  
 
