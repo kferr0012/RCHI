@@ -7,6 +7,8 @@ import { filter } from '../../components/Utilities/ListManipulation/filter';
 
 //CLEAN
 
+//2021 data import
+import {dashboardData} from '../../frontendData2021/districtDataDash1'
 
 class PitCountByCity extends Component{
   constructor(){
@@ -19,20 +21,28 @@ class PitCountByCity extends Component{
   }
 
   formatingData(){
-    axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+this.props.query)
-      .then(response=>{
-
-        const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 2 && index.city !== "Riverside")
-
-        const formatData = filterData.map( value => {
-          let {year, city, total} = value
-          return { year: year, total: total, subpopulation:city}
-        })
-        this.setState({
-          chartData : formatData,
-          currentDistrict: this.props.clickedDistrict  
-        })
+    if(this.props.currentDistrict==1){
+      this.setState({
+        chartData : dashboardData[0],
+        currentDistrict : this.props.clickedDistrict
       })
+    }
+    else{
+      axios.get(router.host + '/' + router.root + '/' + router.activeYear + '/CityTotalByYear/?search='+this.props.query)
+        .then(response=>{
+
+          const filterData = response.data.filter(index => index.sheltered === false && index.year > router.activeYear - 2 && index.city !== "Riverside")
+
+          const formatData = filterData.map( value => {
+            let {year, city, total} = value
+            return { year: year, total: total, subpopulation:city}
+          })
+          this.setState({
+            chartData : formatData,
+            currentDistrict: this.props.clickedDistrict  
+          })
+        })
+    }
   }
 
   componentDidMount(){
