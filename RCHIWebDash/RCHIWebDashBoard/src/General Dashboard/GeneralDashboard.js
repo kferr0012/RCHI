@@ -31,12 +31,16 @@ import './dash.css';
 import { Header } from 'semantic-ui-react';
 import { Grid, Paper } from '@material-ui/core';
 
+
+import {data} from "../frontendData2021/generalData";
+
 import {
   GEN_SUBPOP_ORDER,
   FILTER_COLUMNS,
   FILTERED_COUNTS,
   SHELTERED_SUBPOP_ORDER
 } from './constants';
+
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -187,7 +191,7 @@ export default class Dashboard extends Component {
           </Grid>
           <Grid container md={6}>
             <Grid item md={12}>
-              {/* Subpopulation table for unsheltered and sheltered */}
+              {/* Subpopulation table for sheltered */}
               <div className="change-label">
                 <Change
                   // height={15}
@@ -196,17 +200,7 @@ export default class Dashboard extends Component {
                 />
               </div>
               <TableComponent4
-                data={orderSubs(
-                  changeVals2020(
-                    filterList(
-                      this.getOrderedShelteredData(),
-                      'subpopulation',
-                      FILTERED_COUNTS
-                    )
-                  ),
-                  SHELTERED_SUBPOP_ORDER,
-                  2
-                )}
+                data={data["sheltered statistics"]}
                 expandIndex={'year'}
                 tableName="Sheltered Statistics"
                 header={true}
@@ -221,13 +215,7 @@ export default class Dashboard extends Component {
                   Race <p className="component-subheader">Total Count </p>
                 </p>
                 <BarChart
-                  data={filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Race'],
-                    'subpopulation',
-                    ['Total']
-                  )}
+                  data={data["race"]}
                   indexBy={'subpopulation'}
                   keys={['total']}
                   margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
@@ -243,13 +231,7 @@ export default class Dashboard extends Component {
                   <p className="component-subheader">Total Count </p>
                 </p>
                 <BarChart
-                  data={filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Age'],
-                    'subpopulation',
-                    ['Total']
-                  )}
+                  data={data["age"]}
                   indexBy={'subpopulation'}
                   keys={['total']}
                   margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
@@ -267,16 +249,7 @@ export default class Dashboard extends Component {
                 <p className="component-subheader">Total Count </p>
               </p>
               <PieChart
-                data={pieDataManiTotal(
-                  filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Gender'],
-                    'subpopulation',
-                    ['Total']
-                  ),
-                  0.1
-                )}
+                data={data["gender"]}
                 margin={{ top: 20, bottom: 40, left: 40, right: 40 }}
                 divHeight={'16em'}
                 sortByValue={true}
@@ -290,16 +263,7 @@ export default class Dashboard extends Component {
                 <p className="component-subheader">Total Count </p>
               </p>
               <PieChart
-                data={pieDataManiTotal(
-                  filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Ethnicity'],
-                    'subpopulation',
-                    ['Total']
-                  ),
-                  0.1
-                )}
+                data={data["ethnicity"]}
                 margin={{ top: 20, bottom: 40, left: 40, right: 40 }}
                 divHeight={'16em'}
                 sortByValue={true}
@@ -315,8 +279,7 @@ export default class Dashboard extends Component {
               </span>
               <div
                 className="homeless-population-trend"
-                style={{ position: 'relative' }}
-              >
+                style={{ position: 'relative' }}>
                 <LineGraph
                   margin={{ top: 20, right: 30, bottom: 100, left: 30 }}
                   max={4000}
@@ -383,13 +346,7 @@ export default class Dashboard extends Component {
                 <Grid container item md={12}>
                   {/* household composition table */}
                   <TableComponent4
-                    data={filterList(
-                      this.state.Tables[
-                        `${router.activeYear}/GeneralTableSubpopulations`
-                      ]['Households'],
-                      'subpopulation',
-                      ['Total']
-                    )}
+                    data={data["household composition"]}
                     header={false}
                     tableHeight={'100%'}
                     divHeight={'12.0em'}
@@ -398,7 +355,6 @@ export default class Dashboard extends Component {
                   />
                 </Grid>
               </Grid>
-
               <Grid container item md={4} spacing={1}>
                 <Grid container item md={12}>
                   <div className="living-situation-pie-chart">
@@ -407,16 +363,7 @@ export default class Dashboard extends Component {
                       Prior Living Situations
                     </Header>
                     <PieChart2
-                      data={pieDataManiInterview(
-                        filterList(
-                          this.state.Tables[
-                            `${router.activeYear}/GeneralTableSubpopulations`
-                          ]['Living Situation'],
-                          'subpopulation',
-                          ['Couch']
-                        ),
-                        0.1
-                      )}
+                      data={data["prior living situations"]}
                       margin={{ top: 0, bottom: 20, left: 60, right: 60 }}
                       enableRadialLabels={true}
                       percentageFilter={0.1}
@@ -426,19 +373,10 @@ export default class Dashboard extends Component {
                     />
                   </div>
                 </Grid>
-
                 <Grid container item md={12}>
                   {/*living situations table*/}
                   <TableComponent4
-                    data={filterList(
-                      this.state.Tables[
-                        `${router.activeYear}/GeneralTableSubpopulations`
-                      ]['Living Situation'],
-                      'subpopulation',
-                      ['Couch']
-                    ).sort((a, b) => {
-                      return b.total - a.total;
-                    })}
+                    data={data["living situations"]}
                     header={false}
                     percentage_flag={true}
                     height={'100%'}
