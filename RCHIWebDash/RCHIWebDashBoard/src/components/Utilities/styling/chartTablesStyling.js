@@ -2,6 +2,88 @@ import { colors } from "./colors";
 
 export const ContainerWidth = "80%";
 
+export const generalDashboardStyling = {
+  "Sheltered Statistics": {
+    expandIndex: "year",
+    header: true,
+    height: "120%"
+  },
+  Race: {
+    indexBy: 'subpopulation',
+    keys: ['total'],
+    margin: { top: 5, right: 30, bottom: 50, left: 50 },
+    divHeight: '15em',
+    tickValues: 4,
+    gridYValues: 4,
+    maxValue: 2000
+  },
+  Age:{
+    indexBy: 'subpopulation',
+    keys: ['total'],
+    margin: { top: 5, right: 30, bottom: 50, left: 50 },
+    divHeight: '15em',
+    tickValues: 4,
+    gridYValues: 4,
+    maxValue: 2000
+  },
+  Gender: { 
+    margin:{ top: 20, bottom: 40, left: 40, right: 40 },
+    divHeight: '16em',
+    sortByValue: true,
+    percentage: 0.25,
+  },
+  Ethnicity: { 
+    margin:{ top: 20, bottom: 40, left: 40, right: 40 },
+    divHeight: '16em',
+    sortByValue: true,
+    percentage: 0.25,
+  },
+  "Homeless Population Trend": {
+    margin: { top: 20, right: 30, bottom: 100, left: 30 },
+    max: 4000,
+    tickValues: 4,
+    gridYValues: 4,
+    categories: ["sheltered"]
+  },
+  "Mental Health": {
+    height: 50,
+    header: 'mental health conditions',
+    hideInterview: true,
+  },
+  "Substance Abuse": {
+    height: 50,
+    header: 'substance abuse',
+    hideInterview: true,
+  },
+  "Physical Disability": {
+    height: 50,
+    header: 'physical disability',
+    hideInterview: true,
+  },
+  "Household Composition": {
+    header: false,
+    tableHeight: '100%',
+    divHeight: '12.0em',
+    tableName: 'Household Composition',
+    padding: 15,
+  },
+  "Prior Living Situations": {
+    margin: {top: 0, bottom: 20, left: 60, right: 60 },
+    enableRadialLabels: true,
+    percentageFilter: 0.1,
+    height: '12em',
+    truncate: true,
+    position: 'relative',
+  },
+  "Living Situations Table": {
+    header: false,
+    percentage_flag: true,
+    height: '100%',
+    padding: 10,
+  }
+}
+
+
 export const newlyHomelessStyling = {
   Age: {
     tableName: "Age",

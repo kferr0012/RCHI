@@ -33,6 +33,7 @@ import { Grid, Paper } from '@material-ui/core';
 
 
 import {data} from "../frontendData2021/generalData";
+import {generalDashboardStyling as styles}  from "../components/Utilities/styling/chartTablesStyling";
 
 import {
   GEN_SUBPOP_ORDER,
@@ -201,11 +202,7 @@ export default class Dashboard extends Component {
               </div>
               <TableComponent4
                 data={data["sheltered statistics"]}
-                expandIndex={'year'}
-                tableName="Sheltered Statistics"
-                header={true}
-                height={'120%'}
-                // position = "absolute"
+                {...styles["Sheltered Statistics"]}
               />
             </Grid>
             <Grid container md={12}>
@@ -216,13 +213,7 @@ export default class Dashboard extends Component {
                 </p>
                 <BarChart
                   data={data["race"]}
-                  indexBy={'subpopulation'}
-                  keys={['total']}
-                  margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
-                  divHeight={'15em'}
-                  tickValues={4}
-                  gridYValues={4}
-                  maxValue={2000}
+                  {...styles["Race"]}
                 />
               </Grid>
               <Grid item md={6}>
@@ -232,13 +223,7 @@ export default class Dashboard extends Component {
                 </p>
                 <BarChart
                   data={data["age"]}
-                  indexBy={'subpopulation'}
-                  keys={['total']}
-                  margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
-                  divHeight={'15em'}
-                  tickValues={4}
-                  gridYValues={4}
-                  maxValue={2000}
+                  {...styles["Age"]}
                 />
               </Grid>
             </Grid>
@@ -250,10 +235,7 @@ export default class Dashboard extends Component {
               </p>
               <PieChart
                 data={data["gender"]}
-                margin={{ top: 20, bottom: 40, left: 40, right: 40 }}
-                divHeight={'16em'}
-                sortByValue={true}
-                percentage={0.25}
+                {...styles["Gender"]}
               />
             </Grid>
             <Grid container item md={6}>
@@ -264,10 +246,7 @@ export default class Dashboard extends Component {
               </p>
               <PieChart
                 data={data["ethnicity"]}
-                margin={{ top: 20, bottom: 40, left: 40, right: 40 }}
-                divHeight={'16em'}
-                sortByValue={true}
-                percentage={0.25}
+                {...styles["Ethnicity"]}
               />
             </Grid>
           </Grid>
@@ -281,12 +260,8 @@ export default class Dashboard extends Component {
                 className="homeless-population-trend"
                 style={{ position: 'relative' }}>
                 <LineGraph
-                  margin={{ top: 20, right: 30, bottom: 100, left: 30 }}
-                  max={4000}
-                  tickValues={4}
-                  gridYValues={4}
                   data={this.state.Tables}
-                  categories={["sheltered"]}
+                  {...styles["Homeless Population Trend"]}
                 />
               </div>
             </Grid>
@@ -295,22 +270,18 @@ export default class Dashboard extends Component {
                 <Grid item md={12}>
                   {/* Mental health conditions percent */}
                   <NumberPercentage
-                    height={50}
                     data={this.state.NumberValues}
                     subpopulation={'Mental Health Conditions'}
-                    header={'mental health conditions'}
-                    hideInterview={true}
+                    {...styles["Mental Health"]}
                   />
                 </Grid>
                 <Grid item md={12}>
                   {/* substance abuse issues percent */}
                   <div className="number-percentage">
                     <NumberPercentage
-                      height={50}
                       data={this.state.NumberValues}
                       subpopulation={'Substance Abuse'}
-                      header={'substance abuse'}
-                      hideInterview={true}
+                      {...styles["Substance Abuse"]}
                     />
                   </div>
                 </Grid>
@@ -318,11 +289,9 @@ export default class Dashboard extends Component {
                   {/* physical disability issues percent*/}
                   <div className="number-percentage">
                     <NumberPercentage
-                      height={50}
                       data={this.state.NumberValues}
                       subpopulation={'Physical Disability'}
-                      header={'physical disability'}
-                      hideInterview={true}
+                      {...styles["Physical Disability"]}
                     />
                   </div>
                 </Grid>
@@ -347,11 +316,7 @@ export default class Dashboard extends Component {
                   {/* household composition table */}
                   <TableComponent4
                     data={data["household composition"]}
-                    header={false}
-                    tableHeight={'100%'}
-                    divHeight={'12.0em'}
-                    tableName={'Household Composition'}
-                    padding={15}
+                    {...styles["Household Composition"]}
                   />
                 </Grid>
               </Grid>
@@ -364,12 +329,7 @@ export default class Dashboard extends Component {
                     </Header>
                     <PieChart2
                       data={data["prior living situations"]}
-                      margin={{ top: 0, bottom: 20, left: 60, right: 60 }}
-                      enableRadialLabels={true}
-                      percentageFilter={0.1}
-                      height={'12em'}
-                      truncate={true}
-                      position={'relative'}
+                      {...styles["Prior Living Situations"]}
                     />
                   </div>
                 </Grid>
@@ -377,10 +337,7 @@ export default class Dashboard extends Component {
                   {/*living situations table*/}
                   <TableComponent4
                     data={data["living situations"]}
-                    header={false}
-                    percentage_flag={true}
-                    height={'100%'}
-                    padding={10}
+                    {...styles["Living Situations Table"]}
                   />
                 </Grid>
               </Grid>
