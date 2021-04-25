@@ -19,7 +19,7 @@ import { newlyHomelessStyling } from "../components/Utilities/styling/chartTable
 import { Card, Grid, Paper } from "@material-ui/core";
 
 //Frontend data import
-import {dashboardData} from "../frontendData2021/firstTimeHomelessData";
+import {firstTimeHomelessData} from "../frontendData2021/firstTimeHomelessData"
 
 const FILTER_COLUMNS = [
   "Veteran No",
@@ -227,7 +227,7 @@ export default class NewlyHomelessGrid extends Component {
                   FILTER_COLUMNS
                 )
               )} */
-              data = {dashboardData[0]}
+              data = {firstTimeHomelessData["Subpopulation Table"]}
               percentage_flag={1}
               individuals_row={null}
               {...newlyHomelessStyling["Age"]}
