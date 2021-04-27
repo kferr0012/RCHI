@@ -31,12 +31,17 @@ import './dash.css';
 import { Header } from 'semantic-ui-react';
 import { Grid, Paper } from '@material-ui/core';
 
+
+import {data} from "../frontendData2021/generalData";
+import {generalDashboardStyling as styles}  from "../components/Utilities/styling/chartTablesStyling";
+
 import {
   GEN_SUBPOP_ORDER,
   FILTER_COLUMNS,
   FILTERED_COUNTS,
   SHELTERED_SUBPOP_ORDER
 } from './constants';
+
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -187,7 +192,7 @@ export default class Dashboard extends Component {
           </Grid>
           <Grid container md={6}>
             <Grid item md={12}>
-              {/* Subpopulation table for unsheltered and sheltered */}
+              {/* Subpopulation table for sheltered */}
               <div className="change-label">
                 <Change
                   // height={15}
@@ -196,22 +201,8 @@ export default class Dashboard extends Component {
                 />
               </div>
               <TableComponent4
-                data={orderSubs(
-                  changeVals2020(
-                    filterList(
-                      this.getOrderedShelteredData(),
-                      'subpopulation',
-                      FILTERED_COUNTS
-                    )
-                  ),
-                  SHELTERED_SUBPOP_ORDER,
-                  2
-                )}
-                expandIndex={'year'}
-                tableName="Sheltered Statistics"
-                header={true}
-                height={'120%'}
-                // position = "absolute"
+                data={data["sheltered statistics"]}
+                {...styles["Sheltered Statistics"]}
               />
             </Grid>
             <Grid container md={12}>
@@ -221,20 +212,8 @@ export default class Dashboard extends Component {
                   Race <p className="component-subheader">Total Count </p>
                 </p>
                 <BarChart
-                  data={filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Race'],
-                    'subpopulation',
-                    ['Total']
-                  )}
-                  indexBy={'subpopulation'}
-                  keys={['total']}
-                  margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
-                  divHeight={'15em'}
-                  tickValues={4}
-                  gridYValues={4}
-                  maxValue={2000}
+                  data={data["race"]}
+                  {...styles["Race"]}
                 />
               </Grid>
               <Grid item md={6}>
@@ -243,20 +222,8 @@ export default class Dashboard extends Component {
                   <p className="component-subheader">Total Count </p>
                 </p>
                 <BarChart
-                  data={filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Age'],
-                    'subpopulation',
-                    ['Total']
-                  )}
-                  indexBy={'subpopulation'}
-                  keys={['total']}
-                  margin={{ top: 5, right: 30, bottom: 50, left: 50 }}
-                  divHeight={'15em'}
-                  tickValues={4}
-                  gridYValues={4}
-                  maxValue={2000}
+                  data={data["age"]}
+                  {...styles["Age"]}
                 />
               </Grid>
             </Grid>
@@ -267,20 +234,8 @@ export default class Dashboard extends Component {
                 <p className="component-subheader">Total Count </p>
               </p>
               <PieChart
-                data={pieDataManiTotal(
-                  filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Gender'],
-                    'subpopulation',
-                    ['Total']
-                  ),
-                  0.1
-                )}
-                margin={{ top: 20, bottom: 40, left: 40, right: 40 }}
-                divHeight={'16em'}
-                sortByValue={true}
-                percentage={0.25}
+                data={data["gender"]}
+                {...styles["Gender"]}
               />
             </Grid>
             <Grid container item md={6}>
@@ -290,20 +245,8 @@ export default class Dashboard extends Component {
                 <p className="component-subheader">Total Count </p>
               </p>
               <PieChart
-                data={pieDataManiTotal(
-                  filterList(
-                    this.state.Tables[
-                      `${router.activeYear}/GeneralTableSubpopulationsTotalCounts`
-                    ]['Ethnicity'],
-                    'subpopulation',
-                    ['Total']
-                  ),
-                  0.1
-                )}
-                margin={{ top: 20, bottom: 40, left: 40, right: 40 }}
-                divHeight={'16em'}
-                sortByValue={true}
-                percentage={0.25}
+                data={data["ethnicity"]}
+                {...styles["Ethnicity"]}
               />
             </Grid>
           </Grid>
@@ -315,15 +258,10 @@ export default class Dashboard extends Component {
               </span>
               <div
                 className="homeless-population-trend"
-                style={{ position: 'relative' }}
-              >
+                style={{ position: 'relative' }}>
                 <LineGraph
-                  margin={{ top: 20, right: 30, bottom: 100, left: 30 }}
-                  max={4000}
-                  tickValues={4}
-                  gridYValues={4}
                   data={this.state.Tables}
-                  categories={["sheltered"]}
+                  {...styles["Homeless Population Trend"]}
                 />
               </div>
             </Grid>
@@ -332,22 +270,18 @@ export default class Dashboard extends Component {
                 <Grid item md={12}>
                   {/* Mental health conditions percent */}
                   <NumberPercentage
-                    height={50}
                     data={this.state.NumberValues}
                     subpopulation={'Mental Health Conditions'}
-                    header={'mental health conditions'}
-                    hideInterview={true}
+                    {...styles["Mental Health"]}
                   />
                 </Grid>
                 <Grid item md={12}>
                   {/* substance abuse issues percent */}
                   <div className="number-percentage">
                     <NumberPercentage
-                      height={50}
                       data={this.state.NumberValues}
                       subpopulation={'Substance Abuse'}
-                      header={'substance abuse'}
-                      hideInterview={true}
+                      {...styles["Substance Abuse"]}
                     />
                   </div>
                 </Grid>
@@ -355,11 +289,9 @@ export default class Dashboard extends Component {
                   {/* physical disability issues percent*/}
                   <div className="number-percentage">
                     <NumberPercentage
-                      height={50}
                       data={this.state.NumberValues}
                       subpopulation={'Physical Disability'}
-                      header={'physical disability'}
-                      hideInterview={true}
+                      {...styles["Physical Disability"]}
                     />
                   </div>
                 </Grid>
@@ -383,22 +315,11 @@ export default class Dashboard extends Component {
                 <Grid container item md={12}>
                   {/* household composition table */}
                   <TableComponent4
-                    data={filterList(
-                      this.state.Tables[
-                        `${router.activeYear}/GeneralTableSubpopulations`
-                      ]['Households'],
-                      'subpopulation',
-                      ['Total']
-                    )}
-                    header={false}
-                    tableHeight={'100%'}
-                    divHeight={'12.0em'}
-                    tableName={'Household Composition'}
-                    padding={15}
+                    data={data["household composition"]}
+                    {...styles["Household Composition"]}
                   />
                 </Grid>
               </Grid>
-
               <Grid container item md={4} spacing={1}>
                 <Grid container item md={12}>
                   <div className="living-situation-pie-chart">
@@ -407,42 +328,16 @@ export default class Dashboard extends Component {
                       Prior Living Situations
                     </Header>
                     <PieChart2
-                      data={pieDataManiInterview(
-                        filterList(
-                          this.state.Tables[
-                            `${router.activeYear}/GeneralTableSubpopulations`
-                          ]['Living Situation'],
-                          'subpopulation',
-                          ['Couch']
-                        ),
-                        0.1
-                      )}
-                      margin={{ top: 0, bottom: 20, left: 60, right: 60 }}
-                      enableRadialLabels={true}
-                      percentageFilter={0.1}
-                      height={'12em'}
-                      truncate={true}
-                      position={'relative'}
+                      data={data["prior living situations"]}
+                      {...styles["Prior Living Situations"]}
                     />
                   </div>
                 </Grid>
-
                 <Grid container item md={12}>
                   {/*living situations table*/}
                   <TableComponent4
-                    data={filterList(
-                      this.state.Tables[
-                        `${router.activeYear}/GeneralTableSubpopulations`
-                      ]['Living Situation'],
-                      'subpopulation',
-                      ['Couch']
-                    ).sort((a, b) => {
-                      return b.total - a.total;
-                    })}
-                    header={false}
-                    percentage_flag={true}
-                    height={'100%'}
-                    padding={10}
+                    data={data["living situations"]}
+                    {...styles["Living Situations Table"]}
                   />
                 </Grid>
               </Grid>
