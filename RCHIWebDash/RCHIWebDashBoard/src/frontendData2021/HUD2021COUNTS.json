@@ -1,0 +1,474 @@
+[
+    {
+        "category": "Race",
+        "subpopulation": "Black or African American",
+        "total": 191,
+        "id": 0,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "White",
+        "total": 610,
+        "id": 1,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "Multi-Racial",
+        "total": 23,
+        "id": 2,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "Native Hawaiian or Other Pacific Islander",
+        "total": 15,
+        "id": 3,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "American Indian or Alaska Native",
+        "total": 13,
+        "id": 4,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "Asian",
+        "total": 12,
+        "id": 5,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "Client refused",
+        "total": 8,
+        "id": 6,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "Client doesn't know",
+        "total": 7,
+        "id": 7,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Race",
+        "subpopulation": "Data not collected",
+        "total": 1,
+        "id": 8,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Gender",
+        "subpopulation": "Female",
+        "total": 385,
+        "id": 9,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Gender",
+        "subpopulation": "Male",
+        "total": 492,
+        "id": 10,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Gender",
+        "subpopulation": "Trans Male (FTM or Female to Male)",
+        "total": 1,
+        "id": 11,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Gender",
+        "subpopulation": "Gender Non-Conforming (i.e. not exclusively male or female)",
+        "total": 2,
+        "id": 12,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Age",
+        "subpopulation": "Children (<18)",
+        "total": 105,
+        "id": 13,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Age",
+        "subpopulation": "Youth (18-24)",
+        "total": 56,
+        "id": 14,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Age",
+        "subpopulation": "Adults (>24)",
+        "total": 508,
+        "id": 15,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Age",
+        "subpopulation": "Senior (60+)",
+        "total": 208,
+        "id": 16,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Ethnicity",
+        "subpopulation": "Non-Hispanic/Latino",
+        "total": 514,
+        "id": 17,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Ethnicity",
+        "subpopulation": "Hispanic/Latino",
+        "total": 355,
+        "id": 18,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Ethnicity",
+        "subpopulation": "Client refused",
+        "total": 5,
+        "id": 19,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Ethnicity",
+        "subpopulation": "Client doesn't know",
+        "total": 3,
+        "id": 20,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Ethnicity",
+        "subpopulation": "Data not collected",
+        "total": 3,
+        "id": 21,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Households",
+        "subpopulation": "Without Children",
+        "total": 704,
+        "id": 22,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Households",
+        "subpopulation": "Children and Adults",
+        "total": 162,
+        "id": 23,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Households",
+        "subpopulation": "Unknown",
+        "total": 5,
+        "id": 24,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Households",
+        "subpopulation": "Only Children",
+        "total": 9,
+        "id": 25,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "Project Roomkey: Non-Congregate Shelter Project",
+        "total": 228,
+        "id": 26,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "CVRM Overnight Shelter",
+        "total": 175,
+        "id": 27,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "POL Year Round Emergency Shelter",
+        "total": 73,
+        "id": 28,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "MVK Renewing Hope Emergency Shelter",
+        "total": 67,
+        "id": 29,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "Behavioral Health - Hotel/Motel Voucher Program",
+        "total": 65,
+        "id": 30,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "POL Family Emergency Shelter",
+        "total": 44,
+        "id": 31,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "POL Cold Weather Emergency Shelter",
+        "total": 37,
+        "id": 32,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "Riverside Cabin Village Shelter",
+        "total": 31,
+        "id": 33,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "CVAG W.Valley Navigation/POL Emergency Shelter",
+        "total": 25,
+        "id": 34,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "City of Corona Emergency Motel Voucher Project",
+        "total": 24,
+        "id": 35,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "State HDAP Emergency Temporary Housing",
+        "total": 22,
+        "id": 36,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "Valley Restart Emergency Shelter",
+        "total": 17,
+        "id": 37,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "LTC Transitional Housing Living Services",
+        "total": 11,
+        "id": 38,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "OSH Main Street Transitional Housing",
+        "total": 8,
+        "id": 39,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "US Vets ESG-CV Emergency Shelter CoR",
+        "total": 7,
+        "id": 40,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "OSH Harrison House Transitional Living Program",
+        "total": 7,
+        "id": 41,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "Transitional Housing for Veterans",
+        "total": 7,
+        "id": 42,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "OSH SafeHouse Riverside Emergency Shelter",
+        "total": 5,
+        "id": 43,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "Galilee Center Shelter",
+        "total": 5,
+        "id": 44,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "LE/Wildomar HEAP Motel Voucher",
+        "total": 5,
+        "id": 45,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "BCSH Mecca Two Trailers",
+        "total": 4,
+        "id": 46,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "US Vets ESG-CV Emergency Shelter MV",
+        "total": 4,
+        "id": 47,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "CVAG CVHF West Valley Navigation Emergency Shelter",
+        "total": 4,
+        "id": 48,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "OSH SafeHouse Desert Emergency Shelter",
+        "total": 2,
+        "id": 49,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "OSH SafeHouse Main STAY HEAP Emergency Shelter",
+        "total": 2,
+        "id": 50,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "COVID Programs",
+        "subpopulation": "CVAG - POL CESH 25 Familiar Faces Bridge Housing",
+        "total": 1,
+        "id": 51,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Total",
+        "subpopulation": "Individuals",
+        "total": 880,
+        "id": 52,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Subpopulations",
+        "subpopulation": "AIDS or HIV",
+        "total": 12,
+        "id": 53,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Subpopulations",
+        "subpopulation": "Mentally Ill",
+        "total": 206,
+        "id": 54,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Subpopulations",
+        "subpopulation": "Chronically Homeless",
+        "total": 198,
+        "id": 55,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Subpopulations",
+        "subpopulation": "Substance Abuse",
+        "total": 62,
+        "id": 56,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Subpopulations",
+        "subpopulation": "Veteran",
+        "total": 65,
+        "id": 57,
+        "_type": "Sheltered",
+        "year": 2021
+    },
+    {
+        "category": "Households",
+        "subpopulation": "Youth Households",
+        "total": 66,
+        "id": 58,
+        "_type": "Sheltered",
+        "year": 2021
+    }
+]
