@@ -9,6 +9,8 @@ FILE_NAME = './HUD2021COUNTS.json'
 print(f"[PUTTING COUNTS TO FILE '{FILE_NAME}']\n")
 YEAR = 2021
 
+UNKNOWN_COLUMNS = {'Unknown', 'Client refused', "Client doesn't know", 'Data not collected', 'Data Not collected', 'Data Not Collected'}
+
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, np.integer):
@@ -20,16 +22,12 @@ class NpEncoder(json.JSONEncoder):
         else:
             return super(NpEncoder, self).default(obj)
 
-# {
-#     "id": "78",
-#     "year": 2020,
-#     "category": "Total",
-#     "subpopulation": "Individuals",
-#     "interview": 1346,
-#     "observation": 809,
-#     "total": 2155,
-#     "_type": "Unsheltered"
-# }
+def getUnknown(in_df, subpop):
+    unknown =  unknown = in_df[subpop].isna().sum()
+    for _unknown in UNKNOWN_COLUMNS:
+        unknown += in_df.loc[lambda df: (df[subpop] == _unknown),:].shape[0]
+    return unknown
+
 def getTotalData(in_df):
     return {"category": "Total", "subpopulation": "Individuals","total": in_df.shape[0]}
 
@@ -46,8 +44,11 @@ def getTotalCOVID(df):
     return total
 
 def getTotalAIDSHIV(in_df):
+    AIDSHIV = []
     total = in_df.loc[lambda df: (df['HIVAids'] == 'Yes'), :].shape[0] 
-    return { "category": "Subpopulations", "subpopulation": 'AIDS or HIV',"total": total}
+    AIDSHIV.append({ "category": "Subpopulations", "subpopulation": 'AIDS or HIV',"total": total})
+    AIDSHIV.append({ "category": "Subpopulations", "subpopulation": 'AIDS or HIV Unknown',"total": getUnknown(in_df,'HIVAids')})
+    return AIDSHIV
 
 def getTotalMentallyIll(in_df):
     total = in_df.loc[lambda df: (df['MentallyIll'] == 'Yes'), :].shape[0] 
@@ -59,6 +60,7 @@ def getTotalRace(in_df):
     for i, race in enumerate(reportedRaces):
         totalRace = in_df.loc[lambda df: (df['Race'] == race), :].shape[0]
         races.append({"category": "Race", "subpopulation": race, "total": totalRace}) 
+    races.append({"category": "Race", "subpopulation": 'unknown', "total": getUnknown(in_df,'Race')})
     return races
 
 
@@ -68,6 +70,7 @@ def getTotalGender(in_df):
     for i,gender in enumerate(reportedGenders):
         totalGender = in_df.loc[lambda df: (df['Gender'] == gender),:].shape[0]
         genders.append({"category": "Gender", "subpopulation": gender, "total": totalGender})
+    genders.append({"category": "Gender", "subpopulation": 'unknown', "total": getUnknown(in_df,'Gender')})
     return genders
     
 def getTotalAgeGroups(in_df):
@@ -83,11 +86,16 @@ def getTotalAgeGroups(in_df):
         totalAge =  in_df.loc[lambda df: ((ageGroups[ageGroup]['min'] <= df['Age']) & (df['Age'] <= ageGroups[ageGroup]['max'])),:].shape[0]
         ageBreakdown.append({"category": "Age", "subpopulation": ageGroup, "total": totalAge})
 
+    ageBreakdown.append({'category': 'Age', "subpopulation": 'unknown', "total": getUnknown(in_df, 'Age')})
+
     return ageBreakdown
 
 def getTotalChronicallyHomeless(in_df):
+    chronic = []
     total = in_df.loc[lambda df: (df['Chronic'] == 'Yes'),:].shape[0]
-    return {"category": "Subpopulations","subpopulation": "Chronically Homeless", "total": total}
+    chronic.append({"category": "Subpopulations","subpopulation": "Chronically Homeless", "total": total})
+    chronic.append({"category": "Subpopulations","subpopulation": "Chronically Homeless Unknown", "total": getUnknown(in_df,'Chronic')})
+    return chronic
 
 def getTotalSubstanceAbuse(in_df):
     total = in_df.loc[lambda df: (df['SubstanceAbuse'] == 'Yes'),:].shape[0]
@@ -99,6 +107,7 @@ def getTotalHousehold(in_df):
     for i,household in enumerate(uniqueHousehold):
         total = in_df.loc[lambda df: (df['HouseholdType'] == household), :].shape[0]
         totalHouseholds.append({'category': "Households", "subpopulation": household, "total": total})
+    totalHouseholds.append({'category': "Households", "subpopulation": 'unknown', "total": getUnknown(in_df,'HouseholdType')})
     return totalHouseholds
 
 
@@ -107,16 +116,23 @@ def getYouthHouseholds(in_df):
     return {"category": "Households", "subpopulation": 'Youth Households', "total": total}
 
 
+
 def getTotalVeterans(in_df):
+    veterans = []
     total = in_df.loc[lambda df: (df['VeteranStatus'] == 'Yes'), :].shape[0]
-    return {"category": "Subpopulations","subpopulation": 'Veteran',"total": total}
+    veterans.append( {"category": "Subpopulations","subpopulation": 'Veteran',"total": total})
+    veterans.append( {"category": "Subpopulations","subpopulation": 'Veteran Unknown',"total": getUnknown(in_df,'VeteranStatus')})
+    return veterans
 
 def getTotalEthnicity(in_df):
     totalEthnicity = []
     uniqueEthnicity = in_df['Ethnicity'].unique()
+
     for i,ethnicity in enumerate(uniqueEthnicity):
         total = in_df.loc[lambda df: (df['Ethnicity'] == ethnicity), :].shape[0]
         totalEthnicity.append({'category': 'Ethnicity', "subpopulation": ethnicity, "total": total})
+
+    totalEthnicity.append({'category': 'Ethnicity', "subpopulation": 'unknown', "total": getUnknown(in_df,'Ethnicity')})
     return totalEthnicity
 
 def addMetaData(data):
@@ -127,6 +143,7 @@ def addMetaData(data):
 
 def combineData(df):
     data = []
+    data.append(getTotalData(df))
     # different subpopulations
     data += getTotalRace(df)
     data += getTotalGender(df)
@@ -134,13 +151,12 @@ def combineData(df):
     data += getTotalEthnicity(df)
     data += getTotalHousehold(df)
     data += getTotalCOVID(df)
+    data += getTotalVeterans(df)
+    data += getTotalAIDSHIV(df)
+    data += getTotalChronicallyHomeless(df)
     # total that say 'Yes'
-    data.append(getTotalData(df))
-    data.append(getTotalAIDSHIV(df))
     data.append(getTotalMentallyIll(df))
-    data.append(getTotalChronicallyHomeless(df))
     data.append(getTotalSubstanceAbuse(df))
-    data.append(getTotalVeterans(df))
     data.append(getYouthHouseholds(df))
 
     addMetaData(data) # add id, year, sheltered info
