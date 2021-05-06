@@ -24,7 +24,7 @@ class SubstanceAbuseGraph extends Component {
                     barData: barByYearMani(response.data, {_typeFilter: "Unsheltered", yearFilter: router.activeYear - 2}),
                     footnote: this.props.footnote
                 })
-            }) 
+            })
     }
 
 

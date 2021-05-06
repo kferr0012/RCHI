@@ -3,9 +3,36 @@ import {Header} from 'semantic-ui-react'
 import React from 'react'
 
 // import { colors } from '../colors';
+
+//Data import
+import {trendsData} from '../../frontendData2021/trendsData'
+
+
 const LineChart = props => {
 
+    console.log(props.query);
+    // console.log(props.data);
+    // console.log(props.footnote);
+
+
     let {slice ,stacked, header , subHeader , divHeight, margin, tickValues , gridYValues, maxValue, data , legend ,colors} = props
+
+    console.log(data);
+    if(props.query == 'Veteran'){
+        data = trendsData["Veteran Table"];
+    }
+    else if (props.query == "Chronically Homeless"){
+        data = trendsData["Chronically Homeless Table"];
+    }
+    else if (props.query == "Families with Children"){
+        data = trendsData["Families with Children Table"];
+    }
+    else if (props.query == "AIDS or HIV"){
+        data = trendsData["AIDS or HIV Table"];
+    }
+    else if (props.query == "Mental Health Conditions"){
+        data = trendsData["Mental Health Conditions Table"];
+    }
 
     return(
         <div style={{height:divHeight ? divHeight : "100%", width: '100%'}}>

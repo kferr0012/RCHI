@@ -4,9 +4,16 @@ import { colors } from "../Utilities/styling/colors"
 import { ResponsiveBar } from '@nivo/bar';
 import {Header} from 'semantic-ui-react'
 
+//import data
+import {trendsData} from '../../frontendData2021/trendsData'
+
 const BarChart = props => {
 
     let {labelSkipHeight,header, subHeader ,data, indexBy, keys, legend, margin, axisTitle, tickValues, gridYValues, maxValue, groupMode, divHeight, padding} = props
+
+    if(props.query=="Substance Abuse"){
+        data = trendsData["Substance Abuse Chart"];
+    }
 
     return(
         <div style = {{height: divHeight ?  divHeight: divHeight, width: '100%'}}>
